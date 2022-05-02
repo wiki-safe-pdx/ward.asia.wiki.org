@@ -1,0 +1,367 @@
+{
+  "title": "Packaging LitElement",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b641cd9c72013450",
+      "text": "After constructing some helpful knowledge around custom elements and other modern browser tech through many different experiments, our interest returns to the Polymer project's LitElement. The Flaws of Web Components characterizes the challenges. It also suggests that LitElement and some other options help with some of the limits. [https://www.thinktecture.com/en/web-components/flaws/ article]"
+    },
+    {
+      "type": "pagefold",
+      "id": "01ca8728fee89156",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "40289b323a965592",
+      "text": "The LitElement Getting Started Guide starts directly with the modern javascript assumption that you're going to be using a node build pipeline. [https://lit-element.polymer-project.org/guide/start guide]"
+    },
+    {
+      "type": "paragraph",
+      "id": "0d7df35a5aa65d00",
+      "text": "But development life is so much better without build pipelines."
+    },
+    {
+      "type": "paragraph",
+      "id": "90f1534371fd8b9b",
+      "text": "See [[Javascript Without Pipelines]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "3661dbe87ba60db7",
+      "text": "I'm not the first to ask for a way to use LitElement without npm: [https://github.com/Polymer/lit-element/issues/603 issue]"
+    },
+    {
+      "type": "paragraph",
+      "id": "0390170e7bcf1944",
+      "text": "Unpkg and pika.dev are suggested. Pika.dev changed to snowpack.dev."
+    },
+    {
+      "type": "paragraph",
+      "id": "2869d634d538593c",
+      "text": "After many different attempts I finally settled on using snowpack to build my own copy of an ES6 module to import."
+    },
+    {
+      "type": "paragraph",
+      "id": "759190655dbc55f1",
+      "text": "Even snowpack suggests its own inclusion as a dev dependency for your project. I've chosen to create a rebuild script which uses their app-template solely to extract a vendored copy of the packaged library."
+    },
+    {
+      "type": "code",
+      "id": "cb20d1ed77346653",
+      "text": "#!/bin/bash\nset -euo pipefail\nIFS=$'\\n\\r\\t'\n\nnpx create-snowpack-app ./tmp \\\n  --template @snowpack/app-template-lit-element\ncd tmp\nnpm install --save-dev @snowpack/plugin-optimize\nmv snowpack.config.json snowpack.config.orig.json\njq '.plugins[0]=[\"@snowpack/plugin-optimize\"]' \\\n  snowpack.config.orig.json \\\n  > snowpack.config.json\nnpm run build\nmv build/web_modules/* ..\n"
+    },
+    {
+      "type": "frame",
+      "id": "eae1d6fbf9c74c7c",
+      "text": "//wiki.dbbs.co/assets/packaging-litelement/index.html\n\nHEIGHT 505"
+    },
+    {
+      "type": "assets",
+      "id": "5ef7a03d20c4ab41",
+      "text": "packaging-litelement"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Packaging LitElement",
+        "story": []
+      },
+      "date": 1601184348230
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b641cd9c72013450"
+      },
+      "id": "b641cd9c72013450",
+      "type": "add",
+      "date": 1601184379122
+    },
+    {
+      "type": "edit",
+      "id": "b641cd9c72013450",
+      "item": {
+        "type": "paragraph",
+        "id": "b641cd9c72013450",
+        "text": "After constructing some helpful knowledge around custom elements and other modern browser tech through many different experiments, our interest returns to the Polymer project's LitElement. The Flaws of Web Components characterizes the challenges. It also suggests that LitElement and some other options help with some of the limits. [https://www.thinktecture.com/en/web-components/flaws/ article]"
+      },
+      "date": 1601184582496
+    },
+    {
+      "type": "fork",
+      "date": 1601185079375
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "01ca8728fee89156"
+      },
+      "id": "01ca8728fee89156",
+      "type": "add",
+      "after": "b641cd9c72013450",
+      "date": 1601185095670
+    },
+    {
+      "type": "edit",
+      "id": "01ca8728fee89156",
+      "item": {
+        "type": "pagefold",
+        "id": "01ca8728fee89156",
+        "text": "."
+      },
+      "date": 1601185098047
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "40289b323a965592"
+      },
+      "id": "40289b323a965592",
+      "type": "add",
+      "after": "01ca8728fee89156",
+      "date": 1601185099764
+    },
+    {
+      "type": "edit",
+      "id": "40289b323a965592",
+      "item": {
+        "type": "paragraph",
+        "id": "40289b323a965592",
+        "text": "The Getting Started Guide starts directly with the modern javascript assumption that you're goind to be using a typical node build pipeline. [https://lit-element.polymer-project.org/guide/start guide]"
+      },
+      "date": 1601185197903
+    },
+    {
+      "type": "add",
+      "id": "0d7df35a5aa65d00",
+      "item": {
+        "type": "paragraph",
+        "id": "0d7df35a5aa65d00",
+        "text": "But development life is so much better without build pipelines."
+      },
+      "after": "40289b323a965592",
+      "date": 1601185240398
+    },
+    {
+      "type": "add",
+      "id": "90f1534371fd8b9b",
+      "item": {
+        "type": "paragraph",
+        "id": "90f1534371fd8b9b",
+        "text": "See [[Javascript Witout Pipelines]]"
+      },
+      "after": "0d7df35a5aa65d00",
+      "date": 1601185262976
+    },
+    {
+      "type": "add",
+      "id": "3661dbe87ba60db7",
+      "item": {
+        "type": "paragraph",
+        "id": "3661dbe87ba60db7",
+        "text": "I'm not the first to ask for a way to use LitElement without npm: [https://github.com/Polymer/lit-element/issues/603 issue]"
+      },
+      "after": "90f1534371fd8b9b",
+      "date": 1601185459382
+    },
+    {
+      "type": "add",
+      "id": "0390170e7bcf1944",
+      "item": {
+        "type": "paragraph",
+        "id": "0390170e7bcf1944",
+        "text": "Unpkg and pika.dev are suggested. Pika.dev changed to snowpack.dev."
+      },
+      "after": "3661dbe87ba60db7",
+      "date": 1601185682175
+    },
+    {
+      "type": "add",
+      "id": "2869d634d538593c",
+      "item": {
+        "type": "paragraph",
+        "id": "2869d634d538593c",
+        "text": "After many different attempts I finally settled on using snowpack to build my own copy of an ES6 module to import."
+      },
+      "after": "0390170e7bcf1944",
+      "date": 1601185747421
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cb20d1ed77346653"
+      },
+      "id": "cb20d1ed77346653",
+      "type": "add",
+      "after": "2869d634d538593c",
+      "date": 1601185766833
+    },
+    {
+      "type": "edit",
+      "id": "cb20d1ed77346653",
+      "item": {
+        "type": "code",
+        "id": "cb20d1ed77346653",
+        "text": "#!/bin/bash\nset -euo pipefail\nIFS=$'\\n\\r\\t'\n\nnpx create-snowpack-app ./tmp \\\n  --template @snowpack/app-template-lit-element\ncd tmp\nnpm install --save-dev @snowpack/plugin-optimize\nmv snowpack.config.json snowpack.config.orig.json\njq '.plugins[0]=[\"@snowpack/plugin-optimize\"]' \\\n  snowpack.config.orig.json \\\n  > snowpack.config.json\nnpm run build\nmv build/web_modules/* ..\n"
+      },
+      "date": 1601185858782
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5ef7a03d20c4ab41"
+      },
+      "id": "5ef7a03d20c4ab41",
+      "type": "add",
+      "after": "cb20d1ed77346653",
+      "date": 1601185870955
+    },
+    {
+      "type": "edit",
+      "id": "5ef7a03d20c4ab41",
+      "item": {
+        "type": "assets",
+        "id": "5ef7a03d20c4ab41",
+        "text": "packaging-litelement"
+      },
+      "date": 1601185886965
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "eae1d6fbf9c74c7c"
+      },
+      "id": "eae1d6fbf9c74c7c",
+      "type": "add",
+      "after": "5ef7a03d20c4ab41",
+      "date": 1601186048512
+    },
+    {
+      "id": "eae1d6fbf9c74c7c",
+      "type": "move",
+      "order": [
+        "b641cd9c72013450",
+        "01ca8728fee89156",
+        "40289b323a965592",
+        "0d7df35a5aa65d00",
+        "90f1534371fd8b9b",
+        "3661dbe87ba60db7",
+        "0390170e7bcf1944",
+        "2869d634d538593c",
+        "cb20d1ed77346653",
+        "eae1d6fbf9c74c7c",
+        "5ef7a03d20c4ab41"
+      ],
+      "date": 1601186053427
+    },
+    {
+      "type": "edit",
+      "id": "eae1d6fbf9c74c7c",
+      "item": {
+        "type": "frame",
+        "id": "eae1d6fbf9c74c7c",
+        "text": "https://wiki.dbbs.co/assets/packaging-litelement/index.html"
+      },
+      "date": 1601186063658
+    },
+    {
+      "type": "edit",
+      "id": "eae1d6fbf9c74c7c",
+      "item": {
+        "type": "frame",
+        "id": "eae1d6fbf9c74c7c",
+        "text": "http://wiki.dbbs.co/assets/packaging-litelement/index.html"
+      },
+      "date": 1601186083738
+    },
+    {
+      "type": "edit",
+      "id": "eae1d6fbf9c74c7c",
+      "item": {
+        "type": "frame",
+        "id": "eae1d6fbf9c74c7c",
+        "text": "//wiki.dbbs.co/assets/packaging-litelement/index.html"
+      },
+      "date": 1601186091756
+    },
+    {
+      "type": "edit",
+      "id": "eae1d6fbf9c74c7c",
+      "item": {
+        "type": "frame",
+        "id": "eae1d6fbf9c74c7c",
+        "text": "//wiki.dbbs.co/assets/packaging-litelement/index.html\n\nHEIGHT 500"
+      },
+      "date": 1601186105166
+    },
+    {
+      "type": "edit",
+      "id": "eae1d6fbf9c74c7c",
+      "item": {
+        "type": "frame",
+        "id": "eae1d6fbf9c74c7c",
+        "text": "//wiki.dbbs.co/assets/packaging-litelement/index.html\n\nHEIGHT 525"
+      },
+      "date": 1601186119036
+    },
+    {
+      "type": "edit",
+      "id": "eae1d6fbf9c74c7c",
+      "item": {
+        "type": "frame",
+        "id": "eae1d6fbf9c74c7c",
+        "text": "//wiki.dbbs.co/assets/packaging-litelement/index.html\n\nHEIGHT 510"
+      },
+      "date": 1601186126873
+    },
+    {
+      "type": "edit",
+      "id": "eae1d6fbf9c74c7c",
+      "item": {
+        "type": "frame",
+        "id": "eae1d6fbf9c74c7c",
+        "text": "//wiki.dbbs.co/assets/packaging-litelement/index.html\n\nHEIGHT 505"
+      },
+      "date": 1601186154449
+    },
+    {
+      "type": "add",
+      "id": "759190655dbc55f1",
+      "item": {
+        "type": "paragraph",
+        "id": "759190655dbc55f1",
+        "text": "Even snowpack suggests its own inclusion as a dev dependency for your project. I've chosen to create a rebuild script which uses their app-template solely to extract a vendored copy of the packaged library."
+      },
+      "after": "2869d634d538593c",
+      "date": 1601186295851
+    },
+    {
+      "type": "edit",
+      "id": "40289b323a965592",
+      "item": {
+        "type": "paragraph",
+        "id": "40289b323a965592",
+        "text": "The LitElement Getting Started Guide starts directly with the modern javascript assumption that you're going to be using a node build pipeline. [https://lit-element.polymer-project.org/guide/start guide]"
+      },
+      "date": 1601186341968
+    },
+    {
+      "type": "fork",
+      "site": "wiki.dbbs.co",
+      "date": 1601220830143
+    },
+    {
+      "type": "edit",
+      "id": "90f1534371fd8b9b",
+      "item": {
+        "type": "paragraph",
+        "id": "90f1534371fd8b9b",
+        "text": "See [[Javascript Without Pipelines]]"
+      },
+      "date": 1601220841147
+    }
+  ]
+}

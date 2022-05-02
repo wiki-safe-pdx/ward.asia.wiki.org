@@ -1,0 +1,3916 @@
+{
+  "title": "Wiki Events",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "0f6b3233892c837b",
+      "text": "Describes the different event sources, producers, and clients used in wiki."
+    },
+    {
+      "type": "paragraph",
+      "id": "98dc5a940cca5fc1",
+      "text": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "3c57005372a96c67",
+      "text": "This effort is experimental. The datalog plugin is the only plugin that implements this pattern. The intent is to migrate this capability into the wiki plugin subsystem should the experiment prove to be successful. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/master/server/server.js#L40 server-events] [https://github.com/WardCunningham/wiki-plugin-datalog/compare/master...joshuabenuck:server-forward client-events]"
+    },
+    {
+      "type": "pagefold",
+      "id": "e1d8179f3b00c235",
+      "text": "Plugins"
+    },
+    {
+      "type": "paragraph",
+      "id": "423fccd2decd759d",
+      "text": "Events in wiki build off of the concept of event sources. Plugins produce and consume event sources of specific types."
+    },
+    {
+      "type": "graphviz",
+      "id": "112f7b930b07a4e5",
+      "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n} "
+    },
+    {
+      "type": "paragraph",
+      "id": "1260bbc2e10881b7",
+      "text": "The client side of a plugin declares the event types it produces by exporting an array called produces from its module definition."
+    },
+    {
+      "type": "code",
+      "id": "5f9c37ce46ee5210",
+      "text": "const produces = ['.server-source']\n...\nmodule.export = {produces, ...}"
+    },
+    {
+      "type": "paragraph",
+      "id": "58ae5cc0d7da390a",
+      "text": "The client side of a plugin declares the event types it consumes by exporting an object literal that contains a mapping of event type to an event handler for those events."
+    },
+    {
+      "type": "code",
+      "id": "e786f499bc9fdd94",
+      "text": "const consumes = {\n  '.server-source': ({pageItem, result}) => {\n  }\n}\n...\nmodule.exports = {consumes, ...}"
+    },
+    {
+      "type": "paragraph",
+      "id": "39a460b4fba49a85",
+      "text": "The client side plugin subsystem orders the running of bind operations so that a plugin which produces an event type will complete its bind operation before the bind operations of the plugins that consume that event type."
+    },
+    {
+      "type": "paragraph",
+      "id": "e9d9bcf11bb4e387",
+      "text": "There is no deterministic ordering of plugin loading on the server side."
+    },
+    {
+      "type": "pagefold",
+      "id": "d5c16e56ab7ae95b",
+      "text": "Event Types, Producers, Consumers"
+    },
+    {
+      "type": "paragraph",
+      "id": "04b2b6381b6240ae",
+      "text": "Events of the declared type can be produced by both the client and the server side of a plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "764bcff2ae6cdb78",
+      "text": "A producer is something that emits events of a specific type."
+    },
+    {
+      "type": "paragraph",
+      "id": "f86af0fe9ba83dc5",
+      "text": "A consumer is something that listens to events of a specific type."
+    },
+    {
+      "type": "graphviz",
+      "id": "4c33084c807db474",
+      "text": "digraph G {\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer[label=\"Producer\"];\n    sConsumer[label=\"Consumer\"];\n    sProducer -> sConsumer [label=\"publish to\"];\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer[label=\"Producer\"];\n    cConsumer[label=\"Consumer\"];\n    cProducer -> cConsumer [label=\"publish to\"];\n  }\n  sProducer -> Type [label=\"of\"];\n  cProducer -> Type [label=\"of\"];\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "4dcb3daf34a01210",
+      "text": "Events are always of a single type, but there can be multiple producers of that event type."
+    },
+    {
+      "type": "paragraph",
+      "id": "94fe49db847710a8",
+      "text": "Events can be emitted by more than one producer in either half of the plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "63ef3364c4d46268",
+      "text": "Producers emit events of a specific type and identify themselves as the source of the event."
+    },
+    {
+      "type": "paragraph",
+      "id": "d8fd173e88699664",
+      "text": "There is, similarly, no limit on the number of event consumers."
+    },
+    {
+      "type": "paragraph",
+      "id": "a6b8e73b502d3d8e",
+      "text": "Consumers register their interest not in all events of a specific type, but rather, in all events of a specific type emitted by a specific producer."
+    },
+    {
+      "type": "paragraph",
+      "id": "86d2dee603a6d8b7",
+      "text": "Note that the way to identify a unique event producer varies depending on whether one is on the client or the server."
+    },
+    {
+      "type": "paragraph",
+      "id": "15ae3429cd156aa5",
+      "text": "This is due to the fact that on the server, there is only one instance of a given page, but on the client, there can be many copies of the same page in the lineup."
+    },
+    {
+      "type": "pagefold",
+      "id": "28aa167a1adce3cb",
+      "text": "Server Side "
+    },
+    {
+      "type": "paragraph",
+      "id": "76041db3b97f8a97",
+      "text": "Server side event producers and consumers are items within pages within a wiki site."
+    },
+    {
+      "type": "paragraph",
+      "id": "2117d78475ce8569",
+      "text": "When a new item is saved, the item's plugin has the opportunity to create and register event producers and consumers."
+    },
+    {
+      "type": "paragraph",
+      "id": "e6c1edb2f108ac6d",
+      "text": "Other means for creating consumers may be implemented. Consumers are not required to be created during item save."
+    },
+    {
+      "type": "paragraph",
+      "id": "431823020e75b293",
+      "text": "Individual producers are identified by their slugItem."
+    },
+    {
+      "type": "paragraph",
+      "id": "12b9abd1554aba78",
+      "text": "A slugItem is the slug of the page and the id of the item."
+    },
+    {
+      "type": "paragraph",
+      "id": "fe3c78087eeafebd",
+      "text": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "9c6360b33ee8d760",
+      "text": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "df4e0985de40ff27",
+      "text": ""
+    },
+    {
+      "type": "graphviz",
+      "id": "bda3f334087259fa",
+      "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+    },
+    {
+      "type": "pagefold",
+      "id": "ee0d69f6ca1f5cca",
+      "text": "Client Side"
+    },
+    {
+      "type": "paragraph",
+      "id": "320c72ea46ad8ded",
+      "text": "A client's event sources are identified by their pageItem."
+    },
+    {
+      "type": "paragraph",
+      "id": "510ae2e9f7a761ca",
+      "text": "A pageItem is the page key and item id of the item that is the event source."
+    },
+    {
+      "type": "paragraph",
+      "id": "96ef86a25047c144",
+      "text": "Instances of client side event producers are created whenever an item is created, edited, or moved."
+    },
+    {
+      "type": "paragraph",
+      "id": "8f12bc927b13974f",
+      "text": "They are destroyed whenever an item is moved or deleted."
+    },
+    {
+      "type": "paragraph",
+      "id": "ab6799adce712ef5",
+      "text": "Consumers register and clean up their listeners in their bind method which gets called on initial page load and whenever an item of type Object.keys(plugin.consumes) is created or edited."
+    },
+    {
+      "type": "graphviz",
+      "id": "748172eaa22d790d",
+      "text": "digraph G {\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\\ntype, {pageItem, result}\"];\n    cProducer -> cSource [label=\"emit\\ntype, {pageItem, result}\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n}"
+    },
+    {
+      "type": "pagefold",
+      "id": "74f8a65dcdd43ab4",
+      "text": "Event Forwarding"
+    },
+    {
+      "type": "paragraph",
+      "id": "b66ce43d10dd16c4",
+      "text": "Client producers can generate events from any source. One possible pattern is to have a client producer act as a forwarder of server side events."
+    },
+    {
+      "type": "paragraph",
+      "id": "ef1b9a3b5bbcbf7d",
+      "text": "To do this, a client producer registers itself as a server consumer. This causes all events emitted by the server producer to be received by the registered server consumer and forwarded on to the client producer so the producer can send them on to any client consumers. The diagram below illustrates this."
+    },
+    {
+      "type": "graphviz",
+      "id": "d3a6a90c46b52d97",
+      "text": "digraph G {\n  subgraph cluster_server {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_client {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\\ntype, {pageItem, result}\"];\n    cProducer -> cSource [label=\"emit\\ntype, {pageItem, result}\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"subscribe\\nslugItem\"];\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "56645240aa19d10a",
+      "text": "Event forwarding in this way introduces some additional challenges."
+    },
+    {
+      "type": "paragraph",
+      "id": "ddb19143f61086c8",
+      "text": "In order to prevent duplicate server side consumers from being registered, the client side producer needs to only request a new server consumer if it hasn't already registered one for the given slugItem."
+    },
+    {
+      "type": "paragraph",
+      "id": "7dd333e20c3b6919",
+      "text": "The relationship between server side consumers and client side producers ends up looking like this."
+    },
+    {
+      "type": "graphviz",
+      "id": "b781e938cc5b3721",
+      "text": "digraph G {\n  subgraph cluster_producer1 {\n    label=\"Client\\nPage 1 Item 1\";\n    p1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_producer2 {\n    label=\"Client\\nPage 2 Item 5\";\n    p2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client1 {\n    label=\"Client\\nPage 1 Item 2\";\n    c1Consumer[label=\"Consumer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Client\\nPage 2 Item 6\";\n    c2Consumer[label=\"Consumer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n    sProducer[label=\"Producer\"];\n    sProducer -> sConsumer;\n  }\n  sConsumer -> p1Producer;\n  sConsumer -> p2Producer;\n  p1Producer -> c1Consumer;\n  p2Producer -> c2Consumer;\n}\n"
+    },
+    {
+      "type": "pagefold",
+      "id": "ae42a84c356105cd",
+      "text": "Implementation Details"
+    },
+    {
+      "type": "paragraph",
+      "id": "381a21cc924f6121",
+      "text": "These details do not necessarily match the design."
+    },
+    {
+      "type": "paragraph",
+      "id": "c2abb8f6b08aa5e5",
+      "text": "The intention is to modify the implementation to match the design should the design prove useful."
+    },
+    {
+      "type": "paragraph",
+      "id": "873ad66ce0e4bf5e",
+      "text": "This section exists primarily to help the interested reader map the existing implementation to elements within the proposed design."
+    },
+    {
+      "type": "paragraph",
+      "id": "60e76f7c4dda2e85",
+      "text": "The server side uses unique event emitters for each event source. They are stored in a hash keyed off of the slugItem."
+    },
+    {
+      "type": "paragraph",
+      "id": "0260cded35c32c39",
+      "text": "An alternative design would be to use a single event emitter and then to emit events of one of the types in plugin.produces. The specific instance of the event producer can be placed in an event property called slugItem."
+    },
+    {
+      "type": "paragraph",
+      "id": "f4cff31bd239b6e6",
+      "text": "The client does not use a unique event emitter for each producer. Instead, it sends events with a type of one of the types in plugin.produces and passes the unique id of the producer the pageItem event property."
+    },
+    {
+      "type": "paragraph",
+      "id": "bc709917b3340e94",
+      "text": "A client consumer listens for events of type pageItem via document.addEventListener. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener mdn]"
+    },
+    {
+      "type": "paragraph",
+      "id": "2b7d3dd14c89b09d",
+      "text": "A client producer emits events of type pageItem via document.dispatchEvent. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent mdn]"
+    },
+    {
+      "type": "paragraph",
+      "id": "df0154590ce84315",
+      "text": "Client side events are emitted and consumed using the document's EventTarget methods. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget mdn]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Wiki Events",
+        "story": []
+      },
+      "date": 1561941905571
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b91e0b7a4b95b7d1"
+      },
+      "id": "b91e0b7a4b95b7d1",
+      "type": "add",
+      "date": 1561941906686
+    },
+    {
+      "type": "remove",
+      "id": "b91e0b7a4b95b7d1",
+      "date": 1561941918448
+    },
+    {
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "id": "bda3f334087259fa",
+      "type": "add",
+      "date": 1561942627826
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942659842
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942749945
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942757113
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942794685
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942804105
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942853402
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942882685
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942952897
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561942974784
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943006061
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943039432
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943078352
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943125732
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943140996
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943259158
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943285792
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943313715
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943483981
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943508691
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943599177
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943633906
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943657132
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943688056
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943742048
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943891577
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561943992905
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944114230
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944170914
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944188493
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944257971
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944278057
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944306866
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944355471
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944366884
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944380172
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944450988
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944511912
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944609436
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561944964879
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561945004685
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561945045067
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "0f6b3233892c837b",
+        "text": "Describes the different event sources, producers, and clients used in wiki."
+      },
+      "id": "0f6b3233892c837b",
+      "type": "add",
+      "after": "bda3f334087259fa",
+      "date": 1561945059033
+    },
+    {
+      "type": "edit",
+      "id": "0f6b3233892c837b",
+      "item": {
+        "type": "paragraph",
+        "id": "0f6b3233892c837b",
+        "text": "Describes the different event sources, producers, and clients used in wiki."
+      },
+      "date": 1561945093305
+    },
+    {
+      "id": "0f6b3233892c837b",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "bda3f334087259fa"
+      ],
+      "date": 1561945102720
+    },
+    {
+      "type": "add",
+      "id": "1260bbc2e10881b7",
+      "item": {
+        "type": "paragraph",
+        "id": "1260bbc2e10881b7",
+        "text": "The client side of a plugin declares the event source types it produces by exporting an array called produces from its module definition."
+      },
+      "after": "0f6b3233892c837b",
+      "date": 1561945136656
+    },
+    {
+      "type": "add",
+      "id": "12b9abd1554aba78",
+      "item": {
+        "type": "paragraph",
+        "id": "12b9abd1554aba78",
+        "text": "A slugItem is the slug of the page and the id of the item."
+      },
+      "after": "1260bbc2e10881b7",
+      "date": 1561945150143
+    },
+    {
+      "type": "add",
+      "id": "fe3c78087eeafebd",
+      "item": {
+        "type": "paragraph",
+        "id": "fe3c78087eeafebd",
+        "text": ""
+      },
+      "after": "12b9abd1554aba78",
+      "date": 1561945197970
+    },
+    {
+      "type": "add",
+      "id": "f86af0fe9ba83dc5",
+      "item": {
+        "type": "paragraph",
+        "id": "f86af0fe9ba83dc5",
+        "text": "A consumer is something that listens to events of a specific type."
+      },
+      "after": "fe3c78087eeafebd",
+      "date": 1561945246298
+    },
+    {
+      "type": "add",
+      "id": "9c6360b33ee8d760",
+      "item": {
+        "type": "paragraph",
+        "id": "9c6360b33ee8d760",
+        "text": ""
+      },
+      "after": "f86af0fe9ba83dc5",
+      "date": 1561945310662
+    },
+    {
+      "item": {
+        "type": "graphviz",
+        "id": "066248aaec141e1c",
+        "text": ""
+      },
+      "id": "066248aaec141e1c",
+      "type": "add",
+      "after": "bda3f334087259fa",
+      "date": 1561945339528
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561945343316
+    },
+    {
+      "type": "remove",
+      "id": "066248aaec141e1c",
+      "date": 1561945344399
+    },
+    {
+      "item": {
+        "type": "graphviz",
+        "id": "748172eaa22d790d",
+        "text": "digraph G {\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n}"
+      },
+      "id": "748172eaa22d790d",
+      "type": "add",
+      "after": "bda3f334087259fa",
+      "date": 1561945347022
+    },
+    {
+      "type": "edit",
+      "id": "748172eaa22d790d",
+      "item": {
+        "type": "graphviz",
+        "id": "748172eaa22d790d",
+        "text": "digraph G {\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n}"
+      },
+      "date": 1561945360960
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "320c72ea46ad8ded",
+        "text": "A client's event sources are identified by pageItem."
+      },
+      "id": "320c72ea46ad8ded",
+      "type": "add",
+      "after": "748172eaa22d790d",
+      "date": 1561945363552
+    },
+    {
+      "type": "edit",
+      "id": "320c72ea46ad8ded",
+      "item": {
+        "type": "paragraph",
+        "id": "320c72ea46ad8ded",
+        "text": "A client's event sources are identified by pageItem."
+      },
+      "date": 1561945368290
+    },
+    {
+      "id": "320c72ea46ad8ded",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "1260bbc2e10881b7",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "f86af0fe9ba83dc5",
+        "9c6360b33ee8d760",
+        "bda3f334087259fa",
+        "320c72ea46ad8ded",
+        "748172eaa22d790d",
+        "109a77366d99ef72"
+      ],
+      "date": 1561945371742,
+      "error": {
+        "type": "error",
+        "msg": "Internal Server Error",
+        "response": "Server Ignoring move. Try reload."
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1561945377086
+    },
+    {
+      "type": "edit",
+      "id": "320c72ea46ad8ded",
+      "item": {
+        "type": "paragraph",
+        "id": "320c72ea46ad8ded",
+        "text": "A client's event sources are identified by pageItem."
+      },
+      "date": 1561945397615
+    },
+    {
+      "type": "add",
+      "id": "510ae2e9f7a761ca",
+      "item": {
+        "type": "paragraph",
+        "id": "510ae2e9f7a761ca",
+        "text": "A pageItem is the page key and item id of the item that is the event source."
+      },
+      "after": "320c72ea46ad8ded",
+      "date": 1561945418898
+    },
+    {
+      "type": "add",
+      "id": "ef1b9a3b5bbcbf7d",
+      "item": {
+        "type": "paragraph",
+        "id": "ef1b9a3b5bbcbf7d",
+        "text": "To do this, a client producer registers itself as a server consumer. This causes all events emitted by the server producer to be received by the registered server consumer and forwarded on to the client producer so the producer can send them on to any client consumers. The diagram below illustrates this."
+      },
+      "after": "510ae2e9f7a761ca",
+      "date": 1561945451240
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1561945478351
+    },
+    {
+      "type": "edit",
+      "id": "9c6360b33ee8d760",
+      "item": {
+        "type": "paragraph",
+        "id": "9c6360b33ee8d760",
+        "text": ""
+      },
+      "date": 1561945486301
+    },
+    {
+      "type": "edit",
+      "id": "748172eaa22d790d",
+      "item": {
+        "type": "graphviz",
+        "id": "748172eaa22d790d",
+        "text": "digraph G {\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n}"
+      },
+      "date": 1561945522306
+    },
+    {
+      "type": "edit",
+      "id": "ef1b9a3b5bbcbf7d",
+      "item": {
+        "type": "paragraph",
+        "id": "ef1b9a3b5bbcbf7d",
+        "text": "To do this, a client producer registers itself as a server consumer. This causes all events emitted by the server producer to be received by the registered server consumer and forwarded on to the client producer so the producer can send them on to any client consumers. The diagram below illustrates this."
+      },
+      "date": 1561945571751
+    },
+    {
+      "type": "add",
+      "id": "60e76f7c4dda2e85",
+      "item": {
+        "type": "paragraph",
+        "id": "60e76f7c4dda2e85",
+        "text": "The server side uses unique event emitters for each event source. They are stored in a hash keyed off of the slugItem."
+      },
+      "after": "510ae2e9f7a761ca",
+      "date": 1561945629526
+    },
+    {
+      "type": "add",
+      "id": "2b7d3dd14c89b09d",
+      "item": {
+        "type": "paragraph",
+        "id": "2b7d3dd14c89b09d",
+        "text": "A client producer emits events of type pageItem via document.dispatchEvent. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent mdn]"
+      },
+      "after": "60e76f7c4dda2e85",
+      "date": 1561945652382
+    },
+    {
+      "type": "add",
+      "id": "56645240aa19d10a",
+      "item": {
+        "type": "paragraph",
+        "id": "56645240aa19d10a",
+        "text": "A client consumer listens for events of type pageItem via document.addEventListener. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener mdn]"
+      },
+      "after": "2b7d3dd14c89b09d",
+      "date": 1561945672651
+    },
+    {
+      "type": "edit",
+      "id": "2b7d3dd14c89b09d",
+      "item": {
+        "type": "paragraph",
+        "id": "2b7d3dd14c89b09d",
+        "text": "A client producer emits events of type pageItem via document.dispatchEvent. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent mdn]"
+      },
+      "date": 1561945686864
+    },
+    {
+      "type": "edit",
+      "id": "2b7d3dd14c89b09d",
+      "item": {
+        "type": "paragraph",
+        "id": "2b7d3dd14c89b09d",
+        "text": "A client producer emits events of type pageItem via document.dispatchEvent. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent mdn]"
+      },
+      "date": 1561945694699
+    },
+    {
+      "type": "add",
+      "id": "b66ce43d10dd16c4",
+      "item": {
+        "type": "paragraph",
+        "id": "b66ce43d10dd16c4",
+        "text": "Client producers can generate events from any source. One possible pattern is to have a client producer act as a forwarder of server side events."
+      },
+      "after": "56645240aa19d10a",
+      "date": 1561945749859
+    },
+    {
+      "type": "edit",
+      "id": "ef1b9a3b5bbcbf7d",
+      "item": {
+        "type": "paragraph",
+        "id": "ef1b9a3b5bbcbf7d",
+        "text": "To do this, a client producer registers itself as a server consumer. This causes all events emitted by the server producer to be received by the registered server consumer and forwarded on to the client producer so the producer can send them on to any client consumers. The diagram below illustrates this."
+      },
+      "date": 1561945997587
+    },
+    {
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"Register socket-io client\"];\n}"
+      },
+      "id": "d3a6a90c46b52d97",
+      "type": "add",
+      "after": "748172eaa22d790d",
+      "date": 1561946008986
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"Register socket-io client\"];\n}"
+      },
+      "date": 1561946013992
+    },
+    {
+      "id": "ef1b9a3b5bbcbf7d",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "1260bbc2e10881b7",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "f86af0fe9ba83dc5",
+        "9c6360b33ee8d760",
+        "bda3f334087259fa",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "b66ce43d10dd16c4",
+        "748172eaa22d790d",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97"
+      ],
+      "date": 1561946017938
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"Register socket-io client\"];\n}"
+      },
+      "date": 1561946051316
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"Register socket-io client\"];\n}"
+      },
+      "date": 1561946063319
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"Register socket-io client\"];\n}"
+      },
+      "date": 1561946091523
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"Register socket-io client\"];\n}"
+      },
+      "date": 1561946142163
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"Register socket-io client\"];\n}"
+      },
+      "date": 1561946166458
+    },
+    {
+      "type": "add",
+      "id": "df4e0985de40ff27",
+      "item": {
+        "type": "paragraph",
+        "id": "df4e0985de40ff27",
+        "text": ""
+      },
+      "after": "9c6360b33ee8d760",
+      "date": 1561946338798
+    },
+    {
+      "type": "add",
+      "id": "3c57005372a96c67",
+      "item": {
+        "type": "paragraph",
+        "id": "3c57005372a96c67",
+        "text": "This effort is experimental. The datalog plugin is the only plugin that implements this pattern. The intent is to migrate this capability into the wiki plugin subsystem should the experiment prove to be successful. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/master/server/server.js#L40 server-events] [https://github.com/WardCunningham/wiki-plugin-datalog/compare/master...joshuabenuck:server-forward client-events]"
+      },
+      "after": "0f6b3233892c837b",
+      "date": 1561946562139
+    },
+    {
+      "type": "edit",
+      "id": "fe3c78087eeafebd",
+      "item": {
+        "type": "paragraph",
+        "id": "fe3c78087eeafebd",
+        "text": ""
+      },
+      "date": 1561946588532
+    },
+    {
+      "type": "edit",
+      "id": "56645240aa19d10a",
+      "item": {
+        "type": "paragraph",
+        "id": "56645240aa19d10a",
+        "text": "A client consumer listens for events of type pageItem via document.addEventListener. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener mdn]"
+      },
+      "date": 1561946631199
+    },
+    {
+      "type": "edit",
+      "id": "2b7d3dd14c89b09d",
+      "item": {
+        "type": "paragraph",
+        "id": "2b7d3dd14c89b09d",
+        "text": "A client producer emits events of type pageItem via document.dispatchEvent. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent mdn]"
+      },
+      "date": 1561946652607
+    },
+    {
+      "type": "add",
+      "id": "df0154590ce84315",
+      "item": {
+        "type": "paragraph",
+        "id": "df0154590ce84315",
+        "text": "Events are emitted and consumed using the document's EventTarget methods. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget mdn]"
+      },
+      "after": "60e76f7c4dda2e85",
+      "date": 1561946681317
+    },
+    {
+      "type": "edit",
+      "id": "df0154590ce84315",
+      "item": {
+        "type": "paragraph",
+        "id": "df0154590ce84315",
+        "text": "Events are emitted and consumed using the document's EventTarget methods. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget mdn]"
+      },
+      "date": 1561946690185
+    },
+    {
+      "type": "edit",
+      "id": "3c57005372a96c67",
+      "item": {
+        "type": "paragraph",
+        "id": "3c57005372a96c67",
+        "text": "This effort is experimental. The datalog plugin is the only plugin that implements this pattern. The intent is to migrate this capability into the wiki plugin subsystem should the experiment prove to be successful. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/master/server/server.js#L40 server-events] [https://github.com/WardCunningham/wiki-plugin-datalog/compare/master...joshuabenuck:server-forward client-events]"
+      },
+      "date": 1561946796649
+    },
+    {
+      "type": "edit",
+      "id": "3c57005372a96c67",
+      "item": {
+        "type": "paragraph",
+        "id": "3c57005372a96c67",
+        "text": "This effort is experimental. The datalog plugin is the only plugin that implements this pattern. The intent is to migrate this capability into the wiki plugin subsystem should the experiment prove to be successful. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/master/server/server.js#L40 server-events] [https://github.com/WardCunningham/wiki-plugin-datalog/compare/master...joshuabenuck:server-forward client-events]"
+      },
+      "date": 1561946846934
+    },
+    {
+      "type": "add",
+      "id": "98dc5a940cca5fc1",
+      "item": {
+        "type": "paragraph",
+        "id": "98dc5a940cca5fc1",
+        "text": ""
+      },
+      "after": "0f6b3233892c837b",
+      "date": 1561947885146
+    },
+    {
+      "type": "add",
+      "id": "423fccd2decd759d",
+      "item": {
+        "type": "paragraph",
+        "id": "423fccd2decd759d",
+        "text": "Events in wiki build off of the concept of event sources. Plugins produce and consume event sources of specific types."
+      },
+      "after": "3c57005372a96c67",
+      "date": 1561948165627,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1561952038155
+    },
+    {
+      "type": "edit",
+      "id": "423fccd2decd759d",
+      "item": {
+        "type": "paragraph",
+        "id": "423fccd2decd759d",
+        "text": "Events in wiki build off of the concept of event sources. Plugins produce and consume event sources of specific types."
+      },
+      "date": 1561952100877
+    },
+    {
+      "type": "edit",
+      "id": "1260bbc2e10881b7",
+      "item": {
+        "type": "paragraph",
+        "id": "1260bbc2e10881b7",
+        "text": "The client side of a plugin declares the event source types it produces by exporting an array called produces from its module definition."
+      },
+      "date": 1561952124049
+    },
+    {
+      "type": "edit",
+      "id": "39a460b4fba49a85",
+      "item": {
+        "type": "paragraph",
+        "id": "39a460b4fba49a85",
+        "text": "The client side plugin subsystem orders the running of bind operations so that a plugin which produces an event type will complete its bind operation before the bind operations of the plugins that consume that event type."
+      },
+      "date": 1561952217043
+    },
+    {
+      "type": "edit",
+      "id": "86d2dee603a6d8b7",
+      "item": {
+        "type": "paragraph",
+        "id": "86d2dee603a6d8b7",
+        "text": "Note that the way to identify a unique event producer varies depending on whether one is on the client or the server."
+      },
+      "date": 1561952271599
+    },
+    {
+      "type": "add",
+      "id": "15ae3429cd156aa5",
+      "item": {
+        "type": "paragraph",
+        "id": "15ae3429cd156aa5",
+        "text": "This is due to the fact that on the server, there is only one instance of a given page, but on the client, there can be many copies of the same page in the lineup."
+      },
+      "after": "86d2dee603a6d8b7",
+      "date": 1561952315168
+    },
+    {
+      "type": "edit",
+      "id": "748172eaa22d790d",
+      "item": {
+        "type": "graphviz",
+        "id": "748172eaa22d790d",
+        "text": "digraph G {\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n}"
+      },
+      "date": 1561952412810
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"Register socket-io client\"];\n}"
+      },
+      "date": 1561952444145
+    },
+    {
+      "id": "748172eaa22d790d",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "3c57005372a96c67",
+        "a6d7c4bedaa20883",
+        "423fccd2decd759d",
+        "f8e56004a33b070c",
+        "1260bbc2e10881b7",
+        "19340f8329a8a9f2",
+        "c646e7bca0b1a5f3",
+        "a39e73fdda21c81a",
+        "39a460b4fba49a85",
+        "77d81b25571fbacc",
+        "5cd44c2283e82cab",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "63733835005341f1",
+        "39e7e508c2a56a6b",
+        "619ff5a719b1c65c",
+        "9745388f6cec068d",
+        "12b9abd1554aba78",
+        "589a879ad345e686",
+        "f86af0fe9ba83dc5",
+        "c8d300892d72b7f4",
+        "16b0b1ad8a37a132",
+        "973cb4a303b3c417",
+        "2a23fa2b985c1dc9",
+        "a3f6d24dfc0c980b",
+        "bda3f334087259fa",
+        "9f93172013ff0101",
+        "b9cb32208d4fe7ef",
+        "0fa3d68159a4b5e8",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "6ef52949d838a419",
+        "35e8e486086da64d",
+        "748172eaa22d790d",
+        "a6716450d64f9b57",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "b3dfb22bb1ef9d83",
+        "6bb034742d04d7a8",
+        "455ba241ffedc9bf",
+        "60e76f7c4dda2e85",
+        "e9f76abbf79786fb",
+        "aacd87e61d2b54a8",
+        "71084578c2eb8f63",
+        "a06aa5c7f1290ef2",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a"
+      ],
+      "date": 1561952485252,
+      "error": {
+        "type": "error",
+        "msg": "Internal Server Error",
+        "response": "Server Ignoring move. Try reload."
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1561952501081
+    },
+    {
+      "id": "748172eaa22d790d",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "423fccd2decd759d",
+        "1260bbc2e10881b7",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "f86af0fe9ba83dc5",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "39a460b4fba49a85",
+        "86d2dee603a6d8b7",
+        "748172eaa22d790d",
+        "15ae3429cd156aa5"
+      ],
+      "date": 1561952545382
+    },
+    {
+      "type": "add",
+      "id": "e9d6194da6feda66",
+      "item": {
+        "type": "paragraph",
+        "id": "e9d6194da6feda66",
+        "text": "Note: I lost a bunch of edits on this page. I recommend holding off on reviewing it until this message is removed while I attempt to recreate my edits."
+      },
+      "after": "0f6b3233892c837b",
+      "date": 1561953084873
+    },
+    {
+      "type": "add",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Source Type\"];\n} "
+      },
+      "after": "423fccd2decd759d",
+      "date": 1561953108098
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Source Type\"];\n} "
+      },
+      "date": 1561953211920
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Source Type\"];\n} "
+      },
+      "date": 1561953217958
+    },
+    {
+      "type": "add",
+      "id": "e1d8179f3b00c235",
+      "item": {
+        "type": "pagefold",
+        "id": "e1d8179f3b00c235",
+        "text": "Plugins"
+      },
+      "after": "3c57005372a96c67",
+      "date": 1561953227567
+    },
+    {
+      "type": "edit",
+      "id": "e1d8179f3b00c235",
+      "item": {
+        "type": "pagefold",
+        "id": "e1d8179f3b00c235",
+        "text": "Plugins"
+      },
+      "date": 1561953234744
+    },
+    {
+      "type": "add",
+      "id": "5f9c37ce46ee5210",
+      "item": {
+        "type": "code",
+        "id": "5f9c37ce46ee5210",
+        "text": "const produces = ['.server-source']\n...\nmodule.export = {produces, ...}"
+      },
+      "after": "1260bbc2e10881b7",
+      "date": 1561953288986
+    },
+    {
+      "type": "edit",
+      "id": "5f9c37ce46ee5210",
+      "item": {
+        "type": "code",
+        "id": "5f9c37ce46ee5210",
+        "text": "const produces = ['.server-source']\n...\nmodule.export = {produces, ...}"
+      },
+      "date": 1561953314912
+    },
+    {
+      "type": "add",
+      "id": "58ae5cc0d7da390a",
+      "item": {
+        "type": "paragraph",
+        "id": "58ae5cc0d7da390a",
+        "text": "The client side of a plugin declares the event types it consumes by exporting an object literal that contains a mapping of event type to an event handler for those events."
+      },
+      "after": "5f9c37ce46ee5210",
+      "date": 1561953387917
+    },
+    {
+      "type": "add",
+      "id": "e786f499bc9fdd94",
+      "item": {
+        "type": "code",
+        "id": "e786f499bc9fdd94",
+        "text": "const consumes = {\n  '.server-source': ({pageItem, result}) => {\n  }\n}\n...\nmodule.exports = {consumes, ...}"
+      },
+      "after": "58ae5cc0d7da390a",
+      "date": 1561953389109
+    },
+    {
+      "type": "edit",
+      "id": "e786f499bc9fdd94",
+      "item": {
+        "type": "code",
+        "id": "e786f499bc9fdd94",
+        "text": "const consumes = {\n  '.server-source': ({pageItem, result}) => {\n  }\n}\n...\nmodule.exports = {consumes, ...}"
+      },
+      "date": 1561953424890
+    },
+    {
+      "type": "add",
+      "id": "28aa167a1adce3cb",
+      "item": {
+        "type": "pagefold",
+        "id": "28aa167a1adce3cb",
+        "text": "Server Side "
+      },
+      "after": "e786f499bc9fdd94",
+      "date": 1561953487162
+    },
+    {
+      "type": "edit",
+      "id": "28aa167a1adce3cb",
+      "item": {
+        "type": "pagefold",
+        "id": "28aa167a1adce3cb",
+        "text": "Server Side "
+      },
+      "date": 1561953491858
+    },
+    {
+      "type": "add",
+      "id": "764bcff2ae6cdb78",
+      "item": {
+        "type": "paragraph",
+        "id": "764bcff2ae6cdb78",
+        "text": "A producer is something that emits events of a specific type."
+      },
+      "after": "f86af0fe9ba83dc5",
+      "date": 1561953642596
+    },
+    {
+      "id": "764bcff2ae6cdb78",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "28aa167a1adce3cb",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "40c9ab8a93a5217c",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "39a460b4fba49a85",
+        "86d2dee603a6d8b7",
+        "748172eaa22d790d",
+        "15ae3429cd156aa5"
+      ],
+      "date": 1561953645033,
+      "error": {
+        "type": "error",
+        "msg": "Internal Server Error",
+        "response": "Server Ignoring move. Try reload."
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1561953652299
+    },
+    {
+      "type": "add",
+      "id": "76041db3b97f8a97",
+      "item": {
+        "type": "paragraph",
+        "id": "76041db3b97f8a97",
+        "text": "Server side event producers and consumers are items within pages within a wiki site."
+      },
+      "after": "28aa167a1adce3cb",
+      "date": 1561953745522
+    },
+    {
+      "id": "764bcff2ae6cdb78",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "764bcff2ae6cdb78",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "f86af0fe9ba83dc5",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "39a460b4fba49a85",
+        "86d2dee603a6d8b7",
+        "748172eaa22d790d",
+        "15ae3429cd156aa5"
+      ],
+      "date": 1561953748641
+    },
+    {
+      "id": "f86af0fe9ba83dc5",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "39a460b4fba49a85",
+        "86d2dee603a6d8b7",
+        "748172eaa22d790d",
+        "15ae3429cd156aa5"
+      ],
+      "date": 1561953751031
+    },
+    {
+      "type": "edit",
+      "id": "76041db3b97f8a97",
+      "item": {
+        "type": "paragraph",
+        "id": "76041db3b97f8a97",
+        "text": "Server side event producers and consumers are items within pages within a wiki site."
+      },
+      "date": 1561953808684
+    },
+    {
+      "type": "add",
+      "id": "2117d78475ce8569",
+      "item": {
+        "type": "paragraph",
+        "id": "2117d78475ce8569",
+        "text": "When a new item is saved, the item's plugin has the opportunity to create and register event producers and consumers."
+      },
+      "after": "76041db3b97f8a97",
+      "date": 1561953865350
+    },
+    {
+      "type": "edit",
+      "id": "2117d78475ce8569",
+      "item": {
+        "type": "paragraph",
+        "id": "2117d78475ce8569",
+        "text": "When a new item is saved, the item's plugin has the opportunity to create and register event producers and consumers."
+      },
+      "date": 1561953900264
+    },
+    {
+      "type": "edit",
+      "id": "76041db3b97f8a97",
+      "item": {
+        "type": "paragraph",
+        "id": "76041db3b97f8a97",
+        "text": "Server side event producers and consumers are items within pages within a wiki site."
+      },
+      "date": 1561953921546
+    },
+    {
+      "type": "add",
+      "id": "4dcb3daf34a01210",
+      "item": {
+        "type": "paragraph",
+        "id": "4dcb3daf34a01210",
+        "text": "Events are always of a single type, but there can be multiple producers of that event type."
+      },
+      "after": "2117d78475ce8569",
+      "date": 1561953941053
+    },
+    {
+      "type": "add",
+      "id": "e9d9bcf11bb4e387",
+      "item": {
+        "type": "paragraph",
+        "id": "e9d9bcf11bb4e387",
+        "text": "There is no deterministic ordering of plugin loading on the server side."
+      },
+      "after": "4dcb3daf34a01210",
+      "date": 1561953962860
+    },
+    {
+      "item": {
+        "type": "pagefold",
+        "id": "ae42a84c356105cd",
+        "text": "Implementation Details"
+      },
+      "id": "ae42a84c356105cd",
+      "type": "add",
+      "after": "15ae3429cd156aa5",
+      "date": 1561953997210
+    },
+    {
+      "type": "edit",
+      "id": "ae42a84c356105cd",
+      "item": {
+        "type": "pagefold",
+        "id": "ae42a84c356105cd",
+        "text": "Implementation Details"
+      },
+      "date": 1561954004498
+    },
+    {
+      "type": "edit",
+      "id": "ae42a84c356105cd",
+      "item": {
+        "type": "pagefold",
+        "id": "ae42a84c356105cd",
+        "text": "Implementation Details"
+      },
+      "date": 1561954007887
+    },
+    {
+      "type": "edit",
+      "id": "ae42a84c356105cd",
+      "item": {
+        "type": "pagefold",
+        "id": "ae42a84c356105cd",
+        "text": "Implementation Details"
+      },
+      "date": 1561954012963
+    },
+    {
+      "type": "add",
+      "id": "ee0d69f6ca1f5cca",
+      "item": {
+        "type": "pagefold",
+        "id": "ee0d69f6ca1f5cca",
+        "text": "Client Side"
+      },
+      "after": "12b9abd1554aba78",
+      "date": 1561954023739
+    },
+    {
+      "type": "edit",
+      "id": "ee0d69f6ca1f5cca",
+      "item": {
+        "type": "pagefold",
+        "id": "ee0d69f6ca1f5cca",
+        "text": "Client Side"
+      },
+      "date": 1561954029202
+    },
+    {
+      "id": "ee0d69f6ca1f5cca",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "4dcb3daf34a01210",
+        "e9d9bcf11bb4e387",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "39a460b4fba49a85",
+        "86d2dee603a6d8b7",
+        "748172eaa22d790d",
+        "15ae3429cd156aa5",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954038950
+    },
+    {
+      "type": "add",
+      "id": "74f8a65dcdd43ab4",
+      "item": {
+        "type": "pagefold",
+        "id": "74f8a65dcdd43ab4",
+        "text": "Event Forwarding"
+      },
+      "after": "56645240aa19d10a",
+      "date": 1561954050645
+    },
+    {
+      "type": "edit",
+      "id": "74f8a65dcdd43ab4",
+      "item": {
+        "type": "pagefold",
+        "id": "74f8a65dcdd43ab4",
+        "text": "Event Forwarding"
+      },
+      "date": 1561954057227
+    },
+    {
+      "id": "39a460b4fba49a85",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "4dcb3daf34a01210",
+        "e9d9bcf11bb4e387",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "39a460b4fba49a85",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "86d2dee603a6d8b7",
+        "748172eaa22d790d",
+        "15ae3429cd156aa5",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954079664
+    },
+    {
+      "id": "86d2dee603a6d8b7",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "4dcb3daf34a01210",
+        "e9d9bcf11bb4e387",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "39a460b4fba49a85",
+        "86d2dee603a6d8b7",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "15ae3429cd156aa5",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954088984
+    },
+    {
+      "id": "15ae3429cd156aa5",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "4dcb3daf34a01210",
+        "e9d9bcf11bb4e387",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "39a460b4fba49a85",
+        "86d2dee603a6d8b7",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954107056
+    },
+    {
+      "id": "86d2dee603a6d8b7",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "15ae3429cd156aa5",
+        "86d2dee603a6d8b7",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "4dcb3daf34a01210",
+        "e9d9bcf11bb4e387",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "39a460b4fba49a85",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954119991
+    },
+    {
+      "id": "86d2dee603a6d8b7",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "4dcb3daf34a01210",
+        "e9d9bcf11bb4e387",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "39a460b4fba49a85",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954124811
+    },
+    {
+      "id": "39a460b4fba49a85",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "4dcb3daf34a01210",
+        "e9d9bcf11bb4e387",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954135868
+    },
+    {
+      "id": "e9d9bcf11bb4e387",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "4dcb3daf34a01210",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954141652
+    },
+    {
+      "type": "edit",
+      "id": "4dcb3daf34a01210",
+      "item": {
+        "type": "paragraph",
+        "id": "4dcb3daf34a01210",
+        "text": "Events are always of a single type, but there can be multiple producers of that event type."
+      },
+      "date": 1561954172878
+    },
+    {
+      "id": "4dcb3daf34a01210",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "42b8f63eb92284c2",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954183431,
+      "error": {
+        "type": "error",
+        "msg": "Internal Server Error",
+        "response": "Server Ignoring move. Try reload."
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1561954189918
+    },
+    {
+      "type": "add",
+      "id": "431823020e75b293",
+      "item": {
+        "type": "paragraph",
+        "id": "431823020e75b293",
+        "text": "Individual producers are identified by their slugItem."
+      },
+      "after": "2117d78475ce8569",
+      "date": 1561954225218
+    },
+    {
+      "type": "add",
+      "id": "a6b8e73b502d3d8e",
+      "item": {
+        "type": "paragraph",
+        "id": "a6b8e73b502d3d8e",
+        "text": "Consumers register their interest not in all events of a specific type, but rather, in all events of a specific type emitted by a specific consumer."
+      },
+      "after": "12b9abd1554aba78",
+      "date": 1561954266259
+    },
+    {
+      "type": "edit",
+      "id": "a6b8e73b502d3d8e",
+      "item": {
+        "type": "paragraph",
+        "id": "a6b8e73b502d3d8e",
+        "text": "Consumers register their interest not in all events of a specific type, but rather, in all events of a specific type emitted by a specific producer."
+      },
+      "date": 1561954276309
+    },
+    {
+      "id": "a6b8e73b502d3d8e",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "56645240aa19d10a",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "ae42a84c356105cd"
+      ],
+      "date": 1561954280932
+    },
+    {
+      "type": "add",
+      "id": "63ef3364c4d46268",
+      "item": {
+        "type": "paragraph",
+        "id": "63ef3364c4d46268",
+        "text": "Producers emit events of a specific type."
+      },
+      "after": "4dcb3daf34a01210",
+      "date": 1561954298612
+    },
+    {
+      "type": "edit",
+      "id": "63ef3364c4d46268",
+      "item": {
+        "type": "paragraph",
+        "id": "63ef3364c4d46268",
+        "text": "Producers emit events of a specific type and identify themselves as the source of the event."
+      },
+      "date": 1561954316521
+    },
+    {
+      "type": "add",
+      "id": "e6c1edb2f108ac6d",
+      "item": {
+        "type": "paragraph",
+        "id": "e6c1edb2f108ac6d",
+        "text": "Other means for creating consumers may be implemented. Consumers are not required to be created during item save."
+      },
+      "after": "2117d78475ce8569",
+      "date": 1561954408692
+    },
+    {
+      "type": "edit",
+      "id": "320c72ea46ad8ded",
+      "item": {
+        "type": "paragraph",
+        "id": "320c72ea46ad8ded",
+        "text": "A client's event sources are identified by their pageItem."
+      },
+      "date": 1561954471411
+    },
+    {
+      "id": "56645240aa19d10a",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "748172eaa22d790d",
+        "ae42a84c356105cd",
+        "56645240aa19d10a"
+      ],
+      "date": 1561954496174
+    },
+    {
+      "id": "748172eaa22d790d",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "748172eaa22d790d",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "2b7d3dd14c89b09d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "ae42a84c356105cd",
+        "56645240aa19d10a"
+      ],
+      "date": 1561954525683
+    },
+    {
+      "id": "2b7d3dd14c89b09d",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "748172eaa22d790d",
+        "60e76f7c4dda2e85",
+        "df0154590ce84315",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "ae42a84c356105cd",
+        "56645240aa19d10a",
+        "2b7d3dd14c89b09d"
+      ],
+      "date": 1561954532667
+    },
+    {
+      "id": "df0154590ce84315",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "748172eaa22d790d",
+        "60e76f7c4dda2e85",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "ae42a84c356105cd",
+        "56645240aa19d10a",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561954545938
+    },
+    {
+      "id": "60e76f7c4dda2e85",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "60e76f7c4dda2e85",
+        "d3a6a90c46b52d97",
+        "ae42a84c356105cd",
+        "56645240aa19d10a",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561954559336
+    },
+    {
+      "id": "60e76f7c4dda2e85",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "ae42a84c356105cd",
+        "56645240aa19d10a",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315",
+        "60e76f7c4dda2e85"
+      ],
+      "date": 1561954587416
+    },
+    {
+      "type": "edit",
+      "id": "56645240aa19d10a",
+      "item": {
+        "type": "paragraph",
+        "id": "56645240aa19d10a",
+        "text": "These details do not necessarily match the design."
+      },
+      "date": 1561954601422
+    },
+    {
+      "type": "add",
+      "id": "c2abb8f6b08aa5e5",
+      "item": {
+        "type": "paragraph",
+        "id": "c2abb8f6b08aa5e5",
+        "text": "The intention is to modify the implementation to match the design should the design prove useful."
+      },
+      "after": "56645240aa19d10a",
+      "date": 1561954621772
+    },
+    {
+      "type": "add",
+      "id": "873ad66ce0e4bf5e",
+      "item": {
+        "type": "paragraph",
+        "id": "873ad66ce0e4bf5e",
+        "text": "This section exists primarily to help the interested reader map the existing implementation to elements within the proposed design."
+      },
+      "after": "c2abb8f6b08aa5e5",
+      "date": 1561954655584
+    },
+    {
+      "type": "add",
+      "id": "bc709917b3340e94",
+      "item": {
+        "type": "paragraph",
+        "id": "bc709917b3340e94",
+        "text": "A client consumer listens for events of type pageItem via document.addEventListener. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener mdn]"
+      },
+      "after": "873ad66ce0e4bf5e",
+      "date": 1561954656466
+    },
+    {
+      "id": "60e76f7c4dda2e85",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "ae42a84c356105cd",
+        "56645240aa19d10a",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561954673541
+    },
+    {
+      "type": "add",
+      "id": "0260cded35c32c39",
+      "item": {
+        "type": "paragraph",
+        "id": "0260cded35c32c39",
+        "text": "An alternative design would be to use a single event emitter and then to emit events of one of the types in plugin.produces. The specific instance of the event producer can be placed in an event property called slugItem."
+      },
+      "after": "60e76f7c4dda2e85",
+      "date": 1561954750565
+    },
+    {
+      "type": "add",
+      "id": "f4cff31bd239b6e6",
+      "item": {
+        "type": "paragraph",
+        "id": "f4cff31bd239b6e6",
+        "text": "The client does not use a unique event emitter for each producer. Instead, it sends events with a type of one of the types in plugin.produces and passes the unique id of the producer the pageItem event property."
+      },
+      "after": "0260cded35c32c39",
+      "date": 1561954812574
+    },
+    {
+      "type": "edit",
+      "id": "df0154590ce84315",
+      "item": {
+        "type": "paragraph",
+        "id": "df0154590ce84315",
+        "text": "Client side events are emitted and consumed using the document's EventTarget methods. [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget mdn]"
+      },
+      "date": 1561954828004
+    },
+    {
+      "type": "add",
+      "id": "96ef86a25047c144",
+      "item": {
+        "type": "paragraph",
+        "id": "96ef86a25047c144",
+        "text": "Instances of client side event producers are created whenever an item is created, edited, or moved."
+      },
+      "after": "510ae2e9f7a761ca",
+      "date": 1561954906982
+    },
+    {
+      "type": "add",
+      "id": "8f12bc927b13974f",
+      "item": {
+        "type": "paragraph",
+        "id": "8f12bc927b13974f",
+        "text": "They are destroyed whenever an item is moved or deleted."
+      },
+      "after": "96ef86a25047c144",
+      "date": 1561954934606
+    },
+    {
+      "type": "edit",
+      "id": "56645240aa19d10a",
+      "item": {
+        "type": "paragraph",
+        "id": "56645240aa19d10a",
+        "text": "Event forwarding in this way introduces some additional challenges."
+      },
+      "date": 1561954963779
+    },
+    {
+      "type": "add",
+      "id": "381a21cc924f6121",
+      "item": {
+        "type": "paragraph",
+        "id": "381a21cc924f6121",
+        "text": "These details do not necessarily match the design."
+      },
+      "after": "56645240aa19d10a",
+      "date": 1561954964158
+    },
+    {
+      "id": "56645240aa19d10a",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "e9d6194da6feda66",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "96ef86a25047c144",
+        "8f12bc927b13974f",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "56645240aa19d10a",
+        "ae42a84c356105cd",
+        "381a21cc924f6121",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "0260cded35c32c39",
+        "f4cff31bd239b6e6",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561954965906
+    },
+    {
+      "type": "add",
+      "id": "ddb19143f61086c8",
+      "item": {
+        "type": "paragraph",
+        "id": "ddb19143f61086c8",
+        "text": "In order to prevent duplicate server side consumers from being registered, the client side producer needs to only request a new server consumer if it hasn't already registered one for the given slugItem."
+      },
+      "after": "56645240aa19d10a",
+      "date": 1561955014594
+    },
+    {
+      "type": "add",
+      "id": "7dd333e20c3b6919",
+      "item": {
+        "type": "paragraph",
+        "id": "7dd333e20c3b6919",
+        "text": "The relationship between server side consumers and client side producers ends up looking like this."
+      },
+      "after": "ddb19143f61086c8",
+      "date": 1561955039547
+    },
+    {
+      "type": "add",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "factory",
+        "id": "b781e938cc5b3721",
+        "text": " "
+      },
+      "after": "7dd333e20c3b6919",
+      "date": 1561955040831
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 1\";\n    c1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 5\";\n    c2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n  }\n}\n"
+      },
+      "date": 1561955188223
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 1\";\n    c1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 5\";\n    c2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n  }\n  c1Producer -> Server;\n  c2Producer -> Server;\n}\n"
+      },
+      "date": 1561955208526
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 1\";\n    c1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 5\";\n    c2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n  }\n  c1Producer -> sConsumer;\n  c2Producer -> sConsumer;\n}\n"
+      },
+      "date": 1561955222743
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 1\";\n    c1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 5\";\n    c2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n    sProducer[label=\"Producer];\n    sProducer -> sConsumer;\n  }\n  c1Producer -> sConsumer;\n  c2Producer -> sConsumer;\n}\n"
+      },
+      "date": 1561955261488
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 1\";\n    c1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 5\";\n    c2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n    sProducer[label=\"Producer\"];\n    sProducer -> sConsumer;\n  }\n  c1Producer -> sConsumer;\n  c2Producer -> sConsumer;\n}\n"
+      },
+      "date": 1561955269476
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 1\";\n    c1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 5\";\n    c2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n    sProducer[label=\"Producer\"];\n    sProducer -> sConsumer;\n  }\n  sConsumer -> c1Producer;\n  sConsumer -> c2Producer;\n}\n"
+      },
+      "date": 1561955294763
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_producer1 {\n    label=\"Page 1 Item 1\";\n    p1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_producer2 {\n    label=\"Page 2 Item 5\";\n    p2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 2\";\n    c1Producer[label=\"Consumer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 6\";\n    c2Producer[label=\"Consumer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n    sProducer[label=\"Producer\"];\n    sProducer -> sConsumer;\n  }\n  sConsumer -> p1Producer;\n  sConsumer -> p2Producer;\n  p1Producer -> c1Consumer;\n  p2Producer -> c2Consumer;\n}\n"
+      },
+      "date": 1561955462034
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_producer1 {\n    label=\"Page 1 Item 1\";\n    p1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_producer2 {\n    label=\"Page 2 Item 5\";\n    p2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 2\";\n    c1Consumer[label=\"Consumer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 6\";\n    c2Consumer[label=\"Consumer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n    sProducer[label=\"Producer\"];\n    sProducer -> sConsumer;\n  }\n  sConsumer -> p1Producer;\n  sConsumer -> p2Producer;\n  p1Producer -> c1Consumer;\n  p2Producer -> c2Consumer;\n}\n"
+      },
+      "date": 1561955482125
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_producer1 {\n    label=\"Page 1 Item 1\";\n    p1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_producer2 {\n    label=\"Page 2 Item 5\";\n    p2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client1 {\n    label=\"Page 1 Item 2\";\n    c1Consumer[label=\"Consumer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Page 2 Item 6\";\n    c2Consumer[label=\"Consumer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n    sProducer[label=\"Producer\"];\n    sProducer -> sConsumer;\n  }\n  sConsumer -> p1Producer;\n  sConsumer -> p2Producer;\n  p1Producer -> c1Consumer;\n  p2Producer -> c2Consumer;\n}\n"
+      },
+      "date": 1561955482125
+    },
+    {
+      "type": "add",
+      "id": "ab6799adce712ef5",
+      "item": {
+        "type": "paragraph",
+        "id": "ab6799adce712ef5",
+        "text": "Consumers register and clean up their listeners in their bind method which gets called on initial page load and whenever an item of type Object.keys(plugin.consumes) is created or edited."
+      },
+      "after": "8f12bc927b13974f",
+      "date": 1561955681986
+    },
+    {
+      "type": "remove",
+      "id": "e9d6194da6feda66",
+      "date": 1561955794979
+    },
+    {
+      "type": "edit",
+      "id": "1260bbc2e10881b7",
+      "item": {
+        "type": "paragraph",
+        "id": "1260bbc2e10881b7",
+        "text": "The client side of a plugin declares the event types it produces by exporting an array called produces from its module definition."
+      },
+      "date": 1561955868819
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label[\"Server\"];\n    Producer -> Client;\n  }\n  subgraph cluster_client {\n    label[\"Client\"];\n    Producer -> Client;\n  }\n} "
+      },
+      "date": 1561955971852
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    Producer -> Client;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    Producer -> Client;\n  }\n} "
+      },
+      "date": 1561955985204
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    Producer -> Client;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    Producer -> Client;\n  }\n} "
+      },
+      "date": 1561955985204
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer -> sConsumer;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    sProducer -> sConsumer;\n  }\n} "
+      },
+      "date": 1561956045094
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer -> sConsumer;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer -> cConsumer;\n  }\n  Type -> sProducer;\n  Type -> cProducer;\n} "
+      },
+      "date": 1561956087130
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer -> sConsumer;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer -> cConsumer;\n  }\n  sProducer -> Type;\n  cProducer -> Type;\n} "
+      },
+      "date": 1561956112272
+    },
+    {
+      "type": "add",
+      "id": "04b2b6381b6240ae",
+      "item": {
+        "type": "paragraph",
+        "id": "04b2b6381b6240ae",
+        "text": "Events of the declared type can be produced by both the client and the server side of a plugin."
+      },
+      "after": "e9d9bcf11bb4e387",
+      "date": 1561956179764
+    },
+    {
+      "id": "764bcff2ae6cdb78",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "04b2b6381b6240ae",
+        "764bcff2ae6cdb78",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "f86af0fe9ba83dc5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "96ef86a25047c144",
+        "8f12bc927b13974f",
+        "ab6799adce712ef5",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "56645240aa19d10a",
+        "ddb19143f61086c8",
+        "7dd333e20c3b6919",
+        "b781e938cc5b3721",
+        "ae42a84c356105cd",
+        "381a21cc924f6121",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "0260cded35c32c39",
+        "f4cff31bd239b6e6",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561956198087
+    },
+    {
+      "id": "f86af0fe9ba83dc5",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "04b2b6381b6240ae",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "96ef86a25047c144",
+        "8f12bc927b13974f",
+        "ab6799adce712ef5",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "56645240aa19d10a",
+        "ddb19143f61086c8",
+        "7dd333e20c3b6919",
+        "b781e938cc5b3721",
+        "ae42a84c356105cd",
+        "381a21cc924f6121",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "0260cded35c32c39",
+        "f4cff31bd239b6e6",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561956200710
+    },
+    {
+      "type": "add",
+      "id": "94fe49db847710a8",
+      "item": {
+        "type": "paragraph",
+        "id": "94fe49db847710a8",
+        "text": "They can be emitted by more than one producer."
+      },
+      "after": "04b2b6381b6240ae",
+      "date": 1561956230125
+    },
+    {
+      "type": "add",
+      "id": "d5c16e56ab7ae95b",
+      "item": {
+        "type": "factory",
+        "id": "d5c16e56ab7ae95b",
+        "text": " "
+      },
+      "after": "e9d9bcf11bb4e387",
+      "date": 1561956239339
+    },
+    {
+      "type": "edit",
+      "id": "d5c16e56ab7ae95b",
+      "item": {
+        "type": "pagefold",
+        "id": "d5c16e56ab7ae95b",
+        "text": "Event Types, Producers, Consumers"
+      },
+      "date": 1561956251608
+    },
+    {
+      "type": "add",
+      "id": "4c33084c807db474",
+      "item": {
+        "type": "factory",
+        "id": "4c33084c807db474",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer -> sConsumer;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer -> cConsumer;\n  }\n  sProducer -> Type;\n  cProducer -> Type;\n} "
+      },
+      "after": "04b2b6381b6240ae",
+      "date": 1561956260443
+    },
+    {
+      "type": "edit",
+      "id": "4c33084c807db474",
+      "item": {
+        "type": "graphviz",
+        "id": "4c33084c807db474",
+        "text": "digraph G {\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer -> sConsumer;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer -> cConsumer;\n  }\n  sProducer -> Type;\n  cProducer -> Type;\n}"
+      },
+      "date": 1561956270516
+    },
+    {
+      "type": "edit",
+      "id": "4c33084c807db474",
+      "item": {
+        "type": "graphviz",
+        "id": "4c33084c807db474",
+        "text": "digraph G {\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer[label=\"Producer\"];\n    sConsumer[label=\"Consumer\"];\n    sProducer -> sConsumer;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer[label=\"Producer\"];\n    cConsumer[label=\"Consumer\"];\n    cProducer -> cConsumer;\n  }\n  sProducer -> Type;\n  cProducer -> Type;\n}"
+      },
+      "date": 1561956317342
+    },
+    {
+      "type": "edit",
+      "id": "112f7b930b07a4e5",
+      "item": {
+        "type": "graphviz",
+        "id": "112f7b930b07a4e5",
+        "text": "digraph G {\n  PluginA -> Type [label=\"produces\"];\n  PluginB -> Type [label=\"consumes\"];\n  Type [label=\"Event Type\"];\n} "
+      },
+      "date": 1561956335102
+    },
+    {
+      "type": "edit",
+      "id": "4c33084c807db474",
+      "item": {
+        "type": "graphviz",
+        "id": "4c33084c807db474",
+        "text": "digraph G {\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer[label=\"Producer\"];\n    sConsumer[label=\"Consumer\"];\n    sProducer -> sConsumer;\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer[label=\"Producer\"];\n    cConsumer[label=\"Consumer\"];\n    cProducer -> cConsumer;\n  }\n  sProducer -> Type [label=\"of\"];\n  cProducer -> Type [label=\"of\"];\n}"
+      },
+      "date": 1561956357881
+    },
+    {
+      "type": "edit",
+      "id": "4c33084c807db474",
+      "item": {
+        "type": "graphviz",
+        "id": "4c33084c807db474",
+        "text": "digraph G {\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer[label=\"Producer\"];\n    sConsumer[label=\"Consumer\"];\n    sProducer -> sConsumer [label=\"emit\"];\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer[label=\"Producer\"];\n    cConsumer[label=\"Consumer\"];\n    cProducer -> cConsumer [label=\"emit];\n  }\n  sProducer -> Type [label=\"of\"];\n  cProducer -> Type [label=\"of\"];\n}"
+      },
+      "date": 1561956398481
+    },
+    {
+      "type": "edit",
+      "id": "4c33084c807db474",
+      "item": {
+        "type": "graphviz",
+        "id": "4c33084c807db474",
+        "text": "digraph G {\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer[label=\"Producer\"];\n    sConsumer[label=\"Consumer\"];\n    sProducer -> sConsumer [label=\"emit\"];\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer[label=\"Producer\"];\n    cConsumer[label=\"Consumer\"];\n    cProducer -> cConsumer [label=\"emit\"];\n  }\n  sProducer -> Type [label=\"of\"];\n  cProducer -> Type [label=\"of\"];\n}"
+      },
+      "date": 1561956404266
+    },
+    {
+      "type": "edit",
+      "id": "4c33084c807db474",
+      "item": {
+        "type": "graphviz",
+        "id": "4c33084c807db474",
+        "text": "digraph G {\n  Type [label=\"Event Type\"];\n  subgraph cluster_server {\n    label=\"Server\";\n    sProducer[label=\"Producer\"];\n    sConsumer[label=\"Consumer\"];\n    sProducer -> sConsumer [label=\"publish to\"];\n  }\n  subgraph cluster_client {\n    label=\"Client\";\n    cProducer[label=\"Producer\"];\n    cConsumer[label=\"Consumer\"];\n    cProducer -> cConsumer [label=\"publish to\"];\n  }\n  sProducer -> Type [label=\"of\"];\n  cProducer -> Type [label=\"of\"];\n}"
+      },
+      "date": 1561956420502
+    },
+    {
+      "type": "edit",
+      "id": "94fe49db847710a8",
+      "item": {
+        "type": "paragraph",
+        "id": "94fe49db847710a8",
+        "text": "They can be emitted by more than one producer in either half of the plugin."
+      },
+      "date": 1561956444245
+    },
+    {
+      "type": "add",
+      "id": "d8fd173e88699664",
+      "item": {
+        "type": "paragraph",
+        "id": "d8fd173e88699664",
+        "text": "There is, similarly, no limit on the number of event consumers."
+      },
+      "after": "94fe49db847710a8",
+      "date": 1561956473069
+    },
+    {
+      "id": "764bcff2ae6cdb78",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "d5c16e56ab7ae95b",
+        "04b2b6381b6240ae",
+        "764bcff2ae6cdb78",
+        "4c33084c807db474",
+        "94fe49db847710a8",
+        "d8fd173e88699664",
+        "f86af0fe9ba83dc5",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "96ef86a25047c144",
+        "8f12bc927b13974f",
+        "ab6799adce712ef5",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "56645240aa19d10a",
+        "ddb19143f61086c8",
+        "7dd333e20c3b6919",
+        "b781e938cc5b3721",
+        "ae42a84c356105cd",
+        "381a21cc924f6121",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "0260cded35c32c39",
+        "f4cff31bd239b6e6",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561956491737
+    },
+    {
+      "id": "f86af0fe9ba83dc5",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "d5c16e56ab7ae95b",
+        "04b2b6381b6240ae",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4c33084c807db474",
+        "94fe49db847710a8",
+        "d8fd173e88699664",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "4dcb3daf34a01210",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "96ef86a25047c144",
+        "8f12bc927b13974f",
+        "ab6799adce712ef5",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "56645240aa19d10a",
+        "ddb19143f61086c8",
+        "7dd333e20c3b6919",
+        "b781e938cc5b3721",
+        "ae42a84c356105cd",
+        "381a21cc924f6121",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "0260cded35c32c39",
+        "f4cff31bd239b6e6",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561956493709
+    },
+    {
+      "type": "edit",
+      "id": "94fe49db847710a8",
+      "item": {
+        "type": "paragraph",
+        "id": "94fe49db847710a8",
+        "text": "Events can be emitted by more than one producer in either half of the plugin."
+      },
+      "date": 1561956503528
+    },
+    {
+      "id": "4dcb3daf34a01210",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "d5c16e56ab7ae95b",
+        "04b2b6381b6240ae",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4c33084c807db474",
+        "4dcb3daf34a01210",
+        "94fe49db847710a8",
+        "d8fd173e88699664",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "63ef3364c4d46268",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "96ef86a25047c144",
+        "8f12bc927b13974f",
+        "ab6799adce712ef5",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "56645240aa19d10a",
+        "ddb19143f61086c8",
+        "7dd333e20c3b6919",
+        "b781e938cc5b3721",
+        "ae42a84c356105cd",
+        "381a21cc924f6121",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "0260cded35c32c39",
+        "f4cff31bd239b6e6",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561956518663
+    },
+    {
+      "id": "63ef3364c4d46268",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "d5c16e56ab7ae95b",
+        "04b2b6381b6240ae",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4c33084c807db474",
+        "4dcb3daf34a01210",
+        "94fe49db847710a8",
+        "63ef3364c4d46268",
+        "d8fd173e88699664",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "a6b8e73b502d3d8e",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "96ef86a25047c144",
+        "8f12bc927b13974f",
+        "ab6799adce712ef5",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "56645240aa19d10a",
+        "ddb19143f61086c8",
+        "7dd333e20c3b6919",
+        "b781e938cc5b3721",
+        "ae42a84c356105cd",
+        "381a21cc924f6121",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "0260cded35c32c39",
+        "f4cff31bd239b6e6",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561956543262
+    },
+    {
+      "id": "a6b8e73b502d3d8e",
+      "type": "move",
+      "order": [
+        "0f6b3233892c837b",
+        "98dc5a940cca5fc1",
+        "3c57005372a96c67",
+        "e1d8179f3b00c235",
+        "423fccd2decd759d",
+        "112f7b930b07a4e5",
+        "1260bbc2e10881b7",
+        "5f9c37ce46ee5210",
+        "58ae5cc0d7da390a",
+        "e786f499bc9fdd94",
+        "39a460b4fba49a85",
+        "e9d9bcf11bb4e387",
+        "d5c16e56ab7ae95b",
+        "04b2b6381b6240ae",
+        "764bcff2ae6cdb78",
+        "f86af0fe9ba83dc5",
+        "4c33084c807db474",
+        "4dcb3daf34a01210",
+        "94fe49db847710a8",
+        "63ef3364c4d46268",
+        "d8fd173e88699664",
+        "a6b8e73b502d3d8e",
+        "86d2dee603a6d8b7",
+        "15ae3429cd156aa5",
+        "28aa167a1adce3cb",
+        "76041db3b97f8a97",
+        "2117d78475ce8569",
+        "e6c1edb2f108ac6d",
+        "431823020e75b293",
+        "12b9abd1554aba78",
+        "fe3c78087eeafebd",
+        "9c6360b33ee8d760",
+        "df4e0985de40ff27",
+        "bda3f334087259fa",
+        "ee0d69f6ca1f5cca",
+        "320c72ea46ad8ded",
+        "510ae2e9f7a761ca",
+        "96ef86a25047c144",
+        "8f12bc927b13974f",
+        "ab6799adce712ef5",
+        "748172eaa22d790d",
+        "74f8a65dcdd43ab4",
+        "b66ce43d10dd16c4",
+        "ef1b9a3b5bbcbf7d",
+        "d3a6a90c46b52d97",
+        "56645240aa19d10a",
+        "ddb19143f61086c8",
+        "7dd333e20c3b6919",
+        "b781e938cc5b3721",
+        "ae42a84c356105cd",
+        "381a21cc924f6121",
+        "c2abb8f6b08aa5e5",
+        "873ad66ce0e4bf5e",
+        "60e76f7c4dda2e85",
+        "0260cded35c32c39",
+        "f4cff31bd239b6e6",
+        "bc709917b3340e94",
+        "2b7d3dd14c89b09d",
+        "df0154590ce84315"
+      ],
+      "date": 1561956547002
+    },
+    {
+      "type": "edit",
+      "id": "b781e938cc5b3721",
+      "item": {
+        "type": "graphviz",
+        "id": "b781e938cc5b3721",
+        "text": "digraph G {\n  subgraph cluster_producer1 {\n    label=\"Client\\nPage 1 Item 1\";\n    p1Producer[label=\"Producer\"];\n  }\n  subgraph cluster_producer2 {\n    label=\"Client\\nPage 2 Item 5\";\n    p2Producer[label=\"Producer\"];\n  }\n  subgraph cluster_client1 {\n    label=\"Client\\nPage 1 Item 2\";\n    c1Consumer[label=\"Consumer\"];\n  }\n  subgraph cluster_client2 {\n    label=\"Client\\nPage 2 Item 6\";\n    c2Consumer[label=\"Consumer\"];\n  }\n  subgraph cluster_server {\n    label=\"Server\";\n    sConsumer[label=\"Consumer\"];\n    sProducer[label=\"Producer\"];\n    sProducer -> sConsumer;\n  }\n  sConsumer -> p1Producer;\n  sConsumer -> p2Producer;\n  p1Producer -> c1Consumer;\n  p2Producer -> c2Consumer;\n}\n"
+      },
+      "date": 1562195894747
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {pageItem, result}\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1562419532340
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1562420509173
+    },
+    {
+      "type": "edit",
+      "id": "748172eaa22d790d",
+      "item": {
+        "type": "graphviz",
+        "id": "748172eaa22d790d",
+        "text": "digraph G {\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\\ntype, {pageItem, result}\"];\n    cProducer -> cSource [label=\"emit\\ntype, {pageItem, result}\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n}"
+      },
+      "date": 1562420611309
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\"];\n    sSource -> sConsumer [label=\"on\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_1 {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"subscribe\\nslugItem\"];\n}"
+      },
+      "date": 1562422113947
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_server {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_client {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\"];\n    cProducer -> cSource [label=\"emit\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"subscribe\\nslugItem\"];\n}"
+      },
+      "date": 1562422197127
+    },
+    {
+      "type": "edit",
+      "id": "d3a6a90c46b52d97",
+      "item": {
+        "type": "graphviz",
+        "id": "d3a6a90c46b52d97",
+        "text": "digraph G {\n  subgraph cluster_server {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n  subgraph cluster_client {\n    rankdir=BT;\n    node [style=filled];\n    label = \"Client\";\n    cConsumer [label=\"Consumer\"];\n    cSource [label=\"Event\\nSource\\nInstance\"];\n    cProducer [label=\"Producer\"];\n    cSource -> cConsumer [label=\"on\\ntype, {pageItem, result}\"];\n    cProducer -> cSource [label=\"emit\\ntype, {pageItem, result}\"];\n    pageItem -> cSource [label=\"ids\", constraint=false];\n    color=blue;\n  }\n  sConsumer -> cProducer [label=\"Event forward via socket-io\"];\n  cProducer -> sSource [label=\"subscribe\\nslugItem\"];\n}"
+      },
+      "date": 1562422248426
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"EventEmitter\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids instance\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1562422429020
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event Source Type\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids instance\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1562424400678
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Source Type\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids instance\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1562424507690
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids instance\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1562425537613
+    },
+    {
+      "type": "edit",
+      "id": "bda3f334087259fa",
+      "item": {
+        "type": "graphviz",
+        "id": "bda3f334087259fa",
+        "text": "digraph G {\n  subgraph cluster_0 {\n    style=filled;\n    color=lightgrey;\n    node [style=filled,color=white];\n    sSource [label=\"Event\\nSource\\nInstance\"];\n    sProducer [label=\"Producer\"];\n    sConsumer [label=\"Consumer\"];\n    sProducer -> sSource [label=\"emit\\ntype, {slugItem, result}\"];\n    sSource -> sConsumer [label=\"on\\ntype, {slugItem, result}\"];\n    slugItem -> sSource [label=\"ids\", constraint=false];\n    label = \"Server\";\n  }\n}"
+      },
+      "date": 1562425549838
+    },
+    {
+      "type": "fork",
+      "site": "fed.wiki.randombits.xyz",
+      "date": 1562441889063
+    }
+  ]
+}

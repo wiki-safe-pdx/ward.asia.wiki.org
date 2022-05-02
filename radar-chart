@@ -1,0 +1,219 @@
+{
+  "title": "Radar Chart",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "96c97ebbd5372c47",
+      "text": "This chart has been configured to aid [[Testing Tab]] data fetched from Wikipedia Commons."
+    },
+    {
+      "type": "radar",
+      "id": "d6a39a28e6d11bd9",
+      "text": "100"
+    },
+    {
+      "type": "paragraph",
+      "id": "3f0078459998a266",
+      "text": "See [[About Radar Plugin]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Radar Chart",
+        "story": []
+      },
+      "date": 1484176793285
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "96c97ebbd5372c47"
+      },
+      "id": "96c97ebbd5372c47",
+      "type": "add",
+      "date": 1484176795522
+    },
+    {
+      "type": "edit",
+      "id": "96c97ebbd5372c47",
+      "item": {
+        "type": "paragraph",
+        "id": "96c97ebbd5372c47",
+        "text": "This chart has been configured to aid [[Testing Tab]] data fetched from Wikipedia Commons."
+      },
+      "date": 1484176845744
+    },
+    {
+      "type": "add",
+      "id": "3f0078459998a266",
+      "item": {
+        "type": "paragraph",
+        "id": "3f0078459998a266",
+        "text": "See [[About Radar Plugin]]"
+      },
+      "after": "96c97ebbd5372c47",
+      "date": 1484176858866
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "50"
+      },
+      "after": "96c97ebbd5372c47",
+      "id": "d6a39a28e6d11bd9",
+      "date": 1484176932225
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "50000"
+      },
+      "date": 1484179233815
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "500000"
+      },
+      "date": 1484179240965
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "1000000"
+      },
+      "date": 1484179252903
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "100"
+      },
+      "date": 1484179306063
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "100000000"
+      },
+      "date": 1484179403262
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "1000000"
+      },
+      "date": 1484179408381
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "2000000"
+      },
+      "date": 1484179414468
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "2000000\nCalifornia\nDistrict of Columbia\nIllinois\nMaryland\nMississippi\nMIchigan\nNew Jersey\nNew York\nTexas"
+      },
+      "date": 1484180885434
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "California\nDistrict of Columbia\nIllinois\nMaryland\nMississippi\nMIchigan\nNew Jersey\nNew York\nTexas"
+      },
+      "date": 1484180903107
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "100000"
+      },
+      "date": 1484180930942
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "10000000"
+      },
+      "date": 1484180935947
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "1000000"
+      },
+      "date": 1484180941685
+    },
+    {
+      "type": "fork",
+      "date": 1484181117788
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1485138862940
+    },
+    {
+      "type": "edit",
+      "id": "d6a39a28e6d11bd9",
+      "item": {
+        "type": "radar",
+        "id": "d6a39a28e6d11bd9",
+        "text": "100"
+      },
+      "date": 1485138862623,
+      "error": {
+        "type": "error",
+        "msg": "Not Found",
+        "response": "Page not found"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1485142688330
+    }
+  ]
+}

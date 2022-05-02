@@ -1,0 +1,85 @@
+{
+  "title": "Send Deploy Logs to New Relic",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "dff36c1297fc54d8",
+      "text": "I've been wanting to try out New Relic for a bit and I knew that AWS Firehose had an integration with them so this would be a good occasion to try it out. [https://discord.com/channels/684898665143206084/712010403302866974 discord]"
+    },
+    {
+      "type": "paragraph",
+      "id": "05df7eabcfde9849",
+      "text": "The architecture is super simple; Firehose is a fully serverless service from AWS that will soak in message and dump them to a destination of your choice when either the timeout is expired or the size limit is hit, whichever comes first. It's easy to setup and it's cheap. In this case I used the HTTP destination and configured it to push to New Relic's API; there's some docs available on AWS and New Relic's sites, I ended up following the one AWS [https://docs.aws.amazon.com/firehose/latest/dev/create-destination.html#create-destination-new-relic aws]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Send Deploy Logs to New Relic",
+        "story": []
+      },
+      "date": 1623894599844
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dff36c1297fc54d8"
+      },
+      "id": "dff36c1297fc54d8",
+      "type": "add",
+      "date": 1623894675835
+    },
+    {
+      "type": "edit",
+      "id": "dff36c1297fc54d8",
+      "item": {
+        "type": "paragraph",
+        "id": "dff36c1297fc54d8",
+        "text": "I've been wanting to try out New Relic for a bit and I knew that AWS Firehose had an integration with them so I figured this would be a good occasion to try it out.\n\n"
+      },
+      "date": 1623894682472
+    },
+    {
+      "type": "add",
+      "id": "05df7eabcfde9849",
+      "item": {
+        "type": "paragraph",
+        "id": "05df7eabcfde9849",
+        "text": "The architecture is super simple; Firehose is a fully serverless service from AWS that will soak in message and dump them to a destination of your choice when either the timeout is expired or the size limit is hit, whichever comes first. It's easy to setup and it's cheap. In this case I used the HTTP destination and configured it to push to New Relic's API; there's some docs available on AWS and New Relic's sites, I ended up following the one AWS [https://docs.aws.amazon.com/firehose/latest/dev/create-destination.html#create-destination-new-relic aws]"
+      },
+      "after": "dff36c1297fc54d8",
+      "date": 1623894700405
+    },
+    {
+      "type": "edit",
+      "id": "dff36c1297fc54d8",
+      "item": {
+        "type": "paragraph",
+        "id": "dff36c1297fc54d8",
+        "text": "I've been wanting to try out New Relic for a bit and I knew that AWS Firehose had an integration with them so I figured this would be a good occasion to try it out. [https://discord.com/channels/684898665143206084/712010403302866974 discord]"
+      },
+      "date": 1623894723396
+    },
+    {
+      "type": "edit",
+      "id": "dff36c1297fc54d8",
+      "item": {
+        "type": "paragraph",
+        "id": "dff36c1297fc54d8",
+        "text": "I've been wanting to try out New Relic for a bit and I knew that AWS Firehose had an integration with them so I thought this would be a good occasion to try it out. [https://discord.com/channels/684898665143206084/712010403302866974 discord]"
+      },
+      "date": 1623894736707
+    },
+    {
+      "type": "edit",
+      "id": "dff36c1297fc54d8",
+      "item": {
+        "type": "paragraph",
+        "id": "dff36c1297fc54d8",
+        "text": "I've been wanting to try out New Relic for a bit and I knew that AWS Firehose had an integration with them so this would be a good occasion to try it out. [https://discord.com/channels/684898665143206084/712010403302866974 discord]"
+      },
+      "date": 1623894751958
+    }
+  ]
+}

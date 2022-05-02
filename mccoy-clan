@@ -1,0 +1,54 @@
+{
+  "title": "McCoy Clan",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9aad3974608bc630",
+      "text": "The McCoys hailed from the Kentucky side of the Tug Fork of the Big Sandy River."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "McCoy Clan",
+        "story": []
+      },
+      "date": 1461649965281
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9aad3974608bc630"
+      },
+      "id": "9aad3974608bc630",
+      "type": "add",
+      "date": 1461649967389
+    },
+    {
+      "type": "edit",
+      "id": "9aad3974608bc630",
+      "item": {
+        "type": "paragraph",
+        "id": "9aad3974608bc630",
+        "text": "The McCoys hailed from the West Virginia site of the Tug Fork of the Big Sandy River."
+      },
+      "date": 1461649991474
+    },
+    {
+      "type": "edit",
+      "id": "9aad3974608bc630",
+      "item": {
+        "type": "paragraph",
+        "id": "9aad3974608bc630",
+        "text": "The McCoys hailed from the Kentucky side of the Tug Fork of the Big Sandy River."
+      },
+      "date": 1461650008707
+    },
+    {
+      "type": "fork",
+      "site": "mccoy.asia.wiki.org",
+      "date": 1461650495320
+    }
+  ]
+}

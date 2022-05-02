@@ -1,0 +1,231 @@
+{
+  "title": "Plundering Markup",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "f9ef56e50370629a",
+      "text": "Pages in the lineup can be discovered as sources for specific kinds of information. But what about pages that we find by other means? Can they source structured data too?"
+    },
+    {
+      "type": "paragraph",
+      "id": "6c9ac65008a14749",
+      "text": "We've developed a navigation mechanism called the Compass Rose and applied it to pandemic wandering to construct new pages focused on neighbors in each of eight directions. See [[Near Woods Creek Development]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "923aea77af5980d2",
+      "text": "This mechanism rummages through markup found on existing pages. The wanted items are often, but not always, in the same place in every story. This function gets the desired markup by ignoring anything that isn't the item type know holds it. For example, to get the map one says:"
+    },
+    {
+      "type": "code",
+      "id": "e62928e058b712af",
+      "text": "markup(page,'map')"
+    },
+    {
+      "type": "paragraph",
+      "id": "e5621b628e50e2b6",
+      "text": "The Compass Rose applies this function twice. Once to find the markers for places visited and then again for the image known to be in an html item in such a way that this can be further customized. [https://github.com/WardCunningham/assets/blob/master/pages/workflow-automation/compass-rose.html github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "daab4b965c5df410",
+      "text": "It helps that the pages are made from templates. Maybe templates can convey more about the fields they expect to be filled? My mind turned to templates when looking for solutions to David Bovill's 4th birthday problem. I suggest structuring the activity but wonder how the product of templates can then be located. See [[Writing Assignments]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1418dea5d49a5310",
+      "text": "Again we have discovery and interpretation working in the lineup but not easily extended beyond this."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Plundering Markup",
+        "story": []
+      },
+      "date": 1608572207472
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f9ef56e50370629a"
+      },
+      "id": "f9ef56e50370629a",
+      "type": "add",
+      "date": 1608572215815
+    },
+    {
+      "type": "edit",
+      "id": "f9ef56e50370629a",
+      "item": {
+        "type": "paragraph",
+        "id": "f9ef56e50370629a",
+        "text": "Pages in the lineup can be discovered as sources for specific kinds of information. But what about pages that we find by other means? Can they source structured data too?"
+      },
+      "date": 1608572281037
+    },
+    {
+      "type": "add",
+      "id": "6c9ac65008a14749",
+      "item": {
+        "type": "paragraph",
+        "id": "6c9ac65008a14749",
+        "text": "I've developed a navigation mechanism I call the Compass Rose and applied it to my pandemic wandering to construct new pages focused on neighbors in each of eight directions. "
+      },
+      "after": "f9ef56e50370629a",
+      "date": 1608572468666
+    },
+    {
+      "type": "edit",
+      "id": "6c9ac65008a14749",
+      "item": {
+        "type": "paragraph",
+        "id": "6c9ac65008a14749",
+        "text": "I've developed a navigation mechanism I call the Compass Rose and applied it to my pandemic wandering to construct new pages focused on neighbors in each of eight directions. See [[Near Woods Creek Development]]"
+      },
+      "date": 1608572483414
+    },
+    {
+      "type": "edit",
+      "id": "6c9ac65008a14749",
+      "item": {
+        "type": "paragraph",
+        "id": "6c9ac65008a14749",
+        "text": "We've developed a navigation mechanism called the Compass Rose and applied it to pandemic wandering to construct new pages focused on neighbors in each of eight directions. See [[Near Woods Creek Development]]"
+      },
+      "date": 1608572597224
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "923aea77af5980d2"
+      },
+      "id": "923aea77af5980d2",
+      "type": "add",
+      "after": "6c9ac65008a14749",
+      "date": 1608572638894
+    },
+    {
+      "type": "edit",
+      "id": "923aea77af5980d2",
+      "item": {
+        "type": "paragraph",
+        "id": "923aea77af5980d2",
+        "text": "This mechanism rummages through markup found on existing pages. The wanted items are often, but not always, in the same place in every story. This function gets the desired markup by ignoring anything that isn't the item type know holds it. For example, to get the map one says:"
+      },
+      "date": 1608572773676
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e62928e058b712af"
+      },
+      "id": "e62928e058b712af",
+      "type": "add",
+      "after": "923aea77af5980d2",
+      "date": 1608572797865
+    },
+    {
+      "type": "edit",
+      "id": "e62928e058b712af",
+      "item": {
+        "type": "code",
+        "id": "e62928e058b712af",
+        "text": "markup(page,'map')"
+      },
+      "date": 1608572801708
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e5621b628e50e2b6"
+      },
+      "id": "e5621b628e50e2b6",
+      "type": "add",
+      "after": "e62928e058b712af",
+      "date": 1608572925950
+    },
+    {
+      "type": "edit",
+      "id": "e5621b628e50e2b6",
+      "item": {
+        "type": "paragraph",
+        "id": "e5621b628e50e2b6",
+        "text": "The Compass Rose applies this function twice. Once to find the markers for places visited and then again for the image known to be in an html item in such a way that this can be further customized. [https://github.com/WardCunningham/assets/blob/master/pages/workflow-automation/compass-rose.html github]"
+      },
+      "date": 1608573050975
+    },
+    {
+      "type": "add",
+      "id": "daab4b965c5df410",
+      "item": {
+        "type": "paragraph",
+        "id": "daab4b965c5df410",
+        "text": "It helps that the pages are made from templates. Maybe templates can convey more about the fields they expect to be filled? My mind turned to templates when looking for solutions to David Bovill's 4th birthday problem. "
+      },
+      "after": "e5621b628e50e2b6",
+      "date": 1608573152722
+    },
+    {
+      "type": "edit",
+      "id": "daab4b965c5df410",
+      "item": {
+        "type": "paragraph",
+        "id": "daab4b965c5df410",
+        "text": "It helps that the pages are made from templates. Maybe templates can convey more about the fields they expect to be filled? My mind turned to templates when looking for solutions to David Bovill's 4th birthday problem. See [[Writing Assignments]]"
+      },
+      "date": 1608573195123
+    },
+    {
+      "type": "edit",
+      "id": "daab4b965c5df410",
+      "item": {
+        "type": "paragraph",
+        "id": "daab4b965c5df410",
+        "text": "It helps that the pages are made from templates. Maybe templates can convey more about the fields they expect to be filled? My mind turned to templates when looking for solutions to David Bovill's 4th birthday problem where the product of templates can be easily located. See [[Writing Assignments]]"
+      },
+      "date": 1608573242146
+    },
+    {
+      "type": "edit",
+      "id": "daab4b965c5df410",
+      "item": {
+        "type": "paragraph",
+        "id": "daab4b965c5df410",
+        "text": "It helps that the pages are made from templates. Maybe templates can convey more about the fields they expect to be filled? My mind turned to templates when looking for solutions to David Bovill's 4th birthday problem. I suggest structuring the activity but wonder how the product of templates can be easily located. See [[Writing Assignments]]"
+      },
+      "date": 1608573315830
+    },
+    {
+      "type": "edit",
+      "id": "daab4b965c5df410",
+      "item": {
+        "type": "paragraph",
+        "id": "daab4b965c5df410",
+        "text": "It helps that the pages are made from templates. Maybe templates can convey more about the fields they expect to be filled? My mind turned to templates when looking for solutions to David Bovill's 4th birthday problem. I suggest structuring the activity but wonder how the product of templates can then be located. See [[Writing Assignments]]"
+      },
+      "date": 1608573336445
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1418dea5d49a5310"
+      },
+      "id": "1418dea5d49a5310",
+      "type": "add",
+      "after": "daab4b965c5df410",
+      "date": 1608573363714
+    },
+    {
+      "type": "edit",
+      "id": "1418dea5d49a5310",
+      "item": {
+        "type": "paragraph",
+        "id": "1418dea5d49a5310",
+        "text": "Again we have discovery and interpretation working in the lineup but not easily extended beyond this."
+      },
+      "date": 1608573395825
+    }
+  ]
+}

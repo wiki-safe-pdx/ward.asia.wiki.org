@@ -1,0 +1,596 @@
+{
+  "title": "Am I Logged In Yet?",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "422bcd772809f016",
+      "text": "We may not yet be as consistent as we need to be as to how we signal authentication, authorization, ownership and mode. These signals appear in the left end of the web page footer."
+    },
+    {
+      "type": "markdown",
+      "id": "9822192f7ddf5bc1",
+      "text": "# Authentication"
+    },
+    {
+      "type": "paragraph",
+      "id": "d300aeb0629d09a4",
+      "text": "A site offers through some security plugin the ability to authenticate, often by OAuth from Google, Twitter or GitHub, or by other concocted mechanism like Friends."
+    },
+    {
+      "type": "paragraph",
+      "id": "c5ad742dcc341b9d",
+      "text": "An unauthenticated visitor can authenticate by clicking the closed-padlock icon."
+    },
+    {
+      "type": "paragraph",
+      "id": "b06bf55d2ac5c2e4",
+      "text": "Authentication persists as a users switches between tabs that are hosted on the same server. This depends on security configurations but proves very handy for those maintaining many sites within a farm."
+    },
+    {
+      "type": "paragraph",
+      "id": "1fada19a1b9764d3",
+      "text": "Confusion: We show successful authentication by open-lock icon. Its presence doesn't mean that you can write to a site or that the site is even claimed. (Double check this. Might show as locked if claimed by other.)"
+    },
+    {
+      "type": "paragraph",
+      "id": "38176d35a1bbfeaf",
+      "text": "Confusion: Web sites often show the user's name when that user is logged in. We show the site owner's name when we know it."
+    },
+    {
+      "type": "paragraph",
+      "id": "20d27bafa816088e",
+      "text": "Confusion: Authentication can time out without visual indication in an open browser tab."
+    },
+    {
+      "type": "markdown",
+      "id": "d608622ee2fa3890",
+      "text": "# Authorization"
+    },
+    {
+      "type": "paragraph",
+      "id": "abc8398e5098094f",
+      "text": "Writes will go to a site if it is the origin and authentication matches the ownership of the site. Unowned sites are writeable if the security policy admits this."
+    },
+    {
+      "type": "paragraph",
+      "id": "bc61a30bf68e2ab0",
+      "text": "Proposal: Private sites will be readable if a reader is authenticated with a compatible email address for the subdomain in question."
+    },
+    {
+      "type": "paragraph",
+      "id": "e7325bb81751503d",
+      "text": "Confusion: The ability to write (compatible authentication and ownership) is not made visible in the status information."
+    },
+    {
+      "type": "markdown",
+      "id": "70860842c6981eb9",
+      "text": "# Ownership"
+    },
+    {
+      "type": "paragraph",
+      "id": "85b07d89e8359c2e",
+      "text": "An authenticated visitor can claim an unclaimed site by clicking the key-icon. Claimed sites will show the owner's name, if known."
+    },
+    {
+      "type": "paragraph",
+      "id": "58b8dee7e9b0dfde",
+      "text": "Shortcut: An unauthenticated visitor can authenticate and claim an unclaimed site in one operation by clicking the locked-padlock-icon."
+    },
+    {
+      "type": "markdown",
+      "id": "cc055966d9f37b3f",
+      "text": "# Mode"
+    },
+    {
+      "type": "paragraph",
+      "id": "a0a5ab842d7a2582",
+      "text": "Wiki editing can be enabled or disabled by clicking the wiki button. Wiki editing shows as a check mark."
+    },
+    {
+      "type": "paragraph",
+      "id": "c713ab05684f8b8a",
+      "text": "Authenticated visitors will have wiki editing enabled on first visit, others not."
+    },
+    {
+      "type": "paragraph",
+      "id": "928c775ee309143c",
+      "text": "Confusion: wiki editing will be enabled for authenticated visitors regardless of whether they own the site in question."
+    },
+    {
+      "type": "paragraph",
+      "id": "f0759422f5ca9d17",
+      "text": "Confusion: authenticating does not enable wiki editing."
+    },
+    {
+      "type": "markdown",
+      "id": "4d9f3141ea9dcd2a",
+      "text": "# Suggestions"
+    },
+    {
+      "type": "paragraph",
+      "id": "2c14b2c7d915a0fa",
+      "text": "Lock icon should show unlocked only when authenticated and authorized. Authenticated but unauthorized should show tilted closed lock. Like neighbors, tilted means tried but didn't work. By analogy, lock could spin while authenticating."
+    },
+    {
+      "type": "paragraph",
+      "id": "8a852802b0b9b92e",
+      "text": "Site ownership should show as \"not yet owned\", \"owned by you\" or \"owned by name-or-id\"."
+    },
+    {
+      "type": "paragraph",
+      "id": "344085f549ff3137",
+      "text": "Hover over \"owned by you\" should show which account is the actual owner as one might have many."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Am I Logged In Yet?",
+        "story": []
+      },
+      "date": 1534274658474
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "422bcd772809f016"
+      },
+      "id": "422bcd772809f016",
+      "type": "add",
+      "date": 1534274660739
+    },
+    {
+      "type": "edit",
+      "id": "422bcd772809f016",
+      "item": {
+        "type": "paragraph",
+        "id": "422bcd772809f016",
+        "text": "We may not yet be as consistent as we need to be as to how we signal authentication, authorization, ownership and mode. These signals appear in the left end of the web page footer."
+      },
+      "date": 1534274904691
+    },
+    {
+      "type": "add",
+      "id": "9822192f7ddf5bc1",
+      "item": {
+        "type": "paragraph",
+        "id": "9822192f7ddf5bc1",
+        "text": "# Authentication"
+      },
+      "after": "422bcd772809f016",
+      "date": 1534274919522
+    },
+    {
+      "type": "add",
+      "id": "d300aeb0629d09a4",
+      "item": {
+        "type": "paragraph",
+        "id": "d300aeb0629d09a4",
+        "text": "A site offers through some security plugin the ability to authenticate, often by OAuth from Google, Twitter or GitHub, or by other concocted mechanism like Friends."
+      },
+      "after": "9822192f7ddf5bc1",
+      "date": 1534275105734
+    },
+    {
+      "type": "add",
+      "id": "3542b27c74b488b7",
+      "item": {
+        "type": "paragraph",
+        "id": "3542b27c74b488b7",
+        "text": "We show successful authentication by open-lock icon. Its presence doesn't mean that you can write to a site or that the site is even claimed."
+      },
+      "after": "d300aeb0629d09a4",
+      "date": 1534275241741
+    },
+    {
+      "type": "edit",
+      "id": "9822192f7ddf5bc1",
+      "item": {
+        "type": "markdown",
+        "id": "9822192f7ddf5bc1",
+        "text": "# Authentication"
+      },
+      "date": 1534275261200
+    },
+    {
+      "type": "add",
+      "id": "38176d35a1bbfeaf",
+      "item": {
+        "type": "paragraph",
+        "id": "38176d35a1bbfeaf",
+        "text": "Web sites often show the user's name when that user is logged in. We show the site owner's name when we know it."
+      },
+      "after": "3542b27c74b488b7",
+      "date": 1534275352497
+    },
+    {
+      "type": "remove",
+      "id": "3542b27c74b488b7",
+      "date": 1534275361602
+    },
+    {
+      "type": "add",
+      "id": "1fada19a1b9764d3",
+      "item": {
+        "type": "paragraph",
+        "id": "1fada19a1b9764d3",
+        "text": "Confusion: We show successful authentication by open-lock icon. Its presence doesn't mean that you can write to a site or that the site is even claimed."
+      },
+      "after": "d300aeb0629d09a4",
+      "date": 1534275375008
+    },
+    {
+      "type": "edit",
+      "id": "38176d35a1bbfeaf",
+      "item": {
+        "type": "paragraph",
+        "id": "38176d35a1bbfeaf",
+        "text": "Confusion: Web sites often show the user's name when that user is logged in. We show the site owner's name when we know it."
+      },
+      "date": 1534275401053
+    },
+    {
+      "type": "add",
+      "id": "d608622ee2fa3890",
+      "item": {
+        "type": "paragraph",
+        "id": "d608622ee2fa3890",
+        "text": "# Authorization"
+      },
+      "after": "38176d35a1bbfeaf",
+      "date": 1534275417292
+    },
+    {
+      "type": "add",
+      "id": "70860842c6981eb9",
+      "item": {
+        "type": "paragraph",
+        "id": "70860842c6981eb9",
+        "text": "# Ownership"
+      },
+      "after": "d608622ee2fa3890",
+      "date": 1534275424862
+    },
+    {
+      "type": "add",
+      "id": "cc055966d9f37b3f",
+      "item": {
+        "type": "paragraph",
+        "id": "cc055966d9f37b3f",
+        "text": "# Mode"
+      },
+      "after": "70860842c6981eb9",
+      "date": 1534275430133
+    },
+    {
+      "type": "add",
+      "id": "b06bf55d2ac5c2e4",
+      "item": {
+        "type": "paragraph",
+        "id": "b06bf55d2ac5c2e4",
+        "text": "Authentication persists as a users switches between tabs that are hosted on the same server. This depends on security configurations but proves very handy for those maintaining many sites within a farm."
+      },
+      "after": "d300aeb0629d09a4",
+      "date": 1534275680697
+    },
+    {
+      "type": "move",
+      "order": [
+        "422bcd772809f016",
+        "9822192f7ddf5bc1",
+        "d300aeb0629d09a4",
+        "b06bf55d2ac5c2e4",
+        "38176d35a1bbfeaf",
+        "1fada19a1b9764d3",
+        "d608622ee2fa3890",
+        "70860842c6981eb9",
+        "cc055966d9f37b3f"
+      ],
+      "id": "1fada19a1b9764d3",
+      "date": 1534279563955
+    },
+    {
+      "type": "move",
+      "order": [
+        "422bcd772809f016",
+        "9822192f7ddf5bc1",
+        "d300aeb0629d09a4",
+        "b06bf55d2ac5c2e4",
+        "1fada19a1b9764d3",
+        "38176d35a1bbfeaf",
+        "d608622ee2fa3890",
+        "70860842c6981eb9",
+        "cc055966d9f37b3f"
+      ],
+      "id": "1fada19a1b9764d3",
+      "date": 1534279570273
+    },
+    {
+      "type": "add",
+      "id": "abc8398e5098094f",
+      "item": {
+        "type": "paragraph",
+        "id": "abc8398e5098094f",
+        "text": "Writes will go to a site if it is the origin and authentication matches the ownership of the site. Unowned sites are writeable if the security policy admits this."
+      },
+      "after": "d608622ee2fa3890",
+      "date": 1534279713051
+    },
+    {
+      "type": "add",
+      "id": "bc61a30bf68e2ab0",
+      "item": {
+        "type": "paragraph",
+        "id": "bc61a30bf68e2ab0",
+        "text": "Proposal: Private sites will be readable if a reader is authenticated with a compatible email address for the subdomain in question."
+      },
+      "after": "abc8398e5098094f",
+      "date": 1534279806652
+    },
+    {
+      "type": "edit",
+      "id": "d608622ee2fa3890",
+      "item": {
+        "type": "markdown",
+        "id": "d608622ee2fa3890",
+        "text": "# Authorization"
+      },
+      "date": 1534279811232
+    },
+    {
+      "type": "add",
+      "id": "e7325bb81751503d",
+      "item": {
+        "type": "paragraph",
+        "id": "e7325bb81751503d",
+        "text": "Confusion: The ability to write (compatible authentication and ownership) is not made visible in the status information."
+      },
+      "after": "bc61a30bf68e2ab0",
+      "date": 1534279946620
+    },
+    {
+      "type": "add",
+      "id": "20d27bafa816088e",
+      "item": {
+        "type": "paragraph",
+        "id": "20d27bafa816088e",
+        "text": "Confusion: Authentication can time out without visual indication in an open browser tab."
+      },
+      "after": "38176d35a1bbfeaf",
+      "date": 1534279997522
+    },
+    {
+      "type": "add",
+      "id": "85b07d89e8359c2e",
+      "item": {
+        "type": "paragraph",
+        "id": "85b07d89e8359c2e",
+        "text": "An authenticated visitor can claim an unclaimed site by clicking the key-icon. Claimed sites will show the owner's name, if known."
+      },
+      "after": "70860842c6981eb9",
+      "date": 1534280152143
+    },
+    {
+      "type": "edit",
+      "id": "70860842c6981eb9",
+      "item": {
+        "type": "markdown",
+        "id": "70860842c6981eb9",
+        "text": "# Ownership"
+      },
+      "date": 1534280156266
+    },
+    {
+      "type": "add",
+      "id": "58b8dee7e9b0dfde",
+      "item": {
+        "type": "paragraph",
+        "id": "58b8dee7e9b0dfde",
+        "text": "Shortcut: An unauthenticated visitor can authenticate and claim an unclaimed site in one operation by clicking the locked-padlock-icon."
+      },
+      "after": "85b07d89e8359c2e",
+      "date": 1534280360522
+    },
+    {
+      "type": "edit",
+      "id": "cc055966d9f37b3f",
+      "item": {
+        "type": "markdown",
+        "id": "cc055966d9f37b3f",
+        "text": "# Mode"
+      },
+      "date": 1534280381053
+    },
+    {
+      "type": "add",
+      "id": "c5ad742dcc341b9d",
+      "item": {
+        "type": "paragraph",
+        "id": "c5ad742dcc341b9d",
+        "text": "An unauthenticated visitor can authenticate by clicking the closed-padlock icon."
+      },
+      "after": "85b07d89e8359c2e",
+      "date": 1534280618078
+    },
+    {
+      "type": "move",
+      "order": [
+        "422bcd772809f016",
+        "9822192f7ddf5bc1",
+        "d300aeb0629d09a4",
+        "c5ad742dcc341b9d",
+        "b06bf55d2ac5c2e4",
+        "1fada19a1b9764d3",
+        "38176d35a1bbfeaf",
+        "20d27bafa816088e",
+        "d608622ee2fa3890",
+        "abc8398e5098094f",
+        "bc61a30bf68e2ab0",
+        "e7325bb81751503d",
+        "70860842c6981eb9",
+        "85b07d89e8359c2e",
+        "58b8dee7e9b0dfde",
+        "cc055966d9f37b3f"
+      ],
+      "id": "c5ad742dcc341b9d",
+      "date": 1534280621320
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a0a5ab842d7a2582"
+      },
+      "id": "a0a5ab842d7a2582",
+      "type": "add",
+      "after": "cc055966d9f37b3f",
+      "date": 1534280649340
+    },
+    {
+      "type": "edit",
+      "id": "a0a5ab842d7a2582",
+      "item": {
+        "type": "paragraph",
+        "id": "a0a5ab842d7a2582",
+        "text": "Wiki editing can be enabled or disabled by clicking the wiki button. Wiki editing shows as a check mark."
+      },
+      "date": 1534280707340
+    },
+    {
+      "type": "add",
+      "id": "c713ab05684f8b8a",
+      "item": {
+        "type": "paragraph",
+        "id": "c713ab05684f8b8a",
+        "text": "Authenticated owners will have wiki editing enabled, others not."
+      },
+      "after": "a0a5ab842d7a2582",
+      "date": 1534280803926
+    },
+    {
+      "type": "edit",
+      "id": "c713ab05684f8b8a",
+      "item": {
+        "type": "paragraph",
+        "id": "c713ab05684f8b8a",
+        "text": "Authenticated visitors will have wiki editing enabled on first visit, others not."
+      },
+      "date": 1534280872746
+    },
+    {
+      "type": "add",
+      "id": "928c775ee309143c",
+      "item": {
+        "type": "paragraph",
+        "id": "928c775ee309143c",
+        "text": "Confusion: wiki editing will be enabled for authenticated visitors regardless of whether they own the site in question."
+      },
+      "after": "c713ab05684f8b8a",
+      "date": 1534280924551
+    },
+    {
+      "type": "add",
+      "id": "f0759422f5ca9d17",
+      "item": {
+        "type": "paragraph",
+        "id": "f0759422f5ca9d17",
+        "text": "Confusion: authenticating does not enable wiki editing."
+      },
+      "after": "928c775ee309143c",
+      "date": 1534280950979
+    },
+    {
+      "type": "edit",
+      "id": "1fada19a1b9764d3",
+      "item": {
+        "type": "paragraph",
+        "id": "1fada19a1b9764d3",
+        "text": "Confusion: We show successful authentication by open-lock icon. Its presence doesn't mean that you can write to a site or that the site is even claimed. (Double check this. Might show as locked if claimed by other.)"
+      },
+      "date": 1534525865052
+    },
+    {
+      "type": "add",
+      "id": "4d9f3141ea9dcd2a",
+      "item": {
+        "type": "paragraph",
+        "id": "4d9f3141ea9dcd2a",
+        "text": "# Revisions"
+      },
+      "after": "f0759422f5ca9d17",
+      "date": 1535331181772
+    },
+    {
+      "type": "add",
+      "id": "2c14b2c7d915a0fa",
+      "item": {
+        "type": "paragraph",
+        "id": "2c14b2c7d915a0fa",
+        "text": "Lock icon should show unlocked only when authenticated and authorized. Authenticated but unauthorized should show tilted closed lock."
+      },
+      "after": "4d9f3141ea9dcd2a",
+      "date": 1535331438127
+    },
+    {
+      "type": "edit",
+      "id": "2c14b2c7d915a0fa",
+      "item": {
+        "type": "paragraph",
+        "id": "2c14b2c7d915a0fa",
+        "text": "Lock icon should show unlocked only when authenticated and authorized. Authenticated but unauthorized should show tilted closed lock. Like neighbors, tilted means tried but didn't work. By analogy, lock could spin while authenticating."
+      },
+      "date": 1535331523837
+    },
+    {
+      "type": "add",
+      "id": "8a852802b0b9b92e",
+      "item": {
+        "type": "paragraph",
+        "id": "8a852802b0b9b92e",
+        "text": "Site ownership should show as \"not yet owned\", \"owned by you\" or \"owned by name-or-id\"."
+      },
+      "after": "2c14b2c7d915a0fa",
+      "date": 1535331686835
+    },
+    {
+      "type": "edit",
+      "id": "4d9f3141ea9dcd2a",
+      "item": {
+        "type": "markdown",
+        "id": "4d9f3141ea9dcd2a",
+        "text": "# Revisions"
+      },
+      "date": 1535331721201
+    },
+    {
+      "type": "edit",
+      "id": "4d9f3141ea9dcd2a",
+      "item": {
+        "type": "markdown",
+        "id": "4d9f3141ea9dcd2a",
+        "text": "# Suggestions"
+      },
+      "date": 1535331732341
+    },
+    {
+      "type": "add",
+      "id": "344085f549ff3137",
+      "item": {
+        "type": "paragraph",
+        "id": "344085f549ff3137",
+        "text": "Hover over \"owned by you\" should show which account is the actual owner as one might have many."
+      },
+      "after": "8a852802b0b9b92e",
+      "date": 1537148549672,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1537148566624
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "title": "SoundCloud Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b06915a4b4a0eae6",
+      "text": "We start with the mkplugin script and attempt to write a plugin in 5 minutes while screen sharing. [https://gist.github.com/WardCunningham/fced775fcedcee133b32 gist]"
+    },
+    {
+      "type": "paragraph",
+      "id": "5a772102e4dc0b28",
+      "text": "We've published this work as source. [https://github.com/WardCunningham/wiki-plugin-soundcloud github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "7f30aa98a47ad5b4",
+      "text": "See [[About SoundCloud Plugin]]"
+    },
+    {
+      "type": "soundcloud",
+      "id": "4dbeba7e60b28aee",
+      "text": "David says you have to listen to this *awesome* podcast. 379402637"
+    },
+    {
+      "type": "plugmatic",
+      "id": "e2ca29d68041940f",
+      "text": "wiki-plugin-soundcloud"
+    },
+    {
+      "type": "paragraph",
+      "id": "0c9e74025287a6d4",
+      "text": "I wasn't counting but I think this took 30 minutes. I'll make some excuses now that you are welcome to ignore."
+    },
+    {
+      "type": "paragraph",
+      "id": "c2327933b4ab3776",
+      "text": "Everything was slow. Zoom screen sharing was consuming most of my cpu."
+    },
+    {
+      "type": "paragraph",
+      "id": "3640a5873de41c25",
+      "text": "Everything was crowded. Zoom always open windows covered up most of my buttons."
+    },
+    {
+      "type": "paragraph",
+      "id": "e2145ed3193cb97d",
+      "text": "I made a simple mistake looking for a string of digits in the markup. My colleagues on Zoom eventually noticed this mistake. After we figured out how to bring up the chrome debugger."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "SoundCloud Plugin",
+        "story": []
+      },
+      "date": 1517164559552
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7f30aa98a47ad5b4"
+      },
+      "id": "7f30aa98a47ad5b4",
+      "type": "add",
+      "date": 1517164561916
+    },
+    {
+      "type": "edit",
+      "id": "7f30aa98a47ad5b4",
+      "item": {
+        "type": "paragraph",
+        "id": "7f30aa98a47ad5b4",
+        "text": "See [[About SoundCloud Plugin]]"
+      },
+      "date": 1517164579222
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4dbeba7e60b28aee"
+      },
+      "id": "4dbeba7e60b28aee",
+      "type": "add",
+      "after": "7f30aa98a47ad5b4",
+      "date": 1517164597308
+    },
+    {
+      "type": "edit",
+      "id": "4dbeba7e60b28aee",
+      "item": {
+        "type": "soundcloud",
+        "id": "4dbeba7e60b28aee",
+        "text": "You have to listen to this awesome podcast."
+      },
+      "date": 1517164623620
+    },
+    {
+      "type": "edit",
+      "id": "4dbeba7e60b28aee",
+      "item": {
+        "type": "soundcloud",
+        "id": "4dbeba7e60b28aee",
+        "text": "You have to listen to this *awesome* podcast."
+      },
+      "date": 1517164638396
+    },
+    {
+      "type": "edit",
+      "id": "4dbeba7e60b28aee",
+      "item": {
+        "type": "soundcloud",
+        "id": "4dbeba7e60b28aee",
+        "text": "You have to listen to this *awesome* podcast. 379402637"
+      },
+      "date": 1517165336961
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e2ca29d68041940f"
+      },
+      "id": "e2ca29d68041940f",
+      "type": "add",
+      "after": "4dbeba7e60b28aee",
+      "date": 1517166524906
+    },
+    {
+      "type": "edit",
+      "id": "e2ca29d68041940f",
+      "item": {
+        "type": "plugmatic",
+        "id": "e2ca29d68041940f",
+        "text": "wiki-plugin-soundcloud"
+      },
+      "date": 1517166546499
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1517166624865
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b06915a4b4a0eae6"
+      },
+      "id": "b06915a4b4a0eae6",
+      "type": "add",
+      "after": "e2ca29d68041940f",
+      "date": 1517167385688
+    },
+    {
+      "type": "edit",
+      "id": "b06915a4b4a0eae6",
+      "item": {
+        "type": "paragraph",
+        "id": "b06915a4b4a0eae6",
+        "text": "We start with the mkplugin script and attempt to write a plugin in 5 minutes while screen sharing. [https://gist.github.com/WardCunningham/fced775fcedcee133b32 gist]"
+      },
+      "date": 1517167429529
+    },
+    {
+      "type": "move",
+      "order": [
+        "7f30aa98a47ad5b4",
+        "b06915a4b4a0eae6",
+        "4dbeba7e60b28aee",
+        "e2ca29d68041940f"
+      ],
+      "id": "b06915a4b4a0eae6",
+      "date": 1517167441280
+    },
+    {
+      "type": "move",
+      "order": [
+        "b06915a4b4a0eae6",
+        "7f30aa98a47ad5b4",
+        "4dbeba7e60b28aee",
+        "e2ca29d68041940f"
+      ],
+      "id": "7f30aa98a47ad5b4",
+      "date": 1517167446182
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0c9e74025287a6d4"
+      },
+      "id": "0c9e74025287a6d4",
+      "type": "add",
+      "after": "e2ca29d68041940f",
+      "date": 1517167479048
+    },
+    {
+      "type": "edit",
+      "id": "0c9e74025287a6d4",
+      "item": {
+        "type": "paragraph",
+        "id": "0c9e74025287a6d4",
+        "text": "I wasn't counting but I think this took 30 minutes. I'll make some excuses now that you are welcome to ignore."
+      },
+      "date": 1517167528859
+    },
+    {
+      "type": "add",
+      "id": "c2327933b4ab3776",
+      "item": {
+        "type": "paragraph",
+        "id": "c2327933b4ab3776",
+        "text": "Everything was slow. Zoom screen sharing was consuming most of my cpu."
+      },
+      "after": "0c9e74025287a6d4",
+      "date": 1517167570506
+    },
+    {
+      "type": "add",
+      "id": "3640a5873de41c25",
+      "item": {
+        "type": "paragraph",
+        "id": "3640a5873de41c25",
+        "text": "Everything was crowded. Zoom always open windows covered up most of my buttons."
+      },
+      "after": "c2327933b4ab3776",
+      "date": 1517167614980
+    },
+    {
+      "type": "add",
+      "id": "e2145ed3193cb97d",
+      "item": {
+        "type": "paragraph",
+        "id": "e2145ed3193cb97d",
+        "text": "I made a simple mistake looking for a string of digits in the markup. My colleagues on Zoom eventually noticed this mistake. After we figured out how to bring up the chrome debugger."
+      },
+      "after": "3640a5873de41c25",
+      "date": 1517167816645
+    },
+    {
+      "type": "add",
+      "id": "5a772102e4dc0b28",
+      "item": {
+        "type": "paragraph",
+        "id": "5a772102e4dc0b28",
+        "text": "We've published this work as source. [https://github.com/WardCunningham/wiki-plugin-soundcloud github]"
+      },
+      "after": "b06915a4b4a0eae6",
+      "date": 1517168103171
+    },
+    {
+      "type": "edit",
+      "id": "4dbeba7e60b28aee",
+      "item": {
+        "type": "soundcloud",
+        "id": "4dbeba7e60b28aee",
+        "text": "David says you have to listen to this *awesome* podcast. 379402637"
+      },
+      "date": 1517168172799
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "title": "Salem Confluence",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d0997aa029433f3d",
+      "text": "This confluence is on or near the Interstate-5 southbound exit ramp to Salem Parkway at the north end of Salem, Oregon, the state capital. I was not the first to vist this location and had no interest in documenting a second or third report."
+    },
+    {
+      "type": "map",
+      "id": "6b762151f36c3531",
+      "text": "Salem Confluence visited in 2000.\n45.0, -123.0 [[Salem Confluence]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "f793d2e8cf5b9178",
+      "text": "My experience at the site is similar to a 2004 report."
+    },
+    {
+      "type": "paragraph",
+      "id": "23bf89ee2f9f91ab",
+      "text": "This confluence was both easy and hard to reach. The easy part was getting to the general vicinity of the confluence. You just drive south on Interstate 5 and carefully pull over and park on the shoulder. "
+    },
+    {
+      "type": "paragraph",
+      "id": "1e3d3c3b684fae4a",
+      "text": "The hard part was getting to the precise spot of the confluence. Our GPS unit showed that the confluence was on the actual on-ramp in the flow of traffic.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "995244c314c9f1d4",
+      "text": "To get to the spot where our GPS unit showed all zeros, we had to wait for a pause in the traffic. Then I carefully moved over onto the road while my wife took pictures of the GPS unit. "
+    },
+    {
+      "type": "paragraph",
+      "id": "56af68c91e3d43a0",
+      "text": "Since we had to back away whenever we saw cars coming, I didn't have much time to find the spot. It took many tries, but I was able to get all zeros with an estimated accuracy of ±8 feet."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Salem Confluence",
+        "story": []
+      },
+      "date": 1467763567625
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d0997aa029433f3d"
+      },
+      "id": "d0997aa029433f3d",
+      "type": "add",
+      "date": 1467763569652
+    },
+    {
+      "type": "edit",
+      "id": "d0997aa029433f3d",
+      "item": {
+        "type": "paragraph",
+        "id": "d0997aa029433f3d",
+        "text": "This confluence is on or near the Interstate-5 southbound exit ramp at the north end of Salem, Oregon, the state capital."
+      },
+      "date": 1467763710783
+    },
+    {
+      "type": "edit",
+      "id": "d0997aa029433f3d",
+      "item": {
+        "type": "paragraph",
+        "id": "d0997aa029433f3d",
+        "text": "This confluence is on or near the Interstate-5 southbound exit ramp at the north end of Salem, Oregon, the state capital. I was not the first to vist this location and had no interest in documenting a second or third report."
+      },
+      "date": 1467763756171
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Portland Confluences visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]\n45.0, -122.0 [[Bagby Confluence]]\n45.0, -123.0 [[Salem Confluence]]\nBOUNDARY 46.2, -122.0"
+      },
+      "after": "d0997aa029433f3d",
+      "id": "6b762151f36c3531",
+      "date": 1467763767344
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Salem Confluence visited in 2000.\n45.0, -123.0 [[Salem Confluence]]"
+      },
+      "date": 1467763790317
+    },
+    {
+      "type": "edit",
+      "id": "d0997aa029433f3d",
+      "item": {
+        "type": "paragraph",
+        "id": "d0997aa029433f3d",
+        "text": "This confluence is on or near the Interstate-5 southbound exit ramp to Salem Parkway at the north end of Salem, Oregon, the state capital. I was not the first to vist this location and had no interest in documenting a second or third report."
+      },
+      "date": 1467763850141
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f793d2e8cf5b9178"
+      },
+      "id": "f793d2e8cf5b9178",
+      "type": "add",
+      "after": "6b762151f36c3531",
+      "date": 1467766091045
+    },
+    {
+      "type": "edit",
+      "id": "f793d2e8cf5b9178",
+      "item": {
+        "type": "paragraph",
+        "id": "f793d2e8cf5b9178",
+        "text": "Excerpts from a 2004 report that is similar to my experience."
+      },
+      "date": 1467766115045
+    },
+    {
+      "type": "edit",
+      "id": "f793d2e8cf5b9178",
+      "item": {
+        "type": "paragraph",
+        "id": "f793d2e8cf5b9178",
+        "text": "My experience at the site is similar to a 2004 report."
+      },
+      "date": 1467766148552
+    },
+    {
+      "type": "add",
+      "id": "23bf89ee2f9f91ab",
+      "item": {
+        "type": "paragraph",
+        "id": "23bf89ee2f9f91ab",
+        "text": "This confluence was both easy and hard to reach. The easy part was getting to the general vicinity of the confluence. You just drive south on Interstate 5 and carefully pull over and park on the shoulder. "
+      },
+      "after": "f793d2e8cf5b9178",
+      "date": 1467766176641
+    },
+    {
+      "type": "add",
+      "id": "1e3d3c3b684fae4a",
+      "item": {
+        "type": "paragraph",
+        "id": "1e3d3c3b684fae4a",
+        "text": "The hard part was getting to the precise spot of the confluence. Our GPS unit showed that the confluence was on the actual on-ramp in the flow of traffic.\n\n"
+      },
+      "after": "23bf89ee2f9f91ab",
+      "date": 1467766185762
+    },
+    {
+      "type": "add",
+      "id": "995244c314c9f1d4",
+      "item": {
+        "type": "paragraph",
+        "id": "995244c314c9f1d4",
+        "text": "To get to the spot where our GPS unit showed all zeros, we had to wait for a pause in the traffic. Then I carefully moved over onto the road while my wife took pictures of the GPS unit. "
+      },
+      "after": "1e3d3c3b684fae4a",
+      "date": 1467766197688
+    },
+    {
+      "type": "add",
+      "id": "56af68c91e3d43a0",
+      "item": {
+        "type": "paragraph",
+        "id": "56af68c91e3d43a0",
+        "text": "Since we had to back away whenever we saw cars coming, I didn't have much time to find the spot. It took many tries, but I was able to get all zeros with an estimated accuracy of ±8 feet."
+      },
+      "after": "995244c314c9f1d4",
+      "date": 1467766205836
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "title": "TextEditor Improved",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b7ea811018681977",
+      "text": "We need to consolidate actions, especially on paragraph split and join. This requires more complex state flow. As long as we're in this code maybe we can do a few more nice things."
+    },
+    {
+      "type": "paragraph",
+      "id": "3341d315d9b1fb09",
+      "text": "See [[Latent Editor Actions]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "c22c8f37de99ccfa",
+      "text": "We could make the edit box grow and shrink with the text. We might argue that the fixed size encourages brevity and that the textarea already has a stretch handle. But content sensitivity is compelling. A List Apart tells us how. [http://alistapart.com/article/expanding-text-areas-made-elegant post]"
+    },
+    {
+      "type": "paragraph",
+      "id": "2f224e4d7aac94bd",
+      "text": "We could apply split/join logic to more than just paragraphs. How would we know that markdown would split too and would it split on one or two enters?"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "TextEditor Improved",
+        "story": []
+      },
+      "date": 1419182505243
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b7ea811018681977"
+      },
+      "id": "b7ea811018681977",
+      "type": "add",
+      "date": 1419182507064
+    },
+    {
+      "type": "edit",
+      "id": "b7ea811018681977",
+      "item": {
+        "type": "paragraph",
+        "id": "b7ea811018681977",
+        "text": "We need to consolidate actions, especially on paragraph split and join. This requires more complex state flow. As long as we're in this code maybe we can do a few more nice things."
+      },
+      "date": 1419182624206
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "c22c8f37de99ccfa",
+        "text": ""
+      },
+      "id": "c22c8f37de99ccfa",
+      "type": "add",
+      "after": "b7ea811018681977",
+      "date": 1419182624217
+    },
+    {
+      "type": "edit",
+      "id": "c22c8f37de99ccfa",
+      "item": {
+        "type": "paragraph",
+        "id": "c22c8f37de99ccfa",
+        "text": "We could make the edit box grow and shrink with the text. We might argue that the fixed size encourages brevity and that the textarea already has a stretch handle. But content size sensitivity is compelling. A List Apart tells us how. [http://alistapart.com/article/expanding-text-areas-made-elegant post]"
+      },
+      "date": 1419182827883
+    },
+    {
+      "type": "edit",
+      "id": "c22c8f37de99ccfa",
+      "item": {
+        "type": "paragraph",
+        "id": "c22c8f37de99ccfa",
+        "text": "We could make the edit box grow and shrink with the text. We might argue that the fixed size encourages brevity and that the textarea already has a stretch handle. But content sensitivity is compelling. A List Apart tells us how. [http://alistapart.com/article/expanding-text-areas-made-elegant post]"
+      },
+      "date": 1419182848065
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2f224e4d7aac94bd"
+      },
+      "id": "2f224e4d7aac94bd",
+      "type": "add",
+      "after": "c22c8f37de99ccfa",
+      "date": 1419182929269
+    },
+    {
+      "type": "edit",
+      "id": "2f224e4d7aac94bd",
+      "item": {
+        "type": "paragraph",
+        "id": "2f224e4d7aac94bd",
+        "text": "We could apply split/join logic to more than just paragraphs. How would we know that markdown would split too and would it split on one or two enters?"
+      },
+      "date": 1419183080756
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "3341d315d9b1fb09",
+        "text": ""
+      },
+      "id": "3341d315d9b1fb09",
+      "type": "add",
+      "after": "b7ea811018681977",
+      "date": 1419212626714
+    },
+    {
+      "type": "edit",
+      "id": "3341d315d9b1fb09",
+      "item": {
+        "type": "paragraph",
+        "id": "3341d315d9b1fb09",
+        "text": "See [[Latent Editor Actions]]"
+      },
+      "date": 1419212635993
+    }
+  ]
+}

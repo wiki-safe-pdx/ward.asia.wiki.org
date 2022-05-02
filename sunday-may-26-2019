@@ -1,0 +1,209 @@
+{
+  "title": "Sunday, May 26, 2019",
+  "story": [
+    {
+      "type": "markdown",
+      "id": "f03c2340d4ff5443",
+      "text": "---------------------------------------------------------------------------------------------\n\nParty — Sunday  — Memorial Day Weekend — Party\n\n---------------------------------------------------------------------------------------------"
+    },
+    {
+      "type": "paragraph",
+      "id": "1d075b1b1140da5a",
+      "text": "Please join me for a Memorial Day party. We’ve reserved the back room\nat the Old Market Pub, 6959 SW Multnomah Blvd, Portland, just blocks\nfrom my home. Drop in 1 to 5 for beer, pizza and healthy stuff too.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "9773fc926399c3e2",
+      "text": "It’s true that I often watch the Indianapolis 500 as I was born and raised\nin Indiana. But that event will be mostly over by the time we meet.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "22d74c07d97db277",
+      "text": "It’s also true that I was born on May 26 so it is a doubly special day for\nme. But please don’t bring presents. Memories yes. Presents no.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "76a97d57944d14b9",
+      "text": "We’re not asking for RSVP. Nor are we sure that I’ve invited all my old\nfriends so please pass this along as appropriate. Thanks.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "153e61d2014e9699",
+      "text": "Supervised kids are welcome at the pub though there are some rules\nabout not playing pool or shuffleboard. \n\n\n"
+    },
+    {
+      "type": "markdown",
+      "id": "9c0c8e380a2603d1",
+      "text": "---------------------------------------------------------------------------------------------\nQuestions and answers welcome at ward@c2.com\nVenue website [https://www.drinkbeerhere.com www.drinkbeerhere.com]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Sunday, May 26, 2019",
+        "story": []
+      },
+      "date": 1557279341632
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f03c2340d4ff5443"
+      },
+      "id": "f03c2340d4ff5443",
+      "type": "add",
+      "date": 1557279363256
+    },
+    {
+      "type": "edit",
+      "id": "f03c2340d4ff5443",
+      "item": {
+        "type": "markdown",
+        "id": "f03c2340d4ff5443",
+        "text": "---------------------------------------------------------------------------------------------\n\nParty —  Sunday, May 26, 2019 — Memorial Day Weekend — Party\n\n---------------------------------------------------------------------------------------------"
+      },
+      "date": 1557279369301
+    },
+    {
+      "type": "edit",
+      "id": "f03c2340d4ff5443",
+      "item": {
+        "type": "markdown",
+        "id": "f03c2340d4ff5443",
+        "text": "---------------------------------------------------------------------------------------------\n\nParty —  Sunday, May 26 — Memorial Day Weekend — Party\n\n---------------------------------------------------------------------------------------------"
+      },
+      "date": 1557279389197
+    },
+    {
+      "type": "edit",
+      "id": "f03c2340d4ff5443",
+      "item": {
+        "type": "markdown",
+        "id": "f03c2340d4ff5443",
+        "text": "---------------------------------------------------------------------------------------------\n\nParty — Memorial Day Weekend — Party\n\n---------------------------------------------------------------------------------------------"
+      },
+      "date": 1557279404532
+    },
+    {
+      "type": "edit",
+      "id": "f03c2340d4ff5443",
+      "item": {
+        "type": "markdown",
+        "id": "f03c2340d4ff5443",
+        "text": "---------------------------------------------------------------------------------------------\n\nParty — Sunday  — Memorial Day Weekend — Party\n\n---------------------------------------------------------------------------------------------"
+      },
+      "date": 1557279446209
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1d075b1b1140da5a"
+      },
+      "id": "1d075b1b1140da5a",
+      "type": "add",
+      "after": "f03c2340d4ff5443",
+      "date": 1557279468796
+    },
+    {
+      "type": "edit",
+      "id": "1d075b1b1140da5a",
+      "item": {
+        "type": "paragraph",
+        "id": "1d075b1b1140da5a",
+        "text": "Please join me for a Memorial Day party. We’ve reserved the back room\nat the Old Market Pub, 6959 SW Multnomah Blvd, Portland, just blocks\nfrom my home. Drop in 1 to 5 for beer, pizza and healthy stuff too.\n\n"
+      },
+      "date": 1557279479530
+    },
+    {
+      "type": "add",
+      "id": "9773fc926399c3e2",
+      "item": {
+        "type": "paragraph",
+        "id": "9773fc926399c3e2",
+        "text": "It’s true that I often watch the Indianapolis 500 as I was born and raised\nin Indiana. But that event will be mostly over by the time we meet.\n\n"
+      },
+      "after": "1d075b1b1140da5a",
+      "date": 1557279484482
+    },
+    {
+      "type": "add",
+      "id": "22d74c07d97db277",
+      "item": {
+        "type": "paragraph",
+        "id": "22d74c07d97db277",
+        "text": "It’s also true that I was born on May 26 so it is a doubly special day for\nme. But please don’t bring presents. Memories yes. Presents no.\n\n"
+      },
+      "after": "9773fc926399c3e2",
+      "date": 1557279487882
+    },
+    {
+      "type": "add",
+      "id": "76a97d57944d14b9",
+      "item": {
+        "type": "paragraph",
+        "id": "76a97d57944d14b9",
+        "text": "We’re not asking for RSVP. Nor are we sure that I’ve invited all my old\nfriends so please pass this along as appropriate. Thanks.\n\n"
+      },
+      "after": "22d74c07d97db277",
+      "date": 1557279491050
+    },
+    {
+      "type": "add",
+      "id": "153e61d2014e9699",
+      "item": {
+        "type": "paragraph",
+        "id": "153e61d2014e9699",
+        "text": "Supervised kids are welcome at the pub though there are some rules\nabout not playing pool or shuffleboard. \n\n\n"
+      },
+      "after": "76a97d57944d14b9",
+      "date": 1557279496137
+    },
+    {
+      "type": "add",
+      "id": "9c0c8e380a2603d1",
+      "item": {
+        "type": "factory",
+        "id": "9c0c8e380a2603d1",
+        "text": "---------------------------------------------------------------------------------------------\nQuestions and answers welcome at ward@c2.com\nVenue website www.drinkbeerhere.com"
+      },
+      "after": "153e61d2014e9699",
+      "date": 1557279505920
+    },
+    {
+      "type": "edit",
+      "id": "9c0c8e380a2603d1",
+      "item": {
+        "type": "markdown",
+        "id": "9c0c8e380a2603d1",
+        "text": "---------------------------------------------------------------------------------------------\nQuestions and answers welcome at ward@c2.com\nVenue website [https://www.drinkbeerhere.com www.drinkbeerhere.com]"
+      },
+      "date": 1557279545792
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a1f79f0b037025ba"
+      },
+      "id": "a1f79f0b037025ba",
+      "type": "add",
+      "after": "9c0c8e380a2603d1",
+      "date": 1557279577938
+    },
+    {
+      "type": "edit",
+      "id": "a1f79f0b037025ba",
+      "item": {
+        "type": "assets",
+        "id": "a1f79f0b037025ba",
+        "text": "pages/sunday-may-26-2019"
+      },
+      "date": 1557279613606
+    },
+    {
+      "type": "remove",
+      "id": "a1f79f0b037025ba",
+      "date": 1557279865276
+    }
+  ]
+}

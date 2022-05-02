@@ -1,0 +1,179 @@
+{
+  "title": "Graphviz Eval Emerges",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "30f54a9e9035f517",
+      "text": "There are a few places in the development where I felt I knew I was on the right track. With Eric's help I found an isolated place to write code. Here we look to github for historical snapshots where things looked especially nice."
+    },
+    {
+      "type": "paragraph",
+      "id": "be65a8a461513dc9",
+      "text": "I started by reading indented markup lines as a tree and generating dot commands that would render just that.\n[https://github.com/dobbs/wiki-plugin-graphviz/blob/7afce1b5adfcfd4a8687e33a3669c95b0d11d68d/client/graphviz.js#L14-L65 github]\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "a018bb4072646540",
+      "text": "Here I got HERE and LINKS to work together. I still wasn't fetching new pages but I could get a good feel for what needed to be in the context before I started doing real async stuff and more KEYWORDS. By this time I had ripped out the \"parent\" stuff that I had written just to be able to draw the input tree. Context became the new parent. Somewhere I wrote a more complete definition of keyword semantics because I keep referring to the context without explaining it.\n[https://github.com/dobbs/wiki-plugin-graphviz/blob/ce55ac7eee2984dd8a34b0001cc70120578e2389/client/graphviz.js#L71-L132 github]\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "d12f62e1003d3fc5",
+      "text": "See [[Graphviz Markup Semantics]]\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "427e00374df220de",
+      "text": "This is as good as it gets. The rest is just adding too many await steps so that I didn't think about starting and ending fetches as two different things. I also wrote enough other keywords that I could use read data as test cases."
+    },
+    {
+      "type": "pagefold",
+      "id": "03aa8676a8843a63",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "57a1fd04216fe9e5",
+      "text": "[[Dynamic Diagrams in Use]] documents small discoveries as we apply algorithmic markup to works in the federation."
+    },
+    {
+      "type": "paragraph",
+      "id": "22fbe0448a5216b5",
+      "text": "[[Visitor as Schema]] describes the influence dynamic diagrams might have on page uniformity."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Graphviz Eval Emerges",
+        "story": []
+      },
+      "date": 1552240479977
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "30f54a9e9035f517"
+      },
+      "id": "30f54a9e9035f517",
+      "type": "add",
+      "date": 1552240739338
+    },
+    {
+      "type": "edit",
+      "id": "30f54a9e9035f517",
+      "item": {
+        "type": "paragraph",
+        "id": "30f54a9e9035f517",
+        "text": "There are a few places in the development where I felt I knew I was on the right track. I found an isolated place with Eric's help where I could code. Then I worked in small increments. \n\n"
+      },
+      "date": 1552240747338
+    },
+    {
+      "type": "add",
+      "id": "be65a8a461513dc9",
+      "item": {
+        "type": "paragraph",
+        "id": "be65a8a461513dc9",
+        "text": "I started by reading indented markup lines as a tree and generating dot commands that would render just that.\n[https://github.com/dobbs/wiki-plugin-graphviz/blob/7afce1b5adfcfd4a8687e33a3669c95b0d11d68d/client/graphviz.js#L14-L65 github]\n\n"
+      },
+      "after": "30f54a9e9035f517",
+      "date": 1552240751070
+    },
+    {
+      "type": "add",
+      "id": "a018bb4072646540",
+      "item": {
+        "type": "paragraph",
+        "id": "a018bb4072646540",
+        "text": "Here I got HERE and LINKS to work together. I still wasn't fetching new pages but I could get a good feel for what needed to be in the context before I started doing real async stuff and more KEYWORDS. By this time I had ripped out the \"parent\" stuff that I had written just to be able to draw the input tree. Context became the new parent. Somewhere I wrote a more complete definition of keyword semantics because I keep referring to the context without explaining it.\n[https://github.com/dobbs/wiki-plugin-graphviz/blob/ce55ac7eee2984dd8a34b0001cc70120578e2389/client/graphviz.js#L71-L132 github]\n\n"
+      },
+      "after": "be65a8a461513dc9",
+      "date": 1552240771985
+    },
+    {
+      "type": "add",
+      "id": "d12f62e1003d3fc5",
+      "item": {
+        "type": "paragraph",
+        "id": "d12f62e1003d3fc5",
+        "text": "See [[Graphviz Markup Semantics]]\n\n"
+      },
+      "after": "a018bb4072646540",
+      "date": 1552240773984
+    },
+    {
+      "type": "add",
+      "id": "427e00374df220de",
+      "item": {
+        "type": "paragraph",
+        "id": "427e00374df220de",
+        "text": "This is as good as it gets. The rest is just adding too many await steps so that I didn't think about starting and ending fetches as two different things. I also wrote enough other keywords that I could use read data as test cases."
+      },
+      "after": "d12f62e1003d3fc5",
+      "date": 1552240776575
+    },
+    {
+      "type": "edit",
+      "id": "30f54a9e9035f517",
+      "item": {
+        "type": "paragraph",
+        "id": "30f54a9e9035f517",
+        "text": "There are a few places in the development where I felt I knew I was on the right track. With Eric's help I found an isolated place to write code. Here we look to github for historical snapshots where things looked especially nice."
+      },
+      "date": 1552240982998
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "03aa8676a8843a63"
+      },
+      "id": "03aa8676a8843a63",
+      "type": "add",
+      "after": "427e00374df220de",
+      "date": 1552573139337
+    },
+    {
+      "type": "edit",
+      "id": "03aa8676a8843a63",
+      "item": {
+        "type": "pagefold",
+        "id": "03aa8676a8843a63",
+        "text": "."
+      },
+      "date": 1552573145248
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "57a1fd04216fe9e5"
+      },
+      "id": "57a1fd04216fe9e5",
+      "type": "add",
+      "after": "03aa8676a8843a63",
+      "date": 1552573147309
+    },
+    {
+      "type": "edit",
+      "id": "57a1fd04216fe9e5",
+      "item": {
+        "type": "paragraph",
+        "id": "57a1fd04216fe9e5",
+        "text": "[[Dynamic Diagrams in Use]] documents small discoveries as we apply algorithmic markup to works in the federation."
+      },
+      "date": 1552573298114
+    },
+    {
+      "type": "add",
+      "id": "22fbe0448a5216b5",
+      "item": {
+        "type": "paragraph",
+        "id": "22fbe0448a5216b5",
+        "text": "[[Visitor as Schema]] describes the influence dynamic diagrams might have on page uniformity."
+      },
+      "after": "57a1fd04216fe9e5",
+      "date": 1552573356415
+    }
+  ]
+}

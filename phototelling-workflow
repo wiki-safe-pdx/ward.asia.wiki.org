@@ -1,0 +1,492 @@
+{
+  "title": "Phototelling Workflow",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b073b0e14bd48c17",
+      "text": "Thompson thinks that the energy I get from my trail photos will motivate 7th grade students to find and express meaning in their world. Now I want to make a sharable version of my photo stuff that is more fit for that purpose."
+    },
+    {
+      "type": "markdown",
+      "id": "fabc509b108d5a24",
+      "text": "# Vision"
+    },
+    {
+      "type": "paragraph",
+      "id": "a1ea5e3a737427d1",
+      "text": "An activity is witnessed, photographed, considered and told in such a way that it creates wonder among peers."
+    },
+    {
+      "type": "paragraph",
+      "id": "b9f8ee689f10e686",
+      "text": "An accumulation of tellings curated and shared enable emergence of meaning and purpose among students who are literate, numerate and creative."
+    },
+    {
+      "type": "paragraph",
+      "id": "724be16eeca53a4b",
+      "text": "See [[A Place Experienced]]"
+    },
+    {
+      "type": "markdown",
+      "id": "0a8cb3bc6bb506ab",
+      "text": "# Witness"
+    },
+    {
+      "type": "paragraph",
+      "id": "b5e8d1c54ff99eb7",
+      "text": "The teller learns to recognize the activities that cause or have caused change for better or for worse."
+    },
+    {
+      "type": "paragraph",
+      "id": "cd301d945eed2181",
+      "text": "The teller \"sees\" the agent of change or the evidence of that presence in a way that is visually compelling."
+    },
+    {
+      "type": "paragraph",
+      "id": "a896df72d4a1a55a",
+      "text": "The teller \"captures\" what has been seen in two to four well composed images in minutes then returns to present."
+    },
+    {
+      "type": "paragraph",
+      "id": "cb49cdddda8a66c4",
+      "text": "See [[BBC Five Shot]]"
+    },
+    {
+      "type": "markdown",
+      "id": "33787ac77c2b3edf",
+      "text": "# Telling"
+    },
+    {
+      "type": "paragraph",
+      "id": "ade47ce61324a726",
+      "text": "In a period of quiet reflection the teller recalls uploaded images and sets out to explain the activities with details that might soon be forgotten."
+    },
+    {
+      "type": "paragraph",
+      "id": "e1d115599e5abeef",
+      "text": "The teller titles each activity alluding to what is unique about this in the teller's experience."
+    },
+    {
+      "type": "paragraph",
+      "id": "1ffa1a49cb56b040",
+      "text": "The teller begins each page with a factual synopsis, labels images when they don't stand alone, and then completes each page with reflection and links to related works."
+    },
+    {
+      "type": "paragraph",
+      "id": "2b3847191681e675",
+      "text": "See [[Haiku Wiki]]"
+    },
+    {
+      "type": "markdown",
+      "id": "6fa952a51a6452dc",
+      "text": "# Considerations"
+    },
+    {
+      "type": "paragraph",
+      "id": "bc85cfe53c376979",
+      "text": "The tellings will have the longest term value if images are carefully sized and limited to only those supporting meaning as told."
+    },
+    {
+      "type": "paragraph",
+      "id": "2171d93d1c5cbab7",
+      "text": "The teller's work should be their own and written to medium that can last a generation. The creative commons license must be understood and acceptable."
+    },
+    {
+      "type": "paragraph",
+      "id": "a25c9c37db6fcfcd",
+      "text": "See [[Chronological Scaling]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Phototelling Workflow",
+        "story": []
+      },
+      "date": 1630171402619
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b073b0e14bd48c17"
+      },
+      "id": "b073b0e14bd48c17",
+      "type": "add",
+      "date": 1630171411238
+    },
+    {
+      "type": "edit",
+      "id": "b073b0e14bd48c17",
+      "item": {
+        "type": "paragraph",
+        "id": "b073b0e14bd48c17",
+        "text": "Thompson thinks that the energy I get from my trail photos will motivate 7th grade students to find and express meaning in their world. Now I want to make a sharable version of my photo stuff that is more fit for that purpose."
+      },
+      "date": 1630171571848
+    },
+    {
+      "type": "add",
+      "id": "fabc509b108d5a24",
+      "item": {
+        "type": "paragraph",
+        "id": "fabc509b108d5a24",
+        "text": "# Vision"
+      },
+      "after": "b073b0e14bd48c17",
+      "date": 1630171650688
+    },
+    {
+      "type": "add",
+      "id": "a1ea5e3a737427d1",
+      "item": {
+        "type": "paragraph",
+        "id": "a1ea5e3a737427d1",
+        "text": "An activity is witnessed, photographed, considered and told in such a way that it creates wonder among peers."
+      },
+      "after": "fabc509b108d5a24",
+      "date": 1630171837780
+    },
+    {
+      "type": "add",
+      "id": "b9f8ee689f10e686",
+      "item": {
+        "type": "paragraph",
+        "id": "b9f8ee689f10e686",
+        "text": "An accumulation of tellings curated and shared enable emergence of meaning and purpose among students who are literate, numerate and creative."
+      },
+      "after": "a1ea5e3a737427d1",
+      "date": 1630172319144
+    },
+    {
+      "type": "edit",
+      "id": "fabc509b108d5a24",
+      "item": {
+        "type": "markdown",
+        "id": "fabc509b108d5a24",
+        "text": "# Vision"
+      },
+      "date": 1630172325079
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0a8cb3bc6bb506ab"
+      },
+      "id": "0a8cb3bc6bb506ab",
+      "type": "add",
+      "after": "b9f8ee689f10e686",
+      "date": 1630172626829
+    },
+    {
+      "type": "edit",
+      "id": "0a8cb3bc6bb506ab",
+      "item": {
+        "type": "paragraph",
+        "id": "0a8cb3bc6bb506ab",
+        "text": "# Witness"
+      },
+      "date": 1630172725722
+    },
+    {
+      "type": "add",
+      "id": "b5e8d1c54ff99eb7",
+      "item": {
+        "type": "paragraph",
+        "id": "b5e8d1c54ff99eb7",
+        "text": "The teller learns to recognize the activities that cause or have caused change for better or for worse."
+      },
+      "after": "0a8cb3bc6bb506ab",
+      "date": 1630172901510
+    },
+    {
+      "type": "add",
+      "id": "cd301d945eed2181",
+      "item": {
+        "type": "paragraph",
+        "id": "cd301d945eed2181",
+        "text": "The teller \"sees\" the agent of change or the evidence of that presence in a way that is visually compelling."
+      },
+      "after": "b5e8d1c54ff99eb7",
+      "date": 1630173014514
+    },
+    {
+      "type": "edit",
+      "id": "cd301d945eed2181",
+      "item": {
+        "type": "paragraph",
+        "id": "cd301d945eed2181",
+        "text": "The teller \"sees\" the agent of change or the evidence of that presence in a way that is compact and visually compelling."
+      },
+      "date": 1630173027652
+    },
+    {
+      "type": "edit",
+      "id": "cd301d945eed2181",
+      "item": {
+        "type": "paragraph",
+        "id": "cd301d945eed2181",
+        "text": "The teller \"sees\" the agent of change or the evidence of that presence in a way that is visually compelling."
+      },
+      "date": 1630173040408
+    },
+    {
+      "type": "add",
+      "id": "a896df72d4a1a55a",
+      "item": {
+        "type": "paragraph",
+        "id": "a896df72d4a1a55a",
+        "text": "The teller \"captures\" what has been seen in two to four well composed images returning to the present in a few minutes."
+      },
+      "after": "cd301d945eed2181",
+      "date": 1630173392254
+    },
+    {
+      "type": "edit",
+      "id": "a896df72d4a1a55a",
+      "item": {
+        "type": "paragraph",
+        "id": "a896df72d4a1a55a",
+        "text": "The teller \"captures\" what has been seen in two to four well composed images in minutes then returns to present."
+      },
+      "date": 1630173418095
+    },
+    {
+      "type": "edit",
+      "id": "0a8cb3bc6bb506ab",
+      "item": {
+        "type": "markdown",
+        "id": "0a8cb3bc6bb506ab",
+        "text": "# Witness"
+      },
+      "date": 1630173432328
+    },
+    {
+      "type": "add",
+      "id": "33787ac77c2b3edf",
+      "item": {
+        "type": "paragraph",
+        "id": "33787ac77c2b3edf",
+        "text": "# Telling"
+      },
+      "after": "a896df72d4a1a55a",
+      "date": 1630173467043
+    },
+    {
+      "type": "add",
+      "id": "ade47ce61324a726",
+      "item": {
+        "type": "paragraph",
+        "id": "ade47ce61324a726",
+        "text": "In a period of quiet reflection the teller recalls uploaded images and sets out to explain the activity with details that might soon be forgotten."
+      },
+      "after": "33787ac77c2b3edf",
+      "date": 1630174707849
+    },
+    {
+      "type": "edit",
+      "id": "ade47ce61324a726",
+      "item": {
+        "type": "paragraph",
+        "id": "ade47ce61324a726",
+        "text": "In a period of quiet reflection the teller recalls uploaded images and sets out to explain the activities with details that might soon be forgotten. "
+      },
+      "date": 1630174785479
+    },
+    {
+      "type": "edit",
+      "id": "ade47ce61324a726",
+      "item": {
+        "type": "paragraph",
+        "id": "ade47ce61324a726",
+        "text": "In a period of quiet reflection the teller recalls uploaded images and sets out to explain the activities with details that might soon be forgotten."
+      },
+      "date": 1630174809170
+    },
+    {
+      "type": "add",
+      "id": "e1d115599e5abeef",
+      "item": {
+        "type": "paragraph",
+        "id": "e1d115599e5abeef",
+        "text": "The teller titles each activity alluding to what is unique about this in the teller's experience."
+      },
+      "after": "ade47ce61324a726",
+      "date": 1630175066064
+    },
+    {
+      "type": "edit",
+      "id": "33787ac77c2b3edf",
+      "item": {
+        "type": "markdown",
+        "id": "33787ac77c2b3edf",
+        "text": "# Telling"
+      },
+      "date": 1630175140572
+    },
+    {
+      "type": "add",
+      "id": "1ffa1a49cb56b040",
+      "item": {
+        "type": "paragraph",
+        "id": "1ffa1a49cb56b040",
+        "text": "The teller begins each page with a factual synopsis, labels images when they don't stand alone, and then completes each page with reflection and links to related works. "
+      },
+      "after": "e1d115599e5abeef",
+      "date": 1630175308617
+    },
+    {
+      "type": "edit",
+      "id": "1ffa1a49cb56b040",
+      "item": {
+        "type": "paragraph",
+        "id": "1ffa1a49cb56b040",
+        "text": "The teller begins each page with a factual synopsis, labels images when they don't stand alone, and then completes each page with reflection and links to related works."
+      },
+      "date": 1630175365667
+    },
+    {
+      "type": "add",
+      "id": "6fa952a51a6452dc",
+      "item": {
+        "type": "paragraph",
+        "id": "6fa952a51a6452dc",
+        "text": "# Considerations"
+      },
+      "after": "1ffa1a49cb56b040",
+      "date": 1630175376922
+    },
+    {
+      "type": "add",
+      "id": "bc85cfe53c376979",
+      "item": {
+        "type": "paragraph",
+        "id": "bc85cfe53c376979",
+        "text": "The tellings will have the longest term value if images are carefully sized and limited to only those supporting meaning as told."
+      },
+      "after": "6fa952a51a6452dc",
+      "date": 1630175551047
+    },
+    {
+      "type": "edit",
+      "id": "6fa952a51a6452dc",
+      "item": {
+        "type": "markdown",
+        "id": "6fa952a51a6452dc",
+        "text": "# Considerations"
+      },
+      "date": 1630175581260
+    },
+    {
+      "type": "add",
+      "id": "2171d93d1c5cbab7",
+      "item": {
+        "type": "paragraph",
+        "id": "2171d93d1c5cbab7",
+        "text": "The teller's work should be their own and written to medium that can last a generation. The terms of the creative commons license should be understood and acceptable."
+      },
+      "after": "bc85cfe53c376979",
+      "date": 1630175892202
+    },
+    {
+      "type": "edit",
+      "id": "2171d93d1c5cbab7",
+      "item": {
+        "type": "paragraph",
+        "id": "2171d93d1c5cbab7",
+        "text": "The teller's work should be their own and written to medium that can last a generation. The creative commons license must be understood and acceptable."
+      },
+      "date": 1630175926092
+    },
+    {
+      "type": "add",
+      "id": "cb49cdddda8a66c4",
+      "item": {
+        "type": "paragraph",
+        "id": "cb49cdddda8a66c4",
+        "text": "See [[BBC Five Shot]]"
+      },
+      "after": "a896df72d4a1a55a",
+      "date": 1630176035601
+    },
+    {
+      "type": "add",
+      "id": "2b3847191681e675",
+      "item": {
+        "type": "paragraph",
+        "id": "2b3847191681e675",
+        "text": "See [[Haiku Wiki]]"
+      },
+      "after": "1ffa1a49cb56b040",
+      "date": 1630176186575
+    },
+    {
+      "type": "add",
+      "id": "a25c9c37db6fcfcd",
+      "item": {
+        "type": "paragraph",
+        "id": "a25c9c37db6fcfcd",
+        "text": "See [[Chronological Scaling]]"
+      },
+      "after": "2171d93d1c5cbab7",
+      "date": 1630176440541
+    },
+    {
+      "type": "edit",
+      "id": "a1ea5e3a737427d1",
+      "item": {
+        "type": "paragraph",
+        "id": "a1ea5e3a737427d1",
+        "text": "An activity is witnessed, photographed, considered and told in such a way that it creates wonder among peers. See [[A Place Experienced]]"
+      },
+      "date": 1634142402393
+    },
+    {
+      "type": "edit",
+      "id": "a1ea5e3a737427d1",
+      "item": {
+        "type": "paragraph",
+        "id": "a1ea5e3a737427d1",
+        "text": "An activity is witnessed, photographed, considered and told in such a way that it creates wonder among peers."
+      },
+      "date": 1634142409682
+    },
+    {
+      "type": "add",
+      "id": "724be16eeca53a4b",
+      "item": {
+        "type": "paragraph",
+        "id": "724be16eeca53a4b",
+        "text": "See [[A Place Experienced]]"
+      },
+      "after": "a1ea5e3a737427d1",
+      "date": 1634142410779
+    },
+    {
+      "id": "724be16eeca53a4b",
+      "type": "move",
+      "order": [
+        "b073b0e14bd48c17",
+        "fabc509b108d5a24",
+        "a1ea5e3a737427d1",
+        "b9f8ee689f10e686",
+        "724be16eeca53a4b",
+        "0a8cb3bc6bb506ab",
+        "b5e8d1c54ff99eb7",
+        "cd301d945eed2181",
+        "a896df72d4a1a55a",
+        "cb49cdddda8a66c4",
+        "33787ac77c2b3edf",
+        "ade47ce61324a726",
+        "e1d115599e5abeef",
+        "1ffa1a49cb56b040",
+        "2b3847191681e675",
+        "6fa952a51a6452dc",
+        "bc85cfe53c376979",
+        "2171d93d1c5cbab7",
+        "a25c9c37db6fcfcd"
+      ],
+      "date": 1634142418260
+    }
+  ]
+}

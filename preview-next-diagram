@@ -1,0 +1,215 @@
+{
+  "title": "Preview Next Diagram",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9980a8479183eced",
+      "text": "Diagram the current page and two pages looking forward. One page, labeled Next: will be identified as the next in the story arc. See [[Agile]], [[Hero's Journey]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "80013b2589ba2659",
+      "text": "Next: [[Dayton's Story]]"
+    },
+    {
+      "type": "graphviz",
+      "id": "8628e14d2779975f",
+      "text": "DOT strict digraph\n\n  rankdir=LR\n  \n  node [style=filled fillcolor=lightyellow]\n  HERE NODE\n\n    node [style=filled fillcolor=lightblue]\n    WHERE /^Next/\n      LINKS HERE -> NODE\n\n    node [style=filled fillcolor=white]\n    LINKS HERE -> NODE\n       HERE NODE\n        LINKS HERE -> NODE\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "f82af520a4c06f15",
+      "text": "Graphviz markup to transclude this diagram."
+    },
+    {
+      "type": "code",
+      "id": "58a544d6226758d4",
+      "text": "DOT FROM preview-next-diagram"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Preview Next Diagram",
+        "story": []
+      },
+      "date": 1552781152664
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8628e14d2779975f"
+      },
+      "id": "8628e14d2779975f",
+      "type": "add",
+      "date": 1552781155199
+    },
+    {
+      "type": "edit",
+      "id": "8628e14d2779975f",
+      "item": {
+        "type": "graphviz",
+        "id": "8628e14d2779975f",
+        "text": "DOT strict digraph\n\n  rankdir=LR\n  \n  node [style=filled fillcolor=lightyellow]\n  HERE NODE\n\n    node [style=filled fillcolor=lightblue]\n    WHERE /^Next/\n      LINKS HERE -> NODE\n\n    node [style=filled fillcolor=white]\n    LINKS HERE -> NODE\n       HERE NODE\n        LINKS HERE -> NODE\n"
+      },
+      "date": 1552781185851
+    },
+    {
+      "type": "fork",
+      "site": "dev2.wiki.innovateoregon.org",
+      "date": 1553366334937
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9980a8479183eced"
+      },
+      "id": "9980a8479183eced",
+      "type": "add",
+      "after": "8628e14d2779975f",
+      "date": 1553566834353
+    },
+    {
+      "type": "edit",
+      "id": "9980a8479183eced",
+      "item": {
+        "type": "paragraph",
+        "id": "9980a8479183eced",
+        "text": "Diagram the current page and two pages looking forward. One page, labeled Next: will be identified as the next in the story arc. See Agile."
+      },
+      "date": 1553568864508
+    },
+    {
+      "type": "add",
+      "id": "80013b2589ba2659",
+      "item": {
+        "type": "paragraph",
+        "id": "80013b2589ba2659",
+        "text": "Next: Beginning"
+      },
+      "after": "9980a8479183eced",
+      "date": 1553568873596
+    },
+    {
+      "type": "move",
+      "order": [
+        "9980a8479183eced",
+        "8628e14d2779975f",
+        "80013b2589ba2659"
+      ],
+      "id": "9980a8479183eced",
+      "date": 1553568888525
+    },
+    {
+      "type": "move",
+      "order": [
+        "9980a8479183eced",
+        "80013b2589ba2659",
+        "8628e14d2779975f"
+      ],
+      "id": "80013b2589ba2659",
+      "date": 1553568891595
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1553568970526
+    },
+    {
+      "type": "edit",
+      "id": "9980a8479183eced",
+      "item": {
+        "type": "paragraph",
+        "id": "9980a8479183eced",
+        "text": "Diagram the current page and two pages looking forward. One page, labeled Next: will be identified as the next in the story arc. See [[Agile]]."
+      },
+      "date": 1553568998897
+    },
+    {
+      "type": "edit",
+      "id": "80013b2589ba2659",
+      "item": {
+        "type": "paragraph",
+        "id": "80013b2589ba2659",
+        "text": "Next: [[Beginning]]"
+      },
+      "date": 1553569007807
+    },
+    {
+      "type": "edit",
+      "id": "80013b2589ba2659",
+      "item": {
+        "type": "paragraph",
+        "id": "80013b2589ba2659",
+        "text": "Next: [[Dayton's Story]]"
+      },
+      "date": 1553569174507
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f82af520a4c06f15"
+      },
+      "id": "f82af520a4c06f15",
+      "type": "add",
+      "after": "8628e14d2779975f",
+      "date": 1553569223278
+    },
+    {
+      "type": "edit",
+      "id": "f82af520a4c06f15",
+      "item": {
+        "type": "paragraph",
+        "id": "f82af520a4c06f15",
+        "text": "Graphviz redirect this way."
+      },
+      "date": 1553569271904
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "58a544d6226758d4"
+      },
+      "id": "58a544d6226758d4",
+      "type": "add",
+      "after": "f82af520a4c06f15",
+      "date": 1553569275948
+    },
+    {
+      "type": "edit",
+      "id": "58a544d6226758d4",
+      "item": {
+        "type": "code",
+        "id": "58a544d6226758d4",
+        "text": "DOT FROM preview-next-diagram"
+      },
+      "date": 1553569279937
+    },
+    {
+      "type": "edit",
+      "id": "f82af520a4c06f15",
+      "item": {
+        "type": "paragraph",
+        "id": "f82af520a4c06f15",
+        "text": "Graphviz markup to transclude this diagram."
+      },
+      "date": 1553569314743
+    },
+    {
+      "type": "edit",
+      "id": "9980a8479183eced",
+      "item": {
+        "type": "paragraph",
+        "id": "9980a8479183eced",
+        "text": "Diagram the current page and two pages looking forward. One page, labeled Next: will be identified as the next in the story arc. See [[Agile]], [[Hero's Journey]]"
+      },
+      "date": 1553569521777
+    },
+    {
+      "type": "fork",
+      "site": "path.ward.asia.wiki.org",
+      "date": 1553569578180
+    }
+  ]
+}

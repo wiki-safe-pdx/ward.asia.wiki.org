@@ -1,0 +1,253 @@
+{
+  "title": "Trending Conversations",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3942585b904b48ad",
+      "text": "We've written a script that refreshes a static html page with links to the trending conversations. This version doesn't depend on you loading up your neighborhood to see our whole community. [http://fed.wiki.org/trending.html webpage]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1243bad0b833f9eb",
+      "text": "This is an experiment."
+    },
+    {
+      "type": "paragraph",
+      "id": "de72b4f5d34af2f7",
+      "text": "The links open a new tab and create the neighborhood that has been involved in the particular conversation. This makes for a quieter, somewhat exclusive space."
+    },
+    {
+      "type": "paragraph",
+      "id": "3f4a561933d0f492",
+      "text": "The links fill the tab with every version of the conversation known at the moment. The most recent is on the left. This may or may not be the most complete."
+    },
+    {
+      "type": "paragraph",
+      "id": "eb75d0d71f71d63e",
+      "text": "The link does not yet make your site the origin so that edits that you make go to the right site. This will require some javascript that we have yet to write."
+    },
+    {
+      "type": "paragraph",
+      "id": "01c0b0ec67779c4d",
+      "text": "This experiment is motivated by a desire to see whole conversations at once without the distraction of everything else going on."
+    },
+    {
+      "type": "reference",
+      "id": "bb695784639d63f2",
+      "site": "forage.ward.fed.wiki.org",
+      "title": "As If I Were You",
+      "text": "I don't want to be you, but I'd like to see your side of this conversation as if I were you. And then I'd like to be me again."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Trending Conversations",
+        "story": []
+      },
+      "date": 1419314327735
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3942585b904b48ad"
+      },
+      "id": "3942585b904b48ad",
+      "type": "add",
+      "date": 1419314329593
+    },
+    {
+      "type": "edit",
+      "id": "3942585b904b48ad",
+      "item": {
+        "type": "paragraph",
+        "id": "3942585b904b48ad",
+        "text": "We write a script that refreshes a static html page with links to the trending conversations. Participants are assumed to be listed in a page of references, in this case [[Happening Folks]] on Mike's server."
+      },
+      "date": 1419314452656
+    },
+    {
+      "type": "edit",
+      "id": "3942585b904b48ad",
+      "item": {
+        "type": "paragraph",
+        "id": "3942585b904b48ad",
+        "text": "We write a script that refreshes a static html page with links to the trending conversations. Participants are assumed to be listed in a page of references, in this case Happening Folks on Mike's server."
+      },
+      "date": 1419314476131
+    },
+    {
+      "type": "edit",
+      "id": "3942585b904b48ad",
+      "item": {
+        "type": "paragraph",
+        "id": "3942585b904b48ad",
+        "text": "We write a script that refreshes a static html page with links to the trending conversations. Participants are assumed to be listed in a page of references, in this case Happening Folks on Mike's server. [http://fed.wiki.org/trending.html webpage]"
+      },
+      "date": 1419314536073
+    },
+    {
+      "type": "edit",
+      "id": "3942585b904b48ad",
+      "item": {
+        "type": "paragraph",
+        "id": "3942585b904b48ad",
+        "text": "We've written a script that refreshes a static html page with links to the trending conversations. This version doesn't depend on you loading up your neighborhood to see our whole community. The script has already done that for you. [http://fed.wiki.org/trending.html webpage]"
+      },
+      "date": 1419319006940
+    },
+    {
+      "type": "edit",
+      "id": "3942585b904b48ad",
+      "item": {
+        "type": "paragraph",
+        "id": "3942585b904b48ad",
+        "text": "We've written a script that refreshes a static html page with links to the trending conversations. This version doesn't depend on you loading up your neighborhood to see our whole community. [http://fed.wiki.org/trending.html webpage]"
+      },
+      "date": 1419319015942
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1243bad0b833f9eb"
+      },
+      "id": "1243bad0b833f9eb",
+      "type": "add",
+      "after": "3942585b904b48ad",
+      "date": 1419319026170
+    },
+    {
+      "type": "edit",
+      "id": "1243bad0b833f9eb",
+      "item": {
+        "type": "paragraph",
+        "id": "1243bad0b833f9eb",
+        "text": "This is an experiment."
+      },
+      "date": 1419319045946
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "d6197ee2444c1b94",
+        "text": ""
+      },
+      "id": "d6197ee2444c1b94",
+      "type": "add",
+      "after": "1243bad0b833f9eb",
+      "date": 1419319045954
+    },
+    {
+      "type": "remove",
+      "id": "d6197ee2444c1b94",
+      "date": 1419319058542
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bb695784639d63f2"
+      },
+      "id": "bb695784639d63f2",
+      "type": "add",
+      "after": "1243bad0b833f9eb",
+      "date": 1419319366550
+    },
+    {
+      "type": "edit",
+      "id": "bb695784639d63f2",
+      "item": {
+        "type": "reference",
+        "id": "bb695784639d63f2",
+        "site": "forage.ward.fed.wiki.org",
+        "title": "As If I Were You",
+        "text": "I don't want to be you, but I'd like to see your side of this conversation as if I were you. And then I'd like to be me again."
+      },
+      "date": 1419319377706
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "de72b4f5d34af2f7",
+        "text": ""
+      },
+      "id": "de72b4f5d34af2f7",
+      "type": "add",
+      "after": "1243bad0b833f9eb",
+      "date": 1419319387376
+    },
+    {
+      "type": "edit",
+      "id": "de72b4f5d34af2f7",
+      "item": {
+        "type": "paragraph",
+        "id": "de72b4f5d34af2f7",
+        "text": "The links open a new tab and create the neighborhood that has been involved in the particular conversation. This makes for a quieter, somewhat exclusive space."
+      },
+      "date": 1419319488049
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "3f4a561933d0f492",
+        "text": ""
+      },
+      "id": "3f4a561933d0f492",
+      "type": "add",
+      "after": "de72b4f5d34af2f7",
+      "date": 1419319488056
+    },
+    {
+      "type": "edit",
+      "id": "3f4a561933d0f492",
+      "item": {
+        "type": "paragraph",
+        "id": "3f4a561933d0f492",
+        "text": "The links fill the tab with every version of the conversation known at the moment. The most recent is on the left. This may or may not be the most complete."
+      },
+      "date": 1419319588220
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "eb75d0d71f71d63e",
+        "text": ""
+      },
+      "id": "eb75d0d71f71d63e",
+      "type": "add",
+      "after": "3f4a561933d0f492",
+      "date": 1419319588228
+    },
+    {
+      "type": "edit",
+      "id": "eb75d0d71f71d63e",
+      "item": {
+        "type": "paragraph",
+        "id": "eb75d0d71f71d63e",
+        "text": "The link does not yet make your site the origin so that edits that you make go to the right site. This will require some javascript that we have yet to write."
+      },
+      "date": 1419319661219
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "01c0b0ec67779c4d",
+        "text": ""
+      },
+      "id": "01c0b0ec67779c4d",
+      "type": "add",
+      "after": "eb75d0d71f71d63e",
+      "date": 1419319670369
+    },
+    {
+      "type": "edit",
+      "id": "01c0b0ec67779c4d",
+      "item": {
+        "type": "paragraph",
+        "id": "01c0b0ec67779c4d",
+        "text": "This experiment is motivated by a desire to see whole conversations at once without the distraction of everything else going on."
+      },
+      "date": 1419319741490
+    }
+  ]
+}

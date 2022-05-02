@@ -1,0 +1,161 @@
+{
+  "title": "Beware the Secure Internet",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7923eb4f66478c64",
+      "text": "When my browser tells me the wiki server is 'Not secure', what is it telling me and what practical significance does this have? [https://riot.im/app/#/room/#fedwiki:matrix.org/$158023002162267jrjXW:matrix.org riot]"
+    },
+    {
+      "type": "paragraph",
+      "id": "73d70aa43abb7658",
+      "text": "It means that the site your are viewing is part of the old internet that uses the http protocol to communicate. There is a security fiction that someone with the resources of the nsa is watching you browse our creative commons content and maybe, what? stealing it? [https://www.schneier.com/essays/archives/2007/01/in_praise_of_securit.html wired]"
+    },
+    {
+      "type": "paragraph",
+      "id": "e3e6f8c51f577dcb",
+      "text": "With the Snowden revelations that the nsa is in fact watching, the moral panic to abandon the old http in favor of the incompatible, difficult and unreliable without constant attention https internet. This move (security theatre) disadvantages free content by making it more expensive and falsely suggests to the public that sites like google or facebook are safer even though it has been shown that they are in fact the man-in-the-middle we should fear. [https://www.forbes.com/sites/kateoflahertyuk/2018/10/10/this-is-why-people-no-longer-trust-google-and-facebook-with-their-data/#376151b44b09 forbes]"
+    },
+    {
+      "type": "paragraph",
+      "id": "2d6dd5dc05bfff6d",
+      "text": "aside: It has been established that https was a mistake since the beginning. The content-type negotiation was sufficient  to engage cryptography in financial transactions conducted over http. Netscape was in a hurry. [https://en.wikipedia.org/wiki/Secure_Hypertext_Transfer_Protocol wikipedia]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Beware the Secure Internet",
+        "story": []
+      },
+      "date": 1580897747615
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7923eb4f66478c64"
+      },
+      "id": "7923eb4f66478c64",
+      "type": "add",
+      "date": 1580897808486
+    },
+    {
+      "type": "edit",
+      "id": "7923eb4f66478c64",
+      "item": {
+        "type": "paragraph",
+        "id": "7923eb4f66478c64",
+        "text": "When my browser tells me the wiki server is 'Not secure', what is it telling me and what practical significance does this have?"
+      },
+      "date": 1580897831757
+    },
+    {
+      "type": "edit",
+      "id": "7923eb4f66478c64",
+      "item": {
+        "type": "paragraph",
+        "id": "7923eb4f66478c64",
+        "text": "When my browser tells me the wiki server is 'Not secure', what is it telling me and what practical significance does this have? [https://riot.im/app/#/room/#fedwiki:matrix.org/$158023002162267jrjXW:matrix.org riot]"
+      },
+      "date": 1580897868255
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "73d70aa43abb7658"
+      },
+      "id": "73d70aa43abb7658",
+      "type": "add",
+      "after": "7923eb4f66478c64",
+      "date": 1580897910778
+    },
+    {
+      "type": "edit",
+      "id": "73d70aa43abb7658",
+      "item": {
+        "type": "paragraph",
+        "id": "73d70aa43abb7658",
+        "text": "It means that the site your are viewing is part of the old internet that uses the http protocol to communicate. There is a security fiction that someone with the resources of the nsa is watching you browse our creative commons content and maybe, what? stealing it? With the Snowden revelations that the nsa is in fact watching, the moral panic to abandon the old http in favor of the incompatible, difficult and unreliable without constant attention https internet. This move disadvantages free content by making it more expensive and falsely suggests to the public that sites like google or facebook are safer even though it has been shown that they are in fact the man-in-the-middle we should fear."
+      },
+      "date": 1580897916840
+    },
+    {
+      "type": "edit",
+      "id": "73d70aa43abb7658",
+      "item": {
+        "type": "paragraph",
+        "id": "73d70aa43abb7658",
+        "text": "It means that the site your are viewing is part of the old internet that uses the http protocol to communicate. There is a security fiction that someone with the resources of the nsa is watching you browse our creative commons content and maybe, what? stealing it? "
+      },
+      "date": 1580897943446
+    },
+    {
+      "type": "add",
+      "id": "e3e6f8c51f577dcb",
+      "item": {
+        "type": "paragraph",
+        "id": "e3e6f8c51f577dcb",
+        "text": "With the Snowden revelations that the nsa is in fact watching, the moral panic to abandon the old http in favor of the incompatible, difficult and unreliable without constant attention https internet. This move disadvantages free content by making it more expensive and falsely suggests to the public that sites like google or facebook are safer even though it has been shown that they are in fact the man-in-the-middle we should fear."
+      },
+      "after": "73d70aa43abb7658",
+      "date": 1580897979172
+    },
+    {
+      "type": "add",
+      "id": "2d6dd5dc05bfff6d",
+      "item": {
+        "type": "paragraph",
+        "id": "2d6dd5dc05bfff6d",
+        "text": "aside: It has been established that https was a mistake since the beginning. The content-type negotiation was sufficient  to engage cryptography in financial transactions conducted over http. Netscape was in a hurry."
+      },
+      "after": "e3e6f8c51f577dcb",
+      "date": 1580898023786
+    },
+    {
+      "type": "edit",
+      "id": "2d6dd5dc05bfff6d",
+      "item": {
+        "type": "paragraph",
+        "id": "2d6dd5dc05bfff6d",
+        "text": "aside: It has been established that https was a mistake since the beginning. The content-type negotiation was sufficient  to engage cryptography in financial transactions conducted over http. Netscape was in a hurry. [https://en.wikipedia.org/wiki/Secure_Hypertext_Transfer_Protocol wikipedia]"
+      },
+      "date": 1580898209547
+    },
+    {
+      "type": "edit",
+      "id": "e3e6f8c51f577dcb",
+      "item": {
+        "type": "paragraph",
+        "id": "e3e6f8c51f577dcb",
+        "text": "With the Snowden revelations that the nsa is in fact watching, the moral panic to abandon the old http in favor of the incompatible, difficult and unreliable without constant attention https internet. This move disadvantages free content by making it more expensive and falsely suggests to the public that sites like google or facebook are safer even though it has been shown that they are in fact the man-in-the-middle we should fear. [https://www.forbes.com/sites/kateoflahertyuk/2018/10/10/this-is-why-people-no-longer-trust-google-and-facebook-with-their-data/#376151b44b09 forbes]"
+      },
+      "date": 1580898381757
+    },
+    {
+      "type": "edit",
+      "id": "73d70aa43abb7658",
+      "item": {
+        "type": "paragraph",
+        "id": "73d70aa43abb7658",
+        "text": "It means that the site your are viewing is part of the old internet that uses the http protocol to communicate. There is a security fiction that someone with the resources of the nsa is watching you browse our creative commons content and maybe, what? stealing it? [https://www.schneier.com/essays/archives/2007/01/in_praise_of_securit.html wired]"
+      },
+      "date": 1580898803648
+    },
+    {
+      "type": "edit",
+      "id": "e3e6f8c51f577dcb",
+      "item": {
+        "type": "paragraph",
+        "id": "e3e6f8c51f577dcb",
+        "text": "With the Snowden revelations that the nsa is in fact watching, the moral panic to abandon the old http in favor of the incompatible, difficult and unreliable without constant attention https internet. This move (security theatre) disadvantages free content by making it more expensive and falsely suggests to the public that sites like google or facebook are safer even though it has been shown that they are in fact the man-in-the-middle we should fear. [https://www.forbes.com/sites/kateoflahertyuk/2018/10/10/this-is-why-people-no-longer-trust-google-and-facebook-with-their-data/#376151b44b09 forbes]"
+      },
+      "date": 1580904554433
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1580904576063
+    }
+  ]
+}

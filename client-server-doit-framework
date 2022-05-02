@@ -1,0 +1,791 @@
+{
+  "title": "Client-Server Doit Framework",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "6adb6d8e8fda6d60",
+      "text": "We offer a static html framework that will post a query to a server and then render the result in place. This makes for a web version of the read-eval-print loop where eval happens on the server."
+    },
+    {
+      "type": "paragraph",
+      "id": "aebce472b54da4b2",
+      "text": "See also [[Sweet Little Language]] "
+    },
+    {
+      "type": "markdown",
+      "id": "0f60b6a27793ba35",
+      "text": "# Client"
+    },
+    {
+      "type": "paragraph",
+      "id": "c3c5d07a73b87b4c",
+      "text": "We define three html items: read is editable, eval is the doit button, and print is whatever comes from the server."
+    },
+    {
+      "type": "code",
+      "id": "a281a6dcf07ff076",
+      "text": "<pre id=\"readz\" contenteditable=\"true\"></pre>\n<div> <button id=\"evalz\">Doit</button>\n<div id=\"printz\"></div>\n<script>\n\n  // Save input between reloads\n  let path = location.pathname\n  if (localStorage[path])\n    readz.innerText = localStorage[path]\n  readz.addEventListener('focusout', e => {\n    localStorage[path] = readz.innerText\n  })\n\n  // Read, eval and print\n  evalz.onclick = e => {\n    printz.innerHTML = '<i>running</i>'\n    let headers = {\n      'Accept': 'text/html',\n      'Content-Type': 'application/json'\n    }\n    let body = readz.innerText\n    fetch(path,{method:'POST',headers,body})\n      .then(res=>res.text())\n      .then(txt=>{printz.innerHTML = txt})\n  }\n\n</script>"
+    },
+    {
+      "type": "markdown",
+      "id": "f7b77c1510228e0b",
+      "text": "# Server"
+    },
+    {
+      "type": "paragraph",
+      "id": "6c1cb4dd5193fbaf",
+      "text": "We develop the server in two parts. First is the usual request handling loop supporting GET of the html above and POST for running and returning the doit function below. "
+    },
+    {
+      "type": "code",
+      "id": "919844c907b0d110",
+      "text": "import {serve} from \"https://deno.land/std@v0.39.0/http/server.ts\"\n\nconst port = 7070\nconst server = serve({port})\nfor await (const req of server) {\n  if(req.method == 'POST') {\n    req.respond({body: await doit(req)})\n  } else {\n    req.respond({body: html})\n  }\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "a4a0c1f571bd715b",
+      "text": "We'll demonstrate the possible by accepting a list of urls in a JSON array, fetching each of those files, and then returning them to be printed side by side."
+    },
+    {
+      "type": "code",
+      "id": "b6b16d89923eb2e9",
+      "text": "async function doit (req) {\n  let buf = await Deno.readAll(req.body)\n  let txt = new TextDecoder(\"utf-8\").decode(buf)\n  let urls = JSON.parse(txt)\n  let files = await Promise.all(urls.map(\n    url => fetch(url).then(\n      res => res.text())))\n  return `<table>\n    <tr>${files.map(\n      file =>`<td><pre>${file}`)\n        .join('')}\n    </table>`\n}"
+    },
+    {
+      "type": "markdown",
+      "id": "e192724bb4bdb008",
+      "text": "# Example"
+    },
+    {
+      "type": "paragraph",
+      "id": "9b211311feec456d",
+      "text": "Here we assemble these parts into an application that queries four different sensor network nodes and shows reported values in 1/16 degree C. [http://ward.asia.wiki.org/assets/pages/client-server-doit-framework/example.jpg enlarge]"
+    },
+    {
+      "type": "html",
+      "id": "492cc1c027f7ab82",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/client-server-doit-framework/example.jpg>"
+    },
+    {
+      "type": "paragraph",
+      "id": "c639583747078dfa",
+      "text": "Here is some sample input and a ready to run script file that includes a little extra styling shown above."
+    },
+    {
+      "type": "code",
+      "id": "023ac8fe2a6b9c99",
+      "text": "[\n\"http://home.c2.com:8020/\",\n\"http://home.c2.com:8021/\",\n\"http://home.c2.com:8022/\",\n\"http://home.c2.com:8023/\"\n]"
+    },
+    {
+      "type": "assets",
+      "id": "4925e317c26752fb",
+      "text": "pages/client-server-doit-framework"
+    },
+    {
+      "type": "markdown",
+      "id": "130143565dd266a2",
+      "text": "# Plan"
+    },
+    {
+      "type": "paragraph",
+      "id": "1a93b24bd2de1ad4",
+      "text": "My plan when I started this page was to include the html into a client-side bootstrap built into the server. This option is no longer avalable. [https://www.html5rocks.com/en/tutorials/webcomponents/imports/ post]"
+    },
+    {
+      "type": "paragraph",
+      "id": "f5a3e311dff1523d",
+      "text": "My new plan is to make a server-side deno module that is the server and the whole client-side html, css and script. Thats all static except for the server-side doit function."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Client-Server Doit Framework",
+        "story": []
+      },
+      "date": 1590849780818
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6adb6d8e8fda6d60"
+      },
+      "id": "6adb6d8e8fda6d60",
+      "type": "add",
+      "date": 1590849783529
+    },
+    {
+      "type": "edit",
+      "id": "6adb6d8e8fda6d60",
+      "item": {
+        "type": "paragraph",
+        "id": "6adb6d8e8fda6d60",
+        "text": "We offer a static html framework that will post a query to a server and then render the result in place. "
+      },
+      "date": 1590849861189
+    },
+    {
+      "type": "edit",
+      "id": "6adb6d8e8fda6d60",
+      "item": {
+        "type": "paragraph",
+        "id": "6adb6d8e8fda6d60",
+        "text": "We offer a static html framework that will post a query to a server and then render the result in place. This makes for a web version of the read-eval-print loop where eval happens on the server."
+      },
+      "date": 1590850065260
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "919844c907b0d110"
+      },
+      "id": "919844c907b0d110",
+      "type": "add",
+      "after": "6adb6d8e8fda6d60",
+      "date": 1590850944851
+    },
+    {
+      "type": "edit",
+      "id": "919844c907b0d110",
+      "item": {
+        "type": "code",
+        "id": "919844c907b0d110",
+        "text": "const server = serve({port})\nfor await (const req of server) {\n  if(req.method == 'POST') {\n    req.respond({body: await run(req)})\n  } else {\n    req.respond({body: html})\n  }\n}"
+      },
+      "date": 1590850951280
+    },
+    {
+      "type": "edit",
+      "id": "919844c907b0d110",
+      "item": {
+        "type": "code",
+        "id": "919844c907b0d110",
+        "text": "const server = serve({port})\nfor await (const req of server) {\n  if(req.method == 'POST') {\n    req.respond({body: await doit(req)})\n  } else {\n    req.respond({body: html})\n  }\n}"
+      },
+      "date": 1590850965568
+    },
+    {
+      "type": "add",
+      "id": "aebce472b54da4b2",
+      "item": {
+        "type": "paragraph",
+        "id": "aebce472b54da4b2",
+        "text": "See also [[Sweet Little Language]] "
+      },
+      "after": "6adb6d8e8fda6d60",
+      "date": 1590851009652
+    },
+    {
+      "type": "add",
+      "id": "0f60b6a27793ba35",
+      "item": {
+        "type": "paragraph",
+        "id": "0f60b6a27793ba35",
+        "text": "# Client"
+      },
+      "after": "aebce472b54da4b2",
+      "date": 1590864385819
+    },
+    {
+      "type": "add",
+      "id": "c3c5d07a73b87b4c",
+      "item": {
+        "type": "paragraph",
+        "id": "c3c5d07a73b87b4c",
+        "text": "We define three html items: read is editable, eval is the doit button, and print is whatever comes from the server."
+      },
+      "after": "0f60b6a27793ba35",
+      "date": 1590864580914
+    },
+    {
+      "type": "edit",
+      "id": "0f60b6a27793ba35",
+      "item": {
+        "type": "markdown",
+        "id": "0f60b6a27793ba35",
+        "text": "# Client"
+      },
+      "date": 1590864583724
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a281a6dcf07ff076"
+      },
+      "id": "a281a6dcf07ff076",
+      "type": "add",
+      "after": "919844c907b0d110",
+      "date": 1590864585778
+    },
+    {
+      "type": "edit",
+      "id": "a281a6dcf07ff076",
+      "item": {
+        "type": "code",
+        "id": "a281a6dcf07ff076",
+        "text": "<section>\n  <pre id=\"read\" contenteditable=\"true\"></pre>\n</section>\n<div> <button id=\"eval\">Doit</button>\n<div id=\"print\"></div>\n<script>\n\n  // Save input in local storage between reloads\n  let path = location.path\n  if (localStorage[path])\n    read.innerText = localStorage[path]\n  read.addEventListener('focusout',\n    event => {localStorage[path]=read.innerText})\n\n  // Read, eval and print\n  function eval () {\n    print.innerHTML = '<i>running</i>'\n    fetch('/doit',{method:'POST',body:read.innerText})\n      .then(res=>res.text())\n      .then(txt=>{print.innerHTML = txt})\n  }\n</script>"
+      },
+      "date": 1590864590738
+    },
+    {
+      "id": "a281a6dcf07ff076",
+      "type": "move",
+      "order": [
+        "6adb6d8e8fda6d60",
+        "aebce472b54da4b2",
+        "0f60b6a27793ba35",
+        "a281a6dcf07ff076",
+        "c3c5d07a73b87b4c",
+        "919844c907b0d110"
+      ],
+      "date": 1590864599632
+    },
+    {
+      "id": "c3c5d07a73b87b4c",
+      "type": "move",
+      "order": [
+        "6adb6d8e8fda6d60",
+        "aebce472b54da4b2",
+        "0f60b6a27793ba35",
+        "c3c5d07a73b87b4c",
+        "a281a6dcf07ff076",
+        "919844c907b0d110"
+      ],
+      "date": 1590864602292
+    },
+    {
+      "type": "edit",
+      "id": "a281a6dcf07ff076",
+      "item": {
+        "type": "code",
+        "id": "a281a6dcf07ff076",
+        "text": "<section>\n  <pre id=\"read\" contenteditable=\"true\"></pre>\n</section>\n<div> <button id=\"eval\">Doit</button>\n<div id=\"print\"></div>\n<script>\n\n  // Save input in local storage between reloads\n  let path = location.path\n  if (localStorage[path])\n    read.innerText = localStorage[path]\n  read.addEventListener('focusout',\n    event => {localStorage[path]=read.innerText})\n\n  // Read, eval and print\n  function eval () {\n    print.innerHTML = '<i>running</i>'\n    let body = read.innerText\n    fetch('/doit',{method:'POST',body})\n      .then(res=>res.text())\n      .then(txt=>{print.innerHTML = txt})\n  }\n</script>"
+      },
+      "date": 1590864701411
+    },
+    {
+      "type": "edit",
+      "id": "a281a6dcf07ff076",
+      "item": {
+        "type": "code",
+        "id": "a281a6dcf07ff076",
+        "text": "<section>\n  <pre id=\"read\" contenteditable=\"true\"></pre>\n</section>\n<div> <button id=\"eval\">Doit</button>\n<div id=\"print\"></div>\n<script>\n\n  // Save input between reloads\n  let path = location.path\n  if (localStorage[path])\n    read.innerText = localStorage[path]\n  read.addEventListener('focusout',\n    event => {localStorage[path]=read.innerText})\n\n  // Read, eval and print\n  function eval () {\n    print.innerHTML = '<i>running</i>'\n    let body = read.innerText\n    fetch('/doit',{method:'POST',body})\n      .then(res=>res.text())\n      .then(txt=>{print.innerHTML = txt})\n  }\n</script>"
+      },
+      "date": 1590864740981
+    },
+    {
+      "type": "edit",
+      "id": "a281a6dcf07ff076",
+      "item": {
+        "type": "code",
+        "id": "a281a6dcf07ff076",
+        "text": "<section>\n  <pre id=\"read\" contenteditable=\"true\"></pre>\n</section>\n<div> <button id=\"eval\">Doit</button>\n<div id=\"print\"></div>\n<script>\n\n  // Save input between reloads\n  let path = location.path\n  if (localStorage[path])\n    read.innerText = localStorage[path]\n  read.addEventListener('focusout', e => {\n    localStorage[path] = read.innerText\n  })\n\n  // Read, eval and print\n  eval.on('click', e => {\n    print.innerHTML = '<i>running</i>'\n    let body = read.innerText\n    fetch(path,{method:'POST',body})\n      .then(res=>res.text())\n      .then(txt=>{print.innerHTML = txt})\n  })\n</script>"
+      },
+      "date": 1590865099469
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f7b77c1510228e0b"
+      },
+      "id": "f7b77c1510228e0b",
+      "type": "add",
+      "after": "919844c907b0d110",
+      "date": 1590865179102
+    },
+    {
+      "type": "edit",
+      "id": "f7b77c1510228e0b",
+      "item": {
+        "type": "paragraph",
+        "id": "f7b77c1510228e0b",
+        "text": "# Server"
+      },
+      "date": 1590865193091
+    },
+    {
+      "id": "f7b77c1510228e0b",
+      "type": "move",
+      "order": [
+        "6adb6d8e8fda6d60",
+        "aebce472b54da4b2",
+        "0f60b6a27793ba35",
+        "c3c5d07a73b87b4c",
+        "a281a6dcf07ff076",
+        "f7b77c1510228e0b",
+        "919844c907b0d110"
+      ],
+      "date": 1590865195743
+    },
+    {
+      "type": "add",
+      "id": "6c1cb4dd5193fbaf",
+      "item": {
+        "type": "paragraph",
+        "id": "6c1cb4dd5193fbaf",
+        "text": "We develop the server in two parts. First is the usual request handling loop supporting GET of the html above and POST for running and returning the doit function below. "
+      },
+      "after": "f7b77c1510228e0b",
+      "date": 1590865620172
+    },
+    {
+      "type": "edit",
+      "id": "f7b77c1510228e0b",
+      "item": {
+        "type": "markdown",
+        "id": "f7b77c1510228e0b",
+        "text": "# Server"
+      },
+      "date": 1590865623832
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a4a0c1f571bd715b"
+      },
+      "id": "a4a0c1f571bd715b",
+      "type": "add",
+      "after": "919844c907b0d110",
+      "date": 1590865667693
+    },
+    {
+      "type": "edit",
+      "id": "a4a0c1f571bd715b",
+      "item": {
+        "type": "paragraph",
+        "id": "a4a0c1f571bd715b",
+        "text": "We'll demonstrate the possible by accepting a list of urls in a JSON array, fetching each of those files, and then returning them to be printed side by side."
+      },
+      "date": 1590865883786
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b6b16d89923eb2e9"
+      },
+      "id": "b6b16d89923eb2e9",
+      "type": "add",
+      "after": "a4a0c1f571bd715b",
+      "date": 1590866805178
+    },
+    {
+      "type": "edit",
+      "id": "b6b16d89923eb2e9",
+      "item": {
+        "type": "code",
+        "id": "b6b16d89923eb2e9",
+        "text": "async function doit (req:any) {\n  let urls = await req.json()\n  let files = Promise.all(urls.map(\n    url => fetch(url).then(\n      res => res.text())))\n\n  return `<table>\n    <tr>${files.map(\n      file =>`<td><pre>${file}`)\n        .join('')}\n    </table>`\n}"
+      },
+      "date": 1590866809941
+    },
+    {
+      "type": "edit",
+      "id": "a281a6dcf07ff076",
+      "item": {
+        "type": "code",
+        "id": "a281a6dcf07ff076",
+        "text": "<pre id=\"read\" contenteditable=\"true\"></pre>\n<div> <button id=\"eval\">Doit</button>\n<div id=\"print\"></div>\n<script>\n\n  // Save input between reloads\n  let path = location.path\n  if (localStorage[path])\n    read.innerText = localStorage[path]\n  read.addEventListener('focusout', e => {\n    localStorage[path] = read.innerText\n  })\n\n  // Read, eval and print\n  eval.on('click', e => {\n    print.innerHTML = '<i>running</i>'\n    let body = read.innerText\n    fetch(path,{method:'POST',body})\n      .then(res=>res.text())\n      .then(txt=>{print.innerHTML = txt})\n  })\n</script>"
+      },
+      "date": 1590866838043
+    },
+    {
+      "type": "edit",
+      "id": "a281a6dcf07ff076",
+      "item": {
+        "type": "code",
+        "id": "a281a6dcf07ff076",
+        "text": "<pre id=\"read\" contenteditable=\"true\"></pre>\n<div> <button id=\"eval\">Doit</button>\n<div id=\"print\"></div>\n<script>\n\n  // Save input between reloads\n  let path = location.path\n  if (localStorage[path])\n    read.innerText = localStorage[path]\n  read.addEventListener('focusout', e => {\n    localStorage[path] = read.innerText\n  })\n\n  // Read, eval and print\n  eval.on('click', e => {\n    print.innerHTML = '<i>running</i>'\n    let body = read.innerText\n    fetch(path,{method:'POST',body})\n      .then(res=>res.text())\n      .then(txt=>{print.innerHTML = txt})\n  })\n\n</script>"
+      },
+      "date": 1590866859511
+    },
+    {
+      "type": "edit",
+      "id": "919844c907b0d110",
+      "item": {
+        "type": "code",
+        "id": "919844c907b0d110",
+        "text": "import {serve} from \"https://deno.land/std@v0.39.0/http/server.ts\"\n\nconst server = serve({port})\nfor await (const req of server) {\n  if(req.method == 'POST') {\n    req.respond({body: await doit(req)})\n  } else {\n    req.respond({body: html})\n  }\n}"
+      },
+      "date": 1590866937036
+    },
+    {
+      "type": "edit",
+      "id": "919844c907b0d110",
+      "item": {
+        "type": "code",
+        "id": "919844c907b0d110",
+        "text": "import {serve} from \"https://deno.land/std/http/server.ts\"\n\nconst server = serve({port})\nfor await (const req of server) {\n  if(req.method == 'POST') {\n    req.respond({body: await doit(req)})\n  } else {\n    req.respond({body: html})\n  }\n}"
+      },
+      "date": 1590866966506
+    },
+    {
+      "type": "edit",
+      "id": "919844c907b0d110",
+      "item": {
+        "type": "code",
+        "id": "919844c907b0d110",
+        "text": "import {serve} from \"https://deno.land/std/http/server.ts\"\n\nconst port = 7000\nconst server = serve({port})\nfor await (const req of server) {\n  if(req.method == 'POST') {\n    req.respond({body: await doit(req)})\n  } else {\n    req.respond({body: html})\n  }\n}"
+      },
+      "date": 1590867016104
+    },
+    {
+      "type": "edit",
+      "id": "b6b16d89923eb2e9",
+      "item": {
+        "type": "code",
+        "id": "b6b16d89923eb2e9",
+        "text": "async function doit (req) {\n  let urls = await req.json()\n  let files = Promise.all(urls.map(\n    url => fetch(url).then(\n      res => res.text())))\n\n  return `<table>\n    <tr>${files.map(\n      file =>`<td><pre>${file}`)\n        .join('')}\n    </table>`\n}"
+      },
+      "date": 1590867730100
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e192724bb4bdb008"
+      },
+      "id": "e192724bb4bdb008",
+      "type": "add",
+      "after": "b6b16d89923eb2e9",
+      "date": 1590882773292
+    },
+    {
+      "type": "edit",
+      "id": "e192724bb4bdb008",
+      "item": {
+        "type": "markdown",
+        "id": "e192724bb4bdb008",
+        "text": "# Example"
+      },
+      "date": 1590882781093
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9b211311feec456d"
+      },
+      "id": "9b211311feec456d",
+      "type": "add",
+      "after": "e192724bb4bdb008",
+      "date": 1590882782646
+    },
+    {
+      "type": "edit",
+      "id": "9b211311feec456d",
+      "item": {
+        "type": "paragraph",
+        "id": "9b211311feec456d",
+        "text": "Here we assemble these parts into an application that queries four different sensor network nodes and shows reported values in 1/16 degree C."
+      },
+      "date": 1590882840366
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4925e317c26752fb"
+      },
+      "id": "4925e317c26752fb",
+      "type": "add",
+      "after": "9b211311feec456d",
+      "date": 1590882847102
+    },
+    {
+      "type": "edit",
+      "id": "4925e317c26752fb",
+      "item": {
+        "type": "assets",
+        "id": "4925e317c26752fb",
+        "text": "pages/client-server-doit-framework"
+      },
+      "date": 1590882866744
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "492cc1c027f7ab82"
+      },
+      "id": "492cc1c027f7ab82",
+      "type": "add",
+      "after": "4925e317c26752fb",
+      "date": 1590882905931
+    },
+    {
+      "type": "edit",
+      "id": "492cc1c027f7ab82",
+      "item": {
+        "type": "html",
+        "id": "492cc1c027f7ab82",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/client-server-doit-framework/Screen%20Shot%202020-05-30%20at%204.51.28%20PM.png>"
+      },
+      "date": 1590882923178
+    },
+    {
+      "type": "edit",
+      "id": "492cc1c027f7ab82",
+      "item": {
+        "type": "html",
+        "id": "492cc1c027f7ab82",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/client-server-doit-framework/Screen%20Shot%202020-05-30%20at%204.51.28%20PM.jpg>"
+      },
+      "date": 1590883004871
+    },
+    {
+      "type": "edit",
+      "id": "9b211311feec456d",
+      "item": {
+        "type": "paragraph",
+        "id": "9b211311feec456d",
+        "text": "Here we assemble these parts into an application that queries four different sensor network nodes and shows reported values in 1/16 degree C. [http://ward.asia.wiki.org/assets/pages/client-server-doit-framework/Screen%20Shot%202020-05-30%20at%204.51.28%20PM.jpg enlarge]"
+      },
+      "date": 1590883030240
+    },
+    {
+      "id": "492cc1c027f7ab82",
+      "type": "move",
+      "order": [
+        "6adb6d8e8fda6d60",
+        "aebce472b54da4b2",
+        "0f60b6a27793ba35",
+        "c3c5d07a73b87b4c",
+        "a281a6dcf07ff076",
+        "f7b77c1510228e0b",
+        "6c1cb4dd5193fbaf",
+        "919844c907b0d110",
+        "a4a0c1f571bd715b",
+        "b6b16d89923eb2e9",
+        "e192724bb4bdb008",
+        "9b211311feec456d",
+        "492cc1c027f7ab82",
+        "4925e317c26752fb"
+      ],
+      "date": 1590883033267
+    },
+    {
+      "type": "edit",
+      "id": "b6b16d89923eb2e9",
+      "item": {
+        "type": "code",
+        "id": "b6b16d89923eb2e9",
+        "text": "import {serve} from \"https://deno.land/std@v0.39.0/http/server.ts\"\n\nconst port = 7070\nconst server = serve({port})\nfor await (const req of server) {\n  if(req.method == 'POST') {\n    req.respond({body: await doit(req)})\n  } else {\n    req.respond({body: html})\n  }\n}"
+      },
+      "date": 1590883133098
+    },
+    {
+      "type": "edit",
+      "id": "919844c907b0d110",
+      "item": {
+        "type": "code",
+        "id": "919844c907b0d110",
+        "text": "import {serve} from \"https://deno.land/std@v0.39.0/http/server.ts\"\n\nconst port = 7070\nconst server = serve({port})\nfor await (const req of server) {\n  if(req.method == 'POST') {\n    req.respond({body: await doit(req)})\n  } else {\n    req.respond({body: html})\n  }\n}"
+      },
+      "date": 1590883149028
+    },
+    {
+      "type": "edit",
+      "id": "b6b16d89923eb2e9",
+      "item": {
+        "type": "code",
+        "id": "b6b16d89923eb2e9",
+        "text": "async function doit (req) {\n  let buf = await Deno.readAll(req.body)\n  let txt = new TextDecoder(\"utf-8\").decode(buf)\n  let urls = JSON.parse(txt)\n  let files = await Promise.all(urls.map(\n    url => fetch(url).then(\n      res => res.text())))\n  return `<table>\n    <tr>${files.map(\n      file =>`<td><pre>${file}`)\n        .join('')}\n    </table>`\n}"
+      },
+      "date": 1590883174959
+    },
+    {
+      "type": "edit",
+      "id": "a281a6dcf07ff076",
+      "item": {
+        "type": "code",
+        "id": "a281a6dcf07ff076",
+        "text": "<pre id=\"readz\" contenteditable=\"true\"></pre>\n<div> <button id=\"evalz\">Doit</button>\n<div id=\"printz\"></div>\n<script>\n\n  // Save input between reloads\n  let path = location.pathname\n  if (localStorage[path])\n    readz.innerText = localStorage[path]\n  readz.addEventListener('focusout', e => {\n    localStorage[path] = readz.innerText\n  })\n\n  // Read, eval and print\n  evalz.onclick = e => {\n    printz.innerHTML = '<i>running</i>'\n    let headers = {\n      'Accept': 'text/html',\n      'Content-Type': 'application/json'\n    }\n    let body = readz.innerText\n    fetch(path,{method:'POST',headers,body})\n      .then(res=>res.text())\n      .then(txt=>{printz.innerHTML = txt})\n  }\n\n</script>"
+      },
+      "date": 1590883238340
+    },
+    {
+      "type": "edit",
+      "id": "492cc1c027f7ab82",
+      "item": {
+        "type": "html",
+        "id": "492cc1c027f7ab82",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/client-server-doit-framework/example.jpg>"
+      },
+      "date": 1590883327336
+    },
+    {
+      "type": "edit",
+      "id": "9b211311feec456d",
+      "item": {
+        "type": "paragraph",
+        "id": "9b211311feec456d",
+        "text": "Here we assemble these parts into an application that queries four different sensor network nodes and shows reported values in 1/16 degree C. [http://ward.asia.wiki.org/assets/pages/client-server-doit-framework/example.jpg enlarge]"
+      },
+      "date": 1590883343398
+    },
+    {
+      "type": "add",
+      "id": "c639583747078dfa",
+      "item": {
+        "type": "paragraph",
+        "id": "c639583747078dfa",
+        "text": "Here is a ready to run script file that includes a little extra styling shown above."
+      },
+      "after": "9b211311feec456d",
+      "date": 1590883423302
+    },
+    {
+      "id": "c639583747078dfa",
+      "type": "move",
+      "order": [
+        "6adb6d8e8fda6d60",
+        "aebce472b54da4b2",
+        "0f60b6a27793ba35",
+        "c3c5d07a73b87b4c",
+        "a281a6dcf07ff076",
+        "f7b77c1510228e0b",
+        "6c1cb4dd5193fbaf",
+        "919844c907b0d110",
+        "a4a0c1f571bd715b",
+        "b6b16d89923eb2e9",
+        "e192724bb4bdb008",
+        "9b211311feec456d",
+        "492cc1c027f7ab82",
+        "c639583747078dfa",
+        "4925e317c26752fb"
+      ],
+      "date": 1590883425566
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "023ac8fe2a6b9c99"
+      },
+      "id": "023ac8fe2a6b9c99",
+      "type": "add",
+      "after": "4925e317c26752fb",
+      "date": 1590883635227
+    },
+    {
+      "type": "edit",
+      "id": "023ac8fe2a6b9c99",
+      "item": {
+        "type": "code",
+        "id": "023ac8fe2a6b9c99",
+        "text": "[\n\"http://home.c2.com:8020/\",\n\"http://home.c2.com:8021/\",\n\"http://home.c2.com:8022/\",\n\"http://home.c2.com:8023/\"\n]"
+      },
+      "date": 1590883639286
+    },
+    {
+      "id": "023ac8fe2a6b9c99",
+      "type": "move",
+      "order": [
+        "6adb6d8e8fda6d60",
+        "aebce472b54da4b2",
+        "0f60b6a27793ba35",
+        "c3c5d07a73b87b4c",
+        "a281a6dcf07ff076",
+        "f7b77c1510228e0b",
+        "6c1cb4dd5193fbaf",
+        "919844c907b0d110",
+        "a4a0c1f571bd715b",
+        "b6b16d89923eb2e9",
+        "e192724bb4bdb008",
+        "9b211311feec456d",
+        "492cc1c027f7ab82",
+        "c639583747078dfa",
+        "023ac8fe2a6b9c99",
+        "4925e317c26752fb"
+      ],
+      "date": 1590883641622
+    },
+    {
+      "type": "edit",
+      "id": "c639583747078dfa",
+      "item": {
+        "type": "paragraph",
+        "id": "c639583747078dfa",
+        "text": "Here is some sample input and a ready to run script file that includes a little extra styling shown above."
+      },
+      "date": 1590883664705
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "130143565dd266a2"
+      },
+      "id": "130143565dd266a2",
+      "type": "add",
+      "after": "4925e317c26752fb",
+      "date": 1590884515595
+    },
+    {
+      "type": "edit",
+      "id": "130143565dd266a2",
+      "item": {
+        "type": "markdown",
+        "id": "130143565dd266a2",
+        "text": "# Plan"
+      },
+      "date": 1590884525192
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1a93b24bd2de1ad4"
+      },
+      "id": "1a93b24bd2de1ad4",
+      "type": "add",
+      "after": "130143565dd266a2",
+      "date": 1590884535056
+    },
+    {
+      "type": "edit",
+      "id": "1a93b24bd2de1ad4",
+      "item": {
+        "type": "paragraph",
+        "id": "1a93b24bd2de1ad4",
+        "text": "My plan when I started this page was to include the html into a client-side bootstrap built into the server. This option is no longer avalable. [https://www.html5rocks.com/en/tutorials/webcomponents/imports/ post]"
+      },
+      "date": 1590884708596
+    },
+    {
+      "type": "add",
+      "id": "f5a3e311dff1523d",
+      "item": {
+        "type": "paragraph",
+        "id": "f5a3e311dff1523d",
+        "text": "My new plan is to make a server-side deno module that is the server and the whole client-side html, css and script."
+      },
+      "after": "1a93b24bd2de1ad4",
+      "date": 1590884920854
+    },
+    {
+      "type": "edit",
+      "id": "f5a3e311dff1523d",
+      "item": {
+        "type": "paragraph",
+        "id": "f5a3e311dff1523d",
+        "text": "My new plan is to make a server-side deno module that is the server and the whole client-side html, css and script. That would be all but the server-side doit function as static content."
+      },
+      "date": 1590885210657
+    },
+    {
+      "type": "edit",
+      "id": "f5a3e311dff1523d",
+      "item": {
+        "type": "paragraph",
+        "id": "f5a3e311dff1523d",
+        "text": "My new plan is to make a server-side deno module that is the server and the whole client-side html, css and script. That would be all static except for the server-side doit function."
+      },
+      "date": 1590885229968
+    },
+    {
+      "type": "edit",
+      "id": "f5a3e311dff1523d",
+      "item": {
+        "type": "paragraph",
+        "id": "f5a3e311dff1523d",
+        "text": "My new plan is to make a server-side deno module that is the server and the whole client-side html, css and script. Thats all static except for the server-side doit function."
+      },
+      "date": 1590885246497
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "title": "Full Text Search",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "da17e81fdc008b39",
+      "text": "I've installed the new wiki version 0.21.0 on my home and work laptops and have begun the process of upgrading ubuntu, node and wiki on each of the digital ocean wiki farms I run. I want to let you know that it is fantastic. We have Joshua and Paul to thank for this, so, thank you Joshua and Paul.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "3fe9f9b237200a00",
+      "text": "You are probably wanting to try this out yourself. I suggest you start here:\n[http://ward.asia.wiki.org/ site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "e411bcdf8ed3c241",
+      "text": "This site has 475 pages of thoughts about wiki itself. Accumulated over the last four years, it has grown from a simple hierarchy to a sprawling confusion of ideas in various stages of development. The root division seemed simple enough:\n\n"
+    },
+    {
+      "type": "markdown",
+      "id": "203a332a556517da",
+      "text": "- __Dream Big__ but half-way could be interesting too.\n- __Top Maintenance Priorities__ for coders and admins.\n- __Work in Progress __or only slightly forgotten.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "00721ca6cd4d2f62",
+      "text": "But as work has advanced through various stages of development this hierarchy has become scrambled. Full text search to the rescue.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "97cd52d9b835d74e",
+      "text": "Go here to find anything you want to know about wiki's recent past and possible future. Make up topics that you think we might have considered. Did we? How good was our vision? Try \"search\", then try \"full text search\". I just did. \"search\" is mentioned often but \"full text search\" only once.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "61f465552c948a5c",
+      "text": "What is wonderful about our implementation is how it works with ad-hoc communities. The welcome page for my site mentions others that are part of the long term conversations among implementers. Merge in these sites to find more points of view."
+    },
+    {
+      "type": "pagefold",
+      "id": "230e72cf9b5f8020",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "1446938d4d7ab337",
+      "text": "Never mind what I said about \"full text search\" appearing only once. I just posted this thread on a page by that name and the search index updated immediately. Awesome."
+    },
+    {
+      "type": "paragraph",
+      "id": "e5601219c8888ba5",
+      "text": "As a test I have created a roster with every site that includes my name in this farm. "
+    },
+    {
+      "type": "code",
+      "id": "f6f1cd44505b2865",
+      "text": "find . -maxdepth 1 -exec bash -c  \\\n  \"echo -ne '{} '; ls '{}/pages' | wc -l\" \\; | \\\n  sort -k 2 -n | grep ward"
+    },
+    {
+      "type": "roster",
+      "id": "4c59123def276dad",
+      "text": "3d.mac.ward.asia.wiki.org\nbigone.ward.asia.wiki.org\nward.fed.wiki\nhurray.ward.asia.wiki.org\npie.ward.asia.wiki.org\nward.agency.pods.wiki.org\n3x.ward.asia.wiki.org\nall.ward.asia.wiki.org\nruediger.ward.asia.wiki.org\ndots.ward.asia.wiki.org\nmac.ward.asia.wiki.org\nmirela.ward.asia.wiki.org\nward.tries.fed.wiki\nhealth.ward.asia.wiki.org\nscrum.ward.asia.wiki.org\nward.mitte.tries.fed.wiki\nchat.ward.asia.wiki.org\nxp.ward.asia.wiki.org\nimrad.ward.asia.wiki.org\nward.dork.wiki.org\ncreate.ward.fed.asia.wiki.org\nhist.ward.asia.wiki.org\nbordeaux.ward.asia.wiki.org\nnew.ward.asia.wiki.org\nnorms.ward.asia.wiki.org\nearth.ward.asia.wiki.org\nward.walt.tries.fed.wiki\nft8.ward.asia.wiki.org\nradio.ward.asia.wiki.org\nlife.ward.asia.wiki.org\nhome.ward.asia.wiki.org\nh2.ward.asia.wiki.org\npath.ward.asia.wiki.org\nward.asia.wiki.org\nforage.ward.fed.wiki.org"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Full Text Search",
+        "story": []
+      },
+      "date": 1580830748430
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "da17e81fdc008b39"
+      },
+      "id": "da17e81fdc008b39",
+      "type": "add",
+      "date": 1580830751341
+    },
+    {
+      "type": "edit",
+      "id": "da17e81fdc008b39",
+      "item": {
+        "type": "paragraph",
+        "id": "da17e81fdc008b39",
+        "text": "I've installed the new wiki version 0.21.0 on my home and work laptops and have begun the process of upgrading ubuntu, node and wiki on each of the digital ocean wiki farms I run. I want to let you know that it is fantastic. We have Joshua and Paul to thank for this, so, thank you Joshua and Paul.\n"
+      },
+      "date": 1580830761068
+    },
+    {
+      "type": "add",
+      "id": "3fe9f9b237200a00",
+      "item": {
+        "type": "paragraph",
+        "id": "3fe9f9b237200a00",
+        "text": "You are probably wanting to try this out yourself. I suggest you start here:\n[http://ward.asia.wiki.org/ site]"
+      },
+      "after": "da17e81fdc008b39",
+      "date": 1580830781126
+    },
+    {
+      "type": "add",
+      "id": "e411bcdf8ed3c241",
+      "item": {
+        "type": "paragraph",
+        "id": "e411bcdf8ed3c241",
+        "text": "This site has 475 pages of thoughts about wiki itself. Accumulated over the last four years, it has grown from a simple hierarchy to a sprawling confusion of ideas in various stages of development. The root division seemed simple enough:\n\n"
+      },
+      "after": "3fe9f9b237200a00",
+      "date": 1580830785862
+    },
+    {
+      "type": "add",
+      "id": "203a332a556517da",
+      "item": {
+        "type": "paragraph",
+        "id": "203a332a556517da",
+        "text": "Dream Big but half-way could be interesting too.\nTop Maintenance Priorities for coders and admins.\nWork in Progress or only slightly forgotten.\n"
+      },
+      "after": "e411bcdf8ed3c241",
+      "date": 1580830811609
+    },
+    {
+      "type": "add",
+      "id": "00721ca6cd4d2f62",
+      "item": {
+        "type": "paragraph",
+        "id": "00721ca6cd4d2f62",
+        "text": "But as work has advanced through various stages of development this hierarchy has become scrambled. Full text search to the rescue.\n"
+      },
+      "after": "203a332a556517da",
+      "date": 1580830814831
+    },
+    {
+      "type": "add",
+      "id": "97cd52d9b835d74e",
+      "item": {
+        "type": "paragraph",
+        "id": "97cd52d9b835d74e",
+        "text": "Go here to find anything you want to know about wiki's recent past and possible future. Make up topics that you think we might have considered. Did we? How good was our vision? Try \"search\", then try \"full text search\". I just did. \"search\" is mentioned often but \"full text search\" only once.\n"
+      },
+      "after": "00721ca6cd4d2f62",
+      "date": 1580830822266
+    },
+    {
+      "type": "add",
+      "id": "61f465552c948a5c",
+      "item": {
+        "type": "paragraph",
+        "id": "61f465552c948a5c",
+        "text": "What is wonderful about our implementation is how it works with ad-hoc communities. The welcome page for my site mentions others that are part of the long term conversations among implementers. Merge in these sites to find more points of view."
+      },
+      "after": "97cd52d9b835d74e",
+      "date": 1580830827656
+    },
+    {
+      "type": "edit",
+      "id": "203a332a556517da",
+      "item": {
+        "type": "markdown",
+        "id": "203a332a556517da",
+        "text": "- Dream Big but half-way could be interesting too.\n- Top Maintenance Priorities for coders and admins.\n- Work in Progress or only slightly forgotten.\n"
+      },
+      "date": 1580830843797
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "230e72cf9b5f8020"
+      },
+      "id": "230e72cf9b5f8020",
+      "type": "add",
+      "after": "61f465552c948a5c",
+      "date": 1580831061508
+    },
+    {
+      "type": "fork",
+      "date": 1580831130159
+    },
+    {
+      "type": "edit",
+      "id": "230e72cf9b5f8020",
+      "item": {
+        "type": "pagefold",
+        "id": "230e72cf9b5f8020",
+        "text": "."
+      },
+      "date": 1580831136133
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1446938d4d7ab337"
+      },
+      "id": "1446938d4d7ab337",
+      "type": "add",
+      "after": "230e72cf9b5f8020",
+      "date": 1580831138025
+    },
+    {
+      "type": "edit",
+      "id": "1446938d4d7ab337",
+      "item": {
+        "type": "paragraph",
+        "id": "1446938d4d7ab337",
+        "text": "Never mind what I said about \"full text search\" appearing only once. I just posted this thread on a page by that name and the search index updated immediately. Awesome."
+      },
+      "date": 1580831142737
+    },
+    {
+      "type": "edit",
+      "id": "203a332a556517da",
+      "item": {
+        "type": "markdown",
+        "id": "203a332a556517da",
+        "text": "- __Dream Big__ but half-way could be interesting too.\n- __Top Maintenance Priorities__ for coders and admins.\n- __Work in Progress __or only slightly forgotten.\n"
+      },
+      "date": 1580831324263
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4c59123def276dad"
+      },
+      "id": "4c59123def276dad",
+      "type": "add",
+      "after": "1446938d4d7ab337",
+      "date": 1580835106857
+    },
+    {
+      "type": "edit",
+      "id": "4c59123def276dad",
+      "item": {
+        "type": "roster",
+        "id": "4c59123def276dad",
+        "text": "3d.mac.ward.asia.wiki.org\nbigone.ward.asia.wiki.org\nward.fed.wiki\nhurray.ward.asia.wiki.org\npie.ward.asia.wiki.org\nward.agency.pods.wiki.org\n3x.ward.asia.wiki.org\nall.ward.asia.wiki.org\nruediger.ward.asia.wiki.org\ndots.ward.asia.wiki.org\nmac.ward.asia.wiki.org\nmirela.ward.asia.wiki.org\nward.tries.fed.wiki\nhealth.ward.asia.wiki.org\nscrum.ward.asia.wiki.org\nward.mitte.tries.fed.wiki\nchat.ward.asia.wiki.org\nxp.ward.asia.wiki.org\nimrad.ward.asia.wiki.org\nward.dork.wiki.org\ncreate.ward.fed.asia.wiki.org\nhist.ward.asia.wiki.org\nbordeaux.ward.asia.wiki.org\nnew.ward.asia.wiki.org\nnorms.ward.asia.wiki.org\nearth.ward.asia.wiki.org\nward.walt.tries.fed.wiki\nft8.ward.asia.wiki.org\nradio.ward.asia.wiki.org\nlife.ward.asia.wiki.org\nhome.ward.asia.wiki.org\nh2.ward.asia.wiki.org\npath.ward.asia.wiki.org\nward.asia.wiki.org\nforage.ward.fed.wiki.org"
+      },
+      "date": 1580835125926
+    },
+    {
+      "type": "add",
+      "id": "e5601219c8888ba5",
+      "item": {
+        "type": "paragraph",
+        "id": "e5601219c8888ba5",
+        "text": "As a test I have created a roster with every site that includes my name in this farm. "
+      },
+      "after": "1446938d4d7ab337",
+      "date": 1580835174898
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f6f1cd44505b2865"
+      },
+      "id": "f6f1cd44505b2865",
+      "type": "add",
+      "after": "4c59123def276dad",
+      "date": 1580854135640
+    },
+    {
+      "type": "edit",
+      "id": "f6f1cd44505b2865",
+      "item": {
+        "type": "code",
+        "id": "f6f1cd44505b2865",
+        "text": "find . -maxdepth 1 -exec bash -c \"echo -ne '{} '; ls '{}/pages' | wc -l\" \\; | sort -k 2 -n | grep ward"
+      },
+      "date": 1580854185013
+    },
+    {
+      "type": "edit",
+      "id": "f6f1cd44505b2865",
+      "item": {
+        "type": "code",
+        "id": "f6f1cd44505b2865",
+        "text": "find . -maxdepth 1 -exec bash -c  \\\n  \"echo -ne '{} '; ls '{}/pages' | wc -l\" \\; | \\\n  sort -k 2 -n | grep ward"
+      },
+      "date": 1580854259319
+    },
+    {
+      "id": "f6f1cd44505b2865",
+      "type": "move",
+      "order": [
+        "da17e81fdc008b39",
+        "3fe9f9b237200a00",
+        "e411bcdf8ed3c241",
+        "203a332a556517da",
+        "00721ca6cd4d2f62",
+        "97cd52d9b835d74e",
+        "61f465552c948a5c",
+        "230e72cf9b5f8020",
+        "1446938d4d7ab337",
+        "e5601219c8888ba5",
+        "f6f1cd44505b2865",
+        "4c59123def276dad"
+      ],
+      "date": 1580854283071
+    }
+  ]
+}

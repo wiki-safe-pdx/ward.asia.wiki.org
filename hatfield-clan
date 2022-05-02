@@ -1,0 +1,558 @@
+{
+  "title": "Hatfield Clan",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "a4ef633bc358fbbe",
+      "text": "The Hatfields hailed from the West Virginia side of the Tug Fork of the Big Sandy River. [https://en.wikipedia.org/wiki/Hatfield%E2%80%93McCoy_feud#Hatfield_genealogy wikipedia] [https://www.geni.com/people/Ephraim-Hatfield/6000000006903592410 geni]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1fa1f65a50d89a8f",
+      "text": "We represent a clan with pages for individuals and pages for their union, typically marriage. We add relevant subgraphs to each page and use additional tools to merge these into larger diagrams."
+    },
+    {
+      "text": "<img width=420 src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjkzcHQiIGhlaWdodD0iMzM5cHQiCiB2aWV3Qm94PSIw\nLjAwIDAuMDAgNjkzLjI5IDMzOS40NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMu\nb3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcv\nMTk5OS94bGluayI+CjxnIGlkPSJncmFwaDAiIGNsYXNzPSJncmFwaCIgdHJh\nbnNmb3JtPSJzY2FsZSgxIDEpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoNCAzMzUu\nNDQ2KSI+Cjx0aXRsZT4lMzwvdGl0bGU+Cjxwb2x5Z29uIGZpbGw9IndoaXRl\nIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iLTQsNCAtNCwtMzM1LjQ0NiA2ODku\nMjkyLC0zMzUuNDQ2IDY4OS4yOTIsNCAtNCw0Ii8+CjwhLS0gRXBocmFpbSAK\nKEVhZiBvZiBBbGwpCiBIYXRmaWVsZCAtLT4KPGcgaWQ9Im5vZGUxIiBjbGFz\ncz0ibm9kZSI+PHRpdGxlPkVwaHJhaW0gCihFYWYgb2YgQWxsKQogSGF0Zmll\nbGQ8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0i\nYmxhY2siIGN4PSIyMDUuNDk0IiBjeT0iLTI5Ni4wOSIgcng9IjU2Ljg5ODEi\nIHJ5PSIzNS4yMTEzIi8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9\nIjIwNS40OTQiIHk9Ii0zMDUuODkiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJp\nZiIgZm9udC1zaXplPSIxNC4wMCI+RXBocmFpbSA8L3RleHQ+Cjx0ZXh0IHRl\neHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwNS40OTQiIHk9Ii0yOTEuODkiIGZv\nbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+KEVh\nZiBvZiBBbGwpPC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4\nPSIyMDUuNDk0IiB5PSItMjc3Ljg5IiBmb250LWZhbWlseT0iVGltZXMsc2Vy\naWYiIGZvbnQtc2l6ZT0iMTQuMDAiPiBIYXRmaWVsZDwvdGV4dD4KPC9nPgo8\nIS0tIFVuaW9uIG9mCkVwaHJhaW0gJmFtcDsgTWFyeSAtLT4KPGcgaWQ9Im5v\nZGUyIiBjbGFzcz0ibm9kZSI+PHRpdGxlPlVuaW9uIG9mCkVwaHJhaW0gJmFt\ncDsgTWFyeTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9InBhbGVHcmVlbiIgc3Ry\nb2tlPSJibGFjayIgY3g9Ijc5LjQ5MzYiIGN5PSItMTk5LjI3OSIgcng9Ijc5\nLjQ4NzIiIHJ5PSIyNS40MTE4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRk\nbGUiIHg9Ijc5LjQ5MzYiIHk9Ii0yMDIuMDc5IiBmb250LWZhbWlseT0iVGlt\nZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlVuaW9uIG9mPC90ZXh0Pgo8\ndGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI3OS40OTM2IiB5PSItMTg4\nLjA3OSIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0\nLjAwIj5FcGhyYWltICZhbXA7IE1hcnk8L3RleHQ+CjwvZz4KPCEtLSBFcGhy\nYWltIAooRWFmIG9mIEFsbCkKIEhhdGZpZWxkJiM0NTsmZ3Q7VW5pb24gb2YK\nRXBocmFpbSAmYW1wOyBNYXJ5IC0tPgo8ZyBpZD0iZWRnZTEiIGNsYXNzPSJl\nZGdlIj48dGl0bGU+RXBocmFpbSAKKEVhZiBvZiBBbGwpCiBIYXRmaWVsZCYj\nNDU7Jmd0O1VuaW9uIG9mCkVwaHJhaW0gJmFtcDsgTWFyeTwvdGl0bGU+Cjxw\nYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik0xNjkuNzI0LC0y\nNjguMTc1QzE1My42MTUsLTI1Ni4wNTQgMTM0LjU2NiwtMjQxLjcxOSAxMTgu\nMTMxLC0yMjkuMzUyIi8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9\nImJsYWNrIiBwb2ludHM9IjExOS44OTksLTIyNi4zMDMgMTA5LjgwNCwtMjIz\nLjA4NyAxMTUuNjksLTIzMS44OTYgMTE5Ljg5OSwtMjI2LjMwMyIvPgo8L2c+\nCjwhLS0gVW5pb24gb2YKRXBocmFpbSAmYW1wOyBBbm5hIC0tPgo8ZyBpZD0i\nbm9kZTMiIGNsYXNzPSJub2RlIj48dGl0bGU+VW5pb24gb2YKRXBocmFpbSAm\nYW1wOyBBbm5hPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0icGFsZUdyZWVuIiBz\ndHJva2U9ImJsYWNrIiBjeD0iMzQ2LjQ5NCIgY3k9Ii0xOTkuMjc5IiByeD0i\nNzguOTA0NCIgcnk9IjI1LjQxMTgiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1p\nZGRsZSIgeD0iMzQ2LjQ5NCIgeT0iLTIwMi4wNzkiIGZvbnQtZmFtaWx5PSJU\naW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VW5pb24gb2Y8L3RleHQ+\nCjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjM0Ni40OTQiIHk9Ii0x\nODguMDc5IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0i\nMTQuMDAiPkVwaHJhaW0gJmFtcDsgQW5uYTwvdGV4dD4KPC9nPgo8IS0tIEVw\naHJhaW0gCihFYWYgb2YgQWxsKQogSGF0ZmllbGQmIzQ1OyZndDtVbmlvbiBv\nZgpFcGhyYWltICZhbXA7IEFubmEgLS0+CjxnIGlkPSJlZGdlMiIgY2xhc3M9\nImVkZ2UiPjx0aXRsZT5FcGhyYWltIAooRWFmIG9mIEFsbCkKIEhhdGZpZWxk\nJiM0NTsmZ3Q7VW5pb24gb2YKRXBocmFpbSAmYW1wOyBBbm5hPC90aXRsZT4K\nPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTI0My42NSwt\nMjY5LjQzM0MyNjIuNTQ4LC0yNTYuNzI2IDI4NS40MDUsLTI0MS4zNTcgMzA0\nLjc2NiwtMjI4LjMzOCIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tl\nPSJibGFjayIgcG9pbnRzPSIzMDYuNzYyLC0yMzEuMjEzIDMxMy4xMDgsLTIy\nMi43MjggMzAyLjg1NiwtMjI1LjQwNCAzMDYuNzYyLC0yMzEuMjEzIi8+Cjwv\nZz4KPCEtLSBWYWxlbnRpbmUKSGF0ZmllbGQgLS0+CjxnIGlkPSJub2RlNCIg\nY2xhc3M9Im5vZGUiPjx0aXRsZT5WYWxlbnRpbmUKSGF0ZmllbGQ8L3RpdGxl\nPgo8ZWxsaXBzZSBmaWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0iYmxhY2siIGN4\nPSI3OS40OTM2IiBjeT0iLTExMi4zNjgiIHJ4PSI0OC44OTY1IiByeT0iMjUu\nNDExOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI3OS40OTM2\nIiB5PSItMTE1LjE2OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250\nLXNpemU9IjE0LjAwIj5WYWxlbnRpbmU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5j\naG9yPSJtaWRkbGUiIHg9Ijc5LjQ5MzYiIHk9Ii0xMDEuMTY4IiBmb250LWZh\nbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPkhhdGZpZWxk\nPC90ZXh0Pgo8L2c+CjwhLS0gVW5pb24gb2YKRXBocmFpbSAmYW1wOyBNYXJ5\nJiM0NTsmZ3Q7VmFsZW50aW5lCkhhdGZpZWxkIC0tPgo8ZyBpZD0iZWRnZTMi\nIGNsYXNzPSJlZGdlIj48dGl0bGU+VW5pb24gb2YKRXBocmFpbSAmYW1wOyBN\nYXJ5JiM0NTsmZ3Q7VmFsZW50aW5lCkhhdGZpZWxkPC90aXRsZT4KPHBhdGgg\nZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTc5LjQ5MzYsLTE3My43\nMTlDNzkuNDkzNiwtMTY1LjcxIDc5LjQ5MzYsLTE1Ni42NjEgNzkuNDkzNiwt\nMTQ4LjA1NCIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tlPSJibGFj\nayIgcG9pbnRzPSI4Mi45OTM3LC0xNDcuODcyIDc5LjQ5MzYsLTEzNy44NzIg\nNzUuOTkzNywtMTQ3Ljg3MiA4Mi45OTM3LC0xNDcuODcyIi8+CjwvZz4KPCEt\nLSBHZW9yZ2UKSGF0ZmllbGQgLS0+CjxnIGlkPSJub2RlNSIgY2xhc3M9Im5v\nZGUiPjx0aXRsZT5HZW9yZ2UKSGF0ZmllbGQ8L3RpdGxlPgo8ZWxsaXBzZSBm\naWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0iYmxhY2siIGN4PSIzNDIuNDk0IiBj\neT0iLTExMi4zNjgiIHJ4PSI0My40MTQ0IiByeT0iMjUuNDExOCIvPgo8dGV4\ndCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIzNDIuNDk0IiB5PSItMTE1LjE2\nOCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAw\nIj5HZW9yZ2U8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9\nIjM0Mi40OTQiIHk9Ii0xMDEuMTY4IiBmb250LWZhbWlseT0iVGltZXMsc2Vy\naWYiIGZvbnQtc2l6ZT0iMTQuMDAiPkhhdGZpZWxkPC90ZXh0Pgo8L2c+Cjwh\nLS0gVW5pb24gb2YKRXBocmFpbSAmYW1wOyBBbm5hJiM0NTsmZ3Q7R2Vvcmdl\nCkhhdGZpZWxkIC0tPgo8ZyBpZD0iZWRnZTQiIGNsYXNzPSJlZGdlIj48dGl0\nbGU+VW5pb24gb2YKRXBocmFpbSAmYW1wOyBBbm5hJiM0NTsmZ3Q7R2Vvcmdl\nCkhhdGZpZWxkPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJi\nbGFjayIgZD0iTTM0NS4zMzcsLTE3My43MTlDMzQ0Ljk1OSwtMTY1LjcxIDM0\nNC41MzMsLTE1Ni42NjEgMzQ0LjEyOCwtMTQ4LjA1NCIvPgo8cG9seWdvbiBm\naWxsPSJibGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSIzNDcuNjE1LC0x\nNDcuNjk3IDM0My42NDgsLTEzNy44NzIgMzQwLjYyMiwtMTQ4LjAyNiAzNDcu\nNjE1LC0xNDcuNjk3Ii8+CjwvZz4KPCEtLSBKZXJlbWlhaApIYXRmaWVsZCAt\nLT4KPGcgaWQ9Im5vZGU2IiBjbGFzcz0ibm9kZSI+PHRpdGxlPkplcmVtaWFo\nCkhhdGZpZWxkPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0icGFsZUdyZWVuIiBz\ndHJva2U9ImJsYWNrIiBjeD0iNTQyLjQ5NCIgY3k9Ii0xMTIuMzY4IiByeD0i\nNDcuMDg5NCIgcnk9IjI1LjQxMTgiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1p\nZGRsZSIgeD0iNTQyLjQ5NCIgeT0iLTExNS4xNjgiIGZvbnQtZmFtaWx5PSJU\naW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+SmVyZW1pYWg8L3RleHQ+\nCjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjU0Mi40OTQiIHk9Ii0x\nMDEuMTY4IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0i\nMTQuMDAiPkhhdGZpZWxkPC90ZXh0Pgo8L2c+CjwhLS0gVW5pb24gb2YKRXBo\ncmFpbSAmYW1wOyBBbm5hJiM0NTsmZ3Q7SmVyZW1pYWgKSGF0ZmllbGQgLS0+\nCjxnIGlkPSJlZGdlNSIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5VbmlvbiBvZgpF\ncGhyYWltICZhbXA7IEFubmEmIzQ1OyZndDtKZXJlbWlhaApIYXRmaWVsZDwv\ndGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik0z\nOTIuNTQ0LC0xNzguNDVDNDE5Ljg2MywtMTY2LjY3MiA0NTUuMTY3LC0xNTEu\nNDI3IDQ4Ni40OTQsLTEzNy44MjMgNDkwLjA1OSwtMTM2LjI3NSA0OTMuNzUx\nLC0xMzQuNjY5IDQ5Ny40NiwtMTMzLjA1MyIvPgo8cG9seWdvbiBmaWxsPSJi\nbGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSI0OTguODg2LC0xMzYuMjUg\nNTA2LjY1NCwtMTI5LjA0NSA0OTYuMDg5LC0xMjkuODMzIDQ5OC44ODYsLTEz\nNi4yNSIvPgo8L2c+CjwhLS0gVW5pb24gb2YKVmFsZW50aW5lICZhbXA7IE1h\ncnRoYSAtLT4KPGcgaWQ9Im5vZGUxMyIgY2xhc3M9Im5vZGUiPjx0aXRsZT5V\nbmlvbiBvZgpWYWxlbnRpbmUgJmFtcDsgTWFydGhhPC90aXRsZT4KPGVsbGlw\nc2UgZmlsbD0icGFsZUdyZWVuIiBzdHJva2U9ImJsYWNrIiBjeD0iMTUxLjQ5\nNCIgY3k9Ii0yNS40NTU4IiByeD0iODkuODY5IiByeT0iMjUuNDExOCIvPgo8\ndGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIxNTEuNDk0IiB5PSItMjgu\nMjU1OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0\nLjAwIj5VbmlvbiBvZjwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRs\nZSIgeD0iMTUxLjQ5NCIgeT0iLTE0LjI1NTgiIGZvbnQtZmFtaWx5PSJUaW1l\ncyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VmFsZW50aW5lICZhbXA7IE1h\ncnRoYTwvdGV4dD4KPC9nPgo8IS0tIFZhbGVudGluZQpIYXRmaWVsZCYjNDU7\nJmd0O1VuaW9uIG9mClZhbGVudGluZSAmYW1wOyBNYXJ0aGEgLS0+CjxnIGlk\nPSJlZGdlMTIiIGNsYXNzPSJlZGdlIj48dGl0bGU+VmFsZW50aW5lCkhhdGZp\nZWxkJiM0NTsmZ3Q7VW5pb24gb2YKVmFsZW50aW5lICZhbXA7IE1hcnRoYTwv\ndGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik05\nOC43ODgzLC04OC42MTI4QzEwNi42NzcsLTc5LjMwOTggMTE1Ljk0LC02OC4z\nODUyIDEyNC40ODIsLTU4LjMxMTMiLz4KPHBvbHlnb24gZmlsbD0iYmxhY2si\nIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iMTI3LjM0LC02MC4zNTI2IDEzMS4x\nMzgsLTUwLjQ2MTggMTIyLjAwMSwtNTUuODI1NCAxMjcuMzQsLTYwLjM1MjYi\nLz4KPC9nPgo8IS0tIFVuaW9uIG9mCkdlb3JnZSAmYW1wOyBOYW5jeSAtLT4K\nPGcgaWQ9Im5vZGU4IiBjbGFzcz0ibm9kZSI+PHRpdGxlPlVuaW9uIG9mCkdl\nb3JnZSAmYW1wOyBOYW5jeTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9InBhbGVH\ncmVlbiIgc3Ryb2tlPSJibGFjayIgY3g9IjM3Ni40OTQiIGN5PSItMjUuNDU1\nOCIgcng9Ijc4LjUxODQiIHJ5PSIyNS40MTE4Ii8+Cjx0ZXh0IHRleHQtYW5j\naG9yPSJtaWRkbGUiIHg9IjM3Ni40OTQiIHk9Ii0yOC4yNTU4IiBmb250LWZh\nbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlVuaW9uIG9m\nPC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIzNzYuNDk0\nIiB5PSItMTQuMjU1OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250\nLXNpemU9IjE0LjAwIj5HZW9yZ2UgJmFtcDsgTmFuY3k8L3RleHQ+CjwvZz4K\nPCEtLSBHZW9yZ2UKSGF0ZmllbGQmIzQ1OyZndDtVbmlvbiBvZgpHZW9yZ2Ug\nJmFtcDsgTmFuY3kgLS0+CjxnIGlkPSJlZGdlNyIgY2xhc3M9ImVkZ2UiPjx0\naXRsZT5HZW9yZ2UKSGF0ZmllbGQmIzQ1OyZndDtVbmlvbiBvZgpHZW9yZ2Ug\nJmFtcDsgTmFuY3k8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9\nImJsYWNrIiBkPSJNMzUyLjE0NiwtODcuMjYyNEMzNTUuNDkxLC03OC45MDg4\nIDM1OS4zMDUsLTY5LjM4MTYgMzYyLjkwNywtNjAuMzg2NyIvPgo8cG9seWdv\nbiBmaWxsPSJibGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSIzNjYuMjMx\nLC02MS41MDA2IDM2Ni42OTksLTUwLjkxNjEgMzU5LjczMywtNTguODk4NSAz\nNjYuMjMxLC02MS41MDA2Ii8+CjwvZz4KPCEtLSBVbmlvbiBvZgpKZXJlbWlh\naCAmYW1wOyBSYWNoZWwgLS0+CjxnIGlkPSJub2RlOSIgY2xhc3M9Im5vZGUi\nPjx0aXRsZT5VbmlvbiBvZgpKZXJlbWlhaCAmYW1wOyBSYWNoZWw8L3RpdGxl\nPgo8ZWxsaXBzZSBmaWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0iYmxhY2siIGN4\nPSI1OTQuNDk0IiBjeT0iLTI1LjQ1NTgiIHJ4PSI4Ny4zNTg4IiByeT0iMjUu\nNDExOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1OTQuNDk0\nIiB5PSItMjguMjU1OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250\nLXNpemU9IjE0LjAwIj5VbmlvbiBvZjwvdGV4dD4KPHRleHQgdGV4dC1hbmNo\nb3I9Im1pZGRsZSIgeD0iNTk0LjQ5NCIgeT0iLTE0LjI1NTgiIGZvbnQtZmFt\naWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+SmVyZW1pYWgg\nJmFtcDsgUmFjaGVsPC90ZXh0Pgo8L2c+CjwhLS0gSmVyZW1pYWgKSGF0Zmll\nbGQmIzQ1OyZndDtVbmlvbiBvZgpKZXJlbWlhaCAmYW1wOyBSYWNoZWwgLS0+\nCjxnIGlkPSJlZGdlOCIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5KZXJlbWlhaApI\nYXRmaWVsZCYjNDU7Jmd0O1VuaW9uIG9mCkplcmVtaWFoICZhbXA7IFJhY2hl\nbDwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9\nIk01NTYuOTc4LC04Ny43MTQ5QzU2Mi4zNTMsLTc4LjkzODcgNTY4LjU1LC02\nOC44MTkzIDU3NC4zNCwtNTkuMzY1NyIvPgo8cG9seWdvbiBmaWxsPSJibGFj\nayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSI1NzcuNDg3LC02MC45Mjc1IDU3\nOS43MjUsLTUwLjU3MTYgNTcxLjUxOCwtNTcuMjcxNyA1NzcuNDg3LC02MC45\nMjc1Ii8+CjwvZz4KPCEtLSBBbm5hIE0uCk11c2ljayBCdW5keSAtLT4KPGcg\naWQ9Im5vZGU3IiBjbGFzcz0ibm9kZSI+PHRpdGxlPkFubmEgTS4KTXVzaWNr\nIEJ1bmR5PC90aXRsZT4KPGVsbGlwc2UgZmlsbD0icGFsZUdyZWVuIiBzdHJv\na2U9ImJsYWNrIiBjeD0iMzUwLjQ5NCIgY3k9Ii0yOTYuMDkiIHJ4PSI2OS43\nNzgxIiByeT0iMjUuNDExOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxl\nIiB4PSIzNTAuNDk0IiB5PSItMjk4Ljg5IiBmb250LWZhbWlseT0iVGltZXMs\nc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPkFubmEgTS48L3RleHQ+Cjx0ZXh0\nIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjM1MC40OTQiIHk9Ii0yODQuODki\nIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+\nTXVzaWNrIEJ1bmR5PC90ZXh0Pgo8L2c+CjwhLS0gQW5uYSBNLgpNdXNpY2sg\nQnVuZHkmIzQ1OyZndDtVbmlvbiBvZgpFcGhyYWltICZhbXA7IEFubmEgLS0+\nCjxnIGlkPSJlZGdlNiIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5Bbm5hIE0uCk11\nc2ljayBCdW5keSYjNDU7Jmd0O1VuaW9uIG9mCkVwaHJhaW0gJmFtcDsgQW5u\nYTwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9\nIk0zNDkuNDQzLC0yNzAuMThDMzQ4Ljk5MiwtMjU5LjUxIDM0OC40NTksLTI0\nNi44NjIgMzQ3Ljk3LC0yMzUuMjc3Ii8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNr\nIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjM1MS40NTYsLTIzNC44NjcgMzQ3\nLjUzOCwtMjI1LjAyMyAzNDQuNDYyLC0yMzUuMTYyIDM1MS40NTYsLTIzNC44\nNjciLz4KPC9nPgo8IS0tIE5hbmN5CldoaXR0IC0tPgo8ZyBpZD0ibm9kZTEw\nIiBjbGFzcz0ibm9kZSI+PHRpdGxlPk5hbmN5CldoaXR0PC90aXRsZT4KPGVs\nbGlwc2UgZmlsbD0icGFsZUdyZWVuIiBzdHJva2U9ImJsYWNrIiBjeD0iNDQw\nLjQ5NCIgY3k9Ii0xMTIuMzY4IiByeD0iMzcuMzAwNyIgcnk9IjI1LjQxMTgi\nLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDQwLjQ5NCIgeT0i\nLTExNS4xNjgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXpl\nPSIxNC4wMCI+TmFuY3k8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRk\nbGUiIHg9IjQ0MC40OTQiIHk9Ii0xMDEuMTY4IiBmb250LWZhbWlseT0iVGlt\nZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPldoaXR0PC90ZXh0Pgo8L2c+\nCjwhLS0gTmFuY3kKV2hpdHQmIzQ1OyZndDtVbmlvbiBvZgpHZW9yZ2UgJmFt\ncDsgTmFuY3kgLS0+CjxnIGlkPSJlZGdlOSIgY2xhc3M9ImVkZ2UiPjx0aXRs\nZT5OYW5jeQpXaGl0dCYjNDU7Jmd0O1VuaW9uIG9mCkdlb3JnZSAmYW1wOyBO\nYW5jeTwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2si\nIGQ9Ik00MjQuMDEyLC04OS41MDA3QzQxNi44ODEsLTgwLjA0IDQwOC4zOTQs\nLTY4Ljc3OTcgNDAwLjU3OSwtNTguNDExIi8+Cjxwb2x5Z29uIGZpbGw9ImJs\nYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjQwMy4zMDgsLTU2LjIxNyAz\nOTQuNDk0LC01MC4zMzggMzk3LjcxOCwtNjAuNDMwNCA0MDMuMzA4LC01Ni4y\nMTciLz4KPC9nPgo8IS0tIFJhY2hlbApWYW5jZSAtLT4KPGcgaWQ9Im5vZGUx\nMSIgY2xhc3M9Im5vZGUiPjx0aXRsZT5SYWNoZWwKVmFuY2U8L3RpdGxlPgo8\nZWxsaXBzZSBmaWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0iYmxhY2siIGN4PSI2\nNDYuNDk0IiBjeT0iLTExMi4zNjgiIHJ4PSIzOC41OTc3IiByeT0iMjUuNDEx\nOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI2NDYuNDk0IiB5\nPSItMTE1LjE2OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNp\nemU9IjE0LjAwIj5SYWNoZWw8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJt\naWRkbGUiIHg9IjY0Ni40OTQiIHk9Ii0xMDEuMTY4IiBmb250LWZhbWlseT0i\nVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlZhbmNlPC90ZXh0Pgo8\nL2c+CjwhLS0gUmFjaGVsClZhbmNlJiM0NTsmZ3Q7VW5pb24gb2YKSmVyZW1p\nYWggJmFtcDsgUmFjaGVsIC0tPgo8ZyBpZD0iZWRnZTEwIiBjbGFzcz0iZWRn\nZSI+PHRpdGxlPlJhY2hlbApWYW5jZSYjNDU7Jmd0O1VuaW9uIG9mCkplcmVt\naWFoICZhbXA7IFJhY2hlbDwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0\ncm9rZT0iYmxhY2siIGQ9Ik02MzIuMjg0LC04OC4xNjVDNjI2Ljg1MSwtNzku\nMjkyNyA2MjAuNTQ2LC02OC45OTcyIDYxNC42NjEsLTU5LjM4NzkiLz4KPHBv\nbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iNjE3\nLjYxOSwtNTcuNTE2NiA2MDkuNDEyLC01MC44MTY2IDYxMS42NSwtNjEuMTcy\nNCA2MTcuNjE5LC01Ny41MTY2Ii8+CjwvZz4KPCEtLSBNYXJ5IFNtaXRoCkdv\nZmYgLS0+CjxnIGlkPSJub2RlMTIiIGNsYXNzPSJub2RlIj48dGl0bGU+TWFy\neSBTbWl0aApHb2ZmPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0icGFsZUdyZWVu\nIiBzdHJva2U9ImJsYWNrIiBjeD0iNzEuNDkzNiIgY3k9Ii0yOTYuMDkiIHJ4\nPSI1OC43NzQ5IiByeT0iMjUuNDExOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0i\nbWlkZGxlIiB4PSI3MS40OTM2IiB5PSItMjk4Ljg5IiBmb250LWZhbWlseT0i\nVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPk1hcnkgU21pdGg8L3Rl\neHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcxLjQ5MzYiIHk9\nIi0yODQuODkiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXpl\nPSIxNC4wMCI+R29mZjwvdGV4dD4KPC9nPgo8IS0tIE1hcnkgU21pdGgKR29m\nZiYjNDU7Jmd0O1VuaW9uIG9mCkVwaHJhaW0gJmFtcDsgTWFyeSAtLT4KPGcg\naWQ9ImVkZ2UxMSIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5NYXJ5IFNtaXRoCkdv\nZmYmIzQ1OyZndDtVbmlvbiBvZgpFcGhyYWltICZhbXA7IE1hcnk8L3RpdGxl\nPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNNzMuNTk1\nNSwtMjcwLjE4Qzc0LjQ5NTgsLTI1OS41MSA3NS41NjMsLTI0Ni44NjIgNzYu\nNTQwNiwtMjM1LjI3NyIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tl\nPSJibGFjayIgcG9pbnRzPSI4MC4wNTI0LC0yMzUuMjgyIDc3LjQwNTcsLTIy\nNS4wMjMgNzMuMDc3MiwtMjM0LjY5NCA4MC4wNTI0LC0yMzUuMjgyIi8+Cjwv\nZz4KPCEtLSBNYXJ0aGEKV2VkZGluZ3RvbiAtLT4KPGcgaWQ9Im5vZGUxNCIg\nY2xhc3M9Im5vZGUiPjx0aXRsZT5NYXJ0aGEKV2VkZGluZ3RvbjwvdGl0bGU+\nCjxlbGxpcHNlIGZpbGw9InBhbGVHcmVlbiIgc3Ryb2tlPSJibGFjayIgY3g9\nIjIwNS40OTQiIGN5PSItMTEyLjM2OCIgcng9IjU5LjQyNTIiIHJ5PSIyNS40\nMTE4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwNS40OTQi\nIHk9Ii0xMTUuMTY4IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQt\nc2l6ZT0iMTQuMDAiPk1hcnRoYTwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9\nIm1pZGRsZSIgeD0iMjA1LjQ5NCIgeT0iLTEwMS4xNjgiIGZvbnQtZmFtaWx5\nPSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+V2VkZGluZ3Rvbjwv\ndGV4dD4KPC9nPgo8IS0tIE1hcnRoYQpXZWRkaW5ndG9uJiM0NTsmZ3Q7VW5p\nb24gb2YKVmFsZW50aW5lICZhbXA7IE1hcnRoYSAtLT4KPGcgaWQ9ImVkZ2Ux\nMyIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5NYXJ0aGEKV2VkZGluZ3RvbiYjNDU7\nJmd0O1VuaW9uIG9mClZhbGVudGluZSAmYW1wOyBNYXJ0aGE8L3RpdGxlPgo8\ncGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMTkwLjQ1Miwt\nODcuNzE0OUMxODQuODEzLC03OC44NDgzIDE3OC4zMDIsLTY4LjYxMDUgMTcy\nLjIzNywtNTkuMDczNSIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tl\nPSJibGFjayIgcG9pbnRzPSIxNzUuMTUsLTU3LjEzMTYgMTY2LjgzLC01MC41\nNzE2IDE2OS4yNDMsLTYwLjg4OCAxNzUuMTUsLTU3LjEzMTYiLz4KPC9nPgo8\nL2c+Cjwvc3ZnPgo=\n'>",
+      "type": "html",
+      "id": "489348a3f94c84e2"
+    },
+    {
+      "type": "paragraph",
+      "id": "f4e8429fab7eb6c2",
+      "text": "We start with an inventory of the pages we will make from templates and then connect by drag and drop from one page to another. We organize our inventory breadth first by generation."
+    },
+    {
+      "type": "markdown",
+      "id": "05e2fa92643677ca",
+      "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+      "text": "- [[Ephraim (Eaf of All) Hatfield]]\n- [[Mary Smith Goff]]\n- [[Union of Ephraim & Mary]]\n- [[Anna M. Musick Bundy]]\n- [[Union of Ephraim & Anna]]\n"
+    },
+    {
+      "type": "markdown",
+      "id": "b3f9ec9e530ec9fc",
+      "text": "- [[Valentine Hatfield]]\n- [[Martha Weddington]]\n- [[Union of Valentine & Martha]]\n- [[George Hatfield]]\n- [[Nancy Whitt]]\n- [[Union of George & Nancy]]\n- [[Jeremiah Hatfield]]\n- [[Rachel Vance]]\n- [[Union of Jeremiah & Rachel]]\n"
+    },
+    {
+      "type": "markdown",
+      "id": "77d2b38f58a10537",
+      "text": "- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Union of Anderson & Polly]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Union of Basil & Nancy]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Union of Elias & Jane]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Union of Floyd & Anne]]\n- [[Jenny Hunt]]\n- [[Union of Floyd & Jenny]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Union of Ephraim & Elizabeth]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n"
+    },
+    {
+      "type": "markdown",
+      "id": "7ec4a5274ffb0119",
+      "text": "- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Union of Valentine & Jane]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Union of Anderson & Levicy]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Union of Ellison & Sarah]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[Union of Elias & Elizabeth]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Jessie Lee Testerman]]\n- [[Union of William & Jessie]]\n"
+    },
+    {
+      "type": "markdown",
+      "id": "12968e0e77379880",
+      "text": "- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Union of Plyant & Victoria]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Union of Henry & South Carolina]]"
+    },
+    {
+      "type": "pagefold",
+      "id": "7b7d4e2d939ed3d1",
+      "text": "todo"
+    },
+    {
+      "type": "markdown",
+      "id": "afbf9a3b1799a2da",
+      "text": "- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Union of Johnson & Nancy]]\n- [[Rebeca Browning]]\n- [[Union of Johnson & Rebeca]]\n- [[Roxie Browning]]\n- [[Union of Johnson & Roxie]]\n- [[Nettie Toler]]\n- [[Union of Johnson & Nettie]]\n- [[Robert E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Union of Robert & Mariah]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Union of John & Nancy]]\n- [[Charlie Mullens]]\n- [[Union of Charlie & Nancy]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Union of Elliott & Margaret]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Union of Frank & Mary]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Union of John & Elizabeth]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Union of Elias & Peggy]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Union of Detroit & Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Union of Joseph & Grace]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Union of Rosanda & Marion]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Union of Willis & Lakie]]\n- [[Ida Chafin]]\n- [[Union of Willis & Ida]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Union of Tennyson & Lettie]]\n- [[Sadie Walters]]\n- [[Union of Tennyson & Sadie]]\n- [[Margaret]]\n- [[Union of Tennyson & Margaret]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Hatfield Clan",
+        "story": []
+      },
+      "date": 1461649236477
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a4ef633bc358fbbe"
+      },
+      "id": "a4ef633bc358fbbe",
+      "type": "add",
+      "date": 1461649238970
+    },
+    {
+      "type": "edit",
+      "id": "a4ef633bc358fbbe",
+      "item": {
+        "type": "paragraph",
+        "id": "a4ef633bc358fbbe",
+        "text": "The Hatfields hailed from the West Virginia site of the Tug Fork of the Big Sandy River."
+      },
+      "date": 1461649388105
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "05e2fa92643677ca",
+        "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+        "text": "- [[ES Hatfield]]\n- [[Mary Smith Goff]]\n- [[Anna M. Musick Bundy]]\n- [[Valentine Hatfield]]\n- [[Martha Weddington]]\n- [[George Hatfield]]\n- [[Nancy Whitt]]\n- [[Jeremiah Hatfield]]\n- [[Rachel Vance]]\n- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Sessie Lee Testerman]]\n- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Rebeca Browning]]\n- [[Roxie Browning]]\n- [[Nettie Toler]]\n- [[Robt E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Charlie Mullens]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Ida Chafin]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Sadie Walters]]\n- [[Margaret]]"
+      },
+      "after": "a4ef633bc358fbbe",
+      "id": "05e2fa92643677ca",
+      "date": 1461649431085
+    },
+    {
+      "type": "edit",
+      "id": "a4ef633bc358fbbe",
+      "item": {
+        "type": "paragraph",
+        "id": "a4ef633bc358fbbe",
+        "text": "The Hatfields hailed from the West Virginia side of the Tug Fork of the Big Sandy River."
+      },
+      "date": 1461650016172
+    },
+    {
+      "type": "edit",
+      "id": "05e2fa92643677ca",
+      "item": {
+        "type": "markdown",
+        "id": "05e2fa92643677ca",
+        "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+        "text": "- [[Ephraim (Eaf of All) Hatfield]]\n- [[Mary Smith Goff]]\n- [[Anna M. Musick Bundy]]\n- [[Valentine Hatfield]]\n- [[Martha Weddington]]\n- [[George Hatfield]]\n- [[Nancy Whitt]]\n- [[Jeremiah Hatfield]]\n- [[Rachel Vance]]\n- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Sessie Lee Testerman]]\n- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Rebeca Browning]]\n- [[Roxie Browning]]\n- [[Nettie Toler]]\n- [[Robt E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Charlie Mullens]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Ida Chafin]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Sadie Walters]]\n- [[Margaret]]"
+      },
+      "date": 1461985476832
+    },
+    {
+      "type": "edit",
+      "id": "a4ef633bc358fbbe",
+      "item": {
+        "type": "paragraph",
+        "id": "a4ef633bc358fbbe",
+        "text": "The Hatfields hailed from the West Virginia side of the Tug Fork of the Big Sandy River. [https://en.wikipedia.org/wiki/Hatfield%E2%80%93McCoy_feud#Hatfield_genealogy wikipedia]"
+      },
+      "date": 1461985645486
+    },
+    {
+      "type": "edit",
+      "id": "a4ef633bc358fbbe",
+      "item": {
+        "type": "paragraph",
+        "id": "a4ef633bc358fbbe",
+        "text": "The Hatfields hailed from the West Virginia side of the Tug Fork of the Big Sandy River. [https://en.wikipedia.org/wiki/Hatfield%E2%80%93McCoy_feud#Hatfield_genealogy wikipedia], [https://www.geni.com/people/Ephraim-Hatfield/6000000006903592410 geni]"
+      },
+      "date": 1461985668298
+    },
+    {
+      "type": "edit",
+      "id": "a4ef633bc358fbbe",
+      "item": {
+        "type": "paragraph",
+        "id": "a4ef633bc358fbbe",
+        "text": "The Hatfields hailed from the West Virginia side of the Tug Fork of the Big Sandy River. [https://en.wikipedia.org/wiki/Hatfield%E2%80%93McCoy_feud#Hatfield_genealogy wikipedia] [https://www.geni.com/people/Ephraim-Hatfield/6000000006903592410 geni]"
+      },
+      "date": 1461985679602
+    },
+    {
+      "type": "edit",
+      "id": "05e2fa92643677ca",
+      "item": {
+        "type": "markdown",
+        "id": "05e2fa92643677ca",
+        "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+        "text": "- [[Ephraim (Eaf of All) Hatfield]]\n- [[Mary Smith Goff]]\n- [[Union of Ephraim & Mary]]\n- [[Anna M. Musick Bundy]]\n- [[Union of Ephraim & Anna]]\n- [[Valentine Hatfield]]\n- [[Martha Weddington]]\n- [[Union of Valentine & Martha]]\n- [[George Hatfield]]\n- [[Nancy Whitt]]\n- [[Union of George & Nancy]]\n- [[Jeremiah Hatfield]]\n- [[Rachel Vance]]\n- [[Union of Jeremiah & Rachel]]\n- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Union of Valentine & Jane]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Union of Anderson & Levicy]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Union of Ellison & Sarah]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[Union of Elias & Elizabeth]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Jessie Lee Testerman]]\n- [[Union of William & Jessie]]\n- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Union of Johnson & Nancy]]\n- [[Rebeca Browning]]\n- [[Union of Johnson & Rebeca]]\n- [[Roxie Browning]]\n- [[Union of Johnson & Roxie]]\n- [[Nettie Toler]]\n- [[Union of Johnson & Nettie]]\n- [[Robert E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Union of Robert & Mariah]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Union of John & Nancy]]\n- [[Charlie Mullens]]\n- [[Union of Charlie & Nancy]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Union of Elliott & Margaret]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Union of Frank & Mary]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Union of John & Elizabeth]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Union of Elias & Peggy]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Union of Detroit & Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Union of Joseph & Grace]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Union of Rosanda & Marion]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Union of Willis & Lakie]]\n- [[Ida Chafin]]\n- [[Union of Willis & Ida]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Union of Tennyson & Lettie]]\n- [[Sadie Walters]]\n- [[Union of Tennyson & Sadie]]\n- [[Margaret]]\n- [[Union of Tennyson & Margaret"
+      },
+      "date": 1462031908203
+    },
+    {
+      "type": "edit",
+      "id": "05e2fa92643677ca",
+      "item": {
+        "type": "markdown",
+        "id": "05e2fa92643677ca",
+        "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+        "text": "- [[Ephraim (Eaf of All) Hatfield]]\n- [[Mary Smith Goff]]\n- [[Union of Ephraim & Mary]]\n- [[Anna M. Musick Bundy]]\n- [[Union of Ephraim & Anna]]\n- [[Valentine Hatfield]]\n- [[Martha Weddington]]\n- [[Union of Valentine & Martha]]\n- [[George Hatfield]]\n- [[Nancy Whitt]]\n- [[Union of George & Nancy]]\n- [[Jeremiah Hatfield]]\n- [[Rachel Vance]]\n- [[Union of Jeremiah & Rachel]]\n- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Union of Valentine & Jane]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Union of Anderson & Levicy]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Union of Ellison & Sarah]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[Union of Elias & Elizabeth]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Jessie Lee Testerman]]\n- [[Union of William & Jessie]]\n- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Union of Johnson & Nancy]]\n- [[Rebeca Browning]]\n- [[Union of Johnson & Rebeca]]\n- [[Roxie Browning]]\n- [[Union of Johnson & Roxie]]\n- [[Nettie Toler]]\n- [[Union of Johnson & Nettie]]\n- [[Robert E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Union of Robert & Mariah]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Union of John & Nancy]]\n- [[Charlie Mullens]]\n- [[Union of Charlie & Nancy]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Union of Elliott & Margaret]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Union of Frank & Mary]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Union of John & Elizabeth]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Union of Elias & Peggy]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Union of Detroit & Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Union of Joseph & Grace]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Union of Rosanda & Marion]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Union of Willis & Lakie]]\n- [[Ida Chafin]]\n- [[Union of Willis & Ida]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Union of Tennyson & Lettie]]\n- [[Sadie Walters]]\n- [[Union of Tennyson & Sadie]]\n- [[Margaret]]\n- [[Union of Tennyson & Margaret]]"
+      },
+      "date": 1462031986462
+    },
+    {
+      "type": "add",
+      "item": {
+        "text": "<img width=420 src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjkzcHQiIGhlaWdodD0iMzM5cHQiCiB2aWV3Qm94PSIw\nLjAwIDAuMDAgNjkzLjI5IDMzOS40NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMu\nb3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcv\nMTk5OS94bGluayI+CjxnIGlkPSJncmFwaDAiIGNsYXNzPSJncmFwaCIgdHJh\nbnNmb3JtPSJzY2FsZSgxIDEpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoNCAzMzUu\nNDQ2KSI+Cjx0aXRsZT4lMzwvdGl0bGU+Cjxwb2x5Z29uIGZpbGw9IndoaXRl\nIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iLTQsNCAtNCwtMzM1LjQ0NiA2ODku\nMjkyLC0zMzUuNDQ2IDY4OS4yOTIsNCAtNCw0Ii8+CjwhLS0gRXBocmFpbSAK\nKEVhZiBvZiBBbGwpCiBIYXRmaWVsZCAtLT4KPGcgaWQ9Im5vZGUxIiBjbGFz\ncz0ibm9kZSI+PHRpdGxlPkVwaHJhaW0gCihFYWYgb2YgQWxsKQogSGF0Zmll\nbGQ8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0i\nYmxhY2siIGN4PSIyMDUuNDk0IiBjeT0iLTI5Ni4wOSIgcng9IjU2Ljg5ODEi\nIHJ5PSIzNS4yMTEzIi8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9\nIjIwNS40OTQiIHk9Ii0zMDUuODkiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJp\nZiIgZm9udC1zaXplPSIxNC4wMCI+RXBocmFpbSA8L3RleHQ+Cjx0ZXh0IHRl\neHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwNS40OTQiIHk9Ii0yOTEuODkiIGZv\nbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+KEVh\nZiBvZiBBbGwpPC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4\nPSIyMDUuNDk0IiB5PSItMjc3Ljg5IiBmb250LWZhbWlseT0iVGltZXMsc2Vy\naWYiIGZvbnQtc2l6ZT0iMTQuMDAiPiBIYXRmaWVsZDwvdGV4dD4KPC9nPgo8\nIS0tIFVuaW9uIG9mCkVwaHJhaW0gJmFtcDsgTWFyeSAtLT4KPGcgaWQ9Im5v\nZGUyIiBjbGFzcz0ibm9kZSI+PHRpdGxlPlVuaW9uIG9mCkVwaHJhaW0gJmFt\ncDsgTWFyeTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9InBhbGVHcmVlbiIgc3Ry\nb2tlPSJibGFjayIgY3g9Ijc5LjQ5MzYiIGN5PSItMTk5LjI3OSIgcng9Ijc5\nLjQ4NzIiIHJ5PSIyNS40MTE4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRk\nbGUiIHg9Ijc5LjQ5MzYiIHk9Ii0yMDIuMDc5IiBmb250LWZhbWlseT0iVGlt\nZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlVuaW9uIG9mPC90ZXh0Pgo8\ndGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI3OS40OTM2IiB5PSItMTg4\nLjA3OSIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0\nLjAwIj5FcGhyYWltICZhbXA7IE1hcnk8L3RleHQ+CjwvZz4KPCEtLSBFcGhy\nYWltIAooRWFmIG9mIEFsbCkKIEhhdGZpZWxkJiM0NTsmZ3Q7VW5pb24gb2YK\nRXBocmFpbSAmYW1wOyBNYXJ5IC0tPgo8ZyBpZD0iZWRnZTEiIGNsYXNzPSJl\nZGdlIj48dGl0bGU+RXBocmFpbSAKKEVhZiBvZiBBbGwpCiBIYXRmaWVsZCYj\nNDU7Jmd0O1VuaW9uIG9mCkVwaHJhaW0gJmFtcDsgTWFyeTwvdGl0bGU+Cjxw\nYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik0xNjkuNzI0LC0y\nNjguMTc1QzE1My42MTUsLTI1Ni4wNTQgMTM0LjU2NiwtMjQxLjcxOSAxMTgu\nMTMxLC0yMjkuMzUyIi8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9\nImJsYWNrIiBwb2ludHM9IjExOS44OTksLTIyNi4zMDMgMTA5LjgwNCwtMjIz\nLjA4NyAxMTUuNjksLTIzMS44OTYgMTE5Ljg5OSwtMjI2LjMwMyIvPgo8L2c+\nCjwhLS0gVW5pb24gb2YKRXBocmFpbSAmYW1wOyBBbm5hIC0tPgo8ZyBpZD0i\nbm9kZTMiIGNsYXNzPSJub2RlIj48dGl0bGU+VW5pb24gb2YKRXBocmFpbSAm\nYW1wOyBBbm5hPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0icGFsZUdyZWVuIiBz\ndHJva2U9ImJsYWNrIiBjeD0iMzQ2LjQ5NCIgY3k9Ii0xOTkuMjc5IiByeD0i\nNzguOTA0NCIgcnk9IjI1LjQxMTgiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1p\nZGRsZSIgeD0iMzQ2LjQ5NCIgeT0iLTIwMi4wNzkiIGZvbnQtZmFtaWx5PSJU\naW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VW5pb24gb2Y8L3RleHQ+\nCjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjM0Ni40OTQiIHk9Ii0x\nODguMDc5IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0i\nMTQuMDAiPkVwaHJhaW0gJmFtcDsgQW5uYTwvdGV4dD4KPC9nPgo8IS0tIEVw\naHJhaW0gCihFYWYgb2YgQWxsKQogSGF0ZmllbGQmIzQ1OyZndDtVbmlvbiBv\nZgpFcGhyYWltICZhbXA7IEFubmEgLS0+CjxnIGlkPSJlZGdlMiIgY2xhc3M9\nImVkZ2UiPjx0aXRsZT5FcGhyYWltIAooRWFmIG9mIEFsbCkKIEhhdGZpZWxk\nJiM0NTsmZ3Q7VW5pb24gb2YKRXBocmFpbSAmYW1wOyBBbm5hPC90aXRsZT4K\nPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTI0My42NSwt\nMjY5LjQzM0MyNjIuNTQ4LC0yNTYuNzI2IDI4NS40MDUsLTI0MS4zNTcgMzA0\nLjc2NiwtMjI4LjMzOCIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tl\nPSJibGFjayIgcG9pbnRzPSIzMDYuNzYyLC0yMzEuMjEzIDMxMy4xMDgsLTIy\nMi43MjggMzAyLjg1NiwtMjI1LjQwNCAzMDYuNzYyLC0yMzEuMjEzIi8+Cjwv\nZz4KPCEtLSBWYWxlbnRpbmUKSGF0ZmllbGQgLS0+CjxnIGlkPSJub2RlNCIg\nY2xhc3M9Im5vZGUiPjx0aXRsZT5WYWxlbnRpbmUKSGF0ZmllbGQ8L3RpdGxl\nPgo8ZWxsaXBzZSBmaWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0iYmxhY2siIGN4\nPSI3OS40OTM2IiBjeT0iLTExMi4zNjgiIHJ4PSI0OC44OTY1IiByeT0iMjUu\nNDExOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI3OS40OTM2\nIiB5PSItMTE1LjE2OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250\nLXNpemU9IjE0LjAwIj5WYWxlbnRpbmU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5j\naG9yPSJtaWRkbGUiIHg9Ijc5LjQ5MzYiIHk9Ii0xMDEuMTY4IiBmb250LWZh\nbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPkhhdGZpZWxk\nPC90ZXh0Pgo8L2c+CjwhLS0gVW5pb24gb2YKRXBocmFpbSAmYW1wOyBNYXJ5\nJiM0NTsmZ3Q7VmFsZW50aW5lCkhhdGZpZWxkIC0tPgo8ZyBpZD0iZWRnZTMi\nIGNsYXNzPSJlZGdlIj48dGl0bGU+VW5pb24gb2YKRXBocmFpbSAmYW1wOyBN\nYXJ5JiM0NTsmZ3Q7VmFsZW50aW5lCkhhdGZpZWxkPC90aXRsZT4KPHBhdGgg\nZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTc5LjQ5MzYsLTE3My43\nMTlDNzkuNDkzNiwtMTY1LjcxIDc5LjQ5MzYsLTE1Ni42NjEgNzkuNDkzNiwt\nMTQ4LjA1NCIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tlPSJibGFj\nayIgcG9pbnRzPSI4Mi45OTM3LC0xNDcuODcyIDc5LjQ5MzYsLTEzNy44NzIg\nNzUuOTkzNywtMTQ3Ljg3MiA4Mi45OTM3LC0xNDcuODcyIi8+CjwvZz4KPCEt\nLSBHZW9yZ2UKSGF0ZmllbGQgLS0+CjxnIGlkPSJub2RlNSIgY2xhc3M9Im5v\nZGUiPjx0aXRsZT5HZW9yZ2UKSGF0ZmllbGQ8L3RpdGxlPgo8ZWxsaXBzZSBm\naWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0iYmxhY2siIGN4PSIzNDIuNDk0IiBj\neT0iLTExMi4zNjgiIHJ4PSI0My40MTQ0IiByeT0iMjUuNDExOCIvPgo8dGV4\ndCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIzNDIuNDk0IiB5PSItMTE1LjE2\nOCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAw\nIj5HZW9yZ2U8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9\nIjM0Mi40OTQiIHk9Ii0xMDEuMTY4IiBmb250LWZhbWlseT0iVGltZXMsc2Vy\naWYiIGZvbnQtc2l6ZT0iMTQuMDAiPkhhdGZpZWxkPC90ZXh0Pgo8L2c+Cjwh\nLS0gVW5pb24gb2YKRXBocmFpbSAmYW1wOyBBbm5hJiM0NTsmZ3Q7R2Vvcmdl\nCkhhdGZpZWxkIC0tPgo8ZyBpZD0iZWRnZTQiIGNsYXNzPSJlZGdlIj48dGl0\nbGU+VW5pb24gb2YKRXBocmFpbSAmYW1wOyBBbm5hJiM0NTsmZ3Q7R2Vvcmdl\nCkhhdGZpZWxkPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJi\nbGFjayIgZD0iTTM0NS4zMzcsLTE3My43MTlDMzQ0Ljk1OSwtMTY1LjcxIDM0\nNC41MzMsLTE1Ni42NjEgMzQ0LjEyOCwtMTQ4LjA1NCIvPgo8cG9seWdvbiBm\naWxsPSJibGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSIzNDcuNjE1LC0x\nNDcuNjk3IDM0My42NDgsLTEzNy44NzIgMzQwLjYyMiwtMTQ4LjAyNiAzNDcu\nNjE1LC0xNDcuNjk3Ii8+CjwvZz4KPCEtLSBKZXJlbWlhaApIYXRmaWVsZCAt\nLT4KPGcgaWQ9Im5vZGU2IiBjbGFzcz0ibm9kZSI+PHRpdGxlPkplcmVtaWFo\nCkhhdGZpZWxkPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0icGFsZUdyZWVuIiBz\ndHJva2U9ImJsYWNrIiBjeD0iNTQyLjQ5NCIgY3k9Ii0xMTIuMzY4IiByeD0i\nNDcuMDg5NCIgcnk9IjI1LjQxMTgiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1p\nZGRsZSIgeD0iNTQyLjQ5NCIgeT0iLTExNS4xNjgiIGZvbnQtZmFtaWx5PSJU\naW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+SmVyZW1pYWg8L3RleHQ+\nCjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjU0Mi40OTQiIHk9Ii0x\nMDEuMTY4IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0i\nMTQuMDAiPkhhdGZpZWxkPC90ZXh0Pgo8L2c+CjwhLS0gVW5pb24gb2YKRXBo\ncmFpbSAmYW1wOyBBbm5hJiM0NTsmZ3Q7SmVyZW1pYWgKSGF0ZmllbGQgLS0+\nCjxnIGlkPSJlZGdlNSIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5VbmlvbiBvZgpF\ncGhyYWltICZhbXA7IEFubmEmIzQ1OyZndDtKZXJlbWlhaApIYXRmaWVsZDwv\ndGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik0z\nOTIuNTQ0LC0xNzguNDVDNDE5Ljg2MywtMTY2LjY3MiA0NTUuMTY3LC0xNTEu\nNDI3IDQ4Ni40OTQsLTEzNy44MjMgNDkwLjA1OSwtMTM2LjI3NSA0OTMuNzUx\nLC0xMzQuNjY5IDQ5Ny40NiwtMTMzLjA1MyIvPgo8cG9seWdvbiBmaWxsPSJi\nbGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSI0OTguODg2LC0xMzYuMjUg\nNTA2LjY1NCwtMTI5LjA0NSA0OTYuMDg5LC0xMjkuODMzIDQ5OC44ODYsLTEz\nNi4yNSIvPgo8L2c+CjwhLS0gVW5pb24gb2YKVmFsZW50aW5lICZhbXA7IE1h\ncnRoYSAtLT4KPGcgaWQ9Im5vZGUxMyIgY2xhc3M9Im5vZGUiPjx0aXRsZT5V\nbmlvbiBvZgpWYWxlbnRpbmUgJmFtcDsgTWFydGhhPC90aXRsZT4KPGVsbGlw\nc2UgZmlsbD0icGFsZUdyZWVuIiBzdHJva2U9ImJsYWNrIiBjeD0iMTUxLjQ5\nNCIgY3k9Ii0yNS40NTU4IiByeD0iODkuODY5IiByeT0iMjUuNDExOCIvPgo8\ndGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIxNTEuNDk0IiB5PSItMjgu\nMjU1OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0\nLjAwIj5VbmlvbiBvZjwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRs\nZSIgeD0iMTUxLjQ5NCIgeT0iLTE0LjI1NTgiIGZvbnQtZmFtaWx5PSJUaW1l\ncyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+VmFsZW50aW5lICZhbXA7IE1h\ncnRoYTwvdGV4dD4KPC9nPgo8IS0tIFZhbGVudGluZQpIYXRmaWVsZCYjNDU7\nJmd0O1VuaW9uIG9mClZhbGVudGluZSAmYW1wOyBNYXJ0aGEgLS0+CjxnIGlk\nPSJlZGdlMTIiIGNsYXNzPSJlZGdlIj48dGl0bGU+VmFsZW50aW5lCkhhdGZp\nZWxkJiM0NTsmZ3Q7VW5pb24gb2YKVmFsZW50aW5lICZhbXA7IE1hcnRoYTwv\ndGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik05\nOC43ODgzLC04OC42MTI4QzEwNi42NzcsLTc5LjMwOTggMTE1Ljk0LC02OC4z\nODUyIDEyNC40ODIsLTU4LjMxMTMiLz4KPHBvbHlnb24gZmlsbD0iYmxhY2si\nIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iMTI3LjM0LC02MC4zNTI2IDEzMS4x\nMzgsLTUwLjQ2MTggMTIyLjAwMSwtNTUuODI1NCAxMjcuMzQsLTYwLjM1MjYi\nLz4KPC9nPgo8IS0tIFVuaW9uIG9mCkdlb3JnZSAmYW1wOyBOYW5jeSAtLT4K\nPGcgaWQ9Im5vZGU4IiBjbGFzcz0ibm9kZSI+PHRpdGxlPlVuaW9uIG9mCkdl\nb3JnZSAmYW1wOyBOYW5jeTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9InBhbGVH\ncmVlbiIgc3Ryb2tlPSJibGFjayIgY3g9IjM3Ni40OTQiIGN5PSItMjUuNDU1\nOCIgcng9Ijc4LjUxODQiIHJ5PSIyNS40MTE4Ii8+Cjx0ZXh0IHRleHQtYW5j\naG9yPSJtaWRkbGUiIHg9IjM3Ni40OTQiIHk9Ii0yOC4yNTU4IiBmb250LWZh\nbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlVuaW9uIG9m\nPC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIzNzYuNDk0\nIiB5PSItMTQuMjU1OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250\nLXNpemU9IjE0LjAwIj5HZW9yZ2UgJmFtcDsgTmFuY3k8L3RleHQ+CjwvZz4K\nPCEtLSBHZW9yZ2UKSGF0ZmllbGQmIzQ1OyZndDtVbmlvbiBvZgpHZW9yZ2Ug\nJmFtcDsgTmFuY3kgLS0+CjxnIGlkPSJlZGdlNyIgY2xhc3M9ImVkZ2UiPjx0\naXRsZT5HZW9yZ2UKSGF0ZmllbGQmIzQ1OyZndDtVbmlvbiBvZgpHZW9yZ2Ug\nJmFtcDsgTmFuY3k8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9\nImJsYWNrIiBkPSJNMzUyLjE0NiwtODcuMjYyNEMzNTUuNDkxLC03OC45MDg4\nIDM1OS4zMDUsLTY5LjM4MTYgMzYyLjkwNywtNjAuMzg2NyIvPgo8cG9seWdv\nbiBmaWxsPSJibGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSIzNjYuMjMx\nLC02MS41MDA2IDM2Ni42OTksLTUwLjkxNjEgMzU5LjczMywtNTguODk4NSAz\nNjYuMjMxLC02MS41MDA2Ii8+CjwvZz4KPCEtLSBVbmlvbiBvZgpKZXJlbWlh\naCAmYW1wOyBSYWNoZWwgLS0+CjxnIGlkPSJub2RlOSIgY2xhc3M9Im5vZGUi\nPjx0aXRsZT5VbmlvbiBvZgpKZXJlbWlhaCAmYW1wOyBSYWNoZWw8L3RpdGxl\nPgo8ZWxsaXBzZSBmaWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0iYmxhY2siIGN4\nPSI1OTQuNDk0IiBjeT0iLTI1LjQ1NTgiIHJ4PSI4Ny4zNTg4IiByeT0iMjUu\nNDExOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1OTQuNDk0\nIiB5PSItMjguMjU1OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250\nLXNpemU9IjE0LjAwIj5VbmlvbiBvZjwvdGV4dD4KPHRleHQgdGV4dC1hbmNo\nb3I9Im1pZGRsZSIgeD0iNTk0LjQ5NCIgeT0iLTE0LjI1NTgiIGZvbnQtZmFt\naWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+SmVyZW1pYWgg\nJmFtcDsgUmFjaGVsPC90ZXh0Pgo8L2c+CjwhLS0gSmVyZW1pYWgKSGF0Zmll\nbGQmIzQ1OyZndDtVbmlvbiBvZgpKZXJlbWlhaCAmYW1wOyBSYWNoZWwgLS0+\nCjxnIGlkPSJlZGdlOCIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5KZXJlbWlhaApI\nYXRmaWVsZCYjNDU7Jmd0O1VuaW9uIG9mCkplcmVtaWFoICZhbXA7IFJhY2hl\nbDwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9\nIk01NTYuOTc4LC04Ny43MTQ5QzU2Mi4zNTMsLTc4LjkzODcgNTY4LjU1LC02\nOC44MTkzIDU3NC4zNCwtNTkuMzY1NyIvPgo8cG9seWdvbiBmaWxsPSJibGFj\nayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSI1NzcuNDg3LC02MC45Mjc1IDU3\nOS43MjUsLTUwLjU3MTYgNTcxLjUxOCwtNTcuMjcxNyA1NzcuNDg3LC02MC45\nMjc1Ii8+CjwvZz4KPCEtLSBBbm5hIE0uCk11c2ljayBCdW5keSAtLT4KPGcg\naWQ9Im5vZGU3IiBjbGFzcz0ibm9kZSI+PHRpdGxlPkFubmEgTS4KTXVzaWNr\nIEJ1bmR5PC90aXRsZT4KPGVsbGlwc2UgZmlsbD0icGFsZUdyZWVuIiBzdHJv\na2U9ImJsYWNrIiBjeD0iMzUwLjQ5NCIgY3k9Ii0yOTYuMDkiIHJ4PSI2OS43\nNzgxIiByeT0iMjUuNDExOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxl\nIiB4PSIzNTAuNDk0IiB5PSItMjk4Ljg5IiBmb250LWZhbWlseT0iVGltZXMs\nc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPkFubmEgTS48L3RleHQ+Cjx0ZXh0\nIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjM1MC40OTQiIHk9Ii0yODQuODki\nIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+\nTXVzaWNrIEJ1bmR5PC90ZXh0Pgo8L2c+CjwhLS0gQW5uYSBNLgpNdXNpY2sg\nQnVuZHkmIzQ1OyZndDtVbmlvbiBvZgpFcGhyYWltICZhbXA7IEFubmEgLS0+\nCjxnIGlkPSJlZGdlNiIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5Bbm5hIE0uCk11\nc2ljayBCdW5keSYjNDU7Jmd0O1VuaW9uIG9mCkVwaHJhaW0gJmFtcDsgQW5u\nYTwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9\nIk0zNDkuNDQzLC0yNzAuMThDMzQ4Ljk5MiwtMjU5LjUxIDM0OC40NTksLTI0\nNi44NjIgMzQ3Ljk3LC0yMzUuMjc3Ii8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNr\nIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjM1MS40NTYsLTIzNC44NjcgMzQ3\nLjUzOCwtMjI1LjAyMyAzNDQuNDYyLC0yMzUuMTYyIDM1MS40NTYsLTIzNC44\nNjciLz4KPC9nPgo8IS0tIE5hbmN5CldoaXR0IC0tPgo8ZyBpZD0ibm9kZTEw\nIiBjbGFzcz0ibm9kZSI+PHRpdGxlPk5hbmN5CldoaXR0PC90aXRsZT4KPGVs\nbGlwc2UgZmlsbD0icGFsZUdyZWVuIiBzdHJva2U9ImJsYWNrIiBjeD0iNDQw\nLjQ5NCIgY3k9Ii0xMTIuMzY4IiByeD0iMzcuMzAwNyIgcnk9IjI1LjQxMTgi\nLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDQwLjQ5NCIgeT0i\nLTExNS4xNjgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXpl\nPSIxNC4wMCI+TmFuY3k8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRk\nbGUiIHg9IjQ0MC40OTQiIHk9Ii0xMDEuMTY4IiBmb250LWZhbWlseT0iVGlt\nZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPldoaXR0PC90ZXh0Pgo8L2c+\nCjwhLS0gTmFuY3kKV2hpdHQmIzQ1OyZndDtVbmlvbiBvZgpHZW9yZ2UgJmFt\ncDsgTmFuY3kgLS0+CjxnIGlkPSJlZGdlOSIgY2xhc3M9ImVkZ2UiPjx0aXRs\nZT5OYW5jeQpXaGl0dCYjNDU7Jmd0O1VuaW9uIG9mCkdlb3JnZSAmYW1wOyBO\nYW5jeTwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2si\nIGQ9Ik00MjQuMDEyLC04OS41MDA3QzQxNi44ODEsLTgwLjA0IDQwOC4zOTQs\nLTY4Ljc3OTcgNDAwLjU3OSwtNTguNDExIi8+Cjxwb2x5Z29uIGZpbGw9ImJs\nYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjQwMy4zMDgsLTU2LjIxNyAz\nOTQuNDk0LC01MC4zMzggMzk3LjcxOCwtNjAuNDMwNCA0MDMuMzA4LC01Ni4y\nMTciLz4KPC9nPgo8IS0tIFJhY2hlbApWYW5jZSAtLT4KPGcgaWQ9Im5vZGUx\nMSIgY2xhc3M9Im5vZGUiPjx0aXRsZT5SYWNoZWwKVmFuY2U8L3RpdGxlPgo8\nZWxsaXBzZSBmaWxsPSJwYWxlR3JlZW4iIHN0cm9rZT0iYmxhY2siIGN4PSI2\nNDYuNDk0IiBjeT0iLTExMi4zNjgiIHJ4PSIzOC41OTc3IiByeT0iMjUuNDEx\nOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI2NDYuNDk0IiB5\nPSItMTE1LjE2OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNp\nemU9IjE0LjAwIj5SYWNoZWw8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJt\naWRkbGUiIHg9IjY0Ni40OTQiIHk9Ii0xMDEuMTY4IiBmb250LWZhbWlseT0i\nVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPlZhbmNlPC90ZXh0Pgo8\nL2c+CjwhLS0gUmFjaGVsClZhbmNlJiM0NTsmZ3Q7VW5pb24gb2YKSmVyZW1p\nYWggJmFtcDsgUmFjaGVsIC0tPgo8ZyBpZD0iZWRnZTEwIiBjbGFzcz0iZWRn\nZSI+PHRpdGxlPlJhY2hlbApWYW5jZSYjNDU7Jmd0O1VuaW9uIG9mCkplcmVt\naWFoICZhbXA7IFJhY2hlbDwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0\ncm9rZT0iYmxhY2siIGQ9Ik02MzIuMjg0LC04OC4xNjVDNjI2Ljg1MSwtNzku\nMjkyNyA2MjAuNTQ2LC02OC45OTcyIDYxNC42NjEsLTU5LjM4NzkiLz4KPHBv\nbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iNjE3\nLjYxOSwtNTcuNTE2NiA2MDkuNDEyLC01MC44MTY2IDYxMS42NSwtNjEuMTcy\nNCA2MTcuNjE5LC01Ny41MTY2Ii8+CjwvZz4KPCEtLSBNYXJ5IFNtaXRoCkdv\nZmYgLS0+CjxnIGlkPSJub2RlMTIiIGNsYXNzPSJub2RlIj48dGl0bGU+TWFy\neSBTbWl0aApHb2ZmPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0icGFsZUdyZWVu\nIiBzdHJva2U9ImJsYWNrIiBjeD0iNzEuNDkzNiIgY3k9Ii0yOTYuMDkiIHJ4\nPSI1OC43NzQ5IiByeT0iMjUuNDExOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0i\nbWlkZGxlIiB4PSI3MS40OTM2IiB5PSItMjk4Ljg5IiBmb250LWZhbWlseT0i\nVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPk1hcnkgU21pdGg8L3Rl\neHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcxLjQ5MzYiIHk9\nIi0yODQuODkiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXpl\nPSIxNC4wMCI+R29mZjwvdGV4dD4KPC9nPgo8IS0tIE1hcnkgU21pdGgKR29m\nZiYjNDU7Jmd0O1VuaW9uIG9mCkVwaHJhaW0gJmFtcDsgTWFyeSAtLT4KPGcg\naWQ9ImVkZ2UxMSIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5NYXJ5IFNtaXRoCkdv\nZmYmIzQ1OyZndDtVbmlvbiBvZgpFcGhyYWltICZhbXA7IE1hcnk8L3RpdGxl\nPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNNzMuNTk1\nNSwtMjcwLjE4Qzc0LjQ5NTgsLTI1OS41MSA3NS41NjMsLTI0Ni44NjIgNzYu\nNTQwNiwtMjM1LjI3NyIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tl\nPSJibGFjayIgcG9pbnRzPSI4MC4wNTI0LC0yMzUuMjgyIDc3LjQwNTcsLTIy\nNS4wMjMgNzMuMDc3MiwtMjM0LjY5NCA4MC4wNTI0LC0yMzUuMjgyIi8+Cjwv\nZz4KPCEtLSBNYXJ0aGEKV2VkZGluZ3RvbiAtLT4KPGcgaWQ9Im5vZGUxNCIg\nY2xhc3M9Im5vZGUiPjx0aXRsZT5NYXJ0aGEKV2VkZGluZ3RvbjwvdGl0bGU+\nCjxlbGxpcHNlIGZpbGw9InBhbGVHcmVlbiIgc3Ryb2tlPSJibGFjayIgY3g9\nIjIwNS40OTQiIGN5PSItMTEyLjM2OCIgcng9IjU5LjQyNTIiIHJ5PSIyNS40\nMTE4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwNS40OTQi\nIHk9Ii0xMTUuMTY4IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQt\nc2l6ZT0iMTQuMDAiPk1hcnRoYTwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9\nIm1pZGRsZSIgeD0iMjA1LjQ5NCIgeT0iLTEwMS4xNjgiIGZvbnQtZmFtaWx5\nPSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+V2VkZGluZ3Rvbjwv\ndGV4dD4KPC9nPgo8IS0tIE1hcnRoYQpXZWRkaW5ndG9uJiM0NTsmZ3Q7VW5p\nb24gb2YKVmFsZW50aW5lICZhbXA7IE1hcnRoYSAtLT4KPGcgaWQ9ImVkZ2Ux\nMyIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5NYXJ0aGEKV2VkZGluZ3RvbiYjNDU7\nJmd0O1VuaW9uIG9mClZhbGVudGluZSAmYW1wOyBNYXJ0aGE8L3RpdGxlPgo8\ncGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMTkwLjQ1Miwt\nODcuNzE0OUMxODQuODEzLC03OC44NDgzIDE3OC4zMDIsLTY4LjYxMDUgMTcy\nLjIzNywtNTkuMDczNSIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tl\nPSJibGFjayIgcG9pbnRzPSIxNzUuMTUsLTU3LjEzMTYgMTY2LjgzLC01MC41\nNzE2IDE2OS4yNDMsLTYwLjg4OCAxNzUuMTUsLTU3LjEzMTYiLz4KPC9nPgo8\nL2c+Cjwvc3ZnPgo=\n'>",
+        "type": "html",
+        "id": "489348a3f94c84e2"
+      },
+      "after": "a4ef633bc358fbbe",
+      "id": "489348a3f94c84e2",
+      "date": 1462050629963
+    },
+    {
+      "type": "edit",
+      "id": "05e2fa92643677ca",
+      "item": {
+        "type": "markdown",
+        "id": "05e2fa92643677ca",
+        "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+        "text": "- [[Ephraim (Eaf of All) Hatfield]]\n- [[Mary Smith Goff]]\n- [[Union of Ephraim & Mary]]\n- [[Anna M. Musick Bundy]]\n- [[Union of Ephraim & Anna]]\n- [[Valentine Hatfield]]\n- [[Martha Weddington]]\n- [[Union of Valentine & Martha]]\n- [[George Hatfield]]\n- [[Nancy Whitt]]\n- [[Union of George & Nancy]]\n- [[Jeremiah Hatfield]]\n- [[Rachel Vance]]\n- [[Union of Jeremiah & Rachel]]\n- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Union of Valentine & Jane]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Union of Anderson & Levicy]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Union of Ellison & Sarah]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[Union of Elias & Elizabeth]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Jessie Lee Testerman]]\n- [[Union of William & Jessie]]\n- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Union of Johnson & Nancy]]\n- [[Rebeca Browning]]\n- [[Union of Johnson & Rebeca]]\n- [[Roxie Browning]]\n- [[Union of Johnson & Roxie]]\n- [[Nettie Toler]]\n- [[Union of Johnson & Nettie]]\n- [[Robert E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Union of Robert & Mariah]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Union of John & Nancy]]\n- [[Charlie Mullens]]\n- [[Union of Charlie & Nancy]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Union of Elliott & Margaret]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Union of Frank & Mary]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Union of John & Elizabeth]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Union of Elias & Peggy]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Union of Detroit & Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Union of Joseph & Grace]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Union of Rosanda & Marion]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Union of Willis & Lakie]]\n- [[Ida Chafin]]\n- [[Union of Willis & Ida]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Union of Tennyson & Lettie]]\n- [[Sadie Walters]]\n- [[Union of Tennyson & Sadie]]\n- [[Margaret]]\n- [[Union of Tennyson & Margaret]]"
+      },
+      "date": 1462149024820
+    },
+    {
+      "type": "edit",
+      "id": "05e2fa92643677ca",
+      "item": {
+        "type": "markdown",
+        "id": "05e2fa92643677ca",
+        "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+        "text": "- [[Ephraim (Eaf of All) Hatfield]]\n- [[Mary Smith Goff]]\n- [[Union of Ephraim & Mary]]\n- [[Anna M. Musick Bundy]]\n- [[Union of Ephraim & Anna]]\n- [[Valentine Hatfield]]\n- [[Martha Weddington]]\n- [[Union of Valentine & Martha]]\n- [[George Hatfield]]\n- [[Nancy Whitt]]\n- [[Union of George & Nancy]]\n- [[Jeremiah Hatfield]]\n- [[Rachel Vance]]\n- [[Union of Jeremiah & Rachel]]\n"
+      },
+      "date": 1462149106646
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "77d2b38f58a10537"
+      },
+      "id": "77d2b38f58a10537",
+      "type": "add",
+      "after": "05e2fa92643677ca",
+      "date": 1462149108877
+    },
+    {
+      "type": "edit",
+      "id": "77d2b38f58a10537",
+      "item": {
+        "type": "markdown",
+        "id": "77d2b38f58a10537",
+        "text": "- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Union of Valentine & Jane]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Union of Anderson & Levicy]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Union of Ellison & Sarah]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[Union of Elias & Elizabeth]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Jessie Lee Testerman]]\n- [[Union of William & Jessie]]\n- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Union of Johnson & Nancy]]\n- [[Rebeca Browning]]\n- [[Union of Johnson & Rebeca]]\n- [[Roxie Browning]]\n- [[Union of Johnson & Roxie]]\n- [[Nettie Toler]]\n- [[Union of Johnson & Nettie]]\n- [[Robert E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Union of Robert & Mariah]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Union of John & Nancy]]\n- [[Charlie Mullens]]\n- [[Union of Charlie & Nancy]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Union of Elliott & Margaret]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Union of Frank & Mary]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Union of John & Elizabeth]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Union of Elias & Peggy]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Union of Detroit & Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Union of Joseph & Grace]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Union of Rosanda & Marion]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Union of Willis & Lakie]]\n- [[Ida Chafin]]\n- [[Union of Willis & Ida]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Union of Tennyson & Lettie]]\n- [[Sadie Walters]]\n- [[Union of Tennyson & Sadie]]\n- [[Margaret]]\n- [[Union of Tennyson & Margaret]]"
+      },
+      "date": 1462149115663
+    },
+    {
+      "type": "edit",
+      "id": "77d2b38f58a10537",
+      "item": {
+        "type": "markdown",
+        "id": "77d2b38f58a10537",
+        "text": "- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n"
+      },
+      "date": 1462149159203
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7ec4a5274ffb0119"
+      },
+      "id": "7ec4a5274ffb0119",
+      "type": "add",
+      "after": "77d2b38f58a10537",
+      "date": 1462149162422
+    },
+    {
+      "type": "edit",
+      "id": "7ec4a5274ffb0119",
+      "item": {
+        "type": "markdown",
+        "id": "7ec4a5274ffb0119",
+        "text": "- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Union of Valentine & Jane]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Union of Anderson & Levicy]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Union of Ellison & Sarah]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[Union of Elias & Elizabeth]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Jessie Lee Testerman]]\n- [[Union of William & Jessie]]\n- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Union of Johnson & Nancy]]\n- [[Rebeca Browning]]\n- [[Union of Johnson & Rebeca]]\n- [[Roxie Browning]]\n- [[Union of Johnson & Roxie]]\n- [[Nettie Toler]]\n- [[Union of Johnson & Nettie]]\n- [[Robert E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Union of Robert & Mariah]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Union of John & Nancy]]\n- [[Charlie Mullens]]\n- [[Union of Charlie & Nancy]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Union of Elliott & Margaret]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Union of Frank & Mary]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Union of John & Elizabeth]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Union of Elias & Peggy]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Union of Detroit & Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Union of Joseph & Grace]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Union of Rosanda & Marion]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Union of Willis & Lakie]]\n- [[Ida Chafin]]\n- [[Union of Willis & Ida]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Union of Tennyson & Lettie]]\n- [[Sadie Walters]]\n- [[Union of Tennyson & Sadie]]\n- [[Margaret]]\n- [[Union of Tennyson & Margaret]]"
+      },
+      "date": 1462149168889
+    },
+    {
+      "type": "edit",
+      "id": "77d2b38f58a10537",
+      "item": {
+        "type": "markdown",
+        "id": "77d2b38f58a10537",
+        "text": "- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Union of Ephraim & Elizabeth]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n"
+      },
+      "date": 1462149522774
+    },
+    {
+      "type": "edit",
+      "id": "77d2b38f58a10537",
+      "item": {
+        "type": "markdown",
+        "id": "77d2b38f58a10537",
+        "text": "- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Union of Anderson & Polly]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Union of Ephraim & Elizabeth]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n"
+      },
+      "date": 1462150445722
+    },
+    {
+      "type": "edit",
+      "id": "77d2b38f58a10537",
+      "item": {
+        "type": "markdown",
+        "id": "77d2b38f58a10537",
+        "text": "- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Union of Anderson & Polly]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Union of Basil & Nancy]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Union of Ephraim & Elizabeth]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n"
+      },
+      "date": 1462150612789
+    },
+    {
+      "type": "edit",
+      "id": "77d2b38f58a10537",
+      "item": {
+        "type": "markdown",
+        "id": "77d2b38f58a10537",
+        "text": "- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Union of Anderson & Polly]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Union of Basil & Nancy]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Union of Elias & Jane]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Jenny Hunt]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Union of Ephraim & Elizabeth]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n"
+      },
+      "date": 1462150788880
+    },
+    {
+      "type": "edit",
+      "id": "77d2b38f58a10537",
+      "item": {
+        "type": "markdown",
+        "id": "77d2b38f58a10537",
+        "text": "- [[Ephraim (Big Eaf) Hatfield]]\n- [[Nancy Vance]]\n- [[Union of Ephraim & Nancy]]\n- [[Anderson (Preacher) Hatfield]]\n- [[Polly Runyan]]\n- [[Union of Anderson & Polly]]\n- [[Basil (Deacon) Hatfield]]\n- [[Nancy Lowe]]\n- [[Union of Basil & Nancy]]\n- [[Elias (Bad Lias) Hatfield]]\n- [[Jane Chafin]]\n- [[Union of Elias & Jane]]\n- [[Floyd Hatfield]]\n- [[Anne Pinson]]\n- [[Union of Floyd & Anne]]\n- [[Jenny Hunt]]\n- [[Union of Floyd & Jenny]]\n- [[Ephraim Hatfield]]\n- [[Elizabeth McCoy]]\n- [[Union of Ephraim & Elizabeth]]\n- [[Jacob Hatfield]]\n- [[Rebecca Crabtree]]\n- [[Union of Jacob & Rebecca]]\n"
+      },
+      "date": 1462150965112
+    },
+    {
+      "type": "edit",
+      "id": "05e2fa92643677ca",
+      "item": {
+        "type": "markdown",
+        "id": "05e2fa92643677ca",
+        "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+        "text": "- [[Ephraim (Eaf of All) Hatfield]]\n- [[Mary Smith Goff]]\n- [[Union of Ephraim & Mary]]\n- [[Anna M. Musick Bundy]]\n- [[Union of Ephraim & Anna]]\n"
+      },
+      "date": 1462151708363
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b3f9ec9e530ec9fc"
+      },
+      "id": "b3f9ec9e530ec9fc",
+      "type": "add",
+      "after": "7ec4a5274ffb0119",
+      "date": 1462151713408
+    },
+    {
+      "type": "edit",
+      "id": "b3f9ec9e530ec9fc",
+      "item": {
+        "type": "markdown",
+        "id": "b3f9ec9e530ec9fc",
+        "text": "- [[Valentine Hatfield]]\n- [[Martha Weddington]]\n- [[Union of Valentine & Martha]]\n- [[George Hatfield]]\n- [[Nancy Whitt]]\n- [[Union of George & Nancy]]\n- [[Jeremiah Hatfield]]\n- [[Rachel Vance]]\n- [[Union of Jeremiah & Rachel]]\n"
+      },
+      "date": 1462151718150
+    },
+    {
+      "type": "move",
+      "order": [
+        "a4ef633bc358fbbe",
+        "489348a3f94c84e2",
+        "05e2fa92643677ca",
+        "b3f9ec9e530ec9fc",
+        "77d2b38f58a10537",
+        "7ec4a5274ffb0119"
+      ],
+      "id": "b3f9ec9e530ec9fc",
+      "date": 1462151788544
+    },
+    {
+      "type": "edit",
+      "id": "7ec4a5274ffb0119",
+      "item": {
+        "type": "markdown",
+        "id": "7ec4a5274ffb0119",
+        "text": "- [[Valentine (Uncle Wall) Hatfield]]\n- [[Jane Maynard]]\n- [[Union of Valentine & Jane]]\n- [[Martha Hatfield]]\n- [[Anderson (Devil Anse) Hatfield]]\n- [[Levicy Chafin]]\n- [[Union of Anderson & Levicy]]\n- [[Ellison Hatfield]]\n- [[Sarah Staton]]\n- [[Union of Ellison & Sarah]]\n- [[Elias (Good 'Lias) Hatfield]]\n- [[Elizabeth Chafin]]\n- [[Union of Elias & Elizabeth]]\n- [[William Sidney (Two-Gun) Hatfield]]\n- [[Jessie Lee Testerman]]\n- [[Union of William & Jessie]]\n"
+      },
+      "date": 1462163596184
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "12968e0e77379880"
+      },
+      "id": "12968e0e77379880",
+      "type": "add",
+      "after": "7ec4a5274ffb0119",
+      "date": 1462163599832
+    },
+    {
+      "type": "edit",
+      "id": "12968e0e77379880",
+      "item": {
+        "type": "markdown",
+        "id": "12968e0e77379880",
+        "text": "- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Union of Johnson & Nancy]]\n- [[Rebeca Browning]]\n- [[Union of Johnson & Rebeca]]\n- [[Roxie Browning]]\n- [[Union of Johnson & Roxie]]\n- [[Nettie Toler]]\n- [[Union of Johnson & Nettie]]\n- [[Robert E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Union of Robert & Mariah]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Union of John & Nancy]]\n- [[Charlie Mullens]]\n- [[Union of Charlie & Nancy]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Union of Elliott & Margaret]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Union of Frank & Mary]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Union of John & Elizabeth]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Union of Elias & Peggy]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Union of Detroit & Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Union of Joseph & Grace]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Union of Rosanda & Marion]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Union of Willis & Lakie]]\n- [[Ida Chafin]]\n- [[Union of Willis & Ida]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Union of Tennyson & Lettie]]\n- [[Sadie Walters]]\n- [[Union of Tennyson & Sadie]]\n- [[Margaret]]\n- [[Union of Tennyson & Margaret]]"
+      },
+      "date": 1462163604845
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7b7d4e2d939ed3d1"
+      },
+      "id": "7b7d4e2d939ed3d1",
+      "type": "add",
+      "after": "12968e0e77379880",
+      "date": 1462164711594
+    },
+    {
+      "type": "edit",
+      "id": "7b7d4e2d939ed3d1",
+      "item": {
+        "type": "pagefold",
+        "id": "7b7d4e2d939ed3d1",
+        "text": "todo"
+      },
+      "date": 1462164721658
+    },
+    {
+      "type": "move",
+      "order": [
+        "a4ef633bc358fbbe",
+        "489348a3f94c84e2",
+        "05e2fa92643677ca",
+        "b3f9ec9e530ec9fc",
+        "77d2b38f58a10537",
+        "7ec4a5274ffb0119",
+        "7b7d4e2d939ed3d1",
+        "12968e0e77379880"
+      ],
+      "id": "7b7d4e2d939ed3d1",
+      "date": 1462164735322
+    },
+    {
+      "type": "move",
+      "order": [
+        "a4ef633bc358fbbe",
+        "489348a3f94c84e2",
+        "05e2fa92643677ca",
+        "b3f9ec9e530ec9fc",
+        "77d2b38f58a10537",
+        "7b7d4e2d939ed3d1",
+        "7ec4a5274ffb0119",
+        "12968e0e77379880"
+      ],
+      "id": "7b7d4e2d939ed3d1",
+      "date": 1462164744531
+    },
+    {
+      "type": "move",
+      "order": [
+        "a4ef633bc358fbbe",
+        "489348a3f94c84e2",
+        "05e2fa92643677ca",
+        "b3f9ec9e530ec9fc",
+        "77d2b38f58a10537",
+        "7ec4a5274ffb0119",
+        "7b7d4e2d939ed3d1",
+        "12968e0e77379880"
+      ],
+      "id": "7b7d4e2d939ed3d1",
+      "date": 1462166556471
+    },
+    {
+      "type": "edit",
+      "id": "12968e0e77379880",
+      "item": {
+        "type": "markdown",
+        "id": "12968e0e77379880",
+        "text": "- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n"
+      },
+      "date": 1462166686309
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "afbf9a3b1799a2da"
+      },
+      "id": "afbf9a3b1799a2da",
+      "type": "add",
+      "after": "12968e0e77379880",
+      "date": 1462166689336
+    },
+    {
+      "type": "edit",
+      "id": "afbf9a3b1799a2da",
+      "item": {
+        "type": "markdown",
+        "id": "afbf9a3b1799a2da",
+        "text": "- [[Johnson (Johnse) Hatfield]]\n- [[Nancy McCoy]]\n- [[Union of Johnson & Nancy]]\n- [[Rebeca Browning]]\n- [[Union of Johnson & Rebeca]]\n- [[Roxie Browning]]\n- [[Union of Johnson & Roxie]]\n- [[Nettie Toler]]\n- [[Union of Johnson & Nettie]]\n- [[Robert E. Lee Hatfield]]\n- [[Mariah Wolford]]\n- [[Union of Robert & Mariah]]\n- [[Nancy Hatfield]]\n- [[John Vance]]\n- [[Union of John & Nancy]]\n- [[Charlie Mullens]]\n- [[Union of Charlie & Nancy]]\n- [[Elliott Rutherford Hatfield]]\n- [[Margaret Shindler]]\n- [[Union of Elliott & Margaret]]\n- [[Mary Hatfield]]\n- [[Frank Howes]]\n- [[Union of Frank & Mary]]\n- [[Elizabeth Hatfield]]\n- [[John Caldwell]]\n- [[Union of John & Elizabeth]]\n- [[Elias Hatfield]]\n- [[Peggy Simple]]\n- [[Union of Elias & Peggy]]\n- [[Detroit (Troy) Hatfield]]\n- [[Pearl]]\n- [[Union of Detroit & Pearl]]\n- [[Joseph Hatfield]]\n- [[Grace Ferrell]]\n- [[Union of Joseph & Grace]]\n- [[Rosanda Hatfield]]\n- [[Marion Browing]]\n- [[Union of Rosanda & Marion]]\n- [[Willis Wilson Hatfield]]\n- [[Lakie Maynor]]\n- [[Union of Willis & Lakie]]\n- [[Ida Chafin]]\n- [[Union of Willis & Ida]]\n- [[Tennyson (Tennis) Hatfield]]\n- [[Lettie Hunter]]\n- [[Union of Tennyson & Lettie]]\n- [[Sadie Walters]]\n- [[Union of Tennyson & Sadie]]\n- [[Margaret]]\n- [[Union of Tennyson & Margaret]]"
+      },
+      "date": 1462166694773
+    },
+    {
+      "type": "edit",
+      "id": "12968e0e77379880",
+      "item": {
+        "type": "markdown",
+        "id": "12968e0e77379880",
+        "text": "- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Union of Plyant & Victoria]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n"
+      },
+      "date": 1462166786271
+    },
+    {
+      "type": "edit",
+      "id": "12968e0e77379880",
+      "item": {
+        "type": "markdown",
+        "id": "12968e0e77379880",
+        "text": "- [[Victoria Hatfield]]\n- [[Plyant Mahon]]\n- [[Union of Plyant & Victoria]]\n- [[Ellison Mounts Hatfield]]\n- [[Dr. Henry D. Hatfield]]\n- [[South Carolina Bronson]]\n- [[Union of Henry & South Carolina]]"
+      },
+      "date": 1462166851814
+    },
+    {
+      "type": "move",
+      "order": [
+        "a4ef633bc358fbbe",
+        "489348a3f94c84e2",
+        "05e2fa92643677ca",
+        "b3f9ec9e530ec9fc",
+        "77d2b38f58a10537",
+        "7ec4a5274ffb0119",
+        "12968e0e77379880",
+        "7b7d4e2d939ed3d1",
+        "afbf9a3b1799a2da"
+      ],
+      "id": "7b7d4e2d939ed3d1",
+      "date": 1462167684182
+    },
+    {
+      "type": "add",
+      "id": "1fa1f65a50d89a8f",
+      "item": {
+        "type": "paragraph",
+        "id": "1fa1f65a50d89a8f",
+        "text": "We represent a clan with pages for individuals and pages for their union, typically marriage. We add relevant subgraphs to each page and use additional tools to merge these into larger diagrams."
+      },
+      "after": "a4ef633bc358fbbe",
+      "date": 1462203024305
+    },
+    {
+      "type": "add",
+      "id": "f4e8429fab7eb6c2",
+      "item": {
+        "type": "paragraph",
+        "id": "f4e8429fab7eb6c2",
+        "text": "We start with an inventory of the pages we will make from templates and then connect by drag and drop from one page to another. We organize our inventory breadth first by generation."
+      },
+      "after": "1fa1f65a50d89a8f",
+      "date": 1462203149411
+    },
+    {
+      "type": "move",
+      "order": [
+        "a4ef633bc358fbbe",
+        "1fa1f65a50d89a8f",
+        "489348a3f94c84e2",
+        "f4e8429fab7eb6c2",
+        "05e2fa92643677ca",
+        "b3f9ec9e530ec9fc",
+        "77d2b38f58a10537",
+        "7ec4a5274ffb0119",
+        "12968e0e77379880",
+        "7b7d4e2d939ed3d1",
+        "afbf9a3b1799a2da"
+      ],
+      "id": "f4e8429fab7eb6c2",
+      "date": 1462203157595
+    },
+    {
+      "type": "fork",
+      "site": "hatfield.asia.wiki.org",
+      "date": 1462203203369
+    }
+  ]
+}

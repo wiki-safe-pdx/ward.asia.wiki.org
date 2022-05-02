@@ -1,0 +1,259 @@
+{
+  "title": "Pod Charter",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "beee38d2772d8c30",
+      "text": "Pod charter for the Louisa Parsons Hopkins project:"
+    },
+    {
+      "type": "paragraph",
+      "id": "b67ceb0c8f90d794",
+      "text": "The Pod Leader is Mike Caulfield. To be added to this pod contact caulfield.mike at gmail.com with the site URL you would like added. Please make sure the site is focused on the project of the pod primarily, do not submit general purpose sites."
+    },
+    {
+      "type": "paragraph",
+      "id": "34e0aa045d472f57",
+      "text": "Minimum expected contribution: You should write at least a few pieces each week. We expect about two hours of your time. But we're very happy if you give more than that."
+    },
+    {
+      "type": "paragraph",
+      "id": "96849358d1d99a5f",
+      "text": "Timeline: We're hoping to have enough to write the Lousia Parsons Hopkins article within three or four weeks. It could go longer but we need a bunch of material up by then."
+    },
+    {
+      "type": "paragraph",
+      "id": "dd38e467793c30a4",
+      "text": "Language: One goal of this is to produce a resource/update Wikipedia, so while we're not offended by swearing, it does end up being one more thing to edit out. Plus, wouldn't it be neat if this could be used by K-12 students as well? "
+    },
+    {
+      "type": "paragraph",
+      "id": "aafe150a3a93c372",
+      "text": "Harrassment: Report harrassment to the pod leader. Documented threats will result in immediate removal from the Pod Roster. Where appropriate, we will work with authorities to identify harrassers, including divulging the email associated with the account and turning over access logs. We may also share information about harrassers with other Pod Leaders. "
+    },
+    {
+      "type": "paragraph",
+      "id": "35ee3956171b0a60",
+      "text": "Topicality: We love both the topical and the tangential. Pursue the tangential if that's where your heart takes you. However if you repeatedly post things completely unconnected to the topic you'll be removed from the roster. "
+    },
+    {
+      "type": "paragraph",
+      "id": "0b09080e4cea8d1f",
+      "text": "Style Guide: We follow federated wiki style. Internal \"wiki\" links are inline. External links are placed at the end of the paragraph and identified by the platform linked to, not the website. We try to keep text relatively free of formatting and we link but do not Overlink."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Pod Charter",
+        "story": []
+      },
+      "date": 1433533027918
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "beee38d2772d8c30"
+      },
+      "id": "beee38d2772d8c30",
+      "type": "add",
+      "date": 1433533029273
+    },
+    {
+      "type": "edit",
+      "id": "beee38d2772d8c30",
+      "item": {
+        "type": "paragraph",
+        "id": "beee38d2772d8c30",
+        "text": "Pod charter for the Louisa Parsons Hopkins project:"
+      },
+      "date": 1433533060425
+    },
+    {
+      "type": "add",
+      "id": "34e0aa045d472f57",
+      "item": {
+        "type": "paragraph",
+        "id": "34e0aa045d472f57",
+        "text": "Minimum expected contribution: You should write at least a few pieces each week. We expect about two hours of your time. "
+      },
+      "after": "beee38d2772d8c30",
+      "date": 1433533144961
+    },
+    {
+      "type": "add",
+      "id": "96849358d1d99a5f",
+      "item": {
+        "type": "paragraph",
+        "id": "96849358d1d99a5f",
+        "text": "Timeline"
+      },
+      "after": "34e0aa045d472f57",
+      "date": 1433533179548
+    },
+    {
+      "type": "edit",
+      "id": "34e0aa045d472f57",
+      "item": {
+        "type": "paragraph",
+        "id": "34e0aa045d472f57",
+        "text": "Minimum expected contribution: You should write at least a few pieces each week. We expect about two hours of your time. But we're very happy if you give more than that."
+      },
+      "date": 1433533198977
+    },
+    {
+      "type": "edit",
+      "id": "96849358d1d99a5f",
+      "item": {
+        "type": "paragraph",
+        "id": "96849358d1d99a5f",
+        "text": "Timeline: We're hoping to have enough to write the Lousia Parsons Hopkins article within three or four weeks. It could go longer but we need a bunch of material up by then."
+      },
+      "date": 1433533347823
+    },
+    {
+      "type": "add",
+      "id": "dd38e467793c30a4",
+      "item": {
+        "type": "paragraph",
+        "id": "dd38e467793c30a4",
+        "text": "Language: One goal of this is to produce a resource/update Wikipedia, so while we're not offended by swearing, it does end up being one more thing to edit out. Plus, wouldn't it be neat if this could be used by K-12 students as well? "
+      },
+      "after": "96849358d1d99a5f",
+      "date": 1433533476596
+    },
+    {
+      "type": "add",
+      "id": "aafe150a3a93c372",
+      "item": {
+        "type": "paragraph",
+        "id": "aafe150a3a93c372",
+        "text": "Harrassment: Report harrassment to the Pod leader. Documented threats will result in immediate removal from the Pod Roster. "
+      },
+      "after": "dd38e467793c30a4",
+      "date": 1433533575027
+    },
+    {
+      "type": "edit",
+      "id": "aafe150a3a93c372",
+      "item": {
+        "type": "paragraph",
+        "id": "aafe150a3a93c372",
+        "text": "Harrassment: Report harrassment to the pod leader. Documented threats will result in immediate removal from the Pod Roster. "
+      },
+      "date": 1433533613074
+    },
+    {
+      "type": "edit",
+      "id": "aafe150a3a93c372",
+      "item": {
+        "type": "paragraph",
+        "id": "aafe150a3a93c372",
+        "text": "Harrassment: Report harrassment to the pod leader. Documented threats will result in immediate removal from the Pod Roster. Where appropriate, matters will be referred to the authorities as well. "
+      },
+      "date": 1433533660386
+    },
+    {
+      "type": "edit",
+      "id": "aafe150a3a93c372",
+      "item": {
+        "type": "paragraph",
+        "id": "aafe150a3a93c372",
+        "text": "Harrassment: Report harrassment to the pod leader. Documented threats will result in immediate removal from the Pod Roster. Where appropriate, we will work with authorities to identify harrassers, including divulging the email associated with the account and turning over access logs. "
+      },
+      "date": 1433533793644
+    },
+    {
+      "type": "edit",
+      "id": "aafe150a3a93c372",
+      "item": {
+        "type": "paragraph",
+        "id": "aafe150a3a93c372",
+        "text": "Harrassment: Report harrassment to the pod leader. Documented threats will result in immediate removal from the Pod Roster. Where appropriate, we will work with authorities to identify harrassers, including divulging the email associated with the account and turning over access logs. We may also share information about harrassers with other Pod Leaders. "
+      },
+      "date": 1433533853225
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "35ee3956171b0a60"
+      },
+      "id": "35ee3956171b0a60",
+      "type": "add",
+      "after": "aafe150a3a93c372",
+      "date": 1433533873785
+    },
+    {
+      "type": "edit",
+      "id": "35ee3956171b0a60",
+      "item": {
+        "type": "paragraph",
+        "id": "35ee3956171b0a60",
+        "text": "Topicality: We love the topical and the tangential. Pursue the tangential if that's where your heart takes you. However if you repeatedly post things completely unconnected to the topic you'll be removed from the roster. "
+      },
+      "date": 1433533978332
+    },
+    {
+      "type": "add",
+      "id": "0b09080e4cea8d1f",
+      "item": {
+        "type": "paragraph",
+        "id": "0b09080e4cea8d1f",
+        "text": "Style Guide: We follow federated wiki style. Internal \"wiki\" links are inline. External links are placed at the end of the paragraph and identified by the platform linked to, not the website. "
+      },
+      "after": "35ee3956171b0a60",
+      "date": 1433534102534
+    },
+    {
+      "type": "edit",
+      "id": "0b09080e4cea8d1f",
+      "item": {
+        "type": "paragraph",
+        "id": "0b09080e4cea8d1f",
+        "text": "Style Guide: We follow federated wiki style. Internal \"wiki\" links are inline. External links are placed at the end of the paragraph and identified by the platform linked to, not the website. We try to keep text relatively free of formatting and we link but do not Overlink."
+      },
+      "date": 1433534137178
+    },
+    {
+      "type": "edit",
+      "id": "35ee3956171b0a60",
+      "item": {
+        "type": "paragraph",
+        "id": "35ee3956171b0a60",
+        "text": "Topicality: We love both the topical and the tangential. Pursue the tangential if that's where your heart takes you. However if you repeatedly post things completely unconnected to the topic you'll be removed from the roster. "
+      },
+      "date": 1433534178601
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "b67ceb0c8f90d794",
+        "text": "The Pod Leader is Mike Caulfield. To be added to this pod contact caulfield.mike at gmail.com with the site URL you would like added. Please make sure the site is focused on the project of the pod primarily, do not submit general purpose sites."
+      },
+      "id": "b67ceb0c8f90d794",
+      "date": 1433772021941
+    },
+    {
+      "type": "move",
+      "order": [
+        "beee38d2772d8c30",
+        "b67ceb0c8f90d794",
+        "34e0aa045d472f57",
+        "96849358d1d99a5f",
+        "dd38e467793c30a4",
+        "aafe150a3a93c372",
+        "35ee3956171b0a60",
+        "0b09080e4cea8d1f"
+      ],
+      "id": "beee38d2772d8c30",
+      "date": 1433772024915
+    },
+    {
+      "type": "fork",
+      "site": "lph.mike.asia.wiki.org",
+      "date": 1513525425135
+    }
+  ]
+}

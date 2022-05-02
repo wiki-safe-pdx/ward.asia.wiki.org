@@ -1,0 +1,495 @@
+{
+  "title": "Annotate Yellow Halo",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9587ff09e093f409",
+      "text": "We sketch an idea for an escape from  the confusing yellow halo. But also, did you know that the reason for the halo is often recorded in the journal as it has been here?"
+    },
+    {
+      "type": "paragraph",
+      "id": "c7b38fb8f19abd97",
+      "text": "My first edit here was saved locally because the implicit forked failed. See rev_28 right after the fork. Hovering over the timestamp reveals the additional information recorded in the journal action."
+    },
+    {
+      "type": "code",
+      "id": "7140402f1af41d7f",
+      "text": "    {\n      \"type\": \"edit\",\n      \"id\": \"9587ff09e093f409\",\n      \"item\": {\n        \"type\": \"paragraph\",\n        \"id\": \"9587ff09e093f409\",\n        \"text\": \"We sketch an idea for an escape from the confusing yellow halo.\"\n      },\n      \"date\": 1582503386570,\n      \"error\": {\n        \"type\": \"error\",\n        \"msg\": \"Forbidden\",\n        \"response\": \"Forbidden\"\n      }\n    }"
+    },
+    {
+      "type": "reference",
+      "id": "dd71b6e9b17bd335",
+      "site": "wiki.outlandish.academy",
+      "slug": "yellow-halo-of-death",
+      "title": "Yellow Halo of Death",
+      "text": "Sometimes a yellow halo will appear around your document. Other times you may find that your site has different content on your browser than on someone else's."
+    },
+    {
+      "type": "paragraph",
+      "id": "fe133f47539b5eed",
+      "text": "We propose adding a link within the halo that opens the [[Local Changes]] page. We also imagine adding a bit more explanation to that page, for example, pulling content from the explanations from [[Yellow Halo of Death]] and [[Asset Sharing Workflow]]"
+    },
+    {
+      "type": "html",
+      "id": "cd1ffaa48086a0bd",
+      "text": "<div>\n<p><img src=\"https://goals.pods.wiki.dbbs.co/assets/annotate-yellow-halo/Screenshot_2020-02-23%20Yellow%20Halo%20of%20Death.png\" style=\"width: 100%;\" >\n</p>\n<p>[https://goals.pods.wiki.dbbs.co/assets/annotate-yellow-halo/Screenshot_2020-02-23%20Yellow%20Halo%20of%20Death.png Screenshot]</p>\n</div>"
+    },
+    {
+      "type": "paragraph",
+      "id": "e36197c88d1e4b6a",
+      "text": "This would make it faster to undo or export a mistaken local edit. A slightly less direct but even more learnable would be to expose a more-info icon, usually a circle-i, on any visual form consciously rendered. We also intend to explain page providence in the hover text for the page flag. I notice that local storage pages fall short here."
+    },
+    {
+      "type": "paragraph",
+      "id": "2afd27b849505c4f",
+      "text": "It might take some front-end programming to include more-info icons in hover text. This investment will pay off as it approaches universality. "
+    },
+    {
+      "type": "paragraph",
+      "id": "506a87fb60625c4e",
+      "text": "With this sketch we also ask ourselves \"is this the right approach or the right direction?\" It risks being one maybe-bad abstraction growing around the sharp edges of our existing usability trap."
+    },
+    {
+      "type": "paragraph",
+      "id": "a5fcf9be41c144bb",
+      "text": "We created the sketch by hacking html and CSS in the firefox inspector. Here we share the markup and styles that achieved the appearance in the screenshot."
+    },
+    {
+      "type": "code",
+      "id": "c92a3f93c62ad2a7",
+      "text": "<div class=\"handle-parent\">...</div>\n<div class=\"page-meta\" style=\"position: relative;\">\n  <p style=\"position: absolute;right: 0;top: -30pt;font-size: small;font-style: italic;\"><a href=\"\">What does this yellow halo mean?</a></p>\n</div>"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Annotate Yellow Halo",
+        "story": []
+      },
+      "date": 1582494508750
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9587ff09e093f409"
+      },
+      "id": "9587ff09e093f409",
+      "type": "add",
+      "date": 1582494510757
+    },
+    {
+      "type": "edit",
+      "id": "9587ff09e093f409",
+      "item": {
+        "type": "paragraph",
+        "id": "9587ff09e093f409",
+        "text": "We sketch an idea for an escape from [[Yellow Halo of Death]]"
+      },
+      "date": 1582494574909
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c618492e3ff40ba7"
+      },
+      "id": "c618492e3ff40ba7",
+      "type": "add",
+      "after": "9587ff09e093f409",
+      "date": 1582494588963
+    },
+    {
+      "type": "edit",
+      "id": "c618492e3ff40ba7",
+      "item": {
+        "type": "assets",
+        "id": "c618492e3ff40ba7",
+        "text": "annotate-yellow-halo"
+      },
+      "date": 1582494628811
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a0bd9fd5027ebd3f"
+      },
+      "id": "a0bd9fd5027ebd3f",
+      "type": "add",
+      "after": "c618492e3ff40ba7",
+      "date": 1582494654238
+    },
+    {
+      "type": "edit",
+      "id": "a0bd9fd5027ebd3f",
+      "item": {
+        "type": "factory",
+        "id": "a0bd9fd5027ebd3f",
+        "prompt": "Unexpected Item\nWe can't make sense of the drop.\nTry something else or see [[About Factory Plugin]].",
+        "punt": {
+          "url": "https://goals.pods.wiki.dbbs.co/assets/annotate-yellow-halo/Screenshot_2020-02-23%20Yellow%20Halo%20of%20Death.png",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0"
+        }
+      },
+      "date": 1582494665985
+    },
+    {
+      "type": "remove",
+      "id": "a0bd9fd5027ebd3f",
+      "date": 1582494677485
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cd1ffaa48086a0bd"
+      },
+      "id": "cd1ffaa48086a0bd",
+      "type": "add",
+      "after": "c618492e3ff40ba7",
+      "date": 1582494681442
+    },
+    {
+      "type": "edit",
+      "id": "cd1ffaa48086a0bd",
+      "item": {
+        "type": "html",
+        "id": "cd1ffaa48086a0bd",
+        "text": "<p>\n<img src=\"\" style=\"width: 100%;\"\ncaption goes here\n</p>"
+      },
+      "date": 1582494730774
+    },
+    {
+      "type": "edit",
+      "id": "cd1ffaa48086a0bd",
+      "item": {
+        "type": "html",
+        "id": "cd1ffaa48086a0bd",
+        "text": "<p>\n<img src=\"https://goals.pods.wiki.dbbs.co/assets/annotate-yellow-halo/Screenshot_2020-02-23%20Yellow%20Halo%20of%20Death.png\" style=\"width: 100%;\"\ncaption goes here\n</p>"
+      },
+      "date": 1582494746294
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c92a3f93c62ad2a7"
+      },
+      "id": "c92a3f93c62ad2a7",
+      "type": "add",
+      "after": "cd1ffaa48086a0bd",
+      "date": 1582494819121
+    },
+    {
+      "type": "edit",
+      "id": "c92a3f93c62ad2a7",
+      "item": {
+        "type": "code",
+        "id": "c92a3f93c62ad2a7",
+        "text": "<div class=\"page-meta\" style=\"position: relative;\">\n  <p style=\"position: absolute;right: 0;top: -30pt;font-size: small;font-style: italic;\"><a href=\"\">What does this yellow halo mean?</a></p>\n</div>"
+      },
+      "date": 1582494831974
+    },
+    {
+      "type": "edit",
+      "id": "c92a3f93c62ad2a7",
+      "item": {
+        "type": "code",
+        "id": "c92a3f93c62ad2a7",
+        "text": "<div class=\"handle-parent\">...</div>\n<div class=\"page-meta\" style=\"position: relative;\">\n  <p style=\"position: absolute;right: 0;top: -30pt;font-size: small;font-style: italic;\"><a href=\"\">What does this yellow halo mean?</a></p>\n</div>"
+      },
+      "date": 1582494873643
+    },
+    {
+      "type": "add",
+      "id": "fe133f47539b5eed",
+      "item": {
+        "type": "paragraph",
+        "id": "fe133f47539b5eed",
+        "text": "We propose adding a link within the halo that opens the [[Local Changes]] page. We also imagine adding a bit more explanation to that page, for example, pulling content from the explanations from [[Yellow Halo of Death]]"
+      },
+      "after": "9587ff09e093f409",
+      "date": 1582494965040
+    },
+    {
+      "type": "edit",
+      "id": "fe133f47539b5eed",
+      "item": {
+        "type": "paragraph",
+        "id": "fe133f47539b5eed",
+        "text": "We propose adding a link within the halo that opens the [[Local Changes]] page. We also imagine adding a bit more explanation to that page, for example, pulling content from the explanations from [[Yellow Halo of Death]]."
+      },
+      "date": 1582494969402
+    },
+    {
+      "type": "add",
+      "id": "e36197c88d1e4b6a",
+      "item": {
+        "type": "paragraph",
+        "id": "e36197c88d1e4b6a",
+        "text": "This would make it faster to undo or export a mistaken local edit."
+      },
+      "after": "fe133f47539b5eed",
+      "date": 1582495016333
+    },
+    {
+      "type": "add",
+      "id": "506a87fb60625c4e",
+      "item": {
+        "type": "paragraph",
+        "id": "506a87fb60625c4e",
+        "text": "This risks being one bad abstraction growing around the sharp edges of an existing usability trap."
+      },
+      "after": "e36197c88d1e4b6a",
+      "date": 1582495058743
+    },
+    {
+      "type": "edit",
+      "id": "506a87fb60625c4e",
+      "item": {
+        "type": "paragraph",
+        "id": "506a87fb60625c4e",
+        "text": "With this sketch we also ask ourselves \"is this the right approach or the right direction?\" It risks being one maybe-bad abstraction growing around the sharp edges of our existing usability trap."
+      },
+      "date": 1582496577703
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dd71b6e9b17bd335"
+      },
+      "id": "dd71b6e9b17bd335",
+      "type": "add",
+      "after": "c92a3f93c62ad2a7",
+      "date": 1582496580406
+    },
+    {
+      "type": "edit",
+      "id": "dd71b6e9b17bd335",
+      "item": {
+        "type": "reference",
+        "id": "dd71b6e9b17bd335",
+        "site": "wiki.outlandish.academy",
+        "slug": "yellow-halo-of-death",
+        "title": "Yellow Halo of Death",
+        "text": "Sometimes a yellow halo will appear around your document. Other times you may find that your site has different content on your browser than on someone else's."
+      },
+      "date": 1582496583937
+    },
+    {
+      "id": "dd71b6e9b17bd335",
+      "type": "move",
+      "order": [
+        "9587ff09e093f409",
+        "dd71b6e9b17bd335",
+        "fe133f47539b5eed",
+        "e36197c88d1e4b6a",
+        "506a87fb60625c4e",
+        "c618492e3ff40ba7",
+        "cd1ffaa48086a0bd",
+        "c92a3f93c62ad2a7"
+      ],
+      "date": 1582496590722
+    },
+    {
+      "id": "cd1ffaa48086a0bd",
+      "type": "move",
+      "order": [
+        "9587ff09e093f409",
+        "dd71b6e9b17bd335",
+        "fe133f47539b5eed",
+        "cd1ffaa48086a0bd",
+        "e36197c88d1e4b6a",
+        "506a87fb60625c4e",
+        "c618492e3ff40ba7",
+        "c92a3f93c62ad2a7"
+      ],
+      "date": 1582496611922
+    },
+    {
+      "type": "edit",
+      "id": "cd1ffaa48086a0bd",
+      "item": {
+        "type": "html",
+        "id": "cd1ffaa48086a0bd",
+        "text": "<div>\n<p><img src=\"https://goals.pods.wiki.dbbs.co/assets/annotate-yellow-halo/Screenshot_2020-02-23%20Yellow%20Halo%20of%20Death.png\" style=\"width: 100%;\" >\n</p>\n<p>caption goes here</p>\n</div>"
+      },
+      "date": 1582496661216
+    },
+    {
+      "type": "edit",
+      "id": "cd1ffaa48086a0bd",
+      "item": {
+        "type": "html",
+        "id": "cd1ffaa48086a0bd",
+        "text": "<div>\n<p><img src=\"https://goals.pods.wiki.dbbs.co/assets/annotate-yellow-halo/Screenshot_2020-02-23%20Yellow%20Halo%20of%20Death.png\" style=\"width: 100%;\" >\n</p>\n<p>[https://goals.pods.wiki.dbbs.co/assets/annotate-yellow-halo/Screenshot_2020-02-23%20Yellow%20Halo%20of%20Death.png Screenshot]</p>\n</div>"
+      },
+      "date": 1582496730042
+    },
+    {
+      "id": "c92a3f93c62ad2a7",
+      "type": "move",
+      "order": [
+        "9587ff09e093f409",
+        "dd71b6e9b17bd335",
+        "fe133f47539b5eed",
+        "cd1ffaa48086a0bd",
+        "e36197c88d1e4b6a",
+        "506a87fb60625c4e",
+        "c92a3f93c62ad2a7",
+        "c618492e3ff40ba7"
+      ],
+      "date": 1582496779994
+    },
+    {
+      "type": "add",
+      "id": "a5fcf9be41c144bb",
+      "item": {
+        "type": "paragraph",
+        "id": "a5fcf9be41c144bb",
+        "text": "We created the sketch by hacking html and CSS in the firefox inspector. Here we share the markup and styles that achieved the appearance in the screenshot."
+      },
+      "after": "506a87fb60625c4e",
+      "date": 1582496833905
+    },
+    {
+      "type": "fork",
+      "site": "goals.pods.wiki.dbbs.co",
+      "date": 1582503387121
+    },
+    {
+      "type": "edit",
+      "id": "9587ff09e093f409",
+      "item": {
+        "type": "paragraph",
+        "id": "9587ff09e093f409",
+        "text": "We sketch an idea for an escape from  the confusing yellow halo."
+      },
+      "date": 1582503386570,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1582503404057
+    },
+    {
+      "type": "edit",
+      "id": "9587ff09e093f409",
+      "item": {
+        "type": "paragraph",
+        "id": "9587ff09e093f409",
+        "text": "We sketch an idea for an escape from  the confusing yellow halo. But also, did you know that the reason for the halo is often recorded in the journal as it has been here?"
+      },
+      "date": 1582503487531
+    },
+    {
+      "type": "add",
+      "id": "c7b38fb8f19abd97",
+      "item": {
+        "type": "paragraph",
+        "id": "c7b38fb8f19abd97",
+        "text": "My first edit here was saved locally because the implicit forked failed. "
+      },
+      "after": "9587ff09e093f409",
+      "date": 1582503627920
+    },
+    {
+      "type": "edit",
+      "id": "c7b38fb8f19abd97",
+      "item": {
+        "type": "paragraph",
+        "id": "c7b38fb8f19abd97",
+        "text": "My first edit here was saved locally because the implicit forked failed. See rev_28 right after the fork. Hovering over the timestamp reveals the additional information recorded in the journal action."
+      },
+      "date": 1582503684837
+    },
+    {
+      "type": "add",
+      "id": "7140402f1af41d7f",
+      "item": {
+        "type": "factory",
+        "id": "7140402f1af41d7f",
+        "text": "    {\n      \"type\": \"edit\",\n      \"id\": \"9587ff09e093f409\",\n      \"item\": {\n        \"type\": \"paragraph\",\n        \"id\": \"9587ff09e093f409\",\n        \"text\": \"We sketch an idea for an escape from  the confusing yellow halo.\"\n      },\n      \"date\": 1582503386570,\n      \"error\": {\n        \"type\": \"error\",\n        \"msg\": \"Forbidden\",\n        \"response\": \"Forbidden\"\n      }\n    },"
+      },
+      "after": "c7b38fb8f19abd97",
+      "date": 1582503777199
+    },
+    {
+      "type": "edit",
+      "id": "7140402f1af41d7f",
+      "item": {
+        "type": "code",
+        "id": "7140402f1af41d7f",
+        "text": "    {\n      \"type\": \"edit\",\n      \"id\": \"9587ff09e093f409\",\n      \"item\": {\n        \"type\": \"paragraph\",\n        \"id\": \"9587ff09e093f409\",\n        \"text\": \"We sketch an idea for an escape from  the confusing yellow halo.\"\n      },\n      \"date\": 1582503386570,\n      \"error\": {\n        \"type\": \"error\",\n        \"msg\": \"Forbidden\",\n        \"response\": \"Forbidden\"\n      }\n    }"
+      },
+      "date": 1582503786115
+    },
+    {
+      "type": "edit",
+      "id": "7140402f1af41d7f",
+      "item": {
+        "type": "code",
+        "id": "7140402f1af41d7f",
+        "text": "    {\n      \"type\": \"edit\",\n      \"id\": \"9587ff09e093f409\",\n      \"item\": {\n        \"type\": \"paragraph\",\n        \"id\": \"9587ff09e093f409\",\n        \"text\": \"We sketch an idea for an escape from the confusing yellow halo.\"\n      },\n      \"date\": 1582503386570,\n      \"error\": {\n        \"type\": \"error\",\n        \"msg\": \"Forbidden\",\n        \"response\": \"Forbidden\"\n      }\n    }"
+      },
+      "date": 1582503821080
+    },
+    {
+      "type": "edit",
+      "id": "fe133f47539b5eed",
+      "item": {
+        "type": "paragraph",
+        "id": "fe133f47539b5eed",
+        "text": "We propose adding a link within the halo that opens the [[Local Changes]] page. We also imagine adding a bit more explanation to that page, for example, pulling content from the explanations from [[Yellow Halo of Death]] and [[Asset Sharing Workflow]]"
+      },
+      "date": 1582504016236
+    },
+    {
+      "type": "edit",
+      "id": "e36197c88d1e4b6a",
+      "item": {
+        "type": "paragraph",
+        "id": "e36197c88d1e4b6a",
+        "text": "This would make it faster to undo or export a mistaken local edit. A slightly less direct but even more learnable would be to expose a more-info icon, usually a circle-i, on any visual form consciously rendered. We also intend to explain page providence in the hover text for the page flag. I notice that local storage pages fall short here."
+      },
+      "date": 1582504333650
+    },
+    {
+      "type": "add",
+      "id": "2afd27b849505c4f",
+      "item": {
+        "type": "paragraph",
+        "id": "2afd27b849505c4f",
+        "text": "It might take some front-end programming to include more-info icons in hover text. This investment will pay off as it approaches universality. "
+      },
+      "after": "e36197c88d1e4b6a",
+      "date": 1582504397669
+    },
+    {
+      "type": "edit",
+      "id": "7140402f1af41d7f",
+      "item": {
+        "type": "code",
+        "id": "7140402f1af41d7f",
+        "text": "    {\n      \"type\": \"edit\",\n      \"id\": \"9587ff09e093f409\",\n      \"item\": {\n        \"type\": \"paragraph\",\n        \"id\": \"9587ff09e093f409\",\n        \"text\": \"We sketch an idea for an escape from the confusing yellow halo.\"\n      },\n      \"date\": 1582503386570,\n      <font color=red>\"error\": {\n        \"type\": \"error\",\n        \"msg\": \"Forbidden\",\n        \"response\": \"Forbidden\"\n      }\n    }"
+      },
+      "date": 1582504424225
+    },
+    {
+      "type": "edit",
+      "id": "7140402f1af41d7f",
+      "item": {
+        "type": "code",
+        "id": "7140402f1af41d7f",
+        "text": "    {\n      \"type\": \"edit\",\n      \"id\": \"9587ff09e093f409\",\n      \"item\": {\n        \"type\": \"paragraph\",\n        \"id\": \"9587ff09e093f409\",\n        \"text\": \"We sketch an idea for an escape from the confusing yellow halo.\"\n      },\n      \"date\": 1582503386570,\n      \"error\": {\n        \"type\": \"error\",\n        \"msg\": \"Forbidden\",\n        \"response\": \"Forbidden\"\n      }\n    }"
+      },
+      "date": 1582504433713
+    },
+    {
+      "type": "remove",
+      "id": "c618492e3ff40ba7",
+      "date": 1582504470807
+    }
+  ]
+}

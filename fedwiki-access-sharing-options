@@ -1,0 +1,299 @@
+{
+  "title": "FedWiki access sharing options",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "6ac3c283158c8ba3",
+      "text": "So far, I've worked with a publicly accessible version of SFW hosted on my DigitalOcean account (where I'm currently writing this), as well as a localhost install on my laptop -- which has been like an Evernote replacement for me."
+    },
+    {
+      "type": "paragraph",
+      "id": "b65692d1068dae0d",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "id": "536c193dccf803b1",
+      "text": "Two additional options that would be be really helpful are:"
+    },
+    {
+      "type": "paragraph",
+      "id": "55f20b810f446239",
+      "text": "1) The ability to access a private wiki across multiple computers that I use.  I have a hunch that I can pull this off by putting the SFW data files in Dropbox, but I haven't confirmed this yet."
+    },
+    {
+      "type": "paragraph",
+      "id": "978e5392f4634c63",
+      "text": "2) The ability to privately collaborate with a group of specified users -- basically following the same model as a private github repo that others can be invited into.  SFW is already using Mozilla Persona to verify a user's right to edit a page, so maybe this could be leveraged to limit viewing access as well."
+    },
+    {
+      "type": "paragraph",
+      "id": "2453c2ec6de3d5dd",
+      "text": "(I realize that option 1 is really a subset of option 2, but it might be a stopgap approach that doesn't require any changes to SFW itself.)"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "FedWiki access sharing options",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "6ac3c283158c8ba3",
+            "text": "So far, I've worked with a publicly accessible version of SFW hosted on my DigitalOcean account (where I'm currently writing this), as well as a localhost install on my laptop -- which has been like an Evernote replacement for me."
+          },
+          {
+            "type": "paragraph",
+            "id": "b65692d1068dae0d",
+            "text": " "
+          },
+          {
+            "type": "paragraph",
+            "id": "7432c2d72b040933",
+            "text": "(post in progress...Life calls!)"
+          },
+          {
+            "type": "paragraph",
+            "id": "536c193dccf803b1",
+            "text": "Two additional options that would be be really helpful are:"
+          },
+          {
+            "type": "paragraph",
+            "id": "55f20b810f446239",
+            "text": "1) The ability to access a private wiki across multiple computers that I use.  I have a hunch that I can pull this off by putting the SFW data files in Dropbox, but I haven't confirmed this yet."
+          },
+          {
+            "type": "paragraph",
+            "id": "978e5392f4634c63",
+            "text": "2) "
+          }
+        ]
+      },
+      "date": 1420116470676
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "6ac3c283158c8ba3",
+        "text": "So far, I've worked with a publicly accessible version of SFW hosted on my DigitalOcean account (where I'm currently writing this), as well as a localhost install on my laptop -- which has been like an Evernote replacement for me."
+      },
+      "id": "6ac3c283158c8ba3",
+      "type": "add",
+      "date": 1420116476240
+    },
+    {
+      "type": "edit",
+      "id": "6ac3c283158c8ba3",
+      "item": {
+        "type": "paragraph",
+        "id": "6ac3c283158c8ba3",
+        "text": "So far, I've worked with a publicly accessible version of SFW hosted on my DigitalOcean account (where I'm currently writing this), as well as a localhost install on my laptop -- which has been like an Evernote replacement for me."
+      },
+      "date": 1420116653905
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "b65692d1068dae0d",
+        "text": " "
+      },
+      "id": "b65692d1068dae0d",
+      "type": "add",
+      "after": "6ac3c283158c8ba3",
+      "date": 1420116653931
+    },
+    {
+      "type": "edit",
+      "id": "b65692d1068dae0d",
+      "item": {
+        "type": "paragraph",
+        "id": "b65692d1068dae0d",
+        "text": " "
+      },
+      "date": 1420116705376
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "b096b59dcd1bfa28",
+        "text": ""
+      },
+      "id": "b096b59dcd1bfa28",
+      "type": "add",
+      "after": "b65692d1068dae0d",
+      "date": 1420116705394
+    },
+    {
+      "type": "remove",
+      "id": "b096b59dcd1bfa28",
+      "date": 1420116714245
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "536c193dccf803b1",
+        "text": "Two additional options that would be be really helpful are:"
+      },
+      "id": "536c193dccf803b1",
+      "type": "add",
+      "after": "b65692d1068dae0d",
+      "date": 1420117051012
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "7432c2d72b040933",
+        "text": "(post in progress...Life calls!)"
+      },
+      "id": "7432c2d72b040933",
+      "type": "add",
+      "after": "b65692d1068dae0d",
+      "date": 1420117051010,
+      "error": {
+        "type": "error",
+        "msg": "",
+        "response": ""
+      }
+    },
+    {
+      "type": "edit",
+      "id": "536c193dccf803b1",
+      "item": {
+        "type": "paragraph",
+        "id": "536c193dccf803b1",
+        "text": "Two additional options that would be be really helpful are:"
+      },
+      "date": 1420117231083
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "55f20b810f446239",
+        "text": "1) The ability to access a private wiki across multiple computers that I use.  I have a hunch that I can pull this off by putting the SFW data files in Dropbox, but I haven't confirmed this yet."
+      },
+      "id": "55f20b810f446239",
+      "type": "add",
+      "after": "536c193dccf803b1",
+      "date": 1420117231106
+    },
+    {
+      "type": "edit",
+      "id": "55f20b810f446239",
+      "item": {
+        "type": "paragraph",
+        "id": "55f20b810f446239",
+        "text": "1) The ability to access a private wiki across multiple computers that I use.  I have a hunch that I can pull this off by putting the SFW data files in Dropbox, but I haven't confirmed this yet."
+      },
+      "date": 1420117308924
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "978e5392f4634c63",
+        "text": "2) "
+      },
+      "id": "978e5392f4634c63",
+      "type": "add",
+      "after": "55f20b810f446239",
+      "date": 1420117308954
+    },
+    {
+      "type": "edit",
+      "id": "978e5392f4634c63",
+      "item": {
+        "type": "paragraph",
+        "id": "978e5392f4634c63",
+        "text": "2) "
+      },
+      "date": 1420117318406
+    },
+    {
+      "type": "fork",
+      "date": 1420117403853
+    },
+    {
+      "type": "edit",
+      "id": "978e5392f4634c63",
+      "item": {
+        "type": "paragraph",
+        "id": "978e5392f4634c63",
+        "text": "2) The ability to privately collaborate with a group of specified users -- basically following the same model as a private github repo that others can be invited into."
+      },
+      "date": 1420117525395
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "645994e0a88eb281",
+        "text": ""
+      },
+      "id": "645994e0a88eb281",
+      "type": "add",
+      "after": "978e5392f4634c63",
+      "date": 1420117525411
+    },
+    {
+      "type": "remove",
+      "id": "645994e0a88eb281",
+      "date": 1420117565987
+    },
+    {
+      "type": "edit",
+      "id": "978e5392f4634c63",
+      "item": {
+        "type": "paragraph",
+        "id": "978e5392f4634c63",
+        "text": "2) The ability to privately collaborate with a group of specified users -- basically following the same model as a private github repo that others can be invited into.  SFW is already using Mozilla Persona to verify a user's right to edit a page, so maybe this could be leveraged to limit viewing access as well."
+      },
+      "date": 1420117778711
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "2453c2ec6de3d5dd",
+        "text": " "
+      },
+      "id": "2453c2ec6de3d5dd",
+      "type": "add",
+      "after": "978e5392f4634c63",
+      "date": 1420117778729
+    },
+    {
+      "type": "edit",
+      "id": "2453c2ec6de3d5dd",
+      "item": {
+        "type": "paragraph",
+        "id": "2453c2ec6de3d5dd",
+        "text": "(I realize that option 1 is really a subset of option 2, but it might be a stopgap approach that doesn't require any changes to SFW itself.)"
+      },
+      "date": 1420117878623
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "8083b486e2d8f0a6",
+        "text": ""
+      },
+      "id": "8083b486e2d8f0a6",
+      "type": "add",
+      "after": "2453c2ec6de3d5dd",
+      "date": 1420117878645
+    },
+    {
+      "type": "remove",
+      "id": "8083b486e2d8f0a6",
+      "date": 1420117881351
+    },
+    {
+      "type": "remove",
+      "id": "7432c2d72b040933",
+      "date": 1420117883823
+    },
+    {
+      "type": "fork",
+      "site": "fedwiki.jeffist.com",
+      "date": 1420127255561
+    }
+  ]
+}

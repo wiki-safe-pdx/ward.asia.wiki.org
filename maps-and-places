@@ -1,0 +1,621 @@
+{
+  "title": "Maps and Places",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "a924f39722dea5b8",
+      "text": "We've begun some work on the long neglected map plugin. Here we consider how maps might interact with the rest of the lineup, neighborhood and federation."
+    },
+    {
+      "type": "markdown",
+      "id": "02a934e23b7a2f59",
+      "text": "# Plugin"
+    },
+    {
+      "type": "paragraph",
+      "id": "013d553c663eab0f",
+      "text": "Fedwiki. [https://github.com/fedwiki/wiki-plugin-map github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "6c87cf60d87a1fb5",
+      "text": "Clément Renaud. [https://github.com/clemsos/wiki-plugin-map github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "028f8229ec2c0ba8",
+      "text": "[[About Map Plugin]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "cfa8c81d67aa3440",
+      "text": "[[Testing Map Enhancements]]"
+    },
+    {
+      "type": "markdown",
+      "id": "1c1f42e6d5fd8191",
+      "text": "# Experiments"
+    },
+    {
+      "type": "paragraph",
+      "id": "9266554a531cd082",
+      "text": "I'll be remaking some old map based experiments from the early web in order to see if our result can now be easier and better. "
+    },
+    {
+      "type": "paragraph",
+      "id": "9237a37006be71cd",
+      "text": "[[Portland Confluences]] that I've visited."
+    },
+    {
+      "type": "paragraph",
+      "id": "36475912d183b403",
+      "text": "[[2001 Geocaches]] that I've placed."
+    },
+    {
+      "type": "paragraph",
+      "id": "74a0fd82cd56c7e7",
+      "text": "[[Ward's Home Page]] where I've lived all my life."
+    },
+    {
+      "type": "paragraph",
+      "id": "90dfbbd81932e216",
+      "text": "[[Hip Portland]] neighborhoods."
+    },
+    {
+      "type": "paragraph",
+      "id": "f302773f6c1bc7fc",
+      "text": "[[About Bikeshare Plugin]] for a source of markers."
+    },
+    {
+      "type": "markdown",
+      "id": "10b9cdf0dcac91fa",
+      "text": "# Issues"
+    },
+    {
+      "type": "paragraph",
+      "id": "4aee2c6ef4820f52",
+      "text": "We consider how geojson could be passed around between items and within the neighborhood. [https://github.com/clemsos/wiki-plugin-map/issues/1#issuecomment-227782845 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "730885c23c4f281f",
+      "text": "Could a video be annotated with shot locations such that a map would respond as the video plays? Could the map reposition the video? Some presentation players do this with speaker video and their slides."
+    },
+    {
+      "type": "paragraph",
+      "id": "f058da35dbfa6f73",
+      "text": "The d3 visualization library has well developed mapping capability. Can we make our intermediate form compatible with these maps? Would they interact in similar ways?"
+    },
+    {
+      "type": "markdown",
+      "id": "a1b15e8498d3cded",
+      "text": "# Inspiration"
+    },
+    {
+      "type": "paragraph",
+      "id": "79958734eb739082",
+      "text": "We note here interactive map integrations of roughly the same complexity as wiki."
+    },
+    {
+      "type": "paragraph",
+      "id": "bef3765a1e96470d",
+      "text": "[[Map Me]] provides the background map for a story told chronologically in text and image. Map both affects and reflects the story."
+    },
+    {
+      "type": "paragraph",
+      "id": "755116da3a3ba42b",
+      "text": "[[Story Maps]] by ESRI and open sourced using sometimes Leaflet and open-source data."
+    },
+    {
+      "type": "paragraph",
+      "id": "f305c96753c57b39",
+      "text": "[[Data Wrapper]] provides web construction of d3 maps along with other common charts. Created by journalists and open-sourced. [https://github.com/datawrapper/datawrapper github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Maps and Places",
+        "story": []
+      },
+      "date": 1466870007104
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a924f39722dea5b8"
+      },
+      "id": "a924f39722dea5b8",
+      "type": "add",
+      "date": 1466870014304
+    },
+    {
+      "type": "edit",
+      "id": "a924f39722dea5b8",
+      "item": {
+        "type": "paragraph",
+        "id": "a924f39722dea5b8",
+        "text": "We've begun some work on the long neglected map plugin. Here we consider how maps might interact with the rest of the lineup, neighborhood and federation."
+      },
+      "date": 1466870072593
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bef3765a1e96470d"
+      },
+      "id": "bef3765a1e96470d",
+      "type": "add",
+      "after": "a924f39722dea5b8",
+      "date": 1466870336120
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[mapme.com]]"
+      },
+      "date": 1466870345739
+    },
+    {
+      "type": "add",
+      "id": "4aee2c6ef4820f52",
+      "item": {
+        "type": "paragraph",
+        "id": "4aee2c6ef4820f52",
+        "text": "We consider how geojson could be passed around between items and within the neighborhood. [https://github.com/clemsos/wiki-plugin-map/issues/1#issuecomment-227782845 github]"
+      },
+      "after": "a924f39722dea5b8",
+      "date": 1466871336982
+    },
+    {
+      "type": "add",
+      "id": "10b9cdf0dcac91fa",
+      "item": {
+        "type": "paragraph",
+        "id": "10b9cdf0dcac91fa",
+        "text": "# issues"
+      },
+      "after": "a924f39722dea5b8",
+      "date": 1466871356732
+    },
+    {
+      "type": "add",
+      "id": "a1b15e8498d3cded",
+      "item": {
+        "type": "paragraph",
+        "id": "a1b15e8498d3cded",
+        "text": "# inspiration"
+      },
+      "after": "4aee2c6ef4820f52",
+      "date": 1466871368622
+    },
+    {
+      "type": "add",
+      "id": "79958734eb739082",
+      "item": {
+        "type": "paragraph",
+        "id": "79958734eb739082",
+        "text": "We note here interactive map integrations of roughly the same complexity of wiki."
+      },
+      "after": "a1b15e8498d3cded",
+      "date": 1466871447959
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[mapme.com]] from a scout report review."
+      },
+      "date": 1466871469855
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[mapme.com]] provides the background map for a chronological story in text and image."
+      },
+      "date": 1466871612825
+    },
+    {
+      "type": "edit",
+      "id": "10b9cdf0dcac91fa",
+      "item": {
+        "type": "markdown",
+        "id": "10b9cdf0dcac91fa",
+        "text": "# issues"
+      },
+      "date": 1466871620174
+    },
+    {
+      "type": "edit",
+      "id": "a1b15e8498d3cded",
+      "item": {
+        "type": "markdown",
+        "id": "a1b15e8498d3cded",
+        "text": "# inspiration"
+      },
+      "date": 1466871622099
+    },
+    {
+      "type": "edit",
+      "id": "10b9cdf0dcac91fa",
+      "item": {
+        "type": "markdown",
+        "id": "10b9cdf0dcac91fa",
+        "text": "# Issues"
+      },
+      "date": 1466871648245
+    },
+    {
+      "type": "edit",
+      "id": "a1b15e8498d3cded",
+      "item": {
+        "type": "markdown",
+        "id": "a1b15e8498d3cded",
+        "text": "# Inspiration"
+      },
+      "date": 1466871654377
+    },
+    {
+      "type": "edit",
+      "id": "79958734eb739082",
+      "item": {
+        "type": "paragraph",
+        "id": "79958734eb739082",
+        "text": "We note here interactive map integrations of roughly the same complexity as wiki."
+      },
+      "date": 1466871667111
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[MapMe.com]] provides the background map for a chronological story in text and image."
+      },
+      "date": 1466871682768
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[MapMe.com]] provides the background map for a chronological story in text and image. Navigation affected and reflected."
+      },
+      "date": 1466872010835
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[MapMe.com]] provides the background map for a chronological story in text and image. Map affects and reflects the story."
+      },
+      "date": 1466872044915
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[MapMe.com]] provides the background map for a chronological story in text and image. Map both affects and reflects the story."
+      },
+      "date": 1466872073126
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[MapMe.com]] provides the background map for a story told chronologically in text and image. Map both affects and reflects the story."
+      },
+      "date": 1466872099590
+    },
+    {
+      "type": "add",
+      "id": "730885c23c4f281f",
+      "item": {
+        "type": "paragraph",
+        "id": "730885c23c4f281f",
+        "text": "Could a video be annotated with shot locations such that a map would respond as the video plays? Could the map reposition the video? Some presentation players do this with speaker video and their slides."
+      },
+      "after": "4aee2c6ef4820f52",
+      "date": 1466872397529
+    },
+    {
+      "type": "add",
+      "id": "f305c96753c57b39",
+      "item": {
+        "type": "paragraph",
+        "id": "f305c96753c57b39",
+        "text": "[[Data Wrapper]] provides web construction of d3 maps along with other common charts."
+      },
+      "after": "bef3765a1e96470d",
+      "date": 1466873840369
+    },
+    {
+      "type": "edit",
+      "id": "f305c96753c57b39",
+      "item": {
+        "type": "paragraph",
+        "id": "f305c96753c57b39",
+        "text": "[[Data Wrapper]] provides web construction of d3 maps along with other common charts. Can we make our intermediate form compatible with these maps?"
+      },
+      "date": 1466874518995
+    },
+    {
+      "type": "edit",
+      "id": "f305c96753c57b39",
+      "item": {
+        "type": "paragraph",
+        "id": "f305c96753c57b39",
+        "text": "[[Data Wrapper]] provides web construction of d3 maps along with other common charts."
+      },
+      "date": 1466874538746
+    },
+    {
+      "type": "add",
+      "id": "f058da35dbfa6f73",
+      "item": {
+        "type": "paragraph",
+        "id": "f058da35dbfa6f73",
+        "text": "The d3 visualization library has well developed mapping capability. Can we make our intermediate form compatible with these maps?"
+      },
+      "after": "730885c23c4f281f",
+      "date": 1466874588618
+    },
+    {
+      "type": "edit",
+      "id": "f058da35dbfa6f73",
+      "item": {
+        "type": "paragraph",
+        "id": "f058da35dbfa6f73",
+        "text": "The d3 visualization library has well developed mapping capability. Can we make our intermediate form compatible with these maps? Would they interact in similar ways?"
+      },
+      "date": 1466874604008
+    },
+    {
+      "type": "edit",
+      "id": "bef3765a1e96470d",
+      "item": {
+        "type": "paragraph",
+        "id": "bef3765a1e96470d",
+        "text": "[[Map Me]] provides the background map for a story told chronologically in text and image. Map both affects and reflects the story."
+      },
+      "date": 1466875027950
+    },
+    {
+      "type": "add",
+      "id": "755116da3a3ba42b",
+      "item": {
+        "type": "paragraph",
+        "id": "755116da3a3ba42b",
+        "text": "[[Story Maps]] by ESRI and open sourced using sometimes Leaflet and open-source data."
+      },
+      "after": "f305c96753c57b39",
+      "date": 1466880503140
+    },
+    {
+      "type": "move",
+      "order": [
+        "a924f39722dea5b8",
+        "10b9cdf0dcac91fa",
+        "4aee2c6ef4820f52",
+        "730885c23c4f281f",
+        "f058da35dbfa6f73",
+        "a1b15e8498d3cded",
+        "79958734eb739082",
+        "bef3765a1e96470d",
+        "755116da3a3ba42b",
+        "f305c96753c57b39"
+      ],
+      "id": "755116da3a3ba42b",
+      "date": 1466880524861
+    },
+    {
+      "type": "edit",
+      "id": "f305c96753c57b39",
+      "item": {
+        "type": "paragraph",
+        "id": "f305c96753c57b39",
+        "text": "[[Data Wrapper]] provides web construction of d3 maps along with other common charts. Created by journalists and open-sourced. [https://github.com/datawrapper/datawrapper github]"
+      },
+      "date": 1466882274605
+    },
+    {
+      "type": "add",
+      "id": "013d553c663eab0f",
+      "item": {
+        "type": "paragraph",
+        "id": "013d553c663eab0f",
+        "text": "Fedwiki."
+      },
+      "after": "a924f39722dea5b8",
+      "date": 1466886499466
+    },
+    {
+      "type": "add",
+      "id": "6c87cf60d87a1fb5",
+      "item": {
+        "type": "paragraph",
+        "id": "6c87cf60d87a1fb5",
+        "text": "[https://github.com/clemsos/wiki-plugin-map github]"
+      },
+      "after": "013d553c663eab0f",
+      "date": 1466886511350
+    },
+    {
+      "type": "edit",
+      "id": "6c87cf60d87a1fb5",
+      "item": {
+        "type": "paragraph",
+        "id": "6c87cf60d87a1fb5",
+        "text": "Clément Renaud. [https://github.com/clemsos/wiki-plugin-map github]"
+      },
+      "date": 1466886534674
+    },
+    {
+      "type": "edit",
+      "id": "013d553c663eab0f",
+      "item": {
+        "type": "paragraph",
+        "id": "013d553c663eab0f",
+        "text": "Fedwiki. [https://github.com/fedwiki/wiki-plugin-map github]"
+      },
+      "date": 1466886567497
+    },
+    {
+      "type": "add",
+      "id": "02a934e23b7a2f59",
+      "item": {
+        "type": "paragraph",
+        "id": "02a934e23b7a2f59",
+        "text": "# Plugin"
+      },
+      "after": "a924f39722dea5b8",
+      "date": 1466889941639
+    },
+    {
+      "type": "edit",
+      "id": "02a934e23b7a2f59",
+      "item": {
+        "type": "markdown",
+        "id": "02a934e23b7a2f59",
+        "text": "# Plugin"
+      },
+      "date": 1466889944103
+    },
+    {
+      "type": "add",
+      "id": "028f8229ec2c0ba8",
+      "item": {
+        "type": "paragraph",
+        "id": "028f8229ec2c0ba8",
+        "text": "[[About Map Plugin]]"
+      },
+      "after": "6c87cf60d87a1fb5",
+      "date": 1466890039245
+    },
+    {
+      "type": "add",
+      "id": "cfa8c81d67aa3440",
+      "item": {
+        "type": "paragraph",
+        "id": "cfa8c81d67aa3440",
+        "text": "[[Testing Map Enhancements]]"
+      },
+      "after": "028f8229ec2c0ba8",
+      "date": 1466915608658
+    },
+    {
+      "type": "add",
+      "id": "9237a37006be71cd",
+      "item": {
+        "type": "paragraph",
+        "id": "9237a37006be71cd",
+        "text": "[[Portland Confluence]] that I've visited."
+      },
+      "after": "cfa8c81d67aa3440",
+      "date": 1467762064519
+    },
+    {
+      "type": "edit",
+      "id": "9237a37006be71cd",
+      "item": {
+        "type": "paragraph",
+        "id": "9237a37006be71cd",
+        "text": "[[Portland Confluences]] that I've visited."
+      },
+      "date": 1467762072806
+    },
+    {
+      "type": "add",
+      "id": "1c1f42e6d5fd8191",
+      "item": {
+        "type": "paragraph",
+        "id": "1c1f42e6d5fd8191",
+        "text": "# Experiments"
+      },
+      "after": "cfa8c81d67aa3440",
+      "date": 1467819270522
+    },
+    {
+      "type": "add",
+      "id": "9266554a531cd082",
+      "item": {
+        "type": "paragraph",
+        "id": "9266554a531cd082",
+        "text": "I'll be remaking some old map based experiments from the early web in order to see if our result can now be easier and better. "
+      },
+      "after": "1c1f42e6d5fd8191",
+      "date": 1467819368289
+    },
+    {
+      "type": "edit",
+      "id": "1c1f42e6d5fd8191",
+      "item": {
+        "type": "markdown",
+        "id": "1c1f42e6d5fd8191",
+        "text": "# Experiments"
+      },
+      "date": 1467819379329
+    },
+    {
+      "type": "add",
+      "id": "36475912d183b403",
+      "item": {
+        "type": "paragraph",
+        "id": "36475912d183b403",
+        "text": "[[2001 Geocaches]] that I've placed."
+      },
+      "after": "9237a37006be71cd",
+      "date": 1467819408563
+    },
+    {
+      "type": "add",
+      "id": "74a0fd82cd56c7e7",
+      "item": {
+        "type": "paragraph",
+        "id": "74a0fd82cd56c7e7",
+        "text": "[[Ward's Home Page]] where I've lived all my life."
+      },
+      "after": "36475912d183b403",
+      "date": 1467819472541
+    },
+    {
+      "type": "add",
+      "id": "90dfbbd81932e216",
+      "item": {
+        "type": "paragraph",
+        "id": "90dfbbd81932e216",
+        "text": "[[Hip Portland]] neighborhoods."
+      },
+      "after": "74a0fd82cd56c7e7",
+      "date": 1468852536376
+    },
+    {
+      "type": "add",
+      "id": "f302773f6c1bc7fc",
+      "item": {
+        "type": "paragraph",
+        "id": "f302773f6c1bc7fc",
+        "text": "[[About Bikeshare Plugin]] for a source of markers."
+      },
+      "after": "90dfbbd81932e216",
+      "date": 1469019352492
+    }
+  ]
+}

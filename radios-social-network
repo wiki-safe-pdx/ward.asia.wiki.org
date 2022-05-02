@@ -1,0 +1,426 @@
+{
+  "title": "Radio's Social Network",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "eb6435eb3db795f4",
+      "text": "We look at recent radio traffic and draw associations based on who has confirmed contacts. [http://ward.asia.wiki.org/assets/pages/radios-social-network/view.html enlarge] [https://github.com/WardCunningham/ft8-network github] "
+    },
+    {
+      "type": "html",
+      "id": "0e78298074ba96ed",
+      "text": "<img width=100% src=http:/assets/pages/radios-social-network/view.svg>"
+    },
+    {
+      "type": "assets",
+      "id": "c78a049e555f8799",
+      "text": "pages/radios-social-network"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Radio's Social Network",
+        "story": []
+      },
+      "date": 1564445346675
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "eb6435eb3db795f4"
+      },
+      "id": "eb6435eb3db795f4",
+      "type": "add",
+      "date": 1564445348599
+    },
+    {
+      "type": "edit",
+      "id": "eb6435eb3db795f4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb6435eb3db795f4",
+        "text": "We look at recent radio traffic and draw associations based on who has been calling whom."
+      },
+      "date": 1564445393079
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "89c59545a7789b5d"
+      },
+      "id": "89c59545a7789b5d",
+      "type": "add",
+      "after": "eb6435eb3db795f4",
+      "date": 1564445395253
+    },
+    {
+      "type": "edit",
+      "id": "89c59545a7789b5d",
+      "item": {
+        "type": "graphviz",
+        "id": "89c59545a7789b5d",
+        "text": "strict digraph{ rankdir=LR\nAB0MQ -> UA9MA\nAC6MW -> IS0KNG\nAC6MW -> IU8MIX\nAE0JM -> HK5WML\nAE0JM -> KI4FRU\nAE0JM -> LU7AV\nAE0JM -> P2K\nAJ6CY -> CO8ZZ\nAJ6CY -> K5MM\nAJ6CY -> KE1F\nAJ6CY -> KT0F\nAJ6CY -> VE9UN\nAJ6CY -> W9XB\nCO8LY -> N0OK\nCO8LY -> NU7K\nK1JRF -> HK3UA\nK1JRF -> LU9LTG\nK1JRF -> OH6Z\nK1JRF -> VA3VD\nK3ZK -> EA3FZS\nK4MQG -> OH4NDU\nK4MQG -> VE9UN\nK5MM -> AJ6CY\nK5MM -> G4WWG\nK5MM -> N3HYM\nK5MM -> N5III\nK5MM -> W7WIA\nK6JDC -> IU8MIX\nK6JDC -> KB8SVJ\nK6JDC -> N9CBS\nK6JO -> KE8YP\nK6JO -> KM4SFF\nK6QGV -> IS0KNG\nK6ZGW -> PP5DZ\nK9DN -> OH4NDU\nKC9YYR -> OH6Z\nKD0NTU -> PP5DZ\nKE5TD -> PP5DZ\nKG5ZDZ -> W7RIT\nKK3KK -> AB7BW\nKK3KK -> IS0KNG\nKK3KK -> OH6Z\nKK4UPB -> N5JED\nKK7XT -> W5LRU\nKL7ILA -> K1JRF\nKL7ILA -> LU9LTG\nKM4TIN -> OH6Z\nKO8V -> CO8LY\nKO8V -> IK4LZH\nKT0F -> AJ6CY\nKT0F -> WA7TNT\nKV0I -> N0NAV\nKV0I -> OH6Z\nKW5EBB -> TI3RKM\nN0GTO -> AI6SM\nN3HYM -> K5MM\nN4LV -> W9XB\nN7MDW -> KP4ACR\nN7MDW -> N5JED\nN7MDW -> OH6Z\nN9CBS -> K6JDC\nN9CBS -> KB7EM\nN9NTC -> TI3RKM\nNN6XX -> OH6Z\nPP5DZ -> K6ZGW\nPP5DZ -> KE0ELU\nPP5DZ -> W0CQT\nPP5DZ -> W6GEE\nPT2VHF -> VE3RRH\nVA5KG -> CO8ZZ\nVA5KG -> IS0KNG\nVA5KG -> LU3PI\nVA5KG -> OH6Z\nVA5KG -> PP5DZ\nVA5KG -> XQ1KN\nVE3MZD -> KH2HLW\nVE3MZD -> YJ0GA\nW0CQT -> PP5DZ\nW0KDT -> KC1CXP\nW2JAN -> K8HIT\nW2JAN -> W7OM\nW5DP -> LU9LTG\nW5LRU -> TI3RKM\nW6CDO -> KE1F\nW6CDO -> KK7XT\nW6CDO -> PP5DZ\nW6CDO -> XQ1KN\nW9DDK -> CO8ZZ\nWA1ZKN -> KJ7COA\nWA4AFJ -> N9CBS\nWA4AFJ -> OH6Z\nWA8ICK -> WA7TNT\nWB8ZZR -> WD4DDA\nWD4DDA -> W2JAN\nWD4DDA -> WB8ZZR\nWQ5C -> IS0KNG\nXQ1KN -> N0NAV\nXQ1KN -> WA2KAE\nXQ1KN -> YF0TUR\n}\n"
+      },
+      "date": 1564445404058
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2fa213fe39127183"
+      },
+      "id": "2fa213fe39127183",
+      "type": "add",
+      "after": "89c59545a7789b5d",
+      "date": 1564445727405
+    },
+    {
+      "type": "edit",
+      "id": "2fa213fe39127183",
+      "item": {
+        "type": "code",
+        "id": "2fa213fe39127183",
+        "text": " (echo strict digraph{ rankdir=LR;\n curl -s http://ward.asia.wiki.org/plugin/wsjt/copy |\\\n   tail -300 |\\\n   perl -ne '\n   \t call='[A-Z]+\\d[A-Z]+'\n     print \"$2 -> $1\\n\" while(/($call) ($call)/)' |\\\n   sort | uniq ;\n echo } ) > map.dot ;\n dot -Tsvg map.dot > map.svg"
+      },
+      "date": 1564445732446
+    },
+    {
+      "type": "edit",
+      "id": "2fa213fe39127183",
+      "item": {
+        "type": "code",
+        "id": "2fa213fe39127183",
+        "text": " (echo strict digraph{ rankdir=LR;\n curl -s http://ward.asia.wiki.org/plugin/wsjt/copy |\\\n   tail -300 |\\\n   perl -ne '\n     call='[A-Z]+\\d[A-Z]+'\n     print \"$2 -> $1\\n\" while(/($call) ($call)/)' |\\\n   sort | uniq ;\n echo } ) > map.dot ;\n dot -Tsvg map.dot > map.svg"
+      },
+      "date": 1564445761845
+    },
+    {
+      "type": "edit",
+      "id": "89c59545a7789b5d",
+      "item": {
+        "type": "graphviz",
+        "id": "89c59545a7789b5d",
+        "text": "strict digraph{ rankdir=LR\nAB8WD -> AG4QD\nAB8WD -> K3NAW\nAB8WD -> KM4KTC\nAB8WD -> WA7TNT\nAB8WD -> WD4CNO\nAB8WD -> WD4DDA\nAB9QZ -> EA3HRU\nAC6MW -> IS0KNG\nAE0JM -> HK5WML\nAE0JM -> MD0CCE\nAE0JM -> P2K\nAJ6CY -> N3JHB\nAJ6CY -> VE9RK\nAJ6GZ -> K5MM\nCO8LY -> NU7K\nK0EKA -> AB0MQ\nK0EKA -> PP5TG\nK0EKA -> XQ1KN\nK0JV -> K9ZFQ\nK1GUY -> KI4FRU\nK1JRF -> N4MA\nK4MQG -> VE9UN\nK5MM -> AJ6CY\nK5MM -> AJ6GZ\nK5MM -> G4WWG\nK5MM -> KI4FRU\nK5MM -> LU3PI\nK5MM -> N3HYM\nK5MM -> N5III\nK5MM -> PY5HC\nK5MM -> TI3RKM\nK5MM -> W5BKZ\nK5MM -> W5LRU\nK5MM -> W7WIA\nK5MM -> WA7TNT\nK5MM -> XQ1KN\nK6JDC -> IU8MIX\nK6JO -> K9ZFQ\nK6JO -> KB2RMS\nK6JO -> KE8YP\nK9IO -> UA0AKY\nK9ZFQ -> K6JO\nKD6GRD -> KK7XT\nKD6GRD -> N4BP\nKD6GRD -> W7OK\nKG5U -> P2K\nKI5DYI -> IU8MIX\nKI5DYI -> KE8YP\nKI5DYI -> OH6Z\nKI5DYI -> P2K\nKI5DYI -> PT7AAS\nKI5DYI -> TI3RKM\nKK3KK -> AB7BW\nKK3KK -> IS0KNG\nKK3KK -> K3WHD\nKK4HMQ -> IS0KNG\nKK4HMQ -> P2K\nKK4UPB -> N5JED\nKK7XT -> K3NAW\nKK7XT -> K3WHD\nKK7XT -> KD6GRD\nKK7XT -> W5LRU\nKL7ILA -> LU9LTG\nKM4TIN -> OH6Z\nKO8V -> IK4LZH\nKT0F -> WA7TNT\nKV0I -> P2K\nN0VB -> MD0CCE\nN3HYM -> K5MM\nN5ITN -> N3HYM\nN7MDW -> KD8UA\nN7MDW -> KP4ACR\nN7MDW -> N5JED\nN7MDW -> N8FRI\nN7MDW -> W7AMC\nN9CBS -> KB7EM\nN9NTC -> N4MA\nN9NTC -> NI2E\nN9NTC -> TI3RKM\nN9NTC -> W1LEM\nNN6XX -> OH6Z\nPP5DZ -> K6ZGW\nPP5DZ -> VA5KG\nPP5DZ -> WA7IT\nPT2VHF -> W5DP\nPT2VHF -> WA7TNT\nVA5KG -> AF5HE\nVA5KG -> OH6Z\nVA5KG -> VE9RK\nVE3MZD -> KH2HLW\nVE9RK -> AJ6CY\nVE9RK -> KJ7COA\nVE9RK -> N2CUA\nVE9RK -> VA5KG\nW2JAN -> K8HIT\nW2JAN -> KE4GAK\nW2JAN -> W5LRU\nW4PCM -> FK8HA\nW5DP -> LU9LTG\nW9DDK -> CO8ZZ\nW9DX -> KG5U\nW9XB -> KL7ILA\nWA4AFJ -> P2K\nWA8ERG -> P2K\nWB5HJV -> IS0KNG\nWB8ZZR -> N5ITN\nWB9JOX -> W4UOC\nWD4CNO -> KD4EE\nWD4DDA -> K3WHD\nWD4DDA -> W2JAN\nWQ5C -> IS0KNG\nWY7MM -> AF5HE\nXQ1KN -> AE5FM\nXQ1KN -> K0EKA\nXQ1KN -> K5MM\nXQ1KN -> KC7WJ\nXQ1KN -> KL7ILA\nXQ1KN -> MD0CCE\nXQ1KN -> N0NAV\nXQ1KN -> W0ZI\nXQ1KN -> W4HWD\nXQ1KN -> W5IRH\nXQ1KN -> W6GEE\nXQ1KN -> WA2KAE\nXQ1KN -> WA4AFJ\nXQ1KN -> YB9AY\nXQ1KN -> YF0TUR\n}\n"
+      },
+      "date": 1564446772243
+    },
+    {
+      "type": "edit",
+      "id": "2fa213fe39127183",
+      "item": {
+        "type": "code",
+        "id": "2fa213fe39127183",
+        "text": " (echo strict digraph{ rankdir=LR;\n curl -s ward.asia.wiki.org/plugin/wsjt/copy |\\\n   grep ' R[R012-]' |\\\n   tail -400 |\\\n   perl -ne '\n     print \"$2 -> $1\\n\"\n     while(/([A-Z]+\\d[A-Z]+) ([A-Z]+\\d[A-Z]+)/g)' |\\\n   sort | uniq ;\n echo } ) > map.dot ;\n dot -Tsvg map.dot > map.svg\n"
+      },
+      "date": 1564446852485
+    },
+    {
+      "type": "move",
+      "order": [
+        "eb6435eb3db795f4",
+        "2fa213fe39127183",
+        "89c59545a7789b5d"
+      ],
+      "id": "2fa213fe39127183",
+      "date": 1564446879171
+    },
+    {
+      "type": "edit",
+      "id": "eb6435eb3db795f4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb6435eb3db795f4",
+        "text": "We look at recent radio traffic and draw associations based on who has acknowledged receipt of whom."
+      },
+      "date": 1564446955772
+    },
+    {
+      "type": "edit",
+      "id": "2fa213fe39127183",
+      "item": {
+        "type": "code",
+        "id": "2fa213fe39127183",
+        "text": "while sleep 15; do\n (echo strict digraph { rankdir=LR\n echo node [style=filled fillcolor=bisque]\n curl -s ward.asia.wiki.org/plugin/wsjt/copy |\\\n  grep ' R[R012-]' |\\\n  tail -1000 |\\\n  perl -ne '\n   print \"$2 -> $1\\n\"\n   while(/([A-Z]+\\d[A-Z]+) ([A-Z]+\\d[A-Z]+)/g)' |\\\n  sort | uniq ;\n echo } ) > map.dot ;\n dot -Tsvg map.dot > map.svg\ndone"
+      },
+      "date": 1564448639148
+    },
+    {
+      "type": "edit",
+      "id": "89c59545a7789b5d",
+      "item": {
+        "type": "graphviz",
+        "id": "89c59545a7789b5d",
+        "text": "strict digraph { rankdir=LR\nnode [style=filled fillcolor=bisque]\nAB8WD -> CO8LY\nAB8WD -> KM4KTC\nAB8WD -> VA3MJR\nAC4GW -> VA3MJR\nAC9O -> VE9RK\nAE0JM -> KI7SI\nAE0JM -> N1AH\nAE0JM -> PT7AAS\nAE0JM -> UN5J\nAE0JM -> W5TV\nAJ6GZ -> AG4QD\nAJ6GZ -> K5MM\nAJ6GZ -> KH6AP\nAJ6GZ -> LU9LTG\nCO8LY -> CE3BT\nCO8LY -> K2RPC\nCO8LY -> W3GTR\nHK3OUN -> AG5HC\nHK3OUN -> VA3MJR\nHK3UA -> KC4FWS\nHK3UA -> N5ZY\nHK3UA -> VE9RK\nHK3UA -> W9KW\nHK3UA -> WD4MTK\nK0EKA -> KH6AP\nK0EKA -> KV0I\nK0EKA -> PP5TG\nK0EKA -> WD4MTK\nK0JV -> KG2NV\nK0JV -> VA6PJB\nK0JV -> WX4D\nK3MRK -> KH6AP\nK5MM -> AC2PD\nK5MM -> AJ6GZ\nK5MM -> N8WCP\nK5MM -> W5BKZ\nK5MM -> WA7TNT\nK5TMN -> UN8GEQ\nK6JO -> K9ZFQ\nK6JO -> KB2RMS\nK6JO -> KE5KMM\nK6JO -> KN0PE\nK9IO -> UA0AKY\nK9ZFQ -> K6JO\nKB1PNI -> EA1AST\nKB1PNI -> N1AH\nKB1PNI -> NI8T\nKB4XT -> KD9MEZ\nKB4YD -> VA7DP\nKB8SVJ -> N4BP\nKC1BUF -> WA9TTC\nKC4FWS -> HK3UA\nKD0NN -> XE1SPM\nKD1DT -> AF0Y\nKD1DT -> K5AUP\nKD1DT -> NS4J\nKD2QCS -> W9JI\nKD6GRD -> N4BP\nKE5KMM -> K6JO\nKE5KMM -> TI3RKM\nKG2NV -> K0JV\nKG2NV -> N7QT\nKG5ZDZ -> KJ7COA\nKI5CDP -> KY4K\nKI5DYI -> AA8EY\nKI5DYI -> EA1AST\nKI5DYI -> IU8MIX\nKI5DYI -> MD0CCE\nKI5DYI -> VA7DP\nKL7ILA -> K4UU\nKL7ILA -> N1BKB\nKL7ILA -> WA7TNT\nKY0R -> VE9RK\nN0CML -> W3GTR\nN0OK -> UA9MA\nN1BKB -> KL7ILA\nN1BKB -> XQ1KN\nN4BP -> AA8EY\nN4BP -> KB8SVJ\nN4BP -> KD2QCS\nN4BP -> KD6GRD\nN4BP -> KM4KTC\nN4BP -> N3KRL\nN4BP -> W6AZT\nN4BP -> WD9HTI\nN4UQ -> UA9MA\nN5EKO -> IS0KNG\nN6QZ -> TI3RKM\nN7IHB -> W6AZT\nN8ZVT -> UA9MA\nN9NTC -> K3MRK\nN9NTC -> N0CML\nN9NTC -> N4MA\nNS4J -> KD7CZ\nNX6D -> EA2BFM\nNX6D -> IS0KNG\nNX6D -> LU9LTG\nNX6D -> N1KWG\nVA3MJR -> W7IEQ\nVA5KG -> CO6OV\nVA5KG -> KG5U\nVA5KG -> N2CUA\nVA6PJB -> K0EKA\nVA6PJB -> K0JV\nVA6PJB -> N6OJ\nVE9RK -> AD5JK\nVE9RK -> N7QT\nVE9RK -> WA2FEB\nW0TDT -> IS0KNG\nW0TDT -> RN8U\nW0TDT -> UN5J\nW0TDT -> UN8GEQ\nW0TDT -> VA7DP\nW2JAN -> UA0AKY\nW2JAN -> VE9RK\nW3TZ -> UA9MA\nW4FGA -> IS0KNG\nW5ACB -> XQ1KN\nW9BGX -> UN7FU\nW9DDK -> IU8MIX\nW9KW -> K8YLK\nW9KW -> W4BCG\nWA2FEB -> UA0AKY\nWX4D -> IS0KNG\nWX4D -> K0JV\nXE2N -> KG5UFR\nXQ1KN -> KC7O\nXQ1KN -> KC7WJ\nXQ1KN -> MD0CCE\nXQ1KN -> N1BKB\nXQ1KN -> W3GTR\nXQ1KN -> W5ACB\n}\n"
+      },
+      "date": 1564448817792
+    },
+    {
+      "type": "add",
+      "id": "a7ac0a9d087ed2c9",
+      "item": {
+        "type": "paragraph",
+        "id": "a7ac0a9d087ed2c9",
+        "text": "Run this in the shell. Open your browser on map.svg. Refresh four times a minute."
+      },
+      "after": "eb6435eb3db795f4",
+      "date": 1564449386302
+    },
+    {
+      "type": "edit",
+      "id": "a7ac0a9d087ed2c9",
+      "item": {
+        "type": "paragraph",
+        "id": "a7ac0a9d087ed2c9",
+        "text": "Run this in the shell. Open your browser on map.svg. Refresh four times a minute. See an evolving map."
+      },
+      "date": 1564449411508
+    },
+    {
+      "type": "move",
+      "order": [
+        "eb6435eb3db795f4",
+        "2fa213fe39127183",
+        "a7ac0a9d087ed2c9",
+        "89c59545a7789b5d"
+      ],
+      "id": "a7ac0a9d087ed2c9",
+      "date": 1564449414549
+    },
+    {
+      "type": "edit",
+      "id": "2fa213fe39127183",
+      "item": {
+        "type": "code",
+        "id": "2fa213fe39127183",
+        "text": "while sleep 15; do\n (echo strict digraph { rankdir=LR\n echo node [style=filled fillcolor=bisque]\n curl -s ward.asia.wiki.org/plugin/wsjt/copy |\\\n  grep ' R[R012-]' |\\\n  tail -1000 |\\\n  perl -ne '\n   print \"$2 -> $1\\n\"\n   while(/([A-Z]+\\d[A-Z]+) ([A-Z]+\\d[A-Z]+)/g)' |\\\n  sort | uniq ;\n echo } ) > map.dot ;\n dot -Tsvg map.dot > map.svg\n wc -l map.dot\ndone"
+      },
+      "date": 1564449504360
+    },
+    {
+      "type": "edit",
+      "id": "2fa213fe39127183",
+      "item": {
+        "type": "code",
+        "id": "2fa213fe39127183",
+        "text": "while sleep 15; do\n (echo strict digraph { rankdir=LR\n echo node [style=filled fillcolor=palegreen]\n cat hot.dot\n echo node [fillcolor=bisque]\n curl -s ward.asia.wiki.org/plugin/wsjt/copy |\\\n  grep ' R[R012-]' |\\\n  tail -1000 |\\\n  perl -ne '\n   print \"$2 -> $1\\n\"\n   while(/([A-Z]+\\d[A-Z]+) ([A-Z]+\\d[A-Z]+)/g)' |\\\n  sort | uniq ;\n echo } ) > map.dot ;\n dot -Tsvg map.dot > map.svg\n wc -l map.dot\ndone"
+      },
+      "date": 1564456984330
+    },
+    {
+      "type": "edit",
+      "id": "2fa213fe39127183",
+      "item": {
+        "type": "code",
+        "id": "2fa213fe39127183",
+        "text": "while sleep 15; do\n\n curl -s ward.asia.wiki.org/plugin/wsjt/copy |\\\n  tee copy.txt | grep ' R[R012-]' |\\\n  tee conf.txt | tail -${1:-250} > show.txt\n\n (echo strict digraph { rankdir=LR layout=neato\n\n  echo node [style=filled fillcolor=palegreen]\n  cat show.txt | perl -ne '\n   print \"$&\\n\" while(/\\b[A-Z]+\\d[A-Z]+\\b/g)' |\\\n   egrep -v '^[WKAN]' |\\\n   sort | uniq\n\n  echo node [fillcolor=bisque]\n  cat show.txt | perl -ne '\n   print \"$2 -> $1\\n\"\n   while(/([A-Z]+\\d[A-Z]+) ([A-Z]+\\d[A-Z]+)/g)' |\\\n   sort | uniq\n\n  echo } ) |\\\n tee map.dot | dot -Tsvg > view.svg\n cp map.dot view.dot\n wc -l map.dot\n\ndone"
+      },
+      "date": 1564507165409
+    },
+    {
+      "type": "edit",
+      "id": "2fa213fe39127183",
+      "item": {
+        "type": "code",
+        "id": "2fa213fe39127183",
+        "text": "while sleep 15; do\n\n curl -s ward.asia.wiki.org/plugin/wsjt/copy |\\\n  tee copy.txt | grep ' R[R012-]' |\\\n  tee conf.txt | tail -${1:-50} > show.txt\n\n (echo strict digraph { rankdir=LR layout=neato\n\n  echo node [style=filled fillcolor=palegreen]\n  cat show.txt | perl -ne '\n   print \"$&\\n\" while(/\\b[A-Z]+\\d[A-Z]+\\b/g)' |\\\n   egrep -v '^[WKAN]' |\\\n   sort | uniq\n\n  echo node [fillcolor=bisque]\n  cat show.txt | perl -ne '\n   print \"$2 -> $1\\n\"\n   while(/([A-Z]+\\d[A-Z]+) ([A-Z]+\\d[A-Z]+)/g)' |\\\n   sort | uniq\n\n  echo } ) |\\\n tee map.dot | dot -Tsvg > view.svg\n cp map.dot view.dot\n wc -l map.dot\n\ndone"
+      },
+      "date": 1564507197042
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org"
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c78a049e555f8799"
+      },
+      "id": "c78a049e555f8799",
+      "type": "add",
+      "after": "89c59545a7789b5d",
+      "date": 1564676418471
+    },
+    {
+      "type": "edit",
+      "id": "c78a049e555f8799",
+      "item": {
+        "type": "assets",
+        "id": "c78a049e555f8799",
+        "text": "pages/radios-social-network"
+      },
+      "date": 1564676461446
+    },
+    {
+      "type": "edit",
+      "id": "eb6435eb3db795f4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb6435eb3db795f4",
+        "text": "We look at recent radio traffic and draw associations based on who has acknowledged receipt of whom. [https://github.com/WardCunningham/ft8-network github]"
+      },
+      "date": 1564677843073
+    },
+    {
+      "type": "edit",
+      "id": "eb6435eb3db795f4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb6435eb3db795f4",
+        "text": "We look at recent radio traffic and draw associations based on who has confirmed receipt of whom. [https://github.com/WardCunningham/ft8-network github]"
+      },
+      "date": 1564677854008
+    },
+    {
+      "type": "remove",
+      "id": "2fa213fe39127183",
+      "date": 1564677874300
+    },
+    {
+      "type": "remove",
+      "id": "a7ac0a9d087ed2c9",
+      "date": 1564677884285
+    },
+    {
+      "type": "remove",
+      "id": "89c59545a7789b5d",
+      "date": 1564677931757
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0e78298074ba96ed"
+      },
+      "id": "0e78298074ba96ed",
+      "type": "add",
+      "after": "c78a049e555f8799",
+      "date": 1564677935625
+    },
+    {
+      "type": "edit",
+      "id": "0e78298074ba96ed",
+      "item": {
+        "type": "html",
+        "id": "0e78298074ba96ed",
+        "text": "<img width=100% src=/assets/pages/radios-social-network/view.svg>"
+      },
+      "date": 1564677971135
+    },
+    {
+      "type": "edit",
+      "id": "0e78298074ba96ed",
+      "item": {
+        "type": "html",
+        "id": "0e78298074ba96ed",
+        "text": "<img width=100% src=http:/assets/pages/radios-social-network/view.svg>"
+      },
+      "date": 1564677988284
+    },
+    {
+      "type": "move",
+      "order": [
+        "eb6435eb3db795f4",
+        "0e78298074ba96ed",
+        "c78a049e555f8799"
+      ],
+      "id": "0e78298074ba96ed",
+      "date": 1564677998777
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "eb8e4d6724fa04b4"
+      },
+      "id": "eb8e4d6724fa04b4",
+      "type": "add",
+      "after": "c78a049e555f8799",
+      "date": 1564678054673
+    },
+    {
+      "type": "edit",
+      "id": "eb8e4d6724fa04b4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb8e4d6724fa04b4",
+        "text": "We regenerate this image regularly. [http://ward.asia.wiki.org/assets/pages/radios-social-network/view.svg enlarge]"
+      },
+      "date": 1564678215781
+    },
+    {
+      "type": "edit",
+      "id": "eb8e4d6724fa04b4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb8e4d6724fa04b4",
+        "text": "We regenerate this image regularly. [http://ward.asia.wiki.org/assets/pages/radios-social-network/view.html enlarge]"
+      },
+      "date": 1564678239753
+    },
+    {
+      "type": "move",
+      "order": [
+        "eb6435eb3db795f4",
+        "eb8e4d6724fa04b4",
+        "0e78298074ba96ed",
+        "c78a049e555f8799"
+      ],
+      "id": "eb8e4d6724fa04b4",
+      "date": 1564678257840
+    },
+    {
+      "type": "edit",
+      "id": "eb8e4d6724fa04b4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb8e4d6724fa04b4",
+        "text": "[http://ward.asia.wiki.org/assets/pages/radios-social-network/view.html enlarge]"
+      },
+      "date": 1564678325059
+    },
+    {
+      "type": "remove",
+      "id": "eb8e4d6724fa04b4",
+      "date": 1564678345073
+    },
+    {
+      "type": "edit",
+      "id": "eb6435eb3db795f4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb6435eb3db795f4",
+        "text": "We look at recent radio traffic and draw associations based on who has confirmed receipt of whom. [https://github.com/WardCunningham/ft8-network github] [http://ward.asia.wiki.org/assets/pages/radios-social-network/view.html enlarge]"
+      },
+      "date": 1564678359233
+    },
+    {
+      "type": "edit",
+      "id": "eb6435eb3db795f4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb6435eb3db795f4",
+        "text": "We look at recent radio traffic and draw associations based on who has confirmed contact with others. [https://github.com/WardCunningham/ft8-network github] [http://ward.asia.wiki.org/assets/pages/radios-social-network/view.html enlarge]"
+      },
+      "date": 1564678405200
+    },
+    {
+      "type": "edit",
+      "id": "eb6435eb3db795f4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb6435eb3db795f4",
+        "text": "We look at recent radio traffic and draw associations based on who has confirmed contacts. [https://github.com/WardCunningham/ft8-network github] [http://ward.asia.wiki.org/assets/pages/radios-social-network/view.html enlarge]"
+      },
+      "date": 1564678415151
+    },
+    {
+      "type": "edit",
+      "id": "eb6435eb3db795f4",
+      "item": {
+        "type": "paragraph",
+        "id": "eb6435eb3db795f4",
+        "text": "We look at recent radio traffic and draw associations based on who has confirmed contacts. [http://ward.asia.wiki.org/assets/pages/radios-social-network/view.html enlarge] [https://github.com/WardCunningham/ft8-network github] "
+      },
+      "date": 1564678435174
+    }
+  ]
+}

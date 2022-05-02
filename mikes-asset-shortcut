@@ -1,0 +1,241 @@
+{
+  "title": "Mike's Asset Shortcut",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "6695cc064ebb948a",
+      "text": "Mike Hales sent me a generated json file as part of our desire to support the [[Murmurations JSON Generator]]. Here I publish his file in a way he can fork to his site without writing any markup."
+    },
+    {
+      "type": "paragraph",
+      "id": "167b3de57500ca9d",
+      "text": "We start with an asset folder named specifically for distributing static json."
+    },
+    {
+      "type": "code",
+      "id": "2477c06ae46179a0",
+      "text": "json"
+    },
+    {
+      "type": "assets",
+      "id": "086b9c47521076be",
+      "text": "json"
+    },
+    {
+      "type": "paragraph",
+      "id": "46783b35bc3c76ae",
+      "text": "I copied the json from Mikes email, put it in a file with what I believe to be the desired file name, and uploaded it with the upload button."
+    },
+    {
+      "type": "paragraph",
+      "id": "5a31e44586143a69",
+      "text": "Note: several editors have had a chance to interfere with the escaping of special characters in this process. Always dangerous."
+    },
+    {
+      "type": "markdown",
+      "id": "e62b679810a7a789",
+      "text": "# Instructions"
+    },
+    {
+      "type": "paragraph",
+      "id": "77dcaca4a0d14ed1",
+      "text": "Now, Mike, to install this on your site by dragging this page to a lineup with your site as origin. You should see your site listed along with mine. Click the claim-flag next to my file name. That forks the file to your site without forking this page that describes it."
+    },
+    {
+      "type": "paragraph",
+      "id": "7a241eec8ee4c9fc",
+      "text": "You could also fork this page to remember how you got that file. That is optional."
+    },
+    {
+      "type": "paragraph",
+      "id": "fe87f50ec13a6452",
+      "text": "Now click the file as it appears on your site, save that url, and then register with the murmurations index. Tell us how that works out."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Mike's Asset Shortcut",
+        "story": []
+      },
+      "date": 1590075477002
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6695cc064ebb948a"
+      },
+      "id": "6695cc064ebb948a",
+      "type": "add",
+      "date": 1590075489660
+    },
+    {
+      "type": "edit",
+      "id": "6695cc064ebb948a",
+      "item": {
+        "type": "paragraph",
+        "id": "6695cc064ebb948a",
+        "text": "Mike Hales sent me a generated json file as part of our desire to support the [[Murmurations JSON Generator]]. Here I publish his file in a way he can fork to his site without writing any markup."
+      },
+      "date": 1590075575460
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "086b9c47521076be"
+      },
+      "id": "086b9c47521076be",
+      "type": "add",
+      "after": "6695cc064ebb948a",
+      "date": 1590075584157
+    },
+    {
+      "type": "edit",
+      "id": "086b9c47521076be",
+      "item": {
+        "type": "assets",
+        "id": "086b9c47521076be",
+        "text": "json"
+      },
+      "date": 1590075637404
+    },
+    {
+      "type": "add",
+      "id": "167b3de57500ca9d",
+      "item": {
+        "type": "paragraph",
+        "id": "167b3de57500ca9d",
+        "text": "We start with an asset folder named specifically for distributing static json."
+      },
+      "after": "6695cc064ebb948a",
+      "date": 1590075679628
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2477c06ae46179a0"
+      },
+      "id": "2477c06ae46179a0",
+      "type": "add",
+      "after": "086b9c47521076be",
+      "date": 1590075682281
+    },
+    {
+      "type": "edit",
+      "id": "2477c06ae46179a0",
+      "item": {
+        "type": "code",
+        "id": "2477c06ae46179a0",
+        "text": "json"
+      },
+      "date": 1590075686369
+    },
+    {
+      "id": "2477c06ae46179a0",
+      "type": "move",
+      "order": [
+        "6695cc064ebb948a",
+        "167b3de57500ca9d",
+        "2477c06ae46179a0",
+        "086b9c47521076be"
+      ],
+      "date": 1590075689030
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "46783b35bc3c76ae"
+      },
+      "id": "46783b35bc3c76ae",
+      "type": "add",
+      "after": "086b9c47521076be",
+      "date": 1590075845555
+    },
+    {
+      "type": "edit",
+      "id": "46783b35bc3c76ae",
+      "item": {
+        "type": "paragraph",
+        "id": "46783b35bc3c76ae",
+        "text": "I copied the json from Mikes email, put it in a file with what I believe to be the desired file name, and uploaded it with the upload button."
+      },
+      "date": 1590075897643
+    },
+    {
+      "type": "add",
+      "id": "5a31e44586143a69",
+      "item": {
+        "type": "paragraph",
+        "id": "5a31e44586143a69",
+        "text": "Note: several editors have had a chance to interfere with the escaping of special characters in this process. Always dangerous."
+      },
+      "after": "46783b35bc3c76ae",
+      "date": 1590076017406
+    },
+    {
+      "type": "add",
+      "id": "77dcaca4a0d14ed1",
+      "item": {
+        "type": "paragraph",
+        "id": "77dcaca4a0d14ed1",
+        "text": "Now, Mike, to install this on your site by dragging this page to a lineup with your site as origin."
+      },
+      "after": "5a31e44586143a69",
+      "date": 1590076098741
+    },
+    {
+      "type": "edit",
+      "id": "77dcaca4a0d14ed1",
+      "item": {
+        "type": "paragraph",
+        "id": "77dcaca4a0d14ed1",
+        "text": "Now, Mike, to install this on your site by dragging this page to a lineup with your site as origin. You should see your site listed along with mine. Click the claim-flag next to my file name. That forks the file to your site without forking this page that describes it."
+      },
+      "date": 1590076243441
+    },
+    {
+      "type": "add",
+      "id": "7a241eec8ee4c9fc",
+      "item": {
+        "type": "paragraph",
+        "id": "7a241eec8ee4c9fc",
+        "text": "You could also fork this page to remember how you got that file. That is optional."
+      },
+      "after": "77dcaca4a0d14ed1",
+      "date": 1590076262416
+    },
+    {
+      "type": "add",
+      "id": "fe87f50ec13a6452",
+      "item": {
+        "type": "paragraph",
+        "id": "fe87f50ec13a6452",
+        "text": "Now click the file as it appears on your site, save that url, and then register with the murmurations index. Tell us how that works out."
+      },
+      "after": "7a241eec8ee4c9fc",
+      "date": 1590076314071
+    },
+    {
+      "type": "add",
+      "id": "e62b679810a7a789",
+      "item": {
+        "type": "paragraph",
+        "id": "e62b679810a7a789",
+        "text": "# Instructions"
+      },
+      "after": "5a31e44586143a69",
+      "date": 1590076722620
+    },
+    {
+      "type": "edit",
+      "id": "e62b679810a7a789",
+      "item": {
+        "type": "markdown",
+        "id": "e62b679810a7a789",
+        "text": "# Instructions"
+      },
+      "date": 1590076725068
+    }
+  ]
+}

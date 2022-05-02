@@ -1,0 +1,407 @@
+{
+  "title": "FT8 Buffer Stats",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ae438ff5b6329acb",
+      "text": "We receive decoded transmissions as they happen often multiple decodes in any 15 second slot. We save one hour of decodes to a max of 10,000 in a first-in-first-out buffer providing a moving window into ongoing radio activity. Repeating these statistical measures will expose daily and longer term trends."
+    },
+    {
+      "type": "html",
+      "id": "c92112d42861463c",
+      "text": "<table><tbody><tr><td style=\"text-align:right\">1000</td><td>decodes\n</td></tr><tr><td style=\"text-align:right\">155</td><td>slots\n</td></tr><tr><td style=\"text-align:right\">172</td><td>stations\n</td></tr><tr><td style=\"text-align:right\">124</td><td>heard\n</td></tr><tr><td style=\"text-align:right\">9</td><td>cq\n</td></tr><tr><td style=\"text-align:right\">71</td><td>squares\n</td></tr><tr><td style=\"text-align:right\">14</td><td>grids\n</td></tr><tr><td style=\"text-align:right\">1</td><td>radios</td></tr></tbody></table>"
+    },
+    {
+      "type": "paragraph",
+      "id": "75797c8f69763b76",
+      "text": "We tally stats by looking for unique substrings in buffer entries. Many of these counts are subsets of the previous measure so they naturally decrease down the list. Ratios between numbers can be more interesting than the numbers themselves."
+    },
+    {
+      "type": "paragraph",
+      "id": "a8bb0cd686300452",
+      "text": "Decodes — Count of decode datagrams received and saved since last restart. Counts lines. Should inspect their contents to avoid boundary errors."
+    },
+    {
+      "type": "paragraph",
+      "id": "010439c56da52dc4",
+      "text": "Slots — Count of 15 second time slots represented in the buffer. Decodes / slots = average simultaneous decodes."
+    },
+    {
+      "type": "paragraph",
+      "id": "75612c8eaeda9afe",
+      "text": "Stations — Count of call signs recognized, sender and intended recipient."
+    },
+    {
+      "type": "paragraph",
+      "id": "d807ffcb697d7e9a",
+      "text": "Heard — Count of sender call signs directly received. Heard / Stations = omnicients. Measures propagation effects. Long skip yields lower ratios."
+    },
+    {
+      "type": "paragraph",
+      "id": "49272e2763df520a",
+      "text": "Cq — Count of stations that have been heard to make undirected calls. Under counted until v0.2.0-pre4 deployed 8/7."
+    },
+    {
+      "type": "paragraph",
+      "id": "f0ebbb04ca82b51c",
+      "text": "Squares — Count of  2°  by  1° grid squares reported by stations heard. A square is about as large as a metropolitan area but are rarel so aligned."
+    },
+    {
+      "type": "paragraph",
+      "id": "30c7627fcd764793",
+      "text": "Grids — Count of  20°  by  10° grids reported by stations heard. A grid composes 100 squares and is as large as a geographic region."
+    },
+    {
+      "type": "paragraph",
+      "id": "2b26b6231c3b9822",
+      "text": "Radios — Count of radios decoding and reporting radio traffic. The impact this will have on other counts will depend on overlap of coverage area."
+    },
+    {
+      "type": "paragraph",
+      "id": "3edba44b02285bae",
+      "text": "All aspects of this buffering have been improved by consistently holding 1 hour of decodes based on an independent timmer as of v0.2.0-pre2 deployed 8/6."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "FT8 Buffer Stats",
+        "story": []
+      },
+      "date": 1564852686165
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bf3d796312a3f7ba"
+      },
+      "id": "bf3d796312a3f7ba",
+      "type": "add",
+      "date": 1564852703633
+    },
+    {
+      "type": "edit",
+      "id": "bf3d796312a3f7ba",
+      "item": {
+        "type": "code",
+        "id": "bf3d796312a3f7ba",
+        "text": "\n1001\tdecodes\n155\tslots\n172\tstations\n124\theard\n9\tcq\n71\tsquares\n14\tgrids\n1\tradios"
+      },
+      "date": 1564852831766
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c92112d42861463c"
+      },
+      "id": "c92112d42861463c",
+      "type": "add",
+      "after": "bf3d796312a3f7ba",
+      "date": 1564853066757
+    },
+    {
+      "type": "edit",
+      "id": "c92112d42861463c",
+      "item": {
+        "type": "html",
+        "id": "c92112d42861463c",
+        "text": "<table><tbody><tr><td style=\"text-align:right\">1001</td><td>decodes\n</td></tr><tr><td style=\"text-align:right\">155</td><td>slots\n</td></tr><tr><td style=\"text-align:right\">172</td><td>stations\n</td></tr><tr><td style=\"text-align:right\">124</td><td>heard\n</td></tr><tr><td style=\"text-align:right\">9</td><td>cq\n</td></tr><tr><td style=\"text-align:right\">71</td><td>squares\n</td></tr><tr><td style=\"text-align:right\">14</td><td>grids\n</td></tr><tr><td style=\"text-align:right\">1</td><td>radios</td></tr></tbody></table>"
+      },
+      "date": 1564853073261
+    },
+    {
+      "type": "edit",
+      "id": "c92112d42861463c",
+      "item": {
+        "type": "html",
+        "id": "c92112d42861463c",
+        "text": "<table><tbody><tr><td style=\"text-align:right\">1000</td><td>decodes\n</td></tr><tr><td style=\"text-align:right\">155</td><td>slots\n</td></tr><tr><td style=\"text-align:right\">172</td><td>stations\n</td></tr><tr><td style=\"text-align:right\">124</td><td>heard\n</td></tr><tr><td style=\"text-align:right\">9</td><td>cq\n</td></tr><tr><td style=\"text-align:right\">71</td><td>squares\n</td></tr><tr><td style=\"text-align:right\">14</td><td>grids\n</td></tr><tr><td style=\"text-align:right\">1</td><td>radios</td></tr></tbody></table>"
+      },
+      "date": 1564853108297
+    },
+    {
+      "type": "edit",
+      "id": "bf3d796312a3f7ba",
+      "item": {
+        "type": "code",
+        "id": "bf3d796312a3f7ba",
+        "text": "1001\tdecodes\n155\tslots\n172\tstations\n124\theard\n9\tcq\n71\tsquares\n14\tgrids\n1\tradios"
+      },
+      "date": 1564853139674
+    },
+    {
+      "type": "remove",
+      "id": "bf3d796312a3f7ba",
+      "date": 1564853155660
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ae438ff5b6329acb"
+      },
+      "id": "ae438ff5b6329acb",
+      "type": "add",
+      "after": "c92112d42861463c",
+      "date": 1564853169680
+    },
+    {
+      "type": "edit",
+      "id": "ae438ff5b6329acb",
+      "item": {
+        "type": "paragraph",
+        "id": "ae438ff5b6329acb",
+        "text": "We receive decoded transmissions as they happen often multiple decodes in any 15 second slot. We save 1000 decodes in a first-in-first-out buffer providing a moving window into ongoing radio activity. Here is how we measure how that is working."
+      },
+      "date": 1564853461664
+    },
+    {
+      "type": "move",
+      "order": [
+        "ae438ff5b6329acb",
+        "c92112d42861463c"
+      ],
+      "id": "ae438ff5b6329acb",
+      "date": 1564853476370
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "75797c8f69763b76"
+      },
+      "id": "75797c8f69763b76",
+      "type": "add",
+      "after": "c92112d42861463c",
+      "date": 1564853533641
+    },
+    {
+      "type": "edit",
+      "id": "75797c8f69763b76",
+      "item": {
+        "type": "paragraph",
+        "id": "75797c8f69763b76",
+        "text": "Many of these counts are subsets of the previous measure so they naturally decrease down the list. "
+      },
+      "date": 1564853714356
+    },
+    {
+      "type": "edit",
+      "id": "75797c8f69763b76",
+      "item": {
+        "type": "paragraph",
+        "id": "75797c8f69763b76",
+        "text": "Many of these counts are subsets of the previous measure so they naturally decrease down the list. Ratios between numbers can be more interesting than the numbers themselves."
+      },
+      "date": 1564853791435
+    },
+    {
+      "type": "add",
+      "id": "a8bb0cd686300452",
+      "item": {
+        "type": "paragraph",
+        "id": "a8bb0cd686300452",
+        "text": "Decodes — Count of decode datagrams received and saved since last restart."
+      },
+      "after": "75797c8f69763b76",
+      "date": 1564853975899
+    },
+    {
+      "type": "add",
+      "id": "010439c56da52dc4",
+      "item": {
+        "type": "paragraph",
+        "id": "010439c56da52dc4",
+        "text": "Slots "
+      },
+      "after": "a8bb0cd686300452",
+      "date": 1564853992989
+    },
+    {
+      "type": "edit",
+      "id": "010439c56da52dc4",
+      "item": {
+        "type": "paragraph",
+        "id": "010439c56da52dc4",
+        "text": "Slots — Count of 15 second time slots represented in the buffer. Decodes / slots = average simultaneous decodes."
+      },
+      "date": 1564854222876
+    },
+    {
+      "type": "add",
+      "id": "75612c8eaeda9afe",
+      "item": {
+        "type": "paragraph",
+        "id": "75612c8eaeda9afe",
+        "text": "Stations — Count of call signs recognized, sender and intended recipient."
+      },
+      "after": "010439c56da52dc4",
+      "date": 1564854446911
+    },
+    {
+      "type": "add",
+      "id": "d807ffcb697d7e9a",
+      "item": {
+        "type": "paragraph",
+        "id": "d807ffcb697d7e9a",
+        "text": "Heard — Count of sender call signs directly received. Heard / Stations = omnicients. Measures propagation effects. Long skip yields lower ratios."
+      },
+      "after": "75612c8eaeda9afe",
+      "date": 1564854871210
+    },
+    {
+      "type": "add",
+      "id": "49272e2763df520a",
+      "item": {
+        "type": "paragraph",
+        "id": "49272e2763df520a",
+        "text": "Cq — Count of stations that have been heard to make undirected calls."
+      },
+      "after": "d807ffcb697d7e9a",
+      "date": 1564855116090
+    },
+    {
+      "type": "add",
+      "id": "f0ebbb04ca82b51c",
+      "item": {
+        "type": "paragraph",
+        "id": "f0ebbb04ca82b51c",
+        "text": "Squares — Count of "
+      },
+      "after": "49272e2763df520a",
+      "date": 1564855242680
+    },
+    {
+      "type": "edit",
+      "id": "f0ebbb04ca82b51c",
+      "item": {
+        "type": "paragraph",
+        "id": "f0ebbb04ca82b51c",
+        "text": "Squares — Count of  2°  by  1° grid squares reported by stations heard. A square is about as large as a metropolitan area but are rarel so aligned."
+      },
+      "date": 1564855591872
+    },
+    {
+      "type": "add",
+      "id": "30c7627fcd764793",
+      "item": {
+        "type": "paragraph",
+        "id": "30c7627fcd764793",
+        "text": "Grids"
+      },
+      "after": "f0ebbb04ca82b51c",
+      "date": 1564855610493
+    },
+    {
+      "type": "edit",
+      "id": "30c7627fcd764793",
+      "item": {
+        "type": "paragraph",
+        "id": "30c7627fcd764793",
+        "text": "Grids — Count of  20°  by  10° grids reported by stations heard. A grid composes 100 squares and is as large as a geographic region."
+      },
+      "date": 1564855857413
+    },
+    {
+      "type": "add",
+      "id": "2b26b6231c3b9822",
+      "item": {
+        "type": "paragraph",
+        "id": "2b26b6231c3b9822",
+        "text": "Radios — Count of radios decoding and reporting radio traffic. The impact this will have on other counts will depend on overlap of coverage area."
+      },
+      "after": "30c7627fcd764793",
+      "date": 1564856152801
+    },
+    {
+      "type": "edit",
+      "id": "75797c8f69763b76",
+      "item": {
+        "type": "paragraph",
+        "id": "75797c8f69763b76",
+        "text": "We tally stats by looking for unique substrings in buffer entries. Many of these counts are subsets of the previous measure so they naturally decrease down the list. Ratios between numbers can be more interesting than the numbers themselves."
+      },
+      "date": 1564856313985
+    },
+    {
+      "type": "edit",
+      "id": "ae438ff5b6329acb",
+      "item": {
+        "type": "paragraph",
+        "id": "ae438ff5b6329acb",
+        "text": "We receive decoded transmissions as they happen often multiple decodes in any 15 second slot. We save 1000 decodes in a first-in-first-out buffer providing a moving window into ongoing radio activity. Repeating these statistical measures will expose daily and longer term trends."
+      },
+      "date": 1564856508509
+    },
+    {
+      "type": "add",
+      "id": "3edba44b02285bae",
+      "item": {
+        "type": "paragraph",
+        "id": "3edba44b02285bae",
+        "text": "All aspects if this buffering would be improved if it consistently held 1 hour of decodes based on an independent timmer."
+      },
+      "after": "2b26b6231c3b9822",
+      "date": 1564857088434
+    },
+    {
+      "type": "edit",
+      "id": "ae438ff5b6329acb",
+      "item": {
+        "type": "paragraph",
+        "id": "ae438ff5b6329acb",
+        "text": "We receive decoded transmissions as they happen often multiple decodes in any 15 second slot. We save one hour of decodes to a max of 10,000 in a first-in-first-out buffer providing a moving window into ongoing radio activity. Repeating these statistical measures will expose daily and longer term trends."
+      },
+      "date": 1565132299383
+    },
+    {
+      "type": "edit",
+      "id": "3edba44b02285bae",
+      "item": {
+        "type": "paragraph",
+        "id": "3edba44b02285bae",
+        "text": "All aspects of this buffering have been improved by consistently holding 1 hour of decodes based on an independent timmer."
+      },
+      "date": 1565132467499
+    },
+    {
+      "type": "edit",
+      "id": "3edba44b02285bae",
+      "item": {
+        "type": "paragraph",
+        "id": "3edba44b02285bae",
+        "text": "All aspects of this buffering have been improved by consistently holding 1 hour of decodes based on an independent timmer as of v0.2.0-pre2 deployed Aug 6th."
+      },
+      "date": 1565132552224
+    },
+    {
+      "type": "edit",
+      "id": "3edba44b02285bae",
+      "item": {
+        "type": "paragraph",
+        "id": "3edba44b02285bae",
+        "text": "All aspects of this buffering have been improved by consistently holding 1 hour of decodes based on an independent timmer as of v0.2.0-pre2 deployed 8/6."
+      },
+      "date": 1565132579125
+    },
+    {
+      "type": "edit",
+      "id": "49272e2763df520a",
+      "item": {
+        "type": "paragraph",
+        "id": "49272e2763df520a",
+        "text": "Cq — Count of stations that have been heard to make undirected calls. Under counted until v0.2.0-pre4 deployed 8/7."
+      },
+      "date": 1565182041077
+    },
+    {
+      "type": "edit",
+      "id": "a8bb0cd686300452",
+      "item": {
+        "type": "paragraph",
+        "id": "a8bb0cd686300452",
+        "text": "Decodes — Count of decode datagrams received and saved since last restart. Counts lines. Should inspect their contents to avoid boundary errors."
+      },
+      "date": 1565184123701
+    }
+  ]
+}

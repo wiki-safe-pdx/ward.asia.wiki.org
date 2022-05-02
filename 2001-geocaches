@@ -1,0 +1,161 @@
+{
+  "title": "2001 Geocaches",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "0fd9d62bc06aae5e",
+      "text": "A Geocache is a treasure hidden by high tech adventurers expressly to be found by the like minded armed with handheld GPS receivers. The Geocaching.com web site explains the sport and can point you toward stashes in your own locale. These are the caches we have created."
+    },
+    {
+      "type": "map",
+      "id": "6d6f22cbfab79348",
+      "text": "Geocaches Installed in 2001\n45.59848, -123.36386 [[The Burn Geocache]]\n45.29668, -123.95034 [[Sand Lake Geocache]]\nBOUNDARY 45.522777, -122.675727 Portland"
+    },
+    {
+      "type": "paragraph",
+      "id": "2173d01f2e6a21b8",
+      "text": "The official website reports, There are 16,439 geocaches near Beaverton, Oregon. And millions more around the world. Start looking. Login required. [https://www.geocaching.com site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "51dc91b3c8e2a503",
+      "text": "Try [[Topo Map]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "716d150dc396b869",
+      "text": "See [[Portland Confluences]] for which I was first to visit."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "2001 Geocaches",
+        "story": []
+      },
+      "date": 1467767034241
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0fd9d62bc06aae5e"
+      },
+      "id": "0fd9d62bc06aae5e",
+      "type": "add",
+      "date": 1467767063764
+    },
+    {
+      "type": "edit",
+      "id": "0fd9d62bc06aae5e",
+      "item": {
+        "type": "paragraph",
+        "id": "0fd9d62bc06aae5e",
+        "text": "A Geocache is a treasure hidden by high tech adventurers expressly to be found by the like minded armed with handheld GPS receivers. The Geocaching.com web site explains the sport and can point you toward stashes in your own locale. These are the caches we have created."
+      },
+      "date": 1467767073396
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6d6f22cbfab79348"
+      },
+      "id": "6d6f22cbfab79348",
+      "type": "add",
+      "after": "0fd9d62bc06aae5e",
+      "date": 1467767263862
+    },
+    {
+      "type": "edit",
+      "id": "6d6f22cbfab79348",
+      "item": {
+        "type": "map",
+        "id": "6d6f22cbfab79348",
+        "text": "45.59848, -123.36386 The Burn Geocache\n45.29668, -123.95034 Sand Lake Geocache"
+      },
+      "date": 1467767269780
+    },
+    {
+      "type": "edit",
+      "id": "6d6f22cbfab79348",
+      "item": {
+        "type": "map",
+        "id": "6d6f22cbfab79348",
+        "text": "Geocaches Installed in 2001\n45.59848, -123.36386 [[The Burn Geocache]]\n45.29668, -123.95034 [[Sand Lake Geocache]]"
+      },
+      "date": 1467767333323
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2173d01f2e6a21b8"
+      },
+      "id": "2173d01f2e6a21b8",
+      "type": "add",
+      "after": "6d6f22cbfab79348",
+      "date": 1467769158943
+    },
+    {
+      "type": "edit",
+      "id": "2173d01f2e6a21b8",
+      "item": {
+        "type": "paragraph",
+        "id": "2173d01f2e6a21b8",
+        "text": "The official website reports, There are 16,439 geocaches near Beaverton. And millions more around the world. "
+      },
+      "date": 1467769266399
+    },
+    {
+      "type": "edit",
+      "id": "2173d01f2e6a21b8",
+      "item": {
+        "type": "paragraph",
+        "id": "2173d01f2e6a21b8",
+        "text": "The official website reports, There are 16,439 geocaches near Beaverton. And millions more around the world. Login required. [https://www.geocaching.com site]"
+      },
+      "date": 1467769305967
+    },
+    {
+      "type": "edit",
+      "id": "2173d01f2e6a21b8",
+      "item": {
+        "type": "paragraph",
+        "id": "2173d01f2e6a21b8",
+        "text": "The official website reports, There are 16,439 geocaches near Beaverton, Oregon. And millions more around the world. Start looking. Login required. [https://www.geocaching.com site]"
+      },
+      "date": 1467769338916
+    },
+    {
+      "type": "edit",
+      "id": "6d6f22cbfab79348",
+      "item": {
+        "type": "map",
+        "id": "6d6f22cbfab79348",
+        "text": "Geocaches Installed in 2001\n45.59848, -123.36386 [[The Burn Geocache]]\n45.29668, -123.95034 [[Sand Lake Geocache]]\nBOUNDARY 45.522777, -122.675727 Portland"
+      },
+      "date": 1467769421716
+    },
+    {
+      "type": "add",
+      "id": "716d150dc396b869",
+      "item": {
+        "type": "paragraph",
+        "id": "716d150dc396b869",
+        "text": "See [[Portland Confluences]] for which I was first to visit."
+      },
+      "after": "2173d01f2e6a21b8",
+      "date": 1467770297759
+    },
+    {
+      "type": "add",
+      "id": "51dc91b3c8e2a503",
+      "item": {
+        "type": "paragraph",
+        "id": "51dc91b3c8e2a503",
+        "text": "Try [[Topo Map]]"
+      },
+      "after": "2173d01f2e6a21b8",
+      "date": 1469059966790
+    }
+  ]
+}

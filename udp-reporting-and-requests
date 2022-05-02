@@ -1,0 +1,1029 @@
+{
+  "title": "UDP Reporting and Requests",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "45a51bad4961a52d",
+      "text": "The WSJT-X ham radio digital signaling application will report decoding status and accept requests by UDP datagrams. Here we explore how to avail ourselves of that service. [https://en.wikipedia.org/wiki/User_Datagram_Protocol wikipedia]"
+    },
+    {
+      "type": "paragraph",
+      "id": "8e25e3ae7cd4541c",
+      "text": "Settings ⇒ Reporting ⇒ UDP Server: This group of options controls the network name or address and port number used by a program that will receive status updates from WSJT-X. It is expected that cooperating applications like JTAlert-X use this feature to obtain information about a running WSJT-X instance. [http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjtx-main-1.5.0.html doc]"
+    },
+    {
+      "type": "markdown",
+      "id": "f9fa047001e64755",
+      "text": "# Specification"
+    },
+    {
+      "type": "paragraph",
+      "id": "48d9d37094804137",
+      "text": "We find a lengthy thread about the design and implementation of WSJT reporting."
+    },
+    {
+      "type": "paragraph",
+      "id": "10205c609cc15d87",
+      "text": "Wonder if anyone has any C# code for monitoring the UDP messages they are willing to share? [https://sourceforge.net/p/wsjt/mailman/wsjt-devel/thread/56F40178.2030902%40fg8oj.com/ sourceforge]"
+    },
+    {
+      "type": "paragraph",
+      "id": "86516103b3d97ece",
+      "text": "I'm working on Java implementation that should\nbe close enough for you to look at. [https://github.com/heimir-sverrisson/MapQSOs/tree/master/src/main/java/com/coolprimes/mapqsos github]"
+    },
+    {
+      "type": "markdown",
+      "id": "da4a239da50a5f35",
+      "text": "# Code"
+    },
+    {
+      "type": "paragraph",
+      "id": "231e7684ad95c759",
+      "text": "We hope to code a server-side plugin that will participate in the signaling with WSJT-X written in Qt."
+    },
+    {
+      "type": "paragraph",
+      "id": "31f5b7dbf53e4e5c",
+      "text": "How to write datagram through a specific network interface in QT? [https://stackoverflow.com/questions/17235639/how-to-write-datagram-through-a-specific-network-interface-in-qt stackoverflow]"
+    },
+    {
+      "type": "paragraph",
+      "id": "be6fb2b05ccdd741",
+      "text": "Here is a quick tutorial on setting up a UDP server and client in Node.js. [https://www.hacksparrow.com/nodejs/udp-server-and-client-example.html post] [https://nodejs.org/api/dgram.html nodejs]"
+    },
+    {
+      "type": "markdown",
+      "id": "8b7372c577c0d059",
+      "text": "# Data"
+    },
+    {
+      "type": "paragraph",
+      "id": "0beb6405ed25e8ce",
+      "text": "We follow the tutorial and start receiving data which we print in hex and hand decode. [https://www.rapidtables.com/convert/number/hex-to-ascii.html ascii] [https://www.rapidtables.com/convert/number/hex-to-decimal.html decimal]"
+    },
+    {
+      "type": "markdown",
+      "id": "e04a342bebeaf7e0",
+      "text": "Heartbeat\nad bc cb da 0 0 0 2 0 0 0 0\n0 0 0 6 57 53 4a 54 2d 58 0 0 0 3 0 0 0 5 32 2e 30 2e 31 0 0 0 6 37 64 64 63 62 37 "
+    },
+    {
+      "type": "markdown",
+      "id": "ca5cecf442a17569",
+      "text": "Status\nad bc cb da 0 0 0 2 0 0 0 1\n0 0 0 6 57 53 4a 54 2d 58 0 0 0 0 0 d6 c0 90 0 0 0 3 46 54 38 0 0 0 5 4b 34 48 56 46 0 0 0 3 2d 31 30 0 0 0 3 46 54 38 0 0 1 0 0 4 c0 0 0 7 33 0 0 0 4 4b 39 4f 58 0 0 0 6 43 4e 38 35 70 6c 0 0 0 4 45 4d 36 33 0 ff ff ff ff 0 0"
+    },
+    {
+      "type": "code",
+      "id": "9ed2bc663afc1ad0",
+      "text": "ad bc cb da\n  magic = -1380135974\n0 0 0 2\n  version = 2\n0 0 0 2\n  type = 2 = decode\n0 0 0 6 57 53 4a 54 2d 58\n  id = WSJT-X\n1\n  new decode = true\n3 d6 5c 60\n  time = 64380000 ms = 17:53 utc\nff ff ff f3\n  snr = -13\n80 0 0 0 0 0 0 0\n  delta time = double = 0?\n0 0 2 c0\n  delta freq = 704\n0 0 0 1 7e\n  mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0\n  low confidence = false\n0"
+    },
+    {
+      "type": "markdown",
+      "id": "bb283de1c5c87e8d",
+      "text": "# Deployed"
+    },
+    {
+      "type": "paragraph",
+      "id": "36a3e4c7c8930001",
+      "text": "We've installed the plugin in Singapore and directed udp traffic there. [https://github.com/WardCunningham/wiki-plugin-wsjt github]"
+    },
+    {
+      "type": "reference",
+      "id": "442ec9b4f6278228",
+      "site": "ward.asia.wiki.org",
+      "slug": "collect-ft8-decodes",
+      "title": "Collect FT8 Decodes",
+      "text": "We experiment by collecting FT8 mode payloads as decoded by WSJT-X software and reported to us via UDP."
+    },
+    {
+      "type": "paragraph",
+      "id": "4ecfa5ace2a44399",
+      "text": "We're not yet sure how this should be shared collaboratively. Current client looks to origin for data unless HOST markup provided."
+    },
+    {
+      "type": "paragraph",
+      "id": "1e2f827da05548d9",
+      "text": "We've seen some unexpected characters at the end of messages. This more likely to come from Pat's config than my own. Here with some editing for presentation."
+    },
+    {
+      "type": "code",
+      "id": "ad448c49b71fc9b0",
+      "text": "curl ward.asia.wiki.org/plugin/wsjt/copy | grep 'a1'\n225115 2244 CQ W7SYK DN62                       ? a1\n225415 1249 CQ KE0GGG DM42                        a1\n225445 2177 CQ K1GUY FN42                         a1\n225515 2706 CQ KC9LFD EN35                        a1\n225615  597 CQ KB8BIP EM88                      ? a1\n225700 2662 CQ KC0ZVN DM41                        a1\n225745  597 CQ KB8BIP EM88                        a1\n230015 1002 CQ KD0ZDU DM79                        a1\n230145 1001 CQ KD0ZDU DM79                      ? a1\n230630 2659 CQ KC0ZVN DM41                        a1\n230715 1652 CQ K1GUY FN42                         a1\n230830  655 CQ PP5XA GG52                       ? a1\n231030 1537 CQ CO8LY FL20                       ? a1\n231300 1536 CQ CO8LY FL20                         a1\n231315 2703 CQ KC9LFD EN35                      ? a1"
+    },
+    {
+      "type": "paragraph",
+      "id": "25261cb683d45a41",
+      "text": "Taylor explains this in section 12.1 of the manual which adds, \"To avoid misleading spots of occasional false decodes, messages so marked are not forwarded to PSK Reporter.\" [http://physics.princeton.edu/pulsar/k1jt/wsjtx-doc/wsjtx-main-1.9.0.html#_ap_decoding html]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "UDP Reporting and Requests",
+        "story": []
+      },
+      "date": 1564326782927
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "45a51bad4961a52d"
+      },
+      "id": "45a51bad4961a52d",
+      "type": "add",
+      "date": 1564326795927
+    },
+    {
+      "type": "edit",
+      "id": "45a51bad4961a52d",
+      "item": {
+        "type": "paragraph",
+        "id": "45a51bad4961a52d",
+        "text": "The WSJT-X ham radio digital signaling application will report decoding status and accept requests by UDP datagrams. Here we explore how to avail ourselves of that service."
+      },
+      "date": 1564326910341
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8e25e3ae7cd4541c"
+      },
+      "id": "8e25e3ae7cd4541c",
+      "type": "add",
+      "after": "45a51bad4961a52d",
+      "date": 1564326952411
+    },
+    {
+      "type": "edit",
+      "id": "8e25e3ae7cd4541c",
+      "item": {
+        "type": "paragraph",
+        "id": "8e25e3ae7cd4541c",
+        "text": "Settings ⇒"
+      },
+      "date": 1564326988290
+    },
+    {
+      "type": "edit",
+      "id": "8e25e3ae7cd4541c",
+      "item": {
+        "type": "paragraph",
+        "id": "8e25e3ae7cd4541c",
+        "text": "Settings ⇒ Reporting ⇒ UDP Server: This group of options controls the network name or address and port number used by a program that will receive status updates from WSJT-X. It is expected that cooperating applications like JTAlert-X use this feature to obtain information about a running WSJT-X instance."
+      },
+      "date": 1564327028833
+    },
+    {
+      "type": "edit",
+      "id": "8e25e3ae7cd4541c",
+      "item": {
+        "type": "paragraph",
+        "id": "8e25e3ae7cd4541c",
+        "text": "Settings ⇒ Reporting ⇒ UDP Server: This group of options controls the network name or address and port number used by a program that will receive status updates from WSJT-X. It is expected that cooperating applications like JTAlert-X use this feature to obtain information about a running WSJT-X instance. [http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjtx-main-1.5.0.html doc]"
+      },
+      "date": 1564327080704
+    },
+    {
+      "type": "edit",
+      "id": "45a51bad4961a52d",
+      "item": {
+        "type": "paragraph",
+        "id": "45a51bad4961a52d",
+        "text": "The WSJT-X ham radio digital signaling application will report decoding status and accept requests by UDP datagrams. Here we explore how to avail ourselves of that service. [https://en.wikipedia.org/wiki/User_Datagram_Protocol wikipedia]"
+      },
+      "date": 1564327300834
+    },
+    {
+      "type": "add",
+      "id": "10205c609cc15d87",
+      "item": {
+        "type": "paragraph",
+        "id": "10205c609cc15d87",
+        "text": "Wonder if anyone has any C# code for monitoring the UDP messages they are willing to share?\n"
+      },
+      "after": "8e25e3ae7cd4541c",
+      "date": 1564328307983
+    },
+    {
+      "type": "edit",
+      "id": "10205c609cc15d87",
+      "item": {
+        "type": "paragraph",
+        "id": "10205c609cc15d87",
+        "text": "Wonder if anyone has any C# code for monitoring the UDP messages they are willing to share? [https://sourceforge.net/p/wsjt/mailman/wsjt-devel/thread/56F40178.2030902%40fg8oj.com/ sourceforge]"
+      },
+      "date": 1564328340194
+    },
+    {
+      "type": "add",
+      "id": "86516103b3d97ece",
+      "item": {
+        "type": "paragraph",
+        "id": "86516103b3d97ece",
+        "text": "I'm working on Java implementation that should\nbe close enough for you to look at. "
+      },
+      "after": "10205c609cc15d87",
+      "date": 1564328405041
+    },
+    {
+      "type": "edit",
+      "id": "86516103b3d97ece",
+      "item": {
+        "type": "paragraph",
+        "id": "86516103b3d97ece",
+        "text": "I'm working on Java implementation that should\nbe close enough for you to look at. [https://github.com/heimir-sverrisson/MapQSOs/tree/master/src/main/java/com/coolprimes/mapqsos github]"
+      },
+      "date": 1564328434015
+    },
+    {
+      "type": "add",
+      "id": "be6fb2b05ccdd741",
+      "item": {
+        "type": "paragraph",
+        "id": "be6fb2b05ccdd741",
+        "text": "Here is a quick tutorial on setting up a UDP server and client in Node.js."
+      },
+      "after": "86516103b3d97ece",
+      "date": 1564328521314
+    },
+    {
+      "type": "edit",
+      "id": "be6fb2b05ccdd741",
+      "item": {
+        "type": "paragraph",
+        "id": "be6fb2b05ccdd741",
+        "text": "Here is a quick tutorial on setting up a UDP server and client in Node.js. [https://www.hacksparrow.com/nodejs/udp-server-and-client-example.html post]"
+      },
+      "date": 1564328539092
+    },
+    {
+      "type": "edit",
+      "id": "be6fb2b05ccdd741",
+      "item": {
+        "type": "paragraph",
+        "id": "be6fb2b05ccdd741",
+        "text": "Here is a quick tutorial on setting up a UDP server and client in Node.js. [https://www.hacksparrow.com/nodejs/udp-server-and-client-example.html post] [https://nodejs.org/api/dgram.html nodejs]"
+      },
+      "date": 1564328575659
+    },
+    {
+      "type": "add",
+      "id": "31f5b7dbf53e4e5c",
+      "item": {
+        "type": "paragraph",
+        "id": "31f5b7dbf53e4e5c",
+        "text": "How to write datagram through a specific network interface in QT?\n"
+      },
+      "after": "be6fb2b05ccdd741",
+      "date": 1564328969282
+    },
+    {
+      "type": "edit",
+      "id": "31f5b7dbf53e4e5c",
+      "item": {
+        "type": "paragraph",
+        "id": "31f5b7dbf53e4e5c",
+        "text": "How to write datagram through a specific network interface in QT? [https://stackoverflow.com/questions/17235639/how-to-write-datagram-through-a-specific-network-interface-in-qt stackoverflow]"
+      },
+      "date": 1564328998207
+    },
+    {
+      "type": "move",
+      "order": [
+        "45a51bad4961a52d",
+        "8e25e3ae7cd4541c",
+        "31f5b7dbf53e4e5c",
+        "10205c609cc15d87",
+        "86516103b3d97ece",
+        "be6fb2b05ccdd741"
+      ],
+      "id": "31f5b7dbf53e4e5c",
+      "date": 1564329029612
+    },
+    {
+      "type": "move",
+      "order": [
+        "45a51bad4961a52d",
+        "8e25e3ae7cd4541c",
+        "10205c609cc15d87",
+        "86516103b3d97ece",
+        "31f5b7dbf53e4e5c",
+        "be6fb2b05ccdd741"
+      ],
+      "id": "31f5b7dbf53e4e5c",
+      "date": 1564329038934
+    },
+    {
+      "type": "add",
+      "id": "48d9d37094804137",
+      "item": {
+        "type": "paragraph",
+        "id": "48d9d37094804137",
+        "text": "We find lengthy thread about the design and implementation of WSJT reporting."
+      },
+      "after": "8e25e3ae7cd4541c",
+      "date": 1564329348209
+    },
+    {
+      "type": "add",
+      "id": "231e7684ad95c759",
+      "item": {
+        "type": "paragraph",
+        "id": "231e7684ad95c759",
+        "text": "We hope to code a server-side plugin that will participate in the signaling with WSJT-X written in Qt."
+      },
+      "after": "86516103b3d97ece",
+      "date": 1564329535476
+    },
+    {
+      "type": "add",
+      "id": "f9fa047001e64755",
+      "item": {
+        "type": "paragraph",
+        "id": "f9fa047001e64755",
+        "text": "# Specification"
+      },
+      "after": "8e25e3ae7cd4541c",
+      "date": 1564329583106
+    },
+    {
+      "type": "add",
+      "id": "da4a239da50a5f35",
+      "item": {
+        "type": "paragraph",
+        "id": "da4a239da50a5f35",
+        "text": "# Code"
+      },
+      "after": "86516103b3d97ece",
+      "date": 1564329597018
+    },
+    {
+      "type": "edit",
+      "id": "f9fa047001e64755",
+      "item": {
+        "type": "markdown",
+        "id": "f9fa047001e64755",
+        "text": "# Specification"
+      },
+      "date": 1564329600185
+    },
+    {
+      "type": "edit",
+      "id": "da4a239da50a5f35",
+      "item": {
+        "type": "markdown",
+        "id": "da4a239da50a5f35",
+        "text": "# Code"
+      },
+      "date": 1564329602489
+    },
+    {
+      "type": "edit",
+      "id": "48d9d37094804137",
+      "item": {
+        "type": "paragraph",
+        "id": "48d9d37094804137",
+        "text": "We find a lengthy thread about the design and implementation of WSJT reporting."
+      },
+      "date": 1564329630817
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e04a342bebeaf7e0"
+      },
+      "id": "e04a342bebeaf7e0",
+      "type": "add",
+      "after": "be6fb2b05ccdd741",
+      "date": 1564336450168
+    },
+    {
+      "type": "edit",
+      "id": "e04a342bebeaf7e0",
+      "item": {
+        "type": "code",
+        "id": "e04a342bebeaf7e0",
+        "text": "Heartbeat\nad bc cb da 0 0 0 2 0 0 0 0\n0 0 0 6 57 53 4a 54 2d 58 0 0 0 3 0 0 0 5 32 2e 30 2e 31 0 0 0 6 37 64 64 63 62 37"
+      },
+      "date": 1564336490307
+    },
+    {
+      "type": "edit",
+      "id": "e04a342bebeaf7e0",
+      "item": {
+        "type": "markdown",
+        "id": "e04a342bebeaf7e0",
+        "text": "Heartbeat\nad bc cb da 0 0 0 2 0 0 0 0\n0 0 0 6 57 53 4a 54 2d 58 0 0 0 3 0 0 0 5 32 2e 30 2e 31 0 0 0 6 37 64 64 63 62 37 "
+      },
+      "date": 1564336523514
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ca5cecf442a17569"
+      },
+      "id": "ca5cecf442a17569",
+      "type": "add",
+      "after": "e04a342bebeaf7e0",
+      "date": 1564336572943
+    },
+    {
+      "type": "edit",
+      "id": "ca5cecf442a17569",
+      "item": {
+        "type": "markdown",
+        "id": "ca5cecf442a17569",
+        "text": "Status\nad bc cb da 0 0 0 2 0 0 0 1\n0 0 0 6 57 53 4a 54 2d 58 0 0 0 0 0 d6 c0 90 0 0 0 3 46 54 38 0 0 0 5 4b 34 48 56 46 0 0 0 3 2d 31 30 0 0 0 3 46 54 38 0 0 1 0 0 4 c0 0 0 7 33 0 0 0 4 4b 39 4f 58 0 0 0 6 43 4e 38 35 70 6c 0 0 0 4 45 4d 36 33 0 ff ff ff ff 0 0"
+      },
+      "date": 1564336592049
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9ed2bc663afc1ad0"
+      },
+      "id": "9ed2bc663afc1ad0",
+      "type": "add",
+      "after": "ca5cecf442a17569",
+      "date": 1564336646668
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 57 53 4a 54 2d 58 1 3 d6 5c 60 ff ff ff f3 80 0 0 0 0 0 0 0 0 0 2 c0 0 0 0 1 7e 0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 0 0"
+      },
+      "date": 1564336666972
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 "
+      },
+      "date": 1564337204345
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 \n1 3 d6 5c 60 ff ff ff f3 80 0 0 0 0 0 0 0 0 0 2 c0 0 0 0 1 7e 0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 0 0"
+      },
+      "date": 1564337219789
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id\n1 3 d6 5c 60 ff ff ff f3 80 0 0 0 0 0 0 0 0 0 2 c0 0 0 0 1 7e 0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 0 0"
+      },
+      "date": 1564337298642
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id\n1 new decode\n3 d6 5c 60 ff ff ff f3 80 0 0 0 0 0 0 0 0 0 2 c0 0 0 0 1 7e 0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 0 0"
+      },
+      "date": 1564337404088
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id\n1 new decode\n3 d6 5c 60 time\nff ff ff f3 80 offset\n0 0 0 0 0 0 0 0 0 2 c0 0 0 0 1 7e 0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 0 0"
+      },
+      "date": 1564337482052
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id\n1 new decode\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 0 delta freq\n0 0 1 7e "
+      },
+      "date": 1564337719525
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id\n1 new decode\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 0 delta freq\n0 0 1 7e \n0 0 0 e count\n4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 "
+      },
+      "date": 1564337774223
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id\n1 new decode\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 0 delta freq\n0 0 1 7e \n0 0 0 e count\n4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 message\n0 low confidence\n0"
+      },
+      "date": 1564337882632
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id\n1 new decode = true\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 count\n7e mode\n0 0 0 e count\n4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 message\n0 low confidence = false\n0"
+      },
+      "date": 1564338078370
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 count\n7e mode\n0 0 0 e count\n4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 message\n0 low confidence = false\n0"
+      },
+      "date": 1564338196277
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 count\n7e mode\n0 0 0 e count\n4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32 message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564338260836
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 count\n7e mode\n0 0 0 e count\n4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564338282459
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 count\n57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 count\n7e mode = ~\n0 0 0 e count\n4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564338371455
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564338428017
+    },
+    {
+      "type": "add",
+      "id": "8b7372c577c0d059",
+      "item": {
+        "type": "paragraph",
+        "id": "8b7372c577c0d059",
+        "text": "# Data"
+      },
+      "after": "be6fb2b05ccdd741",
+      "date": 1564338511187
+    },
+    {
+      "type": "add",
+      "id": "0beb6405ed25e8ce",
+      "item": {
+        "type": "paragraph",
+        "id": "0beb6405ed25e8ce",
+        "text": "We follow the tutorial and start receiving data which we print in hex and hand decode. [https://www.rapidtables.com/convert/number/hex-to-ascii.html ascii]"
+      },
+      "after": "8b7372c577c0d059",
+      "date": 1564338596443
+    },
+    {
+      "type": "edit",
+      "id": "8b7372c577c0d059",
+      "item": {
+        "type": "markdown",
+        "id": "8b7372c577c0d059",
+        "text": "# Data"
+      },
+      "date": 1564338600645
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2 magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564338707356
+    },
+    {
+      "type": "edit",
+      "id": "0beb6405ed25e8ce",
+      "item": {
+        "type": "paragraph",
+        "id": "0beb6405ed25e8ce",
+        "text": "We follow the tutorial and start receiving data which we print in hex and hand decode. [https://www.rapidtables.com/convert/number/hex-to-ascii.html ascii] [https://www.rapidtables.com/convert/number/hex-to-decimal.html decimal]"
+      },
+      "date": 1564338834943
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2 magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time = 64380000\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564338919060
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2 magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time = 64380000 ms = 17:53 utc\nff ff ff f3 80 snr\n0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564339057766
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2 magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time = 64380000 ms = 17:53 utc\nff ff ff f3 snr = -13\n80 0 0 0 0 0 0 0 0 delta time\n0 2 c0 \n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564339204507
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2 magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time = 64380000 ms = 17:53 utc\nff ff ff f3 snr = -13\n80 0 0 0 0 0 0 0 delta time\n0 0 2 c0 \n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564339418623
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2 magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time = 64380000 ms = 17:53 utc\nff ff ff f3 snr = -13\n80 0 0 0 0 0 0 0 delta time\n0 0 2 c0  delta freq\n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564339471708
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2 magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time = 64380000 ms = 17:53 utc\nff ff ff f3 snr = -13\n80 0 0 0 0 0 0 0 delta time\n0 0 2 c0  delta freq = 704\n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564339514255
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2 magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58 id = WSJT-X\n1 new decode = true\n3 d6 5c 60 time = 64380000 ms = 17:53 utc\nff ff ff f3 snr = -13\n80 0 0 0 0 0 0 0 delta time = double = 0?\n0 0 2 c0  delta freq = 704\n0 0 0 1 7e mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0 low confidence = false\n0"
+      },
+      "date": 1564339880112
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da 0 0 0 2 0 0 0 2\n  magic, version = 2, type = 2\n0 0 0 6 57 53 4a 54 2d 58\n  id = WSJT-X\n1\n  new decode = true\n3 d6 5c 60\n  time = 64380000 ms = 17:53 utc\nff ff ff f3\n  snr = -13\n80 0 0 0 0 0 0 0\n  delta time = double = 0?\n0 0 2 c0\n  delta freq = 704\n0 0 0 1 7e"
+      },
+      "date": 1564340010441
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "markdown",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode\nad bc cb da\n  magic\n0 0 0 2\n  version = 2\n0 0 0 2\n  type = 2\n0 0 0 6 57 53 4a 54 2d 58\n  id = WSJT-X\n1\n  new decode = true\n3 d6 5c 60\n  time = 64380000 ms = 17:53 utc\nff ff ff f3\n  snr = -13\n80 0 0 0 0 0 0 0\n  delta time = double = 0?\n0 0 2 c0\n  delta freq = 704\n0 0 0 1 7e\n  mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0\n  low confidence = false\n0"
+      },
+      "date": 1564340086296
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "code",
+        "id": "9ed2bc663afc1ad0",
+        "text": "Decode \nad bc cb da\n  magic\n0 0 0 2\n  version = 2\n0 0 0 2\n  type = 2\n0 0 0 6 57 53 4a 54 2d 58\n  id = WSJT-X\n1\n  new decode = true\n3 d6 5c 60\n  time = 64380000 ms = 17:53 utc\nff ff ff f3\n  snr = -13\n80 0 0 0 0 0 0 0\n  delta time = double = 0?\n0 0 2 c0\n  delta freq = 704\n0 0 0 1 7e\n  mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0\n  low confidence = false\n0"
+      },
+      "date": 1564340101361
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "code",
+        "id": "9ed2bc663afc1ad0",
+        "text": "ad bc cb da\n  magic\n0 0 0 2\n  version = 2\n0 0 0 2\n  type = 2 = decode\n0 0 0 6 57 53 4a 54 2d 58\n  id = WSJT-X\n1\n  new decode = true\n3 d6 5c 60\n  time = 64380000 ms = 17:53 utc\nff ff ff f3\n  snr = -13\n80 0 0 0 0 0 0 0\n  delta time = double = 0?\n0 0 2 c0\n  delta freq = 704\n0 0 0 1 7e\n  mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0\n  low confidence = false\n0"
+      },
+      "date": 1564340133932
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "code",
+        "id": "9ed2bc663afc1ad0",
+        "text": "ad bc cb da\n  magic = unsigned 2914831322 signed\n0 0 0 2\n  version = 2\n0 0 0 2\n  type = 2 = decode\n0 0 0 6 57 53 4a 54 2d 58\n  id = WSJT-X\n1\n  new decode = true\n3 d6 5c 60\n  time = 64380000 ms = 17:53 utc\nff ff ff f3\n  snr = -13\n80 0 0 0 0 0 0 0\n  delta time = double = 0?\n0 0 2 c0\n  delta freq = 704\n0 0 0 1 7e\n  mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0\n  low confidence = false\n0"
+      },
+      "date": 1564341750795
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "code",
+        "id": "9ed2bc663afc1ad0",
+        "text": "ad bc cb da\n  magic = unsigned 2914831322 signed = -1380135974\n0 0 0 2\n  version = 2\n0 0 0 2\n  type = 2 = decode\n0 0 0 6 57 53 4a 54 2d 58\n  id = WSJT-X\n1\n  new decode = true\n3 d6 5c 60\n  time = 64380000 ms = 17:53 utc\nff ff ff f3\n  snr = -13\n80 0 0 0 0 0 0 0\n  delta time = double = 0?\n0 0 2 c0\n  delta freq = 704\n0 0 0 1 7e\n  mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0\n  low confidence = false\n0"
+      },
+      "date": 1564341776181
+    },
+    {
+      "type": "edit",
+      "id": "9ed2bc663afc1ad0",
+      "item": {
+        "type": "code",
+        "id": "9ed2bc663afc1ad0",
+        "text": "ad bc cb da\n  magic = -1380135974\n0 0 0 2\n  version = 2\n0 0 0 2\n  type = 2 = decode\n0 0 0 6 57 53 4a 54 2d 58\n  id = WSJT-X\n1\n  new decode = true\n3 d6 5c 60\n  time = 64380000 ms = 17:53 utc\nff ff ff f3\n  snr = -13\n80 0 0 0 0 0 0 0\n  delta time = double = 0?\n0 0 2 c0\n  delta freq = 704\n0 0 0 1 7e\n  mode = ~\n0 0 0 e 4e 36 4e 47 20 4b 55 30 44 20 52 2d 31 32\n  message = N6NG KU0D R-12\n0\n  low confidence = false\n0"
+      },
+      "date": 1564341904197
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bb283de1c5c87e8d"
+      },
+      "id": "bb283de1c5c87e8d",
+      "type": "add",
+      "after": "9ed2bc663afc1ad0",
+      "date": 1564417384822
+    },
+    {
+      "type": "edit",
+      "id": "bb283de1c5c87e8d",
+      "item": {
+        "type": "paragraph",
+        "id": "bb283de1c5c87e8d",
+        "text": "# Deployed"
+      },
+      "date": 1564417403656
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "36a3e4c7c8930001"
+      },
+      "id": "36a3e4c7c8930001",
+      "type": "add",
+      "after": "bb283de1c5c87e8d",
+      "date": 1564417417099
+    },
+    {
+      "type": "edit",
+      "id": "36a3e4c7c8930001",
+      "item": {
+        "type": "paragraph",
+        "id": "36a3e4c7c8930001",
+        "text": "We've installed the plugin in Singapore and directed udp traffic there. We're not yet sure how this should be shared collaboratively. Current client looks to origin for data."
+      },
+      "date": 1564417527794
+    },
+    {
+      "type": "edit",
+      "id": "bb283de1c5c87e8d",
+      "item": {
+        "type": "markdown",
+        "id": "bb283de1c5c87e8d",
+        "text": "# Deployed"
+      },
+      "date": 1564417530571
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "442ec9b4f6278228"
+      },
+      "id": "442ec9b4f6278228",
+      "type": "add",
+      "after": "36a3e4c7c8930001",
+      "date": 1564417543262
+    },
+    {
+      "type": "edit",
+      "id": "442ec9b4f6278228",
+      "item": {
+        "type": "reference",
+        "id": "442ec9b4f6278228",
+        "site": "ward.asia.wiki.org",
+        "slug": "collect-ft8-decodes",
+        "title": "Collect FT8 Decodes",
+        "text": "We experiment by collecting FT8 mode payloads as decoded by WSJT-X software and reported to us via UDP."
+      },
+      "date": 1564417551228
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1564418267266
+    },
+    {
+      "type": "edit",
+      "id": "36a3e4c7c8930001",
+      "item": {
+        "type": "paragraph",
+        "id": "36a3e4c7c8930001",
+        "text": "We've installed the plugin in Singapore and directed udp traffic there. [https://github.com/WardCunningham/wiki-plugin-wsjt github]"
+      },
+      "date": 1564419918618
+    },
+    {
+      "type": "add",
+      "id": "4ecfa5ace2a44399",
+      "item": {
+        "type": "paragraph",
+        "id": "4ecfa5ace2a44399",
+        "text": "We're not yet sure how this should be shared collaboratively. Current client looks to origin for data."
+      },
+      "after": "36a3e4c7c8930001",
+      "date": 1564419919902
+    },
+    {
+      "type": "move",
+      "order": [
+        "45a51bad4961a52d",
+        "8e25e3ae7cd4541c",
+        "f9fa047001e64755",
+        "48d9d37094804137",
+        "10205c609cc15d87",
+        "86516103b3d97ece",
+        "da4a239da50a5f35",
+        "231e7684ad95c759",
+        "31f5b7dbf53e4e5c",
+        "be6fb2b05ccdd741",
+        "8b7372c577c0d059",
+        "0beb6405ed25e8ce",
+        "e04a342bebeaf7e0",
+        "ca5cecf442a17569",
+        "9ed2bc663afc1ad0",
+        "bb283de1c5c87e8d",
+        "36a3e4c7c8930001",
+        "442ec9b4f6278228",
+        "4ecfa5ace2a44399"
+      ],
+      "id": "442ec9b4f6278228",
+      "date": 1564419929809
+    },
+    {
+      "type": "edit",
+      "id": "4ecfa5ace2a44399",
+      "item": {
+        "type": "paragraph",
+        "id": "4ecfa5ace2a44399",
+        "text": "We're not yet sure how this should be shared collaboratively. Current client looks to origin for data unless HOST markup provided."
+      },
+      "date": 1564582737808
+    },
+    {
+      "type": "add",
+      "id": "1e2f827da05548d9",
+      "item": {
+        "type": "paragraph",
+        "id": "1e2f827da05548d9",
+        "text": "We've seen some unexpected characters at the end of messages. This more likely to come from Pat's config than my own."
+      },
+      "after": "4ecfa5ace2a44399",
+      "date": 1564614897839
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ad448c49b71fc9b0"
+      },
+      "id": "ad448c49b71fc9b0",
+      "type": "add",
+      "after": "1e2f827da05548d9",
+      "date": 1564614901027
+    },
+    {
+      "type": "edit",
+      "id": "ad448c49b71fc9b0",
+      "item": {
+        "type": "code",
+        "id": "ad448c49b71fc9b0",
+        "text": "curl -s ward.asia.wiki.org/plugin/wsjt/copy | grep 'a1'\n75.139.193.15 220845 1125 CQ EA5KV IM99                         a1\n75.139.193.15 221645 1609 CQ K4FPV EM73                         a1\n75.139.193.15 221730 1367 CQ LU5CQC GF05                      ? a1\n75.139.193.15 221745 1124 CQ EA5KV IM99                         a1\n75.139.193.15 221830 1503 CQ K0YES DM79                         a1\n75.139.193.15 222015 1124 CQ EA5KV IM99                       ? a1\n75.139.193.15 223130 2443 CQ KK4HMQ EL17                      ? a1\n75.139.193.15 223230 1876 CQ KE0PRS EM08                      ? a1\n75.139.193.15 223545 1598 CQ CE3TL FF46                       ? a1\n75.139.193.15 223915 1930 CQ LU2EI FF94                       ? a1"
+      },
+      "date": 1564614906902
+    },
+    {
+      "type": "edit",
+      "id": "ad448c49b71fc9b0",
+      "item": {
+        "type": "code",
+        "id": "ad448c49b71fc9b0",
+        "text": "curl -s ward.asia.wiki.org/plugin/wsjt/copy | grep 'a1'\n225115 2244 CQ W7SYK DN62                       ? a1\n225415 1249 CQ KE0GGG DM42                        a1\n225445 2177 CQ K1GUY FN42                         a1\n225515 2706 CQ KC9LFD EN35                        a1\n225615  597 CQ KB8BIP EM88                      ? a1\n225700 2662 CQ KC0ZVN DM41                        a1\n225745  597 CQ KB8BIP EM88                        a1\n230015 1002 CQ KD0ZDU DM79                        a1\n230145 1001 CQ KD0ZDU DM79                      ? a1\n230630 2659 CQ KC0ZVN DM41                        a1\n230715 1652 CQ K1GUY FN42                         a1\n230830  655 CQ PP5XA GG52                       ? a1\n231030 1537 CQ CO8LY FL20                       ? a1\n231300 1536 CQ CO8LY FL20                         a1\n231315 2703 CQ KC9LFD EN35                      ? a1"
+      },
+      "date": 1564615045468
+    },
+    {
+      "type": "edit",
+      "id": "1e2f827da05548d9",
+      "item": {
+        "type": "paragraph",
+        "id": "1e2f827da05548d9",
+        "text": "We've seen some unexpected characters at the end of messages. This more likely to come from Pat's config than my own. Here with some editing for presentation."
+      },
+      "date": 1564615115701
+    },
+    {
+      "type": "edit",
+      "id": "ad448c49b71fc9b0",
+      "item": {
+        "type": "code",
+        "id": "ad448c49b71fc9b0",
+        "text": "curl ward.asia.wiki.org/plugin/wsjt/copy | grep 'a1'\n225115 2244 CQ W7SYK DN62                       ? a1\n225415 1249 CQ KE0GGG DM42                        a1\n225445 2177 CQ K1GUY FN42                         a1\n225515 2706 CQ KC9LFD EN35                        a1\n225615  597 CQ KB8BIP EM88                      ? a1\n225700 2662 CQ KC0ZVN DM41                        a1\n225745  597 CQ KB8BIP EM88                        a1\n230015 1002 CQ KD0ZDU DM79                        a1\n230145 1001 CQ KD0ZDU DM79                      ? a1\n230630 2659 CQ KC0ZVN DM41                        a1\n230715 1652 CQ K1GUY FN42                         a1\n230830  655 CQ PP5XA GG52                       ? a1\n231030 1537 CQ CO8LY FL20                       ? a1\n231300 1536 CQ CO8LY FL20                         a1\n231315 2703 CQ KC9LFD EN35                      ? a1"
+      },
+      "date": 1564615121623
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "25261cb683d45a41"
+      },
+      "id": "25261cb683d45a41",
+      "type": "add",
+      "after": "ad448c49b71fc9b0",
+      "date": 1564615350162
+    },
+    {
+      "type": "edit",
+      "id": "25261cb683d45a41",
+      "item": {
+        "type": "paragraph",
+        "id": "25261cb683d45a41",
+        "text": "This is explained in section 12.1 of the manual which continues, \"To avoid misleading spots of occasional false decodes, messages so marked are not forwarded to PSK Reporter.\""
+      },
+      "date": 1564615442224
+    },
+    {
+      "type": "edit",
+      "id": "25261cb683d45a41",
+      "item": {
+        "type": "paragraph",
+        "id": "25261cb683d45a41",
+        "text": "This is explained in section 12.1 of the manual which continues, \"To avoid misleading spots of occasional false decodes, messages so marked are not forwarded to PSK Reporter.\" [http://physics.princeton.edu/pulsar/k1jt/wsjtx-doc/wsjtx-main-1.9.0.html#_ap_decoding html]"
+      },
+      "date": 1564615517912
+    },
+    {
+      "type": "edit",
+      "id": "25261cb683d45a41",
+      "item": {
+        "type": "paragraph",
+        "id": "25261cb683d45a41",
+        "text": "Taylor explains this in section 12.1 of the manual which adds, \"To avoid misleading spots of occasional false decodes, messages so marked are not forwarded to PSK Reporter.\" [http://physics.princeton.edu/pulsar/k1jt/wsjtx-doc/wsjtx-main-1.9.0.html#_ap_decoding html]"
+      },
+      "date": 1564615648094
+    }
+  ]
+}

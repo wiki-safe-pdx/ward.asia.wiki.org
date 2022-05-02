@@ -1,0 +1,303 @@
+{
+  "title": "Historic Wiki Digested",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "a4e023568279a7a2",
+      "text": "We imagine a world with intense interest in the original wiki now frozen as a historic artifact. What tool might they use to critically refactor this content assuming that the federated wiki replacement is the preferred target medium."
+    },
+    {
+      "type": "paragraph",
+      "id": "8042cbf0b19bfe8a",
+      "text": "We are inspired by a system for collecting semantic triples from medical journals described by Jack Park."
+    },
+    {
+      "type": "paragraph",
+      "id": "dedcfd156f246bbe",
+      "text": "We remember a system once offered by Google for collecting notebooks based on readings from the web."
+    },
+    {
+      "type": "paragraph",
+      "id": "9f68376e2d76cf01",
+      "text": "We've also dabbled with Hypotnes.is which we offered for a while in the remodeled original."
+    },
+    {
+      "type": "paragraph",
+      "id": "fe3d5fc723d63b07",
+      "text": "We've supervised a senior capstone project with similar goals at Portland State University."
+    },
+    {
+      "type": "markdown",
+      "id": "9aaa1e578ea9b62e",
+      "text": "# Origin"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8da29f46b0d85bf",
+      "text": "We've tired of the many and evolving constraints on cross-origin resource sharing restrictions and the coding problems they present. We own and can control both versions of wiki. This then becomes an attractive use case for developing refactoring tools that might generalize to where more \"cors energy\" exists."
+    },
+    {
+      "type": "paragraph",
+      "id": "dc1296086fb2fb1c",
+      "text": "We imagine a tool where both old and new are presented in a single browser tab, probably expanded to full screen."
+    },
+    {
+      "type": "paragraph",
+      "id": "558ca35ff60bb8d2",
+      "text": "The old panel would render historic wiki content to be searched and navigated by traditional mechanisms. With the remodeling of a few years ago we now have a javascript engine that interprets original markup that can paint this panel with whatever enhancements we might desire."
+    },
+    {
+      "type": "paragraph",
+      "id": "02b94138ed0ba788",
+      "text": "The new panel would render excerpts and reflections in the narrow columns and collaborative simplicity of the single-page federated wiki. Historical inquiry would proceed here with the goal of sufficiently excerpting the original to the point that access to the original would be judged eventually unimportant."
+    },
+    {
+      "type": "markdown",
+      "id": "1c7aea62c3943242",
+      "text": "# Expression"
+    },
+    {
+      "type": "paragraph",
+      "id": "c2712738fa9273fc",
+      "text": "We ask, how exactly is this future version of wiki best written? What data types besides quotations would be useful? Would the future reader want to rerun searches with modification? How might threading structure be represented and further abstracted in a way that informs?"
+    },
+    {
+      "type": "paragraph",
+      "id": "9a96c5c14b0e1249",
+      "text": "Can we expect to advance knowledge representation or synthesis by attacking this preservation problem with coding abandon?"
+    },
+    {
+      "type": "paragraph",
+      "id": "37d25c13a9ff989b",
+      "text": "Might we enhance federated wiki to become a respected coding platform in its own right, perhaps by example when illustrating patterns and methods explored decades earlier?"
+    },
+    {
+      "type": "paragraph",
+      "id": "4614b01f1462c056",
+      "text": "Wikipedia advanced wiki technology by separating talk pages from encyclopedia articles. Wikipedia editors have long wished for something better than wiki markup for their talk. The various threaded discussion models have not satisfied. Might we inspire another go at this conversation?"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Historic Wiki Digested",
+        "story": []
+      },
+      "date": 1583073569928
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a4e023568279a7a2"
+      },
+      "id": "a4e023568279a7a2",
+      "type": "add",
+      "date": 1583073576587
+    },
+    {
+      "type": "edit",
+      "id": "a4e023568279a7a2",
+      "item": {
+        "type": "paragraph",
+        "id": "a4e023568279a7a2",
+        "text": "We imagine a world with intense interest in the original wiki now frozen as a historic artifact. What tool might they use to critically refactor this content assuming that the federated wiki replacement is the preferred target medium."
+      },
+      "date": 1583073840242
+    },
+    {
+      "type": "add",
+      "id": "8042cbf0b19bfe8a",
+      "item": {
+        "type": "paragraph",
+        "id": "8042cbf0b19bfe8a",
+        "text": "We are inspired by a system for collecting semantic triples from medical journals described by Jack Park."
+      },
+      "after": "a4e023568279a7a2",
+      "date": 1583073957744
+    },
+    {
+      "type": "add",
+      "id": "dedcfd156f246bbe",
+      "item": {
+        "type": "paragraph",
+        "id": "dedcfd156f246bbe",
+        "text": "We remember a system once offered by Google for collecting notebooks based on readings from the web."
+      },
+      "after": "8042cbf0b19bfe8a",
+      "date": 1583074025331
+    },
+    {
+      "type": "add",
+      "id": "9f68376e2d76cf01",
+      "item": {
+        "type": "paragraph",
+        "id": "9f68376e2d76cf01",
+        "text": "We've also dabbled with Hypotnes.is which we offered for a while in the remodeled original."
+      },
+      "after": "dedcfd156f246bbe",
+      "date": 1583074102330
+    },
+    {
+      "type": "add",
+      "id": "fe3d5fc723d63b07",
+      "item": {
+        "type": "paragraph",
+        "id": "fe3d5fc723d63b07",
+        "text": "We've supervised a senior capstone project with similar goals at Portland State University. "
+      },
+      "after": "9f68376e2d76cf01",
+      "date": 1583074181623
+    },
+    {
+      "type": "edit",
+      "id": "fe3d5fc723d63b07",
+      "item": {
+        "type": "paragraph",
+        "id": "fe3d5fc723d63b07",
+        "text": "We've supervised a senior capstone project with similar goals at Portland State University."
+      },
+      "date": 1583074220559
+    },
+    {
+      "type": "add",
+      "id": "9aaa1e578ea9b62e",
+      "item": {
+        "type": "paragraph",
+        "id": "9aaa1e578ea9b62e",
+        "text": "# Origin"
+      },
+      "after": "fe3d5fc723d63b07",
+      "date": 1583074268190
+    },
+    {
+      "type": "add",
+      "id": "c8da29f46b0d85bf",
+      "item": {
+        "type": "paragraph",
+        "id": "c8da29f46b0d85bf",
+        "text": "We've tired of the many and evolving constraints on cross-origin resource sharing present coding problems. We own and can control both works. This then is an attractive use case for developing refactoring tools that might generalize to where more \"cors energy\" exists."
+      },
+      "after": "9aaa1e578ea9b62e",
+      "date": 1583074560843
+    },
+    {
+      "type": "edit",
+      "id": "9aaa1e578ea9b62e",
+      "item": {
+        "type": "markdown",
+        "id": "9aaa1e578ea9b62e",
+        "text": "# Origin"
+      },
+      "date": 1583074566111
+    },
+    {
+      "type": "edit",
+      "id": "c8da29f46b0d85bf",
+      "item": {
+        "type": "paragraph",
+        "id": "c8da29f46b0d85bf",
+        "text": "We've tired of the many and evolving constraints on cross-origin resource sharing restrictions and the coding problems they present. We own and can control both versions of wiki. This then becomes an attractive use case for developing refactoring tools that might generalize to where more \"cors energy\" exists."
+      },
+      "date": 1583074645167
+    },
+    {
+      "type": "add",
+      "id": "dc1296086fb2fb1c",
+      "item": {
+        "type": "paragraph",
+        "id": "dc1296086fb2fb1c",
+        "text": "We imagine a tool where both old and new are presented in a single browser tab, probably expanded to full screen."
+      },
+      "after": "c8da29f46b0d85bf",
+      "date": 1583074738429
+    },
+    {
+      "type": "add",
+      "id": "558ca35ff60bb8d2",
+      "item": {
+        "type": "paragraph",
+        "id": "558ca35ff60bb8d2",
+        "text": "The old panel would render historic wiki content to be searched and navigated by traditional mechanisms. With the remodeling of a few years ago we now have a javascript engine that interprets original markup that can paint this panel with whatever enhancements we might desire."
+      },
+      "after": "dc1296086fb2fb1c",
+      "date": 1583074876327
+    },
+    {
+      "type": "add",
+      "id": "02b94138ed0ba788",
+      "item": {
+        "type": "paragraph",
+        "id": "02b94138ed0ba788",
+        "text": "The new panel would render excerpts and reflections in the narrow columns and collaborative simplicity of the single-page federated wiki. Historical inquiry would proceed here with the goal of sufficiently excerpting the original to the point that access to the original would be judged eventually unimportant."
+      },
+      "after": "558ca35ff60bb8d2",
+      "date": 1583075237577
+    },
+    {
+      "type": "add",
+      "id": "1c7aea62c3943242",
+      "item": {
+        "type": "paragraph",
+        "id": "1c7aea62c3943242",
+        "text": "# Expression"
+      },
+      "after": "02b94138ed0ba788",
+      "date": 1583075279609
+    },
+    {
+      "type": "add",
+      "id": "c2712738fa9273fc",
+      "item": {
+        "type": "paragraph",
+        "id": "c2712738fa9273fc",
+        "text": "We ask, how exactly is this future version of wiki best written? What data types besides quotations would be useful? Would the future reader want to rerun searches with modification? How might threading structure be represented and further abstracted in a way that informs?"
+      },
+      "after": "1c7aea62c3943242",
+      "date": 1583075488121
+    },
+    {
+      "type": "add",
+      "id": "9a96c5c14b0e1249",
+      "item": {
+        "type": "paragraph",
+        "id": "9a96c5c14b0e1249",
+        "text": "Can we expect to advance knowledge representation or synthesis by attacking this preservation problem with coding abandon?"
+      },
+      "after": "c2712738fa9273fc",
+      "date": 1583075588861
+    },
+    {
+      "type": "add",
+      "id": "37d25c13a9ff989b",
+      "item": {
+        "type": "paragraph",
+        "id": "37d25c13a9ff989b",
+        "text": "Might we enhance federated wiki to become a respected coding platform in its own right, perhaps by example when illustrating patterns and methods explored decades earlier?"
+      },
+      "after": "9a96c5c14b0e1249",
+      "date": 1583075670674
+    },
+    {
+      "type": "add",
+      "id": "4614b01f1462c056",
+      "item": {
+        "type": "paragraph",
+        "id": "4614b01f1462c056",
+        "text": "Wikipedia advanced wiki technology by separating talk pages from encyclopedia articles. Wikipedia editors have long wished for something better than wiki markup for their talk. The various threaded discussion models have not satisfied. Might we inspire another go at this conversation?"
+      },
+      "after": "37d25c13a9ff989b",
+      "date": 1583075870388
+    },
+    {
+      "type": "edit",
+      "id": "1c7aea62c3943242",
+      "item": {
+        "type": "markdown",
+        "id": "1c7aea62c3943242",
+        "text": "# Expression"
+      },
+      "date": 1583075875894
+    }
+  ]
+}

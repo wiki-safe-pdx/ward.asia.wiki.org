@@ -1,0 +1,143 @@
+{
+  "title": "On Visibility and Notification",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "4f88fde3f7e64e6f",
+      "text": "We note that distributed notification systems are an optimization of search when applied to content that is already fully visible. See [[Wikimention]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "c7649e85127cd89a",
+      "text": "We speak of the visible federation to mean that portion that is not behind firewalls or other security barriers. With this portion we can know what has been forked and what has been then further edited within sampling periods defined by periodic scrapes."
+    },
+    {
+      "type": "paragraph",
+      "id": "08218f806fc597a7",
+      "text": "We discourage reimplementation of federation crawlers by making all of the data maintained by search.fed.wiki.org available online. See [[Search Index Downloads]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ff0e2335b20d046",
+      "text": "I wonder, what sort of inversion of this data structure would be required to answer typical notification questions? Could I, for example, ask: who outside of my current neighborhood is forking and modifying content found inside of it? "
+    },
+    {
+      "type": "paragraph",
+      "id": "9342674804ea765c",
+      "text": "The centralized search service answers a variety of queries that are composed for it by the search link at the bottom of every page. A more general search would be the composition of all of these individual searches applied to every page of every site within the neighborhood. This sounds like a lot of work, but is it?"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "On Visibility and Notification",
+        "story": []
+      },
+      "date": 1530280082009
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4f88fde3f7e64e6f"
+      },
+      "id": "4f88fde3f7e64e6f",
+      "type": "add",
+      "date": 1530280109025
+    },
+    {
+      "type": "edit",
+      "id": "4f88fde3f7e64e6f",
+      "item": {
+        "type": "paragraph",
+        "id": "4f88fde3f7e64e6f",
+        "text": "We note that distributed notification systems are an optimization of search when applied to content that is already fully visible."
+      },
+      "date": 1530280211367
+    },
+    {
+      "type": "add",
+      "id": "c7649e85127cd89a",
+      "item": {
+        "type": "paragraph",
+        "id": "c7649e85127cd89a",
+        "text": "We speak of the visible federation to mean that portion that is not behind firewalls or other security barriers. "
+      },
+      "after": "4f88fde3f7e64e6f",
+      "date": 1530280361524
+    },
+    {
+      "type": "edit",
+      "id": "4f88fde3f7e64e6f",
+      "item": {
+        "type": "paragraph",
+        "id": "4f88fde3f7e64e6f",
+        "text": "We note that distributed notification systems are an optimization of search when applied to content that is already fully visible. See [[Wikimention]]"
+      },
+      "date": 1530280376808
+    },
+    {
+      "type": "edit",
+      "id": "c7649e85127cd89a",
+      "item": {
+        "type": "paragraph",
+        "id": "c7649e85127cd89a",
+        "text": "We speak of the visible federation to mean that portion that is not behind firewalls or other security barriers. With this portion we can know what has been forked and what has been then further edited within sampling periods defined by periodic scrapes."
+      },
+      "date": 1530280522606
+    },
+    {
+      "type": "add",
+      "id": "08218f806fc597a7",
+      "item": {
+        "type": "paragraph",
+        "id": "08218f806fc597a7",
+        "text": "We discourage reimplementation of federation crawlers by making all of the data maintained by search.fed.wiki.org available online as it becomes known. See [[Search Index Downloads]]"
+      },
+      "after": "c7649e85127cd89a",
+      "date": 1530280702976
+    },
+    {
+      "type": "edit",
+      "id": "08218f806fc597a7",
+      "item": {
+        "type": "paragraph",
+        "id": "08218f806fc597a7",
+        "text": "We discourage reimplementation of federation crawlers by making all of the data maintained by search.fed.wiki.org available online. See [[Search Index Downloads]]"
+      },
+      "date": 1530280724264
+    },
+    {
+      "type": "add",
+      "id": "2ff0e2335b20d046",
+      "item": {
+        "type": "paragraph",
+        "id": "2ff0e2335b20d046",
+        "text": "I wonder, what sort of inversion of this data structure would be required to answer typical notification questions? "
+      },
+      "after": "08218f806fc597a7",
+      "date": 1530280817564
+    },
+    {
+      "type": "edit",
+      "id": "2ff0e2335b20d046",
+      "item": {
+        "type": "paragraph",
+        "id": "2ff0e2335b20d046",
+        "text": "I wonder, what sort of inversion of this data structure would be required to answer typical notification questions? Could I, for example, ask: who outside of my current neighborhood is forking and modifying content found inside of it? "
+      },
+      "date": 1530280907866
+    },
+    {
+      "type": "add",
+      "id": "9342674804ea765c",
+      "item": {
+        "type": "paragraph",
+        "id": "9342674804ea765c",
+        "text": "The centralized search service answers a variety of queries that are composed for it by the search link at the bottom of every page. A more general search would be the composition of all of these individual searches applied to every page of every site within the neighborhood. This sounds like a lot of work, but is it?"
+      },
+      "after": "2ff0e2335b20d046",
+      "date": 1530281126052
+    }
+  ]
+}

@@ -1,0 +1,744 @@
+{
+  "title": "Ping Service",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7dac92dc16113698",
+      "text": "We've used Pingdom to alert outages and track uptime until they abandoned their free tier. Let's have a server-side plugin do this for us. See [[Service Blocks]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "3c84d96746b82da5",
+      "text": "We've developed the scheduling for Datalog. Maybe we just add a PING keyword to that plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "c6f17c790e1fef79",
+      "text": "Or we can make a plugin that uses the same or similar scheduling and then let the existing Datalog query it."
+    },
+    {
+      "type": "paragraph",
+      "id": "f9ec34c52aab69cf",
+      "text": "See [[ICMP Options]] we've discarded."
+    },
+    {
+      "type": "markdown",
+      "id": "7fb742f1e0107b77",
+      "text": "# Cases"
+    },
+    {
+      "type": "paragraph",
+      "id": "dcf1bd4e8a016a88",
+      "text": "Alert if server is down or unavailable. Must see through port forwarding to home network."
+    },
+    {
+      "type": "paragraph",
+      "id": "83275c3c88ef19eb",
+      "text": "Alert if service is down or unavailable. Must see through routing or other application logic."
+    },
+    {
+      "type": "paragraph",
+      "id": "4c460bf928fb33db",
+      "text": "Diagnosis based on time of failure and nature of intermittent failure."
+    },
+    {
+      "type": "paragraph",
+      "id": "cd761ff46b4ea22e",
+      "text": "Assess relative performance between servers, network path and over time."
+    },
+    {
+      "type": "paragraph",
+      "id": "b15182c3b4c0d165",
+      "text": "Correlate and localize network anomalies."
+    },
+    {
+      "type": "paragraph",
+      "id": "046f433a3e09f568",
+      "text": "Report uptime percentages over months and years."
+    },
+    {
+      "type": "markdown",
+      "id": "e6f458a58b8c9c05",
+      "text": "# Code"
+    },
+    {
+      "type": "paragraph",
+      "id": "63fb5ee0fd91a9a2",
+      "text": "I've added a ping-like sample endpoint to the Datalog plugin which returns curl error code and elapsed time ready to be logged. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/d8d038b9ef4342c734e0ec4647098d572b71350e/server/server.js#L220-L235 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "aa03a8e1dca24b2f",
+      "text": "I've modified the plotly.js code I used to monitor at temp to now look at ping time. [http://ward.asia.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 asia] [http://found.ward.bay.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 bay]"
+    },
+    {
+      "type": "paragraph",
+      "id": "553edcdbfd985a1c",
+      "text": "A pair of iframes offers side-by-side viewing. [http://ward.asia.wiki.org/assets/plugins/datalog/comp-plots.html html]"
+    },
+    {
+      "type": "paragraph",
+      "id": "0f7d25b5f8e5e1b0",
+      "text": "I've written html/javascript to report an [[Uptime Table]] using the parallel data fetch already proven."
+    },
+    {
+      "type": "markdown",
+      "id": "3d80f6416a356eec",
+      "text": "# Use"
+    },
+    {
+      "type": "paragraph",
+      "id": "4c347fdb87ac5baf",
+      "text": "We see occasional spikes of slowness that don't correlate between probing servers leading us to suspect timebase instability which we've studied before."
+    },
+    {
+      "type": "paragraph",
+      "id": "1d0844babeb26ff2",
+      "text": "We could certainly get more stable numbers if we didn't make a call to make a probe but probed directly from the sampling logic in Datalog. We could also wrap this logic with real time clock checks that could detect when the hosting computer was slow on its own."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Ping Service",
+        "story": []
+      },
+      "date": 1553022390977
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7dac92dc16113698"
+      },
+      "id": "7dac92dc16113698",
+      "type": "add",
+      "date": 1553022393057
+    },
+    {
+      "type": "edit",
+      "id": "7dac92dc16113698",
+      "item": {
+        "type": "paragraph",
+        "id": "7dac92dc16113698",
+        "text": "We've used Pingdom to alert outages and track uptime until they abandoned their free tier. Seems like a good thing to have a server-side plugin do for us. "
+      },
+      "date": 1553022494944
+    },
+    {
+      "type": "add",
+      "id": "3c84d96746b82da5",
+      "item": {
+        "type": "paragraph",
+        "id": "3c84d96746b82da5",
+        "text": "We've developed the scheduling for Datalog. Maybe we just add a PING keyword to that plugin."
+      },
+      "after": "7dac92dc16113698",
+      "date": 1553022590668
+    },
+    {
+      "type": "add",
+      "id": "c6f17c790e1fef79",
+      "item": {
+        "type": "paragraph",
+        "id": "c6f17c790e1fef79",
+        "text": "Or we can make a plugin that uses the same or similar scheduling and then let the existing Datalog query it."
+      },
+      "after": "3c84d96746b82da5",
+      "date": 1553022654961
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "486d6835aea616d3"
+      },
+      "id": "486d6835aea616d3",
+      "type": "add",
+      "after": "c6f17c790e1fef79",
+      "date": 1553023813287
+    },
+    {
+      "type": "edit",
+      "id": "486d6835aea616d3",
+      "item": {
+        "type": "paragraph",
+        "id": "486d6835aea616d3",
+        "text": "ICMP probe as implemented in David Heidelberg's iputils. [https://github.com/iputils/iputils/blob/cab98aac8cdaa79ffa61a00360e63523df4f73cf/ping.c#L897-L947 github]"
+      },
+      "date": 1553023857034
+    },
+    {
+      "type": "edit",
+      "id": "486d6835aea616d3",
+      "item": {
+        "type": "paragraph",
+        "id": "486d6835aea616d3",
+        "text": "ICMP probe in David Heidelberg's iputils. [https://github.com/iputils/iputils/blob/cab98aac8cdaa79ffa61a00360e63523df4f73cf/ping.c#L897-L947 github]"
+      },
+      "date": 1553023868227
+    },
+    {
+      "type": "add",
+      "id": "be572430e508fba2",
+      "item": {
+        "type": "paragraph",
+        "id": "be572430e508fba2",
+        "text": "Could be another sample data provider. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/78980051ab75c507b1e6da3a74bc239bc5da9cec/server/server.js#L200-L209 github]"
+      },
+      "after": "486d6835aea616d3",
+      "date": 1553024174173
+    },
+    {
+      "type": "add",
+      "id": "c74efeb7aaee75d6",
+      "item": {
+        "type": "paragraph",
+        "id": "c74efeb7aaee75d6",
+        "text": "Node.js plain ICMP ping implementation."
+      },
+      "after": "be572430e508fba2",
+      "date": 1553037801976
+    },
+    {
+      "type": "edit",
+      "id": "c74efeb7aaee75d6",
+      "item": {
+        "type": "paragraph",
+        "id": "c74efeb7aaee75d6",
+        "text": "Node.js plain ICMP ping implementation. [https://blog.ipsumdomus.com/node-js-plain-icmp-ping-implementation-85ac0b319bc2 post]"
+      },
+      "date": 1553037824802
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d2eed7bedb12041a"
+      },
+      "id": "d2eed7bedb12041a",
+      "type": "add",
+      "after": "c74efeb7aaee75d6",
+      "date": 1553039991507
+    },
+    {
+      "type": "edit",
+      "id": "d2eed7bedb12041a",
+      "item": {
+        "type": "code",
+        "id": "d2eed7bedb12041a",
+        "text": "var ping = require('net-ping')\nvar session = ping.createSession()\nvar t0 = Date.now()\nsession.pingHost ('46.101.237.224', (err, ip) => {\n  var t1 = Date.now()\n  if (err) console.log (ip + \" \" + err.toString())\n  else console.log (ip + \" \" + (t1-t0))\n})"
+      },
+      "date": 1553039996755
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "90bd82ff568f5398"
+      },
+      "id": "90bd82ff568f5398",
+      "type": "add",
+      "after": "d2eed7bedb12041a",
+      "date": 1553040034614
+    },
+    {
+      "type": "edit",
+      "id": "90bd82ff568f5398",
+      "item": {
+        "type": "code",
+        "id": "90bd82ff568f5398",
+        "text": "while sleep 1\ndo node test.js\ndone"
+      },
+      "date": 1553040051627
+    },
+    {
+      "type": "edit",
+      "id": "90bd82ff568f5398",
+      "item": {
+        "type": "code",
+        "id": "90bd82ff568f5398",
+        "text": "while sleep 1\ndo node test.js\ndone\n\n46.101.237.224 173\n46.101.237.224 194\n46.101.237.224 229\n46.101.237.224 231\n46.101.237.224 246"
+      },
+      "date": 1553040068514
+    },
+    {
+      "type": "edit",
+      "id": "90bd82ff568f5398",
+      "item": {
+        "type": "code",
+        "id": "90bd82ff568f5398",
+        "text": "while sleep 1\ndo node test.js\ndone\n\n46.101.237.224 173\n46.101.237.224 194\n46.101.237.224 229\n46.101.237.224 231\n46.101.237.224 246\n\nping eu.wiki.org\n\nicmp_seq=29 time=190.386 ms\nicmp_seq=30 time=213.590 ms\nicmp_seq=31 time=234.038 ms\nicmp_seq=32 time=257.742 ms\nicmp_seq=33 time=170.315 ms\nicmp_seq=34 time=169.933 ms"
+      },
+      "date": 1553040198473
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "80ee281b9f5fed88"
+      },
+      "id": "80ee281b9f5fed88",
+      "type": "add",
+      "after": "90bd82ff568f5398",
+      "date": 1553055035798
+    },
+    {
+      "type": "edit",
+      "id": "80ee281b9f5fed88",
+      "item": {
+        "type": "paragraph",
+        "id": "80ee281b9f5fed88",
+        "text": "Oh no. It seems the ICMP is so low level that it is hard to pair replies to requests except at the application level. The node.js library works unless you run more than one pingHost at the same time. Then chaos. The Datalog plugin is all about parallelism so this is going to be turning back the clock a decade to make ping reliable."
+      },
+      "date": 1553055306458
+    },
+    {
+      "type": "add",
+      "id": "7fb742f1e0107b77",
+      "item": {
+        "type": "paragraph",
+        "id": "7fb742f1e0107b77",
+        "text": "# Use"
+      },
+      "after": "80ee281b9f5fed88",
+      "date": 1553085275764
+    },
+    {
+      "type": "add",
+      "id": "dcf1bd4e8a016a88",
+      "item": {
+        "type": "paragraph",
+        "id": "dcf1bd4e8a016a88",
+        "text": "Alert if server is down or unavailable. Must see through port forwarding to home network."
+      },
+      "after": "7fb742f1e0107b77",
+      "date": 1553085401320
+    },
+    {
+      "type": "add",
+      "id": "83275c3c88ef19eb",
+      "item": {
+        "type": "paragraph",
+        "id": "83275c3c88ef19eb",
+        "text": "Alert if service is down or unavailable. Must see through routing or other application logic."
+      },
+      "after": "dcf1bd4e8a016a88",
+      "date": 1553085460238
+    },
+    {
+      "type": "add",
+      "id": "4c460bf928fb33db",
+      "item": {
+        "type": "paragraph",
+        "id": "4c460bf928fb33db",
+        "text": "Diagnosis based on time of failure and nature of intermittent failure."
+      },
+      "after": "83275c3c88ef19eb",
+      "date": 1553085646159
+    },
+    {
+      "type": "add",
+      "id": "cd761ff46b4ea22e",
+      "item": {
+        "type": "paragraph",
+        "id": "cd761ff46b4ea22e",
+        "text": "Assess relative performance between servers, network path and over time."
+      },
+      "after": "4c460bf928fb33db",
+      "date": 1553085803961
+    },
+    {
+      "type": "add",
+      "id": "b15182c3b4c0d165",
+      "item": {
+        "type": "paragraph",
+        "id": "b15182c3b4c0d165",
+        "text": "Correlate and localize network anomalies."
+      },
+      "after": "cd761ff46b4ea22e",
+      "date": 1553085880312
+    },
+    {
+      "type": "add",
+      "id": "046f433a3e09f568",
+      "item": {
+        "type": "paragraph",
+        "id": "046f433a3e09f568",
+        "text": "Report uptime percentages over months and years."
+      },
+      "after": "b15182c3b4c0d165",
+      "date": 1553085937800
+    },
+    {
+      "type": "edit",
+      "id": "7fb742f1e0107b77",
+      "item": {
+        "type": "markdown",
+        "id": "7fb742f1e0107b77",
+        "text": "# Use"
+      },
+      "date": 1553085942404
+    },
+    {
+      "type": "edit",
+      "id": "7dac92dc16113698",
+      "item": {
+        "type": "paragraph",
+        "id": "7dac92dc16113698",
+        "text": "We've used Pingdom to alert outages and track uptime until they abandoned their free tier. Seems like a good thing to have a server-side plugin do for us. See [[Service Blocks]]"
+      },
+      "date": 1553122990913
+    },
+    {
+      "type": "edit",
+      "id": "7dac92dc16113698",
+      "item": {
+        "type": "paragraph",
+        "id": "7dac92dc16113698",
+        "text": "We've used Pingdom to alert outages and track uptime until they abandoned their free tier. Let's have a server-side plugin do this for us. See [[Service Blocks]]"
+      },
+      "date": 1553123047493
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "63fb5ee0fd91a9a2"
+      },
+      "id": "63fb5ee0fd91a9a2",
+      "type": "add",
+      "after": "046f433a3e09f568",
+      "date": 1557058173279
+    },
+    {
+      "type": "edit",
+      "id": "63fb5ee0fd91a9a2",
+      "item": {
+        "type": "paragraph",
+        "id": "63fb5ee0fd91a9a2",
+        "text": "I've added a ping-like sample endpoint to the Datalog plugin which returns curl error code and elapsed time ready to be logged. "
+      },
+      "date": 1557058399167
+    },
+    {
+      "type": "edit",
+      "id": "63fb5ee0fd91a9a2",
+      "item": {
+        "type": "paragraph",
+        "id": "63fb5ee0fd91a9a2",
+        "text": "I've added a ping-like sample endpoint to the Datalog plugin which returns curl error code and elapsed time ready to be logged. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/d8d038b9ef4342c734e0ec4647098d572b71350e/server/server.js#L220-L235 github]"
+      },
+      "date": 1557058595472
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e6f458a58b8c9c05"
+      },
+      "id": "e6f458a58b8c9c05",
+      "type": "add",
+      "after": "63fb5ee0fd91a9a2",
+      "date": 1557058607374
+    },
+    {
+      "type": "fork",
+      "date": 1557058648149
+    },
+    {
+      "type": "edit",
+      "id": "e6f458a58b8c9c05",
+      "item": {
+        "type": "markdown",
+        "id": "e6f458a58b8c9c05",
+        "text": "# Code"
+      },
+      "date": 1557058673640
+    },
+    {
+      "type": "move",
+      "order": [
+        "7dac92dc16113698",
+        "3c84d96746b82da5",
+        "c6f17c790e1fef79",
+        "486d6835aea616d3",
+        "be572430e508fba2",
+        "c74efeb7aaee75d6",
+        "d2eed7bedb12041a",
+        "90bd82ff568f5398",
+        "80ee281b9f5fed88",
+        "7fb742f1e0107b77",
+        "dcf1bd4e8a016a88",
+        "83275c3c88ef19eb",
+        "4c460bf928fb33db",
+        "cd761ff46b4ea22e",
+        "b15182c3b4c0d165",
+        "046f433a3e09f568",
+        "e6f458a58b8c9c05",
+        "63fb5ee0fd91a9a2"
+      ],
+      "id": "e6f458a58b8c9c05",
+      "date": 1557058680691
+    },
+    {
+      "type": "add",
+      "id": "aa03a8e1dca24b2f",
+      "item": {
+        "type": "paragraph",
+        "id": "aa03a8e1dca24b2f",
+        "text": "I've modified the plotly.js code I used to look at temperatures to now look at elapsed time. [http://ward.asia.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 plot]"
+      },
+      "after": "63fb5ee0fd91a9a2",
+      "date": 1557059437112
+    },
+    {
+      "type": "edit",
+      "id": "aa03a8e1dca24b2f",
+      "item": {
+        "type": "paragraph",
+        "id": "aa03a8e1dca24b2f",
+        "text": "I've modified the plotly.js code I used to look at temperatures to now look at elapsed time. [http://ward.asia.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 asia]"
+      },
+      "date": 1557059480470
+    },
+    {
+      "type": "edit",
+      "id": "aa03a8e1dca24b2f",
+      "item": {
+        "type": "paragraph",
+        "id": "aa03a8e1dca24b2f",
+        "text": "I've modified the plotly.js code I used to look at temp to now look at elapsed time. [http://ward.asia.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 asia] [http://ward.bay.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 asia]"
+      },
+      "date": 1557059544204
+    },
+    {
+      "type": "edit",
+      "id": "aa03a8e1dca24b2f",
+      "item": {
+        "type": "paragraph",
+        "id": "aa03a8e1dca24b2f",
+        "text": "I've modified the plotly.js code I used to look at temp to now look at elapsed time. [http://ward.asia.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 asia] [http://ward.bay.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 bay]"
+      },
+      "date": 1557059551490
+    },
+    {
+      "type": "edit",
+      "id": "aa03a8e1dca24b2f",
+      "item": {
+        "type": "paragraph",
+        "id": "aa03a8e1dca24b2f",
+        "text": "I've modified the plotly.js code I used to monitor at temp to now look at ping time. [http://ward.asia.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 asia] [http://ward.bay.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 bay]"
+      },
+      "date": 1557059587675
+    },
+    {
+      "type": "edit",
+      "id": "aa03a8e1dca24b2f",
+      "item": {
+        "type": "paragraph",
+        "id": "aa03a8e1dca24b2f",
+        "text": "I've modified the plotly.js code I used to monitor at temp to now look at ping time. [http://ward.asia.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 asia] [http://found.ward.bay.wiki.org/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 bay]"
+      },
+      "date": 1557059790235
+    },
+    {
+      "type": "add",
+      "id": "553edcdbfd985a1c",
+      "item": {
+        "type": "paragraph",
+        "id": "553edcdbfd985a1c",
+        "text": "I offer this pair of iframes for side-by-side viewing. [http://ward.asia.wiki.org/assets/plugins/datalog/comp-plots.html plots]"
+      },
+      "after": "aa03a8e1dca24b2f",
+      "date": 1557062981590
+    },
+    {
+      "type": "edit",
+      "id": "553edcdbfd985a1c",
+      "item": {
+        "type": "paragraph",
+        "id": "553edcdbfd985a1c",
+        "text": "A pair of iframes offers side-by-side viewing. [http://ward.asia.wiki.org/assets/plugins/datalog/comp-plots.html plots]"
+      },
+      "date": 1557063008643
+    },
+    {
+      "type": "edit",
+      "id": "553edcdbfd985a1c",
+      "item": {
+        "type": "paragraph",
+        "id": "553edcdbfd985a1c",
+        "text": "A pair of iframes offers side-by-side viewing. [http://ward.asia.wiki.org/assets/plugins/datalog/comp-plots.html html]"
+      },
+      "date": 1557063030819
+    },
+    {
+      "type": "add",
+      "id": "0f7d25b5f8e5e1b0",
+      "item": {
+        "type": "paragraph",
+        "id": "0f7d25b5f8e5e1b0",
+        "text": "I've written html/javascript to report an [[Uptime Table]] using the parallel data fetch already proven."
+      },
+      "after": "553edcdbfd985a1c",
+      "date": 1557081107623
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d3c1f6c7c7b51267"
+      },
+      "id": "d3c1f6c7c7b51267",
+      "type": "add",
+      "after": "0f7d25b5f8e5e1b0",
+      "date": 1557156427979
+    },
+    {
+      "type": "edit",
+      "id": "d3c1f6c7c7b51267",
+      "item": {
+        "type": "plugmatic",
+        "id": "d3c1f6c7c7b51267",
+        "text": "wiki-plugin-datalog"
+      },
+      "date": 1557156455863
+    },
+    {
+      "type": "fork",
+      "date": 1557156518066
+    },
+    {
+      "type": "remove",
+      "id": "d3c1f6c7c7b51267",
+      "date": 1557156536982
+    },
+    {
+      "type": "add",
+      "id": "4c347fdb87ac5baf",
+      "item": {
+        "type": "paragraph",
+        "id": "4c347fdb87ac5baf",
+        "text": "We see occasional spikes of slowness that don't correlate between probing servers leading us to suspect timebase instability which we've studied before."
+      },
+      "after": "0f7d25b5f8e5e1b0",
+      "date": 1557239064131
+    },
+    {
+      "type": "add",
+      "id": "1d0844babeb26ff2",
+      "item": {
+        "type": "paragraph",
+        "id": "1d0844babeb26ff2",
+        "text": "We could certainly get more stable numbers if we didn't make a call to make a probe but probed directly from the sampling logic in Datalog. We could also wrap this logic with real time clock checks that could detect when the hosting computer was slow on its own."
+      },
+      "after": "4c347fdb87ac5baf",
+      "date": 1557239201695
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3d80f6416a356eec"
+      },
+      "id": "3d80f6416a356eec",
+      "type": "add",
+      "after": "1d0844babeb26ff2",
+      "date": 1557239233332
+    },
+    {
+      "type": "edit",
+      "id": "3d80f6416a356eec",
+      "item": {
+        "type": "markdown",
+        "id": "3d80f6416a356eec",
+        "text": "# Use"
+      },
+      "date": 1557239250470
+    },
+    {
+      "type": "move",
+      "order": [
+        "7dac92dc16113698",
+        "3c84d96746b82da5",
+        "c6f17c790e1fef79",
+        "486d6835aea616d3",
+        "be572430e508fba2",
+        "c74efeb7aaee75d6",
+        "d2eed7bedb12041a",
+        "90bd82ff568f5398",
+        "80ee281b9f5fed88",
+        "7fb742f1e0107b77",
+        "dcf1bd4e8a016a88",
+        "83275c3c88ef19eb",
+        "4c460bf928fb33db",
+        "cd761ff46b4ea22e",
+        "b15182c3b4c0d165",
+        "046f433a3e09f568",
+        "e6f458a58b8c9c05",
+        "63fb5ee0fd91a9a2",
+        "aa03a8e1dca24b2f",
+        "553edcdbfd985a1c",
+        "0f7d25b5f8e5e1b0",
+        "3d80f6416a356eec",
+        "4c347fdb87ac5baf",
+        "1d0844babeb26ff2"
+      ],
+      "id": "3d80f6416a356eec",
+      "date": 1557239254694
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org"
+    },
+    {
+      "type": "add",
+      "id": "f9ec34c52aab69cf",
+      "item": {
+        "type": "paragraph",
+        "id": "f9ec34c52aab69cf",
+        "text": "See [[ICMP Options]] we've discarded."
+      },
+      "after": "c6f17c790e1fef79",
+      "date": 1557241758083
+    },
+    {
+      "type": "remove",
+      "id": "486d6835aea616d3",
+      "date": 1557241932782
+    },
+    {
+      "type": "remove",
+      "id": "be572430e508fba2",
+      "date": 1557241936266
+    },
+    {
+      "type": "remove",
+      "id": "c74efeb7aaee75d6",
+      "date": 1557241940108
+    },
+    {
+      "type": "remove",
+      "id": "d2eed7bedb12041a",
+      "date": 1557241946092
+    },
+    {
+      "type": "remove",
+      "id": "90bd82ff568f5398",
+      "date": 1557241950506
+    },
+    {
+      "type": "remove",
+      "id": "80ee281b9f5fed88",
+      "date": 1557241957987
+    },
+    {
+      "type": "edit",
+      "id": "7fb742f1e0107b77",
+      "item": {
+        "type": "markdown",
+        "id": "7fb742f1e0107b77",
+        "text": "# Cases"
+      },
+      "date": 1557241995096
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1557242068791
+    }
+  ]
+}

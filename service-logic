@@ -1,0 +1,799 @@
+{
+  "title": "Service Logic",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "4b23358ba388122a",
+      "text": "We consider how server-side plugins can assemble and maintain coordinated services under the guidance of transient client-side plugin configurations. See [[Alert Prototype]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "fef2e420a543001d",
+      "text": "Our first thoughts were called [[Service Blocks]]. We're building these and learning as we go."
+    },
+    {
+      "type": "paragraph",
+      "id": "312bee22a75d943b",
+      "text": "Our current prototype follows our good experience with starting and restarting [[Timer Logic]]."
+    },
+    {
+      "type": "markdown",
+      "id": "f28ea8442b5e5d8c",
+      "text": "# Metaphor"
+    },
+    {
+      "type": "paragraph",
+      "id": "8994730b972b93a0",
+      "text": "A site is like a program. Editing the contents of a site is like revising the program."
+    },
+    {
+      "type": "paragraph",
+      "id": "1fb45504d250929c",
+      "text": "A lineup is like an expression in a language. When we start/stop a plugin it is like saving/erasing a fragment of program written in the language."
+    },
+    {
+      "type": "paragraph",
+      "id": "8f6c83e650e51616",
+      "text": "A schedule.json asset file is like a compiled program that can be restarted with every server restart."
+    },
+    {
+      "type": "paragraph",
+      "id": "ebd5559ad77ff7d9",
+      "text": "The node server is like the runtime environment that can load and execute a program. The app provides dynamic linking of program fragments via ServiceEmitters identified by slug/item strings."
+    },
+    {
+      "type": "markdown",
+      "id": "a9694a4e32b74984",
+      "text": "# Implementation"
+    },
+    {
+      "type": "paragraph",
+      "id": "387c1a425281d430",
+      "text": "An assembly of cooperating plugins will be dubbed a \"service\". The behavior of the service will depend on what configuration of client-side pages have been lined up when plugins are started."
+    },
+    {
+      "type": "paragraph",
+      "id": "54e34ccfb2924d5a",
+      "text": "Plugins that can cooperate server-side will announce this capability as \"service-source\" and bind through DOM discovery mechanisms client-side. A service-source consumer will convey the source's slug/item to its own server-side on start so that the server-sides can be linked."
+    },
+    {
+      "type": "paragraph",
+      "id": "518b87ef07b01773",
+      "text": "Server-side plugins cooperate through emitting and handling events. An active server source will post its server-side EventEmitter to the app.eventEmitters registry. An active server source consumer will listen to the source's EventEmitter using event names to distinguish events it can handle."
+    },
+    {
+      "type": "paragraph",
+      "id": "359a0f0acfab11a8",
+      "text": "See [[Implementing Service Logic]]"
+    },
+    {
+      "type": "markdown",
+      "id": "01f2a3d82bdfd408",
+      "text": "# Observation"
+    },
+    {
+      "type": "paragraph",
+      "id": "23ef33c1cc413141",
+      "text": "One cannot determine what configurations will be launched by examining the page json of a site. However, asset state will facilitate restarting a configuration and is therefor an accurate description of the running service. We should extend Graphviz's algorithmic diagrams to draw this dynamic state."
+    },
+    {
+      "type": "paragraph",
+      "id": "ecc9bba571bf2a6f",
+      "text": "Events could carry a trace of slug/item/event that lead to any invocation. This way a plugin could look upstream to know what part of a computation it serves."
+    },
+    {
+      "type": "graphviz",
+      "id": "f65d3535c64a575b",
+      "text": "digraph {\n  node [shape=box style=filled fillcolor=palegreen]\n  Datalog -> Detect [label=\"7684 sample events\"]\n  Json -> Detect [label=\"2 post events\"]\n  Detect -> Alert [label=\"3 alarm events\"]\n}"
+    },
+    {
+      "type": "markdown",
+      "id": "379866e05301dba5",
+      "text": "# Patterns"
+    },
+    {
+      "type": "paragraph",
+      "id": "bcc9394f06a94eae",
+      "text": "We're interested in how a site could be written as a pattern language for complex configurations. Pattern pages would describe some aspect of the configuration and include plugins that can be assembled and started to complete a choice (as in speech acts in natural language)."
+    },
+    {
+      "type": "paragraph",
+      "id": "32297d1e3dc2d6af",
+      "text": "For a large system one might not view all relevant patterns or even all completed choices in a lineup together. But with well developed observation one could move around the complex system exploring alternative patterns and starting these as replacements (as in revising a narrative)."
+    },
+    {
+      "type": "paragraph",
+      "id": "07fa57106f153c13",
+      "text": "For a critical system the wiki and its server-side plugins might only model the behavior of a soon to be deployed system offering checks and performance estimates, possibly comparing these to live data from a production environment."
+    },
+    {
+      "type": "markdown",
+      "id": "6971a1830bb0563e",
+      "text": "# Uses"
+    },
+    {
+      "type": "paragraph",
+      "id": "c4975c957e2459e7",
+      "text": "We'll collect similar applications we might configure if this proves both easy and reliable."
+    },
+    {
+      "type": "paragraph",
+      "id": "0ec7fb18e98bc950",
+      "text": "Smoker. Temperature sensor sends text when ready to cook or time to eat."
+    },
+    {
+      "type": "paragraph",
+      "id": "97571618101ec9fd",
+      "text": "Spots. Digital radio monitors ham band recording stations heard and sends text when rare location is on the air."
+    },
+    {
+      "type": "paragraph",
+      "id": "3fec128fdc5be7b1",
+      "text": "Mildew. We anticipate remote sensing of conditions that require agricultural intervention. See [[Powdery Mildew]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "aa6f37d6085f7ac6",
+      "text": "Push. In some data logging applications push to wiki would be preferable. Maybe extend Json plugin?"
+    },
+    {
+      "type": "paragraph",
+      "id": "622906ee2f6583b0",
+      "text": "Backup. Regular, automated and off-site backups are classic 24x7 cron jobs that need wiki organization."
+    },
+    {
+      "type": "paragraph",
+      "id": "2f0e01ee0c6d5004",
+      "text": "Blocks. Invented for kids, a handful of composable blocks could offer generic computation ready to start/stop. [https://developers.google.com/blockly/ site]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Service Logic",
+        "story": []
+      },
+      "date": 1559316093329
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4b23358ba388122a"
+      },
+      "id": "4b23358ba388122a",
+      "type": "add",
+      "date": 1559316099251
+    },
+    {
+      "type": "edit",
+      "id": "4b23358ba388122a",
+      "item": {
+        "type": "paragraph",
+        "id": "4b23358ba388122a",
+        "text": "We consider how server-side plugins can assemble and maintain coordinated services under the guidance of transient client-side plugin configurations."
+      },
+      "date": 1559316220248
+    },
+    {
+      "type": "add",
+      "id": "312bee22a75d943b",
+      "item": {
+        "type": "paragraph",
+        "id": "312bee22a75d943b",
+        "text": "Our current prototype follows our good experience with starting and restarting [[Timer Logic]]"
+      },
+      "after": "4b23358ba388122a",
+      "date": 1559316272129
+    },
+    {
+      "type": "edit",
+      "id": "312bee22a75d943b",
+      "item": {
+        "type": "paragraph",
+        "id": "312bee22a75d943b",
+        "text": "Our current prototype follows our good experience with starting and restarting [[Timer Logic]]."
+      },
+      "date": 1559316278144
+    },
+    {
+      "type": "add",
+      "id": "f28ea8442b5e5d8c",
+      "item": {
+        "type": "paragraph",
+        "id": "f28ea8442b5e5d8c",
+        "text": "# Metaphor"
+      },
+      "after": "312bee22a75d943b",
+      "date": 1559316300273
+    },
+    {
+      "type": "add",
+      "id": "8994730b972b93a0",
+      "item": {
+        "type": "paragraph",
+        "id": "8994730b972b93a0",
+        "text": "A site is like a program. Editing the contents of a site is like revising the program."
+      },
+      "after": "f28ea8442b5e5d8c",
+      "date": 1559316398902
+    },
+    {
+      "type": "add",
+      "id": "1fb45504d250929c",
+      "item": {
+        "type": "paragraph",
+        "id": "1fb45504d250929c",
+        "text": "A lineup is like an expression in a language. When we start/stop a plugin it is like saving/erasing a fragment of program written in the language."
+      },
+      "after": "8994730b972b93a0",
+      "date": 1559316598840
+    },
+    {
+      "type": "add",
+      "id": "8f6c83e650e51616",
+      "item": {
+        "type": "paragraph",
+        "id": "8f6c83e650e51616",
+        "text": "A schedule.json file is like a compiled program that can be restarted at will."
+      },
+      "after": "1fb45504d250929c",
+      "date": 1559316658076
+    },
+    {
+      "type": "edit",
+      "id": "8f6c83e650e51616",
+      "item": {
+        "type": "paragraph",
+        "id": "8f6c83e650e51616",
+        "text": "A schedule.json file is like a compiled program that can be restarted with every server restart."
+      },
+      "date": 1559316693045
+    },
+    {
+      "type": "edit",
+      "id": "f28ea8442b5e5d8c",
+      "item": {
+        "type": "markdown",
+        "id": "f28ea8442b5e5d8c",
+        "text": "# Metaphor"
+      },
+      "date": 1559316697461
+    },
+    {
+      "type": "add",
+      "id": "ebd5559ad77ff7d9",
+      "item": {
+        "type": "paragraph",
+        "id": "ebd5559ad77ff7d9",
+        "text": "An express app is like the runtime environment that can load and execute a program."
+      },
+      "after": "8f6c83e650e51616",
+      "date": 1559316798640
+    },
+    {
+      "type": "edit",
+      "id": "ebd5559ad77ff7d9",
+      "item": {
+        "type": "paragraph",
+        "id": "ebd5559ad77ff7d9",
+        "text": "An express app is like the runtime environment that can load and execute a program. The app provides dynamic linking of program fragments via serviceEmitters identified by slug/item strings."
+      },
+      "date": 1559316904458
+    },
+    {
+      "type": "edit",
+      "id": "8f6c83e650e51616",
+      "item": {
+        "type": "paragraph",
+        "id": "8f6c83e650e51616",
+        "text": "A schedule.json asset file is like a compiled program that can be restarted with every server restart."
+      },
+      "date": 1559320262798
+    },
+    {
+      "type": "edit",
+      "id": "4b23358ba388122a",
+      "item": {
+        "type": "paragraph",
+        "id": "4b23358ba388122a",
+        "text": "We consider how server-side plugins can assemble and maintain coordinated services under the guidance of transient client-side plugin configurations. See [[Alert Prototype]]"
+      },
+      "date": 1559320494370
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a9694a4e32b74984"
+      },
+      "id": "a9694a4e32b74984",
+      "type": "add",
+      "after": "ebd5559ad77ff7d9",
+      "date": 1559320590196
+    },
+    {
+      "type": "edit",
+      "id": "a9694a4e32b74984",
+      "item": {
+        "type": "markdown",
+        "id": "a9694a4e32b74984",
+        "text": "# Implementation"
+      },
+      "date": 1559320598861
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "387c1a425281d430"
+      },
+      "id": "387c1a425281d430",
+      "type": "add",
+      "after": "a9694a4e32b74984",
+      "date": 1559320601002
+    },
+    {
+      "type": "edit",
+      "id": "387c1a425281d430",
+      "item": {
+        "type": "paragraph",
+        "id": "387c1a425281d430",
+        "text": "An assembly of cooperating plugins will be dubbed a \"service\". The behavior of the service will depend on what configuration of client-side pages have been lined up when plugins are started."
+      },
+      "date": 1559321078284
+    },
+    {
+      "type": "add",
+      "id": "54e34ccfb2924d5a",
+      "item": {
+        "type": "paragraph",
+        "id": "54e34ccfb2924d5a",
+        "text": "Plugins that can cooperate server-side will announce this capability as \"service-source\" and bind through DOM discovery mechanisms client-side. A service-source consumer will convey the source's slug/item to its own server-side on start so that the server-sides can be linked."
+      },
+      "after": "387c1a425281d430",
+      "date": 1559321482525
+    },
+    {
+      "type": "add",
+      "id": "518b87ef07b01773",
+      "item": {
+        "type": "paragraph",
+        "id": "518b87ef07b01773",
+        "text": "Server-side plugins cooperate through emitting and handling events. An active server source will post its server-side EventEmitter to the app.eventEmitters registry. An active server source consumer will listen to the source's EventEmitter using event names to distinguish events it can handle."
+      },
+      "after": "54e34ccfb2924d5a",
+      "date": 1559321802749
+    },
+    {
+      "type": "add",
+      "id": "23ef33c1cc413141",
+      "item": {
+        "type": "paragraph",
+        "id": "23ef33c1cc413141",
+        "text": "One cannot determine what configurations will be launched by examining the page json of a site. However, asset state will facilitate restarting and is therefor an accurate description of the running service. A u"
+      },
+      "after": "518b87ef07b01773",
+      "date": 1559322113236
+    },
+    {
+      "type": "edit",
+      "id": "23ef33c1cc413141",
+      "item": {
+        "type": "paragraph",
+        "id": "23ef33c1cc413141",
+        "text": "One cannot determine what configurations will be launched by examining the page json of a site. However, asset state will facilitate restarting a configuration and is therefor an accurate description of the running service. We should extend Graphviz's algorithmic diagrams to draw this dynamic state."
+      },
+      "date": 1559322273164
+    },
+    {
+      "type": "add",
+      "id": "ecc9bba571bf2a6f",
+      "item": {
+        "type": "paragraph",
+        "id": "ecc9bba571bf2a6f",
+        "text": "Events could carry a trace of slug/item/event that lead to any invocation. This way a plugin could look upstream to know what part of a computation it serves."
+      },
+      "after": "23ef33c1cc413141",
+      "date": 1559322561424
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f65d3535c64a575b"
+      },
+      "id": "f65d3535c64a575b",
+      "type": "add",
+      "after": "ecc9bba571bf2a6f",
+      "date": 1559322639541
+    },
+    {
+      "type": "edit",
+      "id": "f65d3535c64a575b",
+      "item": {
+        "type": "graphviz",
+        "id": "f65d3535c64a575b",
+        "text": "digraph {\n  Datalog -> Detector [label=\"684 sample\"]\n  Detector -> Alert [label=\"3 alarm\"]\n}"
+      },
+      "date": 1559322753075
+    },
+    {
+      "type": "edit",
+      "id": "f65d3535c64a575b",
+      "item": {
+        "type": "graphviz",
+        "id": "f65d3535c64a575b",
+        "text": "digraph {\n  Datalog -> Detector [label=\"684 sample\"]\n  Json -> Detector [label=\"2 reset\"]\n  Detector -> Alert [label=\"3 alarm\"]\n}"
+      },
+      "date": 1559322880117
+    },
+    {
+      "type": "edit",
+      "id": "f65d3535c64a575b",
+      "item": {
+        "type": "graphviz",
+        "id": "f65d3535c64a575b",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=palegreen]\n  Datalog -> Detector [label=\"684 sample\"]\n  Json -> Detector [label=\"2 reset\"]\n  Detector -> Alert [label=\"3 alarm\"]\n}"
+      },
+      "date": 1559322932776
+    },
+    {
+      "type": "edit",
+      "id": "f65d3535c64a575b",
+      "item": {
+        "type": "graphviz",
+        "id": "f65d3535c64a575b",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=palegreen]\n  Datalog -> Detector [label=\"684 sample events\"]\n  Json -> Detector [label=\"2 reset events\"]\n  Detector -> Alert [label=\"3 alarm events\"]\n}"
+      },
+      "date": 1559322961885
+    },
+    {
+      "type": "edit",
+      "id": "f65d3535c64a575b",
+      "item": {
+        "type": "graphviz",
+        "id": "f65d3535c64a575b",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=palegreen]\n  Datalog -> Detector [label=\"7684 sample events\"]\n  Json -> Detector [label=\"2 reset events\"]\n  Detector -> Alert [label=\"3 alarm events\"]\n}"
+      },
+      "date": 1559322987666
+    },
+    {
+      "type": "edit",
+      "id": "f65d3535c64a575b",
+      "item": {
+        "type": "graphviz",
+        "id": "f65d3535c64a575b",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=palegreen]\n  Datalog -> Detect [label=\"7684 sample events\"]\n  Json -> Detect [label=\"2 reset events\"]\n  Detector -> Alert [label=\"3 alarm events\"]\n}"
+      },
+      "date": 1559323063479
+    },
+    {
+      "type": "edit",
+      "id": "f65d3535c64a575b",
+      "item": {
+        "type": "graphviz",
+        "id": "f65d3535c64a575b",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=palegreen]\n  Datalog -> Detect [label=\"7684 sample events\"]\n  Json -> Detect [label=\"2 reset events\"]\n  Detect -> Alert [label=\"3 alarm events\"]\n}"
+      },
+      "date": 1559323073418
+    },
+    {
+      "type": "edit",
+      "id": "f65d3535c64a575b",
+      "item": {
+        "type": "graphviz",
+        "id": "f65d3535c64a575b",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=palegreen]\n  Datalog -> Detect [label=\"7684 sample events\"]\n  Json -> Detect [label=\"2 post events\"]\n  Detect -> Alert [label=\"3 alarm events\"]\n}"
+      },
+      "date": 1559323546106
+    },
+    {
+      "type": "add",
+      "id": "01f2a3d82bdfd408",
+      "item": {
+        "type": "paragraph",
+        "id": "01f2a3d82bdfd408",
+        "text": "# Observation"
+      },
+      "after": "518b87ef07b01773",
+      "date": 1559323691896
+    },
+    {
+      "type": "edit",
+      "id": "01f2a3d82bdfd408",
+      "item": {
+        "type": "markdown",
+        "id": "01f2a3d82bdfd408",
+        "text": "# Observation"
+      },
+      "date": 1559323695238
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "379866e05301dba5"
+      },
+      "id": "379866e05301dba5",
+      "type": "add",
+      "after": "f65d3535c64a575b",
+      "date": 1559324653766
+    },
+    {
+      "type": "edit",
+      "id": "379866e05301dba5",
+      "item": {
+        "type": "markdown",
+        "id": "379866e05301dba5",
+        "text": "# Patterns"
+      },
+      "date": 1559324691636
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bcc9394f06a94eae"
+      },
+      "id": "bcc9394f06a94eae",
+      "type": "add",
+      "after": "379866e05301dba5",
+      "date": 1559324693744
+    },
+    {
+      "type": "edit",
+      "id": "bcc9394f06a94eae",
+      "item": {
+        "type": "paragraph",
+        "id": "bcc9394f06a94eae",
+        "text": "We're interested in how a site could be written as a pattern language for complex configurations. Pattern pages would describe some aspect of the configuration and include plugins that can be assembled and started to complete a choice (as in speech acts in natural language)."
+      },
+      "date": 1559325025370
+    },
+    {
+      "type": "add",
+      "id": "32297d1e3dc2d6af",
+      "item": {
+        "type": "paragraph",
+        "id": "32297d1e3dc2d6af",
+        "text": "For a large system one might not view all relevant patterns or even all completed choices in a lineup together. But with well developed observation one could move around the complex system exploring alternative patterns and starting these as replacements (as in revising a narrative)."
+      },
+      "after": "bcc9394f06a94eae",
+      "date": 1559325248014
+    },
+    {
+      "type": "add",
+      "id": "07fa57106f153c13",
+      "item": {
+        "type": "paragraph",
+        "id": "07fa57106f153c13",
+        "text": "For a critical system the wiki and its server-side plugins might only model the behavior of a soon to be deployed system offering checks and performance estimates."
+      },
+      "after": "32297d1e3dc2d6af",
+      "date": 1559325511907
+    },
+    {
+      "type": "edit",
+      "id": "07fa57106f153c13",
+      "item": {
+        "type": "paragraph",
+        "id": "07fa57106f153c13",
+        "text": "For a critical system the wiki and its server-side plugins might only model the behavior of a soon to be deployed system offering checks and performance estimates, possibly comparing these to live data from a production environment."
+      },
+      "date": 1559325607245
+    },
+    {
+      "type": "move",
+      "order": [
+        "4b23358ba388122a",
+        "312bee22a75d943b",
+        "f28ea8442b5e5d8c",
+        "8994730b972b93a0",
+        "1fb45504d250929c",
+        "8f6c83e650e51616",
+        "ebd5559ad77ff7d9",
+        "a9694a4e32b74984",
+        "387c1a425281d430",
+        "54e34ccfb2924d5a",
+        "518b87ef07b01773",
+        "01f2a3d82bdfd408",
+        "23ef33c1cc413141",
+        "ecc9bba571bf2a6f",
+        "f65d3535c64a575b",
+        "379866e05301dba5",
+        "bcc9394f06a94eae",
+        "07fa57106f153c13",
+        "32297d1e3dc2d6af"
+      ],
+      "id": "07fa57106f153c13",
+      "date": 1559325641280
+    },
+    {
+      "type": "move",
+      "order": [
+        "4b23358ba388122a",
+        "312bee22a75d943b",
+        "f28ea8442b5e5d8c",
+        "8994730b972b93a0",
+        "1fb45504d250929c",
+        "8f6c83e650e51616",
+        "ebd5559ad77ff7d9",
+        "a9694a4e32b74984",
+        "387c1a425281d430",
+        "54e34ccfb2924d5a",
+        "518b87ef07b01773",
+        "01f2a3d82bdfd408",
+        "23ef33c1cc413141",
+        "ecc9bba571bf2a6f",
+        "f65d3535c64a575b",
+        "379866e05301dba5",
+        "bcc9394f06a94eae",
+        "32297d1e3dc2d6af",
+        "07fa57106f153c13"
+      ],
+      "id": "07fa57106f153c13",
+      "date": 1559325644800
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "223c4cdb956f5363"
+      },
+      "id": "223c4cdb956f5363",
+      "type": "add",
+      "after": "07fa57106f153c13",
+      "date": 1559359077331
+    },
+    {
+      "type": "edit",
+      "id": "223c4cdb956f5363",
+      "item": {
+        "type": "plugmatic",
+        "id": "223c4cdb956f5363",
+        "text": "wiki-plugin-assets\nwiki-plugin-datalog\nwiki-plugin-detect"
+      },
+      "date": 1559359115509
+    },
+    {
+      "type": "edit",
+      "id": "ebd5559ad77ff7d9",
+      "item": {
+        "type": "paragraph",
+        "id": "ebd5559ad77ff7d9",
+        "text": "The node server is like the runtime environment that can load and execute a program. The app provides dynamic linking of program fragments via ServiceEmitters identified by slug/item strings."
+      },
+      "date": 1559392804790
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "6971a1830bb0563e",
+        "text": "# Uses"
+      },
+      "after": "07fa57106f153c13",
+      "id": "6971a1830bb0563e",
+      "date": 1559403730246
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "c4975c957e2459e7",
+        "text": "We'll collect similar applications we might configure if this proves both easy and reliable."
+      },
+      "after": "6971a1830bb0563e",
+      "id": "c4975c957e2459e7",
+      "date": 1559403733492
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "0ec7fb18e98bc950",
+        "text": "Smoker. Temperature sensor sends text when ready to cook or time to eat."
+      },
+      "after": "c4975c957e2459e7",
+      "id": "0ec7fb18e98bc950",
+      "date": 1559403736585
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "97571618101ec9fd",
+        "text": "Spots. Digital radio monitors ham band recording stations heard and sends text when rare location is on the air."
+      },
+      "after": "0ec7fb18e98bc950",
+      "id": "97571618101ec9fd",
+      "date": 1559403739533
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "3fec128fdc5be7b1",
+        "text": "Mildew. We anticipate remote sensing of conditions that require agricultural intervention. See [[Powdery Mildew]]"
+      },
+      "after": "97571618101ec9fd",
+      "id": "3fec128fdc5be7b1",
+      "date": 1559403744522
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "aa6f37d6085f7ac6",
+        "text": "Push. In some data logging applications push to wiki would be preferable. Maybe extend Json plugin?"
+      },
+      "after": "3fec128fdc5be7b1",
+      "id": "aa6f37d6085f7ac6",
+      "date": 1559403749064
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "622906ee2f6583b0",
+        "text": "Backup. Regular, automated and off-site backups are classic 24x7 cron jobs that need wiki organization."
+      },
+      "after": "aa6f37d6085f7ac6",
+      "id": "622906ee2f6583b0",
+      "date": 1559403755250
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "2f0e01ee0c6d5004",
+        "text": "Blocks. Invented for kids, a handful of composable blocks could offer generic computation ready to start/stop. [https://developers.google.com/blockly/ site]"
+      },
+      "after": "622906ee2f6583b0",
+      "id": "2f0e01ee0c6d5004",
+      "date": 1559403759946
+    },
+    {
+      "type": "add",
+      "id": "359a0f0acfab11a8",
+      "item": {
+        "type": "paragraph",
+        "id": "359a0f0acfab11a8",
+        "text": "See [[Implementing Service Logic]]"
+      },
+      "after": "518b87ef07b01773",
+      "date": 1559741318801
+    },
+    {
+      "type": "remove",
+      "id": "223c4cdb956f5363",
+      "date": 1559741751508
+    },
+    {
+      "type": "add",
+      "id": "fef2e420a543001d",
+      "item": {
+        "type": "paragraph",
+        "id": "fef2e420a543001d",
+        "text": "We've called this [[Service Blocks]] before."
+      },
+      "after": "4b23358ba388122a",
+      "date": 1560356284045
+    },
+    {
+      "type": "edit",
+      "id": "fef2e420a543001d",
+      "item": {
+        "type": "paragraph",
+        "id": "fef2e420a543001d",
+        "text": "Our first thoughts along these lines were called [[Service Blocks]]. We're building these and learning as we go."
+      },
+      "date": 1560356371168
+    },
+    {
+      "type": "edit",
+      "id": "fef2e420a543001d",
+      "item": {
+        "type": "paragraph",
+        "id": "fef2e420a543001d",
+        "text": "Our first thoughts were called [[Service Blocks]]. We're building these and learning as we go."
+      },
+      "date": 1560356387119
+    }
+  ]
+}

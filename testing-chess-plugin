@@ -1,0 +1,273 @@
+{
+  "title": "Testing Chess Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5f80b7453361c915",
+      "text": "We render all chess pieces present in the markup. [https://github.com/WardCunningham/wiki-plugin-chess/commit/6dc4490d9b482a465ca4615f746f2b69fd14e0b0 github]"
+    },
+    {
+      "type": "chess",
+      "id": "b2f48b263e6aeb2f",
+      "text": "♜a8\t♞b8\t♝c8\t♛d8\t♚e8\t♝f8\t♞g8\t♜h8\n♟a7\t♟b7\t♟c7\t♟d7\t♟e7\t♟f7\t♟g7\t♟h7\n\n        ♧b5\n\n♙a2\t♙b2\t♙c2\t♙d2\t♙e2\t♙f2\t♙g2\t♙h2\n♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+    },
+    {
+      "type": "paragraph",
+      "id": "4fd9f5e1ea2ae07d",
+      "text": "Our markup will draw any unicode glyph if followed by a col-row suffix between a0 and h8. Other text is ignored."
+    },
+    {
+      "type": "paragraph",
+      "id": "7225ef09fc595ffe",
+      "text": "See [[About Chess Plugin]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Testing Chess Plugin",
+        "story": []
+      },
+      "date": 1488077989074
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "This is text in the new plugin. You can *double-click* to edit it too."
+      },
+      "id": "b2f48b263e6aeb2f",
+      "date": 1488077998989
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "982fd2dfdb464ac1"
+      },
+      "id": "982fd2dfdb464ac1",
+      "type": "add",
+      "after": "b2f48b263e6aeb2f",
+      "date": 1488078077122
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♖\t♘\t♗\t♕\t♔\t♗\t♘\t♖"
+      },
+      "date": 1488078079573
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+      },
+      "date": 1488078188478
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♙a2\t♙b2\t♙c2\t♙d2\t♙e2\t♙f2\t♙g2\t♙h2\n♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+      },
+      "date": 1488078255776
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♟\t♟\t♟\t♟\t♟\t♟\t♟\t♟\n♙a2\t♙b2\t♙c2\t♙d2\t♙e2\t♙f2\t♙g2\t♙h2\n♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+      },
+      "date": 1488078410861
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♜\t♞\t♝\t♛\t♚\t♝\t♞\t♜\n♟\t♟\t♟\t♟\t♟\t♟\t♟\t♟\n♙a2\t♙b2\t♙c2\t♙d2\t♙e2\t♙f2\t♙g2\t♙h2\n♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+      },
+      "date": 1488078433411
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♜a8\t♞\t♝\t♛\t♚\t♝\t♞\t♜\n♟\t♟\t♟\t♟\t♟\t♟\t♟\t♟\n♙a2\t♙b2\t♙c2\t♙d2\t♙e2\t♙f2\t♙g2\t♙h2\n♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+      },
+      "date": 1488078442353
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♜a8\t♞b8\t♝c8\t♛d8\t♚e8\t♝f8\t♞g8\t♜h8\n♟a7\t♟b7\t♟c7\t♟d7\t♟e7\t♟f7\t♟g7\t♟h7\n♙a2\t♙b2\t♙c2\t♙d2\t♙e2\t♙f2\t♙g2\t♙h2\n♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+      },
+      "date": 1488078503977
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♜a8\t♞b8\t♝c8\t♛d8\t♚e8\t♝f8\t♞g8\t♜h8\n♟a7\t♟b7\t♟c7\t♟d7\t♟e7\t♟f7\t♟g7\t♟h7\n\n\n\n♙a2\t♙b2\t♙c2\t♙d2\t♙e2\t♙f2\t♙g2\t♙h2\n♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+      },
+      "date": 1488078545196
+    },
+    {
+      "type": "remove",
+      "id": "982fd2dfdb464ac1",
+      "date": 1488078685077
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5f80b7453361c915"
+      },
+      "id": "5f80b7453361c915",
+      "type": "add",
+      "after": "b2f48b263e6aeb2f",
+      "date": 1488084933034
+    },
+    {
+      "type": "edit",
+      "id": "5f80b7453361c915",
+      "item": {
+        "type": "paragraph",
+        "id": "5f80b7453361c915",
+        "text": "We render all chess pieces present in the markup for the "
+      },
+      "date": 1488084997982
+    },
+    {
+      "type": "edit",
+      "id": "5f80b7453361c915",
+      "item": {
+        "type": "paragraph",
+        "id": "5f80b7453361c915",
+        "text": "We render all chess pieces present in the markup."
+      },
+      "date": 1488085009480
+    },
+    {
+      "type": "move",
+      "order": [
+        "5f80b7453361c915",
+        "b2f48b263e6aeb2f"
+      ],
+      "id": "5f80b7453361c915",
+      "date": 1488085012905
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4fd9f5e1ea2ae07d"
+      },
+      "id": "4fd9f5e1ea2ae07d",
+      "type": "add",
+      "after": "b2f48b263e6aeb2f",
+      "date": 1488085017566
+    },
+    {
+      "type": "edit",
+      "id": "4fd9f5e1ea2ae07d",
+      "item": {
+        "type": "paragraph",
+        "id": "4fd9f5e1ea2ae07d",
+        "text": "Our markup will draw any unicode glyph if followed by a row-col suffix between a0 and h8."
+      },
+      "date": 1488085091435
+    },
+    {
+      "type": "edit",
+      "id": "b2f48b263e6aeb2f",
+      "item": {
+        "type": "chess",
+        "id": "b2f48b263e6aeb2f",
+        "text": "♜a8\t♞b8\t♝c8\t♛d8\t♚e8\t♝f8\t♞g8\t♜h8\n♟a7\t♟b7\t♟c7\t♟d7\t♟e7\t♟f7\t♟g7\t♟h7\n\n        ♧b5\n\n♙a2\t♙b2\t♙c2\t♙d2\t♙e2\t♙f2\t♙g2\t♙h2\n♖a1\t♘b1\t♗c1\t♕d1\t♔e1\t♗f1\t♘g1\t♖h1"
+      },
+      "date": 1488085253624
+    },
+    {
+      "type": "edit",
+      "id": "4fd9f5e1ea2ae07d",
+      "item": {
+        "type": "paragraph",
+        "id": "4fd9f5e1ea2ae07d",
+        "text": "Our markup will draw any unicode glyph if followed by a col-row suffix between a0 and h8."
+      },
+      "date": 1488085470921
+    },
+    {
+      "type": "edit",
+      "id": "4fd9f5e1ea2ae07d",
+      "item": {
+        "type": "paragraph",
+        "id": "4fd9f5e1ea2ae07d",
+        "text": "Our markup will draw any unicode glyph if followed by a col-row suffix between a0 and h8. Other text is ignored."
+      },
+      "date": 1488086243591
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1488087350739,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1488087369451
+    },
+    {
+      "type": "edit",
+      "id": "5f80b7453361c915",
+      "item": {
+        "type": "paragraph",
+        "id": "5f80b7453361c915",
+        "text": "We render all chess pieces present in the markup. [https://github.com/WardCunningham/wiki-plugin-chess/commit/6dc4490d9b482a465ca4615f746f2b69fd14e0b0 github]"
+      },
+      "date": 1488088463845
+    },
+    {
+      "type": "add",
+      "id": "7225ef09fc595ffe",
+      "item": {
+        "type": "paragraph",
+        "id": "7225ef09fc595ffe",
+        "text": "See [[About Chess Plugin]]"
+      },
+      "after": "4fd9f5e1ea2ae07d",
+      "date": 1488149043349,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1488149060168
+    }
+  ]
+}

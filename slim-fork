@@ -1,0 +1,71 @@
+{
+  "title": "Slim Fork",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "f8d7bd7f03f0017f",
+      "text": "We have often talked about schemes to keep the journal from growing too big. I suggest a better approach is that we handle the \"Request Entity Too Large\" error and save a slim version of the page."
+    },
+    {
+      "type": "paragraph",
+      "id": "8bdb09f2a0decc9c",
+      "text": "An acceptable approach would be to try the fork again with a simplified page that will fork. We can simplify by purging all but the fork actions from the journal. We can meet our cc-attribution requirement if we save only the most recent fork from each remote site."
+    },
+    {
+      "type": "paragraph",
+      "id": "3ef8fae2b84397d9",
+      "text": "We could defend this approach by explaining there is a natural limit to the size of pages and when this is exceeded we must depend on our sources for historic details."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Slim Fork",
+        "story": []
+      },
+      "date": 1613365090187
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f8d7bd7f03f0017f"
+      },
+      "id": "f8d7bd7f03f0017f",
+      "type": "add",
+      "date": 1613365092245
+    },
+    {
+      "type": "edit",
+      "id": "f8d7bd7f03f0017f",
+      "item": {
+        "type": "paragraph",
+        "id": "f8d7bd7f03f0017f",
+        "text": "We have often talked about schemes to keep the journal from growing too big. I suggest a better approach is that we handle the \"Request Entity Too Large\" error and save a slim version of the page."
+      },
+      "date": 1613365125837
+    },
+    {
+      "type": "add",
+      "id": "8bdb09f2a0decc9c",
+      "item": {
+        "type": "paragraph",
+        "id": "8bdb09f2a0decc9c",
+        "text": "An acceptable approach would be to try the fork again with a simplified page that will fork. We can simplify by purging all but the fork actions from the journal. We can meet our cc-attribution requirement if we save only the most recent fork from each remote site."
+      },
+      "after": "f8d7bd7f03f0017f",
+      "date": 1613365147467
+    },
+    {
+      "type": "add",
+      "id": "3ef8fae2b84397d9",
+      "item": {
+        "type": "paragraph",
+        "id": "3ef8fae2b84397d9",
+        "text": "We could defend this approach by explaining there is a natural limit to the size of pages and when this is exceeded we must depend on our sources for historic details."
+      },
+      "after": "8bdb09f2a0decc9c",
+      "date": 1613365151091
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "title": "Community Support Technician",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7432cefd953d0c15",
+      "text": "Can we sketch a curriculum for medical school for wiki doctors? An MD might learn biology, anatomy and ethics. We might teach networking, wiki and federation. Graduates could solve new user problems but not host a wiki farm or run a hospital for that matter."
+    },
+    {
+      "type": "markdown",
+      "id": "fc0d780096511985",
+      "text": "# Networking"
+    },
+    {
+      "type": "paragraph",
+      "id": "1c0378ccb04012b7",
+      "text": "Clients: browsers, location bar, urls, caches, cookies, sessions, cross-origin, ad blockers."
+    },
+    {
+      "type": "paragraph",
+      "id": "df237774b80addc2",
+      "text": "Servers: protocols, app servers, reverse proxy, domain names, wildcards, upgrades, login, ssh, virtual machines."
+    },
+    {
+      "type": "paragraph",
+      "id": "c569d1b4eb504b56",
+      "text": "Network: addresses, dhcp, sockets, ping, bandwidth, routing, carriers, wifi, security."
+    },
+    {
+      "type": "paragraph",
+      "id": "62bd6089684faa83",
+      "text": "Payloads: rest, json, status codes, mime-type, unicode, latency, throughput."
+    },
+    {
+      "type": "markdown",
+      "id": "b03a0db3e15e711f",
+      "text": "# Wiki"
+    },
+    {
+      "type": "paragraph",
+      "id": "2614a75b19740c2a",
+      "text": "Medium: page, title, slug, story, item, types, journal, actions and revisions."
+    },
+    {
+      "type": "paragraph",
+      "id": "c666cd4665533914",
+      "text": "Plugins: paragraphs, images, markdown, html, maps, diagrams, data and visualizations."
+    },
+    {
+      "type": "paragraph",
+      "id": "4c4a2d8ce85b68b6",
+      "text": "Editing: login, keystrokes, markup, about pages, drag items, drop zones, refresh, wiki mode."
+    },
+    {
+      "type": "paragraph",
+      "id": "1159d45885439b0e",
+      "text": "Workflow: lineup, search, neighborhood, hamburger menu, sitemaps, twins, refresh."
+    },
+    {
+      "type": "paragraph",
+      "id": "0f542e03649f95a0",
+      "text": "Importing: formats, parsing, pages, contents, images, troubles, updates."
+    },
+    {
+      "type": "markdown",
+      "id": "b821913c7c75a054",
+      "text": "# Federation"
+    },
+    {
+      "type": "paragraph",
+      "id": "d9b9e8f87bb99fa5",
+      "text": "Hosting: subdomains, rosters, pods, identities, charters, habits, meetups, backchannels"
+    },
+    {
+      "type": "paragraph",
+      "id": "c3ae7e438377e360",
+      "text": "Indexing: advanced search, federation activity, site indexes, full text search."
+    },
+    {
+      "type": "paragraph",
+      "id": "98c58ac891811a1a",
+      "text": "Style: hypertext, title case, refactoring, link words, pronouns, simplicity"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ab3040033bb21be",
+      "text": "Migration: export, import, shell tools, dns updates, compatibilities, configuration, plugmatic"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Community Support Technician",
+        "story": []
+      },
+      "date": 1601929487100
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7432cefd953d0c15"
+      },
+      "id": "7432cefd953d0c15",
+      "type": "add",
+      "date": 1601929489552
+    },
+    {
+      "type": "edit",
+      "id": "7432cefd953d0c15",
+      "item": {
+        "type": "paragraph",
+        "id": "7432cefd953d0c15",
+        "text": "Can we sketch a curriculum for medical school for wiki doctors? An MD might learn biology, anatomy and ethics. We might teach networking, wiki and federation. Graduates could solve new user problems but not host a wiki farm or a hospital for that matter."
+      },
+      "date": 1601929749238
+    },
+    {
+      "type": "add",
+      "id": "fc0d780096511985",
+      "item": {
+        "type": "paragraph",
+        "id": "fc0d780096511985",
+        "text": "# Networking"
+      },
+      "after": "7432cefd953d0c15",
+      "date": 1601929793837
+    },
+    {
+      "type": "add",
+      "id": "1c0378ccb04012b7",
+      "item": {
+        "type": "paragraph",
+        "id": "1c0378ccb04012b7",
+        "text": "Clients -- browsers, location bar, urls, caches, cookies, sessions, cross-origin."
+      },
+      "after": "fc0d780096511985",
+      "date": 1601929939559
+    },
+    {
+      "type": "edit",
+      "id": "1c0378ccb04012b7",
+      "item": {
+        "type": "paragraph",
+        "id": "1c0378ccb04012b7",
+        "text": "Clients: browsers, location bar, urls, caches, cookies, sessions, cross-origin."
+      },
+      "date": 1601929955904
+    },
+    {
+      "type": "add",
+      "id": "df237774b80addc2",
+      "item": {
+        "type": "paragraph",
+        "id": "df237774b80addc2",
+        "text": "Servers: protocols, app servers, reverse proxy, domain names, wildcards, upgrades, login, ssh, virtual machines."
+      },
+      "after": "1c0378ccb04012b7",
+      "date": 1601930232716
+    },
+    {
+      "type": "add",
+      "id": "c569d1b4eb504b56",
+      "item": {
+        "type": "paragraph",
+        "id": "c569d1b4eb504b56",
+        "text": "Network: addresses, dhcp, sockets, ping, bandwidth, routing, carriers, wifi, security."
+      },
+      "after": "df237774b80addc2",
+      "date": 1601930476379
+    },
+    {
+      "type": "add",
+      "id": "62bd6089684faa83",
+      "item": {
+        "type": "paragraph",
+        "id": "62bd6089684faa83",
+        "text": "Payloads: rest, json, status codes, mime-type, unicode, latency, throughput."
+      },
+      "after": "c569d1b4eb504b56",
+      "date": 1601930607887
+    },
+    {
+      "type": "edit",
+      "id": "fc0d780096511985",
+      "item": {
+        "type": "markdown",
+        "id": "fc0d780096511985",
+        "text": "# Networking"
+      },
+      "date": 1601930611159
+    },
+    {
+      "type": "add",
+      "id": "b03a0db3e15e711f",
+      "item": {
+        "type": "paragraph",
+        "id": "b03a0db3e15e711f",
+        "text": "# Wiki"
+      },
+      "after": "62bd6089684faa83",
+      "date": 1601930628995
+    },
+    {
+      "type": "add",
+      "id": "2614a75b19740c2a",
+      "item": {
+        "type": "paragraph",
+        "id": "2614a75b19740c2a",
+        "text": "Medium: page, title, slug, story, item, journal and acton."
+      },
+      "after": "b03a0db3e15e711f",
+      "date": 1601930769586
+    },
+    {
+      "type": "edit",
+      "id": "2614a75b19740c2a",
+      "item": {
+        "type": "paragraph",
+        "id": "2614a75b19740c2a",
+        "text": "Medium: page, title, slug, story, item, types, journal and acton."
+      },
+      "date": 1601930818273
+    },
+    {
+      "type": "edit",
+      "id": "2614a75b19740c2a",
+      "item": {
+        "type": "paragraph",
+        "id": "2614a75b19740c2a",
+        "text": "Medium: page, title, slug, story, item, types, journal and action."
+      },
+      "date": 1601930834884
+    },
+    {
+      "type": "edit",
+      "id": "2614a75b19740c2a",
+      "item": {
+        "type": "paragraph",
+        "id": "2614a75b19740c2a",
+        "text": "Medium: page, title, slug, story, item, types, journal, actions and revisions."
+      },
+      "date": 1601930877537
+    },
+    {
+      "type": "edit",
+      "id": "b03a0db3e15e711f",
+      "item": {
+        "type": "markdown",
+        "id": "b03a0db3e15e711f",
+        "text": "# Wiki"
+      },
+      "date": 1601930889363
+    },
+    {
+      "type": "add",
+      "id": "c666cd4665533914",
+      "item": {
+        "type": "paragraph",
+        "id": "c666cd4665533914",
+        "text": "Plugins: paragraphs, images, markdown, html, maps, diagrams, data and visualizations."
+      },
+      "after": "2614a75b19740c2a",
+      "date": 1601930987343
+    },
+    {
+      "type": "add",
+      "id": "4c4a2d8ce85b68b6",
+      "item": {
+        "type": "paragraph",
+        "id": "4c4a2d8ce85b68b6",
+        "text": "Editing: login, keystrokes, markup, about pages, drag items, drop zones, refresh, wiki mode."
+      },
+      "after": "c666cd4665533914",
+      "date": 1601931155674
+    },
+    {
+      "type": "edit",
+      "id": "7432cefd953d0c15",
+      "item": {
+        "type": "paragraph",
+        "id": "7432cefd953d0c15",
+        "text": "Can we sketch a curriculum for medical school for wiki doctors? An MD might learn biology, anatomy and ethics. We might teach networking, wiki and federation. Graduates could solve new user problems but not host a wiki farm or run a hospital for that matter."
+      },
+      "date": 1601931189798
+    },
+    {
+      "type": "add",
+      "id": "1159d45885439b0e",
+      "item": {
+        "type": "paragraph",
+        "id": "1159d45885439b0e",
+        "text": "Workflow: lineup, search, neighborhood, hamburger menu, sitemaps, twins, refresh."
+      },
+      "after": "4c4a2d8ce85b68b6",
+      "date": 1601931396466
+    },
+    {
+      "type": "add",
+      "id": "b821913c7c75a054",
+      "item": {
+        "type": "paragraph",
+        "id": "b821913c7c75a054",
+        "text": "# Federation"
+      },
+      "after": "1159d45885439b0e",
+      "date": 1601931428588
+    },
+    {
+      "type": "add",
+      "id": "d9b9e8f87bb99fa5",
+      "item": {
+        "type": "paragraph",
+        "id": "d9b9e8f87bb99fa5",
+        "text": "Hosting: subdomains, rosters, pods, identities, charters, habits, meetups, backchannels"
+      },
+      "after": "b821913c7c75a054",
+      "date": 1601931695010
+    },
+    {
+      "type": "edit",
+      "id": "b821913c7c75a054",
+      "item": {
+        "type": "markdown",
+        "id": "b821913c7c75a054",
+        "text": "# Federation"
+      },
+      "date": 1601931700132
+    },
+    {
+      "type": "add",
+      "id": "c3ae7e438377e360",
+      "item": {
+        "type": "paragraph",
+        "id": "c3ae7e438377e360",
+        "text": "Indexing: advanced search, federation activity, site indexes, full text search."
+      },
+      "after": "d9b9e8f87bb99fa5",
+      "date": 1601931807711
+    },
+    {
+      "type": "add",
+      "id": "98c58ac891811a1a",
+      "item": {
+        "type": "paragraph",
+        "id": "98c58ac891811a1a",
+        "text": "Style: hypertext, title case, refactoring, link words, pronouns, simplicity"
+      },
+      "after": "c3ae7e438377e360",
+      "date": 1601932000013
+    },
+    {
+      "type": "add",
+      "id": "8ab3040033bb21be",
+      "item": {
+        "type": "paragraph",
+        "id": "8ab3040033bb21be",
+        "text": "Migration: export, import, shell tools, dns updates, compatibilities, configuration, plugmatic"
+      },
+      "after": "98c58ac891811a1a",
+      "date": 1601932217585
+    },
+    {
+      "type": "add",
+      "id": "0f542e03649f95a0",
+      "item": {
+        "type": "paragraph",
+        "id": "0f542e03649f95a0",
+        "text": "Importing: formats, parsing, pages, contents, images, troubles, updates."
+      },
+      "after": "1159d45885439b0e",
+      "date": 1602370317245
+    },
+    {
+      "type": "edit",
+      "id": "1c0378ccb04012b7",
+      "item": {
+        "type": "paragraph",
+        "id": "1c0378ccb04012b7",
+        "text": "Clients: browsers, location bar, urls, caches, cookies, sessions, cross-origin, ad blockers."
+      },
+      "date": 1602372245293
+    }
+  ]
+}

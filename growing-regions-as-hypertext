@@ -1,0 +1,1388 @@
+{
+  "title": "Growing Regions as Hypertext",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "27c92578f6297dfa",
+      "text": "We resume our work with Cities Alive only now with a more concrete model for what the hypertext should look like. See [[Cities Alive as Hypertext]]"
+    },
+    {
+      "type": "reference",
+      "id": "beccc08f610641bd",
+      "site": "growing.ward.bay.wiki.org",
+      "slug": "building-the-online-repository",
+      "title": "Building the Online Repository",
+      "text": "We will excerpt from the Sustasis patterns for growing regions making them the seeds for a web of related work that others will write."
+    },
+    {
+      "type": "reference",
+      "id": "575a7e3cd558d62b",
+      "site": "growing.bay.wiki.org",
+      "slug": "table-of-contents",
+      "title": "Table of Contents",
+      "text": "We've copied this TOC from a pdf and now have mechanically transcribed the rest. The  ✔︎ and ☆ mark pages we modeled by hand."
+    },
+    {
+      "type": "markdown",
+      "id": "016fe45827f8190e",
+      "text": "# Codes"
+    },
+    {
+      "type": "paragraph",
+      "id": "d65f4f4c96cbb1a6",
+      "text": "We start with the ebook format converted to html. We expect to use class tags on various elements to guide our conversion. First we write a function that tallies classes."
+    },
+    {
+      "type": "code",
+      "id": "c1a36fb67c3a6b1d",
+      "text": "[].slice.call(document.getElementsByTagName('div'))\n.map(e=>(e.getAttribute('class')||'null'))\n.reduce((h,e)=>{h[e]=(h[e]||0)+1;return h},{})"
+    },
+    {
+      "type": "paragraph",
+      "id": "42c9c4c58b405e1d",
+      "text": "For <div>"
+    },
+    {
+      "type": "markdown",
+      "id": "663e9ea165cff05c",
+      "text": "Photo-bw _idGenObjectStyleOverride-2: 59\nPhoto-small: 35\nPhoto-small-wide: 21\n_idFootnote: 11\n_idFootnotes: 1\n_idGenObjectLayout-1: 116\n_idGenObjectStyleOverride-1: 3\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ab562979f59b0d8",
+      "text": "For <p>"
+    },
+    {
+      "type": "markdown",
+      "id": "0bb4eaa8f46ea87f",
+      "text": "Body_-----: 102\nBody_Solution: 111\nBody_Therefore: 57\nBody_body-italic: 9\nBody_body-text: 283\nBody_body-text ParaOverride-1: 10\nBody_body-text ParaOverride-2: 1\nBody_body-text ParaOverride-4: 1\nBody_body-text ParaOverride-5: 5\nBody_body-text ParaOverride-6: 1\nBody_body-text ParaOverride-7: 1\nBody_body-text ParaOverride-8: 10\nBody_body-text ParaOverride-10: 1\nBody_body-text ParaOverride-12: 1\nBody_body-text _idGenParaOverride-1: 2\nBody_body-title: 6\nBody_footnote: 10\nBody_upward-tekst: 47\nBody_upward-tekst ParaOverride-1: 6\nBody_upward-tekst ParaOverride-5: 1\nBody_upward-tekst ParaOverride-11: 1\nImages_Caption: 60\nImages_Caption ParaOverride-1: 1\nImages_Pattern-photo: 1\nTOC_TOC-1: 15\nTOC_TOC-2: 59\nTitles_Chapter-title: 60\nTitles_Section-title: 15\nnull: 1"
+    },
+    {
+      "type": "markdown",
+      "id": "1b96503455562fa6",
+      "text": "# Download"
+    },
+    {
+      "type": "paragraph",
+      "id": "62f96dca9b8b240f",
+      "text": "I test javascript in the debug console but eventually put what works in a single file which I add to the html that I am translating. [https://github.com/WardCunningham/sustasis-mapmatic/blob/master/ebook-formats/growing.js github]"
+    },
+    {
+      "type": "code",
+      "id": "f3b66e40337fba34",
+      "text": "<script src=\"growing.js\"></script>"
+    },
+    {
+      "type": "code",
+      "id": "b366079a97a80243",
+      "text": "file:///Users/ward/FedWiki/sustasis-mapmatic/ebook-formats/APLFGR%2026.02%20ebook.html"
+    },
+    {
+      "type": "paragraph",
+      "id": "038dd68ddb9b0465",
+      "text": "I write code to create a whole new site as a single object, slug ⇒ page, which I download idiomatically."
+    },
+    {
+      "type": "code",
+      "id": "65ebc8def0dd6465",
+      "text": "var json = JSON.stringify(e, null, '  ')\ndownload(json, 'export.json', 'text/plain')\n\nfunction download(text, name, type) {\n  var a = document.createElement(\"a\");\n  var file = new Blob([text], {type: type});\n  a.href = URL.createObjectURL(file);\n  a.download = name;\n  a.click();\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "4dd072b5338a6e87",
+      "text": "This appears as a download notice below the footer of the browser from where it can be dragged to a wiki to be examined by the import mechanism."
+    },
+    {
+      "type": "markdown",
+      "id": "789245ca08e6affc",
+      "text": "# Links"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0bbb565fccf2c9c",
+      "text": "We've found inconsistent naming of patterns cause more than half links not resolve. We find localized diagrams help debug these problems. Notice the varying degrees of linking within vs. between locales."
+    },
+    {
+      "type": "paragraph",
+      "id": "2459dcbe97051e7e",
+      "text": "[[Construction Patterns]] within locale."
+    },
+    {
+      "type": "graphviz",
+      "id": "be4c48d4d5420a3c",
+      "text": "strict digraph {\nnode [shape=box style=filled fillcolor=lightgray]\nrankdir=LR\n\"Design-Build\nAdaptation\" [fillcolor=bisque]\n\"Biophilic\nUrbanism\" [fillcolor=lightblue]\n\"Biophilic\nUrbanism\" -> \"Design-Build\nAdaptation\"\n\n\"Design-Build\nAdaptation\" -> \"Community\nMockups\"\n\"Human-Scale\nDetail\" [fillcolor=bisque]\n\"Design-Build\nAdaptation\" [fillcolor=bisque]\n\"Design-Build\nAdaptation\" -> \"Human-Scale\nDetail\"\n\"Ornamental\nConstruction\" [fillcolor=lightblue]\n\"Human-Scale\nDetail\" -> \"Ornamental\nConstruction\"\n\"Complex\nMaterials\" [fillcolor=lightblue]\n\"Human-Scale\nDetail\" -> \"Complex\nMaterials\"\n\"Ornamental\nConstruction\" [fillcolor=bisque]\n\"Human-Scale\nDetail\" [fillcolor=bisque]\n\"Human-Scale\nDetail\" -> \"Ornamental\nConstruction\"\n\"Complex\nMaterials\" [fillcolor=bisque]\n\"Biophilic\nUrbanism\" [fillcolor=lightblue]\n\"Biophilic\nUrbanism\" -> \"Complex\nMaterials\"\n\"Community\nMockup\" [fillcolor=lightblue]\n\"Complex\nMaterials\" -> \"Community\nMockup\"\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "e21349fffe7003bf",
+      "text": "[[Geometric Patterns]] mixed."
+    },
+    {
+      "type": "graphviz",
+      "id": "b54b92a286a9409b",
+      "text": "digraph {\nnode [shape=box style=filled fillcolor=lightgray]\nrankdir=LR\n\"Local\nSymmetry\" [fillcolor=bisque]\n\"Biophilic\nUrbanism\" [fillcolor=lightblue]\n\"Biophilic\nUrbanism\" -> \"Local\nSymmetry\"\n\"Lace\nNetworks\" [fillcolor=lightgray]\n\"Lace\nNetworks\" -> \"Local\nSymmetry\"\n\"Courtyard\nBuildings\" [fillcolor=lightgray]\n\"Courtyard\nBuildings\" -> \"Local\nSymmetry\"\n\"Ornament\" [fillcolor=lightgray]\n\"Local\nSymmetry\" -> \"Ornament\"\n\"Human-Scale\nDetail\" [fillcolor=lightblue]\n\"Local\nSymmetry\" -> \"Human-Scale\nDetail\"\n\"Small\nGroups\nof\nElements\" [fillcolor=bisque]\n\"Public\nSpace\nSystem\" [fillcolor=lightblue]\n\"Public\nSpace\nSystem\" -> \"Small\nGroups\nof\nElements\"\n\"Walkable\nStreetscape\" [fillcolor=lightblue]\n\"Walkable\nStreetscape\" -> \"Small\nGroups\nof\nElements\"\n\"Human-Scale\nDetail\" [fillcolor=lightblue]\n\"Small\nGroups\nof\nElements\" -> \"Human-Scale\nDetail\"\n\"Fractal\nPattern\" [fillcolor=bisque]\n\"Biophilic\nUrbanism\" [fillcolor=lightblue]\n\"Biophilic\nUrbanism\" -> \"Fractal\nPattern\"\n\"Local\nSymmetry\" [fillcolor=bisque]\n\"Fractal\nPattern\" -> \"Local\nSymmetry\"\n\"Human-Scale\nDesign\" [fillcolor=lightgray]\n\"Fractal\nPattern\" -> \"Human-Scale\nDesign\"\n\"Ornament\" [fillcolor=lightgray]\n\"Fractal\nPattern\" -> \"Ornament\"\n\"Framing\" [fillcolor=bisque]\n\"Layered\nZones\" [fillcolor=lightblue]\n\"Layered\nZones\" -> \"Framing\"\n\"Passageway\nView\" [fillcolor=lightblue]\n\"Passageway\nView\" -> \"Framing\"\n\"Human-Scale\nDesign\" [fillcolor=lightgray]\n\"Framing\" -> \"Human-Scale\nDesign\"\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "9fb87d13e4f9ce0f",
+      "text": "[[Retrofit Patterns]] between locales."
+    },
+    {
+      "type": "graphviz",
+      "id": "c6f73188903e62b9",
+      "text": "digraph {\nnode [shape=box style=filled fillcolor=lightgray]\nrankdir=LR\n\"Slum\nUpgrade\" [fillcolor=bisque]\n\"Polycentric\nRegion\" [fillcolor=lightblue]\n\"Polycentric\nRegion\" -> \"Slum\nUpgrade\"\n\"Sprawl\nRetrofit\" [fillcolor=bisque]\n\"Polycentric\nRegion\" [fillcolor=lightblue]\n\"Polycentric\nRegion\" -> \"Sprawl\nRetrofit\"\n\"Tax\nIncrement\nFinancing\" [fillcolor=lightgray]\n\"Sprawl\nRetrofit\" -> \"Tax\nIncrement\nFinancing\"\n\"Land\nValue\nTax\" [fillcolor=lightblue]\n\"Sprawl\nRetrofit\" -> \"Land\nValue\nTax\"\n\"Urban\nRegeneration\" [fillcolor=bisque]\n\"Polycentric\nRegion\" [fillcolor=lightblue]\n\"Polycentric\nRegion\" -> \"Urban\nRegeneration\"\n\"Land\nValue\nTax\" [fillcolor=lightblue]\n\"Urban\nRegeneration\" -> \"Land\nValue\nTax\"\n\"Urban\nConsolidation\" [fillcolor=bisque]\n\"Polycentric\nRegion\" [fillcolor=lightblue]\n\"Polycentric\nRegion\" -> \"Urban\nConsolidation\"\n\"Neighborhood\nPlanning\nCenter\" [fillcolor=lightblue]\n\"Urban\nConsolidation\" -> \"Neighborhood\nPlanning\nCenter\"\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "f98f216f25364757",
+      "text": "This diagrams have been sufficiently useful already that I want to make them fully automatic. After some discussion I came to a proposal. See [[Extract Site to Dot]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "94ce0053275ae8e0",
+      "text": "Try another [[Growing Regions as Hypertext]]. Is it faster having already loaded vis.js?"
+    },
+    {
+      "type": "markdown",
+      "id": "0ea2577b6a987ff9",
+      "text": "# To Do"
+    },
+    {
+      "type": "paragraph",
+      "id": "8cf2e3208eb1c0b6",
+      "text": "Convert image names to include pattern's slug."
+    },
+    {
+      "type": "paragraph",
+      "id": "335cf7563135b554",
+      "text": "Add fork and delete to Asset plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "0af6e3936b5494b3",
+      "text": "Correct handling of title case for \"as\" and \"AV\"."
+    },
+    {
+      "type": "paragraph",
+      "id": "9fa8a4366c0733c2",
+      "text": "Remove page references."
+    },
+    {
+      "type": "paragraph",
+      "id": "612691ca88412507",
+      "text": "Remove ... and adjust capitalization accordingly."
+    },
+    {
+      "type": "paragraph",
+      "id": "e347dc64515ba258",
+      "text": "Add DOT constructor markup to Graphviz plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "43ea5407382ce62d",
+      "text": "Fractured link in Walkable Streetscape. [http://growing.bay.wiki.org/public-space-patterns.html wiki]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Growing Regions as Hypertext",
+        "story": []
+      },
+      "date": 1551141815524
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "27c92578f6297dfa"
+      },
+      "id": "27c92578f6297dfa",
+      "type": "add",
+      "date": 1551141827274
+    },
+    {
+      "type": "edit",
+      "id": "27c92578f6297dfa",
+      "item": {
+        "type": "paragraph",
+        "id": "27c92578f6297dfa",
+        "text": "We resume our work with Cities Alive only now with a more concrete model for what the hypertext should look like. See [[Cities Alive as Hypertext]]"
+      },
+      "date": 1551141902300
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d65f4f4c96cbb1a6"
+      },
+      "id": "d65f4f4c96cbb1a6",
+      "type": "add",
+      "after": "27c92578f6297dfa",
+      "date": 1551141911179
+    },
+    {
+      "type": "edit",
+      "id": "d65f4f4c96cbb1a6",
+      "item": {
+        "type": "paragraph",
+        "id": "d65f4f4c96cbb1a6",
+        "text": "We start with the ebook format converted to html. We expect to use class tags on various elements to guide our conversion. First we write a function that tallies classes."
+      },
+      "date": 1551141997824
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c1a36fb67c3a6b1d"
+      },
+      "id": "c1a36fb67c3a6b1d",
+      "type": "add",
+      "after": "d65f4f4c96cbb1a6",
+      "date": 1551142003781
+    },
+    {
+      "type": "edit",
+      "id": "c1a36fb67c3a6b1d",
+      "item": {
+        "type": "code",
+        "id": "c1a36fb67c3a6b1d",
+        "text": "([].slice.call(document.getElementsByTagName('div')))\n.map(e=>(e.getAttribute('class')||'null'))\n.reduce((h,e)=>{h[e]=(h[e]||0)+1;return h},{})"
+      },
+      "date": 1551142016383
+    },
+    {
+      "type": "edit",
+      "id": "c1a36fb67c3a6b1d",
+      "item": {
+        "type": "code",
+        "id": "c1a36fb67c3a6b1d",
+        "text": "[].slice.call(document.getElementsByTagName('div'))\n.map(e=>(e.getAttribute('class')||'null'))\n.reduce((h,e)=>{h[e]=(h[e]||0)+1;return h},{})"
+      },
+      "date": 1551142079394
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "42c9c4c58b405e1d"
+      },
+      "id": "42c9c4c58b405e1d",
+      "type": "add",
+      "after": "c1a36fb67c3a6b1d",
+      "date": 1551142105655
+    },
+    {
+      "type": "edit",
+      "id": "42c9c4c58b405e1d",
+      "item": {
+        "type": "paragraph",
+        "id": "42c9c4c58b405e1d",
+        "text": "For <div>"
+      },
+      "date": 1551142123037
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "663e9ea165cff05c"
+      },
+      "id": "663e9ea165cff05c",
+      "type": "add",
+      "after": "42c9c4c58b405e1d",
+      "date": 1551142146996
+    },
+    {
+      "type": "edit",
+      "id": "663e9ea165cff05c",
+      "item": {
+        "type": "markdown",
+        "id": "663e9ea165cff05c",
+        "text": "Photo-bw _idGenObjectStyleOverride-2: 59\nPhoto-small: 35\nPhoto-small-wide: 21\n_idFootnote: 11\n_idFootnotes: 1\n_idGenObjectLayout-1: 116\n_idGenObjectStyleOverride-1: 3\n"
+      },
+      "date": 1551142156282
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0ab562979f59b0d8"
+      },
+      "id": "0ab562979f59b0d8",
+      "type": "add",
+      "after": "663e9ea165cff05c",
+      "date": 1551142164782
+    },
+    {
+      "type": "edit",
+      "id": "0ab562979f59b0d8",
+      "item": {
+        "type": "paragraph",
+        "id": "0ab562979f59b0d8",
+        "text": "For <p>"
+      },
+      "date": 1551142177299
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0bb4eaa8f46ea87f"
+      },
+      "id": "0bb4eaa8f46ea87f",
+      "type": "add",
+      "after": "0ab562979f59b0d8",
+      "date": 1551142224881
+    },
+    {
+      "type": "edit",
+      "id": "0bb4eaa8f46ea87f",
+      "item": {
+        "type": "markdown",
+        "id": "0bb4eaa8f46ea87f",
+        "text": "[].slice.call(document.getElementsByTagName('p'))\n.map(e=>(e.getAttribute('class')||'null'))\n.reduce((h,e)=>{h[e]=(h[e]||0)+1;return h},{})"
+      },
+      "date": 1551142237802
+    },
+    {
+      "type": "edit",
+      "id": "0bb4eaa8f46ea87f",
+      "item": {
+        "type": "markdown",
+        "id": "0bb4eaa8f46ea87f",
+        "text": "Body_-----: 102\nBody_Solution: 111\nBody_Therefore: 57\nBody_body-italic: 9\nBody_body-text: 283\nBody_body-text ParaOverride-1: 10\nBody_body-text ParaOverride-2: 1\nBody_body-text ParaOverride-4: 1\nBody_body-text ParaOverride-5: 5\nBody_body-text ParaOverride-6: 1\nBody_body-text ParaOverride-7: 1\nBody_body-text ParaOverride-8: 10\nBody_body-text ParaOverride-10: 1\nBody_body-text ParaOverride-12: 1\nBody_body-text _idGenParaOverride-1: 2\nBody_body-title: 6\nBody_footnote: 10\nBody_upward-tekst: 47\nBody_upward-tekst ParaOverride-1: 6\nBody_upward-tekst ParaOverride-5: 1\nBody_upward-tekst ParaOverride-11: 1\nImages_Caption: 60\nImages_Caption ParaOverride-1: 1\nImages_Pattern-photo: 1\nTOC_TOC-1: 15\nTOC_TOC-2: 59\nTitles_Chapter-title: 60\nTitles_Section-title: 15\nnull: 1"
+      },
+      "date": 1551142276874
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "beccc08f610641bd"
+      },
+      "id": "beccc08f610641bd",
+      "type": "add",
+      "after": "0bb4eaa8f46ea87f",
+      "date": 1551142726468
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f"
+      ],
+      "id": "beccc08f610641bd",
+      "date": 1551142733663
+    },
+    {
+      "type": "edit",
+      "id": "beccc08f610641bd",
+      "item": {
+        "type": "reference",
+        "id": "beccc08f610641bd",
+        "site": "growing.ward.bay.wiki.org",
+        "slug": "building-the-online-repository",
+        "title": "Building the Online Repository",
+        "text": "Welcome to one of many exploratory hypertext about the built world. We will excerpt from the Sustasis patterns for growing regions making them the seeds for a web of related work that you will write."
+      },
+      "date": 1551142774463
+    },
+    {
+      "type": "edit",
+      "id": "beccc08f610641bd",
+      "item": {
+        "type": "reference",
+        "id": "beccc08f610641bd",
+        "site": "growing.ward.bay.wiki.org",
+        "slug": "building-the-online-repository",
+        "title": "Building the Online Repository",
+        "text": "We will excerpt from the Sustasis patterns for growing regions making them the seeds for a web of related work that you will write."
+      },
+      "date": 1551142808357
+    },
+    {
+      "type": "edit",
+      "id": "beccc08f610641bd",
+      "item": {
+        "type": "reference",
+        "id": "beccc08f610641bd",
+        "site": "growing.ward.bay.wiki.org",
+        "slug": "building-the-online-repository",
+        "title": "Building the Online Repository",
+        "text": "We will excerpt from the Sustasis patterns for growing regions making them the seeds for a web of related work that others will write."
+      },
+      "date": 1551142843819
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "62f96dca9b8b240f"
+      },
+      "id": "62f96dca9b8b240f",
+      "type": "add",
+      "after": "0bb4eaa8f46ea87f",
+      "date": 1551273277497
+    },
+    {
+      "type": "edit",
+      "id": "62f96dca9b8b240f",
+      "item": {
+        "type": "paragraph",
+        "id": "62f96dca9b8b240f",
+        "text": "I test javascript in the debug console but eventually put what works in a single file which I add to the html that I am translating."
+      },
+      "date": 1551273465305
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f3b66e40337fba34"
+      },
+      "id": "f3b66e40337fba34",
+      "type": "add",
+      "after": "62f96dca9b8b240f",
+      "date": 1551273468403
+    },
+    {
+      "type": "edit",
+      "id": "f3b66e40337fba34",
+      "item": {
+        "type": "code",
+        "id": "f3b66e40337fba34",
+        "text": "<script src=\"growing.js\"></script>"
+      },
+      "date": 1551273481892
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "038dd68ddb9b0465"
+      },
+      "id": "038dd68ddb9b0465",
+      "type": "add",
+      "after": "f3b66e40337fba34",
+      "date": 1551273528954
+    },
+    {
+      "type": "edit",
+      "id": "038dd68ddb9b0465",
+      "item": {
+        "type": "paragraph",
+        "id": "038dd68ddb9b0465",
+        "text": "I write code to create a whole new site as a single object, slug ⇒ page, which I download idiomatically."
+      },
+      "date": 1551273636762
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "65ebc8def0dd6465"
+      },
+      "id": "65ebc8def0dd6465",
+      "type": "add",
+      "after": "038dd68ddb9b0465",
+      "date": 1551273654576
+    },
+    {
+      "type": "edit",
+      "id": "65ebc8def0dd6465",
+      "item": {
+        "type": "code",
+        "id": "65ebc8def0dd6465",
+        "text": "var json = JSON.stringify(e, null, '  ')\ndownload(json, 'export.json', 'text/plain')\n"
+      },
+      "date": 1551273687976
+    },
+    {
+      "type": "edit",
+      "id": "65ebc8def0dd6465",
+      "item": {
+        "type": "code",
+        "id": "65ebc8def0dd6465",
+        "text": "var json = JSON.stringify(e, null, '  ')\ndownload(json, 'export.json', 'text/plain')\n\nfunction download(text, name, type) {\n  var a = document.createElement(\"a\");\n  var file = new Blob([text], {type: type});\n  a.href = URL.createObjectURL(file);\n  a.download = name;\n  a.click();\n}"
+      },
+      "date": 1551273714489
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4dd072b5338a6e87"
+      },
+      "id": "4dd072b5338a6e87",
+      "type": "add",
+      "after": "65ebc8def0dd6465",
+      "date": 1551274069475
+    },
+    {
+      "type": "edit",
+      "id": "4dd072b5338a6e87",
+      "item": {
+        "type": "paragraph",
+        "id": "4dd072b5338a6e87",
+        "text": "This appears as a download notice below the footer of the browser from where it can be dragged to a wiki to be examined by the import mechanism."
+      },
+      "date": 1551274145373
+    },
+    {
+      "type": "edit",
+      "id": "62f96dca9b8b240f",
+      "item": {
+        "type": "paragraph",
+        "id": "62f96dca9b8b240f",
+        "text": "I test javascript in the debug console but eventually put what works in a single file which I add to the html that I am translating. [https://github.com/WardCunningham/sustasis-mapmatic/blob/master/ebook-formats/growing.js github]"
+      },
+      "date": 1551276750001
+    },
+    {
+      "type": "add",
+      "id": "1b96503455562fa6",
+      "item": {
+        "type": "paragraph",
+        "id": "1b96503455562fa6",
+        "text": "# Download"
+      },
+      "after": "62f96dca9b8b240f",
+      "date": 1551327833020
+    },
+    {
+      "type": "edit",
+      "id": "1b96503455562fa6",
+      "item": {
+        "type": "markdown",
+        "id": "1b96503455562fa6",
+        "text": "# Download"
+      },
+      "date": 1551327836328
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87"
+      ],
+      "id": "1b96503455562fa6",
+      "date": 1551327839176
+    },
+    {
+      "type": "add",
+      "id": "016fe45827f8190e",
+      "item": {
+        "type": "paragraph",
+        "id": "016fe45827f8190e",
+        "text": "# Codes"
+      },
+      "after": "27c92578f6297dfa",
+      "date": 1551327894128
+    },
+    {
+      "type": "edit",
+      "id": "016fe45827f8190e",
+      "item": {
+        "type": "markdown",
+        "id": "016fe45827f8190e",
+        "text": "# Codes"
+      },
+      "date": 1551327905198
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "016fe45827f8190e",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87"
+      ],
+      "id": "016fe45827f8190e",
+      "date": 1551327909601
+    },
+    {
+      "type": "add",
+      "id": "789245ca08e6affc",
+      "item": {
+        "type": "paragraph",
+        "id": "789245ca08e6affc",
+        "text": "# Links"
+      },
+      "after": "4dd072b5338a6e87",
+      "date": 1551327942193
+    },
+    {
+      "type": "add",
+      "id": "f0bbb565fccf2c9c",
+      "item": {
+        "type": "paragraph",
+        "id": "f0bbb565fccf2c9c",
+        "text": "We've found inconsistent naming of patterns cause more than half links not resolve. We find localized diagrams help debug these problems."
+      },
+      "after": "789245ca08e6affc",
+      "date": 1551328070837
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "be4c48d4d5420a3c"
+      },
+      "id": "be4c48d4d5420a3c",
+      "type": "add",
+      "after": "f0bbb565fccf2c9c",
+      "date": 1551328119456
+    },
+    {
+      "type": "edit",
+      "id": "be4c48d4d5420a3c",
+      "item": {
+        "type": "graphviz",
+        "id": "be4c48d4d5420a3c",
+        "text": "strict digraph {\nnode [shape=box style=filled fillcolor=lightgray]\nrankdir=LR\n\"Design-Build\nAdaptation\" [fillcolor=bisque]\n\"Biophilic\nUrbanism\" [fillcolor=lightblue]\n\"Biophilic\nUrbanism\" -> \"Design-Build\nAdaptation\"\n\n\"Design-Build\nAdaptation\" -> \"Community\nMockups\"\n\"Human-Scale\nDetail\" [fillcolor=bisque]\n\"Design-Build\nAdaptation\" [fillcolor=bisque]\n\"Design-Build\nAdaptation\" -> \"Human-Scale\nDetail\"\n\"Ornamental\nConstruction\" [fillcolor=lightblue]\n\"Human-Scale\nDetail\" -> \"Ornamental\nConstruction\"\n\"Complex\nMaterials\" [fillcolor=lightblue]\n\"Human-Scale\nDetail\" -> \"Complex\nMaterials\"\n\"Ornamental\nConstruction\" [fillcolor=bisque]\n\"Human-Scale\nDetail\" [fillcolor=bisque]\n\"Human-Scale\nDetail\" -> \"Ornamental\nConstruction\"\n\"Complex\nMaterials\" [fillcolor=bisque]\n\"Biophilic\nUrbanism\" [fillcolor=lightblue]\n\"Biophilic\nUrbanism\" -> \"Complex\nMaterials\"\n\"Community\nMockup\" [fillcolor=lightblue]\n\"Complex\nMaterials\" -> \"Community\nMockup\"\n}"
+      },
+      "date": 1551328135326
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b54b92a286a9409b"
+      },
+      "id": "b54b92a286a9409b",
+      "type": "add",
+      "after": "be4c48d4d5420a3c",
+      "date": 1551328184757
+    },
+    {
+      "type": "edit",
+      "id": "b54b92a286a9409b",
+      "item": {
+        "type": "graphviz",
+        "id": "b54b92a286a9409b",
+        "text": "digraph {\nnode [shape=box style=filled fillcolor=lightgray]\nrankdir=LR\n\"Local\nSymmetry\" [fillcolor=bisque]\n\"Biophilic\nUrbanism\" [fillcolor=lightblue]\n\"Biophilic\nUrbanism\" -> \"Local\nSymmetry\"\n\"Lace\nNetworks\" [fillcolor=lightgray]\n\"Lace\nNetworks\" -> \"Local\nSymmetry\"\n\"Courtyard\nBuildings\" [fillcolor=lightgray]\n\"Courtyard\nBuildings\" -> \"Local\nSymmetry\"\n\"Ornament\" [fillcolor=lightgray]\n\"Local\nSymmetry\" -> \"Ornament\"\n\"Human-Scale\nDetail\" [fillcolor=lightblue]\n\"Local\nSymmetry\" -> \"Human-Scale\nDetail\"\n\"Small\nGroups\nof\nElements\" [fillcolor=bisque]\n\"Public\nSpace\nSystem\" [fillcolor=lightblue]\n\"Public\nSpace\nSystem\" -> \"Small\nGroups\nof\nElements\"\n\"Walkable\nStreetscape\" [fillcolor=lightblue]\n\"Walkable\nStreetscape\" -> \"Small\nGroups\nof\nElements\"\n\"Human-Scale\nDetail\" [fillcolor=lightblue]\n\"Small\nGroups\nof\nElements\" -> \"Human-Scale\nDetail\"\n\"Fractal\nPattern\" [fillcolor=bisque]\n\"Biophilic\nUrbanism\" [fillcolor=lightblue]\n\"Biophilic\nUrbanism\" -> \"Fractal\nPattern\"\n\"Local\nSymmetry\" [fillcolor=bisque]\n\"Fractal\nPattern\" -> \"Local\nSymmetry\"\n\"Human-Scale\nDesign\" [fillcolor=lightgray]\n\"Fractal\nPattern\" -> \"Human-Scale\nDesign\"\n\"Ornament\" [fillcolor=lightgray]\n\"Fractal\nPattern\" -> \"Ornament\"\n\"Framing\" [fillcolor=bisque]\n\"Layered\nZones\" [fillcolor=lightblue]\n\"Layered\nZones\" -> \"Framing\"\n\"Passageway\nView\" [fillcolor=lightblue]\n\"Passageway\nView\" -> \"Framing\"\n\"Human-Scale\nDesign\" [fillcolor=lightgray]\n\"Framing\" -> \"Human-Scale\nDesign\"\n}"
+      },
+      "date": 1551328189180
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c6f73188903e62b9"
+      },
+      "id": "c6f73188903e62b9",
+      "type": "add",
+      "after": "b54b92a286a9409b",
+      "date": 1551328244876
+    },
+    {
+      "type": "edit",
+      "id": "c6f73188903e62b9",
+      "item": {
+        "type": "graphviz",
+        "id": "c6f73188903e62b9",
+        "text": "digraph {\nnode [shape=box style=filled fillcolor=lightgray]\nrankdir=LR\n\"Slum\nUpgrade\" [fillcolor=bisque]\n\"Polycentric\nRegion\" [fillcolor=lightblue]\n\"Polycentric\nRegion\" -> \"Slum\nUpgrade\"\n\"Sprawl\nRetrofit\" [fillcolor=bisque]\n\"Polycentric\nRegion\" [fillcolor=lightblue]\n\"Polycentric\nRegion\" -> \"Sprawl\nRetrofit\"\n\"Tax\nIncrement\nFinancing\" [fillcolor=lightgray]\n\"Sprawl\nRetrofit\" -> \"Tax\nIncrement\nFinancing\"\n\"Land\nValue\nTax\" [fillcolor=lightblue]\n\"Sprawl\nRetrofit\" -> \"Land\nValue\nTax\"\n\"Urban\nRegeneration\" [fillcolor=bisque]\n\"Polycentric\nRegion\" [fillcolor=lightblue]\n\"Polycentric\nRegion\" -> \"Urban\nRegeneration\"\n\"Land\nValue\nTax\" [fillcolor=lightblue]\n\"Urban\nRegeneration\" -> \"Land\nValue\nTax\"\n\"Urban\nConsolidation\" [fillcolor=bisque]\n\"Polycentric\nRegion\" [fillcolor=lightblue]\n\"Polycentric\nRegion\" -> \"Urban\nConsolidation\"\n\"Neighborhood\nPlanning\nCenter\" [fillcolor=lightblue]\n\"Urban\nConsolidation\" -> \"Neighborhood\nPlanning\nCenter\"\n}"
+      },
+      "date": 1551328251768
+    },
+    {
+      "type": "add",
+      "id": "2459dcbe97051e7e",
+      "item": {
+        "type": "paragraph",
+        "id": "2459dcbe97051e7e",
+        "text": "[[Construction Patterns]]"
+      },
+      "after": "f0bbb565fccf2c9c",
+      "date": 1551328317125
+    },
+    {
+      "type": "add",
+      "id": "e21349fffe7003bf",
+      "item": {
+        "type": "paragraph",
+        "id": "e21349fffe7003bf",
+        "text": "[[Geometric Patterns]]"
+      },
+      "after": "2459dcbe97051e7e",
+      "date": 1551328347005
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "016fe45827f8190e",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87",
+        "789245ca08e6affc",
+        "f0bbb565fccf2c9c",
+        "2459dcbe97051e7e",
+        "be4c48d4d5420a3c",
+        "e21349fffe7003bf",
+        "b54b92a286a9409b",
+        "c6f73188903e62b9"
+      ],
+      "id": "e21349fffe7003bf",
+      "date": 1551328350941
+    },
+    {
+      "type": "add",
+      "id": "9fb87d13e4f9ce0f",
+      "item": {
+        "type": "paragraph",
+        "id": "9fb87d13e4f9ce0f",
+        "text": "[[Retrofit Patterns]]"
+      },
+      "after": "e21349fffe7003bf",
+      "date": 1551328393627
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "016fe45827f8190e",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87",
+        "789245ca08e6affc",
+        "f0bbb565fccf2c9c",
+        "2459dcbe97051e7e",
+        "be4c48d4d5420a3c",
+        "e21349fffe7003bf",
+        "b54b92a286a9409b",
+        "9fb87d13e4f9ce0f",
+        "c6f73188903e62b9"
+      ],
+      "id": "9fb87d13e4f9ce0f",
+      "date": 1551328397460
+    },
+    {
+      "type": "edit",
+      "id": "789245ca08e6affc",
+      "item": {
+        "type": "markdown",
+        "id": "789245ca08e6affc",
+        "text": "# Links"
+      },
+      "date": 1551328402300
+    },
+    {
+      "type": "edit",
+      "id": "f0bbb565fccf2c9c",
+      "item": {
+        "type": "paragraph",
+        "id": "f0bbb565fccf2c9c",
+        "text": "We've found inconsistent naming of patterns cause more than half links not resolve. We find localized diagrams help debug these problems. Notice the varying degrees of linking within vs. between locals."
+      },
+      "date": 1551328458240
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "575a7e3cd558d62b"
+      },
+      "id": "575a7e3cd558d62b",
+      "type": "add",
+      "after": "c6f73188903e62b9",
+      "date": 1551329001003
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "575a7e3cd558d62b",
+        "016fe45827f8190e",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87",
+        "789245ca08e6affc",
+        "f0bbb565fccf2c9c",
+        "2459dcbe97051e7e",
+        "be4c48d4d5420a3c",
+        "e21349fffe7003bf",
+        "b54b92a286a9409b",
+        "9fb87d13e4f9ce0f",
+        "c6f73188903e62b9"
+      ],
+      "id": "575a7e3cd558d62b",
+      "date": 1551329013523
+    },
+    {
+      "type": "edit",
+      "id": "575a7e3cd558d62b",
+      "item": {
+        "type": "reference",
+        "id": "575a7e3cd558d62b",
+        "site": "growing.bay.wiki.org",
+        "slug": "table-of-contents",
+        "title": "Table of Contents",
+        "text": "We've copied this TOC from a pdf. We'll add a  ✔︎ to those we have included in this experiment. The ☆ marks pages where we've used additional wiki features in some way."
+      },
+      "date": 1551329024475
+    },
+    {
+      "type": "edit",
+      "id": "575a7e3cd558d62b",
+      "item": {
+        "type": "reference",
+        "id": "575a7e3cd558d62b",
+        "site": "growing.bay.wiki.org",
+        "slug": "table-of-contents",
+        "title": "Table of Contents",
+        "text": "We've copied this TOC from a pdf. The  ✔︎ and ☆ mark pages we modeled by hand."
+      },
+      "date": 1551329121096
+    },
+    {
+      "type": "edit",
+      "id": "575a7e3cd558d62b",
+      "item": {
+        "type": "reference",
+        "id": "575a7e3cd558d62b",
+        "site": "growing.bay.wiki.org",
+        "slug": "table-of-contents",
+        "title": "Table of Contents",
+        "text": "We've copied this TOC from a pdf and now have mechanically transcribed the rest. The  ✔︎ and ☆ mark pages we modeled by hand."
+      },
+      "date": 1551329183893
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f98f216f25364757"
+      },
+      "id": "f98f216f25364757",
+      "type": "add",
+      "after": "c6f73188903e62b9",
+      "date": 1551370550184
+    },
+    {
+      "type": "edit",
+      "id": "f98f216f25364757",
+      "item": {
+        "type": "paragraph",
+        "id": "f98f216f25364757",
+        "text": "This diagrams have been sufficiently useful already that I want to make them fully automatic. After some discussion I came to this proposal:"
+      },
+      "date": 1551370636328
+    },
+    {
+      "type": "add",
+      "id": "22cb296243aa99b4",
+      "item": {
+        "type": "paragraph",
+        "id": "22cb296243aa99b4",
+        "text": "Here is what I'm thinking I should do: Add a keyword, DOT, to the Graphviz plugin that surplants the existing dot markup expectation with dot from some other source. I will expand this with additional keywords to make a markup language roughly as complex as the Grep plugin which knows how to look for things in a site. I will make sure that one can say DOT LINEUP that will mean find a dotsource in the lineup. The Map plugin already does something like this. I will also slightly generalize my 40 lines of Mehaffy specific code so as to find relevant links by various means, including \"charmed\" markdown. I think I could have this done by the weekend. For me the motivation is to have fast diagnostic tools to help Michael succeed with his Growing Regions collaboration."
+      },
+      "after": "f98f216f25364757",
+      "date": 1551370670205
+    },
+    {
+      "type": "edit",
+      "id": "22cb296243aa99b4",
+      "item": {
+        "type": "paragraph",
+        "id": "22cb296243aa99b4",
+        "text": "Here is what I'm thinking I should do: Add a keyword, DOT, to the Graphviz plugin that surplants the existing dot markup expectation with dot from some other source. I will expand this with additional keywords to make a markup language roughly as complex as the Grep plugin which knows how to look for things in a site. I will make sure that one can say DOT LINEUP that will mean find a dotsource in the lineup. The Map plugin already does something like this. I will also slightly generalize my 40 lines of Mehaffy specific code so as to find relevant links by various means, including \"charmed\" markdown. I think I could have this done by the weekend. For me the motivation is to have fast diagnostic tools to help Michael succeed with his Growing Regions collaboration. [https://riot.im/app/#/room/#fedwiki:matrix.org/$1551368514443081CWyvo:matrix.org riot]"
+      },
+      "date": 1551370710158
+    },
+    {
+      "type": "edit",
+      "id": "2459dcbe97051e7e",
+      "item": {
+        "type": "paragraph",
+        "id": "2459dcbe97051e7e",
+        "text": "[[Construction Patterns]] within locale."
+      },
+      "date": 1551371055935
+    },
+    {
+      "type": "edit",
+      "id": "f0bbb565fccf2c9c",
+      "item": {
+        "type": "paragraph",
+        "id": "f0bbb565fccf2c9c",
+        "text": "We've found inconsistent naming of patterns cause more than half links not resolve. We find localized diagrams help debug these problems. Notice the varying degrees of linking within vs. between locales."
+      },
+      "date": 1551371066835
+    },
+    {
+      "type": "edit",
+      "id": "e21349fffe7003bf",
+      "item": {
+        "type": "paragraph",
+        "id": "e21349fffe7003bf",
+        "text": "[[Geometric Patterns]] mixed."
+      },
+      "date": 1551371078499
+    },
+    {
+      "type": "edit",
+      "id": "9fb87d13e4f9ce0f",
+      "item": {
+        "type": "paragraph",
+        "id": "9fb87d13e4f9ce0f",
+        "text": "[[Retrofit Patterns]] between locales."
+      },
+      "date": 1551371091987
+    },
+    {
+      "type": "add",
+      "id": "a40f57041ad40d76",
+      "item": {
+        "type": "paragraph",
+        "id": "a40f57041ad40d76",
+        "text": "See [[Extract Site to Dot]] for markup ideas."
+      },
+      "after": "22cb296243aa99b4",
+      "date": 1551372466323
+    },
+    {
+      "type": "add",
+      "id": "94ce0053275ae8e0",
+      "item": {
+        "type": "paragraph",
+        "id": "94ce0053275ae8e0",
+        "text": "Try another [[Growing Regions as Hypertext]]"
+      },
+      "after": "a40f57041ad40d76",
+      "date": 1551379989776
+    },
+    {
+      "type": "edit",
+      "id": "94ce0053275ae8e0",
+      "item": {
+        "type": "paragraph",
+        "id": "94ce0053275ae8e0",
+        "text": "Try another [[Growing Regions as Hypertext]]. Is it faster having already loaded vis.js?"
+      },
+      "date": 1551467146298
+    },
+    {
+      "type": "add",
+      "id": "0ea2577b6a987ff9",
+      "item": {
+        "type": "paragraph",
+        "id": "0ea2577b6a987ff9",
+        "text": "# To Do"
+      },
+      "after": "94ce0053275ae8e0",
+      "date": 1551467204731
+    },
+    {
+      "type": "add",
+      "id": "8cf2e3208eb1c0b6",
+      "item": {
+        "type": "paragraph",
+        "id": "8cf2e3208eb1c0b6",
+        "text": "Convert image names to include pattern's slug."
+      },
+      "after": "0ea2577b6a987ff9",
+      "date": 1551467302663
+    },
+    {
+      "type": "add",
+      "id": "0af6e3936b5494b3",
+      "item": {
+        "type": "paragraph",
+        "id": "0af6e3936b5494b3",
+        "text": "Consistent handling of titlecase for "
+      },
+      "after": "8cf2e3208eb1c0b6",
+      "date": 1551467385911
+    },
+    {
+      "type": "edit",
+      "id": "0af6e3936b5494b3",
+      "item": {
+        "type": "paragraph",
+        "id": "0af6e3936b5494b3",
+        "text": "Consistent handling of title case for \"as\" and \"AV\"."
+      },
+      "date": 1551467433091
+    },
+    {
+      "type": "edit",
+      "id": "0af6e3936b5494b3",
+      "item": {
+        "type": "paragraph",
+        "id": "0af6e3936b5494b3",
+        "text": "Correct handling of title case for \"as\" and \"AV\"."
+      },
+      "date": 1551467444203
+    },
+    {
+      "type": "edit",
+      "id": "0ea2577b6a987ff9",
+      "item": {
+        "type": "markdown",
+        "id": "0ea2577b6a987ff9",
+        "text": "# To Do"
+      },
+      "date": 1551467452078
+    },
+    {
+      "type": "add",
+      "id": "9fa8a4366c0733c2",
+      "item": {
+        "type": "paragraph",
+        "id": "9fa8a4366c0733c2",
+        "text": "Remove page references."
+      },
+      "after": "0af6e3936b5494b3",
+      "date": 1551467486873
+    },
+    {
+      "type": "add",
+      "id": "612691ca88412507",
+      "item": {
+        "type": "paragraph",
+        "id": "612691ca88412507",
+        "text": "Remove ... and adjust capitalization accordingly."
+      },
+      "after": "9fa8a4366c0733c2",
+      "date": 1551467516760
+    },
+    {
+      "type": "add",
+      "id": "335cf7563135b554",
+      "item": {
+        "type": "paragraph",
+        "id": "335cf7563135b554",
+        "text": "Add fork and delete to Asset plugin."
+      },
+      "after": "612691ca88412507",
+      "date": 1551467569111
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "575a7e3cd558d62b",
+        "016fe45827f8190e",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87",
+        "789245ca08e6affc",
+        "f0bbb565fccf2c9c",
+        "2459dcbe97051e7e",
+        "be4c48d4d5420a3c",
+        "e21349fffe7003bf",
+        "b54b92a286a9409b",
+        "9fb87d13e4f9ce0f",
+        "c6f73188903e62b9",
+        "f98f216f25364757",
+        "22cb296243aa99b4",
+        "a40f57041ad40d76",
+        "94ce0053275ae8e0",
+        "0ea2577b6a987ff9",
+        "8cf2e3208eb1c0b6",
+        "335cf7563135b554",
+        "0af6e3936b5494b3",
+        "9fa8a4366c0733c2",
+        "612691ca88412507"
+      ],
+      "id": "335cf7563135b554",
+      "date": 1551467596345
+    },
+    {
+      "type": "add",
+      "id": "e347dc64515ba258",
+      "item": {
+        "type": "paragraph",
+        "id": "e347dc64515ba258",
+        "text": "Add DOT constructor markup to Graphviz plugin."
+      },
+      "after": "612691ca88412507",
+      "date": 1551467640284
+    },
+    {
+      "type": "add",
+      "id": "43ea5407382ce62d",
+      "item": {
+        "type": "paragraph",
+        "id": "43ea5407382ce62d",
+        "text": "Fractured link in Walkable Streetscape. [http://growing.bay.wiki.org/walkable-streetscape.html wiki]"
+      },
+      "after": "e347dc64515ba258",
+      "date": 1551474519710
+    },
+    {
+      "type": "edit",
+      "id": "43ea5407382ce62d",
+      "item": {
+        "type": "paragraph",
+        "id": "43ea5407382ce62d",
+        "text": "Fractured link in Walkable Streetscape. [http://growing.bay.wiki.org/public-space-patterns.html wiki]"
+      },
+      "date": 1551474558856
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "575a7e3cd558d62b",
+        "016fe45827f8190e",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87",
+        "789245ca08e6affc",
+        "f0bbb565fccf2c9c",
+        "2459dcbe97051e7e",
+        "be4c48d4d5420a3c",
+        "e21349fffe7003bf",
+        "b54b92a286a9409b",
+        "9fb87d13e4f9ce0f",
+        "c6f73188903e62b9",
+        "f98f216f25364757",
+        "22cb296243aa99b4",
+        "94ce0053275ae8e0",
+        "a40f57041ad40d76",
+        "0ea2577b6a987ff9",
+        "8cf2e3208eb1c0b6",
+        "335cf7563135b554",
+        "0af6e3936b5494b3",
+        "9fa8a4366c0733c2",
+        "612691ca88412507",
+        "e347dc64515ba258",
+        "43ea5407382ce62d"
+      ],
+      "id": "94ce0053275ae8e0",
+      "date": 1551474603489
+    },
+    {
+      "type": "remove",
+      "id": "22cb296243aa99b4",
+      "date": 1551474654948
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "575a7e3cd558d62b",
+        "016fe45827f8190e",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87",
+        "789245ca08e6affc",
+        "f0bbb565fccf2c9c",
+        "2459dcbe97051e7e",
+        "be4c48d4d5420a3c",
+        "e21349fffe7003bf",
+        "b54b92a286a9409b",
+        "9fb87d13e4f9ce0f",
+        "c6f73188903e62b9",
+        "f98f216f25364757",
+        "a40f57041ad40d76",
+        "94ce0053275ae8e0",
+        "0ea2577b6a987ff9",
+        "8cf2e3208eb1c0b6",
+        "335cf7563135b554",
+        "0af6e3936b5494b3",
+        "9fa8a4366c0733c2",
+        "612691ca88412507",
+        "e347dc64515ba258",
+        "43ea5407382ce62d"
+      ],
+      "id": "a40f57041ad40d76",
+      "date": 1551474659402
+    },
+    {
+      "type": "remove",
+      "id": "a40f57041ad40d76",
+      "date": 1551474663870
+    },
+    {
+      "type": "edit",
+      "id": "f98f216f25364757",
+      "item": {
+        "type": "paragraph",
+        "id": "f98f216f25364757",
+        "text": "This diagrams have been sufficiently useful already that I want to make them fully automatic. After some discussion I came to this proposal. See [[Extract Site to Dot]] for markup ideas."
+      },
+      "date": 1551474668378
+    },
+    {
+      "type": "edit",
+      "id": "f98f216f25364757",
+      "item": {
+        "type": "paragraph",
+        "id": "f98f216f25364757",
+        "text": "This diagrams have been sufficiently useful already that I want to make them fully automatic. After some discussion I came to a proposal. See [[Extract Site to Dot]]"
+      },
+      "date": 1551474695558
+    },
+    {
+      "type": "edit",
+      "id": "62f96dca9b8b240f",
+      "item": {
+        "type": "paragraph",
+        "id": "62f96dca9b8b240f",
+        "text": "I test javascript in the debug console but eventually put what works in a single file which I add to the html that I am translating. [https://github.com/WardCunningham/sustasis-mapmatic/blob/master/ebook-formats/growing.js github] [file:///Users/ward/FedWiki/sustasis-mapmatic/ebook-formats/APLFGR%2026.02%20ebook.html draft]"
+      },
+      "date": 1551623319289
+    },
+    {
+      "type": "edit",
+      "id": "62f96dca9b8b240f",
+      "item": {
+        "type": "paragraph",
+        "id": "62f96dca9b8b240f",
+        "text": "I test javascript in the debug console but eventually put what works in a single file which I add to the html that I am translating. [https://github.com/WardCunningham/sustasis-mapmatic/blob/master/ebook-formats/growing.js github]"
+      },
+      "date": 1551623361326
+    },
+    {
+      "type": "add",
+      "id": "b366079a97a80243",
+      "item": {
+        "type": "factory",
+        "id": "b366079a97a80243",
+        "text": "[file:///Users/ward/FedWiki/sustasis-mapmatic/ebook-formats/APLFGR%2026.02%20ebook.html draft]"
+      },
+      "after": "62f96dca9b8b240f",
+      "date": 1551623379232
+    },
+    {
+      "type": "edit",
+      "id": "b366079a97a80243",
+      "item": {
+        "type": "html",
+        "id": "b366079a97a80243",
+        "text": "<a href=\"file:///Users/ward/FedWiki/sustasis-mapmatic/ebook-formats/APLFGR%2026.02%20ebook.html\">draft</a>"
+      },
+      "date": 1551623429255
+    },
+    {
+      "type": "edit",
+      "id": "b366079a97a80243",
+      "item": {
+        "type": "code",
+        "id": "b366079a97a80243",
+        "text": "file:///Users/ward/FedWiki/sustasis-mapmatic/ebook-formats/APLFGR%2026.02%20ebook.html"
+      },
+      "date": 1551623490794
+    },
+    {
+      "type": "move",
+      "order": [
+        "27c92578f6297dfa",
+        "beccc08f610641bd",
+        "575a7e3cd558d62b",
+        "016fe45827f8190e",
+        "d65f4f4c96cbb1a6",
+        "c1a36fb67c3a6b1d",
+        "42c9c4c58b405e1d",
+        "663e9ea165cff05c",
+        "0ab562979f59b0d8",
+        "0bb4eaa8f46ea87f",
+        "1b96503455562fa6",
+        "62f96dca9b8b240f",
+        "f3b66e40337fba34",
+        "b366079a97a80243",
+        "038dd68ddb9b0465",
+        "65ebc8def0dd6465",
+        "4dd072b5338a6e87",
+        "789245ca08e6affc",
+        "f0bbb565fccf2c9c",
+        "2459dcbe97051e7e",
+        "be4c48d4d5420a3c",
+        "e21349fffe7003bf",
+        "b54b92a286a9409b",
+        "9fb87d13e4f9ce0f",
+        "c6f73188903e62b9",
+        "f98f216f25364757",
+        "94ce0053275ae8e0",
+        "0ea2577b6a987ff9",
+        "8cf2e3208eb1c0b6",
+        "335cf7563135b554",
+        "0af6e3936b5494b3",
+        "9fa8a4366c0733c2",
+        "612691ca88412507",
+        "e347dc64515ba258",
+        "43ea5407382ce62d"
+      ],
+      "id": "b366079a97a80243",
+      "date": 1551623504896
+    }
+  ]
+}

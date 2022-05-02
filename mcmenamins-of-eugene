@@ -1,0 +1,199 @@
+{
+  "title": "McMenamins of Eugene",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "72c2ade867478c7e",
+      "text": "We suggest pubs mostly as a demonstration of the Bikeshare plugin applied to Eugene."
+    },
+    {
+      "type": "map",
+      "id": "4e4b2f773d2d5d99",
+      "text": "44.059692, -123.084853 North Bank Pub\n44.046107, -123.087873 High Street Pub\n44.0390920, -123.0699742 East 19th Street Pub\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "8e7b0f83c7b93237",
+      "text": "Find nearby stations for [[Peace Health Rides]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "d435dfa447c45b12",
+      "text": "Read [[About Map Plugin]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "McMenamins of Eugene",
+        "story": []
+      },
+      "date": 1532034005149
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "72c2ade867478c7e"
+      },
+      "id": "72c2ade867478c7e",
+      "type": "add",
+      "date": 1532034009305
+    },
+    {
+      "type": "edit",
+      "id": "72c2ade867478c7e",
+      "item": {
+        "type": "paragraph",
+        "id": "72c2ade867478c7e",
+        "text": "We suggest pubs mostly as a demonstration of the Bikeshare plugin applied to Eugene."
+      },
+      "date": 1532034074059
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4e4b2f773d2d5d99"
+      },
+      "id": "4e4b2f773d2d5d99",
+      "type": "add",
+      "after": "72c2ade867478c7e",
+      "date": 1532034075825
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "McMenamins"
+      },
+      "date": 1532034099835
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.0528448,-123.0997428 North Bank"
+      },
+      "date": 1532034132257
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.0528448,-123.0997428 North Bank\n44.0528448,-123.0997428 High Street"
+      },
+      "date": 1532034184085
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.059692, -123.084853 North Bank\n44.0528448,-123.0997428 High Street"
+      },
+      "date": 1532034263932
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.059692, -123.084853 North Bank\n44.046107, -123.087873 High Street"
+      },
+      "date": 1532034300796
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.059692, -123.084853 North Bank\n44.046107, -123.087873 High Street\n44.039246, -123.070094"
+      },
+      "date": 1532034341149
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.059692, -123.084853 North Bank\n44.046107, -123.087873 High Street\n44.039246, -123.070094 East 19th Street"
+      },
+      "date": 1532034366429
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8e7b0f83c7b93237"
+      },
+      "id": "8e7b0f83c7b93237",
+      "type": "add",
+      "after": "4e4b2f773d2d5d99",
+      "date": 1532034378715
+    },
+    {
+      "type": "edit",
+      "id": "8e7b0f83c7b93237",
+      "item": {
+        "type": "paragraph",
+        "id": "8e7b0f83c7b93237",
+        "text": "Find nearby stations for [[Peace Health Rides]]"
+      },
+      "date": 1532034405172
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.059692, -123.084853 North Bank\n44.046107, -123.087873 High Street\n44.039246, -123.070094 East 19th Street\n44.0390920, -123.0699742"
+      },
+      "date": 1532034744564
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.059692, -123.084853 North Bank\n44.046107, -123.087873 High Street\n44.0390920, -123.0699742 East 19th Street\n"
+      },
+      "date": 1532034761395
+    },
+    {
+      "type": "add",
+      "id": "d435dfa447c45b12",
+      "item": {
+        "type": "paragraph",
+        "id": "d435dfa447c45b12",
+        "text": "Read [[About Map Plugin]]"
+      },
+      "after": "8e7b0f83c7b93237",
+      "date": 1532440742809
+    },
+    {
+      "type": "fork",
+      "date": 1532908283065
+    },
+    {
+      "type": "edit",
+      "id": "4e4b2f773d2d5d99",
+      "item": {
+        "type": "map",
+        "id": "4e4b2f773d2d5d99",
+        "text": "44.059692, -123.084853 North Bank Pub\n44.046107, -123.087873 High Street Pub\n44.0390920, -123.0699742 East 19th Street Pub\n"
+      },
+      "date": 1533155775184
+    }
+  ]
+}

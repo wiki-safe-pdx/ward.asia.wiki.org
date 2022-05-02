@@ -1,0 +1,199 @@
+{
+  "title": "Augmentation Means",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1b26867e874f699f",
+      "text": "Our culture has evolved means for us to organize the little things we can do with our basic capabilities so that we can derive comprehension from truly complex situations, and accomplish the processes of deriving and implementing problem solutions. The ways in which human capabilities are thus extended are here called augmentation means, and we define four basic classes of them. [http://www.1962paper.org/web.html report]"
+    },
+    {
+      "type": "paragraph",
+      "id": "bde65c9bc83aea7a",
+      "text": "\nArtifacts -- physical objects designed to provide for human comfort, for the manipulation of things or materials, and for the manipulation of symbols.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "679b1b6e6f20e9cd",
+      "text": "Language -- the way in which the individual parcels out the picture of his world into the concepts that his mind uses to model that world, and the symbols that he attaches to those concepts and uses in consciously manipulating the concepts (”thinking”).\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "5f86c67a3ea77c44",
+      "text": "Methodology -- the methods, procedures, strategies, etc., with which an individual organizes his goal-centered (problem-solving) activity.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "41e3b82b3ac1b608",
+      "text": "Training -- the conditioning needed by the human being to bring his skills in using Means 1, 2, and 3 to the point where they are operationally effective.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "1233b688aa674c41",
+      "text": "The system we want to improve can thus be visualized as a trained human being together with his artifacts, language, and methodology. The explicit new system we contemplate will involve as artifacts computers, and computer-controlled information-storage, information-handling, and information-display devices. The aspects of the conceptual framework that are discussed here are primarily those relating to the human being's ability to make significant use of such equipment in an integrated system."
+    },
+    {
+      "type": "pagefold",
+      "id": "f3e6bb5e6c109c3f",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "65c0ec90e09dfe37",
+      "text": "The system that Engelbart eventually built was notoriously difficult to use. So is a piano. He often asked, why would anyone think it should be otherwise if it is to be a powerful augmentation of a human mind?"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Augmentation Means",
+        "story": []
+      },
+      "date": 1513524448121
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1b26867e874f699f"
+      },
+      "id": "1b26867e874f699f",
+      "type": "add",
+      "date": 1513524488544
+    },
+    {
+      "type": "edit",
+      "id": "1b26867e874f699f",
+      "item": {
+        "type": "paragraph",
+        "id": "1b26867e874f699f",
+        "text": "Our culture has evolved means for us to organize the little things we can do with our basic capabilities so that we can derive comprehension from truly complex situations, and accomplish the processes of deriving and implementing problem solutions. The ways in which human capabilities are thus extended are here called augmentation means, and we define four basic classes of them."
+      },
+      "date": 1513524501098
+    },
+    {
+      "type": "add",
+      "id": "bde65c9bc83aea7a",
+      "item": {
+        "type": "paragraph",
+        "id": "bde65c9bc83aea7a",
+        "text": "\nArtifacts -- physical objects designed to provide for human comfort, for the manipulation of things or materials, and for the manipulation of symbols.\n\n"
+      },
+      "after": "1b26867e874f699f",
+      "date": 1513524515394
+    },
+    {
+      "type": "add",
+      "id": "679b1b6e6f20e9cd",
+      "item": {
+        "type": "paragraph",
+        "id": "679b1b6e6f20e9cd",
+        "text": "Language -- the way in which the individual parcels out the picture of his world into the concepts that his mind uses to model that world, and the symbols that he attaches to those concepts and uses in consciously manipulating the concepts (”thinking”).\n\n"
+      },
+      "after": "bde65c9bc83aea7a",
+      "date": 1513524520122
+    },
+    {
+      "type": "add",
+      "id": "5f86c67a3ea77c44",
+      "item": {
+        "type": "paragraph",
+        "id": "5f86c67a3ea77c44",
+        "text": "Methodology -- the methods, procedures, strategies, etc., with which an individual organizes his goal-centered (problem-solving) activity.\n\n"
+      },
+      "after": "679b1b6e6f20e9cd",
+      "date": 1513524522587
+    },
+    {
+      "type": "add",
+      "id": "41e3b82b3ac1b608",
+      "item": {
+        "type": "paragraph",
+        "id": "41e3b82b3ac1b608",
+        "text": "Training -- the conditioning needed by the human being to bring his skills in using Means 1, 2, and 3 to the point where they are operationally effective.\n\n"
+      },
+      "after": "5f86c67a3ea77c44",
+      "date": 1513524527081
+    },
+    {
+      "type": "add",
+      "id": "1233b688aa674c41",
+      "item": {
+        "type": "paragraph",
+        "id": "1233b688aa674c41",
+        "text": "The system we want to improve can thus be visualized as a trained human being together with his artifacts, language, and methodology. The explicit new system we contemplate will involve as artifacts computers, and computer-controlled information-storage, information-handling, and information-display devices. The aspects of the conceptual framework that are discussed here are primarily those relating to the human being's ability to make significant use of such equipment in an integrated system."
+      },
+      "after": "41e3b82b3ac1b608",
+      "date": 1513524528744
+    },
+    {
+      "type": "edit",
+      "id": "1b26867e874f699f",
+      "item": {
+        "type": "paragraph",
+        "id": "1b26867e874f699f",
+        "text": "Our culture has evolved means for us to organize the little things we can do with our basic capabilities so that we can derive comprehension from truly complex situations, and accomplish the processes of deriving and implementing problem solutions. The ways in which human capabilities are thus extended are here called augmentation means, and we define four basic classes of them. [http://www.1962paper.org/web.html paper]"
+      },
+      "date": 1513524906837
+    },
+    {
+      "type": "edit",
+      "id": "1b26867e874f699f",
+      "item": {
+        "type": "paragraph",
+        "id": "1b26867e874f699f",
+        "text": "Our culture has evolved means for us to organize the little things we can do with our basic capabilities so that we can derive comprehension from truly complex situations, and accomplish the processes of deriving and implementing problem solutions. The ways in which human capabilities are thus extended are here called augmentation means, and we define four basic classes of them. [http://www.1962paper.org/web.html report]"
+      },
+      "date": 1513524921165
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f3e6bb5e6c109c3f"
+      },
+      "id": "f3e6bb5e6c109c3f",
+      "type": "add",
+      "after": "1233b688aa674c41",
+      "date": 1513541783452
+    },
+    {
+      "type": "edit",
+      "id": "f3e6bb5e6c109c3f",
+      "item": {
+        "type": "pagefold",
+        "id": "f3e6bb5e6c109c3f",
+        "text": "."
+      },
+      "date": 1513541788367
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "65c0ec90e09dfe37"
+      },
+      "id": "65c0ec90e09dfe37",
+      "type": "add",
+      "after": "f3e6bb5e6c109c3f",
+      "date": 1513541809549
+    },
+    {
+      "type": "edit",
+      "id": "65c0ec90e09dfe37",
+      "item": {
+        "type": "paragraph",
+        "id": "65c0ec90e09dfe37",
+        "text": "The system that Engelbart eventually built was notoriously difficult to use. So is a piano. He often asked, why would anyone think it should be otherwise if it is to be a powerful augmentation of a human mind."
+      },
+      "date": 1513541894492
+    },
+    {
+      "type": "edit",
+      "id": "65c0ec90e09dfe37",
+      "item": {
+        "type": "paragraph",
+        "id": "65c0ec90e09dfe37",
+        "text": "The system that Engelbart eventually built was notoriously difficult to use. So is a piano. He often asked, why would anyone think it should be otherwise if it is to be a powerful augmentation of a human mind?"
+      },
+      "date": 1513541902397
+    }
+  ]
+}

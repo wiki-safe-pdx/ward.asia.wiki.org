@@ -1,0 +1,231 @@
+{
+  "title": "Service Blocks",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "c7820aff8e92ebb4",
+      "text": "We would like to generalize the Datalog plugin with block-based programming that will recognize or generate events and then invoke diverse activity based on what happens. The block model provides a \"toolbox\" of operations subject to assembly constraints promising no syntax errors ever."
+    },
+    {
+      "type": "paragraph",
+      "id": "85cddb43969b5aa6",
+      "text": "The [[IFTTT]] (if this then that) service recognizes triggers and actions where both have attributes and triggers can be further qualified with parameters. This appears a proven model. [https://platform.ifttt.com/docs site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1a863eb0f9d2a930",
+      "text": "We imagine the plugin rendering as a block-based program with a start/stop button similar to Datalog. Double-click would open the larger block editor and toolbox. Ctl-Alt-S would save changes with a Journal update."
+    },
+    {
+      "type": "paragraph",
+      "id": "fe4c29824be5c652",
+      "text": "The Blockly library adds an editor to your app that represents coding concepts as interlocking blocks. It outputs syntactically correct code in the programming language of your choice. Custom blocks may be created to connect to your own application. [https://developers.google.com/blockly/ site]"
+    },
+    {
+      "type": "markdown",
+      "id": "c1e71cd56feb0e6f",
+      "text": "# Examples"
+    },
+    {
+      "type": "paragraph",
+      "id": "b4724ea4266dc648",
+      "text": "Datalog makes many assumptions as to how it will get data. We imagine Service Blocks offering much more wrangling of data as it is recorded."
+    },
+    {
+      "type": "paragraph",
+      "id": "13c86bc8b30d31ec",
+      "text": "Pingdom has retired its free tier of out-of-service alerts. We'd like to replace this with a Service Blocks based [[Ping Service]] that could record and alert on service interruptions."
+    },
+    {
+      "type": "paragraph",
+      "id": "939015ac4759b1c1",
+      "text": "The Report plugin renders as a count-down to the next scheduled report distribution. Slow triggers might offer a similar warning."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Service Blocks",
+        "story": []
+      },
+      "date": 1549680106529
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c7820aff8e92ebb4"
+      },
+      "id": "c7820aff8e92ebb4",
+      "type": "add",
+      "date": 1549680108414
+    },
+    {
+      "type": "edit",
+      "id": "c7820aff8e92ebb4",
+      "item": {
+        "type": "paragraph",
+        "id": "c7820aff8e92ebb4",
+        "text": "We would like to generalize the Datalog plugin with block-based programming that will recognize or generate events and then invoke diverse activity based on what happens. The block model provides a \"toolbox\" of operations subject to assembly constraints promising no syntax errors ever."
+      },
+      "date": 1549680452820
+    },
+    {
+      "type": "add",
+      "id": "85cddb43969b5aa6",
+      "item": {
+        "type": "paragraph",
+        "id": "85cddb43969b5aa6",
+        "text": "The IFTTT (if this then that) service "
+      },
+      "after": "c7820aff8e92ebb4",
+      "date": 1549680482546
+    },
+    {
+      "type": "edit",
+      "id": "85cddb43969b5aa6",
+      "item": {
+        "type": "paragraph",
+        "id": "85cddb43969b5aa6",
+        "text": "The IFTTT (if this then that) service recognizes triggers and actions where both have attributes and triggers can be further qualified with parameters. This appears a proven model. "
+      },
+      "date": 1549680579984
+    },
+    {
+      "type": "edit",
+      "id": "85cddb43969b5aa6",
+      "item": {
+        "type": "paragraph",
+        "id": "85cddb43969b5aa6",
+        "text": "The IFTTT (if this then that) service recognizes triggers and actions where both have attributes and triggers can be further qualified with parameters. This appears a proven model. [https://platform.ifttt.com/docs help]"
+      },
+      "date": 1549680604767
+    },
+    {
+      "type": "edit",
+      "id": "85cddb43969b5aa6",
+      "item": {
+        "type": "paragraph",
+        "id": "85cddb43969b5aa6",
+        "text": "The IFTTT (if this then that) service recognizes triggers and actions where both have attributes and triggers can be further qualified with parameters. This appears a proven model. [https://platform.ifttt.com/docs site]"
+      },
+      "date": 1549680612487
+    },
+    {
+      "type": "add",
+      "id": "1a863eb0f9d2a930",
+      "item": {
+        "type": "paragraph",
+        "id": "1a863eb0f9d2a930",
+        "text": "We imagine the plugin rendering as a block-based program with a start/stop button similar to Datalog. Double-click would open the larger block editor and toolbox. Ctl-Alt-S would save changes with a Journal update."
+      },
+      "after": "85cddb43969b5aa6",
+      "date": 1549680779739
+    },
+    {
+      "type": "add",
+      "id": "c1e71cd56feb0e6f",
+      "item": {
+        "type": "paragraph",
+        "id": "c1e71cd56feb0e6f",
+        "text": "# Examples"
+      },
+      "after": "1a863eb0f9d2a930",
+      "date": 1549680811362
+    },
+    {
+      "type": "add",
+      "id": "b4724ea4266dc648",
+      "item": {
+        "type": "paragraph",
+        "id": "b4724ea4266dc648",
+        "text": "Datalog makes many assumptions as to how it will get data. We imagine Service Blocks offering much more wrangling of data as it is recorded."
+      },
+      "after": "c1e71cd56feb0e6f",
+      "date": 1549680896359
+    },
+    {
+      "type": "add",
+      "id": "13c86bc8b30d31ec",
+      "item": {
+        "type": "paragraph",
+        "id": "13c86bc8b30d31ec",
+        "text": "Pingdom has retired its free tier of out-of-service alerts. We'd like to replace this with a Service Blocks based pinger that could record and alert on service interruptions."
+      },
+      "after": "b4724ea4266dc648",
+      "date": 1549681004477
+    },
+    {
+      "type": "edit",
+      "id": "c1e71cd56feb0e6f",
+      "item": {
+        "type": "markdown",
+        "id": "c1e71cd56feb0e6f",
+        "text": "# Examples"
+      },
+      "date": 1549681016566
+    },
+    {
+      "type": "add",
+      "id": "939015ac4759b1c1",
+      "item": {
+        "type": "paragraph",
+        "id": "939015ac4759b1c1",
+        "text": "The Report plugin renders as a count-down to the next scheduled report distribution. Slow triggers might offer a similar warning."
+      },
+      "after": "13c86bc8b30d31ec",
+      "date": 1549681205193
+    },
+    {
+      "type": "add",
+      "id": "fe4c29824be5c652",
+      "item": {
+        "type": "paragraph",
+        "id": "fe4c29824be5c652",
+        "text": "The Blockly library adds an editor to your app that represents coding concepts as interlocking blocks. It outputs syntactically correct code in the programming language of your choice. Custom blocks may be created to connect to your own application."
+      },
+      "after": "1a863eb0f9d2a930",
+      "date": 1549681383579
+    },
+    {
+      "type": "edit",
+      "id": "fe4c29824be5c652",
+      "item": {
+        "type": "paragraph",
+        "id": "fe4c29824be5c652",
+        "text": "The Blockly library adds an editor to your app that represents coding concepts as interlocking blocks. It outputs syntactically correct code in the programming language of your choice. Custom blocks may be created to connect to your own application. [https://developers.google.com/blockly/ tryit]"
+      },
+      "date": 1549681421082
+    },
+    {
+      "type": "edit",
+      "id": "fe4c29824be5c652",
+      "item": {
+        "type": "paragraph",
+        "id": "fe4c29824be5c652",
+        "text": "The Blockly library adds an editor to your app that represents coding concepts as interlocking blocks. It outputs syntactically correct code in the programming language of your choice. Custom blocks may be created to connect to your own application. [https://developers.google.com/blockly/ site]"
+      },
+      "date": 1549681427466
+    },
+    {
+      "type": "edit",
+      "id": "85cddb43969b5aa6",
+      "item": {
+        "type": "paragraph",
+        "id": "85cddb43969b5aa6",
+        "text": "The [[IFTTT]] (if this then that) service recognizes triggers and actions where both have attributes and triggers can be further qualified with parameters. This appears a proven model. [https://platform.ifttt.com/docs site]"
+      },
+      "date": 1549733556226
+    },
+    {
+      "type": "edit",
+      "id": "13c86bc8b30d31ec",
+      "item": {
+        "type": "paragraph",
+        "id": "13c86bc8b30d31ec",
+        "text": "Pingdom has retired its free tier of out-of-service alerts. We'd like to replace this with a Service Blocks based [[Ping Service]] that could record and alert on service interruptions."
+      },
+      "date": 1553122939724
+    }
+  ]
+}

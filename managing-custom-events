@@ -1,0 +1,255 @@
+{
+  "title": "Managing Custom Events",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ca0c8524a2a85b76",
+      "text": "We consider how custom events and their users should be identified and maintained in the presence of dynamic reconfiguration."
+    },
+    {
+      "type": "paragraph",
+      "id": "cc48d0e2462f09bd",
+      "text": "We would like to provide similar mechanisms to both client and server-side plugins and expect some interoperation. We recognize that these are substantially different environments."
+    },
+    {
+      "type": "paragraph",
+      "id": "71e00af1cfd9157f",
+      "text": "[[Historic Custom Events]] mostly propagating data related updates such as scrubbing through datasets."
+    },
+    {
+      "type": "paragraph",
+      "id": "5e3e5a640ea44b44",
+      "text": "[[Timer Logic]] where timer events are scheduled and maintained server-side for data collection."
+    },
+    {
+      "type": "paragraph",
+      "id": "3ec7afc6899bcc6b",
+      "text": "[[Service Logic]] where our timer experience is generalized slightly for monitoring and alerting applications."
+    },
+    {
+      "type": "paragraph",
+      "id": "a4c5c00b185bf219",
+      "text": "[[Wiki Events]] where we propose mechanics of addressing and reconfiguring server, client and server-to-client event in light of recent prototypes. "
+    },
+    {
+      "type": "paragraph",
+      "id": "99e5ed73e7328916",
+      "text": "aspirational documents"
+    },
+    {
+      "type": "paragraph",
+      "id": "aa4add36566391b1",
+      "text": "lifetimes on client and server"
+    },
+    {
+      "type": "paragraph",
+      "id": "13389bd4d05d88f7",
+      "text": "headless clients"
+    },
+    {
+      "type": "paragraph",
+      "id": "09a5d9d369efaa9e",
+      "text": "start/stop configuration logic"
+    },
+    {
+      "type": "paragraph",
+      "id": "0054f4a14259a1f6",
+      "text": "drag/drop configuration logic"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ea1d216e2d6a281",
+      "text": "collaborative events"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Managing Custom Events",
+        "story": []
+      },
+      "date": 1561389330931
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ca0c8524a2a85b76"
+      },
+      "id": "ca0c8524a2a85b76",
+      "type": "add",
+      "date": 1561389333125
+    },
+    {
+      "type": "edit",
+      "id": "ca0c8524a2a85b76",
+      "item": {
+        "type": "paragraph",
+        "id": "ca0c8524a2a85b76",
+        "text": "We consider how custom events and their users should be identified and maintained in the presence of dynamic reconfiguration."
+      },
+      "date": 1561389546101
+    },
+    {
+      "type": "add",
+      "id": "cc48d0e2462f09bd",
+      "item": {
+        "type": "paragraph",
+        "id": "cc48d0e2462f09bd",
+        "text": "We would like to provide similar mechanisms to both client and server-side plugins and expect some interoperation. We recognize that these are substantially different environments."
+      },
+      "after": "ca0c8524a2a85b76",
+      "date": 1561389669546
+    },
+    {
+      "type": "add",
+      "id": "71e00af1cfd9157f",
+      "item": {
+        "type": "paragraph",
+        "id": "71e00af1cfd9157f",
+        "text": "existing examples"
+      },
+      "after": "cc48d0e2462f09bd",
+      "date": 1561389727775
+    },
+    {
+      "type": "add",
+      "id": "99e5ed73e7328916",
+      "item": {
+        "type": "paragraph",
+        "id": "99e5ed73e7328916",
+        "text": "aspirational documents"
+      },
+      "after": "71e00af1cfd9157f",
+      "date": 1561389760422
+    },
+    {
+      "type": "add",
+      "id": "aa4add36566391b1",
+      "item": {
+        "type": "paragraph",
+        "id": "aa4add36566391b1",
+        "text": "lifetimes on client and server"
+      },
+      "after": "99e5ed73e7328916",
+      "date": 1561389784334
+    },
+    {
+      "type": "add",
+      "id": "13389bd4d05d88f7",
+      "item": {
+        "type": "paragraph",
+        "id": "13389bd4d05d88f7",
+        "text": "headless clients"
+      },
+      "after": "aa4add36566391b1",
+      "date": 1561389797812
+    },
+    {
+      "type": "add",
+      "id": "09a5d9d369efaa9e",
+      "item": {
+        "type": "paragraph",
+        "id": "09a5d9d369efaa9e",
+        "text": "start/stop configuration logic"
+      },
+      "after": "13389bd4d05d88f7",
+      "date": 1561389827068
+    },
+    {
+      "type": "add",
+      "id": "0054f4a14259a1f6",
+      "item": {
+        "type": "paragraph",
+        "id": "0054f4a14259a1f6",
+        "text": "drad/drop configuration logic"
+      },
+      "after": "09a5d9d369efaa9e",
+      "date": 1561389837108
+    },
+    {
+      "type": "edit",
+      "id": "0054f4a14259a1f6",
+      "item": {
+        "type": "paragraph",
+        "id": "0054f4a14259a1f6",
+        "text": "drag/drop configuration logic"
+      },
+      "date": 1561389845563
+    },
+    {
+      "type": "add",
+      "id": "0ea1d216e2d6a281",
+      "item": {
+        "type": "paragraph",
+        "id": "0ea1d216e2d6a281",
+        "text": "collaborative events"
+      },
+      "after": "0054f4a14259a1f6",
+      "date": 1561389880242
+    },
+    {
+      "type": "edit",
+      "id": "71e00af1cfd9157f",
+      "item": {
+        "type": "paragraph",
+        "id": "71e00af1cfd9157f",
+        "text": "[[Historic Custom Events]] mostly propagating data related updates."
+      },
+      "date": 1562441537525
+    },
+    {
+      "type": "add",
+      "id": "5e3e5a640ea44b44",
+      "item": {
+        "type": "paragraph",
+        "id": "5e3e5a640ea44b44",
+        "text": "[[Timer Logic]] where timer events are scheduled and maintained server-side for data collection."
+      },
+      "after": "71e00af1cfd9157f",
+      "date": 1562441663406
+    },
+    {
+      "type": "edit",
+      "id": "71e00af1cfd9157f",
+      "item": {
+        "type": "paragraph",
+        "id": "71e00af1cfd9157f",
+        "text": "[[Historic Custom Events]] mostly propagating data related updates such as scrubbing through datasets."
+      },
+      "date": 1562441712083
+    },
+    {
+      "type": "add",
+      "id": "3ec7afc6899bcc6b",
+      "item": {
+        "type": "paragraph",
+        "id": "3ec7afc6899bcc6b",
+        "text": "[[Service Logic]] where our timer experience is generalized slightly for monitoring and alerting applications."
+      },
+      "after": "5e3e5a640ea44b44",
+      "date": 1562441792690
+    },
+    {
+      "type": "add",
+      "id": "a4c5c00b185bf219",
+      "item": {
+        "type": "paragraph",
+        "id": "a4c5c00b185bf219",
+        "text": "[[Wiki Events]] where proposed mechanics of addressing and reconfiguring server, client and server-to-client event in light of recent prototypes. "
+      },
+      "after": "3ec7afc6899bcc6b",
+      "date": 1562442067056
+    },
+    {
+      "type": "edit",
+      "id": "a4c5c00b185bf219",
+      "item": {
+        "type": "paragraph",
+        "id": "a4c5c00b185bf219",
+        "text": "[[Wiki Events]] where we propose mechanics of addressing and reconfiguring server, client and server-to-client event in light of recent prototypes. "
+      },
+      "date": 1562471364502
+    }
+  ]
+}

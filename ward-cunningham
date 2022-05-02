@@ -1,0 +1,377 @@
+{
+  "title": "Ward Cunningham",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "2df33b5b8d3d72c5",
+      "text": "I have lots of ambition for federated wiki which I have explored at times and deferred to more mundane needs other times. Here I can describe ideas without declaring them as accepted direction."
+    },
+    {
+      "type": "reference",
+      "id": "33a981703f6de458",
+      "site": "goals.pods.wiki.org",
+      "slug": "goals-for-federated-wiki",
+      "title": "Goals for Federated Wiki",
+      "text": "We share an interest in the continued growth in federated wiki as an important concept and in the open codebase that demonstrates its advantages."
+    },
+    {
+      "type": "reference",
+      "id": "eea0c14ef9aff1c2",
+      "site": "admin.asia.wiki.org",
+      "slug": "tips-for-administrators",
+      "title": "Tips for Administrators",
+      "text": "Here we collect advice for operating wiki sites for others. Computers and networks vary so we stop short of step by step instructions. We report what has worked for us using the privileges available to system administrators."
+    },
+    {
+      "type": "reference",
+      "id": "1c56323c33882cd2",
+      "site": "ward.fed.wiki.org",
+      "title": "Ward Cunningham",
+      "text": "I wrote [[Federated Wiki]] while I served as Nike's open-data fellow. I currently work for [[NewRelic]] in Portland, Oregon."
+    },
+    {
+      "type": "paragraph",
+      "id": "ba46b23f6fb48dc5",
+      "text": "See [[Hacking Online]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Ward Cunningham",
+        "story": []
+      },
+      "date": 1418441897381
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1c56323c33882cd2"
+      },
+      "id": "1c56323c33882cd2",
+      "type": "add",
+      "date": 1418441899252
+    },
+    {
+      "type": "edit",
+      "id": "1c56323c33882cd2",
+      "item": {
+        "type": "reference",
+        "id": "1c56323c33882cd2",
+        "site": "ward.fed.wiki.org",
+        "title": "Ward Cunningham",
+        "text": "I wrote [[Federated Wiki]] while I served as Nike's open-data fellow. I currently work for [[NewRelic]] in Portland, Oregon."
+      },
+      "date": 1418441916414
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2df33b5b8d3d72c5"
+      },
+      "id": "2df33b5b8d3d72c5",
+      "type": "add",
+      "after": "1c56323c33882cd2",
+      "date": 1418441919720
+    },
+    {
+      "type": "edit",
+      "id": "2df33b5b8d3d72c5",
+      "item": {
+        "type": "paragraph",
+        "id": "2df33b5b8d3d72c5",
+        "text": "I'm a big fan of Mike Caulfield who knows my work better than I do."
+      },
+      "date": 1418441959990
+    },
+    {
+      "type": "move",
+      "order": [
+        "2df33b5b8d3d72c5",
+        "1c56323c33882cd2"
+      ],
+      "id": "2df33b5b8d3d72c5",
+      "date": 1418441963918
+    },
+    {
+      "type": "edit",
+      "id": "2df33b5b8d3d72c5",
+      "item": {
+        "type": "paragraph",
+        "id": "2df33b5b8d3d72c5",
+        "text": "I'm a big fan of Mike Caulfield who knows my work better than I do. He pushes federated wiki forward."
+      },
+      "date": 1418441981919
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5b04c9b0e67036a6"
+      },
+      "id": "5b04c9b0e67036a6",
+      "type": "add",
+      "after": "1c56323c33882cd2",
+      "date": 1418620193010
+    },
+    {
+      "type": "remove",
+      "id": "5b04c9b0e67036a6",
+      "date": 1418620244409
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2310e35ae83ec046"
+      },
+      "id": "2310e35ae83ec046",
+      "type": "add",
+      "after": "1c56323c33882cd2",
+      "date": 1418620247477
+    },
+    {
+      "type": "edit",
+      "id": "2310e35ae83ec046",
+      "item": {
+        "type": "reference",
+        "id": "2310e35ae83ec046",
+        "site": "cleverpork.asia.wiki.org",
+        "title": "Chris Cunningham",
+        "text": "Chris Cunningham is a 26 year old student of the world. He currently works for the Oregon Museum of Science and Industry ([[OMSI]]) in Portland, Oregon as a museum educator."
+      },
+      "date": 1418620291174
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c453188e82f5b482"
+      },
+      "id": "c453188e82f5b482",
+      "type": "add",
+      "after": "2310e35ae83ec046",
+      "date": 1419112405460
+    },
+    {
+      "type": "edit",
+      "id": "c453188e82f5b482",
+      "item": {
+        "type": "reference",
+        "id": "c453188e82f5b482",
+        "site": "forage.ward.fed.wiki.org",
+        "title": "Coding Folks",
+        "text": "If you're talking about federated wiki code, add your site here and you will be heard sooner. You can, but need not, use the same site as the happening."
+      },
+      "date": 1419112435794
+    },
+    {
+      "type": "edit",
+      "id": "2df33b5b8d3d72c5",
+      "item": {
+        "type": "paragraph",
+        "id": "2df33b5b8d3d72c5",
+        "text": "I have lots of ambition for federated wiki which I have explored at times and deferred to more mundane needs other times. Here I can describe ideas without declaring them as accepted direction."
+      },
+      "date": 1437682397506
+    },
+    {
+      "type": "remove",
+      "id": "2310e35ae83ec046",
+      "date": 1437682401793
+    },
+    {
+      "type": "remove",
+      "id": "c453188e82f5b482",
+      "date": 1437682406017
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "33a981703f6de458"
+      },
+      "id": "33a981703f6de458",
+      "type": "add",
+      "after": "1c56323c33882cd2",
+      "date": 1437682408456
+    },
+    {
+      "type": "edit",
+      "id": "33a981703f6de458",
+      "item": {
+        "type": "reference",
+        "id": "33a981703f6de458",
+        "site": "goals.pods.wiki.org",
+        "slug": "goals-for-federated-wiki",
+        "title": "Goals for Federated Wiki",
+        "text": "We share an interest in the continued growth in federated wiki as an important concept and in the open codebase that demonstrates its advantages."
+      },
+      "date": 1437682417391
+    },
+    {
+      "type": "move",
+      "order": [
+        "2df33b5b8d3d72c5",
+        "33a981703f6de458",
+        "1c56323c33882cd2"
+      ],
+      "id": "33a981703f6de458",
+      "date": 1437682421754
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "eea0c14ef9aff1c2"
+      },
+      "id": "eea0c14ef9aff1c2",
+      "type": "add",
+      "after": "1c56323c33882cd2",
+      "date": 1437700771814
+    },
+    {
+      "type": "edit",
+      "id": "eea0c14ef9aff1c2",
+      "item": {
+        "type": "reference",
+        "id": "eea0c14ef9aff1c2",
+        "site": "admin.asia.wiki.org",
+        "slug": "tips-for-administrators",
+        "title": "Tips for Administrators",
+        "text": "Here we collect advice for operating wiki sites for others. Computers and networks vary so we stop short of step by step instructions. We report what has worked for us using the privileges available to system administrators."
+      },
+      "date": 1437700789744
+    },
+    {
+      "type": "move",
+      "order": [
+        "2df33b5b8d3d72c5",
+        "33a981703f6de458",
+        "eea0c14ef9aff1c2",
+        "1c56323c33882cd2"
+      ],
+      "id": "eea0c14ef9aff1c2",
+      "date": 1437700798837
+    },
+    {
+      "type": "fork",
+      "date": 1524967696419
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "08cd3fc1c60d2dbf"
+      },
+      "id": "08cd3fc1c60d2dbf",
+      "type": "add",
+      "after": "1c56323c33882cd2",
+      "date": 1524969918631
+    },
+    {
+      "type": "edit",
+      "id": "08cd3fc1c60d2dbf",
+      "item": {
+        "type": "zones",
+        "id": "08cd3fc1c60d2dbf",
+        "text": "TIME 07:00\nDATE 4/29/2018\nIN Pacific\nHERE"
+      },
+      "date": 1524969995831
+    },
+    {
+      "type": "edit",
+      "id": "08cd3fc1c60d2dbf",
+      "item": {
+        "type": "zones",
+        "id": "08cd3fc1c60d2dbf",
+        "text": "Improved Provisioning\nTIME 07:00\nDATE 4/29/2018\nIN Pacific\nHERE"
+      },
+      "date": 1524970017200
+    },
+    {
+      "type": "edit",
+      "id": "08cd3fc1c60d2dbf",
+      "item": {
+        "type": "zones",
+        "id": "08cd3fc1c60d2dbf",
+        "text": "Improved Provisioning\nTIME 07:00\nDATE 4/29/2018\nIN Pacific\nALSO London"
+      },
+      "date": 1524970044343
+    },
+    {
+      "type": "edit",
+      "id": "08cd3fc1c60d2dbf",
+      "item": {
+        "type": "zones",
+        "id": "08cd3fc1c60d2dbf",
+        "text": "Improved Provisioning\nTIME 07:00\nDATE 4/29/2018\nIN Pacific\nALSO Europe/London"
+      },
+      "date": 1524970148054
+    },
+    {
+      "type": "edit",
+      "id": "08cd3fc1c60d2dbf",
+      "item": {
+        "type": "zones",
+        "id": "08cd3fc1c60d2dbf",
+        "text": "Improved Provisioning\nTIME 07:00\nDATE 4/29/2018\nIN Pacific\nALSO London"
+      },
+      "date": 1524970317941
+    },
+    {
+      "type": "edit",
+      "id": "08cd3fc1c60d2dbf",
+      "item": {
+        "type": "zones",
+        "id": "08cd3fc1c60d2dbf",
+        "text": "Improved Provisioning\nTIME 07:00\nDATE 4/29/2018\nIN Pacific\nALSO UTC"
+      },
+      "date": 1524970329804
+    },
+    {
+      "type": "edit",
+      "id": "08cd3fc1c60d2dbf",
+      "item": {
+        "type": "zones",
+        "id": "08cd3fc1c60d2dbf",
+        "text": "Improved Provisioning\nTIME 07:00\nDATE 4/29/2018\nIN Pacific\nHERE"
+      },
+      "date": 1524970357025
+    },
+    {
+      "type": "edit",
+      "id": "08cd3fc1c60d2dbf",
+      "item": {
+        "type": "zones",
+        "id": "08cd3fc1c60d2dbf",
+        "text": "Improved Provisioning\nTIME 07:00\nDATE 4/29/2018\nIN US/Pacific\nALSO Europe/London"
+      },
+      "date": 1524970446478
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ba46b23f6fb48dc5"
+      },
+      "id": "ba46b23f6fb48dc5",
+      "type": "add",
+      "after": "08cd3fc1c60d2dbf",
+      "date": 1524970521744
+    },
+    {
+      "type": "edit",
+      "id": "ba46b23f6fb48dc5",
+      "item": {
+        "type": "paragraph",
+        "id": "ba46b23f6fb48dc5",
+        "text": "See [[Hacking Online]]"
+      },
+      "date": 1524970538190
+    },
+    {
+      "type": "remove",
+      "id": "08cd3fc1c60d2dbf",
+      "date": 1524970673240
+    },
+    {
+      "type": "fork",
+      "date": 1641758715939
+    }
+  ]
+}

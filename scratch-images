@@ -1,0 +1,32 @@
+{
+  "title": "Scratch Images",
+  "story": [
+    {
+      "type": "factory",
+      "id": "ab20ce956d1ad101"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Scratch Images",
+        "story": []
+      },
+      "date": 1590430101543
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ab20ce956d1ad101"
+      },
+      "id": "ab20ce956d1ad101",
+      "type": "add",
+      "date": 1590430103271
+    },
+    {
+      "type": "fork",
+      "date": 1591131490531
+    }
+  ]
+}

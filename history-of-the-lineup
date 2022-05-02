@@ -1,0 +1,670 @@
+{
+  "title": "History of the Lineup",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7f59f4915e448bea",
+      "text": "Pages here pile up beside each other in what we call the Lineup, federated wiki's most distinguishing feature. Here I recall antecedents and then get to discussing how I remember with some efficiency."
+    },
+    {
+      "type": "paragraph",
+      "id": "901e88c945d9154e",
+      "text": "See [[NSD Editor Restored]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ed965a07740671a",
+      "text": "This experiment predates the wiki lineup set out to make an old program more readable. [http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.39.28%20PM.jpg enlarge] [http://c2.com/nsd/ site] "
+    },
+    {
+      "type": "html",
+      "id": "fc992c9691dbb4dc",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.39.28%20PM.jpg>\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "5f0da9b182322797",
+      "text": "We thought that a Fortran program's structure and expression could be captured on the screen in a way that it only appeared in the mind of the programmer. "
+    },
+    {
+      "type": "paragraph",
+      "id": "389bdb47b55eb47c",
+      "text": "Mind ⇒ Screen ⇒ Mind."
+    },
+    {
+      "type": "paragraph",
+      "id": "b4607705d17993a8",
+      "text": "See the lineup here, running vertically down the page, with each subroutine displayed immediately below the call and a synopsis provided for each.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "3f8be9eefa8c7895",
+      "text": "I collaborated with Randal Hansen on this. Notice that he found the keystroke ESC too magical and proposed some additional affordance to remove unwanted screens.\n"
+    },
+    {
+      "type": "pagefold",
+      "id": "8a1a8d5c780ef503",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "55cface915b60cbe",
+      "text": "On a personal level, what I liked most about reading wiki is that this work from a decade ago was still close at hand and I can show you how I got to it. No such luck with any other computer based information retrieval system I've ever used. "
+    },
+    {
+      "type": "markdown",
+      "id": "09ea4ba0f16e33a5",
+      "text": "> it might make sense to people in this context, ward, to me for sure, for you to describe the mental process, from initial intention formation to screen, of how the work was still close at hand and show how you got to it. [https://app.element.io/#/room/#fedwiki:matrix.org/$1596897089207850vzKpo:matrix.org matrix]"
+    },
+    {
+      "type": "paragraph",
+      "id": "35c31977f6678934",
+      "text": "I've expressed an interest in Mind ⇒ Screen ⇒ Mind. Myst was creative hypertext born of two brothers and realized in HyperCard. One might preserve Myst by getting some old binaries together and a sim powerful enough to bring it back to life. That would be recreating the old screen on a new screen."
+    },
+    {
+      "type": "paragraph",
+      "id": "f5a4e7cc49655373",
+      "text": "Screen ⇒ Screen."
+    },
+    {
+      "type": "paragraph",
+      "id": "6afdef4ff44444ce",
+      "text": "As a programmer with some familiarity with HyperCard, I wonder, what were they thinking and how did they use computers to help them think before Myst was a thing? They have described what they did often enough that I have a pretty good idea."
+    },
+    {
+      "type": "paragraph",
+      "id": "349e29d4ae0b1b70",
+      "text": "Mind ⇒ Mind."
+    },
+    {
+      "type": "paragraph",
+      "id": "6b77a4aec11e07a6",
+      "text": "But what would be possible with today's computing power to create an experience that duplicates their creative genius? What would that experience leave in the minds of the curious that simply playing the game does not? "
+    },
+    {
+      "type": "paragraph",
+      "id": "e0ca15670db79954",
+      "text": "Mind ⇒ Screen ⇒ Mind."
+    },
+    {
+      "type": "paragraph",
+      "id": "4b96fe8d161f0d11",
+      "text": "When federated wiki was young I wanted to experience using it to describe complex ideas like those involved in creative thought. I have vivid memories of many programs I have written especially when bringing them to life taught me things that I continue to use to this day. Thus I set out to write a page about every program I've ever written that comes to mind repeatedly. I might ask myself, what do I remember that brought that experience to mind? Have I written that page yet? If not, write it now."
+    },
+    {
+      "type": "pagefold",
+      "id": "10875a2c618174e6",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "c5d47b21afbd11a1",
+      "text": "Mike suggested that wiki is hard to read. I could have asked what folks find hard. Instead I though, what quirky things do I love about wiki and how is it that I know to appreciate them? [https://app.element.io/#/room/#fedwiki:matrix.org/$1596884352194425OCPiS:matrix.org matrix]"
+    },
+    {
+      "type": "paragraph",
+      "id": "fb2264b5cf0b18e8",
+      "text": "Randal came to mind. I liked the code we wrote together and surely must have written about that. I knew the program that we studied. It was written when I was in college so click-click I'm looking at that list. I didn't see it but I did see Imlac mentioned and it ran on Imlac so click-click I'm there. The page mentioned several restorations so click-click again and Randal's code is running. Click-click some more and I am back in college coding that thing. Amazing."
+    },
+    {
+      "type": "paragraph",
+      "id": "f71148628e893418",
+      "text": "I had documented many programs before I realized that where I wrote them was as strong in my memory as what they did or what I learned. Those places all had names so that became the after-the-fact index to my life of programming. "
+    },
+    {
+      "type": "paragraph",
+      "id": "36da21697bb111e5",
+      "text": "Had I not had that I might have searched around on code.fed.wiki.org for a while. I might have had to search on sites.fed.wiki.org to remember even that place. I scatter things all over just to test my ability to find things."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "History of the Lineup",
+        "story": []
+      },
+      "date": 1596987556621
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7f59f4915e448bea"
+      },
+      "id": "7f59f4915e448bea",
+      "type": "add",
+      "date": 1596987561112
+    },
+    {
+      "type": "edit",
+      "id": "7f59f4915e448bea",
+      "item": {
+        "type": "paragraph",
+        "id": "7f59f4915e448bea",
+        "text": "Pages here pile up beside each other in what we call the Lineup, federated wiki's most distinguishing feature. Here I recall antecedents "
+      },
+      "date": 1596987781452
+    },
+    {
+      "type": "edit",
+      "id": "7f59f4915e448bea",
+      "item": {
+        "type": "paragraph",
+        "id": "7f59f4915e448bea",
+        "text": "Pages here pile up beside each other in what we call the Lineup, federated wiki's most distinguishing feature. Here I recall antecedents and then get to discussing how I remember with some efficiency."
+      },
+      "date": 1596987850557
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1ed965a07740671a"
+      },
+      "id": "1ed965a07740671a",
+      "type": "add",
+      "after": "7f59f4915e448bea",
+      "date": 1596988035388
+    },
+    {
+      "type": "edit",
+      "id": "1ed965a07740671a",
+      "item": {
+        "type": "paragraph",
+        "id": "1ed965a07740671a",
+        "text": "An experiment in readability that predates the wiki lineup set out to make an old fortran program more readable. The thought being that its structure and expression could be captured on the screen in a way that it only appeared in the mind of the programmer. Mind ⇒ Screen ⇒ Mind."
+      },
+      "date": 1596988039564
+    },
+    {
+      "type": "edit",
+      "id": "1ed965a07740671a",
+      "item": {
+        "type": "paragraph",
+        "id": "1ed965a07740671a",
+        "text": "An experiment in readability that predates the wiki lineup set out to make an old fortran program more readable. [http://c2.com/nsd/ site]"
+      },
+      "date": 1596988120385
+    },
+    {
+      "type": "add",
+      "id": "5f0da9b182322797",
+      "item": {
+        "type": "paragraph",
+        "id": "5f0da9b182322797",
+        "text": "The thought being that its structure and expression could be captured on the screen in a way that it only appeared in the mind of the programmer. Mind ⇒ Screen ⇒ Mind."
+      },
+      "after": "1ed965a07740671a",
+      "date": 1596988122774
+    },
+    {
+      "type": "edit",
+      "id": "1ed965a07740671a",
+      "item": {
+        "type": "paragraph",
+        "id": "1ed965a07740671a",
+        "text": "An experiment in readability that predates the wiki lineup set out to make an old program more readable. [http://c2.com/nsd/ site]"
+      },
+      "date": 1596988139671
+    },
+    {
+      "type": "edit",
+      "id": "5f0da9b182322797",
+      "item": {
+        "type": "paragraph",
+        "id": "5f0da9b182322797",
+        "text": "We thought that a Fortran program's structure and expression could be captured on the screen in a way that it only appeared in the mind of the programmer. Mind ⇒ Screen ⇒ Mind."
+      },
+      "date": 1596988189008
+    },
+    {
+      "type": "edit",
+      "id": "5f0da9b182322797",
+      "item": {
+        "type": "paragraph",
+        "id": "5f0da9b182322797",
+        "text": "We thought that a Fortran program's structure and expression could be captured on the screen in a way that it only appeared in the mind of the programmer. "
+      },
+      "date": 1596988196361
+    },
+    {
+      "type": "add",
+      "id": "389bdb47b55eb47c",
+      "item": {
+        "type": "paragraph",
+        "id": "389bdb47b55eb47c",
+        "text": "Mind ⇒ Screen ⇒ Mind."
+      },
+      "after": "5f0da9b182322797",
+      "date": 1596988197402
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0ba44243aa4359f7"
+      },
+      "id": "0ba44243aa4359f7",
+      "type": "add",
+      "after": "389bdb47b55eb47c",
+      "date": 1597015901292
+    },
+    {
+      "type": "edit",
+      "id": "0ba44243aa4359f7",
+      "item": {
+        "type": "assets",
+        "id": "0ba44243aa4359f7",
+        "text": "pages/history-of-the-lineup"
+      },
+      "date": 1597015915858
+    },
+    {
+      "type": "add",
+      "id": "901e88c945d9154e",
+      "item": {
+        "type": "paragraph",
+        "id": "901e88c945d9154e",
+        "text": "See [[NSD Editor Restored]]"
+      },
+      "after": "7f59f4915e448bea",
+      "date": 1597016076818
+    },
+    {
+      "type": "add",
+      "id": "fc992c9691dbb4dc",
+      "item": {
+        "type": "factory",
+        "id": "fc992c9691dbb4dc",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.31.07%20PM.png>"
+      },
+      "after": "1ed965a07740671a",
+      "date": 1597016124036
+    },
+    {
+      "type": "edit",
+      "id": "fc992c9691dbb4dc",
+      "item": {
+        "type": "html",
+        "id": "fc992c9691dbb4dc",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.31.07%20PM.png>\n<center>[http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.31.07%20PM.png enlarge]\n</center>"
+      },
+      "date": 1597016154602
+    },
+    {
+      "type": "edit",
+      "id": "fc992c9691dbb4dc",
+      "item": {
+        "type": "html",
+        "id": "fc992c9691dbb4dc",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.31.07%20PM.png>\n"
+      },
+      "date": 1597016191425
+    },
+    {
+      "type": "edit",
+      "id": "fc992c9691dbb4dc",
+      "item": {
+        "type": "html",
+        "id": "fc992c9691dbb4dc",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.39.28%20PM.jpg>\n"
+      },
+      "date": 1597016519363
+    },
+    {
+      "type": "edit",
+      "id": "1ed965a07740671a",
+      "item": {
+        "type": "paragraph",
+        "id": "1ed965a07740671a",
+        "text": "This experiment predates the wiki lineup set out to make an old program more readable. [http://c2.com/nsd/ site] [http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.39.28%20PM.jpg enlarge]"
+      },
+      "date": 1597016582987
+    },
+    {
+      "type": "edit",
+      "id": "1ed965a07740671a",
+      "item": {
+        "type": "paragraph",
+        "id": "1ed965a07740671a",
+        "text": "This experiment predates the wiki lineup set out to make an old program more readable. [http://ward.asia.wiki.org/assets/pages/history-of-the-lineup/Screen%20Shot%202020-08-09%20at%204.39.28%20PM.jpg enlarge] [http://c2.com/nsd/ site] "
+      },
+      "date": 1597016596844
+    },
+    {
+      "type": "remove",
+      "id": "0ba44243aa4359f7",
+      "date": 1597016617931
+    },
+    {
+      "type": "add",
+      "id": "b4607705d17993a8",
+      "item": {
+        "type": "paragraph",
+        "id": "b4607705d17993a8",
+        "text": "See the lineup here, running vertically down the page, with each subroutine displayed immediately below the call and a synopsis provided for each.\n"
+      },
+      "after": "389bdb47b55eb47c",
+      "date": 1597016691630
+    },
+    {
+      "type": "add",
+      "id": "3f8be9eefa8c7895",
+      "item": {
+        "type": "paragraph",
+        "id": "3f8be9eefa8c7895",
+        "text": "I collaborated with Randal Hansen on this. Notice that he found the keystroke ESC too magical and proposed some additional affordance to remove unwanted screens.\n"
+      },
+      "after": "b4607705d17993a8",
+      "date": 1597016720759
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8a1a8d5c780ef503"
+      },
+      "id": "8a1a8d5c780ef503",
+      "type": "add",
+      "after": "3f8be9eefa8c7895",
+      "date": 1597016779665
+    },
+    {
+      "type": "edit",
+      "id": "8a1a8d5c780ef503",
+      "item": {
+        "type": "pagefold",
+        "id": "8a1a8d5c780ef503",
+        "text": "."
+      },
+      "date": 1597016784458
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "55cface915b60cbe"
+      },
+      "id": "55cface915b60cbe",
+      "type": "add",
+      "after": "8a1a8d5c780ef503",
+      "date": 1597016786749
+    },
+    {
+      "type": "edit",
+      "id": "55cface915b60cbe",
+      "item": {
+        "type": "paragraph",
+        "id": "55cface915b60cbe",
+        "text": "On a personal level, what I liked most about reading wiki is that this work from a decade ago was still close at hand and I can show you how I got to it. No such luck with any other computer based information retrieval system I've ever used. "
+      },
+      "date": 1597016790503
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "09ea4ba0f16e33a5"
+      },
+      "id": "09ea4ba0f16e33a5",
+      "type": "add",
+      "after": "55cface915b60cbe",
+      "date": 1597016820552
+    },
+    {
+      "type": "edit",
+      "id": "09ea4ba0f16e33a5",
+      "item": {
+        "type": "markdown",
+        "id": "09ea4ba0f16e33a5",
+        "text": "> it might make sense to people in this context, ward, to me for sure, for you to describe the mental process, from initial intention formation to screen, of how the work was still close at hand and show how you got to it."
+      },
+      "date": 1597016830711
+    },
+    {
+      "type": "edit",
+      "id": "09ea4ba0f16e33a5",
+      "item": {
+        "type": "markdown",
+        "id": "09ea4ba0f16e33a5",
+        "text": "> it might make sense to people in this context, ward, to me for sure, for you to describe the mental process, from initial intention formation to screen, of how the work was still close at hand and show how you got to it. [https://app.element.io/#/room/#fedwiki:matrix.org/$1596897089207850vzKpo:matrix.org matrix]"
+      },
+      "date": 1597016861113
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "35c31977f6678934"
+      },
+      "id": "35c31977f6678934",
+      "type": "add",
+      "after": "09ea4ba0f16e33a5",
+      "date": 1597016929766
+    },
+    {
+      "type": "edit",
+      "id": "35c31977f6678934",
+      "item": {
+        "type": "paragraph",
+        "id": "35c31977f6678934",
+        "text": "I've expressed an interest in Mind ⇒ Screen ⇒ Mind. Myst was creative hypertext born of two brothers and realized in HyperCard. One might preserve Myst by getting some old binaries together and a sim powerful enough to bring it back to life. That would be recreating the old screen on a new screen."
+      },
+      "date": 1597016960679
+    },
+    {
+      "type": "add",
+      "id": "f5a4e7cc49655373",
+      "item": {
+        "type": "paragraph",
+        "id": "f5a4e7cc49655373",
+        "text": "Screen ⇒ Screen."
+      },
+      "after": "35c31977f6678934",
+      "date": 1597016965225
+    },
+    {
+      "type": "add",
+      "id": "6afdef4ff44444ce",
+      "item": {
+        "type": "paragraph",
+        "id": "6afdef4ff44444ce",
+        "text": "As a programmer with some familiarity with HyperCard, I wonder, what were they thinking and how did they use computers to help them think before Myst was a thing? They have described what they did often enough that I have a pretty good idea."
+      },
+      "after": "f5a4e7cc49655373",
+      "date": 1597016983086
+    },
+    {
+      "type": "add",
+      "id": "349e29d4ae0b1b70",
+      "item": {
+        "type": "paragraph",
+        "id": "349e29d4ae0b1b70",
+        "text": "Mind ⇒ Mind."
+      },
+      "after": "6afdef4ff44444ce",
+      "date": 1597016986936
+    },
+    {
+      "type": "add",
+      "id": "6b77a4aec11e07a6",
+      "item": {
+        "type": "paragraph",
+        "id": "6b77a4aec11e07a6",
+        "text": "But what would be possible with today's computing power to create an experience that duplicates their creative genius? What would that experience leave in the minds of the curious that simply playing the game does not? "
+      },
+      "after": "349e29d4ae0b1b70",
+      "date": 1597016994069
+    },
+    {
+      "type": "add",
+      "id": "e0ca15670db79954",
+      "item": {
+        "type": "paragraph",
+        "id": "e0ca15670db79954",
+        "text": "Mind ⇒ Screen ⇒ Mind."
+      },
+      "after": "6b77a4aec11e07a6",
+      "date": 1597016995646
+    },
+    {
+      "type": "add",
+      "id": "4b96fe8d161f0d11",
+      "item": {
+        "type": "paragraph",
+        "id": "4b96fe8d161f0d11",
+        "text": "When federated wiki was young I wanted to experience using it to describe complex ideas like those involved in creative thought. I have vivid memories of many programs I have written especially when bringing them to life taught me things that I continue to use to this day. Thus I set out to write a page about every program I've ever written that comes to mind repeatedly. I might ask myself, what do I remember that brought that experience to mind? Have I written that page yet? If not, write it now."
+      },
+      "after": "e0ca15670db79954",
+      "date": 1597017046234
+    },
+    {
+      "type": "add",
+      "id": "c5d47b21afbd11a1",
+      "item": {
+        "type": "paragraph",
+        "id": "c5d47b21afbd11a1",
+        "text": "Mike suggested that wiki is hard to read. "
+      },
+      "after": "4b96fe8d161f0d11",
+      "date": 1597017165798
+    },
+    {
+      "type": "edit",
+      "id": "c5d47b21afbd11a1",
+      "item": {
+        "type": "paragraph",
+        "id": "c5d47b21afbd11a1",
+        "text": "Mike suggested that wiki is hard to read. I could have asked what folks find hard. Instead I though, what quirky things do I love about wiki and how is it that I know to appreciate them? "
+      },
+      "date": 1597017189175
+    },
+    {
+      "type": "add",
+      "id": "fb2264b5cf0b18e8",
+      "item": {
+        "type": "paragraph",
+        "id": "fb2264b5cf0b18e8",
+        "text": "Randal came to mind. I liked the code we wrote together and surely must have written about that. I knew the program that we studied. It was written when I was in college so click-click I'm looking at that list. I didn't see it but I did see Imlac mentioned and it ran on Imlac so click-click I'm there. The page mentioned several restorations so click-click again and Randal's code is running. Click-click some more and I am back in college coding that thing. Amazing."
+      },
+      "after": "c5d47b21afbd11a1",
+      "date": 1597017195405
+    },
+    {
+      "type": "edit",
+      "id": "c5d47b21afbd11a1",
+      "item": {
+        "type": "paragraph",
+        "id": "c5d47b21afbd11a1",
+        "text": "Mike suggested that wiki is hard to read. I could have asked what folks find hard. Instead I though, what quirky things do I love about wiki and how is it that I know to appreciate them? [https://app.element.io/#/room/#fedwiki:matrix.org/$1596884352194425OCPiS:matrix.org matrix]"
+      },
+      "date": 1597017234074
+    },
+    {
+      "type": "add",
+      "id": "f71148628e893418",
+      "item": {
+        "type": "paragraph",
+        "id": "f71148628e893418",
+        "text": "I had documented many programs before I realized that where I wrote them was as strong in my memory as what they did or what I learned. Those places all had names so that became the after-the-fact index to my life of programming. Had I not had that I might have searched around on code.fed.wiki.org for a while. I might have had to search on sites.fed.wiki.org to remember even that place. I scatter things all over just to test my ability to find things."
+      },
+      "after": "fb2264b5cf0b18e8",
+      "date": 1597017310918
+    },
+    {
+      "type": "edit",
+      "id": "f71148628e893418",
+      "item": {
+        "type": "paragraph",
+        "id": "f71148628e893418",
+        "text": "I had documented many programs before I realized that where I wrote them was as strong in my memory as what they did or what I learned. Those places all had names so that became the after-the-fact index to my life of programming. "
+      },
+      "date": 1597017324311
+    },
+    {
+      "type": "add",
+      "id": "36da21697bb111e5",
+      "item": {
+        "type": "paragraph",
+        "id": "36da21697bb111e5",
+        "text": "Had I not had that I might have searched around on code.fed.wiki.org for a while. I might have had to search on sites.fed.wiki.org to remember even that place. I scatter things all over just to test my ability to find things."
+      },
+      "after": "f71148628e893418",
+      "date": 1597017325493
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "10875a2c618174e6"
+      },
+      "id": "10875a2c618174e6",
+      "type": "add",
+      "after": "36da21697bb111e5",
+      "date": 1597017333616
+    },
+    {
+      "type": "edit",
+      "id": "10875a2c618174e6",
+      "item": {
+        "type": "pagefold",
+        "id": "10875a2c618174e6",
+        "text": "."
+      },
+      "date": 1597017337084
+    },
+    {
+      "id": "10875a2c618174e6",
+      "type": "move",
+      "order": [
+        "7f59f4915e448bea",
+        "901e88c945d9154e",
+        "1ed965a07740671a",
+        "fc992c9691dbb4dc",
+        "5f0da9b182322797",
+        "389bdb47b55eb47c",
+        "b4607705d17993a8",
+        "3f8be9eefa8c7895",
+        "8a1a8d5c780ef503",
+        "55cface915b60cbe",
+        "09ea4ba0f16e33a5",
+        "35c31977f6678934",
+        "f5a4e7cc49655373",
+        "6afdef4ff44444ce",
+        "349e29d4ae0b1b70",
+        "6b77a4aec11e07a6",
+        "e0ca15670db79954",
+        "4b96fe8d161f0d11",
+        "c5d47b21afbd11a1",
+        "10875a2c618174e6",
+        "fb2264b5cf0b18e8",
+        "f71148628e893418",
+        "36da21697bb111e5"
+      ],
+      "date": 1597017340856
+    },
+    {
+      "id": "10875a2c618174e6",
+      "type": "move",
+      "order": [
+        "7f59f4915e448bea",
+        "901e88c945d9154e",
+        "1ed965a07740671a",
+        "fc992c9691dbb4dc",
+        "5f0da9b182322797",
+        "389bdb47b55eb47c",
+        "b4607705d17993a8",
+        "3f8be9eefa8c7895",
+        "8a1a8d5c780ef503",
+        "55cface915b60cbe",
+        "09ea4ba0f16e33a5",
+        "35c31977f6678934",
+        "f5a4e7cc49655373",
+        "6afdef4ff44444ce",
+        "349e29d4ae0b1b70",
+        "6b77a4aec11e07a6",
+        "e0ca15670db79954",
+        "4b96fe8d161f0d11",
+        "10875a2c618174e6",
+        "c5d47b21afbd11a1",
+        "fb2264b5cf0b18e8",
+        "f71148628e893418",
+        "36da21697bb111e5"
+      ],
+      "date": 1597017344754
+    }
+  ]
+}

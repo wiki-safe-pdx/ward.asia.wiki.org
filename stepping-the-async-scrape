@@ -1,0 +1,741 @@
+{
+  "title": "Stepping the Async Scrape",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "6fd987059580e844",
+      "text": "We've designed a scrape that runs with some parallelism captured with liberal use of async and await. Now we are thinking we can single-step this long running computation but have to think through what that even means."
+    },
+    {
+      "type": "paragraph",
+      "id": "ba4923c13a056877",
+      "text": "See [[Search over the Horizon]]"
+    },
+    {
+      "type": "graphviz",
+      "id": "2fd6f6cb4a266876",
+      "text": "digraph {\n  start\n  sites\n  slugs\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dotime\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dotime -> running -> reschedue\n  dotime -> ready -> start\n  dosite -> update -> modified -> slugs \n  update -> new -> slugs\n  doslug -> item -> sites \n  doslug -> action -> sites\n}\n\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "b08a5f0fd00c8ab4",
+      "text": "We will separate the queues for sites and slugs to be examined. We will preload sites with a few broadly connected sites. Visiting sites will produce slugs, visiting slugs will produce sites."
+    },
+    {
+      "type": "paragraph",
+      "id": "f03c5ab2edfcb80d",
+      "text": "Aside: a slug is a page title in lower case with spaces turned to hyphens and other punctuation removed."
+    },
+    {
+      "type": "paragraph",
+      "id": "7cdd8f6f00dd279e",
+      "text": "We'll single step through dosite pausing after each sitemap fetch reporting availability, activity and errors."
+    },
+    {
+      "type": "paragraph",
+      "id": "af5f52325ab6786e",
+      "text": "We'll single step through doslug pausing after page fetch reporting new and familiar sites and page format errors."
+    },
+    {
+      "type": "paragraph",
+      "id": "205444d1af98a8d8",
+      "text": "It makes sense to run either dosite or doslug against their respective queues independently. Both must run to complete a scrape."
+    },
+    {
+      "type": "paragraph",
+      "id": "7ec3282fbc1cba49",
+      "text": "A scrape will launch with a few seed sites and complete when both queues are empty and no work is in flight. A cron job can be configured to launch scrapes on a regular schedule."
+    },
+    {
+      "type": "paragraph",
+      "id": "2e0397bdbafb0de8",
+      "text": "See [[How To Deno]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Stepping the Async Scrape",
+        "story": []
+      },
+      "date": 1583553560567
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6fd987059580e844"
+      },
+      "id": "6fd987059580e844",
+      "type": "add",
+      "date": 1583553562849
+    },
+    {
+      "type": "edit",
+      "id": "6fd987059580e844",
+      "item": {
+        "type": "paragraph",
+        "id": "6fd987059580e844",
+        "text": "We've designed a scrape that runs with some parallelism captured with liberal use of async and await. Now we are thinking we can single-step this long running computation but have to think through what that even means."
+      },
+      "date": 1583553671786
+    },
+    {
+      "type": "add",
+      "id": "ba4923c13a056877",
+      "item": {
+        "type": "paragraph",
+        "id": "ba4923c13a056877",
+        "text": "See [[Search over the Horizon]]"
+      },
+      "after": "6fd987059580e844",
+      "date": 1583553690578
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2fd6f6cb4a266876"
+      },
+      "id": "2fd6f6cb4a266876",
+      "type": "add",
+      "after": "ba4923c13a056877",
+      "date": 1583553701611
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  queue -> fetch -> site -> page -> page -> queue\n}"
+      },
+      "date": 1583553884571
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  queue -> fetch -> map -> site -> page -> page -> queue\n}"
+      },
+      "date": 1583554012586
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  start -> scrape"
+      },
+      "date": 1583554114077
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  start -> scrape -> work\n  work -> doSite\n  work -> doPage\n\n}"
+      },
+      "date": 1583554179847
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  start -> scrape -> work\n  work -> site\n  work -> slug\n\n}"
+      },
+      "date": 1583554209755
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  start -> scrape -> work\n  work -> dosite\n  work -> doslug\n\n}"
+      },
+      "date": 1583554233068
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  start -> scrape -> work\n  work -> dosite\n  work -> doslug\n\n}"
+      },
+      "date": 1583554336885
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  start -> scrape -> work\n  work -> dosite -> update\n  work -> doslug\n\n}"
+      },
+      "date": 1583554407522
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  start -> scrape -> work\n  work -> dosite -> update -> modified\n  update -> noew\n  work -> doslug\n\n}"
+      },
+      "date": 1583554495645
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  start -> scrape -> work\n  work -> dosite -> update -> modified\n  update -> new\n  work -> doslug\n\n}"
+      },
+      "date": 1583554511902
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  start -> scrape -> work\n  work -> dosite -> update -> modified -> enqueue\n  update -> new -> enqueue -> scrape\n  work -> doslug\n\n}"
+      },
+      "date": 1583554591985
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  start -> scrape -> work\n  work -> dosite -> update -> modified -> enqueue\n  update -> new -> enqueue -> scrape\n  work -> doslug -> \n\n}"
+      },
+      "date": 1583554678136
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  start -> scrape -> work\n  work -> dosite -> update -> modified -> enqueue\n  update -> new -> enqueue -> scrape\n  work -> doslug -> item -> enqueue\n  doslug -> action > enqueue\n}\n\n}"
+      },
+      "date": 1583554748429
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  start -> scrape -> work\n  work -> dosite -> update -> modified -> enqueue\n  update -> new -> enqueue -> scrape\n  work -> doslug -> item -> enqueue\n  doslug -> action -> enqueue\n}\n\n}"
+      },
+      "date": 1583554763919
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=TB\n  start -> scrape -> work\n  work -> dosite -> update -> modified -> enqueue\n  update -> new -> enqueue -> scrape\n  work -> doslug -> item -> enqueue\n  doslug -> action -> enqueue\n}\n\n}"
+      },
+      "date": 1583554786112
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=TB\n  start -> scrape -> work\n  clock -> work -> dosite -> update -> modified -> enqueue\n  update -> new -> enqueue -> work\n  work -> doslug -> item -> enqueue\n  doslug -> action -> enqueue\n}\n\n}"
+      },
+      "date": 1583554867228
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=TB\n  start -> scrape -> work\n  clock -> work -> dosite -> update -> modified -> doslug\n  update -> new -> doslug\n  work -> doslug -> item -> dosite\n  doslug -> action -> dosite\n}\n\n}"
+      },
+      "date": 1583555642996
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=TB\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  start -> scrape -> work\n  clock -> work -> dosite -> update -> modified -> doslug\n  update -> new -> doslug\n  work -> doslug -> item -> dosite\n  doslug -> action -> dosite\n}\n\n}"
+      },
+      "date": 1583555755749
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=TB\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> doslug\n  update -> new -> doslug\n  work -> doslug -> item -> dosite\n  doslug -> action -> dosite\n}\n\n}"
+      },
+      "date": 1583555818685
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=TB\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> doslug\n  update -> new -> doslug\n  doslug -> item -> dosite\n  doslug -> action -> dosite\n}\n\n}"
+      },
+      "date": 1583555835704
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> doslug\n  update -> new -> doslug\n  doslug -> item -> dosite\n  doslug -> action -> dosite\n}\n\n}"
+      },
+      "date": 1583555850728
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  queue -> dosite\n  queue -> doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> queue\n  update -> new -> queue\n  doslug -> item -> queue\n  doslug -> action -> queue\n}\n\n}"
+      },
+      "date": 1583555981195
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  queue -> dosite\n  queue -> doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> newpage -> queue\n  update -> new -> newpage\n  doslug -> item -> newsite -> queue\n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583556050427
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583556159178
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n  doslug -> rest -> newsite\n}\n\n}"
+      },
+      "date": 1583696171820
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n  doslug -> rest -> dosite\n}\n\n}"
+      },
+      "date": 1583696318275
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  interest -> dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n  doslug -> interest\n}\n\n}"
+      },
+      "date": 1583696382280
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  start -> interest -> dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n  doslug -> interest\n}\n\n}"
+      },
+      "date": 1583696424691
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  start -> interest -> dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583696451367
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=TB\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  start -> interest -> dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583696466879
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  start -> dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583696510185
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  start -> newsite -> dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite -> dosite\n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583696613578
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  start -> newsite -> dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite \n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583696646302
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite -> doslug\n  node [fillcolor=palegreen]\n  start -> newsite -> dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite \n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583697509607
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> newpage -> doslug\n  update -> new -> newpage\n  doslug -> item -> newsite \n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583697656980
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> newpage \n  update -> new -> newpage\n  doslug -> item -> newsite \n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583697740321
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite -> doslug -> dosite [style=dotted]\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> newpage \n  update -> new -> newpage\n  doslug -> item -> newsite \n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583697805212
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite -> doslug [style=dashed]\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> newpage \n  update -> new -> newpage\n  doslug -> item -> newsite \n  doslug -> action -> newsite\n}\n\n}"
+      },
+      "date": 1583697862261
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite -> doslug [style=dashed]\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> queuepage \n  update -> new -> newpage\n  doslug -> item -> queuesite \n  doslug -> action -> queuesite\n}\n\n}"
+      },
+      "date": 1583697920139
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite -> doslug [style=dashed]\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> queuepage \n  update -> new -> queuepage\n  doslug -> item -> queuesite \n  doslug -> action -> queuesite\n}\n\n}"
+      },
+      "date": 1583697950277
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite -> doslug [style=dashed]\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> page \n  update -> new -> page\n  doslug -> item -> site \n  doslug -> action -> site\n}\n\n}"
+      },
+      "date": 1583698009148
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite -> doslug [style=invisible]\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> page \n  update -> new -> page\n  doslug -> item -> site \n  doslug -> action -> site\n}\n\n}"
+      },
+      "date": 1583698055353
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  site\n  page\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> page \n  update -> new -> page\n  doslug -> item -> site \n  doslug -> action -> site\n}\n\n}"
+      },
+      "date": 1583698268645
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  site\n  page\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> pages \n  update -> new -> pages\n  doslug -> item -> sites \n  doslug -> action -> sites\n  start -> sites\n}\n\n}"
+      },
+      "date": 1583699576440
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  sites\n  pages\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> pages \n  update -> new -> pages\n  doslug -> item -> sites \n  doslug -> action -> sites\n  start -> sites\n}\n\n}"
+      },
+      "date": 1583699591872
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  start -> sites\n  slugs\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> slugs \n  update -> new -> slugs\n  doslug -> item -> sites \n  doslug -> action -> sites\n  start -> sites\n}\n\n}"
+      },
+      "date": 1583699646278
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  start -> sites\n  slugs\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> slugs \n  update -> new -> slugs\n  doslug -> item -> sites \n  doslug -> action -> sites\n}\n\n}"
+      },
+      "date": 1583699685530
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  sites\n  slugs\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dosite -> update -> modified -> slugs \n  update -> new -> slugs\n  doslug -> item -> sites \n  doslug -> action -> sites\n}\n\n}"
+      },
+      "date": 1583699717570
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b08a5f0fd00c8ab4"
+      },
+      "id": "b08a5f0fd00c8ab4",
+      "type": "add",
+      "after": "2fd6f6cb4a266876",
+      "date": 1583699916224
+    },
+    {
+      "type": "edit",
+      "id": "b08a5f0fd00c8ab4",
+      "item": {
+        "type": "paragraph",
+        "id": "b08a5f0fd00c8ab4",
+        "text": "We will separate the queues of sites and slugs to be examined. We will preload sites with a few broadly connected sites. Visiting sites will produce slugs, visiting slugs will produce sites."
+      },
+      "date": 1583700207858
+    },
+    {
+      "type": "edit",
+      "id": "b08a5f0fd00c8ab4",
+      "item": {
+        "type": "paragraph",
+        "id": "b08a5f0fd00c8ab4",
+        "text": "We will separate the queues for sites and slugs to be examined. We will preload sites with a few broadly connected sites. Visiting sites will produce slugs, visiting slugs will produce sites."
+      },
+      "date": 1583700606572
+    },
+    {
+      "type": "add",
+      "id": "7cdd8f6f00dd279e",
+      "item": {
+        "type": "paragraph",
+        "id": "7cdd8f6f00dd279e",
+        "text": "We'll single step through dosites pausing after each sitemap fetch reporting availability, activity and sitemap errors."
+      },
+      "after": "b08a5f0fd00c8ab4",
+      "date": 1583700884041
+    },
+    {
+      "type": "edit",
+      "id": "7cdd8f6f00dd279e",
+      "item": {
+        "type": "paragraph",
+        "id": "7cdd8f6f00dd279e",
+        "text": "We'll single step through dosites pausing after each sitemap fetch reporting availability, activity and errors."
+      },
+      "date": 1583700890175
+    },
+    {
+      "type": "add",
+      "id": "af5f52325ab6786e",
+      "item": {
+        "type": "paragraph",
+        "id": "af5f52325ab6786e",
+        "text": "We'll single step through doslug pausing after page fetch reporting new and familiar sites."
+      },
+      "after": "7cdd8f6f00dd279e",
+      "date": 1583701052855
+    },
+    {
+      "type": "edit",
+      "id": "7cdd8f6f00dd279e",
+      "item": {
+        "type": "paragraph",
+        "id": "7cdd8f6f00dd279e",
+        "text": "We'll single step through dosite pausing after each sitemap fetch reporting availability, activity and errors."
+      },
+      "date": 1583701059731
+    },
+    {
+      "type": "edit",
+      "id": "af5f52325ab6786e",
+      "item": {
+        "type": "paragraph",
+        "id": "af5f52325ab6786e",
+        "text": "We'll single step through doslug pausing after page fetch reporting new and familiar sites and page format errors."
+      },
+      "date": 1583701088531
+    },
+    {
+      "type": "add",
+      "id": "205444d1af98a8d8",
+      "item": {
+        "type": "paragraph",
+        "id": "205444d1af98a8d8",
+        "text": "It makes sense to run either dosite or doslug against their respective queues independently. A scrape will launch with a few seed sites and complete when both queues are empty and no work is in flight. A cron job can be configured to launch scrapes on a regular schedule."
+      },
+      "after": "af5f52325ab6786e",
+      "date": 1583702259282
+    },
+    {
+      "type": "edit",
+      "id": "205444d1af98a8d8",
+      "item": {
+        "type": "paragraph",
+        "id": "205444d1af98a8d8",
+        "text": "It makes sense to run either dosite or doslug against their respective queues independently."
+      },
+      "date": 1583702272299
+    },
+    {
+      "type": "add",
+      "id": "7ec3282fbc1cba49",
+      "item": {
+        "type": "paragraph",
+        "id": "7ec3282fbc1cba49",
+        "text": "A scrape will launch with a few seed sites and complete when both queues are empty and no work is in flight. A cron job can be configured to launch scrapes on a regular schedule."
+      },
+      "after": "205444d1af98a8d8",
+      "date": 1583702274158
+    },
+    {
+      "type": "edit",
+      "id": "205444d1af98a8d8",
+      "item": {
+        "type": "paragraph",
+        "id": "205444d1af98a8d8",
+        "text": "It makes sense to run either dosite or doslug against their respective queues independently. Both must run to complete a scrape."
+      },
+      "date": 1583702340977
+    },
+    {
+      "type": "add",
+      "id": "f03c5ab2edfcb80d",
+      "item": {
+        "type": "paragraph",
+        "id": "f03c5ab2edfcb80d",
+        "text": "Aside: a slug is a page title in lower case with spaces turned to hyphens and other punctuation removed."
+      },
+      "after": "b08a5f0fd00c8ab4",
+      "date": 1583800147803
+    },
+    {
+      "type": "add",
+      "id": "2e0397bdbafb0de8",
+      "item": {
+        "type": "paragraph",
+        "id": "2e0397bdbafb0de8",
+        "text": "See [[How To Deno]]"
+      },
+      "after": "7ec3282fbc1cba49",
+      "date": 1584227899599
+    },
+    {
+      "type": "edit",
+      "id": "2fd6f6cb4a266876",
+      "item": {
+        "type": "graphviz",
+        "id": "2fd6f6cb4a266876",
+        "text": "digraph {\n  start\n  sites\n  slugs\n  node [shape=box style=filled fillcolor=lightblue]\n  rankdir=LR\n  dotime\n  dosite\n  doslug\n  node [fillcolor=palegreen]\n  dotime -> running -> reschedue\n  dotime -> ready -> start\n  dosite -> update -> modified -> slugs \n  update -> new -> slugs\n  doslug -> item -> sites \n  doslug -> action -> sites\n}\n\n}"
+      },
+      "date": 1590187244245
+    }
+  ]
+}

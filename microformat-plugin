@@ -1,0 +1,285 @@
+{
+  "title": "Microformat Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ec0efed2bfec5f31",
+      "text": "These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. [https://developer.mozilla.org/en-US/docs/Web/HTML/microformats mozilla]"
+    },
+    {
+      "type": "paragraph",
+      "id": "f63bb040d0a5a6e5",
+      "text": "How might a site owner attach microformat data to their federated wiki pages that is visible to search engines?"
+    },
+    {
+      "type": "paragraph",
+      "id": "7619c5a336545514",
+      "text": "We suggest the HTML plugin be extended with a special case action url and then offer a catalog of items containing forms prompting for specific microformat fields."
+    },
+    {
+      "type": "paragraph",
+      "id": "5770b9069979e3ef",
+      "text": "See [[About HTML Plugin]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "cbd9ca439bdfccb2",
+      "text": "Once completed the form's submit button would transform the validated field data into microformat html."
+    },
+    {
+      "type": "paragraph",
+      "id": "6cad236914259608",
+      "text": "We would then extend the server-side rendering to include HTML as it does without javascript for Paragraph and Image plugins. This is where the microformat data becomes available to search engines."
+    },
+    {
+      "type": "paragraph",
+      "id": "b0b99a23686711e7",
+      "text": "This proposal consists of a series of small modifications to existing facilities already present in wiki."
+    },
+    {
+      "type": "markdown",
+      "id": "0010d1afad6028f5",
+      "text": "- [ ] add microformat action. [https://github.com/fedwiki/wiki-plugin-html/blob/ec8f60cac36f6a7b223bf32f98d164081cdb0240/client/html.coffee#L10 github]\n- [ ] check server-side rendering. [https://github.com/fedwiki/wiki-server/blob/b7f09486b668884c5995a04400ae6938bfd67832/lib/server.coffee#L69 github]\n- [ ] build catalog of forms. [http://microformats.fed.wiki wiki]"
+    },
+    {
+      "type": "paragraph",
+      "id": "c3c16da1f8c037e7",
+      "text": "See also [[Murmurations JSON Generator]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Microformat Plugin",
+        "story": []
+      },
+      "date": 1590002464933
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ec0efed2bfec5f31"
+      },
+      "id": "ec0efed2bfec5f31",
+      "type": "add",
+      "date": 1590002469086
+    },
+    {
+      "type": "edit",
+      "id": "ec0efed2bfec5f31",
+      "item": {
+        "type": "paragraph",
+        "id": "ec0efed2bfec5f31",
+        "text": "These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties."
+      },
+      "date": 1590002474276
+    },
+    {
+      "type": "edit",
+      "id": "ec0efed2bfec5f31",
+      "item": {
+        "type": "paragraph",
+        "id": "ec0efed2bfec5f31",
+        "text": "These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations. Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. [https://developer.mozilla.org/en-US/docs/Web/HTML/microformats mozilla]"
+      },
+      "date": 1590002497359
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f63bb040d0a5a6e5"
+      },
+      "id": "f63bb040d0a5a6e5",
+      "type": "add",
+      "after": "ec0efed2bfec5f31",
+      "date": 1590002535537
+    },
+    {
+      "type": "edit",
+      "id": "f63bb040d0a5a6e5",
+      "item": {
+        "type": "paragraph",
+        "id": "f63bb040d0a5a6e5",
+        "text": "How might a site owner attach microformat data to their federated wiki pages that is visible to search engines?"
+      },
+      "date": 1590002687529
+    },
+    {
+      "type": "add",
+      "id": "7619c5a336545514",
+      "item": {
+        "type": "paragraph",
+        "id": "7619c5a336545514",
+        "text": "We suggest the HTML plugin be extended with a form psudo-action"
+      },
+      "after": "f63bb040d0a5a6e5",
+      "date": 1590002759899
+    },
+    {
+      "type": "edit",
+      "id": "7619c5a336545514",
+      "item": {
+        "type": "paragraph",
+        "id": "7619c5a336545514",
+        "text": "We suggest the HTML plugin be extended with a special case action url and then offer a catalog of items containing forms prompting for specific microformat fields."
+      },
+      "date": 1590003013784
+    },
+    {
+      "type": "add",
+      "id": "cbd9ca439bdfccb2",
+      "item": {
+        "type": "paragraph",
+        "id": "cbd9ca439bdfccb2",
+        "text": "Once completed the form's submit button would transform the validated field data into microformat html."
+      },
+      "after": "7619c5a336545514",
+      "date": 1590003327383
+    },
+    {
+      "type": "add",
+      "id": "6cad236914259608",
+      "item": {
+        "type": "paragraph",
+        "id": "6cad236914259608",
+        "text": "We could then extend the server-side rendering to include HTML as it does without javascript for Paragraph and Image plugins. This is where the microformat data becomes available to search engines."
+      },
+      "after": "cbd9ca439bdfccb2",
+      "date": 1590003495973
+    },
+    {
+      "type": "edit",
+      "id": "6cad236914259608",
+      "item": {
+        "type": "paragraph",
+        "id": "6cad236914259608",
+        "text": "We would then extend the server-side rendering to include HTML as it does without javascript for Paragraph and Image plugins. This is where the microformat data becomes available to search engines."
+      },
+      "date": 1590003510125
+    },
+    {
+      "type": "add",
+      "id": "5770b9069979e3ef",
+      "item": {
+        "type": "paragraph",
+        "id": "5770b9069979e3ef",
+        "text": "See [[About HTML Plugin]]"
+      },
+      "after": "7619c5a336545514",
+      "date": 1590003587773
+    },
+    {
+      "type": "add",
+      "id": "b0b99a23686711e7",
+      "item": {
+        "type": "paragraph",
+        "id": "b0b99a23686711e7",
+        "text": "This proposal consists of a series of small modifications to existing facilities already present in wiki."
+      },
+      "after": "6cad236914259608",
+      "date": 1590003681391
+    },
+    {
+      "type": "add",
+      "id": "0010d1afad6028f5",
+      "item": {
+        "type": "factory",
+        "id": "0010d1afad6028f5",
+        "text": "- [ ] add <form action = \"http://microformat/\">"
+      },
+      "after": "b0b99a23686711e7",
+      "date": 1590003794711
+    },
+    {
+      "type": "edit",
+      "id": "0010d1afad6028f5",
+      "item": {
+        "type": "markdown",
+        "id": "0010d1afad6028f5",
+        "text": "- [ ] add <form action = \"http://microformat/\">\n- [ ] add HTML to "
+      },
+      "date": 1590003842676
+    },
+    {
+      "type": "edit",
+      "id": "0010d1afad6028f5",
+      "item": {
+        "type": "markdown",
+        "id": "0010d1afad6028f5",
+        "text": "- [ ] add <form action = \"http://microformat/\">\n- [ ] check server-side rendering [https://github.com/fedwiki/wiki-server/blob/b7f09486b668884c5995a04400ae6938bfd67832/lib/server.coffee#L69 github]"
+      },
+      "date": 1590004072818
+    },
+    {
+      "type": "edit",
+      "id": "0010d1afad6028f5",
+      "item": {
+        "type": "markdown",
+        "id": "0010d1afad6028f5",
+        "text": "- [ ] add action = \"http://microformat/\" [https://github.com/fedwiki/wiki-plugin-html/blob/ec8f60cac36f6a7b223bf32f98d164081cdb0240/client/html.coffee#L10 github]\n- [ ] check server-side rendering [https://github.com/fedwiki/wiki-server/blob/b7f09486b668884c5995a04400ae6938bfd67832/lib/server.coffee#L69 github]"
+      },
+      "date": 1590004170401
+    },
+    {
+      "type": "edit",
+      "id": "0010d1afad6028f5",
+      "item": {
+        "type": "markdown",
+        "id": "0010d1afad6028f5",
+        "text": "- [ ] add _action = \"http://microformat/\"_[https://github.com/fedwiki/wiki-plugin-html/blob/ec8f60cac36f6a7b223bf32f98d164081cdb0240/client/html.coffee#L10 github]\n- [ ] check server-side rendering [https://github.com/fedwiki/wiki-server/blob/b7f09486b668884c5995a04400ae6938bfd67832/lib/server.coffee#L69 github]"
+      },
+      "date": 1590004193858
+    },
+    {
+      "type": "edit",
+      "id": "0010d1afad6028f5",
+      "item": {
+        "type": "markdown",
+        "id": "0010d1afad6028f5",
+        "text": "- [ ] add microformat action [https://github.com/fedwiki/wiki-plugin-html/blob/ec8f60cac36f6a7b223bf32f98d164081cdb0240/client/html.coffee#L10 github]\n- [ ] check server-side rendering [https://github.com/fedwiki/wiki-server/blob/b7f09486b668884c5995a04400ae6938bfd67832/lib/server.coffee#L69 github]"
+      },
+      "date": 1590004216520
+    },
+    {
+      "type": "edit",
+      "id": "0010d1afad6028f5",
+      "item": {
+        "type": "markdown",
+        "id": "0010d1afad6028f5",
+        "text": "- [ ] add microformat action. [https://github.com/fedwiki/wiki-plugin-html/blob/ec8f60cac36f6a7b223bf32f98d164081cdb0240/client/html.coffee#L10 github]\n- [ ] check server-side rendering. [https://github.com/fedwiki/wiki-server/blob/b7f09486b668884c5995a04400ae6938bfd67832/lib/server.coffee#L69 github]\n- [ ] build catalog of forms. [http://microformats.fed.wiki wiki]"
+      },
+      "date": 1590004309460
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c3c16da1f8c037e7"
+      },
+      "id": "c3c16da1f8c037e7",
+      "type": "add",
+      "after": "0010d1afad6028f5",
+      "date": 1590069038761
+    },
+    {
+      "type": "edit",
+      "id": "c3c16da1f8c037e7",
+      "item": {
+        "type": "paragraph",
+        "id": "c3c16da1f8c037e7",
+        "text": "See also [["
+      },
+      "date": 1590069050933
+    },
+    {
+      "type": "edit",
+      "id": "c3c16da1f8c037e7",
+      "item": {
+        "type": "paragraph",
+        "id": "c3c16da1f8c037e7",
+        "text": "See also [[Murmurations JSON Generator]]"
+      },
+      "date": 1590069102337
+    }
+  ]
+}

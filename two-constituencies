@@ -1,0 +1,422 @@
+{
+  "title": "Two Constituencies",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "349cd4eea8be5ec7",
+      "text": "There are two constituencies for products: the aspirin crowd and the coffee crowd. The metaphor contrasts need with desire. Lasting products meet needs."
+    },
+    {
+      "type": "paragraph",
+      "id": "393433d725aabda7",
+      "text": "OER producers, journalists, etc are the aspirin crowd. They have a headache and you have medicine. If the medicine tastes lousy they won't care. If they have to take it every day they don't care. If it doesn't work right away they'll wait or take more. They have specific pain and that changes things."
+    },
+    {
+      "type": "paragraph",
+      "id": "0312a0f8f354a870",
+      "text": "The coffee crowd (perhaps they need a better name) don't have specific pain. They have needs but they aren't well defined. The pain they feel in not specific, or expresses in ways not connected to the root cause. "
+    },
+    {
+      "type": "paragraph",
+      "id": "aec9d3b492cfbd1a",
+      "text": "Hmmm the metaphor isn't quite right. But here's the thing. Teachers straddle the two worlds. Fedwiki is aspirin to them, but they have to sell it to people who don't feel they have a headache."
+    },
+    {
+      "type": "markdown",
+      "id": "2a03d17b9dc19662",
+      "text": "# Example"
+    },
+    {
+      "type": "paragraph",
+      "id": "03dff101590146fa",
+      "text": "I get the Engelbart idea -- that \"easy to learn\" has pernicious consequences in the long run. But I have 25 hours total, across a semester, to teach complex ideas. I can't have the students spend ten hours on a tool that they won't use once they leave the classroom. "
+    },
+    {
+      "type": "paragraph",
+      "id": "9a3f8ab6bada3fa4",
+      "text": "I've taught students Twitter in a class, taught them blogging in a class, taught them traditional wiki, Google Sites, Google Sheets, Google Docs. These things can make a rough day, but it's one day. I did Google Sheets once in a 50 student class, most of whom had never used Excel. It was exhausting, but we got it done and learned some statistics besides."
+    },
+    {
+      "type": "paragraph",
+      "id": "51eccc02a16bcfd2",
+      "text": "Can we get learning the aspects of federated wiki needed for a course down to one class period? "
+    },
+    {
+      "type": "markdown",
+      "id": "a60fc07a3ce6e8dd",
+      "text": "# Workflow"
+    },
+    {
+      "type": "paragraph",
+      "id": "4dca214fec2bec65",
+      "text": "One must be able to meet understood need with comprehensible methods. Scripted method makes for rapid progress. More scripts meet more needs. But the ability to construct one's own scripts transcends the catalog. Do more features or less make this possible?"
+    },
+    {
+      "type": "paragraph",
+      "id": "1e7914ee376fd9dd",
+      "text": "When we cast scripts into buttons we take away any chance of original application."
+    },
+    {
+      "type": "paragraph",
+      "id": "d37a7387c599c743",
+      "text": "When we offer original capability with no guidance for problem solving we defer all scripting to the user."
+    },
+    {
+      "type": "paragraph",
+      "id": "0fee4ffd263d1a0e",
+      "text": "This is the tightrope we walk. Can we wait while we discover fundamental mechanisms? Not if we desire support from people with real need. But can we write and deliver scripts fast enough and cataloged well enough to meet the same needs? Not if those needs evolve."
+    },
+    {
+      "type": "paragraph",
+      "id": "bf9277f7d0cc3847",
+      "text": "We speak of the accelerated rate of change fueled by computer innovation. But might that innovation be a endless stream of scripts that we out grow faster and faster. If we will live our professional life with computers how good do we want to be?"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Two Constituencies",
+        "story": []
+      },
+      "date": 1438914034284
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9c1325b2a92fc89a"
+      },
+      "id": "9c1325b2a92fc89a",
+      "type": "add",
+      "date": 1438914035758
+    },
+    {
+      "type": "remove",
+      "id": "9c1325b2a92fc89a",
+      "date": 1438914051451
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9fc87371dc1374c8"
+      },
+      "id": "9fc87371dc1374c8",
+      "type": "add",
+      "date": 1438914056381
+    },
+    {
+      "type": "remove",
+      "id": "9fc87371dc1374c8",
+      "date": 1438914104577
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "349cd4eea8be5ec7"
+      },
+      "id": "349cd4eea8be5ec7",
+      "type": "add",
+      "date": 1438914145787
+    },
+    {
+      "type": "edit",
+      "id": "349cd4eea8be5ec7",
+      "item": {
+        "type": "paragraph",
+        "id": "349cd4eea8be5ec7",
+        "text": "There are two constituencies for products: the aspirin crowd and the liquor crowd. "
+      },
+      "date": 1438914373920
+    },
+    {
+      "type": "add",
+      "id": "393433d725aabda7",
+      "item": {
+        "type": "paragraph",
+        "id": "393433d725aabda7",
+        "text": "OER producers, "
+      },
+      "after": "349cd4eea8be5ec7",
+      "date": 1438914402185
+    },
+    {
+      "type": "edit",
+      "id": "393433d725aabda7",
+      "item": {
+        "type": "paragraph",
+        "id": "393433d725aabda7",
+        "text": "OER producers, journalists, etc are the aspirin crowd. They have a headache"
+      },
+      "date": 1438914453597
+    },
+    {
+      "type": "edit",
+      "id": "349cd4eea8be5ec7",
+      "item": {
+        "type": "paragraph",
+        "id": "349cd4eea8be5ec7",
+        "text": "There are two constituencies for products: the aspirin crowd and the coffee crowd. "
+      },
+      "date": 1438914462788
+    },
+    {
+      "type": "edit",
+      "id": "393433d725aabda7",
+      "item": {
+        "type": "paragraph",
+        "id": "393433d725aabda7",
+        "text": "OER producers, journalists, etc are the aspirin crowd. They have a headache and you have medicine. If the medicine tastes lousy they won't care. If they have to take it every day they don't care. If it doesn't work right away they'll wait or take more."
+      },
+      "date": 1438914600177
+    },
+    {
+      "type": "edit",
+      "id": "393433d725aabda7",
+      "item": {
+        "type": "paragraph",
+        "id": "393433d725aabda7",
+        "text": "OER producers, journalists, etc are the aspirin crowd. They have a headache and you have medicine. If the medicine tastes lousy they won't care. If they have to take it every day they don't care. If it doesn't work right away they'll wait or take more. They have specific pain."
+      },
+      "date": 1438914707234
+    },
+    {
+      "type": "edit",
+      "id": "393433d725aabda7",
+      "item": {
+        "type": "paragraph",
+        "id": "393433d725aabda7",
+        "text": "OER producers, journalists, etc are the aspirin crowd. They have a headache and you have medicine. If the medicine tastes lousy they won't care. If they have to take it every day they don't care. If it doesn't work right away they'll wait or take more. They have specific pain and that changes things."
+      },
+      "date": 1438914715626
+    },
+    {
+      "type": "add",
+      "id": "0312a0f8f354a870",
+      "item": {
+        "type": "paragraph",
+        "id": "0312a0f8f354a870",
+        "text": "The coffee crowd (perhaps they need a better name) don't have specific pain. They have needs but they aren't well defined. The pain they feel in not specific, or expresses in ways not connected to the root cause. "
+      },
+      "after": "393433d725aabda7",
+      "date": 1438914986493
+    },
+    {
+      "type": "add",
+      "id": "aec9d3b492cfbd1a",
+      "item": {
+        "type": "paragraph",
+        "id": "aec9d3b492cfbd1a",
+        "text": "Hmmm the metaphor isn't quite right. But here's the thing. Teachers straddle the two worlds. Fedwiki is aspirin to them, but they have to sell it to people who don't feel they have a headache."
+      },
+      "after": "0312a0f8f354a870",
+      "date": 1438915116788
+    },
+    {
+      "type": "fork",
+      "site": "futurefed.hapgood.net",
+      "date": 1438920226311
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2a03d17b9dc19662"
+      },
+      "id": "2a03d17b9dc19662",
+      "type": "add",
+      "after": "aec9d3b492cfbd1a",
+      "date": 1438920238412
+    },
+    {
+      "type": "edit",
+      "id": "2a03d17b9dc19662",
+      "item": {
+        "type": "markdown",
+        "id": "2a03d17b9dc19662",
+        "text": "# Example"
+      },
+      "date": 1438920249372
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "03dff101590146fa",
+        "text": "I get the Engelbart idea -- that \"easy to learn\" has pernicious consequences in the long run. But I have 25 hours total, across a semester, to teach complex ideas. I can't have the students spend ten hours on a tool that they won't use once they leave the classroom. "
+      },
+      "after": "2a03d17b9dc19662",
+      "id": "03dff101590146fa",
+      "date": 1438920256463
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "9a3f8ab6bada3fa4",
+        "text": "I've taught students Twitter in a class, taught them blogging in a class, taught them traditional wiki, Google Sites, Google Sheets, Google Docs. These things can make a rough day, but it's one day. I did Google Sheets once in a 50 student class, most of whom had never used Excel. It was exhausting, but we got it done and learned some statistics besides."
+      },
+      "after": "03dff101590146fa",
+      "id": "9a3f8ab6bada3fa4",
+      "date": 1438920261472
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "51eccc02a16bcfd2",
+        "text": "Can we get learning the aspects of federated wiki needed for a course down to one class period? "
+      },
+      "after": "9a3f8ab6bada3fa4",
+      "id": "51eccc02a16bcfd2",
+      "date": 1438920270439
+    },
+    {
+      "type": "edit",
+      "id": "349cd4eea8be5ec7",
+      "item": {
+        "type": "paragraph",
+        "id": "349cd4eea8be5ec7",
+        "text": "There are two constituencies for products: the aspirin crowd and the coffee crowd. The metaphor contrasts need with desire."
+      },
+      "date": 1438920356847
+    },
+    {
+      "type": "edit",
+      "id": "349cd4eea8be5ec7",
+      "item": {
+        "type": "paragraph",
+        "id": "349cd4eea8be5ec7",
+        "text": "There are two constituencies for products: the aspirin crowd and the coffee crowd. The metaphor contrasts need with desire. Lasting products meet needs."
+      },
+      "date": 1438920423159
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a60fc07a3ce6e8dd"
+      },
+      "id": "a60fc07a3ce6e8dd",
+      "type": "add",
+      "after": "51eccc02a16bcfd2",
+      "date": 1438920905870
+    },
+    {
+      "type": "edit",
+      "id": "a60fc07a3ce6e8dd",
+      "item": {
+        "type": "markdown",
+        "id": "a60fc07a3ce6e8dd",
+        "text": "# Workflow"
+      },
+      "date": 1438920917794
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4dca214fec2bec65"
+      },
+      "id": "4dca214fec2bec65",
+      "type": "add",
+      "after": "a60fc07a3ce6e8dd",
+      "date": 1438920924198
+    },
+    {
+      "type": "edit",
+      "id": "4dca214fec2bec65",
+      "item": {
+        "type": "paragraph",
+        "id": "4dca214fec2bec65",
+        "text": "One must be able to meet understood need with comprehensible methods. Scripted method makes for rapid progress. More scripts meet more needs. But the ability to construct one's own scripts transcends the catalog."
+      },
+      "date": 1438921486450
+    },
+    {
+      "type": "edit",
+      "id": "4dca214fec2bec65",
+      "item": {
+        "type": "paragraph",
+        "id": "4dca214fec2bec65",
+        "text": "One must be able to meet understood need with comprehensible methods. Scripted method makes for rapid progress. More scripts meet more needs. But the ability to construct one's own scripts transcends the catalog. "
+      },
+      "date": 1438921618135
+    },
+    {
+      "type": "edit",
+      "id": "4dca214fec2bec65",
+      "item": {
+        "type": "paragraph",
+        "id": "4dca214fec2bec65",
+        "text": "One must be able to meet understood need with comprehensible methods. Scripted method makes for rapid progress. More scripts meet more needs. But the ability to construct one's own scripts transcends the catalog."
+      },
+      "date": 1438921691926
+    },
+    {
+      "type": "edit",
+      "id": "4dca214fec2bec65",
+      "item": {
+        "type": "paragraph",
+        "id": "4dca214fec2bec65",
+        "text": "One must be able to meet understood need with comprehensible methods. Scripted method makes for rapid progress. More scripts meet more needs. But the ability to construct one's own scripts transcends the catalog. Do more features or less make this possible?"
+      },
+      "date": 1438921718911
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "72e1cefab9f68276"
+      },
+      "id": "72e1cefab9f68276",
+      "type": "add",
+      "after": "4dca214fec2bec65",
+      "date": 1438921723875
+    },
+    {
+      "type": "remove",
+      "id": "72e1cefab9f68276",
+      "date": 1438921873772
+    },
+    {
+      "type": "add",
+      "id": "1e7914ee376fd9dd",
+      "item": {
+        "type": "paragraph",
+        "id": "1e7914ee376fd9dd",
+        "text": "When we cast scripts into buttons we take away any chance of original application."
+      },
+      "after": "4dca214fec2bec65",
+      "date": 1438922241389
+    },
+    {
+      "type": "add",
+      "id": "d37a7387c599c743",
+      "item": {
+        "type": "paragraph",
+        "id": "d37a7387c599c743",
+        "text": "When we offer original capability with no guidance for problem solving we defer all scripting to the user."
+      },
+      "after": "1e7914ee376fd9dd",
+      "date": 1438922417687
+    },
+    {
+      "type": "add",
+      "id": "0fee4ffd263d1a0e",
+      "item": {
+        "type": "paragraph",
+        "id": "0fee4ffd263d1a0e",
+        "text": "This is the tightrope we walk. Can we wait while we discover fundamental mechanisms? Not if we desire support from people with real need. But can we write and deliver scripts fast enough and cataloged well enough to meet the same needs? Not if those needs evolve."
+      },
+      "after": "d37a7387c599c743",
+      "date": 1438922840393
+    },
+    {
+      "type": "add",
+      "id": "bf9277f7d0cc3847",
+      "item": {
+        "type": "paragraph",
+        "id": "bf9277f7d0cc3847",
+        "text": "We speak of the accelerated rate of change fueled by computer innovation. But might that innovation be a endless stream of scripts that we out grow faster and faster. If we will live our professional life with computers how good do we want to be?"
+      },
+      "after": "0fee4ffd263d1a0e",
+      "date": 1438923000577
+    }
+  ]
+}

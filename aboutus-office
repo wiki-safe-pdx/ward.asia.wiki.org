@@ -1,0 +1,130 @@
+{
+  "title": "AboutUs Office",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9ec45ae815c04a43",
+      "text": "We occupied half a floor of this recently saved from derelict status old railroad warehouse. We enjoyed an open plan with rollaround Anthro desks. I rolled mine next to whoever I thought I should be working with most that week or two."
+    },
+    {
+      "type": "paragraph",
+      "id": "418567a9ee2d13b5",
+      "text": "See [[Places Together]] on one map."
+    },
+    {
+      "type": "map",
+      "id": "393719b674274998",
+      "text": "45.5188364,-122.6643402"
+    },
+    {
+      "type": "paragraph",
+      "id": "1d50a9224cfd5e38",
+      "text": "Details about this place."
+    },
+    {
+      "type": "paragraph",
+      "id": "285793ea4f51af9b",
+      "text": "[[Biketown]] city bike stations."
+    },
+    {
+      "type": "paragraph",
+      "id": "72b8d8d941ac8a10",
+      "text": "[[Place Name]] that is important here."
+    },
+    {
+      "type": "paragraph",
+      "id": "fa7320ce37807283",
+      "text": "How it is that I moved on. See [[New Place for Home]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "AboutUs Office",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "9ec45ae815c04a43",
+            "text": "A few words about this place."
+          },
+          {
+            "type": "paragraph",
+            "id": "418567a9ee2d13b5",
+            "text": "See [[Places Together]] on one map."
+          },
+          {
+            "type": "map",
+            "id": "393719b674274998",
+            "text": "What kind of place is this?"
+          },
+          {
+            "type": "paragraph",
+            "id": "1d50a9224cfd5e38",
+            "text": "Details about this place."
+          },
+          {
+            "type": "paragraph",
+            "id": "285793ea4f51af9b",
+            "text": "[[Place Name]] that is important here."
+          },
+          {
+            "type": "paragraph",
+            "id": "72b8d8d941ac8a10",
+            "text": "[[Place Name]] that is important here."
+          },
+          {
+            "type": "paragraph",
+            "id": "fa7320ce37807283",
+            "text": "How it is that I moved on. See [[New Place for Home]]"
+          }
+        ]
+      },
+      "date": 1467961785699
+    },
+    {
+      "type": "edit",
+      "id": "393719b674274998",
+      "item": {
+        "type": "map",
+        "id": "393719b674274998",
+        "text": "@45.5188364,-122.6643402"
+      },
+      "date": 1467961792355
+    },
+    {
+      "type": "edit",
+      "id": "393719b674274998",
+      "item": {
+        "type": "map",
+        "id": "393719b674274998",
+        "text": "45.5188364,-122.6643402"
+      },
+      "date": 1467961799828
+    },
+    {
+      "type": "edit",
+      "id": "9ec45ae815c04a43",
+      "item": {
+        "type": "paragraph",
+        "id": "9ec45ae815c04a43",
+        "text": "We occupied half a floor of this recently saved from derelict status old railroad warehouse. We enjoyed an open plan with rollaround Anthro desks. I rolled mine next to whoever I thought I should be working with most that week or two."
+      },
+      "date": 1467962326817
+    },
+    {
+      "type": "fork",
+      "site": "home.ward.asia.wiki.org"
+    },
+    {
+      "type": "edit",
+      "id": "285793ea4f51af9b",
+      "item": {
+        "type": "paragraph",
+        "id": "285793ea4f51af9b",
+        "text": "[[Biketown]] city bike stations."
+      },
+      "date": 1469137940510
+    }
+  ]
+}

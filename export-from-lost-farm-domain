@@ -1,0 +1,605 @@
+{
+  "title": "Export from Lost Farm Domain",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ed2aec98a950343a",
+      "text": "We consider the case where a farm operator is supporting a community manager that has lost a domain name used by that community."
+    },
+    {
+      "type": "paragraph",
+      "id": "c2d6a812beed7d0b",
+      "text": "We list the subdomains that have pages."
+    },
+    {
+      "type": "code",
+      "id": "faf1bdb67c571492",
+      "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo `ls .wiki/$site/pages | wc -l` $site\ndone 2>/dev/null | sort -nr"
+    },
+    {
+      "type": "paragraph",
+      "id": "d08fc5508ddff4f2",
+      "text": "We read pages from a site and construct an export json file. We will eventually repeat this for all sites."
+    },
+    {
+      "type": "code",
+      "id": "9b6ed64176124432",
+      "text": "## wrong nesting\n(echo '{'\necho ward.wiki.innovateoregon.org |\\\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '\"done\":{}}')"
+    },
+    {
+      "type": "paragraph",
+      "id": "0806e7b312cc7d6e",
+      "text": "Now we feed the list of desired exports into the script that makes export file. Create exports directory first."
+    },
+    {
+      "type": "code",
+      "id": "8a8746c1a05473b2",
+      "text": "(mkdir exports\ndomain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done | sed '$s/,$//'\n  echo '}') > exports/$site.json\ndone\ntar czf exports.tgz exports\nrm -r exports)\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Export from Lost Farm Domain",
+        "story": []
+      },
+      "date": 1639768437842
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ed2aec98a950343a"
+      },
+      "id": "ed2aec98a950343a",
+      "type": "add",
+      "date": 1639768440273
+    },
+    {
+      "type": "edit",
+      "id": "ed2aec98a950343a",
+      "item": {
+        "type": "paragraph",
+        "id": "ed2aec98a950343a",
+        "text": "We consider the case where a farm operator is supporting a community manager that has lost a domain name used by that community."
+      },
+      "date": 1639768542186
+    },
+    {
+      "type": "add",
+      "id": "c2d6a812beed7d0b",
+      "item": {
+        "type": "paragraph",
+        "id": "c2d6a812beed7d0b",
+        "text": "We list the subdomains that have pages."
+      },
+      "after": "ed2aec98a950343a",
+      "date": 1639768574421
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "faf1bdb67c571492"
+      },
+      "id": "faf1bdb67c571492",
+      "type": "add",
+      "after": "c2d6a812beed7d0b",
+      "date": 1639768629730
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | grep -i \"$domain\" |\\\n  while read i\n  do echo `ls .wiki/$i/pages | wc -l` -- $i\n    done | sort -n >list.txt"
+      },
+      "date": 1639768768537
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | grep -i \"$domain\" |\\\n  while read i\n    do echo `ls .wiki/$i/pages | wc -l` -- $i\n  done |\\\n  sort -n >list.txt"
+      },
+      "date": 1639768840090
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read i; do\n  echo `ls .wiki/$i/pages | wc -l` -- $i\n  done |\\\n  sort -n >list.txt"
+      },
+      "date": 1639769407841
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read i; do\n  if [\n  done |\\\n  sort -n >list.txt"
+      },
+      "date": 1639769466810
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"\n  done |\\\n  sort -n >list.txt"
+      },
+      "date": 1639769527445
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]; then continue\n  done |\\\n  sort -n >list.txt"
+      },
+      "date": 1639769610832
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]; then; continue\n  elif [[ ]]; then; continue\n  fi\n  echo $site\ndone"
+      },
+      "date": 1639769754763
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then; continue\n  elif [[ -n \"$(find $site/pages -prune -empty l)\" ]]\n    then; continue\n  fi\n  echo $site\ndone"
+      },
+      "date": 1639770128250
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then; continue\n  elif [[ -n \"$(find $site/pages -prune -empty)\" ]]\n    then; continue\n  fi\n  echo $site\ndone"
+      },
+      "date": 1639770230532
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then\n      continue\n  elif [[ -n \"$(find $site/pages -prune -empty)\" ]]\n    then\n      continue\n  fi\n  echo $site\ndone"
+      },
+      "date": 1639770357482
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then\n      continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then\n      continue\n  fi\n  echo $site\ndone 2>/dev/null"
+      },
+      "date": 1639770511107
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then\n      continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then\n      continue\n  fi\n  echo `ls .wiki/$site/pages | wc -l` $site\ndone 2>/dev/null"
+      },
+      "date": 1639770569377
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then\n      continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then\n      continue\n  elif [[ -n \"$(find .wiki/$site/status/owner.json -prune -empty)\" ]]\n    then\n      continue\n  fi\n  echo `ls .wiki/$site/pages | wc -l` $site\ndone 2>/dev/null"
+      },
+      "date": 1639770786924
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo `ls .wiki/$site/pages | wc -l` $site\ndone 2>/dev/null"
+      },
+      "date": 1639771167804
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo `ls .wiki/$site/pages | wc -l` $site\ndone 2>/dev/null | sort -n"
+      },
+      "date": 1639771217883
+    },
+    {
+      "type": "edit",
+      "id": "faf1bdb67c571492",
+      "item": {
+        "type": "code",
+        "id": "faf1bdb67c571492",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo `ls .wiki/$site/pages | wc -l` $site\ndone 2>/dev/null | sort -nr"
+      },
+      "date": 1639771853791
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d08fc5508ddff4f2"
+      },
+      "id": "d08fc5508ddff4f2",
+      "type": "add",
+      "after": "faf1bdb67c571492",
+      "date": 1639771870565
+    },
+    {
+      "type": "edit",
+      "id": "d08fc5508ddff4f2",
+      "item": {
+        "type": "paragraph",
+        "id": "d08fc5508ddff4f2",
+        "text": "We repeat the selection but instead fill a directory with export json files."
+      },
+      "date": 1639772044227
+    },
+    {
+      "type": "edit",
+      "id": "d08fc5508ddff4f2",
+      "item": {
+        "type": "paragraph",
+        "id": "d08fc5508ddff4f2",
+        "text": "We read pages from a site and construct an export json file."
+      },
+      "date": 1639772137929
+    },
+    {
+      "type": "edit",
+      "id": "d08fc5508ddff4f2",
+      "item": {
+        "type": "paragraph",
+        "id": "d08fc5508ddff4f2",
+        "text": "We read pages from a site and construct an export json file. We will eventually repeat this for all sites."
+      },
+      "date": 1639772162954
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9b6ed64176124432"
+      },
+      "id": "9b6ed64176124432",
+      "type": "add",
+      "after": "d08fc5508ddff4f2",
+      "date": 1639772168353
+    },
+    {
+      "type": "edit",
+      "id": "9b6ed64176124432",
+      "item": {
+        "type": "code",
+        "id": "9b6ed64176124432",
+        "text": "echo "
+      },
+      "date": 1639772192234
+    },
+    {
+      "type": "edit",
+      "id": "9b6ed64176124432",
+      "item": {
+        "type": "code",
+        "id": "9b6ed64176124432",
+        "text": "echo '{'\necho ward.wiki.innovateoregon.org |\\\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '}'"
+      },
+      "date": 1639772588760
+    },
+    {
+      "type": "edit",
+      "id": "9b6ed64176124432",
+      "item": {
+        "type": "code",
+        "id": "9b6ed64176124432",
+        "text": "(echo '{'\necho ward.wiki.innovateoregon.org |\\\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '}')"
+      },
+      "date": 1639772669843
+    },
+    {
+      "type": "edit",
+      "id": "9b6ed64176124432",
+      "item": {
+        "type": "code",
+        "id": "9b6ed64176124432",
+        "text": "(echo '{'\necho ward.wiki.innovateoregon.org |\\\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '\"done\":{}')"
+      },
+      "date": 1639772761814
+    },
+    {
+      "type": "edit",
+      "id": "9b6ed64176124432",
+      "item": {
+        "type": "code",
+        "id": "9b6ed64176124432",
+        "text": "(echo '{'\necho ward.wiki.innovateoregon.org |\\\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '\"done\":{}}')"
+      },
+      "date": 1639772868864
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0806e7b312cc7d6e"
+      },
+      "id": "0806e7b312cc7d6e",
+      "type": "add",
+      "after": "9b6ed64176124432",
+      "date": 1639782719736
+    },
+    {
+      "type": "edit",
+      "id": "0806e7b312cc7d6e",
+      "item": {
+        "type": "paragraph",
+        "id": "0806e7b312cc7d6e",
+        "text": "Now we feed the list of desired exports into the script that makes export file."
+      },
+      "date": 1639782749007
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8a8746c1a05473b2"
+      },
+      "id": "8a8746c1a05473b2",
+      "type": "add",
+      "after": "0806e7b312cc7d6e",
+      "date": 1639782765971
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo `ls .wiki/$site/pages | wc -l` $site\ndone 2>/dev/null |\\"
+      },
+      "date": 1639782807110
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo `$site\ndone 2>/dev/null | sort |\\\n(echo '{'\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '\"done\":{}}') > temp/export-$site.json"
+      },
+      "date": 1639782925085
+    },
+    {
+      "type": "edit",
+      "id": "0806e7b312cc7d6e",
+      "item": {
+        "type": "paragraph",
+        "id": "0806e7b312cc7d6e",
+        "text": "Now we feed the list of desired exports into the script that makes export file. Create temp directory first."
+      },
+      "date": 1639782946548
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\n(echo '{'\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '\"done\":{}}') > temp/export-$site.json"
+      },
+      "date": 1639783133292
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site\n  echo '{'\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '\"done\":{}}' > temp/export-$site.json\n  done\n"
+      },
+      "date": 1639783399978
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site\n  (echo '{'\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '\"done\":{}}') > temp/export-$site.json\n  done\n"
+      },
+      "date": 1639783496490
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  echo '{'\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '\"ignore\":{}}'\n  done > temp/export-$site.json\ndone\n"
+      },
+      "date": 1639783711706
+    },
+    {
+      "type": "edit",
+      "id": "9b6ed64176124432",
+      "item": {
+        "type": "code",
+        "id": "9b6ed64176124432",
+        "text": "## wrong\n(echo '{'\necho ward.wiki.innovateoregon.org |\\\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '\"done\":{}}')"
+      },
+      "date": 1639783720304
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '\"ignore\":{}}'\n  done > temp/export-$site.json\ndone\n"
+      },
+      "date": 1639783794107
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '\"ignore\":{}}') > temp/export-$site.json\ndone\n"
+      },
+      "date": 1639784016401
+    },
+    {
+      "type": "edit",
+      "id": "9b6ed64176124432",
+      "item": {
+        "type": "code",
+        "id": "9b6ed64176124432",
+        "text": "## wrong nesting\n(echo '{'\necho ward.wiki.innovateoregon.org |\\\nwhile read site\n  do ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  done\necho '\"done\":{}}')"
+      },
+      "date": 1639785167560
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "## wrong way to omit last comma\ndomain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '\"ignore\":{}}') > temp/export-$site.json\ndone\n"
+      },
+      "date": 1639785192333
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "## wrong way to omit last comma\ndomain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '}') | sed '$s/,$//' > temp/export-$site.json\ndone\n"
+      },
+      "date": 1639792935536
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '}') | sed '$s/,$//' > temp/export-$site.json\ndone\n"
+      },
+      "date": 1639792977582
+    },
+    {
+      "type": "edit",
+      "id": "0806e7b312cc7d6e",
+      "item": {
+        "type": "paragraph",
+        "id": "0806e7b312cc7d6e",
+        "text": "Now we feed the list of desired exports into the script that makes export file. Create exports directory first."
+      },
+      "date": 1639793033382
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done\n  echo '}') | sed '$s/,$//' > exports/$site.json\ndone\n"
+      },
+      "date": 1639793066449
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "899b04b7d19efd4f"
+      },
+      "id": "899b04b7d19efd4f",
+      "type": "add",
+      "after": "8a8746c1a05473b2",
+      "date": 1639793264344
+    },
+    {
+      "type": "edit",
+      "id": "899b04b7d19efd4f",
+      "item": {
+        "type": "paragraph",
+        "id": "899b04b7d19efd4f",
+        "text": "tar czf exports.tgz exports"
+      },
+      "date": 1639793271177
+    },
+    {
+      "type": "edit",
+      "id": "899b04b7d19efd4f",
+      "item": {
+        "type": "code",
+        "id": "899b04b7d19efd4f",
+        "text": "tar czf exports.tgz exports\nrm -r exports"
+      },
+      "date": 1639793335243
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "domain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done | sed '$s/,$//'\n  echo '}') > exports/$site.json\ndone\n"
+      },
+      "date": 1639794098996
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "mkdir exports\ndomain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done | sed '$s/,$//'\n  echo '}') > exports/$site.json\ndone\ntar czf exports.tgz exports\nrm -r exports\n"
+      },
+      "date": 1639794167261
+    },
+    {
+      "type": "remove",
+      "id": "899b04b7d19efd4f",
+      "date": 1639794172712
+    },
+    {
+      "type": "edit",
+      "id": "8a8746c1a05473b2",
+      "item": {
+        "type": "code",
+        "id": "8a8746c1a05473b2",
+        "text": "(mkdir exports\ndomain='wiki.innovateoregon.org'\nls .wiki | while read site; do\n  if [[ \"$site\" != *\"$domain\" ]]\n    then continue\n  elif [[ -n \"$(find .wiki/$site/pages -prune -empty)\" ]]\n    then continue\n  fi\n  echo $site\ndone 2>/dev/null | sort |\\\nwhile read site; do\n  (echo '{'\n  ls .wiki/$site/pages | while read slug\n    do echo '\"'$slug'\":'$(cat .wiki/$site/pages/$slug)','\n    done | sed '$s/,$//'\n  echo '}') > exports/$site.json\ndone\ntar czf exports.tgz exports\nrm -r exports)\n"
+      },
+      "date": 1639794236937
+    }
+  ]
+}

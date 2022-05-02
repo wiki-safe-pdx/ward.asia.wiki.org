@@ -1,0 +1,384 @@
+{
+  "title": "Dynamic Diagrams Improved",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9ae0793c4485c610",
+      "text": "With [[Dynamic Diagrams in Use]] we find and make improvements which will be remembered here."
+    },
+    {
+      "type": "paragraph",
+      "id": "dd472350fbb8ea5f",
+      "text": "We correctly follow links across site boundaries and even into pages stored in browser local storage."
+    },
+    {
+      "type": "paragraph",
+      "id": "0160dd6295428a2a",
+      "text": "Add WHERE FOLD conditions for Pagefold regions."
+    },
+    {
+      "type": "paragraph",
+      "id": "49fd6a63ac3d3bac",
+      "text": "We always planned on following all of the links on a page at the same time. Now we correctly [[Promise Pages for Links]] and resolve these when we need them. [https://github.com/dobbs/wiki-plugin-graphviz/pull/7 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "2c4b16340afd08ba",
+      "text": "Thompson uses [[Preview Next Diagram]] to read ahead and alongside the storyline he has developed. We've considered this idea before. See [[Speed Read]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "9a4c4bfe269a1540",
+      "text": "The \"diagram loading\" shows up a lot longer when visiting lots of pages. We'll notice the improvement when we get that parallelism working. We will also create a lot more server traffic if diagrams get popular. [https://github.com/dobbs/wiki-plugin-graphviz/pull/7 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "04962797e4a0d25d",
+      "text": "An easy way to call up [[Lineup Diagram]] at will is simply to search for it. This will break if we add it to about pages. Consider [[Hamburger Menu]] instead. [https://github.com/fedwiki/wiki-client/pull/228 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ecf13ba85840790",
+      "text": "Here is a strange cors situation. I'm in http site with https site in my lineup. I call up Lineup Diagram which fails in Graphviz plugin's bind waiting for moduleLoaded. Did wiki.sight(...).get(...) fix this?"
+    },
+    {
+      "type": "html",
+      "id": "5e9c2016cc9b5452",
+      "text": "<img width=100% src=https://matrix.org/_matrix/media/v1/download/matrix.org/gnkgrZnEZngXZkHmbjihOVKd>"
+    },
+    {
+      "type": "paragraph",
+      "id": "afd5e912f70d25b1",
+      "text": "Need some way to transclude one reference implementation of the markup. Make this employ collaborative linking such that anyone can fine tune drawing markup used pervasively in a source. [https://github.com/dobbs/wiki-plugin-graphviz/pull/5#issuecomment-472870111 github]"
+    },
+    {
+      "type": "graphviz",
+      "id": "80f1d495f10d1fb8",
+      "text": "DOT FROM lineup-diagram"
+    },
+    {
+      "type": "paragraph",
+      "id": "d326257aa98a2bb4",
+      "text": "The plugin should catch and report errors, especially those reported by graphviz. Right now a typo makes the diagram disappear with no chance to make a correction. An error message in the \"loading\" box would be ok. [https://github.com/dobbs/wiki-plugin-graphviz/pull/4 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "c507b97b9fe408de",
+      "text": "We can expect any map of the federation to cross http/https boundaries so will need to engage the proxy mechanism that makes this possible. [https://github.com/dobbs/wiki-plugin-graphviz/pull/5 github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Dynamic Diagrams Improved",
+        "story": []
+      },
+      "date": 1552279246202
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9ae0793c4485c610"
+      },
+      "id": "9ae0793c4485c610",
+      "type": "add",
+      "date": 1552279254979
+    },
+    {
+      "type": "fork",
+      "date": 1552279274802
+    },
+    {
+      "type": "edit",
+      "id": "9ae0793c4485c610",
+      "item": {
+        "type": "paragraph",
+        "id": "9ae0793c4485c610",
+        "text": "With [[Dynamic Diagrams in Use]] we find and make improvements which will be remembered here."
+      },
+      "date": 1552279324258
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "d326257aa98a2bb4",
+        "text": "The plugin should catch and report errors, especially those reported by graphviz. Right now a typo makes the diagram disappear with no chance to make a correction. An error message in the \"loading\" box would be ok. [https://github.com/dobbs/wiki-plugin-graphviz/pull/4 github]"
+      },
+      "after": "9ae0793c4485c610",
+      "id": "d326257aa98a2bb4",
+      "date": 1552279333394
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "c507b97b9fe408de",
+        "text": "We can expect any map of the federation to cross http/https boundaries so will need to engage the proxy mechanism that makes this possible."
+      },
+      "after": "d326257aa98a2bb4",
+      "id": "c507b97b9fe408de",
+      "date": 1552491966412
+    },
+    {
+      "type": "edit",
+      "id": "c507b97b9fe408de",
+      "item": {
+        "type": "paragraph",
+        "id": "c507b97b9fe408de",
+        "text": "We can expect any map of the federation to cross http/https boundaries so will need to engage the proxy mechanism that makes this possible. [https://github.com/dobbs/wiki-plugin-graphviz/pull/5 github]"
+      },
+      "date": 1552491976586
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "afd5e912f70d25b1",
+        "text": "Need some way to transclude one reference implementation of the markup. Make this employ collaborative linking such that anyone can fine tune drawing markup used pervasively in a source. See [[Visitor as Schema]]"
+      },
+      "after": "9ae0793c4485c610",
+      "id": "afd5e912f70d25b1",
+      "date": 1552684416968
+    },
+    {
+      "type": "edit",
+      "id": "afd5e912f70d25b1",
+      "item": {
+        "type": "paragraph",
+        "id": "afd5e912f70d25b1",
+        "text": "Need some way to transclude one reference implementation of the markup. Make this employ collaborative linking such that anyone can fine tune drawing markup used pervasively in a source."
+      },
+      "date": 1552685894002
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "80f1d495f10d1fb8"
+      },
+      "id": "80f1d495f10d1fb8",
+      "type": "add",
+      "after": "c507b97b9fe408de",
+      "date": 1552685899953
+    },
+    {
+      "type": "edit",
+      "id": "80f1d495f10d1fb8",
+      "item": {
+        "type": "graphviz",
+        "id": "80f1d495f10d1fb8",
+        "text": "DOT FROM lineup-diagrammed"
+      },
+      "date": 1552685927999
+    },
+    {
+      "type": "move",
+      "order": [
+        "9ae0793c4485c610",
+        "afd5e912f70d25b1",
+        "80f1d495f10d1fb8",
+        "d326257aa98a2bb4",
+        "c507b97b9fe408de"
+      ],
+      "id": "80f1d495f10d1fb8",
+      "date": 1552685945147
+    },
+    {
+      "type": "edit",
+      "id": "afd5e912f70d25b1",
+      "item": {
+        "type": "paragraph",
+        "id": "afd5e912f70d25b1",
+        "text": "Need some way to transclude one reference implementation of the markup. Make this employ collaborative linking such that anyone can fine tune drawing markup used pervasively in a source. [https://github.com/dobbs/wiki-plugin-graphviz/pull/5#issuecomment-472870111 github]"
+      },
+      "date": 1552685992882
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "5ecf13ba85840790",
+        "text": "Here is a strange cors situation. I'm in http site with https site in my lineup. I call up Lineup Diagram which fails in Graphviz plugin's bind waiting for moduleLoaded."
+      },
+      "after": "9ae0793c4485c610",
+      "id": "5ecf13ba85840790",
+      "date": 1552787791301
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "html",
+        "id": "5e9c2016cc9b5452",
+        "text": "<img width=100% src=https://matrix.org/_matrix/media/v1/download/matrix.org/gnkgrZnEZngXZkHmbjihOVKd>"
+      },
+      "after": "5ecf13ba85840790",
+      "id": "5e9c2016cc9b5452",
+      "date": 1552787794736
+    },
+    {
+      "type": "edit",
+      "id": "5ecf13ba85840790",
+      "item": {
+        "type": "paragraph",
+        "id": "5ecf13ba85840790",
+        "text": "Here is a strange cors situation. I'm in http site with https site in my lineup. I call up Lineup Diagram which fails in Graphviz plugin's bind waiting for moduleLoaded. Did wiki.sight(...).get(...) fix this?"
+      },
+      "date": 1552787864254
+    },
+    {
+      "type": "edit",
+      "id": "80f1d495f10d1fb8",
+      "item": {
+        "type": "graphviz",
+        "id": "80f1d495f10d1fb8",
+        "text": "DOT FROM lineup-diagram"
+      },
+      "date": 1553531256472,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1553531295835
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "9a4c4bfe269a1540",
+        "text": "The \"diagram loading\" shows up a lot longer when visiting lots of pages. We'll notice the improvement when we get that parallelism working. We will also create a lot more server traffic if diagrams get popular."
+      },
+      "after": "9ae0793c4485c610",
+      "id": "9a4c4bfe269a1540",
+      "date": 1553566646668
+    },
+    {
+      "type": "edit",
+      "id": "9a4c4bfe269a1540",
+      "item": {
+        "type": "paragraph",
+        "id": "9a4c4bfe269a1540",
+        "text": "The \"diagram loading\" shows up a lot longer when visiting lots of pages. We'll notice the improvement when we get that parallelism working. We will also create a lot more server traffic if diagrams get popular. [https://github.com/dobbs/wiki-plugin-graphviz/pull/7 github]"
+      },
+      "date": 1553566676934
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "04962797e4a0d25d",
+        "text": "An easy way to call up [[Lineup Diagram]] at will is simply to search for it. This will break if we add it to about pages. Consider [[Hamburger Menu]] instead."
+      },
+      "after": "9a4c4bfe269a1540",
+      "id": "04962797e4a0d25d",
+      "date": 1553570771707
+    },
+    {
+      "type": "edit",
+      "id": "04962797e4a0d25d",
+      "item": {
+        "type": "paragraph",
+        "id": "04962797e4a0d25d",
+        "text": "An easy way to call up [[Lineup Diagram]] at will is simply to search for it. This will break if we add it to about pages. Consider [[Hamburger Menu]] instead. [https://github.com/fedwiki/wiki-client/pull/228 github]"
+      },
+      "date": 1553570913384
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "2c4b16340afd08ba",
+        "text": "Thompson uses [[Preview Next Diagram]] to read ahead and alongside the storyline he has developed. We've considered this idea before. See [[Speed Read]]"
+      },
+      "after": "9ae0793c4485c610",
+      "id": "2c4b16340afd08ba",
+      "date": 1553571072227
+    },
+    {
+      "type": "add",
+      "id": "49fd6a63ac3d3bac",
+      "item": {
+        "type": "paragraph",
+        "id": "49fd6a63ac3d3bac",
+        "text": "We always planned on following all of the links on a page at the same time. Now we correctly [[Promise Pages for Links]] and resolve these when we need them."
+      },
+      "after": "9ae0793c4485c610",
+      "date": 1553609438074
+    },
+    {
+      "type": "edit",
+      "id": "49fd6a63ac3d3bac",
+      "item": {
+        "type": "paragraph",
+        "id": "49fd6a63ac3d3bac",
+        "text": "We always planned on following all of the links on a page at the same time. Now we correctly [[Promise Pages for Links]] and resolve these when we need them. [https://github.com/dobbs/wiki-plugin-graphviz/pull/7 github]"
+      },
+      "date": 1553609475337
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "0160dd6295428a2a",
+        "text": "Add WHERE FOLD conditions for Pagefold regions."
+      },
+      "id": "0160dd6295428a2a",
+      "date": 1555048064111
+    },
+    {
+      "type": "add",
+      "id": "dd472350fbb8ea5f",
+      "item": {
+        "type": "paragraph",
+        "id": "dd472350fbb8ea5f",
+        "text": "We correctly follow links across site boundaries and even into pages stored in browser local storage."
+      },
+      "after": "9ae0793c4485c610",
+      "date": 1556229860343
+    },
+    {
+      "type": "move",
+      "order": [
+        "9ae0793c4485c610",
+        "0160dd6295428a2a",
+        "dd472350fbb8ea5f",
+        "49fd6a63ac3d3bac",
+        "2c4b16340afd08ba",
+        "9a4c4bfe269a1540",
+        "04962797e4a0d25d",
+        "5ecf13ba85840790",
+        "5e9c2016cc9b5452",
+        "afd5e912f70d25b1",
+        "80f1d495f10d1fb8",
+        "d326257aa98a2bb4",
+        "c507b97b9fe408de"
+      ],
+      "id": "9ae0793c4485c610",
+      "date": 1556229883193
+    },
+    {
+      "type": "move",
+      "order": [
+        "9ae0793c4485c610",
+        "dd472350fbb8ea5f",
+        "0160dd6295428a2a",
+        "49fd6a63ac3d3bac",
+        "2c4b16340afd08ba",
+        "9a4c4bfe269a1540",
+        "04962797e4a0d25d",
+        "5ecf13ba85840790",
+        "5e9c2016cc9b5452",
+        "afd5e912f70d25b1",
+        "80f1d495f10d1fb8",
+        "d326257aa98a2bb4",
+        "c507b97b9fe408de"
+      ],
+      "id": "dd472350fbb8ea5f",
+      "date": 1556229886577
+    }
+  ]
+}

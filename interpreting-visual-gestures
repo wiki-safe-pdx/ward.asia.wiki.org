@@ -1,0 +1,162 @@
+{
+  "title": "Interpreting Visual Gestures",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "abab6f14fec07f77",
+      "text": "If you grab a point in a graph and drag it, what are you trying to change? I posit, the engineer wants to change the model while the scientist wants to change the view. A plot library catering to one or the other will thus work differently."
+    },
+    {
+      "type": "paragraph",
+      "id": "36614670c96cdde6",
+      "text": "It is said that a scientist builds things to acquire knowledge while an engineer acquires knowledge to build things. Both experiment. But one experiments before plotting, the other after."
+    },
+    {
+      "type": "paragraph",
+      "id": "ddf762a0392b07f8",
+      "text": "[[Bret Victor]] promotes deep and direct interaction with models as a way of extending our human ability to think about systems. Understand the system so as to change the world."
+    },
+    {
+      "type": "paragraph",
+      "id": "1d95d9bf1b9608a1",
+      "text": "[[Plotly]] is the self-declared collaboration platform for modern data science. It provides a view into data from experiments conducted and controlled elsewhere. Understanding the data so as to know the world."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Interpreting Visual Gestures",
+        "story": []
+      },
+      "date": 1473865578643
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "abab6f14fec07f77"
+      },
+      "id": "abab6f14fec07f77",
+      "type": "add",
+      "date": 1473865606692
+    },
+    {
+      "type": "edit",
+      "id": "abab6f14fec07f77",
+      "item": {
+        "type": "paragraph",
+        "id": "abab6f14fec07f77",
+        "text": "If you grab a point in a graph and drag it, what are you trying to change? I posit, the engineer wants to change the model while the scientist wants to change the view. A plot library catering to one or the other will thus work differently."
+      },
+      "date": 1473865948141
+    },
+    {
+      "type": "add",
+      "id": "36614670c96cdde6",
+      "item": {
+        "type": "paragraph",
+        "id": "36614670c96cdde6",
+        "text": "It is said that a scientist builds things to acquire knowledge while an engineer acquires knowledge to build things. Both experiment. But the pace of iteration is wildly different."
+      },
+      "after": "abab6f14fec07f77",
+      "date": 1473866168168
+    },
+    {
+      "type": "edit",
+      "id": "36614670c96cdde6",
+      "item": {
+        "type": "paragraph",
+        "id": "36614670c96cdde6",
+        "text": "It is said that a scientist builds things to acquire knowledge while an engineer acquires knowledge to build things. Both experiment but iterating at a distinctly different pace."
+      },
+      "date": 1473866264671
+    },
+    {
+      "type": "edit",
+      "id": "36614670c96cdde6",
+      "item": {
+        "type": "paragraph",
+        "id": "36614670c96cdde6",
+        "text": "It is said that a scientist builds things to acquire knowledge while an engineer acquires knowledge to build things. Both experiment but iterate at a different pace."
+      },
+      "date": 1473866308345
+    },
+    {
+      "type": "edit",
+      "id": "36614670c96cdde6",
+      "item": {
+        "type": "paragraph",
+        "id": "36614670c96cdde6",
+        "text": "It is said that a scientist builds things to acquire knowledge while an engineer acquires knowledge to build things. Both experiment, but iterate at a different pace."
+      },
+      "date": 1473866320180
+    },
+    {
+      "type": "edit",
+      "id": "36614670c96cdde6",
+      "item": {
+        "type": "paragraph",
+        "id": "36614670c96cdde6",
+        "text": "It is said that a scientist builds things to acquire knowledge while an engineer acquires knowledge to build things."
+      },
+      "date": 1473866466884
+    },
+    {
+      "type": "edit",
+      "id": "36614670c96cdde6",
+      "item": {
+        "type": "paragraph",
+        "id": "36614670c96cdde6",
+        "text": "It is said that a scientist builds things to acquire knowledge while an engineer acquires knowledge to build things. Both experiment. But one experiments before plotting, the other after."
+      },
+      "date": 1473866623410
+    },
+    {
+      "type": "add",
+      "id": "ddf762a0392b07f8",
+      "item": {
+        "type": "paragraph",
+        "id": "ddf762a0392b07f8",
+        "text": "[[Bret Victor]] promotes deep and direct interaction with models as a way of extending our human ability to think about systems."
+      },
+      "after": "36614670c96cdde6",
+      "date": 1473866828041
+    },
+    {
+      "type": "edit",
+      "id": "ddf762a0392b07f8",
+      "item": {
+        "type": "paragraph",
+        "id": "ddf762a0392b07f8",
+        "text": "[[Bret Victor]] promotes deep and direct interaction with models as a way of extending our human ability to think about systems. Understand the system so as to change the world."
+      },
+      "date": 1473866903627
+    },
+    {
+      "type": "add",
+      "id": "1d95d9bf1b9608a1",
+      "item": {
+        "type": "paragraph",
+        "id": "1d95d9bf1b9608a1",
+        "text": "[[Plotly]] is the self-declared collaboration platform for modern data science. It provides a view into data from experiments conducted and controlled independently of the rendering. Understanding the data so as to know the world."
+      },
+      "after": "ddf762a0392b07f8",
+      "date": 1473867650303
+    },
+    {
+      "type": "edit",
+      "id": "1d95d9bf1b9608a1",
+      "item": {
+        "type": "paragraph",
+        "id": "1d95d9bf1b9608a1",
+        "text": "[[Plotly]] is the self-declared collaboration platform for modern data science. It provides a view into data from experiments conducted and controlled elsewhere. Understanding the data so as to know the world."
+      },
+      "date": 1473867685655
+    },
+    {
+      "type": "fork",
+      "site": "ward.bay.wiki.org",
+      "date": 1473868505504
+    }
+  ]
+}

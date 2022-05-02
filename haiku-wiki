@@ -1,0 +1,458 @@
+{
+  "title": "Haiku Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d31e2e9a9579cb9d",
+      "text": "We sense that writing in the wiki can be poetic where meaning emerges from the [[Whitespace]] between words that are each rich with meaning. "
+    },
+    {
+      "type": "paragraph",
+      "id": "d336e73422b34ea6",
+      "text": "We also sense that systems that come alive are [[Autopoietic Systems]] that are based on each element being beautiful in and of itself. "
+    },
+    {
+      "type": "paragraph",
+      "id": "0e870c53d834b2f9",
+      "text": "Haiku poetry creates the discipline of expressing powerful meaning in the simplest of forms, poems composed of three lines, where the first and the third line has five syllables and the second line has seven. "
+    },
+    {
+      "type": "paragraph",
+      "id": "be4be70dbea8b01d",
+      "text": "We strive to experience the simplest of patterns, one that holds powerful meaning on each wiki page as we seek to create delight for our future self and potentially inspire wonder in others."
+    },
+    {
+      "type": "paragraph",
+      "id": "d05171ad0dbda8b9",
+      "text": "So we write – starting with an intention sensed in the title, we challenge ourselves to distill essence to six paragraphs on a page which has three links to other concepts that hint at a greater meaning beckoning to unfold. "
+    },
+    {
+      "type": "paragraph",
+      "id": "93697b1c3a1a0619",
+      "text": "Perhaps, just perhaps, we might see wikis come alive, for ourselves, for others, and even, perhaps for the [[Markov Monkey]]. "
+    },
+    {
+      "type": "graphviz",
+      "id": "46cd9a5596567cf1",
+      "text": "DOT FROM preview-next-diagram"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Haiku Wiki",
+        "story": []
+      },
+      "date": 1610307985611
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d31e2e9a9579cb9d"
+      },
+      "id": "d31e2e9a9579cb9d",
+      "type": "add",
+      "date": 1610308006178
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki is a [[Poetry of Patterns]]."
+      },
+      "date": 1610308063736
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki is a [[Poetry of Patterns]] where meaning emerges from the whitespece between words. "
+      },
+      "date": 1610308095865
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki is a [[Poetry of Patterns]] where meaning emerges from the [[White Space]] between words. "
+      },
+      "date": 1610308116143
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki is a [[Poetry of Patterns]] where meaning emerges from the [[White Space]] between words that hold meaning. "
+      },
+      "date": 1610308145189
+    },
+    {
+      "type": "add",
+      "id": "d336e73422b34ea6",
+      "item": {
+        "type": "paragraph",
+        "id": "d336e73422b34ea6",
+        "text": "We also sense that systems that come alive are [[Autopoietic Systems]] are based on each element being whole in and of itself. "
+      },
+      "after": "d31e2e9a9579cb9d",
+      "date": 1610308295537
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0e870c53d834b2f9"
+      },
+      "id": "0e870c53d834b2f9",
+      "type": "add",
+      "after": "d336e73422b34ea6",
+      "date": 1610308299793
+    },
+    {
+      "type": "edit",
+      "id": "0e870c53d834b2f9",
+      "item": {
+        "type": "paragraph",
+        "id": "0e870c53d834b2f9",
+        "text": "Haiku poetry creates a the discipline of expressing powerful meaning the simplest of forms in three lines, where the first and the third line has five syllables and the second line has seven. "
+      },
+      "date": 1610308422567
+    },
+    {
+      "type": "add",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that hold powerful meaning as we define powerful meaning on each page of a wiki. "
+      },
+      "after": "0e870c53d834b2f9",
+      "date": 1610308473788
+    },
+    {
+      "type": "add",
+      "id": "d05171ad0dbda8b9",
+      "item": {
+        "type": "paragraph",
+        "id": "d05171ad0dbda8b9",
+        "text": "So we explore – starting with an intention sensed in the title, we challenger ourselves to distill essense to six paragraphs on a page which has three links to other concepts that hint at a greater meaning beckoning to unfold. "
+      },
+      "after": "be4be70dbea8b01d",
+      "date": 1610308567007
+    },
+    {
+      "type": "add",
+      "id": "93697b1c3a1a0619",
+      "item": {
+        "type": "paragraph",
+        "id": "93697b1c3a1a0619",
+        "text": "Perhaps, just perhaps, we will see wikis come alive. "
+      },
+      "after": "d05171ad0dbda8b9",
+      "date": 1610308589874
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "46cd9a5596567cf1"
+      },
+      "id": "46cd9a5596567cf1",
+      "type": "add",
+      "after": "93697b1c3a1a0619",
+      "date": 1610308600409
+    },
+    {
+      "type": "edit",
+      "id": "46cd9a5596567cf1",
+      "item": {
+        "type": "graphviz",
+        "id": "46cd9a5596567cf1",
+        "text": "DOT FROM preview-next-diagram"
+      },
+      "date": 1610308612765
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki is a [[Poetry of Patterns]] where meaning emerges from the [[White Space]] between words that are each pregnant with meaning. "
+      },
+      "date": 1610308640335
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki is a [[Poetry of Patterns]] where meaning emerges from the [[White Space]] between words that are each rich with meaning. "
+      },
+      "date": 1610308659256
+    },
+    {
+      "type": "edit",
+      "id": "d336e73422b34ea6",
+      "item": {
+        "type": "paragraph",
+        "id": "d336e73422b34ea6",
+        "text": "We also sense that systems that come alive are [[Autopoietic Systems]] that are based on each element being whole in and of itself. "
+      },
+      "date": 1610308677083
+    },
+    {
+      "type": "edit",
+      "id": "0e870c53d834b2f9",
+      "item": {
+        "type": "paragraph",
+        "id": "0e870c53d834b2f9",
+        "text": "Haiku poetry creates a the discipline of expressing powerful meaning the simplest of forms of three lines, where the first and the third line has five syllables and the second line has seven. "
+      },
+      "date": 1610308732180
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that hold powerful meaning as we define poetic meaning on each page of a wiki. "
+      },
+      "date": 1610308754218
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning as we define poetic meaning on each page of a wiki. "
+      },
+      "date": 1610308764223
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning as we create poetic meaning on each page of a wiki. "
+      },
+      "date": 1610308773854
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning as we create poetic meaning in each page of a wiki. "
+      },
+      "date": 1610308779708
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning as we seek to create delight for our future self and others in each page of a wiki."
+      },
+      "date": 1610308861628
+    },
+    {
+      "type": "edit",
+      "id": "d05171ad0dbda8b9",
+      "item": {
+        "type": "paragraph",
+        "id": "d05171ad0dbda8b9",
+        "text": "So we explore – starting with an intention sensed in the title, we challenge ourselves to distill essense to six paragraphs on a page which has three links to other concepts that hint at a greater meaning beckoning to unfold. "
+      },
+      "date": 1610308913100
+    },
+    {
+      "type": "edit",
+      "id": "0e870c53d834b2f9",
+      "item": {
+        "type": "paragraph",
+        "id": "0e870c53d834b2f9",
+        "text": "Haiku poetry creates a the discipline of expressing powerful meaning in the simplest of forms of three lines, where the first and the third line has five syllables and the second line has seven. "
+      },
+      "date": 1610308998674
+    },
+    {
+      "type": "edit",
+      "id": "0e870c53d834b2f9",
+      "item": {
+        "type": "paragraph",
+        "id": "0e870c53d834b2f9",
+        "text": "Haiku poetry creates a the discipline of expressing powerful meaning in the simplest of forms, poems composed of three lines, where the first and the third line has five syllables and the second line has seven. "
+      },
+      "date": 1610309060227
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning for each wiki page as we seek to create delight for our future self and others."
+      },
+      "date": 1610309125235
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning for each wiki page as we seek to create delight for our future self and inspire wonder in others."
+      },
+      "date": 1610309877600
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning for each wiki page as we seek to create delight for our future self and perhaps to inspire wonder in others."
+      },
+      "date": 1611425958675
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning for each wiki page as we seek to create delight for our future self and potentially to inspire wonder in others."
+      },
+      "date": 1611426018613
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We wonder if we might find the simplest pattern that holds powerful meaning for each wiki page as we seek to create delight for our future self and potentially inspire wonder in others."
+      },
+      "date": 1611427317689
+    },
+    {
+      "type": "edit",
+      "id": "93697b1c3a1a0619",
+      "item": {
+        "type": "paragraph",
+        "id": "93697b1c3a1a0619",
+        "text": "Perhaps, just perhaps, we might see wikis come alive. "
+      },
+      "date": 1611540433237
+    },
+    {
+      "type": "edit",
+      "id": "d05171ad0dbda8b9",
+      "item": {
+        "type": "paragraph",
+        "id": "d05171ad0dbda8b9",
+        "text": "So we explore – starting with an intention sensed in the title, we challenge ourselves to distill essence to six paragraphs on a page which has three links to other concepts that hint at a greater meaning beckoning to unfold. "
+      },
+      "date": 1611541866334
+    },
+    {
+      "type": "edit",
+      "id": "0e870c53d834b2f9",
+      "item": {
+        "type": "paragraph",
+        "id": "0e870c53d834b2f9",
+        "text": "Haiku poetry creates the discipline of expressing powerful meaning in the simplest of forms, poems composed of three lines, where the first and the third line has five syllables and the second line has seven. "
+      },
+      "date": 1611590191549
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki is a [[Poetry of Patterns]] where meaning emerges from the [[Whitespace]] between words that are each rich with meaning. "
+      },
+      "date": 1618241821074
+    },
+    {
+      "type": "edit",
+      "id": "d336e73422b34ea6",
+      "item": {
+        "type": "paragraph",
+        "id": "d336e73422b34ea6",
+        "text": "We also sense that systems that come alive are [[Autopoietic Systems]] that are based on each element being beautiful in and of itself. "
+      },
+      "date": 1623436425459
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki is poetic in nature where meaning emerges from the [[Whitespace]] between words that are each rich with meaning. "
+      },
+      "date": 1624197400694
+    },
+    {
+      "type": "edit",
+      "id": "d31e2e9a9579cb9d",
+      "item": {
+        "type": "paragraph",
+        "id": "d31e2e9a9579cb9d",
+        "text": "We sense that writing in the wiki can be poetic where meaning emerges from the [[Whitespace]] between words that are each rich with meaning. "
+      },
+      "date": 1624197424962
+    },
+    {
+      "type": "edit",
+      "id": "be4be70dbea8b01d",
+      "item": {
+        "type": "paragraph",
+        "id": "be4be70dbea8b01d",
+        "text": "We strive to experience the simplest of patterns, one that holds powerful meaning on each wiki page as we seek to create delight for our future self and potentially inspire wonder in others."
+      },
+      "date": 1624197534393
+    },
+    {
+      "type": "edit",
+      "id": "d05171ad0dbda8b9",
+      "item": {
+        "type": "paragraph",
+        "id": "d05171ad0dbda8b9",
+        "text": "So we write – starting with an intention sensed in the title, we challenge ourselves to distill essence to six paragraphs on a page which has three links to other concepts that hint at a greater meaning beckoning to unfold. "
+      },
+      "date": 1624197552653
+    },
+    {
+      "type": "edit",
+      "id": "93697b1c3a1a0619",
+      "item": {
+        "type": "paragraph",
+        "id": "93697b1c3a1a0619",
+        "text": "Perhaps, just perhaps, we might see wikis come alive, for ourselves, for others, and even, perhaps for the [[Markov Monkey]]. "
+      },
+      "date": 1624197596396
+    },
+    {
+      "type": "fork",
+      "site": "wellspring.fed.wiki",
+      "date": 1630176169346
+    }
+  ]
+}

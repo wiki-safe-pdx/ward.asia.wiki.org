@@ -1,0 +1,800 @@
+{
+  "title": "Lightning for Annotate 2021",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7b4987d5a5569190",
+      "text": "We've been invited to present a lightning talk in the future of note taking track at Hypothesis's annual I Annotate conference. Friends advised I skip my usual explanations which confuse even those in my community. [https://iannotate.org/2021/program.html site]"
+    },
+    {
+      "type": "pagefold",
+      "id": "1899fd2c297325f1",
+      "text": "."
+    },
+    {
+      "type": "markdown",
+      "id": "88886337625b0062",
+      "text": "What are the key __trends__?"
+    },
+    {
+      "type": "paragraph",
+      "id": "65e526f3dd5e1ec6",
+      "text": "Clear-cutting of the internet."
+    },
+    {
+      "type": "paragraph",
+      "id": "37fefa973460781b",
+      "text": "No business is honest about their intentions."
+    },
+    {
+      "type": "paragraph",
+      "id": "ea6c6bb535825493",
+      "text": "Seeking a quiet place to listen to the wind in the trees."
+    },
+    {
+      "type": "paragraph",
+      "id": "ee91c4826ef69ce0",
+      "text": "More like a park than a shopping mall."
+    },
+    {
+      "type": "pagefold",
+      "id": "beb1469a7e140d04",
+      "text": "."
+    },
+    {
+      "type": "markdown",
+      "id": "3a18550455bfa1f3",
+      "text": "What's your __vision__ & how has that shaped your work?\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "4b14026133cbad34",
+      "text": "Profligate copying as a foundation for creativity.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "aa32ec794cfd42d9",
+      "text": "Chorus of voices. Improvising. "
+    },
+    {
+      "type": "paragraph",
+      "id": "65c255349df34d77",
+      "text": "Shaping the whitespace between ideas."
+    },
+    {
+      "type": "paragraph",
+      "id": "db0e4b45e9e81ff2",
+      "text": "Mixed content on pages sufficient to get work done."
+    },
+    {
+      "type": "paragraph",
+      "id": "caa45ed70cb81e24",
+      "text": "Your server can be as special as it needs to be."
+    },
+    {
+      "type": "paragraph",
+      "id": "65069826635036aa",
+      "text": "Federation outposts."
+    },
+    {
+      "type": "pagefold",
+      "id": "201237d92a422274",
+      "text": "."
+    },
+    {
+      "type": "markdown",
+      "id": "fe05a0bcfc31752b",
+      "text": "How do __annotation__ and standards play a role?"
+    },
+    {
+      "type": "paragraph",
+      "id": "2a89d2087cb8f75c",
+      "text": "Pages have a history but not a home."
+    },
+    {
+      "type": "paragraph",
+      "id": "0e488263ed9092b1",
+      "text": "Annotated with intention, independently evaluated."
+    },
+    {
+      "type": "paragraph",
+      "id": "3ca8f2e96973f5e3",
+      "text": "Robot critic outpost anyone can own."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Lightning for Annotate 2021",
+        "story": []
+      },
+      "date": 1624368253796
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7b4987d5a5569190"
+      },
+      "id": "7b4987d5a5569190",
+      "type": "add",
+      "date": 1624368260850
+    },
+    {
+      "type": "edit",
+      "id": "7b4987d5a5569190",
+      "item": {
+        "type": "paragraph",
+        "id": "7b4987d5a5569190",
+        "text": "We've been invited to present a lightning talk in the future of note taking track at Hypothesis's annual I Annotate conference. I've been advised to skip my usual explanations which confuse even those in my community."
+      },
+      "date": 1624368487450
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "88886337625b0062"
+      },
+      "id": "88886337625b0062",
+      "type": "add",
+      "after": "7b4987d5a5569190",
+      "date": 1624368541312
+    },
+    {
+      "type": "edit",
+      "id": "88886337625b0062",
+      "item": {
+        "type": "paragraph",
+        "id": "88886337625b0062",
+        "text": "- What are the key trends?\n"
+      },
+      "date": 1624368548547
+    },
+    {
+      "type": "add",
+      "id": "3a18550455bfa1f3",
+      "item": {
+        "type": "paragraph",
+        "id": "3a18550455bfa1f3",
+        "text": "- What's your vision & how has that shaped your work?\n"
+      },
+      "after": "88886337625b0062",
+      "date": 1624368551696
+    },
+    {
+      "type": "add",
+      "id": "fe05a0bcfc31752b",
+      "item": {
+        "type": "paragraph",
+        "id": "fe05a0bcfc31752b",
+        "text": "- How do annotation and annotation  standards play a role?"
+      },
+      "after": "3a18550455bfa1f3",
+      "date": 1624368553505
+    },
+    {
+      "type": "add",
+      "id": "db0e4b45e9e81ff2",
+      "item": {
+        "type": "paragraph",
+        "id": "db0e4b45e9e81ff2",
+        "text": "Mixed Content on pages sufficient to get work done.\n"
+      },
+      "after": "fe05a0bcfc31752b",
+      "date": 1624368633978
+    },
+    {
+      "type": "add",
+      "id": "4b14026133cbad34",
+      "item": {
+        "type": "paragraph",
+        "id": "4b14026133cbad34",
+        "text": "Profligate Copying as a foundation for creativity.\n\n"
+      },
+      "after": "db0e4b45e9e81ff2",
+      "date": 1624368635025
+    },
+    {
+      "type": "edit",
+      "id": "3a18550455bfa1f3",
+      "item": {
+        "type": "paragraph",
+        "id": "3a18550455bfa1f3",
+        "text": "What's your vision & how has that shaped your work?\n"
+      },
+      "date": 1624368659812
+    },
+    {
+      "type": "edit",
+      "id": "88886337625b0062",
+      "item": {
+        "type": "paragraph",
+        "id": "88886337625b0062",
+        "text": "What are the key trends?\n"
+      },
+      "date": 1624368665385
+    },
+    {
+      "type": "edit",
+      "id": "fe05a0bcfc31752b",
+      "item": {
+        "type": "paragraph",
+        "id": "fe05a0bcfc31752b",
+        "text": "How do annotation and standards play a role?"
+      },
+      "date": 1624368678108
+    },
+    {
+      "type": "edit",
+      "id": "db0e4b45e9e81ff2",
+      "item": {
+        "type": "paragraph",
+        "id": "db0e4b45e9e81ff2",
+        "text": "Mixed content on pages sufficient to get work done.\n"
+      },
+      "date": 1624368689058
+    },
+    {
+      "type": "edit",
+      "id": "4b14026133cbad34",
+      "item": {
+        "type": "paragraph",
+        "id": "4b14026133cbad34",
+        "text": "Profligate copying as a foundation for creativity.\n\n"
+      },
+      "date": 1624368694511
+    },
+    {
+      "type": "add",
+      "id": "aa32ec794cfd42d9",
+      "item": {
+        "type": "paragraph",
+        "id": "aa32ec794cfd42d9",
+        "text": "Improvisation in a chorus of voices."
+      },
+      "after": "4b14026133cbad34",
+      "date": 1624368791763
+    },
+    {
+      "type": "edit",
+      "id": "aa32ec794cfd42d9",
+      "item": {
+        "type": "paragraph",
+        "id": "aa32ec794cfd42d9",
+        "text": "Chorus of voices."
+      },
+      "date": 1624368808795
+    },
+    {
+      "type": "add",
+      "id": "65c255349df34d77",
+      "item": {
+        "type": "paragraph",
+        "id": "65c255349df34d77",
+        "text": "Shaping the whitespace between ideas."
+      },
+      "after": "aa32ec794cfd42d9",
+      "date": 1624368867847
+    },
+    {
+      "type": "edit",
+      "id": "aa32ec794cfd42d9",
+      "item": {
+        "type": "paragraph",
+        "id": "aa32ec794cfd42d9",
+        "text": "Chorus of voices. Improvising. "
+      },
+      "date": 1624368889615
+    },
+    {
+      "type": "edit",
+      "id": "88886337625b0062",
+      "item": {
+        "type": "paragraph",
+        "id": "88886337625b0062",
+        "text": "What are the key trends? Television."
+      },
+      "date": 1624368924928
+    },
+    {
+      "type": "edit",
+      "id": "88886337625b0062",
+      "item": {
+        "type": "paragraph",
+        "id": "88886337625b0062",
+        "text": "What are the key trends?"
+      },
+      "date": 1624368943105
+    },
+    {
+      "type": "add",
+      "id": "65069826635036aa",
+      "item": {
+        "type": "paragraph",
+        "id": "65069826635036aa",
+        "text": "Chronological Scaling."
+      },
+      "after": "65c255349df34d77",
+      "date": 1624368991466
+    },
+    {
+      "type": "edit",
+      "id": "7b4987d5a5569190",
+      "item": {
+        "type": "paragraph",
+        "id": "7b4987d5a5569190",
+        "text": "We've been invited to present a lightning talk in the future of note taking track at Hypothesis's annual I Annotate conference. Friends advised I skip my usual explanations which confuse even those in my community."
+      },
+      "date": 1624369482442
+    },
+    {
+      "type": "add",
+      "id": "65e526f3dd5e1ec6",
+      "item": {
+        "type": "paragraph",
+        "id": "65e526f3dd5e1ec6",
+        "text": "Clear-cutting the internet."
+      },
+      "after": "65069826635036aa",
+      "date": 1624369578821
+    },
+    {
+      "id": "65e526f3dd5e1ec6",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "3a18550455bfa1f3",
+        "fe05a0bcfc31752b",
+        "db0e4b45e9e81ff2",
+        "4b14026133cbad34",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "65069826635036aa"
+      ],
+      "date": 1624369581992
+    },
+    {
+      "id": "4b14026133cbad34",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "fe05a0bcfc31752b",
+        "db0e4b45e9e81ff2",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "65069826635036aa"
+      ],
+      "date": 1624369611828
+    },
+    {
+      "id": "db0e4b45e9e81ff2",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "db0e4b45e9e81ff2",
+        "fe05a0bcfc31752b",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "65069826635036aa"
+      ],
+      "date": 1624369615570
+    },
+    {
+      "type": "add",
+      "id": "ea6c6bb535825493",
+      "item": {
+        "type": "paragraph",
+        "id": "ea6c6bb535825493",
+        "text": "A quiet place to listen to the wind in the trees."
+      },
+      "after": "65e526f3dd5e1ec6",
+      "date": 1624369664220
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "beb1469a7e140d04"
+      },
+      "id": "beb1469a7e140d04",
+      "type": "add",
+      "after": "65069826635036aa",
+      "date": 1624369675658
+    },
+    {
+      "type": "edit",
+      "id": "beb1469a7e140d04",
+      "item": {
+        "type": "pagefold",
+        "id": "beb1469a7e140d04",
+        "text": "."
+      },
+      "date": 1624369680965
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "201237d92a422274"
+      },
+      "id": "201237d92a422274",
+      "type": "add",
+      "after": "beb1469a7e140d04",
+      "date": 1624369683716
+    },
+    {
+      "type": "edit",
+      "id": "201237d92a422274",
+      "item": {
+        "type": "pagefold",
+        "id": "201237d92a422274",
+        "text": "."
+      },
+      "date": 1624369686716
+    },
+    {
+      "id": "beb1469a7e140d04",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "ea6c6bb535825493",
+        "beb1469a7e140d04",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "db0e4b45e9e81ff2",
+        "fe05a0bcfc31752b",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "65069826635036aa",
+        "201237d92a422274"
+      ],
+      "date": 1624369693132
+    },
+    {
+      "type": "edit",
+      "id": "65e526f3dd5e1ec6",
+      "item": {
+        "type": "paragraph",
+        "id": "65e526f3dd5e1ec6",
+        "text": "Clear-cutting of the internet."
+      },
+      "date": 1624369715954
+    },
+    {
+      "id": "201237d92a422274",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "ea6c6bb535825493",
+        "beb1469a7e140d04",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "db0e4b45e9e81ff2",
+        "201237d92a422274",
+        "fe05a0bcfc31752b",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "65069826635036aa"
+      ],
+      "date": 1624369783455
+    },
+    {
+      "id": "aa32ec794cfd42d9",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "ea6c6bb535825493",
+        "beb1469a7e140d04",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "aa32ec794cfd42d9",
+        "db0e4b45e9e81ff2",
+        "201237d92a422274",
+        "fe05a0bcfc31752b",
+        "65c255349df34d77",
+        "65069826635036aa"
+      ],
+      "date": 1624369800426
+    },
+    {
+      "id": "65c255349df34d77",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "ea6c6bb535825493",
+        "beb1469a7e140d04",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "db0e4b45e9e81ff2",
+        "201237d92a422274",
+        "fe05a0bcfc31752b",
+        "65069826635036aa"
+      ],
+      "date": 1624369809620
+    },
+    {
+      "type": "edit",
+      "id": "65069826635036aa",
+      "item": {
+        "type": "paragraph",
+        "id": "65069826635036aa",
+        "text": "Federation outposts."
+      },
+      "date": 1624369842790
+    },
+    {
+      "type": "add",
+      "id": "bd0f39d95e22b667",
+      "item": {
+        "type": "paragraph",
+        "id": "bd0f39d95e22b667",
+        "text": "Deno javascript deployed to the edge."
+      },
+      "after": "65069826635036aa",
+      "date": 1624369882605
+    },
+    {
+      "id": "65069826635036aa",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "ea6c6bb535825493",
+        "beb1469a7e140d04",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "db0e4b45e9e81ff2",
+        "65069826635036aa",
+        "201237d92a422274",
+        "fe05a0bcfc31752b",
+        "bd0f39d95e22b667"
+      ],
+      "date": 1624369887352
+    },
+    {
+      "id": "bd0f39d95e22b667",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "ea6c6bb535825493",
+        "beb1469a7e140d04",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "db0e4b45e9e81ff2",
+        "65069826635036aa",
+        "bd0f39d95e22b667",
+        "201237d92a422274",
+        "fe05a0bcfc31752b"
+      ],
+      "date": 1624369891504
+    },
+    {
+      "type": "add",
+      "id": "2a89d2087cb8f75c",
+      "item": {
+        "type": "paragraph",
+        "id": "2a89d2087cb8f75c",
+        "text": "Pages have a history but not a home."
+      },
+      "after": "fe05a0bcfc31752b",
+      "date": 1624370213340
+    },
+    {
+      "type": "add",
+      "id": "0e488263ed9092b1",
+      "item": {
+        "type": "paragraph",
+        "id": "0e488263ed9092b1",
+        "text": "Annotated with intention, independently evaluated."
+      },
+      "after": "2a89d2087cb8f75c",
+      "date": 1624371242124
+    },
+    {
+      "type": "remove",
+      "id": "bd0f39d95e22b667",
+      "date": 1624371296420
+    },
+    {
+      "type": "edit",
+      "id": "db0e4b45e9e81ff2",
+      "item": {
+        "type": "paragraph",
+        "id": "db0e4b45e9e81ff2",
+        "text": "Mixed content on pages sufficient to get work done."
+      },
+      "date": 1624371392772
+    },
+    {
+      "type": "add",
+      "id": "caa45ed70cb81e24",
+      "item": {
+        "type": "paragraph",
+        "id": "caa45ed70cb81e24",
+        "text": "Your server can be as special as it needs to be."
+      },
+      "after": "db0e4b45e9e81ff2",
+      "date": 1624371407927
+    },
+    {
+      "type": "add",
+      "id": "37fefa973460781b",
+      "item": {
+        "type": "paragraph",
+        "id": "37fefa973460781b",
+        "text": "I wouldn't trust anything someone else's business model."
+      },
+      "after": "65e526f3dd5e1ec6",
+      "date": 1624371553980
+    },
+    {
+      "type": "edit",
+      "id": "37fefa973460781b",
+      "item": {
+        "type": "paragraph",
+        "id": "37fefa973460781b",
+        "text": "No business is honest about their intentions."
+      },
+      "date": 1624371597825
+    },
+    {
+      "type": "edit",
+      "id": "ea6c6bb535825493",
+      "item": {
+        "type": "paragraph",
+        "id": "ea6c6bb535825493",
+        "text": "Seeking a quiet place to listen to the wind in the trees."
+      },
+      "date": 1624371615898
+    },
+    {
+      "type": "add",
+      "id": "ee91c4826ef69ce0",
+      "item": {
+        "type": "paragraph",
+        "id": "ee91c4826ef69ce0",
+        "text": "More like a park than a shopping mall."
+      },
+      "after": "ea6c6bb535825493",
+      "date": 1624371953567
+    },
+    {
+      "type": "add",
+      "id": "85348d63cdd98685",
+      "item": {
+        "type": "paragraph",
+        "id": "85348d63cdd98685",
+        "text": "about.fed.wiki"
+      },
+      "after": "3a18550455bfa1f3",
+      "date": 1624372016986
+    },
+    {
+      "type": "remove",
+      "id": "85348d63cdd98685",
+      "date": 1624372072486
+    },
+    {
+      "type": "edit",
+      "id": "88886337625b0062",
+      "item": {
+        "type": "markdown",
+        "id": "88886337625b0062",
+        "text": "What are the key __trends__?"
+      },
+      "date": 1624372143366
+    },
+    {
+      "type": "edit",
+      "id": "3a18550455bfa1f3",
+      "item": {
+        "type": "markdown",
+        "id": "3a18550455bfa1f3",
+        "text": "What's your __vision__ & how has that shaped your work?\n"
+      },
+      "date": 1624372162323
+    },
+    {
+      "type": "edit",
+      "id": "fe05a0bcfc31752b",
+      "item": {
+        "type": "markdown",
+        "id": "fe05a0bcfc31752b",
+        "text": "How do __annotation__ and standards play a role?"
+      },
+      "date": 1624372181355
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1899fd2c297325f1"
+      },
+      "id": "1899fd2c297325f1",
+      "type": "add",
+      "after": "0e488263ed9092b1",
+      "date": 1624372190695
+    },
+    {
+      "type": "edit",
+      "id": "1899fd2c297325f1",
+      "item": {
+        "type": "pagefold",
+        "id": "1899fd2c297325f1",
+        "text": "."
+      },
+      "date": 1624372193831
+    },
+    {
+      "id": "1899fd2c297325f1",
+      "type": "move",
+      "order": [
+        "7b4987d5a5569190",
+        "1899fd2c297325f1",
+        "88886337625b0062",
+        "65e526f3dd5e1ec6",
+        "37fefa973460781b",
+        "ea6c6bb535825493",
+        "ee91c4826ef69ce0",
+        "beb1469a7e140d04",
+        "3a18550455bfa1f3",
+        "4b14026133cbad34",
+        "aa32ec794cfd42d9",
+        "65c255349df34d77",
+        "db0e4b45e9e81ff2",
+        "caa45ed70cb81e24",
+        "65069826635036aa",
+        "201237d92a422274",
+        "fe05a0bcfc31752b",
+        "2a89d2087cb8f75c",
+        "0e488263ed9092b1"
+      ],
+      "date": 1624372197343
+    },
+    {
+      "type": "add",
+      "id": "3ca8f2e96973f5e3",
+      "item": {
+        "type": "paragraph",
+        "id": "3ca8f2e96973f5e3",
+        "text": "Robot critic outpost anyone can own."
+      },
+      "after": "0e488263ed9092b1",
+      "date": 1624372735618
+    },
+    {
+      "type": "edit",
+      "id": "7b4987d5a5569190",
+      "item": {
+        "type": "paragraph",
+        "id": "7b4987d5a5569190",
+        "text": "We've been invited to present a lightning talk in the future of note taking track at Hypothesis's annual I Annotate conference. Friends advised I skip my usual explanations which confuse even those in my community. [https://iannotate.org/2021/program.html site]"
+      },
+      "date": 1624373659730
+    }
+  ]
+}

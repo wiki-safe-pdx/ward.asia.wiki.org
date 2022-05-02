@@ -1,0 +1,119 @@
+{
+  "title": "Blockchain Timestamp",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "23c8cc0c88091ec8",
+      "text": "With OpenTimestamps I can, by various means, produce difficult to refute evidence that bits I have in my possession existed at a point in time. The exact configuration of bits is summarized by cryptographic means of high reliability. Further, the clock is similarly demonstrated to be reliable by public activity of those maintaining the blockchain where the two bits of information are joined. [https://opentimestamps,org site]\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "69d3b71e47a0a568",
+      "text": "This way if two parties were to meet in court claiming original authorship of some text, and both possessed copies suitably timestamped, then the jury might accept that the party with the earlier timestamp would have the more credible claim. This is a case where temporal relationship of independent actions is important.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "3a72854cc08d4af8",
+      "text": "Compare this to two parties meeting in court to resolve a contract dispute. If the injured party can produce a document carrying the irrefutable signatures of both parties a jury might reason that the written terms were agreed to and should be met. Here only one copy is required because it could not have been constructed independently.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "52cc91060b8fac07",
+      "text": "In both cases the jury would have to establish the identity of individuals, the meaning of words in documents, and the applicability of laws to the situation being argued. If the legal system is itself corrupt then even high quality evidence carries little weight.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "38c6801fbef182c7",
+      "text": "Let's imagine a more complex situation where some digital signatures and blockchain timestamps might be very useful. Imagine that in the height of a pandemic research labs around the world are both competing and cooperating to deliver the vaccine that will save lives and restore the economy. Individuals and organizations trade knowledge in the wiki federation within agreements that are forged in hours and compound daily. Everyone knows that someone will get rich and someone will get a Nobel but it is not yet clear who. The only thing that is sure is that those that don't participate can expect neither. \n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "112693f4b3b4907a",
+      "text": "I'm imagining federated wiki as the lab notebook and lab equipment configuration tool of choice. It is the wiki designed for doing work as well as talking about work. It could be epic. However, in my pessimistic thinking of the moment, I would guess that those who have corrupted the government will get rich and no woman will see a Nobel. \n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Blockchain Timestamp",
+        "story": []
+      },
+      "date": 1589901751663
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "23c8cc0c88091ec8"
+      },
+      "id": "23c8cc0c88091ec8",
+      "type": "add",
+      "date": 1589901789257
+    },
+    {
+      "type": "edit",
+      "id": "23c8cc0c88091ec8",
+      "item": {
+        "type": "paragraph",
+        "id": "23c8cc0c88091ec8",
+        "text": "With OpenTimestamps I can, by various means, produce difficult to refute evidence that bits I have in my possession existed at a point in time. The exact configuration of bits is summarized by cryptographic means of high reliability. Further, the clock is similarly demonstrated to be reliable by public activity of those maintaining the blockchain where the two bits of information are joined. [https://opentimestamps,org site]\n\n"
+      },
+      "date": 1589901804525
+    },
+    {
+      "type": "add",
+      "id": "69d3b71e47a0a568",
+      "item": {
+        "type": "paragraph",
+        "id": "69d3b71e47a0a568",
+        "text": "This way if two parties were to meet in court claiming original authorship of some text, and both possessed copies suitably timestamped, then the jury might accept that the party with the earlier timestamp would have the more credible claim. This is a case where temporal relationship of independent actions is important.\n\n"
+      },
+      "after": "23c8cc0c88091ec8",
+      "date": 1589901808677
+    },
+    {
+      "type": "add",
+      "id": "3a72854cc08d4af8",
+      "item": {
+        "type": "paragraph",
+        "id": "3a72854cc08d4af8",
+        "text": "Compare this to two parties meeting in court to resolve a contract dispute. If the injured party can produce a document carrying the irrefutable signatures of both parties a jury might reason that the written terms were agreed to and should be met. Here only one copy is required because it could not have been constructed independently.\n\n"
+      },
+      "after": "69d3b71e47a0a568",
+      "date": 1589901811988
+    },
+    {
+      "type": "add",
+      "id": "52cc91060b8fac07",
+      "item": {
+        "type": "paragraph",
+        "id": "52cc91060b8fac07",
+        "text": "In both cases the jury would have to establish the identity of individuals, the meaning of words in documents, and the applicability of laws to the situation being argued. If the legal system is itself corrupt then even high quality evidence carries little weight.\n\n"
+      },
+      "after": "3a72854cc08d4af8",
+      "date": 1589901814963
+    },
+    {
+      "type": "add",
+      "id": "38c6801fbef182c7",
+      "item": {
+        "type": "paragraph",
+        "id": "38c6801fbef182c7",
+        "text": "Let's imagine a more complex situation where some digital signatures and blockchain timestamps might be very useful. Imagine that in the height of a pandemic research labs around the world are both competing and cooperating to deliver the vaccine that will save lives and restore the economy. Individuals and organizations trade knowledge in the wiki federation within agreements that are forged in hours and compound daily. Everyone knows that someone will get rich and someone will get a Nobel but it is not yet clear who. The only thing that is sure is that those that don't participate can expect neither. \n\n"
+      },
+      "after": "52cc91060b8fac07",
+      "date": 1589901822412
+    },
+    {
+      "type": "add",
+      "id": "112693f4b3b4907a",
+      "item": {
+        "type": "paragraph",
+        "id": "112693f4b3b4907a",
+        "text": "I'm imagining federated wiki as the lab notebook and lab equipment configuration tool of choice. It is the wiki designed for doing work as well as talking about work. It could be epic. However, in my pessimistic thinking of the moment, I would guess that those who have corrupted the government will get rich and no woman will see a Nobel. \n"
+      },
+      "after": "38c6801fbef182c7",
+      "date": 1589901825528
+    }
+  ]
+}

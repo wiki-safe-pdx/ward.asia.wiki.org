@@ -1,0 +1,456 @@
+{
+  "title": "Nonuniform Signal Resampled",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "45c1223488ab952e",
+      "text": "A colleague reported high jitter when sampling fuel flow by counting pump cycles. I suggested reconstructing the signal before resampling at the desired rate. [https://en.wikipedia.org/wiki/Nonuniform_sampling wikipedia]"
+    },
+    {
+      "type": "markdown",
+      "id": "81297988529c33b0",
+      "text": "# Problem"
+    },
+    {
+      "type": "markdown",
+      "id": "a36e5a81efa5eabb",
+      "text": "_The sampling theory of Shannon can be generalized for the case of nonuniform samples, that is, samples not taken equally spaced in time. You're sampling samples. Look to reconstruct the first samples and then sample that._"
+    },
+    {
+      "type": "paragraph",
+      "id": "114f378f04c17e9c",
+      "text": "This is the sort of problem that should be easily explored within wiki given some handy signal processing plugins. But what plugins? See [[How We Connect Data]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "78e006231e654718",
+      "text": "I thought I'd explore the problem in a simpler environment, pure javascript on an html page. I wrote functions that provided likely process steps and then assembled them to explore the problem with plots at every step."
+    },
+    {
+      "type": "paragraph",
+      "id": "14796b9ee38cc984",
+      "text": "[http:/theme/resample.htm Plots] (view source for code)"
+    },
+    {
+      "type": "paragraph",
+      "id": "a54fda4739337ff1",
+      "text": "In my model I represented the pump signal as uniform samples that were zero everywhere except at the moment when the pump fired when they represented the fixed volume of the pump. I smoothed that by redistributing this volume evenly over the subsequent zero samples."
+    },
+    {
+      "type": "markdown",
+      "id": "9a3a5f2f549c82a1",
+      "text": "# Results"
+    },
+    {
+      "type": "paragraph",
+      "id": "2f967367a6885916",
+      "text": "I wasn't particularly impressed with my analysis or the tooling I had made to perform it. View Source for code."
+    },
+    {
+      "type": "paragraph",
+      "id": "f8dbd59d88cd7f54",
+      "text": "I vacillated choosing representations under the influence of javascript primitives. I ended up separating x from y, and using several different fixed sizes for records, not streams, though that might have been under the influence of the plot package."
+    },
+    {
+      "type": "paragraph",
+      "id": "c77cc17391669895",
+      "text": "I found that small changes in the pump volume had a strong influence on the interpolation and subsequent jitter. My test signal was low frequency. Instead I was observing a beat frequency between the regular pump and the timer resolution. Again, this comes from modeling choices, not the original problem."
+    },
+    {
+      "type": "markdown",
+      "id": "438d29dac425105f",
+      "text": "# Direction"
+    },
+    {
+      "type": "paragraph",
+      "id": "e723c5d09689ffea",
+      "text": "I've found my choice of using Plotly for charts useful because they render detailed data so well. But when I wanted to interact with the model behind the data I found myself on my own."
+    },
+    {
+      "type": "paragraph",
+      "id": "efeb102ef1ab07a6",
+      "text": "See [[Interpreting Visual Gestures]] where I start to explore why Plotly provides one thing while I would want another."
+    },
+    {
+      "type": "paragraph",
+      "id": "36c05fddd2411ee3",
+      "text": "Dom objects emit a variety of drag-related events. These are easily attached to objects that aren't already interpreting events on there own. Of course SVG objects are slightly different. [https://developer.mozilla.org/en-US/docs/Web/Events/drag page]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Nonuniform Signal Resampled",
+        "story": []
+      },
+      "date": 1473686040293
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "45c1223488ab952e"
+      },
+      "id": "45c1223488ab952e",
+      "type": "add",
+      "date": 1473686047881
+    },
+    {
+      "type": "edit",
+      "id": "45c1223488ab952e",
+      "item": {
+        "type": "paragraph",
+        "id": "45c1223488ab952e",
+        "text": "A colleague reported high jitter when sampling fuel flow by counting pump cycles. I suggested reconstructing the signal before resampling at the desired rate."
+      },
+      "date": 1473686188556
+    },
+    {
+      "type": "edit",
+      "id": "45c1223488ab952e",
+      "item": {
+        "type": "paragraph",
+        "id": "45c1223488ab952e",
+        "text": "A colleague reported high jitter when sampling fuel flow by counting pump cycles. I suggested reconstructing the signal before resampling at the desired rate. [https://en.wikipedia.org/wiki/Nonuniform_sampling wikipedia]"
+      },
+      "date": 1473686224692
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "114f378f04c17e9c"
+      },
+      "id": "114f378f04c17e9c",
+      "type": "add",
+      "after": "45c1223488ab952e",
+      "date": 1473687553776
+    },
+    {
+      "type": "edit",
+      "id": "114f378f04c17e9c",
+      "item": {
+        "type": "paragraph",
+        "id": "114f378f04c17e9c",
+        "text": "This is the sort of problem that should be easily explored with in wiki given some handy signal processing plugins. See [[How We Connect Data]]"
+      },
+      "date": 1473687657358
+    },
+    {
+      "type": "edit",
+      "id": "114f378f04c17e9c",
+      "item": {
+        "type": "paragraph",
+        "id": "114f378f04c17e9c",
+        "text": "This is the sort of problem that should be easily explored with in wiki given some handy signal processing plugins. But what plugins? See [[How We Connect Data]]"
+      },
+      "date": 1473687681078
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "78e006231e654718"
+      },
+      "id": "78e006231e654718",
+      "type": "add",
+      "after": "114f378f04c17e9c",
+      "date": 1473687686137
+    },
+    {
+      "type": "edit",
+      "id": "78e006231e654718",
+      "item": {
+        "type": "paragraph",
+        "id": "78e006231e654718",
+        "text": "I thought I'd explore the problem in a simpler environment, pure javascript on an html page. I wrote functions that provided likely process steps and then assembled them to explore the problem with plots at every step. [http:/theme/resample.htm page]"
+      },
+      "date": 1473687932638
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a54fda4739337ff1"
+      },
+      "id": "a54fda4739337ff1",
+      "type": "add",
+      "after": "78e006231e654718",
+      "date": 1473688363302
+    },
+    {
+      "type": "edit",
+      "id": "a54fda4739337ff1",
+      "item": {
+        "type": "paragraph",
+        "id": "a54fda4739337ff1",
+        "text": "In my model I represented the pump signal as uniform samples that were zero everywhere except at the moment when the pump fired when they represented the fixed volume of the pump."
+      },
+      "date": 1473688542632
+    },
+    {
+      "type": "edit",
+      "id": "a54fda4739337ff1",
+      "item": {
+        "type": "paragraph",
+        "id": "a54fda4739337ff1",
+        "text": "In my model I represented the pump signal as uniform samples that were zero everywhere except at the moment when the pump fired when they represented the fixed volume of the pump. I smoothed that by redistributing this volume evenly over the subsequent zero samples."
+      },
+      "date": 1473688651858
+    },
+    {
+      "type": "add",
+      "id": "2f967367a6885916",
+      "item": {
+        "type": "paragraph",
+        "id": "2f967367a6885916",
+        "text": "I wasn't particularly impressed with my analysis or the tooling I had made to perform it."
+      },
+      "after": "a54fda4739337ff1",
+      "date": 1473688913916
+    },
+    {
+      "type": "add",
+      "id": "a36e5a81efa5eabb",
+      "item": {
+        "type": "paragraph",
+        "id": "a36e5a81efa5eabb",
+        "text": "_Nonuniform Sampling. The sampling theory of Shannon can be generalized for the case of nonuniform samples, that is, samples not taken equally spaced in time. You're sampling samples. Look to reconstruct the first samples and then sample that._"
+      },
+      "after": "45c1223488ab952e",
+      "date": 1473688997385
+    },
+    {
+      "type": "edit",
+      "id": "a36e5a81efa5eabb",
+      "item": {
+        "type": "markdown",
+        "id": "a36e5a81efa5eabb",
+        "text": "_Nonuniform Sampling. The sampling theory of Shannon can be generalized for the case of nonuniform samples, that is, samples not taken equally spaced in time. You're sampling samples. Look to reconstruct the first samples and then sample that._"
+      },
+      "date": 1473688999679
+    },
+    {
+      "type": "edit",
+      "id": "a36e5a81efa5eabb",
+      "item": {
+        "type": "markdown",
+        "id": "a36e5a81efa5eabb",
+        "text": "_The sampling theory of Shannon can be generalized for the case of nonuniform samples, that is, samples not taken equally spaced in time. You're sampling samples. Look to reconstruct the first samples and then sample that._"
+      },
+      "date": 1473689010645
+    },
+    {
+      "type": "edit",
+      "id": "114f378f04c17e9c",
+      "item": {
+        "type": "paragraph",
+        "id": "114f378f04c17e9c",
+        "text": "This is the sort of problem that should be easily explored within wiki given some handy signal processing plugins. But what plugins? See [[How We Connect Data]]"
+      },
+      "date": 1473689059241
+    },
+    {
+      "type": "add",
+      "id": "f8dbd59d88cd7f54",
+      "item": {
+        "type": "paragraph",
+        "id": "f8dbd59d88cd7f54",
+        "text": "I vacillated choosing representations under the influence of javascript primitives. I ended up separating x from y, and using several different fixed sizes for records, not streams."
+      },
+      "after": "2f967367a6885916",
+      "date": 1473689252329
+    },
+    {
+      "type": "edit",
+      "id": "f8dbd59d88cd7f54",
+      "item": {
+        "type": "paragraph",
+        "id": "f8dbd59d88cd7f54",
+        "text": "I vacillated choosing representations under the influence of javascript primitives. I ended up separating x from y, and using several different fixed sizes for records, not streams, though that might have been under the influence of the plot package."
+      },
+      "date": 1473689387840
+    },
+    {
+      "type": "add",
+      "id": "c77cc17391669895",
+      "item": {
+        "type": "paragraph",
+        "id": "c77cc17391669895",
+        "text": "I found that small changes in the pump volume had a strong influence on the interpolation and subsequent jitter. My test signal was low frequency. Instead I was observing a beat frequency between the regular pump and the timer resolution. Again, this comes from modeling choices, not the original problem."
+      },
+      "after": "f8dbd59d88cd7f54",
+      "date": 1473689654517
+    },
+    {
+      "type": "add",
+      "id": "9a3a5f2f549c82a1",
+      "item": {
+        "type": "paragraph",
+        "id": "9a3a5f2f549c82a1",
+        "text": "# Results"
+      },
+      "after": "a54fda4739337ff1",
+      "date": 1473691203185
+    },
+    {
+      "type": "edit",
+      "id": "9a3a5f2f549c82a1",
+      "item": {
+        "type": "markdown",
+        "id": "9a3a5f2f549c82a1",
+        "text": "# Results"
+      },
+      "date": 1473691205415
+    },
+    {
+      "type": "add",
+      "id": "81297988529c33b0",
+      "item": {
+        "type": "paragraph",
+        "id": "81297988529c33b0",
+        "text": "# Problem"
+      },
+      "after": "45c1223488ab952e",
+      "date": 1473691234024
+    },
+    {
+      "type": "edit",
+      "id": "81297988529c33b0",
+      "item": {
+        "type": "markdown",
+        "id": "81297988529c33b0",
+        "text": "# Problem"
+      },
+      "date": 1473691253530
+    },
+    {
+      "type": "edit",
+      "id": "2f967367a6885916",
+      "item": {
+        "type": "paragraph",
+        "id": "2f967367a6885916",
+        "text": "I wasn't particularly impressed with my analysis or the tooling I had made to perform it. View Source to see code."
+      },
+      "date": 1473691323806
+    },
+    {
+      "type": "edit",
+      "id": "2f967367a6885916",
+      "item": {
+        "type": "paragraph",
+        "id": "2f967367a6885916",
+        "text": "I wasn't particularly impressed with my analysis or the tooling I had made to perform it. View Source for code."
+      },
+      "date": 1473691345459
+    },
+    {
+      "type": "edit",
+      "id": "78e006231e654718",
+      "item": {
+        "type": "paragraph",
+        "id": "78e006231e654718",
+        "text": "I thought I'd explore the problem in a simpler environment, pure javascript on an html page. I wrote functions that provided likely process steps and then assembled them to explore the problem with plots at every step."
+      },
+      "date": 1473783639356
+    },
+    {
+      "type": "add",
+      "id": "14796b9ee38cc984",
+      "item": {
+        "type": "paragraph",
+        "id": "14796b9ee38cc984",
+        "text": "[http:/theme/resample.htm plots]"
+      },
+      "after": "78e006231e654718",
+      "date": 1473783646578
+    },
+    {
+      "type": "add",
+      "id": "ba7e0d0c7b9e314a",
+      "item": {
+        "type": "paragraph",
+        "id": "ba7e0d0c7b9e314a",
+        "text": "View source for code."
+      },
+      "after": "14796b9ee38cc984",
+      "date": 1473783696917
+    },
+    {
+      "type": "remove",
+      "id": "ba7e0d0c7b9e314a",
+      "date": 1473783938180
+    },
+    {
+      "type": "edit",
+      "id": "14796b9ee38cc984",
+      "item": {
+        "type": "paragraph",
+        "id": "14796b9ee38cc984",
+        "text": "[http:/theme/resample.htm plots] (view source for code)"
+      },
+      "date": 1473783952700
+    },
+    {
+      "type": "add",
+      "id": "438d29dac425105f",
+      "item": {
+        "type": "paragraph",
+        "id": "438d29dac425105f",
+        "text": "# Direction"
+      },
+      "after": "c77cc17391669895",
+      "date": 1473868396156
+    },
+    {
+      "type": "add",
+      "id": "e723c5d09689ffea",
+      "item": {
+        "type": "paragraph",
+        "id": "e723c5d09689ffea",
+        "text": "I've found my choice of using Plotly for charts useful because they render detailed data so well. But when I wanted to interact with the model behind the data I found myself on my own."
+      },
+      "after": "438d29dac425105f",
+      "date": 1473868478012
+    },
+    {
+      "type": "add",
+      "id": "efeb102ef1ab07a6",
+      "item": {
+        "type": "paragraph",
+        "id": "efeb102ef1ab07a6",
+        "text": "See [[Interpreting Visual Gestures]] where I start to explore why Plotly provides one thing while I would want another."
+      },
+      "after": "e723c5d09689ffea",
+      "date": 1473868563871
+    },
+    {
+      "type": "edit",
+      "id": "438d29dac425105f",
+      "item": {
+        "type": "markdown",
+        "id": "438d29dac425105f",
+        "text": "# Direction"
+      },
+      "date": 1473868568875
+    },
+    {
+      "type": "edit",
+      "id": "14796b9ee38cc984",
+      "item": {
+        "type": "paragraph",
+        "id": "14796b9ee38cc984",
+        "text": "[http:/theme/resample.htm Plots] (view source for code)"
+      },
+      "date": 1473868600228
+    },
+    {
+      "type": "add",
+      "id": "36c05fddd2411ee3",
+      "item": {
+        "type": "paragraph",
+        "id": "36c05fddd2411ee3",
+        "text": "Dom objects emit a variety of drag-related events. These are easily attached to objects that aren't already interpreting events on there own. Of course SVG objects are slightly different. [https://developer.mozilla.org/en-US/docs/Web/Events/drag page]"
+      },
+      "after": "efeb102ef1ab07a6",
+      "date": 1473871095543
+    }
+  ]
+}

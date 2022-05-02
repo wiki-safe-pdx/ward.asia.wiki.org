@@ -1,0 +1,225 @@
+{
+  "title": "Simple CSV Reader",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d38f37a02b40eb77",
+      "text": "We will make an asset folder and show its contents here. One file will be a csv file to be read, the other an html file that can read it. [https://github.com/WardCunningham/assets/blob/master/pages/simple-csv-reader/read-csv.html github]"
+    },
+    {
+      "type": "assets",
+      "id": "995a1d8418bba3dc",
+      "text": "pages/simple-csv-reader"
+    },
+    {
+      "type": "paragraph",
+      "id": "4026aa06c97c4f4a",
+      "text": "The read-csv.html script will run here each time this page is rendered. If you add a new csv file, redisplay this page to see it. See [[Read Any Asset]]"
+    },
+    {
+      "type": "frame",
+      "id": "4621aa0f8934ebd8",
+      "text": "http://ward.dojo.fed.wiki/assets/pages/simple-csv-reader/read-csv.html"
+    },
+    {
+      "type": "paragraph",
+      "id": "e7ea28a83c4ca50d",
+      "text": "The Frame plugin offers various ways to reach out into wiki from an html script."
+    },
+    {
+      "type": "reference",
+      "id": "2884a0d97d4665d4",
+      "site": "js.ward.asia.wiki.org",
+      "slug": "frame-plugin-integrations",
+      "title": "Frame Plugin Integrations",
+      "text": "The Frame plugin renders an html page within a wiki page. More important, it also runs any javascript present within a sandbox where there is little opportunity to do harm. The Frame plugin can interact with the lineup on behalf of sandboxed javascript."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Simple CSV Reader",
+        "story": []
+      },
+      "date": 1636138150812
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d38f37a02b40eb77"
+      },
+      "id": "d38f37a02b40eb77",
+      "type": "add",
+      "date": 1636138214093
+    },
+    {
+      "type": "edit",
+      "id": "d38f37a02b40eb77",
+      "item": {
+        "type": "paragraph",
+        "id": "d38f37a02b40eb77",
+        "text": "We will make an asset folder and show its contents here. One file will be a csv file to be read, the other an html file that can read it."
+      },
+      "date": 1636138270223
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "995a1d8418bba3dc"
+      },
+      "id": "995a1d8418bba3dc",
+      "type": "add",
+      "after": "d38f37a02b40eb77",
+      "date": 1636138288079
+    },
+    {
+      "type": "edit",
+      "id": "995a1d8418bba3dc",
+      "item": {
+        "type": "assets",
+        "id": "995a1d8418bba3dc",
+        "text": "pages/simple-csv-reader"
+      },
+      "date": 1636138297599
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4026aa06c97c4f4a"
+      },
+      "id": "4026aa06c97c4f4a",
+      "type": "add",
+      "after": "995a1d8418bba3dc",
+      "date": 1636138453558
+    },
+    {
+      "type": "edit",
+      "id": "4026aa06c97c4f4a",
+      "item": {
+        "type": "paragraph",
+        "id": "4026aa06c97c4f4a",
+        "text": "The read-csv.html script will run here each time this page is rendered. If you add a new csv file, redisplay this page to see it."
+      },
+      "date": 1636138508591
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4621aa0f8934ebd8"
+      },
+      "id": "4621aa0f8934ebd8",
+      "type": "add",
+      "after": "4026aa06c97c4f4a",
+      "date": 1636138510930
+    },
+    {
+      "type": "edit",
+      "id": "4621aa0f8934ebd8",
+      "item": {
+        "type": "frame",
+        "id": "4621aa0f8934ebd8",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/simple-csv-reader/read-csv.html"
+      },
+      "date": 1636138528385
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e7ea28a83c4ca50d"
+      },
+      "id": "e7ea28a83c4ca50d",
+      "type": "add",
+      "after": "4621aa0f8934ebd8",
+      "date": 1636138792089
+    },
+    {
+      "type": "edit",
+      "id": "e7ea28a83c4ca50d",
+      "item": {
+        "type": "paragraph",
+        "id": "e7ea28a83c4ca50d",
+        "text": "The Frame plugin offers various ways to reach out into wiki from an html script."
+      },
+      "date": 1636138901460
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2884a0d97d4665d4"
+      },
+      "id": "2884a0d97d4665d4",
+      "type": "add",
+      "after": "e7ea28a83c4ca50d",
+      "date": 1636138903538
+    },
+    {
+      "type": "edit",
+      "id": "2884a0d97d4665d4",
+      "item": {
+        "type": "reference",
+        "id": "2884a0d97d4665d4",
+        "site": "js.ward.asia.wiki.org",
+        "slug": "frame-plugin-integrations",
+        "title": "Frame Plugin Integrations",
+        "text": "The Frame plugin renders an html page within a wiki page. More important, it also runs any javascript present within a sandbox where there is little opportunity to do harm. The Frame plugin can interact with the lineup on behalf of sandboxed javascript."
+      },
+      "date": 1636138907736
+    },
+    {
+      "type": "edit",
+      "id": "4621aa0f8934ebd8",
+      "item": {
+        "type": "frame",
+        "id": "4621aa0f8934ebd8",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/simple-csv-reader/read-csv.html\nHEIGHT 300"
+      },
+      "date": 1636142948533
+    },
+    {
+      "type": "edit",
+      "id": "4621aa0f8934ebd8",
+      "item": {
+        "type": "frame",
+        "id": "4621aa0f8934ebd8",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/simple-csv-reader/read-csv.html\nHEIGHT 0"
+      },
+      "date": 1636163012603
+    },
+    {
+      "type": "edit",
+      "id": "4621aa0f8934ebd8",
+      "item": {
+        "type": "frame",
+        "id": "4621aa0f8934ebd8",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/simple-csv-reader/read-csv.html"
+      },
+      "date": 1636163018305
+    },
+    {
+      "type": "edit",
+      "id": "d38f37a02b40eb77",
+      "item": {
+        "type": "paragraph",
+        "id": "d38f37a02b40eb77",
+        "text": "We will make an asset folder and show its contents here. One file will be a csv file to be read, the other an html file that can read it. [https://github.com/WardCunningham/assets/blob/master/pages/simple-csv-reader/read-csv.html github]"
+      },
+      "date": 1636163255410
+    },
+    {
+      "type": "edit",
+      "id": "4026aa06c97c4f4a",
+      "item": {
+        "type": "paragraph",
+        "id": "4026aa06c97c4f4a",
+        "text": "The read-csv.html script will run here each time this page is rendered. If you add a new csv file, redisplay this page to see it. See [[Read Any Asset]]"
+      },
+      "date": 1636207161329
+    },
+    {
+      "type": "fork",
+      "site": "ward.dojo.fed.wiki",
+      "date": 1636208691901
+    }
+  ]
+}

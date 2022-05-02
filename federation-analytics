@@ -1,0 +1,345 @@
+{
+  "title": "Federation Analytics",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9e26f41837d7bb21",
+      "text": "I tried to add a plugin that would enable somehow google analytics. This work didn't lead to anything interesting. Here I rant in our chat as to why this is so. [https://riot.im/app/#/room/#fedwiki:matrix.org/$14923934661644530Pzwef:matrix.org chat]"
+    },
+    {
+      "type": "paragraph",
+      "id": "087299ab96547811",
+      "text": "Monday April 17, 2017."
+    },
+    {
+      "type": "paragraph",
+      "id": "06c9512a830787e9",
+      "text": "I signed up for google analytics many years ago. I remember from then that I could add a verification meta tag to my home page or add a verification file in my home directory. I chose the former and the tag is still there. Google provided the verification code. Its presence proved to google that I \"owned\" c2.com. "
+    },
+    {
+      "type": "paragraph",
+      "id": "b6879169b2be8802",
+      "text": "In our conversation last week I picked up that someone was wanting to verify their ownership of a farm hosted subdomain of federated wiki and wished to use the verification file in the home directory approach. This sounded like a simple route addition which could be handled by a custom plugin. I'm less convinced now because I could not find any clear documentation of the process on google help pages and I couldn't remember the details from my own verification so many years ago. I'm happy to return to this problem if someone can explain the complete process to me and provide references.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "db978c88df08fd8f",
+      "text": "BUT\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "a3e2f3ece1f9ccfc",
+      "text": "Verification of site ownership is just the beginning of the dance with google analytics. One must add their javascript to each web page to be analyzed. This code contains an identifying key which is reported back to google. The magic of analytics is that nearly every site operator uses this free service. This ubiquity allows google to watch people move from site to site. They then slice up this global view and report fragments back to each site operator with charts and graphs of visitor behavior. I logged into analytics last night and found that they now offer reports on individual visitors tracked over time. This is all pretty spooky and not at all aligned with my own vision of public service.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "68d077617a94f8ab",
+      "text": "AND\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "9de17b5d324f575d",
+      "text": "Without a global view like google's one cannot tell what visitors are doing within our federation. That is because the pages one \"owns\" get viewed by javascript that comes from diverse origins with diverse owners. And this division of ownership happens before anyone forks anything."
+    },
+    {
+      "type": "paragraph",
+      "id": "34c4b212a99cabe8",
+      "text": "SO\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "e5862fd3aa93c996",
+      "text": "Our current implementation emits tracking information consistent with the attribution clause of the creative commons license. This strikes a balance that respects the privacy of readers while offering transparency into sources that they have chosen to republish. Our public history also allows anyone to build a scraper that collects this information for a federation wide view. I publish source code and accumulated results of one such scraper as an existence proof."
+    },
+    {
+      "type": "paragraph",
+      "id": "76f7c76b6e48ab33",
+      "text": "I would like to offer authors a good sense of the impact they have but this won't come with the precision that a modern digital marketing organization would desire. We're not doing this for them."
+    },
+    {
+      "type": "pagefold",
+      "id": "7a5374ddffc4d666",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "dc3567ee17947513",
+      "text": "See [[New Relic Browser]] for detailed instrumentation aggregated over many users."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Federation Analytics",
+        "story": []
+      },
+      "date": 1492435545111
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9e26f41837d7bb21"
+      },
+      "id": "9e26f41837d7bb21",
+      "type": "add",
+      "date": 1492435550813
+    },
+    {
+      "type": "edit",
+      "id": "9e26f41837d7bb21",
+      "item": {
+        "type": "paragraph",
+        "id": "9e26f41837d7bb21",
+        "text": "I tried to add a plugin that would enable somehow google analytics. This work didn't lead to anything interesting. Here I rant in or chat as to why this is so."
+      },
+      "date": 1492435693325
+    },
+    {
+      "type": "add",
+      "id": "087299ab96547811",
+      "item": {
+        "type": "paragraph",
+        "id": "087299ab96547811",
+        "text": "Monday April 17, 2017."
+      },
+      "after": "9e26f41837d7bb21",
+      "date": 1492435710758
+    },
+    {
+      "type": "add",
+      "id": "06c9512a830787e9",
+      "item": {
+        "type": "paragraph",
+        "id": "06c9512a830787e9",
+        "text": "I signed up for google analytics many years ago. I remember then I could add a verification meta tag to my home page or add a verification file in my home directory. I chose the former and it is still there. Google provided the verification code. Its presence proved to google that I \"owned\" c2.com. In our conversation last week I picked up that someone was wanting to verify their ownership of a farm hosted subdomain of federated wiki and wished to use the verification file in the home directory approach. This sounded like a simple route addition which could be handled by a custom plugin. I'm less convinced now because I could not find any clear documentation of the process on google help pages and I couldn't remember the details from my own verification so many years ago. I'm happy to return to this problem if someone can explain the complete process to me and provide references.\n"
+      },
+      "after": "087299ab96547811",
+      "date": 1492435725937
+    },
+    {
+      "type": "add",
+      "id": "db978c88df08fd8f",
+      "item": {
+        "type": "paragraph",
+        "id": "db978c88df08fd8f",
+        "text": "BUT\n"
+      },
+      "after": "06c9512a830787e9",
+      "date": 1492435731945
+    },
+    {
+      "type": "add",
+      "id": "a3e2f3ece1f9ccfc",
+      "item": {
+        "type": "paragraph",
+        "id": "a3e2f3ece1f9ccfc",
+        "text": "Verification of site ownership is just the beginning of the dance with google analytics. One must add their javascript to each web page one want's analyzed. This code also has an identifying key which is reported back to google. The magic of analytics is that near everyone uses this free service which allows google to watch people move from site to site. They then slice up this global view and report back to each site owner with charts and graphs of what each visitor has done on the pages that are so owned. I hopped into analytics last night and found that they now offer reports on individual visitors tracked over time. This is all pretty spooky and not at all aligned with my own vision of public service.\n"
+      },
+      "after": "db978c88df08fd8f",
+      "date": 1492435738846
+    },
+    {
+      "type": "add",
+      "id": "68d077617a94f8ab",
+      "item": {
+        "type": "paragraph",
+        "id": "68d077617a94f8ab",
+        "text": "AND\n"
+      },
+      "after": "a3e2f3ece1f9ccfc",
+      "date": 1492435745530
+    },
+    {
+      "type": "add",
+      "id": "9de17b5d324f575d",
+      "item": {
+        "type": "paragraph",
+        "id": "9de17b5d324f575d",
+        "text": "Without a global view at google scale, one cannot tell what visitors are doing within our federation. That is because the pages one \"owns\" get viewed by javascript that comes from diverse origins with divers owners. This division of ownership happens before anyone forks anything.\n"
+      },
+      "after": "68d077617a94f8ab",
+      "date": 1492435751540
+    },
+    {
+      "type": "add",
+      "id": "34c4b212a99cabe8",
+      "item": {
+        "type": "paragraph",
+        "id": "34c4b212a99cabe8",
+        "text": "SO\n"
+      },
+      "after": "9de17b5d324f575d",
+      "date": 1492435756712
+    },
+    {
+      "type": "add",
+      "id": "e5862fd3aa93c996",
+      "item": {
+        "type": "paragraph",
+        "id": "e5862fd3aa93c996",
+        "text": "Our current implementation emits tracking information consistent with the attribution clause of the creative commons license. This strikes a balance that respects the privacy of readers while offering transparency into sources that they choose to republish. It also allows anyone to build a scraper that collects this information for a federation wide view. I've publish the source code and accumulated results of one such scraper which is more an existence proof than useful tool. I would like to offer to authors a better sense of the impact they have but this won't come with the precision that a modern marketing organization desires. We're not for them."
+      },
+      "after": "34c4b212a99cabe8",
+      "date": 1492435764152
+    },
+    {
+      "type": "edit",
+      "id": "06c9512a830787e9",
+      "item": {
+        "type": "paragraph",
+        "id": "06c9512a830787e9",
+        "text": "I signed up for google analytics many years ago. I remember from then that I could add a verification meta tag to my home page or add a verification file in my home directory. I chose the former and the tag is still there."
+      },
+      "date": 1492435919779
+    },
+    {
+      "type": "add",
+      "id": "c3a320f05c00a25f",
+      "item": {
+        "type": "paragraph",
+        "id": "c3a320f05c00a25f",
+        "text": "Google provided the verification code. Its presence proved to google that I \"owned\" c2.com. "
+      },
+      "after": "06c9512a830787e9",
+      "date": 1492435934713
+    },
+    {
+      "type": "add",
+      "id": "b6879169b2be8802",
+      "item": {
+        "type": "paragraph",
+        "id": "b6879169b2be8802",
+        "text": "In our conversation last week I picked up that someone was wanting to verify their ownership of a farm hosted subdomain of federated wiki and wished to use the verification file in the home directory approach. This sounded like a simple route addition which could be handled by a custom plugin. I'm less convinced now because I could not find any clear documentation of the process on google help pages and I couldn't remember the details from my own verification so many years ago. I'm happy to return to this problem if someone can explain the complete process to me and provide references.\n"
+      },
+      "after": "c3a320f05c00a25f",
+      "date": 1492435983815
+    },
+    {
+      "type": "remove",
+      "id": "c3a320f05c00a25f",
+      "date": 1492435986411
+    },
+    {
+      "type": "edit",
+      "id": "06c9512a830787e9",
+      "item": {
+        "type": "paragraph",
+        "id": "06c9512a830787e9",
+        "text": "I signed up for google analytics many years ago. I remember from then that I could add a verification meta tag to my home page or add a verification file in my home directory. I chose the former and the tag is still there. Google provided the verification code. Its presence proved to google that I \"owned\" c2.com. "
+      },
+      "date": 1492435990038
+    },
+    {
+      "type": "edit",
+      "id": "a3e2f3ece1f9ccfc",
+      "item": {
+        "type": "paragraph",
+        "id": "a3e2f3ece1f9ccfc",
+        "text": "Verification of site ownership is just the beginning of the dance with google analytics. One must add their javascript to each web page one wants analyzed. This code has an identifying key which is reported back to google. The magic of analytics is that nearly every site operator uses this free service. This ubiquity allows google to watch people move from site to site. They then slice up this global view and report fragments back to each site operator with charts and graphs of visitor behavior. I logged into analytics last night and found that they now offer reports on individual visitors tracked over time. This is all pretty spooky and not at all aligned with my own vision of public service.\n"
+      },
+      "date": 1492436270337
+    },
+    {
+      "type": "edit",
+      "id": "a3e2f3ece1f9ccfc",
+      "item": {
+        "type": "paragraph",
+        "id": "a3e2f3ece1f9ccfc",
+        "text": "Verification of site ownership is just the beginning of the dance with google analytics. One must add their javascript to each web page to be analyzed. This code contains an identifying key which is reported back to google. The magic of analytics is that nearly every site operator uses this free service. This ubiquity allows google to watch people move from site to site. They then slice up this global view and report fragments back to each site operator with charts and graphs of visitor behavior. I logged into analytics last night and found that they now offer reports on individual visitors tracked over time. This is all pretty spooky and not at all aligned with my own vision of public service.\n"
+      },
+      "date": 1492436342646
+    },
+    {
+      "type": "edit",
+      "id": "9de17b5d324f575d",
+      "item": {
+        "type": "paragraph",
+        "id": "9de17b5d324f575d",
+        "text": "Without a global view like google's one cannot tell what visitors are doing within our federation. That is because the pages one \"owns\" get viewed by javascript that comes from diverse origins with diverse owners. And this division of ownership happens before anyone forks anything."
+      },
+      "date": 1492436449437
+    },
+    {
+      "type": "edit",
+      "id": "e5862fd3aa93c996",
+      "item": {
+        "type": "paragraph",
+        "id": "e5862fd3aa93c996",
+        "text": "Our current implementation emits tracking information consistent with the attribution clause of the creative commons license. This strikes a balance that respects the privacy of readers while offering transparency into sources that they have chosen to republish. Our public history also allows anyone to build a scraper that collects this information for a federation wide view. I publish source code and accumulated results of one such scraper as an existence proof."
+      },
+      "date": 1492436685591
+    },
+    {
+      "type": "add",
+      "id": "76f7c76b6e48ab33",
+      "item": {
+        "type": "paragraph",
+        "id": "76f7c76b6e48ab33",
+        "text": "I would like to offer authors a good sense of the impact they have but this won't come with the precision that a modern digital marketing organization would desire. We're not doing this for them."
+      },
+      "after": "e5862fd3aa93c996",
+      "date": 1492436744657
+    },
+    {
+      "type": "edit",
+      "id": "9e26f41837d7bb21",
+      "item": {
+        "type": "paragraph",
+        "id": "9e26f41837d7bb21",
+        "text": "I tried to add a plugin that would enable somehow google analytics. This work didn't lead to anything interesting. Here I rant in or chat as to why this is so. [https://riot.im/app/#/room/#fedwiki:matrix.org/$14923934661644530Pzwef:matrix.org chat]"
+      },
+      "date": 1492436933871
+    },
+    {
+      "type": "edit",
+      "id": "9e26f41837d7bb21",
+      "item": {
+        "type": "paragraph",
+        "id": "9e26f41837d7bb21",
+        "text": "I tried to add a plugin that would enable somehow google analytics. This work didn't lead to anything interesting. Here I rant in our chat as to why this is so. [https://riot.im/app/#/room/#fedwiki:matrix.org/$14923934661644530Pzwef:matrix.org chat]"
+      },
+      "date": 1492436962428
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7a5374ddffc4d666"
+      },
+      "id": "7a5374ddffc4d666",
+      "type": "add",
+      "after": "76f7c76b6e48ab33",
+      "date": 1492438076956
+    },
+    {
+      "type": "edit",
+      "id": "7a5374ddffc4d666",
+      "item": {
+        "type": "pagefold",
+        "id": "7a5374ddffc4d666",
+        "text": "."
+      },
+      "date": 1492438081629
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dc3567ee17947513"
+      },
+      "id": "dc3567ee17947513",
+      "type": "add",
+      "after": "7a5374ddffc4d666",
+      "date": 1492438165081
+    },
+    {
+      "type": "edit",
+      "id": "dc3567ee17947513",
+      "item": {
+        "type": "paragraph",
+        "id": "dc3567ee17947513",
+        "text": "See [[New Relic Browser]] for detailed instrumentation aggregated over many users."
+      },
+      "date": 1492438209954
+    }
+  ]
+}

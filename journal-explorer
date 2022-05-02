@@ -1,0 +1,174 @@
+{
+  "title": "Journal Explorer",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "94129fde73753a9e",
+      "text": "We hardwire the explore script to examine page we know has a problem found with the [[Journal Checker]]."
+    },
+    {
+      "type": "reference",
+      "id": "08851558700dc3d7",
+      "site": "found.ward.bay.wiki.org",
+      "slug": "heroes-of-crispr",
+      "title": "Heroes of CRISPR",
+      "text": "The human stories behind scientific advances can teach us a lot about the miraculous ecosystem that drives progress. [http://www.cell.com/cell/fulltext/S0092-8674(15)01705-5 cell]"
+    },
+    {
+      "type": "frame",
+      "id": "af4b42cbc68fe012",
+      "text": "http://ward.asia.wiki.org/assets/pages/journal-checker/explore.html\nHEIGHT 600"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Journal Explorer",
+        "story": []
+      },
+      "date": 1640381892966
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "08851558700dc3d7"
+      },
+      "id": "08851558700dc3d7",
+      "type": "add",
+      "date": 1640381949793
+    },
+    {
+      "type": "edit",
+      "id": "08851558700dc3d7",
+      "item": {
+        "type": "reference",
+        "id": "08851558700dc3d7",
+        "site": "found.ward.bay.wiki.org",
+        "slug": "heroes-of-crispr",
+        "title": "Heroes of CRISPR",
+        "text": "The human stories behind scientific advances can teach us a lot about the miraculous ecosystem that drives progress—about the roles of serendipity and planning, of pure curiosity and practical application, of hypothesis-free and hypothesis-driven science, of individuals and teams, and of fresh perspectives and deep expertise. [http://www.cell.com/cell/fulltext/S0092-8674(15)01705-5 cell]"
+      },
+      "date": 1640381959773
+    },
+    {
+      "type": "edit",
+      "id": "08851558700dc3d7",
+      "item": {
+        "type": "reference",
+        "id": "08851558700dc3d7",
+        "site": "found.ward.bay.wiki.org",
+        "slug": "heroes-of-crispr",
+        "title": "Heroes of CRISPR",
+        "text": "The human stories behind scientific advances ...[http://www.cell.com/cell/fulltext/S0092-8674(15)01705-5 cell]"
+      },
+      "date": 1640381977097
+    },
+    {
+      "type": "edit",
+      "id": "08851558700dc3d7",
+      "item": {
+        "type": "reference",
+        "id": "08851558700dc3d7",
+        "site": "found.ward.bay.wiki.org",
+        "slug": "heroes-of-crispr",
+        "title": "Heroes of CRISPR",
+        "text": "The human stories behind scientific advances ... [http://www.cell.com/cell/fulltext/S0092-8674(15)01705-5 cell]"
+      },
+      "date": 1640381983383
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "af4b42cbc68fe012"
+      },
+      "id": "af4b42cbc68fe012",
+      "type": "add",
+      "after": "08851558700dc3d7",
+      "date": 1640382010976
+    },
+    {
+      "type": "edit",
+      "id": "af4b42cbc68fe012",
+      "item": {
+        "type": "frame",
+        "id": "af4b42cbc68fe012",
+        "text": "http://ward.asia.wiki.org/assets/pages/journal-checker/explore.html\nHEIGHT 400"
+      },
+      "date": 1640382022251
+    },
+    {
+      "type": "edit",
+      "id": "af4b42cbc68fe012",
+      "item": {
+        "type": "frame",
+        "id": "af4b42cbc68fe012",
+        "text": "http://ward.asia.wiki.org/assets/pages/journal-checker/explore.html\nHEIGHT 500"
+      },
+      "date": 1640382032259
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "94129fde73753a9e"
+      },
+      "id": "94129fde73753a9e",
+      "type": "add",
+      "after": "af4b42cbc68fe012",
+      "date": 1640382063835
+    },
+    {
+      "type": "edit",
+      "id": "94129fde73753a9e",
+      "item": {
+        "type": "paragraph",
+        "id": "94129fde73753a9e",
+        "text": "We hardwire the explore script to a page we know has a problem found with the [[Journal Checker]]."
+      },
+      "date": 1640382179283
+    },
+    {
+      "id": "94129fde73753a9e",
+      "type": "move",
+      "order": [
+        "94129fde73753a9e",
+        "08851558700dc3d7",
+        "af4b42cbc68fe012"
+      ],
+      "date": 1640382183346
+    },
+    {
+      "type": "edit",
+      "id": "94129fde73753a9e",
+      "item": {
+        "type": "paragraph",
+        "id": "94129fde73753a9e",
+        "text": "We hardwire the explore script to examine page we know has a problem found with the [[Journal Checker]]."
+      },
+      "date": 1640382199639
+    },
+    {
+      "type": "edit",
+      "id": "08851558700dc3d7",
+      "item": {
+        "type": "reference",
+        "id": "08851558700dc3d7",
+        "site": "found.ward.bay.wiki.org",
+        "slug": "heroes-of-crispr",
+        "title": "Heroes of CRISPR",
+        "text": "The human stories behind scientific advances can teach us a lot about the miraculous ecosystem that drives progress. [http://www.cell.com/cell/fulltext/S0092-8674(15)01705-5 cell]"
+      },
+      "date": 1640382250427
+    },
+    {
+      "type": "edit",
+      "id": "af4b42cbc68fe012",
+      "item": {
+        "type": "frame",
+        "id": "af4b42cbc68fe012",
+        "text": "http://ward.asia.wiki.org/assets/pages/journal-checker/explore.html\nHEIGHT 600"
+      },
+      "date": 1640386773889
+    }
+  ]
+}

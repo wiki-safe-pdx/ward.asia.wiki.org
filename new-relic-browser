@@ -1,0 +1,90 @@
+{
+  "title": "New Relic Browser",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "6d5563a42d925fd2",
+      "text": "New Relic instruments digital properties with agents that collect and report measurements to be viewed in aggregate or detail from their website. New Relic Browser is their client monitoring product. [https://newrelic.com/browser-monitoring page]"
+    },
+    {
+      "type": "paragraph",
+      "id": "9da48877c0536ca4",
+      "text": "Our own Nic Niemeir created the first version of this product. Previous products were call RUM, real-user monitoring, and were limited to making more accurate response time measurements. The Browser product was more focused on single-page applications and could collect measurements throughout a user session."
+    },
+    {
+      "type": "paragraph",
+      "id": "2ccfd546ea4f61f1",
+      "text": "This code does work well with federated wiki where it provides a view similar to chrome developer tools but across all browsers. It does not give a clear view of user behavior for reasons explained in [[Federation Analytics]]."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "New Relic Browser",
+        "story": []
+      },
+      "date": 1492438214761
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6d5563a42d925fd2"
+      },
+      "id": "6d5563a42d925fd2",
+      "type": "add",
+      "date": 1492438221807
+    },
+    {
+      "type": "edit",
+      "id": "6d5563a42d925fd2",
+      "item": {
+        "type": "paragraph",
+        "id": "6d5563a42d925fd2",
+        "text": "New Relic instruments digital properties with agents that collect and report measurements to be viewed in aggregate or detail from the New Relic website."
+      },
+      "date": 1492438411200
+    },
+    {
+      "type": "edit",
+      "id": "6d5563a42d925fd2",
+      "item": {
+        "type": "paragraph",
+        "id": "6d5563a42d925fd2",
+        "text": "New Relic instruments digital properties with agents that collect and report measurements to be viewed in aggregate or detail from their website. New Relic Browser is their client monitoring product. [https://newrelic.com/browser-monitoring page]"
+      },
+      "date": 1492438492740
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9da48877c0536ca4"
+      },
+      "id": "9da48877c0536ca4",
+      "type": "add",
+      "after": "6d5563a42d925fd2",
+      "date": 1492438544661
+    },
+    {
+      "type": "edit",
+      "id": "9da48877c0536ca4",
+      "item": {
+        "type": "paragraph",
+        "id": "9da48877c0536ca4",
+        "text": "Our own Nic Niemeir created the first version of this product. Previous products were call RUM, real-user monitoring, and were limited to making more accurate response time measurements. The Browser product was more focused on single-page applications and could collect measurements throughout a user session."
+      },
+      "date": 1492438789024
+    },
+    {
+      "type": "add",
+      "id": "2ccfd546ea4f61f1",
+      "item": {
+        "type": "paragraph",
+        "id": "2ccfd546ea4f61f1",
+        "text": "This code does work well with federated wiki where it provides a view similar to chrome developer tools but across all browsers. It does not give a clear view of user behavior for reasons explained in [[Federation Analytics]]."
+      },
+      "after": "9da48877c0536ca4",
+      "date": 1492438983095
+    }
+  ]
+}

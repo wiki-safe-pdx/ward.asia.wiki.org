@@ -1,0 +1,144 @@
+{
+  "title": "Big Trouble Pages",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "740fa989dad7b78d",
+      "text": "See have seen some null pointer exceptions while studying [[Unexpected Server Restarts]]. Let's get 'em."
+    },
+    {
+      "type": "search",
+      "id": "b1d1f1070ac7c0b9",
+      "text": "ANY SLUGS INPUT"
+    },
+    {
+      "type": "reference",
+      "id": "902c483db12c3eda",
+      "site": "thompson.pathoftransformation.fed.wiki",
+      "slug": "pattern-languages",
+      "title": "Pattern Languages",
+      "text": "Null value for item."
+    },
+    {
+      "type": "code",
+      "id": "66fb9a4091f412d4",
+      "text": "Aug 25 22:46:08 asia wiki[31805]: [ 'how-to-wiki' ]\nAug 25 22:46:08 asia wiki[31805]: /usr/local/lib/node_modules/wiki/node_modules/wiki-client/lib/resolve.coffee:58\nAug 25 22:46:08 asia wiki[31805]:     string = string.replace(/〖(\\d+)〗/g, \"〖 $1 〗\").replace(/\\[\\[([^\\]]+)\\]\\]/gi, internal).replace(/\\[((http|https|ftp):.*?) (.*?)\\]/gi, external);\nAug 25 22:46:08 asia wiki[31805]:                     ^\nAug 25 22:46:08 asia wiki[31805]: TypeError: Cannot read property 'replace' of undefined\nAug 25 22:46:08 asia wiki[31805]:     at Object.resolve.resolveLinks (/usr/local/lib/node_modules/wiki/node_modules/wiki-client/lib/resolve.coffee:56:6)\nAug 25 22:46:08 asia wiki[31805]:     at /usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/server.coffee:62:62\nAug 25 22:46:08 asia wiki[31805]:     at Array.map (<anonymous>:null:null)\nAug 25 22:46:08 asia wiki[31805]:     at render (/usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/server.coffee:60:18)\nAug 25 22:46:08 asia wiki[31805]:     at Object.cb (/usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/server.coffee:305:18)\nAug 25 22:46:08 asia wiki[31805]:     at /usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/page.coffee:237:14\nAug 25 22:46:08 asia wiki[31805]:     at /usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/page.coffee:64:7\nAug 25 22:46:08 asia wiki[31805]:     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Big Trouble Pages",
+        "story": []
+      },
+      "date": 1567295497750
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "740fa989dad7b78d"
+      },
+      "id": "740fa989dad7b78d",
+      "type": "add",
+      "date": 1567295502952
+    },
+    {
+      "type": "edit",
+      "id": "740fa989dad7b78d",
+      "item": {
+        "type": "paragraph",
+        "id": "740fa989dad7b78d",
+        "text": "See have seen some null pointer exceptions while studying [[Unexpected Server Restarts]]. Let's track them down."
+      },
+      "date": 1567295553727
+    },
+    {
+      "type": "edit",
+      "id": "740fa989dad7b78d",
+      "item": {
+        "type": "paragraph",
+        "id": "740fa989dad7b78d",
+        "text": "See have seen some null pointer exceptions while studying [[Unexpected Server Restarts]]. Let's track 'em down."
+      },
+      "date": 1567295576719
+    },
+    {
+      "type": "edit",
+      "id": "740fa989dad7b78d",
+      "item": {
+        "type": "paragraph",
+        "id": "740fa989dad7b78d",
+        "text": "See have seen some null pointer exceptions while studying [[Unexpected Server Restarts]]. Let's get 'em."
+      },
+      "date": 1567295592302
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "902c483db12c3eda"
+      },
+      "id": "902c483db12c3eda",
+      "type": "add",
+      "after": "740fa989dad7b78d",
+      "date": 1567295664311
+    },
+    {
+      "type": "edit",
+      "id": "902c483db12c3eda",
+      "item": {
+        "type": "reference",
+        "id": "902c483db12c3eda",
+        "site": "thompson.pathoftransformation.fed.wiki",
+        "slug": "pattern-languages",
+        "title": "Pattern Languages",
+        "text": "[[Pattern Language]]"
+      },
+      "date": 1567295667991
+    },
+    {
+      "type": "edit",
+      "id": "902c483db12c3eda",
+      "item": {
+        "type": "reference",
+        "id": "902c483db12c3eda",
+        "site": "thompson.pathoftransformation.fed.wiki",
+        "slug": "pattern-languages",
+        "title": "Pattern Languages",
+        "text": "Null value for item."
+      },
+      "date": 1567295714835
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "search",
+        "id": "b1d1f1070ac7c0b9",
+        "text": "ANY SLUGS INPUT"
+      },
+      "after": "740fa989dad7b78d",
+      "id": "b1d1f1070ac7c0b9",
+      "date": 1567295788789
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "66fb9a4091f412d4"
+      },
+      "id": "66fb9a4091f412d4",
+      "type": "add",
+      "after": "902c483db12c3eda",
+      "date": 1567295893147
+    },
+    {
+      "type": "edit",
+      "id": "66fb9a4091f412d4",
+      "item": {
+        "type": "code",
+        "id": "66fb9a4091f412d4",
+        "text": "Aug 25 22:46:08 asia wiki[31805]: [ 'how-to-wiki' ]\nAug 25 22:46:08 asia wiki[31805]: /usr/local/lib/node_modules/wiki/node_modules/wiki-client/lib/resolve.coffee:58\nAug 25 22:46:08 asia wiki[31805]:     string = string.replace(/〖(\\d+)〗/g, \"〖 $1 〗\").replace(/\\[\\[([^\\]]+)\\]\\]/gi, internal).replace(/\\[((http|https|ftp):.*?) (.*?)\\]/gi, external);\nAug 25 22:46:08 asia wiki[31805]:                     ^\nAug 25 22:46:08 asia wiki[31805]: TypeError: Cannot read property 'replace' of undefined\nAug 25 22:46:08 asia wiki[31805]:     at Object.resolve.resolveLinks (/usr/local/lib/node_modules/wiki/node_modules/wiki-client/lib/resolve.coffee:56:6)\nAug 25 22:46:08 asia wiki[31805]:     at /usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/server.coffee:62:62\nAug 25 22:46:08 asia wiki[31805]:     at Array.map (<anonymous>:null:null)\nAug 25 22:46:08 asia wiki[31805]:     at render (/usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/server.coffee:60:18)\nAug 25 22:46:08 asia wiki[31805]:     at Object.cb (/usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/server.coffee:305:18)\nAug 25 22:46:08 asia wiki[31805]:     at /usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/page.coffee:237:14\nAug 25 22:46:08 asia wiki[31805]:     at /usr/local/lib/node_modules/wiki/node_modules/wiki-server/lib/page.coffee:64:7\nAug 25 22:46:08 asia wiki[31805]:     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)\n"
+      },
+      "date": 1567295898874
+    }
+  ]
+}

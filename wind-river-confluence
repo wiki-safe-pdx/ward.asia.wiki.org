@@ -1,0 +1,318 @@
+{
+  "title": "Wind River Confluence",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "6866fc8521603bdf",
+      "text": "This confluence is in the Wind River section of the Gifford Pinchot National Forest. It is sixteen miles southeast of Mount Saint Helens, famous for the 1980 eruption the resulted in nearly 150 square miles of forest blown over or left dead and standing and a column of ash that drifted downwind over eastern Washington and beyond. September 23, 2000. [http://c2.com/ward/confluence/n46w122 site]"
+    },
+    {
+      "type": "map",
+      "id": "6b762151f36c3531",
+      "text": "Wind River Confluence visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]\n46.1995787, -122.1888037 [[Mt Saint Helens Lava Dome]]\n45.7255626, -121.8206106 [[Carson, Washington]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "b9c6a3b1255921f7",
+      "text": "This confluence is in the Wind River section of the Gifford Pinchot National Forest. It is sixteen miles southeast of Mount Saint Helens, famous for the 1980 eruption the resulted in nearly 150 square miles of forest blown over or left dead and standing and a column of ash that drifted downwind over eastern Washington and beyond.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "4d4590c7ab5eb773",
+      "text": "Our mounts for the journey were to be a 4wd Jeep Wrangler and a pair of mountain bikes and hiking boots."
+    },
+    {
+      "type": "paragraph",
+      "id": "17ae1042f8d83673",
+      "text": "From Carson, Washington take Wind River Road North. Drive 13 miles. Pass Carson National Fish Hatchery. Bear right on Meadow Creek road. Drive 9.4 miles. (1 mile short of Oldman Pass) Turn left on NFD 31. Drive 2.2 miles. Left on NFD 3107. Drive 0.8 miles. Right to continue on NFD 3107. Drive 0.7 miles. Bear right first unimproved road (before hairpin left turn). Drive 300 yards. Head northwest. Walk 25 yards."
+    },
+    {
+      "type": "paragraph",
+      "id": "f9ac5af9fb7158d1",
+      "text": "The confluence is located in second growth forest at an elevation of 3100', within sight of the old logging road that defines the boundary between younger recently cut trees and 30- year old trees."
+    },
+    {
+      "type": "html",
+      "id": "88e5f73ce93b838f",
+      "text": "<img width=100% src=https://i.redd.it/zhbuiejbsqn01.png>"
+    },
+    {
+      "type": "paragraph",
+      "id": "c3500633b722508f",
+      "text": "Mount Saint Helens before and after the 1980 eruption. [https://www.reddit.com/r/pics/comments/86ub1c/mount_st_helens_before_and_after_the_eruption_of/ reddit] [https://i.redd.it/zhbuiejbsqn01.png enlarge]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Wind River Confluence",
+        "story": []
+      },
+      "date": 1467763171417
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6866fc8521603bdf"
+      },
+      "id": "6866fc8521603bdf",
+      "type": "add",
+      "date": 1467763203443
+    },
+    {
+      "type": "edit",
+      "id": "6866fc8521603bdf",
+      "item": {
+        "type": "paragraph",
+        "id": "6866fc8521603bdf",
+        "text": "This confluence is in the Wind River section of the Gifford Pinchot National Forest. It is sixteen miles southeast of Mount Saint Helens, famous for the 1980 eruption the resulted in nearly 150 square miles of forest blown over or left dead and standing and a column of ash that drifted downwind over eastern Washington and beyond."
+      },
+      "date": 1467763208549
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Portland Confluences visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]\n45.0, -122.0 [[Bagby Confluence]]\n45.0, -123.0 [[Salem Confluence]]\nBOUNDARY 46.2, -122.0"
+      },
+      "after": "6866fc8521603bdf",
+      "id": "6b762151f36c3531",
+      "date": 1467763217395
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Wind River Confluences visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]"
+      },
+      "date": 1467763250364
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Wind River Confluence visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]"
+      },
+      "date": 1467763879734
+    },
+    {
+      "type": "edit",
+      "id": "6866fc8521603bdf",
+      "item": {
+        "type": "paragraph",
+        "id": "6866fc8521603bdf",
+        "text": "This confluence is in the Wind River section of the Gifford Pinchot National Forest. It is sixteen miles southeast of Mount Saint Helens, famous for the 1980 eruption the resulted in nearly 150 square miles of forest blown over or left dead and standing and a column of ash that drifted downwind over eastern Washington and beyond. September 23, 2000."
+      },
+      "date": 1467765621035
+    },
+    {
+      "type": "edit",
+      "id": "6866fc8521603bdf",
+      "item": {
+        "type": "paragraph",
+        "id": "6866fc8521603bdf",
+        "text": "This confluence is in the Wind River section of the Gifford Pinchot National Forest. It is sixteen miles southeast of Mount Saint Helens, famous for the 1980 eruption the resulted in nearly 150 square miles of forest blown over or left dead and standing and a column of ash that drifted downwind over eastern Washington and beyond. September 23, 2000. [http://c2.com/ward/confluence/n45w122/ site]"
+      },
+      "date": 1467765639435
+    },
+    {
+      "type": "edit",
+      "id": "6866fc8521603bdf",
+      "item": {
+        "type": "paragraph",
+        "id": "6866fc8521603bdf",
+        "text": "This confluence is in the Wind River section of the Gifford Pinchot National Forest. It is sixteen miles southeast of Mount Saint Helens, famous for the 1980 eruption the resulted in nearly 150 square miles of forest blown over or left dead and standing and a column of ash that drifted downwind over eastern Washington and beyond. September 23, 2000. [http://c2.com/ward/confluence/n46w122 site]"
+      },
+      "date": 1467765682783
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b9c6a3b1255921f7"
+      },
+      "id": "b9c6a3b1255921f7",
+      "type": "add",
+      "after": "6b762151f36c3531",
+      "date": 1467765723959
+    },
+    {
+      "type": "edit",
+      "id": "b9c6a3b1255921f7",
+      "item": {
+        "type": "paragraph",
+        "id": "b9c6a3b1255921f7",
+        "text": "This confluence is in the Wind River section of the Gifford Pinchot National Forest. It is sixteen miles southeast of Mount Saint Helens, famous for the 1980 eruption the resulted in nearly 150 square miles of forest blown over or left dead and standing and a column of ash that drifted downwind over eastern Washington and beyond.\n"
+      },
+      "date": 1467765734474
+    },
+    {
+      "type": "add",
+      "id": "4d4590c7ab5eb773",
+      "item": {
+        "type": "paragraph",
+        "id": "4d4590c7ab5eb773",
+        "text": "Our mounts for the journey were to be a 4wd Jeep Wrangler and a pair of mountain bikes and good old hiking boots."
+      },
+      "after": "b9c6a3b1255921f7",
+      "date": 1467765769239
+    },
+    {
+      "type": "edit",
+      "id": "4d4590c7ab5eb773",
+      "item": {
+        "type": "paragraph",
+        "id": "4d4590c7ab5eb773",
+        "text": "Our mounts for the journey were to be a 4wd Jeep Wrangler and a pair of mountain bikes and hiking boots."
+      },
+      "date": 1467765792069
+    },
+    {
+      "type": "add",
+      "id": "17ae1042f8d83673",
+      "item": {
+        "type": "paragraph",
+        "id": "17ae1042f8d83673",
+        "text": "From Carson, Washington take Wind River Road North. Drive 13 miles. Pass Carson National Fish Hatchery. Bear right on Meadow Creek road. Drive 9.4 miles. (1 mile short of Oldman Pass) Turn left on NFD 31. Drive 2.2 miles. Left on NFD 3107. Drive 0.8 miles. Right to continue on NFD 3107. Drive 0.7 miles. Bear right first unimproved road (before hairpin left turn). Drive 300 yards. Head northwest. Walk 25 yards."
+      },
+      "after": "4d4590c7ab5eb773",
+      "date": 1467765856774
+    },
+    {
+      "type": "add",
+      "id": "f9ac5af9fb7158d1",
+      "item": {
+        "type": "paragraph",
+        "id": "f9ac5af9fb7158d1",
+        "text": "The confluence is located in second growth forest at an elevation of 3100', within sight of the old logging road that defines the boundary between younger recently cut trees and 30- year old trees."
+      },
+      "after": "17ae1042f8d83673",
+      "date": 1467765925375
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Wind River Confluence visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]\n46.1995787, -122.1888037"
+      },
+      "date": 1597370319796
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Wind River Confluence visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]\n46.1995787, -122.1888037 [[Mt Saint Helens Lava Dome]]"
+      },
+      "date": 1597370353520
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Wind River Confluence visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]\n46.1995787, -122.1888037 [[Mt Saint Helens Lava Dome]]\n45.7255626, -121.8206106"
+      },
+      "date": 1597370396768
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Wind River Confluence visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]\n46.1995787, -122.1888037 [[Mt Saint Helens Lava Dome]]\n45.7255626, -121.8206106 [[Carson, Washington]]"
+      },
+      "date": 1597370412901
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "88e5f73ce93b838f"
+      },
+      "id": "88e5f73ce93b838f",
+      "type": "add",
+      "after": "f9ac5af9fb7158d1",
+      "date": 1597370475342
+    },
+    {
+      "type": "edit",
+      "id": "88e5f73ce93b838f",
+      "item": {
+        "type": "html",
+        "id": "88e5f73ce93b838f",
+        "text": "<img width=100% src=https://i.redd.it/zhbuiejbsqn01.png>"
+      },
+      "date": 1597370494930
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c3500633b722508f"
+      },
+      "id": "c3500633b722508f",
+      "type": "add",
+      "after": "88e5f73ce93b838f",
+      "date": 1597370528422
+    },
+    {
+      "type": "edit",
+      "id": "c3500633b722508f",
+      "item": {
+        "type": "paragraph",
+        "id": "c3500633b722508f",
+        "text": "Mount Saint Helens before and after the 1980 eruption. "
+      },
+      "date": 1597370563249
+    },
+    {
+      "type": "edit",
+      "id": "c3500633b722508f",
+      "item": {
+        "type": "paragraph",
+        "id": "c3500633b722508f",
+        "text": "Mount Saint Helens before and after the 1980 eruption. [https://www.reddit.com/r/pics/comments/86ub1c/mount_st_helens_before_and_after_the_eruption_of/?st=JF60N21J&sh=58d27678 reddit]"
+      },
+      "date": 1597370576898
+    },
+    {
+      "type": "edit",
+      "id": "c3500633b722508f",
+      "item": {
+        "type": "paragraph",
+        "id": "c3500633b722508f",
+        "text": "Mount Saint Helens before and after the 1980 eruption. [https://www.reddit.com/r/pics/comments/86ub1c/mount_st_helens_before_and_after_the_eruption_of/?st=JF60N21J&sh=58d27678 reddit] [https://www.reddit.com/r/pics/comments/86ub1c/mount_st_helens_before_and_after_the_eruption_of/?st=JF60N21J&sh=58d27678 enlarge]"
+      },
+      "date": 1597370593112
+    },
+    {
+      "type": "edit",
+      "id": "c3500633b722508f",
+      "item": {
+        "type": "paragraph",
+        "id": "c3500633b722508f",
+        "text": "Mount Saint Helens before and after the 1980 eruption. [https://www.reddit.com/r/pics/comments/86ub1c/mount_st_helens_before_and_after_the_eruption_of/ reddit]"
+      },
+      "date": 1597370713260
+    },
+    {
+      "type": "edit",
+      "id": "c3500633b722508f",
+      "item": {
+        "type": "paragraph",
+        "id": "c3500633b722508f",
+        "text": "Mount Saint Helens before and after the 1980 eruption. [https://www.reddit.com/r/pics/comments/86ub1c/mount_st_helens_before_and_after_the_eruption_of/ reddit] [https://i.redd.it/zhbuiejbsqn01.png enlarge]"
+      },
+      "date": 1597370747203
+    }
+  ]
+}

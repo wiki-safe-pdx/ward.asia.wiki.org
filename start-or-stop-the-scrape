@@ -1,0 +1,118 @@
+{
+  "title": "Start or Stop the Scrape",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "cf9e8bb696e538e2",
+      "text": "An inital scrape can take the better part of a day.  Press 'start' to begin.  Shift-'start' to do one cycle at a time."
+    },
+    {
+      "type": "paragraph",
+      "id": "f28fe066508657d1",
+      "text": "We start scrapes hourly skipping hours if they run long."
+    },
+    {
+      "type": "process-step",
+      "id": "e9124f0bdcc55ef3",
+      "text": "Run More Scrapes",
+      "href": "/nexttime"
+    },
+    {
+      "type": "paragraph",
+      "id": "fdc201e5172ed146",
+      "text": "We fetch sitemaps for one site and then discover more."
+    },
+    {
+      "type": "process-step",
+      "id": "52afbfcda47242b9",
+      "text": "Process Next Site.",
+      "href": "/nextsite"
+    },
+    {
+      "type": "paragraph",
+      "id": "c07a7197fc27e625",
+      "text": "We fetch page json to index and inspect for more sites."
+    },
+    {
+      "type": "process-step",
+      "id": "8d26db19c40bf6dd",
+      "text": "Process Next Page.",
+      "href": "/nextslug"
+    },
+    {
+      "type": "paragraph",
+      "id": "14a3dbe7a72cf08f",
+      "text": "See [[Queue Stats]] while running."
+    },
+    {
+      "type": "paragraph",
+      "id": "34bf8add77c137ab",
+      "text": "See also [[Active Sites]], [[Failed Sites]], [[Crazy Business]]"
+    }
+  ],
+  "dynamic": true,
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Start or Stop the Scrape",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "cf9e8bb696e538e2",
+            "text": "An inital scrape can take the better part of a day.  Press 'start' to begin.  Shift-'start' to do one cycle at a time."
+          },
+          {
+            "type": "paragraph",
+            "id": "f28fe066508657d1",
+            "text": "We start scrapes hourly skipping hours if they run long."
+          },
+          {
+            "type": "process-step",
+            "id": "e9124f0bdcc55ef3",
+            "text": "Run More Scrapes",
+            "href": "/nexttime"
+          },
+          {
+            "type": "paragraph",
+            "id": "fdc201e5172ed146",
+            "text": "We fetch sitemaps for one site and then discover more."
+          },
+          {
+            "type": "process-step",
+            "id": "52afbfcda47242b9",
+            "text": "Process Next Site.",
+            "href": "/nextsite"
+          },
+          {
+            "type": "paragraph",
+            "id": "c07a7197fc27e625",
+            "text": "We fetch page json to index and inspect for more sites."
+          },
+          {
+            "type": "process-step",
+            "id": "8d26db19c40bf6dd",
+            "text": "Process Next Page.",
+            "href": "/nextslug"
+          },
+          {
+            "type": "paragraph",
+            "id": "14a3dbe7a72cf08f",
+            "text": "See [[Queue Stats]] while running."
+          },
+          {
+            "type": "paragraph",
+            "id": "34bf8add77c137ab",
+            "text": "See also [[Active Sites]], [[Failed Sites]], [[Crazy Business]]"
+          }
+        ]
+      },
+      "date": 1601240942506
+    },
+    {
+      "type": "fork",
+      "site": "scrape.seran.c2.com",
+      "date": 1601241197641
+    }
+  ]
+}

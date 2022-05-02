@@ -1,0 +1,199 @@
+{
+  "title": "SQLite in a Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "4dd1618cb673c17e",
+      "text": "We have found the Frame plugin handy for data processing tasks where scripts will fetch dozens or hundreds of pages, present some composite summary, and then expand selections into new pages added to the lineup. Perhaps SQL will help?"
+    },
+    {
+      "type": "paragraph",
+      "id": "9d30be8e71f5014a",
+      "text": "sql.js is a relational database for the web. [https://sql.js.org/ site] [https://github.com/sql-js/sql.js github]"
+    },
+    {
+      "type": "frame",
+      "id": "520c4e25277db3bc",
+      "text": "https://sql.js.org/examples/GUI/\nHEIGHT 600"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "SQLite in a Plugin",
+        "story": []
+      },
+      "date": 1620399279285
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4dd1618cb673c17e"
+      },
+      "id": "4dd1618cb673c17e",
+      "type": "add",
+      "date": 1620399285346
+    },
+    {
+      "type": "edit",
+      "id": "4dd1618cb673c17e",
+      "item": {
+        "type": "paragraph",
+        "id": "4dd1618cb673c17e",
+        "text": "We have found the Frame plugin handy for data processing tasks where scripts will fetch dozens or hundreds of pages, present some composite summary, and then expand selections into new pages added to the lineup."
+      },
+      "date": 1620399645021
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "520c4e25277db3bc"
+      },
+      "id": "520c4e25277db3bc",
+      "type": "add",
+      "after": "4dd1618cb673c17e",
+      "date": 1620399795649
+    },
+    {
+      "type": "edit",
+      "id": "520c4e25277db3bc",
+      "item": {
+        "type": "frame",
+        "id": "520c4e25277db3bc",
+        "text": "https://vkbansal.github.io/sqlite-wasm-demo/"
+      },
+      "date": 1620399806183
+    },
+    {
+      "type": "edit",
+      "id": "520c4e25277db3bc",
+      "item": {
+        "type": "frame",
+        "id": "520c4e25277db3bc",
+        "text": "https://sql.js.org/examples/GUI/"
+      },
+      "date": 1620400439225
+    },
+    {
+      "type": "edit",
+      "id": "520c4e25277db3bc",
+      "item": {
+        "type": "frame",
+        "id": "520c4e25277db3bc",
+        "text": "https://sql.js.org/examples/GUI/\nHEIGHT 400"
+      },
+      "date": 1620403899551
+    },
+    {
+      "type": "edit",
+      "id": "520c4e25277db3bc",
+      "item": {
+        "type": "frame",
+        "id": "520c4e25277db3bc",
+        "text": "https://sql.js.org/examples/GUI/\nHEIGHT 500"
+      },
+      "date": 1620403908637
+    },
+    {
+      "type": "edit",
+      "id": "520c4e25277db3bc",
+      "item": {
+        "type": "frame",
+        "id": "520c4e25277db3bc",
+        "text": "https://sql.js.org/examples/GUI/\nHEIGHT 600"
+      },
+      "date": 1620403915529
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9d30be8e71f5014a"
+      },
+      "id": "9d30be8e71f5014a",
+      "type": "add",
+      "after": "520c4e25277db3bc",
+      "date": 1620404245840
+    },
+    {
+      "type": "edit",
+      "id": "9d30be8e71f5014a",
+      "item": {
+        "type": "paragraph",
+        "id": "9d30be8e71f5014a",
+        "text": "sql.js is a relational database for the web."
+      },
+      "date": 1620404267085
+    },
+    {
+      "type": "edit",
+      "id": "9d30be8e71f5014a",
+      "item": {
+        "type": "paragraph",
+        "id": "9d30be8e71f5014a",
+        "text": "sql.js is a relational database for the web. [https://sql.js.org/ site]"
+      },
+      "date": 1620404290944
+    },
+    {
+      "type": "edit",
+      "id": "9d30be8e71f5014a",
+      "item": {
+        "type": "paragraph",
+        "id": "9d30be8e71f5014a",
+        "text": "sql.js is a relational database for the web. [https://sql.js.org/ site] [https://github.com/sql-js/sql.js github]"
+      },
+      "date": 1620404314664
+    },
+    {
+      "id": "9d30be8e71f5014a",
+      "type": "move",
+      "order": [
+        "4dd1618cb673c17e",
+        "9d30be8e71f5014a",
+        "520c4e25277db3bc"
+      ],
+      "date": 1620404331872
+    },
+    {
+      "type": "edit",
+      "id": "4dd1618cb673c17e",
+      "item": {
+        "type": "paragraph",
+        "id": "4dd1618cb673c17e",
+        "text": "We have found the Frame plugin handy for data processing tasks where scripts will fetch dozens or hundreds of pages, present some composite summary, and then expand selections into new pages added to the lineup. Perhaps SQL will help?"
+      },
+      "date": 1620404409443
+    },
+    {
+      "id": "520c4e25277db3bc",
+      "type": "move",
+      "order": [
+        "520c4e25277db3bc",
+        "4dd1618cb673c17e",
+        "9d30be8e71f5014a"
+      ],
+      "date": 1620405110150
+    },
+    {
+      "id": "4dd1618cb673c17e",
+      "type": "move",
+      "order": [
+        "4dd1618cb673c17e",
+        "520c4e25277db3bc",
+        "9d30be8e71f5014a"
+      ],
+      "date": 1620405183027
+    },
+    {
+      "id": "9d30be8e71f5014a",
+      "type": "move",
+      "order": [
+        "4dd1618cb673c17e",
+        "9d30be8e71f5014a",
+        "520c4e25277db3bc"
+      ],
+      "date": 1620405189796
+    }
+  ]
+}

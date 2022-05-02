@@ -1,0 +1,588 @@
+{
+  "title": "Uptime Table",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "4490cba1fea8d33d",
+      "text": "We're collecting availability stats from recorded exit status provided by a Datalog plugin curl extension. Here we report these as uptime percentages in tabular form."
+    },
+    {
+      "type": "paragraph",
+      "id": "98a07af66a334aa1",
+      "text": "See [[Ping Service]],  [[Ping Wiki Servers]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "33bf3d3673eb67a0",
+      "text": "We host the pure javascript application as an html asset."
+    },
+    {
+      "type": "code",
+      "id": "3fe7acfde2836cc6",
+      "text": "ward.asia.wiki.org/assets/plugins/datalog/uptime.html"
+    },
+    {
+      "type": "paragraph",
+      "id": "0d7f1dd8e196b2bd",
+      "text": "Parameters in a query string describe where to find logs and how to format them as a table."
+    },
+    {
+      "type": "code",
+      "id": "c152eb6bfcfef9ef",
+      "text": "protocol=http"
+    },
+    {
+      "type": "code",
+      "id": "e92c366a22d25fe1",
+      "text": "site=ward.asia.wiki.org"
+    },
+    {
+      "type": "code",
+      "id": "a3ae2f8ec8d4f2d5",
+      "text": "slug=ping-wiki-servers"
+    },
+    {
+      "type": "paragraph",
+      "id": "52b1a78139bd0971",
+      "text": "The Datalog plugin will maintain a rolling collection of files in an Assets folder identified by this site and slug."
+    },
+    {
+      "type": "code",
+      "id": "709a6530630f8911",
+      "text": "chunk=month"
+    },
+    {
+      "type": "code",
+      "id": "3b8217e17776ad50",
+      "text": "keep=2 "
+    },
+    {
+      "type": "paragraph",
+      "id": "0438995d319464ae",
+      "text": "We will expect month size files and will fetch two so that we roll over chunk boundaries smoothly."
+    },
+    {
+      "type": "code",
+      "id": "78d140d4cd9f4867",
+      "text": "report=hour"
+    },
+    {
+      "type": "code",
+      "id": "908931979bee85ad",
+      "text": "show=24"
+    },
+    {
+      "type": "paragraph",
+      "id": "cbfec2658d3fe26b",
+      "text": "We assemble chunks into a continuous stream and then separate that into wall clock aligned reporting periods working backwards in milliseconds from time now."
+    },
+    {
+      "type": "paragraph",
+      "id": "15b3f0196fa772f9",
+      "text": "Try these parameters now. [http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=2&report=hour&show=24 uptime]"
+    },
+    {
+      "type": "paragraph",
+      "id": "a854b956ec5adf34",
+      "text": "Development workflow: View source, save as, edit, test with file:, upload as new asset."
+    },
+    {
+      "type": "markdown",
+      "id": "c39d6d4673c32055",
+      "text": "# Use"
+    },
+    {
+      "type": "paragraph",
+      "id": "fd92ad2b3ff64410",
+      "text": "There is a quirk in how we time limit both the curl we use as a probe and the call Datalog makes on it. If curl gives up before Datalog, then we record an exit status. But if Datalog gives up first, then we record an empty object, {}."
+    },
+    {
+      "type": "paragraph",
+      "id": "91c130481d3c1ef0",
+      "text": "This led us to show a slow site as blank, and a missing site as 0.0. Not the ideal coding. Our fix is to set timeouts to 3000 and 3100 respectively, down from our problematic 5000 and 2000."
+    },
+    {
+      "type": "paragraph",
+      "id": "c2193b4928acac18",
+      "text": "A better solution would be to replace the curl endpoint with a direct ping from the sampling logic. See [[Ping Service]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "38d40c8ca1cbd139",
+      "text": "The show logic sometimes leaves a widowed interval as the first row. I didn't think that possible."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Uptime Table",
+        "story": []
+      },
+      "date": 1557081172800
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4490cba1fea8d33d"
+      },
+      "id": "4490cba1fea8d33d",
+      "type": "add",
+      "date": 1557081176479
+    },
+    {
+      "type": "edit",
+      "id": "4490cba1fea8d33d",
+      "item": {
+        "type": "paragraph",
+        "id": "4490cba1fea8d33d",
+        "text": "We're collecting availability stats from recorded exit status provided by a Datalog plugin curl extension. Here we report these as uptime percentages in tabular form."
+      },
+      "date": 1557081413734
+    },
+    {
+      "type": "add",
+      "id": "98a07af66a334aa1",
+      "item": {
+        "type": "paragraph",
+        "id": "98a07af66a334aa1",
+        "text": "See [[Ping Wiki Servers]]"
+      },
+      "after": "4490cba1fea8d33d",
+      "date": 1557081589353
+    },
+    {
+      "type": "edit",
+      "id": "98a07af66a334aa1",
+      "item": {
+        "type": "paragraph",
+        "id": "98a07af66a334aa1",
+        "text": "See [[Ping Service]],  [[Ping Wiki Servers]]"
+      },
+      "date": 1557081648182
+    },
+    {
+      "type": "fork",
+      "date": 1557081689235
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "33bf3d3673eb67a0"
+      },
+      "id": "33bf3d3673eb67a0",
+      "type": "add",
+      "after": "98a07af66a334aa1",
+      "date": 1557081691917
+    },
+    {
+      "type": "edit",
+      "id": "33bf3d3673eb67a0",
+      "item": {
+        "type": "paragraph",
+        "id": "33bf3d3673eb67a0",
+        "text": "We host the pure javascript application as an html asset."
+      },
+      "date": 1557081760923
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3fe7acfde2836cc6"
+      },
+      "id": "3fe7acfde2836cc6",
+      "type": "add",
+      "after": "33bf3d3673eb67a0",
+      "date": 1557081809037
+    },
+    {
+      "type": "edit",
+      "id": "3fe7acfde2836cc6",
+      "item": {
+        "type": "code",
+        "id": "3fe7acfde2836cc6",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html"
+      },
+      "date": 1557081827502
+    },
+    {
+      "type": "edit",
+      "id": "3fe7acfde2836cc6",
+      "item": {
+        "type": "code",
+        "id": "3fe7acfde2836cc6",
+        "text": "ward.asia.wiki.org/assets/plugins/datalog/uptime.html"
+      },
+      "date": 1557081838522
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0d7f1dd8e196b2bd"
+      },
+      "id": "0d7f1dd8e196b2bd",
+      "type": "add",
+      "after": "3fe7acfde2836cc6",
+      "date": 1557081928017
+    },
+    {
+      "type": "edit",
+      "id": "0d7f1dd8e196b2bd",
+      "item": {
+        "type": "paragraph",
+        "id": "0d7f1dd8e196b2bd",
+        "text": "Parameters in a query string describe where to find logs and how to format them as a table."
+      },
+      "date": 1557082031187
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c152eb6bfcfef9ef"
+      },
+      "id": "c152eb6bfcfef9ef",
+      "type": "add",
+      "after": "0d7f1dd8e196b2bd",
+      "date": 1557082033634
+    },
+    {
+      "type": "edit",
+      "id": "c152eb6bfcfef9ef",
+      "item": {
+        "type": "code",
+        "id": "c152eb6bfcfef9ef",
+        "text": "protocol=http"
+      },
+      "date": 1557082053530
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e92c366a22d25fe1"
+      },
+      "id": "e92c366a22d25fe1",
+      "type": "add",
+      "after": "c152eb6bfcfef9ef",
+      "date": 1557082085064
+    },
+    {
+      "type": "edit",
+      "id": "e92c366a22d25fe1",
+      "item": {
+        "type": "code",
+        "id": "e92c366a22d25fe1",
+        "text": "site=ward.asia.wiki.org"
+      },
+      "date": 1557082099390
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a3ae2f8ec8d4f2d5"
+      },
+      "id": "a3ae2f8ec8d4f2d5",
+      "type": "add",
+      "after": "e92c366a22d25fe1",
+      "date": 1557082105006
+    },
+    {
+      "type": "edit",
+      "id": "a3ae2f8ec8d4f2d5",
+      "item": {
+        "type": "code",
+        "id": "a3ae2f8ec8d4f2d5",
+        "text": "slug=ping-wiki-servers"
+      },
+      "date": 1557082125905
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "52b1a78139bd0971"
+      },
+      "id": "52b1a78139bd0971",
+      "type": "add",
+      "after": "a3ae2f8ec8d4f2d5",
+      "date": 1557082258061
+    },
+    {
+      "type": "edit",
+      "id": "52b1a78139bd0971",
+      "item": {
+        "type": "paragraph",
+        "id": "52b1a78139bd0971",
+        "text": "The Datalog plugin will maintain a rolling collection of files in an Assets folder identified by this site and slug."
+      },
+      "date": 1557082504341
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "709a6530630f8911"
+      },
+      "id": "709a6530630f8911",
+      "type": "add",
+      "after": "52b1a78139bd0971",
+      "date": 1557082507380
+    },
+    {
+      "type": "edit",
+      "id": "709a6530630f8911",
+      "item": {
+        "type": "code",
+        "id": "709a6530630f8911",
+        "text": "chunk=month"
+      },
+      "date": 1557082531965
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3b8217e17776ad50"
+      },
+      "id": "3b8217e17776ad50",
+      "type": "add",
+      "after": "709a6530630f8911",
+      "date": 1557082534424
+    },
+    {
+      "type": "edit",
+      "id": "3b8217e17776ad50",
+      "item": {
+        "type": "paragraph",
+        "id": "3b8217e17776ad50",
+        "text": "keep=2"
+      },
+      "date": 1557082556156
+    },
+    {
+      "type": "edit",
+      "id": "3b8217e17776ad50",
+      "item": {
+        "type": "code",
+        "id": "3b8217e17776ad50",
+        "text": "keep=2 "
+      },
+      "date": 1557082567908
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0438995d319464ae"
+      },
+      "id": "0438995d319464ae",
+      "type": "add",
+      "after": "3b8217e17776ad50",
+      "date": 1557082635095
+    },
+    {
+      "type": "edit",
+      "id": "0438995d319464ae",
+      "item": {
+        "type": "paragraph",
+        "id": "0438995d319464ae",
+        "text": "We will expect month size files and will fetch at least two so that we roll over chunk boundaries smoothly."
+      },
+      "date": 1557082785500
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "78d140d4cd9f4867"
+      },
+      "id": "78d140d4cd9f4867",
+      "type": "add",
+      "after": "0438995d319464ae",
+      "date": 1557082800226
+    },
+    {
+      "type": "edit",
+      "id": "78d140d4cd9f4867",
+      "item": {
+        "type": "code",
+        "id": "78d140d4cd9f4867",
+        "text": "report=hour"
+      },
+      "date": 1557082823007
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "908931979bee85ad"
+      },
+      "id": "908931979bee85ad",
+      "type": "add",
+      "after": "78d140d4cd9f4867",
+      "date": 1557082825571
+    },
+    {
+      "type": "edit",
+      "id": "908931979bee85ad",
+      "item": {
+        "type": "code",
+        "id": "908931979bee85ad",
+        "text": "show=24"
+      },
+      "date": 1557082837268
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cbfec2658d3fe26b"
+      },
+      "id": "cbfec2658d3fe26b",
+      "type": "add",
+      "after": "908931979bee85ad",
+      "date": 1557082871207
+    },
+    {
+      "type": "edit",
+      "id": "cbfec2658d3fe26b",
+      "item": {
+        "type": "paragraph",
+        "id": "cbfec2658d3fe26b",
+        "text": "We assemble chunks into a continuous stream and then separate that into reporting periods working backwards from time now."
+      },
+      "date": 1557083021846
+    },
+    {
+      "type": "edit",
+      "id": "cbfec2658d3fe26b",
+      "item": {
+        "type": "paragraph",
+        "id": "cbfec2658d3fe26b",
+        "text": "We assemble chunks into a continuous stream and then separate that into wall clock aligned reporting periods working backwards in milliseconds from time now."
+      },
+      "date": 1557083077988
+    },
+    {
+      "type": "fork",
+      "date": 1557083317634
+    },
+    {
+      "type": "add",
+      "id": "15b3f0196fa772f9",
+      "item": {
+        "type": "paragraph",
+        "id": "15b3f0196fa772f9",
+        "text": "Try these parameters now. [http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=found.ward.bay.wiki.org&slug=ping-wiki-servers&chunk=month&keep=2&report=hour&show=24 uptime]"
+      },
+      "after": "cbfec2658d3fe26b",
+      "date": 1557085039754
+    },
+    {
+      "type": "add",
+      "id": "a854b956ec5adf34",
+      "item": {
+        "type": "paragraph",
+        "id": "a854b956ec5adf34",
+        "text": "Development workflow: View source, save as, edit, test with file:, upload as new asset."
+      },
+      "after": "15b3f0196fa772f9",
+      "date": 1557085295282
+    },
+    {
+      "type": "edit",
+      "id": "15b3f0196fa772f9",
+      "item": {
+        "type": "paragraph",
+        "id": "15b3f0196fa772f9",
+        "text": "Try these parameters now. [http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=2&report=hour&show=24 uptime]"
+      },
+      "date": 1557087663493
+    },
+    {
+      "type": "edit",
+      "id": "0438995d319464ae",
+      "item": {
+        "type": "paragraph",
+        "id": "0438995d319464ae",
+        "text": "We will expect month size files and will fetch two so that we roll over chunk boundaries smoothly."
+      },
+      "date": 1557093239103
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c39d6d4673c32055"
+      },
+      "id": "c39d6d4673c32055",
+      "type": "add",
+      "after": "a854b956ec5adf34",
+      "date": 1557238259480
+    },
+    {
+      "type": "edit",
+      "id": "c39d6d4673c32055",
+      "item": {
+        "type": "markdown",
+        "id": "c39d6d4673c32055",
+        "text": "# Use"
+      },
+      "date": 1557238285299
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fd92ad2b3ff64410"
+      },
+      "id": "fd92ad2b3ff64410",
+      "type": "add",
+      "after": "c39d6d4673c32055",
+      "date": 1557238291585
+    },
+    {
+      "type": "edit",
+      "id": "fd92ad2b3ff64410",
+      "item": {
+        "type": "paragraph",
+        "id": "fd92ad2b3ff64410",
+        "text": "There is a quirk in how we time limit both the curl we use as a probe and the call Datalog makes on it. If curl gives up before Datalog, then we record an exit status. But if Datalog gives up first, then we record an empty object, {}."
+      },
+      "date": 1557238468948
+    },
+    {
+      "type": "add",
+      "id": "91c130481d3c1ef0",
+      "item": {
+        "type": "paragraph",
+        "id": "91c130481d3c1ef0",
+        "text": "This led us to show a slow site as blank, and a missing site as 0.0. Not the ideal coding. Our fix is to set timeouts to 3000 and 3300 respectiviely"
+      },
+      "after": "fd92ad2b3ff64410",
+      "date": 1557238604072
+    },
+    {
+      "type": "edit",
+      "id": "91c130481d3c1ef0",
+      "item": {
+        "type": "paragraph",
+        "id": "91c130481d3c1ef0",
+        "text": "This led us to show a slow site as blank, and a missing site as 0.0. Not the ideal coding. Our fix is to set timeouts to 3000 and 3100 respectively, down from our problematic 5000 and 2000."
+      },
+      "date": 1557238716901
+    },
+    {
+      "type": "add",
+      "id": "c2193b4928acac18",
+      "item": {
+        "type": "paragraph",
+        "id": "c2193b4928acac18",
+        "text": "A better solution would be to replace the curl endpoint with a direct ping from the sampling logic. See [[Ping Service]]"
+      },
+      "after": "91c130481d3c1ef0",
+      "date": 1557238900583
+    },
+    {
+      "type": "add",
+      "id": "38d40c8ca1cbd139",
+      "item": {
+        "type": "paragraph",
+        "id": "38d40c8ca1cbd139",
+        "text": "The show logic sometimes leaves a widowed interval as the first row. I didn't think that possible."
+      },
+      "after": "c2193b4928acac18",
+      "date": 1557244829082
+    }
+  ]
+}

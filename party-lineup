@@ -1,0 +1,269 @@
+{
+  "title": "Party Lineup",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "8c82e127ff182053",
+      "text": "We will share wiki pages dropped on this script with all federation clients watching. Page titles will appear as they do in Recent Changes and respond to clicks similarly."
+    },
+    {
+      "type": "frame",
+      "id": "bdd6f051c1018441",
+      "text": "http://ward.asia.wiki.org/assets/pages/party-lineup/client.html\nHEIGHT 600"
+    },
+    {
+      "type": "paragraph",
+      "id": "bd667945ed16c7c8",
+      "text": "Test data every 10 seconds. Use Reload Frame to see it."
+    },
+    {
+      "type": "code",
+      "id": "22e8fe1dcc089570",
+      "text": "curl -is https://party-lineup.deno.dev/recall |\\\n  grep x-"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Party Lineup",
+        "story": []
+      },
+      "date": 1624465197716
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8c82e127ff182053"
+      },
+      "id": "8c82e127ff182053",
+      "type": "add",
+      "date": 1624465213411
+    },
+    {
+      "type": "edit",
+      "id": "8c82e127ff182053",
+      "item": {
+        "type": "paragraph",
+        "id": "8c82e127ff182053",
+        "text": "We will share wiki pages dropped on this script with all federation clients watching. Page titles will appear as they do in Recent Changes and respond to clicks in a similar way."
+      },
+      "date": 1624465382934
+    },
+    {
+      "type": "edit",
+      "id": "8c82e127ff182053",
+      "item": {
+        "type": "paragraph",
+        "id": "8c82e127ff182053",
+        "text": "We will share wiki pages dropped on this script with all federation clients watching. Page titles will appear as they do in Recent Changes and respond to clicks similarly."
+      },
+      "date": 1624465393373
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1083ab0b609af9d5"
+      },
+      "id": "1083ab0b609af9d5",
+      "type": "add",
+      "after": "8c82e127ff182053",
+      "date": 1624465399862
+    },
+    {
+      "type": "edit",
+      "id": "1083ab0b609af9d5",
+      "item": {
+        "type": "assets",
+        "id": "1083ab0b609af9d5",
+        "text": "pages/party-lineup"
+      },
+      "date": 1624465418110
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bdd6f051c1018441"
+      },
+      "id": "bdd6f051c1018441",
+      "type": "add",
+      "after": "1083ab0b609af9d5",
+      "date": 1624465524578
+    },
+    {
+      "type": "edit",
+      "id": "bdd6f051c1018441",
+      "item": {
+        "type": "frame",
+        "id": "bdd6f051c1018441",
+        "text": "http://ward.asia.wiki.org/assets/pages/party-lineup/client.html"
+      },
+      "date": 1624465530789
+    },
+    {
+      "type": "edit",
+      "id": "bdd6f051c1018441",
+      "item": {
+        "type": "frame",
+        "id": "bdd6f051c1018441",
+        "text": "https://party-lineup.deno.dev"
+      },
+      "date": 1624483650617
+    },
+    {
+      "type": "edit",
+      "id": "bdd6f051c1018441",
+      "item": {
+        "type": "frame",
+        "id": "bdd6f051c1018441",
+        "text": "https://party-lineup.deno.dev/recall"
+      },
+      "date": 1624491336661
+    },
+    {
+      "type": "edit",
+      "id": "bdd6f051c1018441",
+      "item": {
+        "type": "frame",
+        "id": "bdd6f051c1018441",
+        "text": "http://ward.asia.wiki.org/assets/pages/party-lineup/client.html"
+      },
+      "date": 1624491364016
+    },
+    {
+      "type": "edit",
+      "id": "bdd6f051c1018441",
+      "item": {
+        "type": "frame",
+        "id": "bdd6f051c1018441",
+        "text": "http://ward.asia.wiki.org/assets/pages/party-lineup/client.html\nHEIGHT 400"
+      },
+      "date": 1624492178524
+    },
+    {
+      "type": "remove",
+      "id": "1083ab0b609af9d5",
+      "date": 1624497662057
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bd667945ed16c7c8"
+      },
+      "id": "bd667945ed16c7c8",
+      "type": "add",
+      "after": "bdd6f051c1018441",
+      "date": 1624497703859
+    },
+    {
+      "type": "edit",
+      "id": "bd667945ed16c7c8",
+      "item": {
+        "type": "paragraph",
+        "id": "bd667945ed16c7c8",
+        "text": "tip: New data every 10 seconds. "
+      },
+      "date": 1624497739054
+    },
+    {
+      "type": "edit",
+      "id": "bd667945ed16c7c8",
+      "item": {
+        "type": "paragraph",
+        "id": "bd667945ed16c7c8",
+        "text": "tip: New data every 10 seconds. Use Reload Frame."
+      },
+      "date": 1624497763905
+    },
+    {
+      "type": "edit",
+      "id": "bd667945ed16c7c8",
+      "item": {
+        "type": "paragraph",
+        "id": "bd667945ed16c7c8",
+        "text": "Test data every 10 seconds. Use Reload Frame to see it."
+      },
+      "date": 1624497823161
+    },
+    {
+      "type": "add",
+      "id": "6e73b8aef42bb088",
+      "item": {
+        "type": "paragraph",
+        "id": "6e73b8aef42bb088",
+        "text": "Clicks don't yet see the whole federaton."
+      },
+      "after": "bd667945ed16c7c8",
+      "date": 1624497866910
+    },
+    {
+      "type": "add",
+      "id": "943cf347714ecae7",
+      "item": {
+        "type": "paragraph",
+        "id": "943cf347714ecae7",
+        "text": "Drops are recognized but not yet processed."
+      },
+      "after": "6e73b8aef42bb088",
+      "date": 1624497910694
+    },
+    {
+      "type": "edit",
+      "id": "6e73b8aef42bb088",
+      "item": {
+        "type": "paragraph",
+        "id": "6e73b8aef42bb088",
+        "text": "Clicks don't yet see the whole federation."
+      },
+      "date": 1624543102746
+    },
+    {
+      "type": "remove",
+      "id": "6e73b8aef42bb088",
+      "date": 1624576489374
+    },
+    {
+      "type": "remove",
+      "id": "943cf347714ecae7",
+      "date": 1624576495444
+    },
+    {
+      "type": "edit",
+      "id": "bdd6f051c1018441",
+      "item": {
+        "type": "frame",
+        "id": "bdd6f051c1018441",
+        "text": "http://ward.asia.wiki.org/assets/pages/party-lineup/client.html\nHEIGHT 600"
+      },
+      "date": 1624576600901
+    },
+    {
+      "type": "fork",
+      "date": 1624897646286
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "22e8fe1dcc089570"
+      },
+      "id": "22e8fe1dcc089570",
+      "type": "add",
+      "after": "bd667945ed16c7c8",
+      "date": 1624897653287
+    },
+    {
+      "type": "edit",
+      "id": "22e8fe1dcc089570",
+      "item": {
+        "type": "code",
+        "id": "22e8fe1dcc089570",
+        "text": "curl -is https://party-lineup.deno.dev/recall |\\\n  grep x-"
+      },
+      "date": 1624897675054
+    },
+    {
+      "type": "fork",
+      "date": 1624916513802
+    }
+  ]
+}

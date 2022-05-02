@@ -1,0 +1,319 @@
+{
+  "title": "Dot Record of Wiki Activity",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "07a5f74dc28e48d4",
+      "text": "A \"dot journal\" is a printed book with otherwise blank pages filled with dots where other journals would have line. They are more commonly called bullet journals because there are many associated productivity methodologies that involve recording bullet lists in such journals. I've been ask, could wiki provide such a record keeping mechanism that is with you everywhere?"
+    },
+    {
+      "type": "paragraph",
+      "id": "816741ee0639d421",
+      "text": "Google Trends shows that bullet is favored over dot as a search term and that interest in both has peaked in January for the last four years. Maybe one or the other will help with those new year's resolutions. [https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=dot%20journal,bullet%20journal google]"
+    },
+    {
+      "type": "paragraph",
+      "id": "b04001967cbe8c04",
+      "text": "It seems important that the journal pages be personally customized and be thus sufficiently beautiful to reward returning to them regularly. [https://www.google.com/search?q=dot+journal+doodles&sxsrf=ALeKk01x6-R7FykOQZBiaI-e99gC1EhTmg:1582129525885&source=lnms&tbm=isch&sa=X&ved=2ahUKEwih0oPjg97nAhVEGDQIHTC5DVQQ_AUoAXoECA0QAw&biw=1624&bih=763 google]"
+    },
+    {
+      "type": "paragraph",
+      "id": "9106bd8fdc739b64",
+      "text": "It seems also to be important that routine recording of actions or new intentions of actions be quick to update. Space on a page might represent a day or place or relationship that provides context for the simplest mark."
+    },
+    {
+      "type": "markdown",
+      "id": "9cb70eb36525bfeb",
+      "text": "# Mechanism"
+    },
+    {
+      "type": "paragraph",
+      "id": "6c080148a6b48e28",
+      "text": "We consider how a wiki page might serve a similar role in a busy person's life. We'll assume that a good mobile wiki exists and this might be an application that motivates its creation."
+    },
+    {
+      "type": "paragraph",
+      "id": "6d90fda43c4a4aca",
+      "text": "A plugin might provide a drawing grid. Dots could be numbered like spreadsheet cells and markup used to define regions. C3C5D5D3."
+    },
+    {
+      "type": "paragraph",
+      "id": "e4b7cf79e5fbb4a3",
+      "text": "A plugin might accepts clicks and record changes as we do now with wiki flavored markdown check lists. This would date every click in the page's Journal."
+    },
+    {
+      "type": "paragraph",
+      "id": "b754015b145a9144",
+      "text": "A plugin might include a background image or spots of clipart to serve as an inspirational reminder of intentions."
+    },
+    {
+      "type": "paragraph",
+      "id": "b5f11882bd50e5d1",
+      "text": "A plugin might query the sitemap or the Journal of other pages for events to be rendered in specific regions."
+    },
+    {
+      "type": "paragraph",
+      "id": "bbb483955337054b",
+      "text": "A plugin might consult a Roster of sources, say sites representing clients, from which events could be extracted and rolled up as contextual marks."
+    },
+    {
+      "type": "paragraph",
+      "id": "38e8a098627c6e0e",
+      "text": "A plugin might support acquiring additional information such as snapshots, geo coordinates or voice transcriptions. These might be organized into a Template for various kinds of activities."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Dot Record of Wiki Activity",
+        "story": []
+      },
+      "date": 1582130589597
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "07a5f74dc28e48d4"
+      },
+      "id": "07a5f74dc28e48d4",
+      "type": "add",
+      "date": 1582130610243
+    },
+    {
+      "type": "edit",
+      "id": "07a5f74dc28e48d4",
+      "item": {
+        "type": "paragraph",
+        "id": "07a5f74dc28e48d4",
+        "text": "A \"dot journal\" is a printed book with otherwise blank pages filled with dots where other journals would have line. They are more commonly called bullet journals because there are many associated productivity methodologies that involve recording bullet lists in such journals."
+      },
+      "date": 1582130759574
+    },
+    {
+      "type": "edit",
+      "id": "07a5f74dc28e48d4",
+      "item": {
+        "type": "paragraph",
+        "id": "07a5f74dc28e48d4",
+        "text": "A \"dot journal\" is a printed book with otherwise blank pages filled with dots where other journals would have line. They are more commonly called bullet journals because there are many associated productivity methodologies that involve recording bullet lists in such journals. I've been ask, could wiki provide such a record keeping mechanism that is with you everywhere?"
+      },
+      "date": 1582130800958
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "816741ee0639d421"
+      },
+      "id": "816741ee0639d421",
+      "type": "add",
+      "after": "07a5f74dc28e48d4",
+      "date": 1582130804966
+    },
+    {
+      "type": "edit",
+      "id": "816741ee0639d421",
+      "item": {
+        "type": "paragraph",
+        "id": "816741ee0639d421",
+        "text": "Google Trends shows that bullet is favored over dot as a query term and that interest in both has peaked in January for the last four years. Maybe one or the other will help with those new year's resolutions."
+      },
+      "date": 1582130943616
+    },
+    {
+      "type": "edit",
+      "id": "816741ee0639d421",
+      "item": {
+        "type": "paragraph",
+        "id": "816741ee0639d421",
+        "text": "Google Trends shows that bullet is favored over dot as a query term and that interest in both has peaked in January for the last four years. Maybe one or the other will help with those new year's resolutions. [https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=dot%20journal,bullet%20journal google]"
+      },
+      "date": 1582130953272
+    },
+    {
+      "type": "add",
+      "id": "b04001967cbe8c04",
+      "item": {
+        "type": "paragraph",
+        "id": "b04001967cbe8c04",
+        "text": "It seems important that the journal pages be personally customized and be thus sufficiently beautiful to reward returning to them regularly."
+      },
+      "after": "816741ee0639d421",
+      "date": 1582131184289
+    },
+    {
+      "type": "add",
+      "id": "9106bd8fdc739b64",
+      "item": {
+        "type": "paragraph",
+        "id": "9106bd8fdc739b64",
+        "text": "It seems also to be important that routine recording of actions or new intentions of actions be quick to update. Space on a page might represent a day or place or relationship that provides context for the simplest mark."
+      },
+      "after": "b04001967cbe8c04",
+      "date": 1582131323043
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1582131370249
+    },
+    {
+      "type": "add",
+      "id": "9cb70eb36525bfeb",
+      "item": {
+        "type": "paragraph",
+        "id": "9cb70eb36525bfeb",
+        "text": "# Mechanism"
+      },
+      "after": "9106bd8fdc739b64",
+      "date": 1582131387607
+    },
+    {
+      "type": "add",
+      "id": "6c080148a6b48e28",
+      "item": {
+        "type": "paragraph",
+        "id": "6c080148a6b48e28",
+        "text": "We consider how a wiki page might serve a similar role in a busy person's life. We'll assume that a good mobile wiki exists and this might be an application that motivates its creation."
+      },
+      "after": "9cb70eb36525bfeb",
+      "date": 1582131482754
+    },
+    {
+      "type": "add",
+      "id": "6d90fda43c4a4aca",
+      "item": {
+        "type": "paragraph",
+        "id": "6d90fda43c4a4aca",
+        "text": "A plugin might provide a drawing grid. Dots could be numbered like spreadsheet cells and markup used to define regions. C3C5D5D3."
+      },
+      "after": "6c080148a6b48e28",
+      "date": 1582131629571
+    },
+    {
+      "type": "add",
+      "id": "e4b7cf79e5fbb4a3",
+      "item": {
+        "type": "paragraph",
+        "id": "e4b7cf79e5fbb4a3",
+        "text": "A plugin might accepts clicks and record changes as we do now with wiki flavored markdown check lists."
+      },
+      "after": "6d90fda43c4a4aca",
+      "date": 1582131668480
+    },
+    {
+      "type": "edit",
+      "id": "e4b7cf79e5fbb4a3",
+      "item": {
+        "type": "paragraph",
+        "id": "e4b7cf79e5fbb4a3",
+        "text": "A plugin might accepts clicks and record changes as we do now with wiki flavored markdown check lists. This would date every click in the page's Journal."
+      },
+      "date": 1582131705278
+    },
+    {
+      "type": "edit",
+      "id": "9cb70eb36525bfeb",
+      "item": {
+        "type": "markdown",
+        "id": "9cb70eb36525bfeb",
+        "text": "# Mechanism"
+      },
+      "date": 1582131711868
+    },
+    {
+      "type": "add",
+      "id": "b754015b145a9144",
+      "item": {
+        "type": "paragraph",
+        "id": "b754015b145a9144",
+        "text": "A plugin might include a background image or spots of clipart to serve as an inspirational reminder of intentions."
+      },
+      "after": "e4b7cf79e5fbb4a3",
+      "date": 1582131781002
+    },
+    {
+      "type": "add",
+      "id": "b5f11882bd50e5d1",
+      "item": {
+        "type": "paragraph",
+        "id": "b5f11882bd50e5d1",
+        "text": "A plugin might query the sitemap or the Journal of other pages for events to be rendered in specific regions."
+      },
+      "after": "b754015b145a9144",
+      "date": 1582131872782
+    },
+    {
+      "type": "add",
+      "id": "bbb483955337054b",
+      "item": {
+        "type": "paragraph",
+        "id": "bbb483955337054b",
+        "text": "A plugin might consult a Roster of sources, say sites representing clients, from which events could be extracted and rolled up as contextual marks."
+      },
+      "after": "b5f11882bd50e5d1",
+      "date": 1582131997591
+    },
+    {
+      "type": "add",
+      "id": "38e8a098627c6e0e",
+      "item": {
+        "type": "paragraph",
+        "id": "38e8a098627c6e0e",
+        "text": "A plugin might support acquiring additional information such as snapshots, geo coordinates or voice memoranda. These might be organized into a Template for various kinds of activities."
+      },
+      "after": "bbb483955337054b",
+      "date": 1582132146180
+    },
+    {
+      "type": "edit",
+      "id": "38e8a098627c6e0e",
+      "item": {
+        "type": "paragraph",
+        "id": "38e8a098627c6e0e",
+        "text": "A plugin might support acquiring additional information such as snapshots, geo coordinates or voice transcriptions. These might be organized into a Template for various kinds of activities."
+      },
+      "date": 1582132170794
+    },
+    {
+      "type": "edit",
+      "id": "816741ee0639d421",
+      "item": {
+        "type": "paragraph",
+        "id": "816741ee0639d421",
+        "text": "Google Trends shows that bullet is favored over dot as a search term and that interest in both has peaked in January for the last four years. Maybe one or the other will help with those new year's resolutions. [https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=dot%20journal,bullet%20journal google]"
+      },
+      "date": 1582133539199
+    },
+    {
+      "type": "edit",
+      "id": "816741ee0639d421",
+      "item": {
+        "type": "paragraph",
+        "id": "816741ee0639d421",
+        "text": "Google Trends shows that bullet is favored over dot as a search term and that interest in both has peaked in January for the last four years. Maybe one or the other will help the searcher with those new year's resolutions. [https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=dot%20journal,bullet%20journal google]"
+      },
+      "date": 1582133562514
+    },
+    {
+      "type": "edit",
+      "id": "816741ee0639d421",
+      "item": {
+        "type": "paragraph",
+        "id": "816741ee0639d421",
+        "text": "Google Trends shows that bullet is favored over dot as a search term and that interest in both has peaked in January for the last four years. Maybe one or the other will help with those new year's resolutions. [https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=dot%20journal,bullet%20journal google]"
+      },
+      "date": 1582133581733
+    },
+    {
+      "type": "edit",
+      "id": "b04001967cbe8c04",
+      "item": {
+        "type": "paragraph",
+        "id": "b04001967cbe8c04",
+        "text": "It seems important that the journal pages be personally customized and be thus sufficiently beautiful to reward returning to them regularly. [https://www.google.com/search?q=dot+journal+doodles&sxsrf=ALeKk01x6-R7FykOQZBiaI-e99gC1EhTmg:1582129525885&source=lnms&tbm=isch&sa=X&ved=2ahUKEwih0oPjg97nAhVEGDQIHTC5DVQQ_AUoAXoECA0QAw&biw=1624&bih=763 google]"
+      },
+      "date": 1582133658304
+    }
+  ]
+}

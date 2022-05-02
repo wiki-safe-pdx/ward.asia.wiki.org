@@ -1,0 +1,896 @@
+{
+  "title": "Unexpected Server Restarts",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9adb8911838751f7",
+      "text": "Our WSJT plugin maintains a one-hour buffer and reports statistics on its contents when asked by a Datalog. We see the buffer inexplicably empties about once a day. "
+    },
+    {
+      "type": "paragraph",
+      "id": "0ab8d1f8d289e3ac",
+      "text": "See [[FT8 Decodes Datalog]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "ba3d4bcc78e0f3c3",
+      "text": "See [[Heap Datalog]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "44467a57b9fdc44d",
+      "text": "Errors don't happen every day. Recent errors are around 23:00 utc each day. We dig into the server logs when this happens."
+    },
+    {
+      "type": "code",
+      "id": "5c55718089d7c2e3",
+      "text": "journalctl -u wiki | \\\n  egrep '^Aug 26 23:' >aug-26-23-xx.txt"
+    },
+    {
+      "type": "markdown",
+      "id": "072f7173d3ed00d1",
+      "text": "22: JavaScript heap out of memory\n23: JavaScript heap out of memory\n24: JavaScript heap out of memory\n25: Cannot read property 'replace' of undefined\n26: server unexpectedly exited, 27972 (SIGKILL)"
+    },
+    {
+      "type": "assets",
+      "id": "fafe3972449b1527",
+      "text": "pages/unexpected-server-restarts"
+    },
+    {
+      "type": "paragraph",
+      "id": "3591d34268d02663",
+      "text": "We notice Datalog timer based requests time out before or as the server runs out of memory. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/d831a8043e3ff129b6ddac04cec77ea553c3f520/server/server.js#L93 github]"
+    },
+    {
+      "type": "code",
+      "id": "7d4f7a18464b28f5",
+      "text": "sample timeout after 3100 msec"
+    },
+    {
+      "type": "paragraph",
+      "id": "3df448eece42d7d3",
+      "text": "Unexpected restarts cease. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.00.34%20PM.png enlarge]"
+    },
+    {
+      "type": "html",
+      "id": "868b074fbfcaa981",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.00.34%20PM.png>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6565907c32be8eb0",
+      "text": "We correlate the improvement with suspension of second radio reporting decode datagrams. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.01.28%20PM.png enlarge]"
+    },
+    {
+      "type": "html",
+      "id": "7c3c2efc3bf26a55",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.01.28%20PM.png>"
+    },
+    {
+      "type": "paragraph",
+      "id": "c50e934cc871f8bc",
+      "text": "Second source stops 9:54 pm, Monday, August 26, 2019."
+    },
+    {
+      "type": "paragraph",
+      "id": "82c97d533d0e0773",
+      "text": "Notice that restarts coincide with midday peak decodes per slot (blue line) of over 20. With one radio reporting (gray line) this peaks at around 10."
+    },
+    {
+      "type": "paragraph",
+      "id": "368a85766f47145f",
+      "text": "We're recording pings on the same server. We look to see if these are delayed at all when datagram traffic gets high midday. This doesn't seem to be the case. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.46.32%20PM.png expand]"
+    },
+    {
+      "type": "html",
+      "id": "437d0da012e2aa71",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.46.32%20PM.png>"
+    },
+    {
+      "type": "paragraph",
+      "id": "c437aedd654e71c3",
+      "text": "Digital Ocean 2 GB droplet memory usage shows daily restarts at peak consumption followed by days of stability under lighter traffic load. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.56.24%20PM.png enlarge]"
+    },
+    {
+      "type": "html",
+      "id": "c12fbb81f5f1c7ba",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.56.24%20PM.png>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8901a2347ab817f3",
+      "text": "All other charts are nominal."
+    },
+    {
+      "type": "paragraph",
+      "id": "fb7ab258af2973a7",
+      "text": "It's possible our datagram decoding logic is wasteful of memory. For each binary message we construct an object that contains five multi-byte decoding functions closed over the payload position counter. [https://github.com/WardCunningham/wiki-plugin-wsjt/blob/5cf25b561c969d77954ce973160b98ceea877bcd/server/server.js#L81-L101 github]"
+    },
+    {
+      "type": "code",
+      "id": "8a2e9cc35508658b",
+      "text": "let dec = decoder(message)\nlet magic = dec.four()\nlet version = dec.four()\nlet type = dec.four()\nswitch (type) {\n  case 2:\n    let id = dec.str()\n    let isnew = dec.one()\n    let time = dec.four()\n    let snr = dec.four()\n    let dtime = dec.eight()\n    let freq = dec.four()\n    let mode = dec.str()\n    let copy = dec.str()\n    let conf = dec.one()\n    let rept = `${remote.address} ${format(time)} ${freq} ${copy}`\n    while(log.length >= 10000) log.shift()\n    log.push(rept)\n    break;\n}\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "fe74717f4c2bd5ee",
+      "text": "See [[Big Trouble Pages]] that trigger errors"
+    },
+    {
+      "type": "paragraph",
+      "id": "181d8fe2c8e22b6e",
+      "text": "We've seen the log grow well beyond the 240 slots expected when the winnow() is called in a timely way. This appears to be a bug in node fixed in 10.9.0. [https://github.com/nodejs/node/issues/22149 github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Unexpected Server Restarts",
+        "story": []
+      },
+      "date": 1566920438361
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9adb8911838751f7"
+      },
+      "id": "9adb8911838751f7",
+      "type": "add",
+      "date": 1566920440867
+    },
+    {
+      "type": "edit",
+      "id": "9adb8911838751f7",
+      "item": {
+        "type": "paragraph",
+        "id": "9adb8911838751f7",
+        "text": "Our WSJT plugin maintains a one-hour buffer and reports statistics on its contents when asked by a Datalog. We see the buffer inexplicably empties about once a day. "
+      },
+      "date": 1566920570302
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5c55718089d7c2e3"
+      },
+      "id": "5c55718089d7c2e3",
+      "type": "add",
+      "after": "9adb8911838751f7",
+      "date": 1566920614976
+    },
+    {
+      "type": "edit",
+      "id": "5c55718089d7c2e3",
+      "item": {
+        "type": "code",
+        "id": "5c55718089d7c2e3",
+        "text": "journalctl -u wiki | egrep '^Aug 26 23:' >aug-26-23.txt"
+      },
+      "date": 1566920623548
+    },
+    {
+      "type": "edit",
+      "id": "5c55718089d7c2e3",
+      "item": {
+        "type": "code",
+        "id": "5c55718089d7c2e3",
+        "text": "journalctl -u wiki | \\\n  egrep '^Aug 26 23:' >aug-26-23.txt"
+      },
+      "date": 1566920674749
+    },
+    {
+      "type": "add",
+      "id": "86101f8bd425c83e",
+      "item": {
+        "type": "paragraph",
+        "id": "86101f8bd425c83e",
+        "text": "We dig into the server logs when this happens."
+      },
+      "after": "9adb8911838751f7",
+      "date": 1566920704360
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fafe3972449b1527"
+      },
+      "id": "fafe3972449b1527",
+      "type": "add",
+      "after": "5c55718089d7c2e3",
+      "date": 1566920716081
+    },
+    {
+      "type": "edit",
+      "id": "fafe3972449b1527",
+      "item": {
+        "type": "assets",
+        "id": "fafe3972449b1527",
+        "text": "pages/unexpected-server-restarts"
+      },
+      "date": 1566920726172
+    },
+    {
+      "type": "edit",
+      "id": "5c55718089d7c2e3",
+      "item": {
+        "type": "code",
+        "id": "5c55718089d7c2e3",
+        "text": "journalctl -u wiki | \\\n  egrep '^Aug 26 23:' >aug-26-23-xx.txt"
+      },
+      "date": 1566921998756
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "072f7173d3ed00d1"
+      },
+      "id": "072f7173d3ed00d1",
+      "type": "add",
+      "after": "fafe3972449b1527",
+      "date": 1566922094861
+    },
+    {
+      "type": "edit",
+      "id": "072f7173d3ed00d1",
+      "item": {
+        "type": "markdown",
+        "id": "072f7173d3ed00d1",
+        "text": "22: JavaScript heap out of memory\n"
+      },
+      "date": 1566922113095
+    },
+    {
+      "type": "edit",
+      "id": "072f7173d3ed00d1",
+      "item": {
+        "type": "markdown",
+        "id": "072f7173d3ed00d1",
+        "text": "22: JavaScript heap out of memory\n23: JavaScript heap out of memory\n24: \n25:\n26:"
+      },
+      "date": 1566922173241
+    },
+    {
+      "type": "edit",
+      "id": "072f7173d3ed00d1",
+      "item": {
+        "type": "markdown",
+        "id": "072f7173d3ed00d1",
+        "text": "22: JavaScript heap out of memory\n23: JavaScript heap out of memory\n24: JavaScript heap out of memory\n25:\n26:"
+      },
+      "date": 1566922202605
+    },
+    {
+      "type": "edit",
+      "id": "072f7173d3ed00d1",
+      "item": {
+        "type": "markdown",
+        "id": "072f7173d3ed00d1",
+        "text": "22: JavaScript heap out of memory\n23: JavaScript heap out of memory\n24: JavaScript heap out of memory\n25: Cannot read property 'replace' of undefined\n26:"
+      },
+      "date": 1566922258044
+    },
+    {
+      "type": "edit",
+      "id": "072f7173d3ed00d1",
+      "item": {
+        "type": "markdown",
+        "id": "072f7173d3ed00d1",
+        "text": "22: JavaScript heap out of memory\n23: JavaScript heap out of memory\n24: JavaScript heap out of memory\n25: Cannot read property 'replace' of undefined\n26: server unexpectly exitted, 27972 (SIGKILL)"
+      },
+      "date": 1566922322806
+    },
+    {
+      "type": "edit",
+      "id": "072f7173d3ed00d1",
+      "item": {
+        "type": "markdown",
+        "id": "072f7173d3ed00d1",
+        "text": "22: JavaScript heap out of memory\n23: JavaScript heap out of memory\n24: JavaScript heap out of memory\n25: Cannot read property 'replace' of undefined\n26: server unexpectedly exited, 27972 (SIGKILL)"
+      },
+      "date": 1566922353430
+    },
+    {
+      "type": "move",
+      "order": [
+        "9adb8911838751f7",
+        "86101f8bd425c83e",
+        "5c55718089d7c2e3",
+        "072f7173d3ed00d1",
+        "fafe3972449b1527"
+      ],
+      "id": "072f7173d3ed00d1",
+      "date": 1566922374162
+    },
+    {
+      "type": "add",
+      "id": "44467a57b9fdc44d",
+      "item": {
+        "type": "paragraph",
+        "id": "44467a57b9fdc44d",
+        "text": "Errors don't happen every day. Recent errors are around 23:00 utc each day. "
+      },
+      "after": "9adb8911838751f7",
+      "date": 1566922520721
+    },
+    {
+      "type": "remove",
+      "id": "86101f8bd425c83e",
+      "date": 1566922531905
+    },
+    {
+      "type": "edit",
+      "id": "44467a57b9fdc44d",
+      "item": {
+        "type": "paragraph",
+        "id": "44467a57b9fdc44d",
+        "text": "Errors don't happen every day. Recent errors are around 23:00 utc each day. We dig into the server logs when this happens."
+      },
+      "date": 1566922534419
+    },
+    {
+      "type": "add",
+      "id": "0ab8d1f8d289e3ac",
+      "item": {
+        "type": "paragraph",
+        "id": "0ab8d1f8d289e3ac",
+        "text": "See [[FT8 Decodes Datalog]]"
+      },
+      "after": "9adb8911838751f7",
+      "date": 1566922628266
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3591d34268d02663"
+      },
+      "id": "3591d34268d02663",
+      "type": "add",
+      "after": "fafe3972449b1527",
+      "date": 1566922638394
+    },
+    {
+      "type": "edit",
+      "id": "3591d34268d02663",
+      "item": {
+        "type": "paragraph",
+        "id": "3591d34268d02663",
+        "text": "We notice Datalog timer based requests time out before or as the server runs out of memory."
+      },
+      "date": 1566922698836
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7d4f7a18464b28f5"
+      },
+      "id": "7d4f7a18464b28f5",
+      "type": "add",
+      "after": "3591d34268d02663",
+      "date": 1566922823244
+    },
+    {
+      "type": "edit",
+      "id": "7d4f7a18464b28f5",
+      "item": {
+        "type": "code",
+        "id": "7d4f7a18464b28f5",
+        "text": "sample timeout after 3100 msec"
+      },
+      "date": 1566922827749
+    },
+    {
+      "type": "edit",
+      "id": "3591d34268d02663",
+      "item": {
+        "type": "paragraph",
+        "id": "3591d34268d02663",
+        "text": "We notice Datalog timer based requests time out before or as the server runs out of memory. [https://github.com/WardCunningham/wiki-plugin-datalog/blob/d831a8043e3ff129b6ddac04cec77ea553c3f520/server/server.js#L93 github]"
+      },
+      "date": 1566923034160
+    },
+    {
+      "type": "fork",
+      "date": 1567127075833
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3df448eece42d7d3"
+      },
+      "id": "3df448eece42d7d3",
+      "type": "add",
+      "after": "7d4f7a18464b28f5",
+      "date": 1567127085714
+    },
+    {
+      "type": "edit",
+      "id": "3df448eece42d7d3",
+      "item": {
+        "type": "paragraph",
+        "id": "3df448eece42d7d3",
+        "text": "Unexpected restarts seese."
+      },
+      "date": 1567127146615
+    },
+    {
+      "type": "edit",
+      "id": "3df448eece42d7d3",
+      "item": {
+        "type": "paragraph",
+        "id": "3df448eece42d7d3",
+        "text": "Unexpected restarts sease."
+      },
+      "date": 1567127176598
+    },
+    {
+      "type": "edit",
+      "id": "3df448eece42d7d3",
+      "item": {
+        "type": "paragraph",
+        "id": "3df448eece42d7d3",
+        "text": "Unexpected restarts cease."
+      },
+      "date": 1567127250862
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "868b074fbfcaa981"
+      },
+      "id": "868b074fbfcaa981",
+      "type": "add",
+      "after": "3df448eece42d7d3",
+      "date": 1567127253807
+    },
+    {
+      "type": "edit",
+      "id": "868b074fbfcaa981",
+      "item": {
+        "type": "html",
+        "id": "868b074fbfcaa981",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.00.34%20PM.png>"
+      },
+      "date": 1567127284790
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6565907c32be8eb0"
+      },
+      "id": "6565907c32be8eb0",
+      "type": "add",
+      "after": "868b074fbfcaa981",
+      "date": 1567127303727
+    },
+    {
+      "type": "edit",
+      "id": "6565907c32be8eb0",
+      "item": {
+        "type": "paragraph",
+        "id": "6565907c32be8eb0",
+        "text": "We correlate the improvement with suspension of second radio reporting decode datagrams."
+      },
+      "date": 1567127340977
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7c3c2efc3bf26a55"
+      },
+      "id": "7c3c2efc3bf26a55",
+      "type": "add",
+      "after": "6565907c32be8eb0",
+      "date": 1567127356764
+    },
+    {
+      "type": "edit",
+      "id": "7c3c2efc3bf26a55",
+      "item": {
+        "type": "html",
+        "id": "7c3c2efc3bf26a55",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.01.28%20PM.png>"
+      },
+      "date": 1567127377834
+    },
+    {
+      "type": "edit",
+      "id": "6565907c32be8eb0",
+      "item": {
+        "type": "paragraph",
+        "id": "6565907c32be8eb0",
+        "text": "We correlate the improvement with suspension of second radio reporting decode datagrams. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.01.28%20PM.png enlarge]"
+      },
+      "date": 1567127390638
+    },
+    {
+      "type": "edit",
+      "id": "3df448eece42d7d3",
+      "item": {
+        "type": "paragraph",
+        "id": "3df448eece42d7d3",
+        "text": "Unexpected restarts cease. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.00.34%20PM.png enlarge]"
+      },
+      "date": 1567127406978
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c50e934cc871f8bc"
+      },
+      "id": "c50e934cc871f8bc",
+      "type": "add",
+      "after": "7c3c2efc3bf26a55",
+      "date": 1567127474249
+    },
+    {
+      "type": "edit",
+      "id": "c50e934cc871f8bc",
+      "item": {
+        "type": "paragraph",
+        "id": "c50e934cc871f8bc",
+        "text": "Improvement as of Aug 26, 2019, 21:54 Pacific."
+      },
+      "date": 1567127512180
+    },
+    {
+      "type": "edit",
+      "id": "c50e934cc871f8bc",
+      "item": {
+        "type": "paragraph",
+        "id": "c50e934cc871f8bc",
+        "text": "Improvement as of Aug 26, 21:54 Pacific."
+      },
+      "date": 1567127531344
+    },
+    {
+      "type": "edit",
+      "id": "c50e934cc871f8bc",
+      "item": {
+        "type": "paragraph",
+        "id": "c50e934cc871f8bc",
+        "text": "Second source suspended as of Aug 26, 21:54 Pacific."
+      },
+      "date": 1567127574156
+    },
+    {
+      "type": "edit",
+      "id": "c50e934cc871f8bc",
+      "item": {
+        "type": "paragraph",
+        "id": "c50e934cc871f8bc",
+        "text": "Second source suspended as of 9:54 pm, Monday, August 26, 2019."
+      },
+      "date": 1567127655855
+    },
+    {
+      "type": "edit",
+      "id": "c50e934cc871f8bc",
+      "item": {
+        "type": "paragraph",
+        "id": "c50e934cc871f8bc",
+        "text": "Second source stops 9:54 pm, Monday, August 26, 2019."
+      },
+      "date": 1567127677036
+    },
+    {
+      "type": "add",
+      "id": "82c97d533d0e0773",
+      "item": {
+        "type": "paragraph",
+        "id": "82c97d533d0e0773",
+        "text": "Notice that restarts coincide with midday peak decodes per slot (blue line) of over 20. With one radio reporting (gray line) this peaks at around 10."
+      },
+      "after": "c50e934cc871f8bc",
+      "date": 1567128221477
+    },
+    {
+      "type": "add",
+      "id": "368a85766f47145f",
+      "item": {
+        "type": "paragraph",
+        "id": "368a85766f47145f",
+        "text": "We're recording pings on the same server. We look to see if these are delayed at all when datagram traffic gets high midday. This doesn't seem to be the case."
+      },
+      "after": "82c97d533d0e0773",
+      "date": 1567129733761
+    },
+    {
+      "type": "move",
+      "order": [
+        "9adb8911838751f7",
+        "0ab8d1f8d289e3ac",
+        "44467a57b9fdc44d",
+        "5c55718089d7c2e3",
+        "072f7173d3ed00d1",
+        "fafe3972449b1527",
+        "3591d34268d02663",
+        "7d4f7a18464b28f5",
+        "3df448eece42d7d3",
+        "868b074fbfcaa981",
+        "6565907c32be8eb0",
+        "7c3c2efc3bf26a55",
+        "c50e934cc871f8bc",
+        "368a85766f47145f",
+        "82c97d533d0e0773"
+      ],
+      "id": "82c97d533d0e0773",
+      "date": 1567129737248
+    },
+    {
+      "type": "move",
+      "order": [
+        "9adb8911838751f7",
+        "0ab8d1f8d289e3ac",
+        "44467a57b9fdc44d",
+        "5c55718089d7c2e3",
+        "072f7173d3ed00d1",
+        "fafe3972449b1527",
+        "3591d34268d02663",
+        "7d4f7a18464b28f5",
+        "3df448eece42d7d3",
+        "868b074fbfcaa981",
+        "6565907c32be8eb0",
+        "7c3c2efc3bf26a55",
+        "c50e934cc871f8bc",
+        "82c97d533d0e0773",
+        "368a85766f47145f"
+      ],
+      "id": "82c97d533d0e0773",
+      "date": 1567129740804
+    },
+    {
+      "type": "edit",
+      "id": "368a85766f47145f",
+      "item": {
+        "type": "paragraph",
+        "id": "368a85766f47145f",
+        "text": "We're recording pings on the same server. We look to see if these are delayed at all when datagram traffic gets high midday. This doesn't seem to be the case. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.46.32%20PM.png expand]"
+      },
+      "date": 1567129749008
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "437d0da012e2aa71"
+      },
+      "id": "437d0da012e2aa71",
+      "type": "add",
+      "after": "368a85766f47145f",
+      "date": 1567129751019
+    },
+    {
+      "type": "edit",
+      "id": "437d0da012e2aa71",
+      "item": {
+        "type": "html",
+        "id": "437d0da012e2aa71",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.46.32%20PM.png>"
+      },
+      "date": 1567129767794
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c437aedd654e71c3"
+      },
+      "id": "c437aedd654e71c3",
+      "type": "add",
+      "after": "437d0da012e2aa71",
+      "date": 1567130289131
+    },
+    {
+      "type": "edit",
+      "id": "c437aedd654e71c3",
+      "item": {
+        "type": "paragraph",
+        "id": "c437aedd654e71c3",
+        "text": "Digital Ocean agent reports memory usage. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.46.32%20PM.png enlarge]"
+      },
+      "date": 1567130339830
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c12fbb81f5f1c7ba"
+      },
+      "id": "c12fbb81f5f1c7ba",
+      "type": "add",
+      "after": "c437aedd654e71c3",
+      "date": 1567130342329
+    },
+    {
+      "type": "edit",
+      "id": "c12fbb81f5f1c7ba",
+      "item": {
+        "type": "html",
+        "id": "c12fbb81f5f1c7ba",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.46.32%20PM.png>"
+      },
+      "date": 1567130360290
+    },
+    {
+      "type": "edit",
+      "id": "c437aedd654e71c3",
+      "item": {
+        "type": "paragraph",
+        "id": "c437aedd654e71c3",
+        "text": "Digital Ocean agent reports memory usage. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.56.24%20PM.png enlarge]"
+      },
+      "date": 1567130387469
+    },
+    {
+      "type": "edit",
+      "id": "c12fbb81f5f1c7ba",
+      "item": {
+        "type": "html",
+        "id": "c12fbb81f5f1c7ba",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.56.24%20PM.png>"
+      },
+      "date": 1567130399724
+    },
+    {
+      "type": "edit",
+      "id": "c437aedd654e71c3",
+      "item": {
+        "type": "paragraph",
+        "id": "c437aedd654e71c3",
+        "text": "Digital Ocean 2 Gb memory usage. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.56.24%20PM.png enlarge]"
+      },
+      "date": 1567130690976
+    },
+    {
+      "type": "edit",
+      "id": "c437aedd654e71c3",
+      "item": {
+        "type": "paragraph",
+        "id": "c437aedd654e71c3",
+        "text": "Digital Ocean 2 GB droplet memory usage. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.56.24%20PM.png enlarge]"
+      },
+      "date": 1567130721355
+    },
+    {
+      "type": "edit",
+      "id": "c437aedd654e71c3",
+      "item": {
+        "type": "paragraph",
+        "id": "c437aedd654e71c3",
+        "text": "Digital Ocean 2 GB droplet memory usage shows daily restarts at peak consumption followed by days of stability under lighter traffic load. [http://ward.asia.wiki.org/assets/pages/unexpected-server-restarts/Screen%20Shot%202019-08-29%20at%206.56.24%20PM.png enlarge]"
+      },
+      "date": 1567130878307
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8901a2347ab817f3"
+      },
+      "id": "8901a2347ab817f3",
+      "type": "add",
+      "after": "c12fbb81f5f1c7ba",
+      "date": 1567130996440
+    },
+    {
+      "type": "edit",
+      "id": "8901a2347ab817f3",
+      "item": {
+        "type": "paragraph",
+        "id": "8901a2347ab817f3",
+        "text": "All other charts are nominal."
+      },
+      "date": 1567131008503
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8a2e9cc35508658b"
+      },
+      "id": "8a2e9cc35508658b",
+      "type": "add",
+      "after": "8901a2347ab817f3",
+      "date": 1567131682439
+    },
+    {
+      "type": "edit",
+      "id": "8a2e9cc35508658b",
+      "item": {
+        "type": "code",
+        "id": "8a2e9cc35508658b",
+        "text": "    let dec = decoder(message)\n    let magic = dec.four()\n    let version = dec.four()\n    let type = dec.four()\n    switch (type) {\n      case 2:\n        let id = dec.str()\n        let isnew = dec.one()\n        let time = dec.four()\n        let snr = dec.four()\n        let dtime = dec.eight()\n        let freq = dec.four()\n        let mode = dec.str()\n        let copy = dec.str()\n        let conf = dec.one()\n        let rept = `${remote.address} ${format(time)} ${freq} ${copy}`\n        // console.log(rept)\n        while(log.length >= 10000) log.shift()\n        log.push(rept)\n        break;\n    }\n"
+      },
+      "date": 1567131709818
+    },
+    {
+      "type": "edit",
+      "id": "8a2e9cc35508658b",
+      "item": {
+        "type": "code",
+        "id": "8a2e9cc35508658b",
+        "text": "let dec = decoder(message)\nlet magic = dec.four()\nlet version = dec.four()\nlet type = dec.four()\nswitch (type) {\n  case 2:\n    let id = dec.str()\n    let isnew = dec.one()\n    let time = dec.four()\n    let snr = dec.four()\n    let dtime = dec.eight()\n    let freq = dec.four()\n    let mode = dec.str()\n    let copy = dec.str()\n    let conf = dec.one()\n    let rept = `${remote.address} ${format(time)} ${freq} ${copy}`\n    while(log.length >= 10000) log.shift()\n    log.push(rept)\n    break;\n}\n"
+      },
+      "date": 1567131883923
+    },
+    {
+      "type": "add",
+      "id": "fb7ab258af2973a7",
+      "item": {
+        "type": "paragraph",
+        "id": "fb7ab258af2973a7",
+        "text": "It's possible our datagram decoding logic is wasteful of memory. For each binary message we construct an object that contains multi-byte decoding functions closed over the payload position counter."
+      },
+      "after": "8901a2347ab817f3",
+      "date": 1567132234564
+    },
+    {
+      "type": "edit",
+      "id": "fb7ab258af2973a7",
+      "item": {
+        "type": "paragraph",
+        "id": "fb7ab258af2973a7",
+        "text": "It's possible our datagram decoding logic is wasteful of memory. For each binary message we construct an object that contains multi-byte decoding functions closed over the payload position counter. [https://github.com/WardCunningham/wiki-plugin-wsjt/blob/5cf25b561c969d77954ce973160b98ceea877bcd/server/server.js#L81-L101 github]"
+      },
+      "date": 1567132568039
+    },
+    {
+      "type": "edit",
+      "id": "fb7ab258af2973a7",
+      "item": {
+        "type": "paragraph",
+        "id": "fb7ab258af2973a7",
+        "text": "It's possible our datagram decoding logic is wasteful of memory. For each binary message we construct an object that contains five multi-byte decoding functions closed over the payload position counter. [https://github.com/WardCunningham/wiki-plugin-wsjt/blob/5cf25b561c969d77954ce973160b98ceea877bcd/server/server.js#L81-L101 github]"
+      },
+      "date": 1567132597299
+    },
+    {
+      "type": "add",
+      "id": "ba3d4bcc78e0f3c3",
+      "item": {
+        "type": "paragraph",
+        "id": "ba3d4bcc78e0f3c3",
+        "text": "See [[Heap Datalog]]"
+      },
+      "after": "0ab8d1f8d289e3ac",
+      "date": 1567250088065
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fe74717f4c2bd5ee"
+      },
+      "id": "fe74717f4c2bd5ee",
+      "type": "add",
+      "after": "8a2e9cc35508658b",
+      "date": 1567295434370
+    },
+    {
+      "type": "edit",
+      "id": "fe74717f4c2bd5ee",
+      "item": {
+        "type": "paragraph",
+        "id": "fe74717f4c2bd5ee",
+        "text": "See [[Big Trouble Pages]] that trigger errors"
+      },
+      "date": 1567295489198
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "181d8fe2c8e22b6e"
+      },
+      "id": "181d8fe2c8e22b6e",
+      "type": "add",
+      "after": "fe74717f4c2bd5ee",
+      "date": 1574101351646
+    },
+    {
+      "type": "edit",
+      "id": "181d8fe2c8e22b6e",
+      "item": {
+        "type": "paragraph",
+        "id": "181d8fe2c8e22b6e",
+        "text": "We've seen the log grow well beyond the 240 slots expected when the winnow() is called in a timely way. This appears to be a bug in node fixed in 10.9.0. [https://github.com/nodejs/node/issues/22149 github]"
+      },
+      "date": 1574101432646
+    }
+  ]
+}

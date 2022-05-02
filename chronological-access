@@ -1,0 +1,297 @@
+{
+  "title": "Chronological Access",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1368276b32642f89",
+      "text": "We ask, if the creation date of every page is recorded, why make it the title also?"
+    },
+    {
+      "type": "paragraph",
+      "id": "e5e21f115d762b8b",
+      "text": "It may be that it is not easy to think of a better title."
+    },
+    {
+      "type": "paragraph",
+      "id": "db164341036b5baf",
+      "text": "It may be that the page for a day is not written on that day."
+    },
+    {
+      "type": "paragraph",
+      "id": "ac1b3bf8e4fe4828",
+      "text": "It may be that wiki does not list changes by first edit."
+    },
+    {
+      "type": "paragraph",
+      "id": "0a7a70440a4b7fc5",
+      "text": "We'll imagine how a chronological record of activity might emerge that is both well factored and subject to refactoring with the perspective offered when looking back over events."
+    },
+    {
+      "type": "paragraph",
+      "id": "fbcb11ad53c98b66",
+      "text": "One needs a place to write with little forethought. This could be a page titled Current Events. At the end of a busy week one could review this and make a few pages out of notable activities."
+    },
+    {
+      "type": "paragraph",
+      "id": "bb8f5f2ba4b1a01b",
+      "text": "Maybe one has traveled and visited three cities. Create pages for each city and drag observations there. Add other research or comparisons between them and past travels."
+    },
+    {
+      "type": "paragraph",
+      "id": "c360d94537ac646b",
+      "text": "Maybe one has returned to an activity from the previous week. Should the items go on a page started then? Activity continued? Where will these titles collect? Current Month? Current Year?"
+    },
+    {
+      "type": "paragraph",
+      "id": "dac889fec59ed6d3",
+      "text": "One needs a way to write about things past and future. How should we date such writing such that wiki understands it? Journal items record each action to the millisecond but this does not help us here."
+    },
+    {
+      "type": "paragraph",
+      "id": "7ce9f885c7cb4330",
+      "text": "Maybe a mobile application makes recording in the moment more feasible. Something happens. Take a picture. Write about it later. The picture has the date."
+    },
+    {
+      "type": "paragraph",
+      "id": "fb31380ed901b306",
+      "text": "Maybe we need a rich notion of time that is more like we speak of time than how a clock tells time. Morning, evening, spring, fall, freshman year, graduation."
+    },
+    {
+      "type": "paragraph",
+      "id": "f58d8e006f031587",
+      "text": "See [[About Calendar Plugin]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "47c84c41b8c1b97e",
+      "text": "One needs a way to view one's work in a lasting chronology. This shouldn't go away when refactoring."
+    },
+    {
+      "type": "paragraph",
+      "id": "c749c20d7c02a754",
+      "text": "Maybe we should capture some edit history for an item when we drag it to a new page. The 'add' action could be dated at the moment it was added but should it have been removed from elsewhere, that history could be rolled up into the add. "
+    },
+    {
+      "type": "paragraph",
+      "id": "7f0950db89ac7fdd",
+      "text": "Maybe we need a timeline viewer that has a richness that exceeds Recent Changes. It could be graphical. It could scroll and zoom. It could get dates from more places like the Calendar plugin or the rolled-up history of a paragraph."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Chronological Access",
+        "story": []
+      },
+      "date": 1498483799787
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1368276b32642f89"
+      },
+      "id": "1368276b32642f89",
+      "type": "add",
+      "date": 1498483801923
+    },
+    {
+      "type": "edit",
+      "id": "1368276b32642f89",
+      "item": {
+        "type": "paragraph",
+        "id": "1368276b32642f89",
+        "text": "We ask, if the creation date of every page is recorded, why make it the title also?"
+      },
+      "date": 1498483843386
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e5e21f115d762b8b"
+      },
+      "id": "e5e21f115d762b8b",
+      "type": "add",
+      "after": "1368276b32642f89",
+      "date": 1498483872030
+    },
+    {
+      "type": "edit",
+      "id": "e5e21f115d762b8b",
+      "item": {
+        "type": "paragraph",
+        "id": "e5e21f115d762b8b",
+        "text": "It may be that it is not easy to think of a better title in the moment."
+      },
+      "date": 1498484144364
+    },
+    {
+      "type": "add",
+      "id": "db164341036b5baf",
+      "item": {
+        "type": "paragraph",
+        "id": "db164341036b5baf",
+        "text": "It may be that the page for a day is not written on that day."
+      },
+      "after": "e5e21f115d762b8b",
+      "date": 1498484164135
+    },
+    {
+      "type": "add",
+      "id": "ac1b3bf8e4fe4828",
+      "item": {
+        "type": "paragraph",
+        "id": "ac1b3bf8e4fe4828",
+        "text": "It may be that wiki does not list changes by first edit."
+      },
+      "after": "db164341036b5baf",
+      "date": 1498484241858
+    },
+    {
+      "type": "edit",
+      "id": "e5e21f115d762b8b",
+      "item": {
+        "type": "paragraph",
+        "id": "e5e21f115d762b8b",
+        "text": "It may be that it is not easy to think of a better title."
+      },
+      "date": 1498484252000
+    },
+    {
+      "type": "add",
+      "id": "0a7a70440a4b7fc5",
+      "item": {
+        "type": "paragraph",
+        "id": "0a7a70440a4b7fc5",
+        "text": "We'll imagine how a chronological record of activity might emerge that is both well factored and subject to refactoring with the perspective offered when looking back over events."
+      },
+      "after": "ac1b3bf8e4fe4828",
+      "date": 1498484627717
+    },
+    {
+      "type": "add",
+      "id": "fbcb11ad53c98b66",
+      "item": {
+        "type": "paragraph",
+        "id": "fbcb11ad53c98b66",
+        "text": "One needs a place to write with little forethought. "
+      },
+      "after": "0a7a70440a4b7fc5",
+      "date": 1498484666242
+    },
+    {
+      "type": "edit",
+      "id": "fbcb11ad53c98b66",
+      "item": {
+        "type": "paragraph",
+        "id": "fbcb11ad53c98b66",
+        "text": "One needs a place to write with little forethought. This could be a page titled Current Events. At the end of a busy week one could review this and make a few pages out of notable activities."
+      },
+      "date": 1498484895524
+    },
+    {
+      "type": "add",
+      "id": "bb8f5f2ba4b1a01b",
+      "item": {
+        "type": "paragraph",
+        "id": "bb8f5f2ba4b1a01b",
+        "text": "Maybe one has traveled and visited three cities. Create pages for each city and drag observations there. Add other research or comparisons between them and past travels."
+      },
+      "after": "fbcb11ad53c98b66",
+      "date": 1498485029631
+    },
+    {
+      "type": "add",
+      "id": "c360d94537ac646b",
+      "item": {
+        "type": "paragraph",
+        "id": "c360d94537ac646b",
+        "text": "Maybe one has returned to an activity from the previous week. Should the items go on a page started then? Activity continued? Where will these titles collect? Current Month? Current Year?"
+      },
+      "after": "bb8f5f2ba4b1a01b",
+      "date": 1498485321066
+    },
+    {
+      "type": "add",
+      "id": "dac889fec59ed6d3",
+      "item": {
+        "type": "paragraph",
+        "id": "dac889fec59ed6d3",
+        "text": "One needs a way to write about things past and future. How should we date such writing such that wiki understands it? Journal items record each action to the millisecond but this does not help us here."
+      },
+      "after": "c360d94537ac646b",
+      "date": 1498485490081
+    },
+    {
+      "type": "add",
+      "id": "7ce9f885c7cb4330",
+      "item": {
+        "type": "paragraph",
+        "id": "7ce9f885c7cb4330",
+        "text": "Maybe a mobile application makes recording in the moment more feasible. Something happens. Take a picture. Write about it later. The picture has the date."
+      },
+      "after": "dac889fec59ed6d3",
+      "date": 1498485581879
+    },
+    {
+      "type": "add",
+      "id": "fb31380ed901b306",
+      "item": {
+        "type": "paragraph",
+        "id": "fb31380ed901b306",
+        "text": "Maybe we need a rich notion of time that is more like we speak of time than how a clock tells time. Morning, evening, spring, fall, freshman year, graduation."
+      },
+      "after": "7ce9f885c7cb4330",
+      "date": 1498485733540
+    },
+    {
+      "type": "add",
+      "id": "f58d8e006f031587",
+      "item": {
+        "type": "paragraph",
+        "id": "f58d8e006f031587",
+        "text": "See [[About Calendar Plugin]]"
+      },
+      "after": "fb31380ed901b306",
+      "date": 1498485744212
+    },
+    {
+      "type": "add",
+      "id": "47c84c41b8c1b97e",
+      "item": {
+        "type": "paragraph",
+        "id": "47c84c41b8c1b97e",
+        "text": "One needs a way to view one's work in a lasting chronology. This shouldn't go away when refactoring."
+      },
+      "after": "f58d8e006f031587",
+      "date": 1498485887269
+    },
+    {
+      "type": "add",
+      "id": "c749c20d7c02a754",
+      "item": {
+        "type": "paragraph",
+        "id": "c749c20d7c02a754",
+        "text": "Maybe we should capture some edit history for an item when we drag it to a new page. The 'add' action could be dated at the moment it was added but should it have been removed from elsewhere, that history could be rolled up into the add. "
+      },
+      "after": "47c84c41b8c1b97e",
+      "date": 1498486021002
+    },
+    {
+      "type": "add",
+      "id": "7f0950db89ac7fdd",
+      "item": {
+        "type": "paragraph",
+        "id": "7f0950db89ac7fdd",
+        "text": "Maybe we need a timeline viewer that has a richness that exceeds Recent Changes. It could be graphical. It could scroll and zoom. It could get dates from more places like the Calendar plugin or the rolled-up history of a paragraph."
+      },
+      "after": "c749c20d7c02a754",
+      "date": 1498486159015
+    },
+    {
+      "type": "fork",
+      "site": "ward.walt.tries.fed.wiki",
+      "date": 1498486252792
+    }
+  ]
+}

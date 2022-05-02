@@ -1,0 +1,193 @@
+{
+  "title": "Creative History of Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "20c64e493e2583cd",
+      "text": "I wrote these notes as the camera crew was setting up. There are so many versions of the story only under that pressure could I find a fresh angle. [http://portlandcreatives.co/portfolio/ward-cunningham/ post]"
+    },
+    {
+      "type": "markdown",
+      "id": "aace5a40204606ef",
+      "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n \n- engineer working with smart people\n- how they make decisions\n- how they change their ways\n \n- 1980's a time of change, personal computers\n- programming stopped being all about mathematics\n \n- trouble is most anything can be made to work\n- we found new ways to work in a team, trust strangers\n- wiki was born as a miniature version \n \n- first wiki was for programmers\n- they knew me and trusted me\n- they followed my lead, and I edited \n \n- this was an activist wiki, we changed the world\n- the community defined our vocabulary\n- we learn how to talk with it\n \n- we were five years in when the encyclopedia tried wiki\n- five more years before they were taken seriously\n \n- I'm pleased with that rate of acceptance\n- I'm working on a new wiki today\n- I'm not worried that folks don't understand it\n- I have 15 more years for them to catch on"
+    },
+    {
+      "type": "paragraph",
+      "id": "3cb98f9ef6847ddf",
+      "text": "I had talked for 45 minutes when I first met the creative crew. I was told this time to go for 7-10 minutes. I finished in 5. The director got me to elaborate on specific messages: Tell me about a moment. That sort of thing. I'm guessing those additions will edit into a slick 10 minutes."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Creative History of Wiki",
+        "story": []
+      },
+      "date": 1455135089715
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "20c64e493e2583cd"
+      },
+      "id": "20c64e493e2583cd",
+      "type": "add",
+      "date": 1455135094779
+    },
+    {
+      "type": "edit",
+      "id": "20c64e493e2583cd",
+      "item": {
+        "type": "paragraph",
+        "id": "20c64e493e2583cd",
+        "text": "I wrote these notes as the camera crew was setting up. There are so many versions of the story only under that pressure could I find a fresh angle."
+      },
+      "date": 1455135150380
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "aace5a40204606ef"
+      },
+      "id": "aace5a40204606ef",
+      "type": "add",
+      "after": "20c64e493e2583cd",
+      "date": 1455135153085
+    },
+    {
+      "type": "edit",
+      "id": "aace5a40204606ef",
+      "item": {
+        "type": "markdown",
+        "id": "aace5a40204606ef",
+        "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n\nengineer working with smart people\nhow they make decisions\nhow they change their ways\n\n1980's a time of change, personal computers\nprogramming stopped being all about mathematics\n\ntrouble is most anything can be made to work\nwe found new ways to work in a team, trust each other\nwiki was born as a miniature version \n\nfirst wiki was for programmers\nthey knew me and trusted me\nthey followed my lead, and I edited them when they didn't\n\nthis was an activist wiki, we were changing the world\nthe community defined our vocabulary, we learn how to talk\n\nwe were five years into that experience when the encyclopedia tried wiki\nit was five more years for them before they were taken seriously\n\nI'm pleased with that rate of acceptance\nI'm working on a new wiki today\nI'm not worried that folks don't understand it\nI have 15 more years for them to catch on"
+      },
+      "date": 1455135176027
+    },
+    {
+      "type": "edit",
+      "id": "aace5a40204606ef",
+      "item": {
+        "type": "markdown",
+        "id": "aace5a40204606ef",
+        "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n\n- engineer working with smart people\n- how they make decisions\n- how they change their ways\n\n- 1980's a time of change, personal computers\n- programming stopped being all about mathematics\n\n- trouble is most anything can be made to work\n- we found new ways to work in a team, trust each other\n- wiki was born as a miniature version \n\n- first wiki was for programmers\n- they knew me and trusted me\n- they followed my lead, and I edited them when they didn't\n\n- this was an activist wiki, we were changing the world\n- the community defined our vocabulary, we learn how to talk\n\n- we were five years into that experience when the encyclopedia tried wiki\n- it was five more years for them before they were taken seriously\n\n- I'm pleased with that rate of acceptance\n- I'm working on a new wiki today\n- I'm not worried that folks don't understand it\n- I have 15 more years for them to catch on"
+      },
+      "date": 1455135250869
+    },
+    {
+      "type": "edit",
+      "id": "aace5a40204606ef",
+      "item": {
+        "type": "markdown",
+        "id": "aace5a40204606ef",
+        "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n\n- engineer working with smart people\n- how they make decisions\n- how they change their ways\n\n- 1980's a time of change, personal computers\n- programming stopped being all about mathematics\n\n- trouble is most anything can be made to work\n- we found new ways to work in a team, trust each other\n- wiki was born as a miniature version \n\n- first wiki was for programmers\n- they knew me and trusted me\n- they followed my lead, and I edited \n\n- this was an activist wiki, we changed the world\n- the community defined our vocabulary\n- we learn how to talk with it\n\n- we were five years into that experience when the encyclopedia tried wiki\n- it was five more years for them before they were taken seriously\n\n- I'm pleased with that rate of acceptance\n- I'm working on a new wiki today\n- I'm not worried that folks don't understand it\n- I have 15 more years for them to catch on"
+      },
+      "date": 1455135304900
+    },
+    {
+      "type": "edit",
+      "id": "aace5a40204606ef",
+      "item": {
+        "type": "markdown",
+        "id": "aace5a40204606ef",
+        "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n\n- engineer working with smart people\n- how they make decisions\n- how they change their ways\n\n- 1980's a time of change, personal computers\n- programming stopped being all about mathematics\n\n- trouble is most anything can be made to work\n- we found new ways to work in a team, trust each other\n- wiki was born as a miniature version \n\n- first wiki was for programmers\n- they knew me and trusted me\n- they followed my lead, and I edited \n\n- this was an activist wiki, we changed the world\n- the community defined our vocabulary\n- we learn how to talk with it\n\n- we were five years in when the encyclopedia tried wiki\n- five more years before they were taken seriously\n\n- I'm pleased with that rate of acceptance\n- I'm working on a new wiki today\n- I'm not worried that folks don't understand it\n- I have 15 more years for them to catch on"
+      },
+      "date": 1455135353370
+    },
+    {
+      "type": "edit",
+      "id": "aace5a40204606ef",
+      "item": {
+        "type": "markdown",
+        "id": "aace5a40204606ef",
+        "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n\n\n- engineer working with smart people\n- how they make decisions\n- how they change their ways\n\n- 1980's a time of change, personal computers\n- programming stopped being all about mathematics\n\n- trouble is most anything can be made to work\n- we found new ways to work in a team, trust each other\n- wiki was born as a miniature version \n\n- first wiki was for programmers\n- they knew me and trusted me\n- they followed my lead, and I edited \n\n- this was an activist wiki, we changed the world\n- the community defined our vocabulary\n- we learn how to talk with it\n\n- we were five years in when the encyclopedia tried wiki\n- five more years before they were taken seriously\n\n- I'm pleased with that rate of acceptance\n- I'm working on a new wiki today\n- I'm not worried that folks don't understand it\n- I have 15 more years for them to catch on"
+      },
+      "date": 1455135363585
+    },
+    {
+      "type": "edit",
+      "id": "aace5a40204606ef",
+      "item": {
+        "type": "markdown",
+        "id": "aace5a40204606ef",
+        "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n \n- engineer working with smart people\n- how they make decisions\n- how they change their ways\n\n- 1980's a time of change, personal computers\n- programming stopped being all about mathematics\n\n- trouble is most anything can be made to work\n- we found new ways to work in a team, trust each other\n- wiki was born as a miniature version \n\n- first wiki was for programmers\n- they knew me and trusted me\n- they followed my lead, and I edited \n\n- this was an activist wiki, we changed the world\n- the community defined our vocabulary\n- we learn how to talk with it\n\n- we were five years in when the encyclopedia tried wiki\n- five more years before they were taken seriously\n\n- I'm pleased with that rate of acceptance\n- I'm working on a new wiki today\n- I'm not worried that folks don't understand it\n- I have 15 more years for them to catch on"
+      },
+      "date": 1455135372718
+    },
+    {
+      "type": "edit",
+      "id": "aace5a40204606ef",
+      "item": {
+        "type": "markdown",
+        "id": "aace5a40204606ef",
+        "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n \n- engineer working with smart people\n- how they make decisions\n- how they change their ways\n \n- 1980's a time of change, personal computers\n- programming stopped being all about mathematics\n \n- trouble is most anything can be made to work\n- we found new ways to work in a team, trust each other\n- wiki was born as a miniature version \n \n- first wiki was for programmers\n- they knew me and trusted me\n- they followed my lead, and I edited \n \n- this was an activist wiki, we changed the world\n- the community defined our vocabulary\n- we learn how to talk with it\n \n- we were five years in when the encyclopedia tried wiki\n- five more years before they were taken seriously\n \n- I'm pleased with that rate of acceptance\n- I'm working on a new wiki today\n- I'm not worried that folks don't understand it\n- I have 15 more years for them to catch on"
+      },
+      "date": 1455135395265
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3cb98f9ef6847ddf"
+      },
+      "id": "3cb98f9ef6847ddf",
+      "type": "add",
+      "after": "aace5a40204606ef",
+      "date": 1455138749814
+    },
+    {
+      "type": "edit",
+      "id": "3cb98f9ef6847ddf",
+      "item": {
+        "type": "paragraph",
+        "id": "3cb98f9ef6847ddf",
+        "text": "I'd talked for 45 minutes when I first met the creative crew. I was told to go for 7-10 minutes. I did this in 5. The director got me to elaborate on specific messages. Tell me about a moment. That sort of thing. I'm guessing it will edit into a slick 10 minutes."
+      },
+      "date": 1455138916745
+    },
+    {
+      "type": "fork",
+      "site": "ward.bay.wiki.org"
+    },
+    {
+      "type": "edit",
+      "id": "3cb98f9ef6847ddf",
+      "item": {
+        "type": "paragraph",
+        "id": "3cb98f9ef6847ddf",
+        "text": "I had talked for 45 minutes when I first met the creative crew. I was told this time to go for 7-10 minutes. I finished in 5. The director got me to elaborate on specific messages: Tell me about a moment. That sort of thing. I'm guessing those additions will edit into a slick 10 minutes."
+      },
+      "date": 1455221189423
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1455221218954
+    },
+    {
+      "type": "edit",
+      "id": "aace5a40204606ef",
+      "item": {
+        "type": "markdown",
+        "id": "aace5a40204606ef",
+        "text": "- first wiki here in portland\n- programmed almost overnight\n- why it was me that made it\n \n- engineer working with smart people\n- how they make decisions\n- how they change their ways\n \n- 1980's a time of change, personal computers\n- programming stopped being all about mathematics\n \n- trouble is most anything can be made to work\n- we found new ways to work in a team, trust strangers\n- wiki was born as a miniature version \n \n- first wiki was for programmers\n- they knew me and trusted me\n- they followed my lead, and I edited \n \n- this was an activist wiki, we changed the world\n- the community defined our vocabulary\n- we learn how to talk with it\n \n- we were five years in when the encyclopedia tried wiki\n- five more years before they were taken seriously\n \n- I'm pleased with that rate of acceptance\n- I'm working on a new wiki today\n- I'm not worried that folks don't understand it\n- I have 15 more years for them to catch on"
+      },
+      "date": 1497361450506
+    },
+    {
+      "type": "edit",
+      "id": "20c64e493e2583cd",
+      "item": {
+        "type": "paragraph",
+        "id": "20c64e493e2583cd",
+        "text": "I wrote these notes as the camera crew was setting up. There are so many versions of the story only under that pressure could I find a fresh angle. [http://portlandcreatives.co/portfolio/ward-cunningham/ post]"
+      },
+      "date": 1497361562996
+    },
+    {
+      "type": "fork",
+      "site": "ward.bay.wiki.org",
+      "date": 1497365380565
+    }
+  ]
+}

@@ -1,0 +1,1189 @@
+{
+  "title": "Search for 'Thompson'",
+  "story": [
+    {
+      "id": "35e5de3c5e40d6da",
+      "type": "paragraph",
+      "text": "In a brief call with Frode Hegland I described how wiki has evolved to meet the needs of specific communities and used Thompson Morrisons work as an example. I declined writing about this but found related posts while looking for other background. I forked the search result, already a bibliography of sorts, and send it to Frode with a few explanatory edits."
+    },
+    {
+      "type": "paragraph",
+      "id": "1bec9b24c60c69dd",
+      "text": "String 'Thompson' found on 13 of 1513 pages from 3 sites. (These sites vary in how they handle search but in this case the deepest search happens to be where developers discuss the technology.)"
+    },
+    {
+      "type": "markdown",
+      "id": "31b75f2a09f32c09",
+      "text": "# Diagrams"
+    },
+    {
+      "type": "paragraph",
+      "id": "9a101c5fdf4e5d4d",
+      "text": "Thompson made immediate use of algorithmic diagrams once they appeared. He found them so important he has included them in printed versions of his work."
+    },
+    {
+      "id": "6d0aa9ba837a5648",
+      "type": "reference",
+      "site": "ward.asia.wiki.org",
+      "slug": "guiding-diagrams",
+      "title": "Guiding Diagrams",
+      "text": "We've equipped wiki with a means to draw pictures of work in progress that can guide this work to completion."
+    },
+    {
+      "id": "e4b26b8b33e535a6",
+      "type": "reference",
+      "site": "found.ward.bay.wiki.org",
+      "slug": "diagram-induced-refactoring",
+      "title": "Diagram Induced Refactoring",
+      "text": "An unattractively complex diagram led me to refactor a page central to Thompson's writing. I hope by recounting the episode I might encourage the development of this workflow."
+    },
+    {
+      "id": "de9c0a47a7bd69ef",
+      "type": "reference",
+      "site": "ward.asia.wiki.org",
+      "slug": "dynamic-diagrams-improved",
+      "title": "Dynamic Diagrams Improved",
+      "text": "With [[Dynamic Diagrams in Use]] we find and make improvements which will be remembered here."
+    },
+    {
+      "type": "markdown",
+      "id": "e97c6c02da7185cc",
+      "text": "# History"
+    },
+    {
+      "type": "paragraph",
+      "id": "4512b9bf9e7df8a4",
+      "text": "Thompson had five years of experience introducing innovation in Oregon middle and high school. He sought me out for advice converting this to pattern language."
+    },
+    {
+      "id": "67d1539d4f221016",
+      "type": "reference",
+      "site": "found.ward.bay.wiki.org",
+      "slug": "start-by-making-a-list",
+      "title": "Start By Making a List",
+      "text": "It was two years ago that I first met Thompson Morrison after an introduction by Skip Newberry from Technology Association of Oregon. Thompson told me he wanted to write \"patterns\", a form of concentrated advice, so as to replicate the experience they were having in Dayton."
+    },
+    {
+      "id": "0617322c81f21b37",
+      "type": "reference",
+      "site": "found.ward.bay.wiki.org",
+      "slug": "thompson-hangout",
+      "title": "Thompson Hangout",
+      "text": "We talk frequently. As he and his community progressed we would discuss how Alan Kay had influenced me, how that lead to patterns and then agile, and how wiki was and still is evolved from those experiences."
+    },
+    {
+      "id": "39bb711ce0a6fdc7",
+      "type": "reference",
+      "site": "found.ward.bay.wiki.org",
+      "slug": "most-frequent-words-used",
+      "title": "Most Frequent Words Used",
+      "text": "We look for the most and least frequently used words by page count by examining the ruby search index for Thompson's book, dayton.fed.wiki."
+    },
+    {
+      "id": "f2d2ece135be5354",
+      "type": "reference",
+      "site": "ward.asia.wiki.org",
+      "slug": "thompsons-anchors-visualized",
+      "title": "Thompson's Anchors Visualized",
+      "text": "We construct a diagram seeded with [[Thompson's Anchors]] used five or more times in our first effort to draw what he felt navigating his own work. [https://raw.githubusercontent.com/WardCunningham/thompson-anchors/master/map.svg?sanitize=true enlarge]"
+    },
+    {
+      "id": "a484ceadd8b072b0",
+      "type": "reference",
+      "site": "ward.asia.wiki.org",
+      "slug": "extract-site-to-dot",
+      "title": "Extract Site to Dot",
+      "text": "Here we start with as specific algorithm that is not large but has already defied an attempt at refactoring. We'll abstract it to pseudo-code and then suggest markup keywords that are both a simple and powerful replacement. See [[Growing Regions as Hypertext]]"
+    },
+    {
+      "type": "markdown",
+      "id": "60bda678c2ccfdf5",
+      "text": "# Repurposing"
+    },
+    {
+      "type": "paragraph",
+      "id": "245c03194f91bfbe",
+      "text": "We've explored many ways that a substantial work can find new uses and how it should be systematically transformed for its new audience."
+    },
+    {
+      "id": "1f18fab174616140",
+      "type": "reference",
+      "site": "ward.asia.wiki.org",
+      "slug": "print-local-changes",
+      "title": "Print Local Changes",
+      "text": "Bruno Postel suggests, \"I'm thinking of 'use cases'. One of the people who helped me with the html file is taking-on turning some buildings at his church into a community centre - if he has a ten page printed document of just the relevant patterns, this could form the basis of discussion with the other people he has to work with, who would likely be very unwilling to access a wiki.\""
+    },
+    {
+      "type": "markdown",
+      "id": "b4a9f8837f37875d",
+      "text": "# Outposts"
+    },
+    {
+      "type": "paragraph",
+      "id": "fa2567056db5b728",
+      "text": "Our latest work involves hooking server-side applications to the federation in what we are now calling \"outposts\"."
+    },
+    {
+      "id": "a3690a217d72a6da",
+      "type": "reference",
+      "site": "ward.asia.wiki.org",
+      "slug": "one-degree",
+      "title": "One Degree",
+      "text": "We examine site references one hop from Eric Dobbs to find something larger than a neighborhood but smaller than a federation. This roster was created on demand from a federation scrape conduced a few days earlier and distributed as a compressed flat file database."
+    },
+    {
+      "id": "b554ff2a98b6f7b1",
+      "type": "reference",
+      "site": "ward.asia.wiki.org",
+      "slug": "production-tools",
+      "title": "Production Tools",
+      "text": "Wiki text is so simple we don't imagine any trouble getting it into book form. Still better start now so there are no surprises. [https://github.com/WardCunningham/dayton-experiment/commits/master github]"
+    },
+    {
+      "type": "markdown",
+      "id": "d83de246908ea09f",
+      "text": "# Misfires"
+    },
+    {
+      "type": "paragraph",
+      "id": "d84813cae4e8069f",
+      "text": "Search often finds irrelevant but still interesting pages. Exploring them offers a digression from the task at hand."
+    },
+    {
+      "id": "aecb281f366cce38",
+      "type": "reference",
+      "site": "found.ward.bay.wiki.org",
+      "slug": "ward-whitehead-coincidence",
+      "title": "Ward-Whitehead Coincidence",
+      "text": "We spent some time this morning discussing congruence between things I had written and the speculative philosophy of Whitehead. This was in the context of Thompson Morrison's observations which were explored by viewing his Journal. [https://riot.im/app/#/room/#fedwiki:matrix.org/$1581379877115593ufDJC:matrix.org riot]"
+    },
+    {
+      "id": "53e88817fd5f44e7",
+      "type": "reference",
+      "site": "ward.asia.wiki.org",
+      "slug": "wendy-rose",
+      "title": "Wendy Rose",
+      "text": "This stainless steel sculpture is shown in work clothes proudly donning a red glass polka dot scarf. This false positive has a reference to the unrelated Thompson Metal Fab. [http://www.cityofvancouver.us/ourcity/page/wendy-rose page]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "fork",
+      "date": 1586786646905
+    },
+    {
+      "type": "edit",
+      "id": "35e5de3c5e40d6da",
+      "item": {
+        "id": "35e5de3c5e40d6da",
+        "type": "paragraph",
+        "text": "String 'Thompson' found on 13 of 1513 pages from 3 sites."
+      },
+      "date": 1586786887977
+    },
+    {
+      "type": "edit",
+      "id": "35e5de3c5e40d6da",
+      "item": {
+        "id": "35e5de3c5e40d6da",
+        "type": "paragraph",
+        "text": "In a brief call with String 'Thompson' found on 13 of 1513 pages from 3 sites."
+      },
+      "date": 1586786936258
+    },
+    {
+      "type": "edit",
+      "id": "35e5de3c5e40d6da",
+      "item": {
+        "id": "35e5de3c5e40d6da",
+        "type": "paragraph",
+        "text": "In a brief call with Frode Hegland I described how wiki has evolved to meet the needs of specific communities and used Thompson Morrisons work as an example. I declined writing about this but happened to be looking for loose ends I could use to frame this weekend's work and thought I should just fork this search result and send it to Frode."
+      },
+      "date": 1586787180793
+    },
+    {
+      "type": "add",
+      "id": "1bec9b24c60c69dd",
+      "item": {
+        "type": "paragraph",
+        "id": "1bec9b24c60c69dd",
+        "text": "String 'Thompson' found on 13 of 1513 pages from 3 sites."
+      },
+      "after": "35e5de3c5e40d6da",
+      "date": 1586787182807
+    },
+    {
+      "type": "edit",
+      "id": "1bec9b24c60c69dd",
+      "item": {
+        "type": "paragraph",
+        "id": "1bec9b24c60c69dd",
+        "text": "String 'Thompson' found on 13 of 1513 pages from 3 sites. (These sites vary in how they handle search but in this case the deepest search happens to be where developers discuss the technology.)"
+      },
+      "date": 1586787274584
+    },
+    {
+      "type": "edit",
+      "id": "35e5de3c5e40d6da",
+      "item": {
+        "id": "35e5de3c5e40d6da",
+        "type": "paragraph",
+        "text": "In a brief call with Frode Hegland I described how wiki has evolved to meet the needs of specific communities and used Thompson Morrisons work as an example. I declined writing about this but happened to be looking for loose ends I could use to frame this weekend's work and thought I should just fork this search result and send it to Frode. "
+      },
+      "date": 1586787308203
+    },
+    {
+      "type": "edit",
+      "id": "35e5de3c5e40d6da",
+      "item": {
+        "id": "35e5de3c5e40d6da",
+        "type": "paragraph",
+        "text": "In a brief call with Frode Hegland I described how wiki has evolved to meet the needs of specific communities and used Thompson Morrisons work as an example. I declined writing about this but happened to be looking for loose ends I could use to frame this weekend's work and thought I should just fork this search result and send it to Frode with a few explanatory edits."
+      },
+      "date": 1586787336516
+    },
+    {
+      "type": "add",
+      "id": "31b75f2a09f32c09",
+      "item": {
+        "type": "paragraph",
+        "id": "31b75f2a09f32c09",
+        "text": "# Diagrams"
+      },
+      "after": "1bec9b24c60c69dd",
+      "date": 1586787390227
+    },
+    {
+      "type": "edit",
+      "id": "31b75f2a09f32c09",
+      "item": {
+        "type": "markdown",
+        "id": "31b75f2a09f32c09",
+        "text": "# Diagrams"
+      },
+      "date": 1586787393435
+    },
+    {
+      "type": "add",
+      "id": "9a101c5fdf4e5d4d",
+      "item": {
+        "type": "paragraph",
+        "id": "9a101c5fdf4e5d4d",
+        "text": "Thompson made immediate use of algorithmic diagrams once they appeared. He found them so important he has included them in printed versions of his work."
+      },
+      "after": "1bec9b24c60c69dd",
+      "date": 1586787573520
+    },
+    {
+      "id": "9a101c5fdf4e5d4d",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "f2d2ece135be5354",
+        "0617322c81f21b37",
+        "b554ff2a98b6f7b1",
+        "6d0aa9ba837a5648",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "67d1539d4f221016",
+        "39bb711ce0a6fdc7",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "e4b26b8b33e535a6",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586787576913
+    },
+    {
+      "id": "6d0aa9ba837a5648",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "f2d2ece135be5354",
+        "0617322c81f21b37",
+        "b554ff2a98b6f7b1",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "67d1539d4f221016",
+        "39bb711ce0a6fdc7",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "e4b26b8b33e535a6",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586787581683
+    },
+    {
+      "id": "b554ff2a98b6f7b1",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "b554ff2a98b6f7b1",
+        "f2d2ece135be5354",
+        "0617322c81f21b37",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "67d1539d4f221016",
+        "39bb711ce0a6fdc7",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "e4b26b8b33e535a6",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586787587817
+    },
+    {
+      "id": "e4b26b8b33e535a6",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "b554ff2a98b6f7b1",
+        "f2d2ece135be5354",
+        "0617322c81f21b37",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "67d1539d4f221016",
+        "39bb711ce0a6fdc7",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586787619561
+    },
+    {
+      "type": "add",
+      "id": "e97c6c02da7185cc",
+      "item": {
+        "type": "paragraph",
+        "id": "e97c6c02da7185cc",
+        "text": "# History"
+      },
+      "after": "9a101c5fdf4e5d4d",
+      "date": 1586787715065
+    },
+    {
+      "id": "e97c6c02da7185cc",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "b554ff2a98b6f7b1",
+        "e97c6c02da7185cc",
+        "f2d2ece135be5354",
+        "0617322c81f21b37",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "67d1539d4f221016",
+        "39bb711ce0a6fdc7",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586787725721
+    },
+    {
+      "id": "67d1539d4f221016",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "b554ff2a98b6f7b1",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "f2d2ece135be5354",
+        "0617322c81f21b37",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "39bb711ce0a6fdc7",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586787774027
+    },
+    {
+      "id": "0617322c81f21b37",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "b554ff2a98b6f7b1",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "f2d2ece135be5354",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "39bb711ce0a6fdc7",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586787779998
+    },
+    {
+      "type": "edit",
+      "id": "0617322c81f21b37",
+      "item": {
+        "id": "0617322c81f21b37",
+        "type": "reference",
+        "site": "found.ward.bay.wiki.org",
+        "slug": "thompson-hangout",
+        "title": "Thompson Hangout",
+        "text": "We talk frequently. It is always a bit of a struggle for me to find the hangout url in old email. So now I keep it here. "
+      },
+      "date": 1586787808833
+    },
+    {
+      "type": "edit",
+      "id": "0617322c81f21b37",
+      "item": {
+        "id": "0617322c81f21b37",
+        "type": "reference",
+        "site": "found.ward.bay.wiki.org",
+        "slug": "thompson-hangout",
+        "title": "Thompson Hangout",
+        "text": "We talk frequently. As he and his community progressed we would discuss how Alan Kay had influenced me, how that lead to patterns and then agile, and how wiki was and still is evolved from those experiences."
+      },
+      "date": 1586788043655
+    },
+    {
+      "type": "edit",
+      "id": "f2d2ece135be5354",
+      "item": {
+        "id": "f2d2ece135be5354",
+        "type": "reference",
+        "site": "ward.asia.wiki.org",
+        "slug": "thompsons-anchors-visualized",
+        "title": "Thompson's Anchors Visualized",
+        "text": "We construct a diagram seeded with [[Thompson's Anchors]] used five or more times in our first effort to draw what he felt navigating his own work. [https://raw.githubusercontent.com/WardCunningham/thompson-anchors/master/map.svg?sanitize=true enlarge]"
+      },
+      "date": 1586788200061
+    },
+    {
+      "type": "add",
+      "id": "b4a9f8837f37875d",
+      "item": {
+        "type": "paragraph",
+        "id": "b4a9f8837f37875d",
+        "text": "# Outposts"
+      },
+      "after": "e97c6c02da7185cc",
+      "date": 1586788288497
+    },
+    {
+      "id": "b4a9f8837f37875d",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "b554ff2a98b6f7b1",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "f2d2ece135be5354",
+        "b4a9f8837f37875d",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "39bb711ce0a6fdc7",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788302924
+    },
+    {
+      "id": "39bb711ce0a6fdc7",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "b554ff2a98b6f7b1",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "b4a9f8837f37875d",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788340177
+    },
+    {
+      "type": "add",
+      "id": "60bda678c2ccfdf5",
+      "item": {
+        "type": "paragraph",
+        "id": "60bda678c2ccfdf5",
+        "text": "# Repurposing"
+      },
+      "after": "b4a9f8837f37875d",
+      "date": 1586788400950
+    },
+    {
+      "id": "b4a9f8837f37875d",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "b554ff2a98b6f7b1",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "b4a9f8837f37875d",
+        "de9c0a47a7bd69ef",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788409496
+    },
+    {
+      "id": "de9c0a47a7bd69ef",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "b554ff2a98b6f7b1",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "b4a9f8837f37875d",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788422952
+    },
+    {
+      "id": "b554ff2a98b6f7b1",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "1f18fab174616140",
+        "a3690a217d72a6da",
+        "b4a9f8837f37875d",
+        "b554ff2a98b6f7b1",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788447025
+    },
+    {
+      "id": "a3690a217d72a6da",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "b554ff2a98b6f7b1",
+        "a3690a217d72a6da",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788466061
+    },
+    {
+      "type": "edit",
+      "id": "53e88817fd5f44e7",
+      "item": {
+        "id": "53e88817fd5f44e7",
+        "type": "reference",
+        "site": "ward.asia.wiki.org",
+        "slug": "wendy-rose",
+        "title": "Wendy Rose",
+        "text": "This stainless steel sculpture is shown in work clothes proudly donning a red glass polka dot scarf. This false positive has a reference to the unrelated Thompson Metal Fab.[http://www.cityofvancouver.us/ourcity/page/wendy-rose page]"
+      },
+      "date": 1586788607415
+    },
+    {
+      "type": "edit",
+      "id": "53e88817fd5f44e7",
+      "item": {
+        "id": "53e88817fd5f44e7",
+        "type": "reference",
+        "site": "ward.asia.wiki.org",
+        "slug": "wendy-rose",
+        "title": "Wendy Rose",
+        "text": "This stainless steel sculpture is shown in work clothes proudly donning a red glass polka dot scarf. This false positive has a reference to the unrelated Thompson Metal Fab. [http://www.cityofvancouver.us/ourcity/page/wendy-rose page]"
+      },
+      "date": 1586788629297
+    },
+    {
+      "type": "add",
+      "id": "d83de246908ea09f",
+      "item": {
+        "type": "paragraph",
+        "id": "d83de246908ea09f",
+        "text": "# Misfires"
+      },
+      "after": "b4a9f8837f37875d",
+      "date": 1586788701345
+    },
+    {
+      "id": "d83de246908ea09f",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "b554ff2a98b6f7b1",
+        "a3690a217d72a6da",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788709489
+    },
+    {
+      "type": "edit",
+      "id": "60bda678c2ccfdf5",
+      "item": {
+        "type": "markdown",
+        "id": "60bda678c2ccfdf5",
+        "text": "# Repurposing"
+      },
+      "date": 1586788720363
+    },
+    {
+      "type": "edit",
+      "id": "b4a9f8837f37875d",
+      "item": {
+        "type": "markdown",
+        "id": "b4a9f8837f37875d",
+        "text": "# Outposts"
+      },
+      "date": 1586788723488
+    },
+    {
+      "type": "edit",
+      "id": "d83de246908ea09f",
+      "item": {
+        "type": "markdown",
+        "id": "d83de246908ea09f",
+        "text": "# Misfires"
+      },
+      "date": 1586788727118
+    },
+    {
+      "type": "edit",
+      "id": "e97c6c02da7185cc",
+      "item": {
+        "type": "markdown",
+        "id": "e97c6c02da7185cc",
+        "text": "# History"
+      },
+      "date": 1586788732806
+    },
+    {
+      "id": "b554ff2a98b6f7b1",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "b554ff2a98b6f7b1",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "53e88817fd5f44e7",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788756607
+    },
+    {
+      "id": "53e88817fd5f44e7",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "b554ff2a98b6f7b1",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7",
+        "a484ceadd8b072b0"
+      ],
+      "date": 1586788769093
+    },
+    {
+      "id": "a484ceadd8b072b0",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "a484ceadd8b072b0",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "b554ff2a98b6f7b1",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586788833831
+    },
+    {
+      "id": "a484ceadd8b072b0",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "a484ceadd8b072b0",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "b554ff2a98b6f7b1",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586788852660
+    },
+    {
+      "id": "e4b26b8b33e535a6",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "a484ceadd8b072b0",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "60bda678c2ccfdf5",
+        "b554ff2a98b6f7b1",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586788866597
+    },
+    {
+      "id": "a484ceadd8b072b0",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "a484ceadd8b072b0",
+        "60bda678c2ccfdf5",
+        "b554ff2a98b6f7b1",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586789640412
+    },
+    {
+      "id": "b554ff2a98b6f7b1",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "a484ceadd8b072b0",
+        "60bda678c2ccfdf5",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "b554ff2a98b6f7b1",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586789674668
+    },
+    {
+      "type": "add",
+      "id": "4512b9bf9e7df8a4",
+      "item": {
+        "type": "paragraph",
+        "id": "4512b9bf9e7df8a4",
+        "text": "Thompson had five years of experience introducing innovation in Oregon middle and high school. He sought me out for advice converting this to pattern language."
+      },
+      "after": "9a101c5fdf4e5d4d",
+      "date": 1586789800008
+    },
+    {
+      "id": "4512b9bf9e7df8a4",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "4512b9bf9e7df8a4",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "a484ceadd8b072b0",
+        "60bda678c2ccfdf5",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "b554ff2a98b6f7b1",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586789804046
+    },
+    {
+      "type": "add",
+      "id": "245c03194f91bfbe",
+      "item": {
+        "type": "paragraph",
+        "id": "245c03194f91bfbe",
+        "text": "We've explored many ways that a substantial work can find new uses and how it should be systematically transformed for its new audience."
+      },
+      "after": "4512b9bf9e7df8a4",
+      "date": 1586789887791
+    },
+    {
+      "id": "245c03194f91bfbe",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "4512b9bf9e7df8a4",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "a484ceadd8b072b0",
+        "60bda678c2ccfdf5",
+        "245c03194f91bfbe",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "a3690a217d72a6da",
+        "b554ff2a98b6f7b1",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586789894147
+    },
+    {
+      "type": "add",
+      "id": "fa2567056db5b728",
+      "item": {
+        "type": "paragraph",
+        "id": "fa2567056db5b728",
+        "text": "Our latest work involves hooking server-side applications to the federation in what we are now calling \"outposts\"."
+      },
+      "after": "245c03194f91bfbe",
+      "date": 1586790009845
+    },
+    {
+      "id": "fa2567056db5b728",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "4512b9bf9e7df8a4",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "a484ceadd8b072b0",
+        "60bda678c2ccfdf5",
+        "245c03194f91bfbe",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "fa2567056db5b728",
+        "a3690a217d72a6da",
+        "b554ff2a98b6f7b1",
+        "aecb281f366cce38",
+        "d83de246908ea09f",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586790014334
+    },
+    {
+      "id": "aecb281f366cce38",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "4512b9bf9e7df8a4",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "a484ceadd8b072b0",
+        "60bda678c2ccfdf5",
+        "245c03194f91bfbe",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "fa2567056db5b728",
+        "a3690a217d72a6da",
+        "b554ff2a98b6f7b1",
+        "d83de246908ea09f",
+        "aecb281f366cce38",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586790043451
+    },
+    {
+      "type": "add",
+      "id": "d84813cae4e8069f",
+      "item": {
+        "type": "paragraph",
+        "id": "d84813cae4e8069f",
+        "text": "Search often finds irrelevant but still interesting pages. Exploring them offers a digression from the task at hand."
+      },
+      "after": "fa2567056db5b728",
+      "date": 1586790297759
+    },
+    {
+      "id": "d84813cae4e8069f",
+      "type": "move",
+      "order": [
+        "35e5de3c5e40d6da",
+        "1bec9b24c60c69dd",
+        "31b75f2a09f32c09",
+        "9a101c5fdf4e5d4d",
+        "6d0aa9ba837a5648",
+        "e4b26b8b33e535a6",
+        "de9c0a47a7bd69ef",
+        "e97c6c02da7185cc",
+        "4512b9bf9e7df8a4",
+        "67d1539d4f221016",
+        "0617322c81f21b37",
+        "39bb711ce0a6fdc7",
+        "f2d2ece135be5354",
+        "a484ceadd8b072b0",
+        "60bda678c2ccfdf5",
+        "245c03194f91bfbe",
+        "1f18fab174616140",
+        "b4a9f8837f37875d",
+        "fa2567056db5b728",
+        "a3690a217d72a6da",
+        "b554ff2a98b6f7b1",
+        "d83de246908ea09f",
+        "d84813cae4e8069f",
+        "aecb281f366cce38",
+        "53e88817fd5f44e7"
+      ],
+      "date": 1586790302708
+    },
+    {
+      "type": "edit",
+      "id": "35e5de3c5e40d6da",
+      "item": {
+        "id": "35e5de3c5e40d6da",
+        "type": "paragraph",
+        "text": "In a brief call with Frode Hegland I described how wiki has evolved to meet the needs of specific communities and used Thompson Morrisons work as an example. I declined writing about this but found related posts while looking for other background. I forked the search result, already a bibliography of sorts, and send it to Frode with a few explanatory edits."
+      },
+      "date": 1586811284751
+    }
+  ]
+}

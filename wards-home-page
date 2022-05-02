@@ -1,0 +1,865 @@
+{
+  "title": "Ward's Home Page",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5e5c6636682c6551",
+      "text": "I've lived my whole life in Indiana and Oregon. When maps became available online I sought to use them to document all of my homes. I called it my \"home page\" as a joke since that usually refers to a home in cyberspace. [http://c2.com/~ward/home/ site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "418567a9ee2d13b5",
+      "text": "See [[Places Together]] on one map."
+    },
+    {
+      "type": "pagefold",
+      "id": "5ca5361082085cb2",
+      "text": "aside"
+    },
+    {
+      "type": "paragraph",
+      "id": "5e012361a96c5f95",
+      "text": "My hope here is to develop writing about place that can be integrated in the end rather than navigated in the beginning. I'll include many more places, work, vacations, friends and colleagues, then use LINEUP to compose those of current interest into fresh new maps."
+    },
+    {
+      "type": "paragraph",
+      "id": "7a62f4ad94fc689b",
+      "text": "I'll create the first map by hand. After that I will need some sort of graphical marker maker to continue."
+    },
+    {
+      "type": "paragraph",
+      "id": "df61f99a5ca2d17f",
+      "text": "I start by grabbing google's coordinates for Highland, Indiana and Beaverton, Oregon, from their map urls."
+    },
+    {
+      "type": "pagefold",
+      "id": "6e248ccf1b58ed11",
+      "text": "."
+    },
+    {
+      "type": "map",
+      "id": "76acf8d1e894708a",
+      "text": "States where I've Lived\nAll My Life\n41.5479779,-87.4914949 [[At Home in Indiana]]\n45.484619,-122.8755138 [[At Home in Oregon]]\nBOUNDARY 46.0093625, -123.7939453\nBOUNDARY 39.0415863, -84.4628906"
+    },
+    {
+      "type": "pagefold",
+      "id": "44bd0264429e08d7",
+      "text": "aside"
+    },
+    {
+      "type": "paragraph",
+      "id": "b9bb10d6a20c1bf4",
+      "text": "Ouch. The generated bounds haven't worked out too well in this case. The markers just barely fit in what we must judge to be the wrong zoom level for the purpose of the map. I see instead all the space between where I've lived."
+    },
+    {
+      "type": "paragraph",
+      "id": "7ff528c9ea30c98d",
+      "text": "Strangely, I get a different zoom level when I refresh the browser window than when I add this page to an existing lineup. Could Leaflet be seeing a different div dimension in these two cases?"
+    },
+    {
+      "type": "paragraph",
+      "id": "462da4515117b617",
+      "text": "I've fixed this edge case by adding BOUNDARY markers NW of Portland and SE of Lafayette."
+    },
+    {
+      "type": "pagefold",
+      "id": "cba3b4a7bf73aff0",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "6f999a967224d9c9",
+      "text": "Growing up in Northern Indiana."
+    },
+    {
+      "type": "markdown",
+      "id": "e550b14997bdcdd9",
+      "text": "- [[At Home in Michigan City]]\n- [[At Home on Prairie Ave]]\n- [[At Home in Munster]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1d608d39709a9542",
+      "text": "Learning and working at Purdue."
+    },
+    {
+      "type": "markdown",
+      "id": "0ec1857d679b2562",
+      "text": "- [[At Home in Owen Hall]]\n- [[At Home on Vine St]]\n- [[At Home on 21st St]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "5f6299e96c72eceb",
+      "text": "Career and family in Oregon."
+    },
+    {
+      "type": "markdown",
+      "id": "883b2718e52443cb",
+      "text": "- [[At Home on Queen Ln]]\n- [[At Home on SW 67th Ave]]"
+    },
+    {
+      "type": "pagefold",
+      "id": "0cba274f5648b523",
+      "text": "aside"
+    },
+    {
+      "type": "paragraph",
+      "id": "7efe55cbf1a81340",
+      "text": "Time to start making pages. I'll start by moving this to a separate site, making a template or two, and then pointing out my best memories. [[Home Page Template]]"
+    },
+    {
+      "type": "pagefold",
+      "id": "8a1fab6e2f6b80b6",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "fa7320ce37807283",
+      "text": "I've had residential relationships to other properties. Some have been provided by employers, others inherited from family. See [[Places I've Stayed]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Ward's Home Page",
+        "story": []
+      },
+      "date": 1467819482070
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5e5c6636682c6551"
+      },
+      "id": "5e5c6636682c6551",
+      "type": "add",
+      "date": 1467819540938
+    },
+    {
+      "type": "edit",
+      "id": "5e5c6636682c6551",
+      "item": {
+        "type": "paragraph",
+        "id": "5e5c6636682c6551",
+        "text": "I've lived my whole life in Indiana and Oregon. When maps became available online I sought to use them to document all of my homes. I called it my \"home page\" as a joke since that usually refers to a home in cyberspace."
+      },
+      "date": 1467819657722
+    },
+    {
+      "type": "add",
+      "id": "7a62f4ad94fc689b",
+      "item": {
+        "type": "paragraph",
+        "id": "7a62f4ad94fc689b",
+        "text": "I'll create the first map by hand. After that I will need some sort of graphical marker maker to continue."
+      },
+      "after": "5e5c6636682c6551",
+      "date": 1467819786946
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "76acf8d1e894708a"
+      },
+      "id": "76acf8d1e894708a",
+      "type": "add",
+      "after": "7a62f4ad94fc689b",
+      "date": 1467819826677
+    },
+    {
+      "type": "edit",
+      "id": "76acf8d1e894708a",
+      "item": {
+        "type": "map",
+        "id": "76acf8d1e894708a",
+        "text": "41.5479779,-87.4914949 Indiana"
+      },
+      "date": 1467819836044
+    },
+    {
+      "type": "edit",
+      "id": "76acf8d1e894708a",
+      "item": {
+        "type": "map",
+        "id": "76acf8d1e894708a",
+        "text": "41.5479779,-87.4914949 Indiana\n45.484619,-122.8755138 Oregon\nWhere I've Lived All My Life"
+      },
+      "date": 1467819927887
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b9bb10d6a20c1bf4"
+      },
+      "id": "b9bb10d6a20c1bf4",
+      "type": "add",
+      "after": "76acf8d1e894708a",
+      "date": 1467819966314
+    },
+    {
+      "type": "edit",
+      "id": "b9bb10d6a20c1bf4",
+      "item": {
+        "type": "paragraph",
+        "id": "b9bb10d6a20c1bf4",
+        "text": "Ouch. The generated bounds haven't worked out too well in this case."
+      },
+      "date": 1467819999840
+    },
+    {
+      "type": "edit",
+      "id": "b9bb10d6a20c1bf4",
+      "item": {
+        "type": "paragraph",
+        "id": "b9bb10d6a20c1bf4",
+        "text": "Ouch. The generated bounds haven't worked out too well in this case. The markers just barely fit in what we must judge to be the wrong zoom level for the purpose of the map. I see instead all the space between where I've lived."
+      },
+      "date": 1467820137118
+    },
+    {
+      "type": "edit",
+      "id": "5e5c6636682c6551",
+      "item": {
+        "type": "paragraph",
+        "id": "5e5c6636682c6551",
+        "text": "I've lived my whole life in Indiana and Oregon. When maps became available online I sought to use them to document all of my homes. I called it my \"home page\" as a joke since that usually refers to a home in cyberspace. [http://c2.com/~ward/home/ site]"
+      },
+      "date": 1467820178108
+    },
+    {
+      "type": "add",
+      "id": "df61f99a5ca2d17f",
+      "item": {
+        "type": "paragraph",
+        "id": "df61f99a5ca2d17f",
+        "text": "I start by grabbing google's coordinates for Highland, Indiana and Beaverton, Oregon."
+      },
+      "after": "7a62f4ad94fc689b",
+      "date": 1467820275390
+    },
+    {
+      "type": "edit",
+      "id": "df61f99a5ca2d17f",
+      "item": {
+        "type": "paragraph",
+        "id": "df61f99a5ca2d17f",
+        "text": "I start by grabbing google's coordinates for Highland, Indiana and Beaverton, Oregon, from their generated map urls."
+      },
+      "date": 1467820303638
+    },
+    {
+      "type": "edit",
+      "id": "df61f99a5ca2d17f",
+      "item": {
+        "type": "paragraph",
+        "id": "df61f99a5ca2d17f",
+        "text": "I start by grabbing google's coordinates for Highland, Indiana and Beaverton, Oregon, from their map urls."
+      },
+      "date": 1467820309499
+    },
+    {
+      "type": "add",
+      "id": "7ff528c9ea30c98d",
+      "item": {
+        "type": "paragraph",
+        "id": "7ff528c9ea30c98d",
+        "text": "Strangely, I get a different zoom level when I refresh the browser window than when I add this page to an existing lineup."
+      },
+      "after": "b9bb10d6a20c1bf4",
+      "date": 1467820603769
+    },
+    {
+      "type": "edit",
+      "id": "7ff528c9ea30c98d",
+      "item": {
+        "type": "paragraph",
+        "id": "7ff528c9ea30c98d",
+        "text": "Strangely, I get a different zoom level when I refresh the browser window than when I add this page to an existing lineup. Could Leaflet be seeing a different div dimension in these two cases?"
+      },
+      "date": 1467820649574
+    },
+    {
+      "type": "add",
+      "id": "5e012361a96c5f95",
+      "item": {
+        "type": "paragraph",
+        "id": "5e012361a96c5f95",
+        "text": "My hope here is to develop writing about place that can be integrated in the end rather than navigated in the beginning. I'll include many more places and then use LINEUP to compose those of current interest into fresh new maps."
+      },
+      "after": "5e5c6636682c6551",
+      "date": 1467823770099
+    },
+    {
+      "type": "edit",
+      "id": "5e012361a96c5f95",
+      "item": {
+        "type": "paragraph",
+        "id": "5e012361a96c5f95",
+        "text": "My hope here is to develop writing about place that can be integrated in the end rather than navigated in the beginning. I'll include many more places, work, vacations, friends and colleagues, then use LINEUP to compose those of current interest into fresh new maps."
+      },
+      "date": 1467823821036
+    },
+    {
+      "type": "edit",
+      "id": "76acf8d1e894708a",
+      "item": {
+        "type": "map",
+        "id": "76acf8d1e894708a",
+        "text": "41.5479779,-87.4914949 Indiana\n45.484619,-122.8755138 Oregon\nWhere I've Lived All My Life\n46.0093625, -123.7939453"
+      },
+      "date": 1467918542589
+    },
+    {
+      "type": "edit",
+      "id": "76acf8d1e894708a",
+      "item": {
+        "type": "map",
+        "id": "76acf8d1e894708a",
+        "text": "41.5479779,-87.4914949 Indiana\n45.484619,-122.8755138 Oregon\nWhere I've Lived All My Life\n46.0093625, -123.7939453\n39.0415863, -84.4628906"
+      },
+      "date": 1467918578455
+    },
+    {
+      "type": "edit",
+      "id": "76acf8d1e894708a",
+      "item": {
+        "type": "map",
+        "id": "76acf8d1e894708a",
+        "text": "Where I've Lived All My Life\n41.5479779,-87.4914949 Indiana\n45.484619,-122.8755138 Oregon\nBOUNDARY 46.0093625, -123.7939453\nBOUNDARY 39.0415863, -84.4628906"
+      },
+      "date": 1467918611876
+    },
+    {
+      "type": "add",
+      "id": "462da4515117b617",
+      "item": {
+        "type": "paragraph",
+        "id": "462da4515117b617",
+        "text": "I've fixed this edge case by adding boundary markers NW of Portland and SE of Lafayette."
+      },
+      "after": "7ff528c9ea30c98d",
+      "date": 1467918734516
+    },
+    {
+      "type": "edit",
+      "id": "76acf8d1e894708a",
+      "item": {
+        "type": "map",
+        "id": "76acf8d1e894708a",
+        "text": "Where I've Lived All My Life\n41.5479779,-87.4914949 [[At Home in Indiana]]\n45.484619,-122.8755138 [[At Home in Oregon]]\nBOUNDARY 46.0093625, -123.7939453\nBOUNDARY 39.0415863, -84.4628906"
+      },
+      "date": 1467918826506
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "44bd0264429e08d7"
+      },
+      "id": "44bd0264429e08d7",
+      "type": "add",
+      "after": "462da4515117b617",
+      "date": 1467918908958
+    },
+    {
+      "type": "edit",
+      "id": "44bd0264429e08d7",
+      "item": {
+        "type": "pagefold",
+        "id": "44bd0264429e08d7",
+        "text": "aside"
+      },
+      "date": 1467918917673
+    },
+    {
+      "type": "move",
+      "order": [
+        "5e5c6636682c6551",
+        "5e012361a96c5f95",
+        "7a62f4ad94fc689b",
+        "df61f99a5ca2d17f",
+        "76acf8d1e894708a",
+        "44bd0264429e08d7",
+        "b9bb10d6a20c1bf4",
+        "7ff528c9ea30c98d",
+        "462da4515117b617"
+      ],
+      "id": "44bd0264429e08d7",
+      "date": 1467918923053
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cba3b4a7bf73aff0"
+      },
+      "id": "cba3b4a7bf73aff0",
+      "type": "add",
+      "after": "462da4515117b617",
+      "date": 1467918931886
+    },
+    {
+      "type": "edit",
+      "id": "cba3b4a7bf73aff0",
+      "item": {
+        "type": "pagefold",
+        "id": "cba3b4a7bf73aff0",
+        "text": "."
+      },
+      "date": 1467918937306
+    },
+    {
+      "type": "edit",
+      "id": "462da4515117b617",
+      "item": {
+        "type": "paragraph",
+        "id": "462da4515117b617",
+        "text": "I've fixed this edge case by adding BOUNDARY markers NW of Portland and SE of Lafayette."
+      },
+      "date": 1467918955617
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1d608d39709a9542"
+      },
+      "id": "1d608d39709a9542",
+      "type": "add",
+      "after": "cba3b4a7bf73aff0",
+      "date": 1467919038151
+    },
+    {
+      "type": "edit",
+      "id": "1d608d39709a9542",
+      "item": {
+        "type": "paragraph",
+        "id": "1d608d39709a9542",
+        "text": "I grew up and went to college in Indiana."
+      },
+      "date": 1467919066748
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e550b14997bdcdd9"
+      },
+      "id": "e550b14997bdcdd9",
+      "type": "add",
+      "after": "1d608d39709a9542",
+      "date": 1467919073105
+    },
+    {
+      "type": "edit",
+      "id": "e550b14997bdcdd9",
+      "item": {
+        "type": "markdown",
+        "id": "e550b14997bdcdd9",
+        "text": "- [[At Home in Michigan City]]\n- [[At Home on Prairie Ave]]\n- [[At Home in Owen Hall]]\n- [[At Home on Vine St]]\n- [[At Home on 21st St]]"
+      },
+      "date": 1467919165095
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5f6299e96c72eceb"
+      },
+      "id": "5f6299e96c72eceb",
+      "type": "add",
+      "after": "e550b14997bdcdd9",
+      "date": 1467919189518
+    },
+    {
+      "type": "edit",
+      "id": "5f6299e96c72eceb",
+      "item": {
+        "type": "paragraph",
+        "id": "5f6299e96c72eceb",
+        "text": "I moved to Oregon to start my career and raise a family."
+      },
+      "date": 1467919217364
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "883b2718e52443cb"
+      },
+      "id": "883b2718e52443cb",
+      "type": "add",
+      "after": "5f6299e96c72eceb",
+      "date": 1467919221080
+    },
+    {
+      "type": "edit",
+      "id": "883b2718e52443cb",
+      "item": {
+        "type": "markdown",
+        "id": "883b2718e52443cb",
+        "text": "- [[At Home on Queen Ln]]\n- [[At Home on SW 67th Ave]]"
+      },
+      "date": 1467919299410
+    },
+    {
+      "type": "add",
+      "id": "6f999a967224d9c9",
+      "item": {
+        "type": "paragraph",
+        "id": "6f999a967224d9c9",
+        "text": "Growing up in Northern Indiana."
+      },
+      "after": "1d608d39709a9542",
+      "date": 1467919367713
+    },
+    {
+      "type": "edit",
+      "id": "e550b14997bdcdd9",
+      "item": {
+        "type": "markdown",
+        "id": "e550b14997bdcdd9",
+        "text": "- [[At Home in Michigan City]]\n- [[At Home on Prairie Ave]]"
+      },
+      "date": 1467919381459
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0ec1857d679b2562"
+      },
+      "id": "0ec1857d679b2562",
+      "type": "add",
+      "after": "883b2718e52443cb",
+      "date": 1467919383766
+    },
+    {
+      "type": "edit",
+      "id": "0ec1857d679b2562",
+      "item": {
+        "type": "markdown",
+        "id": "0ec1857d679b2562",
+        "text": "- [[At Home in Owen Hall]]\n- [[At Home on Vine St]]\n- [[At Home on 21st St]]"
+      },
+      "date": 1467919387867
+    },
+    {
+      "type": "edit",
+      "id": "1d608d39709a9542",
+      "item": {
+        "type": "paragraph",
+        "id": "1d608d39709a9542",
+        "text": "Learning and working at Purdue."
+      },
+      "date": 1467919432937
+    },
+    {
+      "type": "move",
+      "order": [
+        "5e5c6636682c6551",
+        "5e012361a96c5f95",
+        "7a62f4ad94fc689b",
+        "df61f99a5ca2d17f",
+        "76acf8d1e894708a",
+        "44bd0264429e08d7",
+        "b9bb10d6a20c1bf4",
+        "7ff528c9ea30c98d",
+        "462da4515117b617",
+        "cba3b4a7bf73aff0",
+        "6f999a967224d9c9",
+        "e550b14997bdcdd9",
+        "1d608d39709a9542",
+        "5f6299e96c72eceb",
+        "883b2718e52443cb",
+        "0ec1857d679b2562"
+      ],
+      "id": "1d608d39709a9542",
+      "date": 1467919436588
+    },
+    {
+      "type": "move",
+      "order": [
+        "5e5c6636682c6551",
+        "5e012361a96c5f95",
+        "7a62f4ad94fc689b",
+        "df61f99a5ca2d17f",
+        "76acf8d1e894708a",
+        "44bd0264429e08d7",
+        "b9bb10d6a20c1bf4",
+        "7ff528c9ea30c98d",
+        "462da4515117b617",
+        "cba3b4a7bf73aff0",
+        "6f999a967224d9c9",
+        "e550b14997bdcdd9",
+        "1d608d39709a9542",
+        "0ec1857d679b2562",
+        "5f6299e96c72eceb",
+        "883b2718e52443cb"
+      ],
+      "id": "0ec1857d679b2562",
+      "date": 1467919440562
+    },
+    {
+      "type": "edit",
+      "id": "5f6299e96c72eceb",
+      "item": {
+        "type": "paragraph",
+        "id": "5f6299e96c72eceb",
+        "text": "Career and family in Oregon."
+      },
+      "date": 1467919468245
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0cba274f5648b523"
+      },
+      "id": "0cba274f5648b523",
+      "type": "add",
+      "after": "883b2718e52443cb",
+      "date": 1467919719606
+    },
+    {
+      "type": "edit",
+      "id": "0cba274f5648b523",
+      "item": {
+        "type": "pagefold",
+        "id": "0cba274f5648b523",
+        "text": "aside"
+      },
+      "date": 1467919726152
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7efe55cbf1a81340"
+      },
+      "id": "7efe55cbf1a81340",
+      "type": "add",
+      "after": "0cba274f5648b523",
+      "date": 1467919728264
+    },
+    {
+      "type": "edit",
+      "id": "7efe55cbf1a81340",
+      "item": {
+        "type": "paragraph",
+        "id": "7efe55cbf1a81340",
+        "text": "Time to start making pages. I'll start by making a template. [[Home Page Template]]"
+      },
+      "date": 1467919841651
+    },
+    {
+      "type": "edit",
+      "id": "7efe55cbf1a81340",
+      "item": {
+        "type": "paragraph",
+        "id": "7efe55cbf1a81340",
+        "text": "Time to start making pages. I'll start by moving this to a separate site, making a template or two, and then pointing out my best memories."
+      },
+      "date": 1467919937092
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8a1fab6e2f6b80b6"
+      },
+      "id": "8a1fab6e2f6b80b6",
+      "type": "add",
+      "after": "7efe55cbf1a81340",
+      "date": 1467919965201
+    },
+    {
+      "type": "edit",
+      "id": "8a1fab6e2f6b80b6",
+      "item": {
+        "type": "pagefold",
+        "id": "8a1fab6e2f6b80b6",
+        "text": "."
+      },
+      "date": 1467919969893
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5ca5361082085cb2"
+      },
+      "id": "5ca5361082085cb2",
+      "type": "add",
+      "after": "8a1fab6e2f6b80b6",
+      "date": 1467920346858
+    },
+    {
+      "type": "edit",
+      "id": "5ca5361082085cb2",
+      "item": {
+        "type": "pagefold",
+        "id": "5ca5361082085cb2",
+        "text": "aside"
+      },
+      "date": 1467920352585
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6e248ccf1b58ed11"
+      },
+      "id": "6e248ccf1b58ed11",
+      "type": "add",
+      "after": "5ca5361082085cb2",
+      "date": 1467920355266
+    },
+    {
+      "type": "edit",
+      "id": "6e248ccf1b58ed11",
+      "item": {
+        "type": "pagefold",
+        "id": "6e248ccf1b58ed11",
+        "text": "."
+      },
+      "date": 1467920358890
+    },
+    {
+      "type": "move",
+      "order": [
+        "5e5c6636682c6551",
+        "5ca5361082085cb2",
+        "5e012361a96c5f95",
+        "7a62f4ad94fc689b",
+        "df61f99a5ca2d17f",
+        "76acf8d1e894708a",
+        "44bd0264429e08d7",
+        "b9bb10d6a20c1bf4",
+        "7ff528c9ea30c98d",
+        "462da4515117b617",
+        "cba3b4a7bf73aff0",
+        "6f999a967224d9c9",
+        "e550b14997bdcdd9",
+        "1d608d39709a9542",
+        "0ec1857d679b2562",
+        "5f6299e96c72eceb",
+        "883b2718e52443cb",
+        "0cba274f5648b523",
+        "7efe55cbf1a81340",
+        "8a1fab6e2f6b80b6",
+        "6e248ccf1b58ed11"
+      ],
+      "id": "5ca5361082085cb2",
+      "date": 1467920368826
+    },
+    {
+      "type": "move",
+      "order": [
+        "5e5c6636682c6551",
+        "5ca5361082085cb2",
+        "5e012361a96c5f95",
+        "7a62f4ad94fc689b",
+        "df61f99a5ca2d17f",
+        "6e248ccf1b58ed11",
+        "76acf8d1e894708a",
+        "44bd0264429e08d7",
+        "b9bb10d6a20c1bf4",
+        "7ff528c9ea30c98d",
+        "462da4515117b617",
+        "cba3b4a7bf73aff0",
+        "6f999a967224d9c9",
+        "e550b14997bdcdd9",
+        "1d608d39709a9542",
+        "0ec1857d679b2562",
+        "5f6299e96c72eceb",
+        "883b2718e52443cb",
+        "0cba274f5648b523",
+        "7efe55cbf1a81340",
+        "8a1fab6e2f6b80b6"
+      ],
+      "id": "6e248ccf1b58ed11",
+      "date": 1467920381395
+    },
+    {
+      "type": "edit",
+      "id": "7efe55cbf1a81340",
+      "item": {
+        "type": "paragraph",
+        "id": "7efe55cbf1a81340",
+        "text": "Time to start making pages. I'll start by moving this to a separate site, making a template or two, and then pointing out my best memories. [[Home Page Template]]"
+      },
+      "date": 1467920428841
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1467960420087
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "418567a9ee2d13b5",
+        "text": "See [[Places Together]] on one map."
+      },
+      "after": "5e5c6636682c6551",
+      "id": "418567a9ee2d13b5",
+      "date": 1467960434333
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "fa7320ce37807283",
+        "text": "I've had residential relationships to other properties. Some have been provided by employers, others inherited from family. See [[Places I've Stayed]]"
+      },
+      "after": "7efe55cbf1a81340",
+      "id": "fa7320ce37807283",
+      "date": 1467960525632
+    },
+    {
+      "type": "move",
+      "order": [
+        "5e5c6636682c6551",
+        "418567a9ee2d13b5",
+        "5ca5361082085cb2",
+        "5e012361a96c5f95",
+        "7a62f4ad94fc689b",
+        "df61f99a5ca2d17f",
+        "6e248ccf1b58ed11",
+        "76acf8d1e894708a",
+        "44bd0264429e08d7",
+        "b9bb10d6a20c1bf4",
+        "7ff528c9ea30c98d",
+        "462da4515117b617",
+        "cba3b4a7bf73aff0",
+        "6f999a967224d9c9",
+        "e550b14997bdcdd9",
+        "1d608d39709a9542",
+        "0ec1857d679b2562",
+        "5f6299e96c72eceb",
+        "883b2718e52443cb",
+        "0cba274f5648b523",
+        "7efe55cbf1a81340",
+        "8a1fab6e2f6b80b6",
+        "fa7320ce37807283"
+      ],
+      "id": "8a1fab6e2f6b80b6",
+      "date": 1467960530358
+    },
+    {
+      "type": "edit",
+      "id": "e550b14997bdcdd9",
+      "item": {
+        "type": "markdown",
+        "id": "e550b14997bdcdd9",
+        "text": "- [[At Home in Michigan City]]\n- [[At Home on Prairie Ave]]\n- [[At Home in Munster]]"
+      },
+      "date": 1467960556585
+    },
+    {
+      "type": "edit",
+      "id": "76acf8d1e894708a",
+      "item": {
+        "type": "map",
+        "id": "76acf8d1e894708a",
+        "text": "States where I've Lived\nAll My Life\n41.5479779,-87.4914949 [[At Home in Indiana]]\n45.484619,-122.8755138 [[At Home in Oregon]]\nBOUNDARY 46.0093625, -123.7939453\nBOUNDARY 39.0415863, -84.4628906"
+      },
+      "date": 1467960830181
+    },
+    {
+      "type": "fork",
+      "site": "home.ward.asia.wiki.org",
+      "date": 1468026267218
+    }
+  ]
+}

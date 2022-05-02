@@ -1,0 +1,301 @@
+{
+  "title": "Graphing the Horizon",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "38ca3b757e6c0a58",
+      "text": "We're thinking an innovative federation scrape will create new opportunities for graphing the emergent structure."
+    },
+    {
+      "type": "paragraph",
+      "id": "058fdf0d310db397",
+      "text": "See [[Search over the Horizon]]"
+    },
+    {
+      "type": "markdown",
+      "id": "0e94cff4afee7d36",
+      "text": "# Markup"
+    },
+    {
+      "type": "paragraph",
+      "id": "13b7d10414c064ac",
+      "text": "We begin by considering what the markup should produce. Then we will design a query in the style of algorithmic diagrams. "
+    },
+    {
+      "type": "paragraph",
+      "id": "d435d6afec9986a7",
+      "text": "The Graph plugin represents a subgraph which can be read and merged by the Graphviz plugin. [https://github.com/WardCunningham/wiki-plugin-graph/blob/fb7346083870722a7fbec6a8dc1903eb93ff322c/client/graph.coffee#L137-L138 github]"
+    },
+    {
+      "type": "code",
+      "id": "56f0a32d7964b81b",
+      "text": "  $item.addClass 'graph-source'\n  $item.get(0).graphData = -> parse here, item.text\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "6222d73a5a561c13",
+      "text": "We can find some examples and then examine them."
+    },
+    {
+      "type": "search",
+      "id": "47bbd1eb766d0957",
+      "text": "SEARCH PLUGINS graph "
+    },
+    {
+      "type": "reference",
+      "id": "4f88c34306614468",
+      "site": "tools.openscience.cc",
+      "slug": "data-visualisation",
+      "title": "Data Visualisation",
+      "text": "Here we look at tools for data visualisation for [[Platform Earth]] and wiki."
+    },
+    {
+      "type": "paragraph",
+      "id": "384d58e0a6aaacf9",
+      "text": "We pull this page up and examine it with the inspector."
+    },
+    {
+      "type": "code",
+      "id": "fddcef9d429ab99e",
+      "text": "$('.graph-source').get(0).graphData()\n\n{\n  \"Data Visualisation\": [\n    \"Data Visualisation\",\n    \"Network Visualisation\",\n    \"Visualising Graphs\",\n    \"Maps\",\n    \"Simulation\"\n  ],\n  \"Network Visualisation\": [],\n  \"Visualising Graphs\": [],\n  \"Maps\": [],\n  \"Simulation\": [\n    \"Bret Victor\"\n  ],\n  \"Bret Victor\": []\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "cfb5a6a81eb24314",
+      "text": "The subgraph is a map of node ⇒ array of node."
+    },
+    {
+      "type": "paragraph",
+      "id": "136d3c4b8960580b",
+      "text": "For our first implementation then we should query for a map of site ⇒ array of sites. The only question we need to answer is where to start and how deep to look. We'll use a nested syntax that leaves lots of room for further restriction."
+    },
+    {
+      "type": "code",
+      "id": "7e0b8b1c6ddad5bc",
+      "text": "HERE --> SITE --> SITE"
+    },
+    {
+      "type": "paragraph",
+      "id": "d08b2b9b9666f6be",
+      "text": "Borrowing from Cypher, this says, start the host of the possibly remote page, HERE, and follow links to SITE and then from there to another SITE."
+    },
+    {
+      "type": "paragraph",
+      "id": "606d31052304150d",
+      "text": "Later expansions of this might include HOST and PAGE as other node types and restrictions on the type of links followed."
+    },
+    {
+      "type": "paragraph",
+      "id": "abf74b51c8113c2c",
+      "text": "As well as drawing these relations, we should find some way to selectively add sites thus located to our neighborhood."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Graphing the Horizon",
+        "story": []
+      },
+      "date": 1583553199569
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "38ca3b757e6c0a58"
+      },
+      "id": "38ca3b757e6c0a58",
+      "type": "add",
+      "date": 1583553201386
+    },
+    {
+      "type": "edit",
+      "id": "38ca3b757e6c0a58",
+      "item": {
+        "type": "paragraph",
+        "id": "38ca3b757e6c0a58",
+        "text": "We're thinking an innovative federation scrape will create new opportunities for graphing the emergent structure."
+      },
+      "date": 1583553252184
+    },
+    {
+      "type": "add",
+      "id": "058fdf0d310db397",
+      "item": {
+        "type": "paragraph",
+        "id": "058fdf0d310db397",
+        "text": "See [[Search over the Horizon]]"
+      },
+      "after": "38ca3b757e6c0a58",
+      "date": 1583553264565
+    },
+    {
+      "id": "0e94cff4afee7d36",
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "0e94cff4afee7d36",
+        "text": "# Markup"
+      },
+      "after": "058fdf0d310db397",
+      "date": 1583553271984
+    },
+    {
+      "id": "13b7d10414c064ac",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "13b7d10414c064ac",
+        "text": "We begin by considering what the markup should produce. Then we will design a query in the style of algorithmic diagrams. "
+      },
+      "after": "0e94cff4afee7d36",
+      "date": 1583553275148
+    },
+    {
+      "id": "d435d6afec9986a7",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "d435d6afec9986a7",
+        "text": "The Graph plugin represents a subgraph which can be read and merged by the Graphviz plugin. [https://github.com/WardCunningham/wiki-plugin-graph/blob/fb7346083870722a7fbec6a8dc1903eb93ff322c/client/graph.coffee#L137-L138 github]"
+      },
+      "after": "13b7d10414c064ac",
+      "date": 1583553277956
+    },
+    {
+      "id": "56f0a32d7964b81b",
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "56f0a32d7964b81b",
+        "text": "  $item.addClass 'graph-source'\n  $item.get(0).graphData = -> parse here, item.text\n"
+      },
+      "after": "d435d6afec9986a7",
+      "date": 1583553283034
+    },
+    {
+      "id": "6222d73a5a561c13",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "6222d73a5a561c13",
+        "text": "We can find some examples and then examine them."
+      },
+      "after": "56f0a32d7964b81b",
+      "date": 1583553285712
+    },
+    {
+      "id": "47bbd1eb766d0957",
+      "type": "add",
+      "item": {
+        "type": "search",
+        "id": "47bbd1eb766d0957",
+        "text": "SEARCH PLUGINS graph "
+      },
+      "after": "6222d73a5a561c13",
+      "date": 1583553288610
+    },
+    {
+      "id": "4f88c34306614468",
+      "type": "add",
+      "item": {
+        "type": "reference",
+        "id": "4f88c34306614468",
+        "site": "tools.openscience.cc",
+        "slug": "data-visualisation",
+        "title": "Data Visualisation",
+        "text": "Here we look at tools for data visualisation for [[Platform Earth]] and wiki."
+      },
+      "after": "47bbd1eb766d0957",
+      "date": 1583553291370
+    },
+    {
+      "id": "384d58e0a6aaacf9",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "384d58e0a6aaacf9",
+        "text": "We pull this page up and examine it with the inspector."
+      },
+      "after": "4f88c34306614468",
+      "date": 1583553298257
+    },
+    {
+      "id": "fddcef9d429ab99e",
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "fddcef9d429ab99e",
+        "text": "$('.graph-source').get(0).graphData()\n\n{\n  \"Data Visualisation\": [\n    \"Data Visualisation\",\n    \"Network Visualisation\",\n    \"Visualising Graphs\",\n    \"Maps\",\n    \"Simulation\"\n  ],\n  \"Network Visualisation\": [],\n  \"Visualising Graphs\": [],\n  \"Maps\": [],\n  \"Simulation\": [\n    \"Bret Victor\"\n  ],\n  \"Bret Victor\": []\n}"
+      },
+      "after": "384d58e0a6aaacf9",
+      "date": 1583553301430
+    },
+    {
+      "id": "cfb5a6a81eb24314",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "cfb5a6a81eb24314",
+        "text": "The subgraph is a map of node ⇒ array of node."
+      },
+      "after": "fddcef9d429ab99e",
+      "date": 1583553309613
+    },
+    {
+      "id": "136d3c4b8960580b",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "136d3c4b8960580b",
+        "text": "For our first implementation then we should query for a map of site ⇒ array of sites. The only question we need to answer is where to start and how deep to look. We'll use a nested syntax that leaves lots of room for further restriction."
+      },
+      "after": "cfb5a6a81eb24314",
+      "date": 1583553313092
+    },
+    {
+      "id": "7e0b8b1c6ddad5bc",
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "7e0b8b1c6ddad5bc",
+        "text": "HERE --> SITE --> SITE"
+      },
+      "after": "136d3c4b8960580b",
+      "date": 1583553315418
+    },
+    {
+      "id": "d08b2b9b9666f6be",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "d08b2b9b9666f6be",
+        "text": "Borrowing from Cypher, this says, start the host of the possibly remote page, HERE, and follow links to SITE and then from there to another SITE."
+      },
+      "after": "7e0b8b1c6ddad5bc",
+      "date": 1583553318411
+    },
+    {
+      "id": "606d31052304150d",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "606d31052304150d",
+        "text": "Later expansions of this might include HOST and PAGE as other node types and restrictions on the type of links followed."
+      },
+      "after": "d08b2b9b9666f6be",
+      "date": 1583553323606
+    },
+    {
+      "id": "abf74b51c8113c2c",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "abf74b51c8113c2c",
+        "text": "As well as drawing these relations, we should find some way to selectively add sites thus located to our neighborhood."
+      },
+      "after": "606d31052304150d",
+      "date": 1583553325969
+    }
+  ]
+}

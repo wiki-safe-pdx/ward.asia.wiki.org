@@ -1,0 +1,50 @@
+{
+  "title": "Member Sofi as of 9/18/2021",
+  "story": [
+    {
+      "type": "paragraph",
+      "text": "Preview of assessment visualized.",
+      "id": "10663465102422464512"
+    },
+    {
+      "type": "frame",
+      "text": "//ward.asia.wiki.org/assets/pages/sofi-scripts/model.html?data=ewogICJtZXRhZGF0YSI6IHsKICAgICJuYW1lIjogIlNvZmkiLAogICAgImRheSI6ICI5LzE4LzIwMjEiLAogICAgInNpdGUiOiAic29maS5kb2pvLmZlZC53aWtpIgogIH0sCiAgIm5vZGVTdGF0dXMiOiB7fSwKICAiZWRnZVN0YXR1cyI6IHt9Cn0=\nHEIGHT 600",
+      "id": "32329836143996604416"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "date": 1631986595651,
+      "item": {
+        "title": "Member Sofi as of 9/18/2021",
+        "story": [
+          {
+            "type": "paragraph",
+            "text": "Preview of assessment visualized.",
+            "id": "10663465102422464512"
+          },
+          {
+            "type": "frame",
+            "text": "//sofi.dojo.fed.wiki/assets/pages/sofi-scripts/model.html?data=ewogICJtZXRhZGF0YSI6IHsKICAgICJuYW1lIjogIlNvZmkiLAogICAgImRheSI6ICI5LzE4LzIwMjEiLAogICAgInNpdGUiOiAic29maS5kb2pvLmZlZC53aWtpIgogIH0sCiAgIm5vZGVTdGF0dXMiOiB7fSwKICAiZWRnZVN0YXR1cyI6IHt9Cn0=\nHEIGHT 600",
+            "id": "32329836143996604416"
+          }
+        ]
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1631986637752
+    },
+    {
+      "type": "edit",
+      "id": "32329836143996604416",
+      "item": {
+        "type": "frame",
+        "text": "//ward.asia.wiki.org/assets/pages/sofi-scripts/model.html?data=ewogICJtZXRhZGF0YSI6IHsKICAgICJuYW1lIjogIlNvZmkiLAogICAgImRheSI6ICI5LzE4LzIwMjEiLAogICAgInNpdGUiOiAic29maS5kb2pvLmZlZC53aWtpIgogIH0sCiAgIm5vZGVTdGF0dXMiOiB7fSwKICAiZWRnZVN0YXR1cyI6IHt9Cn0=\nHEIGHT 600",
+        "id": "32329836143996604416"
+      },
+      "date": 1631986667117
+    }
+  ]
+}

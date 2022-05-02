@@ -1,0 +1,199 @@
+{
+  "title": "Print Local Changes",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "05bd0fa45dd5c4d3",
+      "text": "Bruno Postel suggests, \"I'm thinking of 'use cases'. One of the people who helped me with the html file is taking-on turning some buildings at his church into a community centre - if he has a ten page printed document of just the relevant patterns, this could form the basis of discussion with the other people he has to work with, who would likely be very unwilling to access a wiki.\""
+    },
+    {
+      "type": "paragraph",
+      "id": "28c55088a8c3c957",
+      "text": "I write back, \"Without so much as a login any reader can select and edit patterns of interest. Click ‘wiki’ in the footer to enable wiki editing. These changes are stored locally in the browser. Click Local Changes in the footer menu (☰) to review only your selected pages. These can be saved as a local “export.json” file. Your use case suggests that we should offer a print-all option here for project pdf-ebook conversion.\""
+    },
+    {
+      "type": "pagefold",
+      "id": "e7393b79cac53dd0",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "e846bdea4ae241e4",
+      "text": "Thompson Morrison’s new book [https://daytonexperiment.com Dayton Experiement] was authored in federated wiki and then converted to book. Review drafts were assembled by html script which showed every page as one document. This could be saved as pdf using the standard print dialog. The pdf was ebook reader compatible so very handy for those reviewing while traveling."
+    },
+    {
+      "type": "paragraph",
+      "id": "7411173524c3ffbc",
+      "text": "See [[Production Tools]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "3213c2d2b61ef742",
+      "text": "The idea would be to modify the algorithms from Thompson's tools to run off of the index of pages in browser local storage."
+    },
+    {
+      "type": "paragraph",
+      "id": "4527d741e0d399f6",
+      "text": "Some mechanism should be provided to order the pages. This could be alphabetical by title or last revision date. For patterns it might be possible to topologically sort them by reference if only up and down links could be reliably recognized."
+    },
+    {
+      "type": "paragraph",
+      "id": "02aa77e80ad8593a",
+      "text": "Some mechanism should be provided for applying a cover page. In the case of npl.wiki we have a custom landing page that shows the book cover. Is there a reliable way to find such images?"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Print Local Changes",
+        "story": []
+      },
+      "date": 1582083920261
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "05bd0fa45dd5c4d3"
+      },
+      "id": "05bd0fa45dd5c4d3",
+      "type": "add",
+      "date": 1582083998847
+    },
+    {
+      "type": "edit",
+      "id": "05bd0fa45dd5c4d3",
+      "item": {
+        "type": "paragraph",
+        "id": "05bd0fa45dd5c4d3",
+        "text": "Bruno Postel suggests, \"I'm thinking of 'use cases'. One of the people who helped me with the html file is taking-on turning some buildings at his church into a community centre - if he has a ten page printed document of just the relevant patterns, this could form the basis of discussion with the other people he has to work with, who would likely be very unwilling to access a wiki.\""
+      },
+      "date": 1582084035421
+    },
+    {
+      "type": "add",
+      "id": "28c55088a8c3c957",
+      "item": {
+        "type": "paragraph",
+        "id": "28c55088a8c3c957",
+        "text": "I write back, \"Without so much as a login any reader can select and edit patterns of interest. Click ‘wiki’ in the footer to enable wiki editing. These changes are stored locally in the browser. Click Local Changes in the footer menu (☰) to review only your selected pages. These can be saved as a local “export.json” file. Your use case suggests that we should offer a print-all option here for project pdf-ebook conversion.\""
+      },
+      "after": "05bd0fa45dd5c4d3",
+      "date": 1582084186592
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e7393b79cac53dd0"
+      },
+      "id": "e7393b79cac53dd0",
+      "type": "add",
+      "after": "28c55088a8c3c957",
+      "date": 1582084207096
+    },
+    {
+      "type": "edit",
+      "id": "e7393b79cac53dd0",
+      "item": {
+        "type": "pagefold",
+        "id": "e7393b79cac53dd0",
+        "text": "."
+      },
+      "date": 1582084210683
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e846bdea4ae241e4"
+      },
+      "id": "e846bdea4ae241e4",
+      "type": "add",
+      "after": "e7393b79cac53dd0",
+      "date": 1582084212328
+    },
+    {
+      "type": "edit",
+      "id": "e846bdea4ae241e4",
+      "item": {
+        "type": "paragraph",
+        "id": "e846bdea4ae241e4",
+        "text": "Thompson Morrison’s new book ([https//daytonexperiment.com Dayton Experiement]) was authored in federated wiki and then converted to book. Review drafts were assembled by html script which showed every page as one document. This could be saved as pdf using the standard print dialog. The pdf was ebook reader compatible so very handy for those reviewing while traveling."
+      },
+      "date": 1582084278589
+    },
+    {
+      "type": "edit",
+      "id": "e846bdea4ae241e4",
+      "item": {
+        "type": "paragraph",
+        "id": "e846bdea4ae241e4",
+        "text": "Thompson Morrison’s new book ([https/:/daytonexperiment.com Dayton Experiement]) was authored in federated wiki and then converted to book. Review drafts were assembled by html script which showed every page as one document. This could be saved as pdf using the standard print dialog. The pdf was ebook reader compatible so very handy for those reviewing while traveling."
+      },
+      "date": 1582084288068
+    },
+    {
+      "type": "edit",
+      "id": "e846bdea4ae241e4",
+      "item": {
+        "type": "paragraph",
+        "id": "e846bdea4ae241e4",
+        "text": "Thompson Morrison’s new book ([https://daytonexperiment.com Dayton Experiement]) was authored in federated wiki and then converted to book. Review drafts were assembled by html script which showed every page as one document. This could be saved as pdf using the standard print dialog. The pdf was ebook reader compatible so very handy for those reviewing while traveling."
+      },
+      "date": 1582084297606
+    },
+    {
+      "type": "edit",
+      "id": "e846bdea4ae241e4",
+      "item": {
+        "type": "paragraph",
+        "id": "e846bdea4ae241e4",
+        "text": "Thompson Morrison’s new book [https://daytonexperiment.com Dayton Experiement] was authored in federated wiki and then converted to book. Review drafts were assembled by html script which showed every page as one document. This could be saved as pdf using the standard print dialog. The pdf was ebook reader compatible so very handy for those reviewing while traveling."
+      },
+      "date": 1582084326860
+    },
+    {
+      "type": "add",
+      "id": "7411173524c3ffbc",
+      "item": {
+        "type": "paragraph",
+        "id": "7411173524c3ffbc",
+        "text": "See [[Production Tools]]"
+      },
+      "after": "e846bdea4ae241e4",
+      "date": 1582084405341
+    },
+    {
+      "type": "add",
+      "id": "3213c2d2b61ef742",
+      "item": {
+        "type": "paragraph",
+        "id": "3213c2d2b61ef742",
+        "text": "The idea would be to modify the algorithms from Thompson's tools to run off of the index of pages in browser local storage."
+      },
+      "after": "7411173524c3ffbc",
+      "date": 1582084564604
+    },
+    {
+      "type": "add",
+      "id": "4527d741e0d399f6",
+      "item": {
+        "type": "paragraph",
+        "id": "4527d741e0d399f6",
+        "text": "Some mechanism should be provided to order the pages. This could be alphabetical by title or last revision date. For patterns it might be possible to topologically sort them by reference if only up and down links could be reliably recognized."
+      },
+      "after": "3213c2d2b61ef742",
+      "date": 1582084710928
+    },
+    {
+      "type": "add",
+      "id": "02aa77e80ad8593a",
+      "item": {
+        "type": "paragraph",
+        "id": "02aa77e80ad8593a",
+        "text": "Some mechanism should be provided for applying a cover page. In the case of npl.wiki we have a custom landing page that shows the book cover. Is there a reliable way to find such images?"
+      },
+      "after": "4527d741e0d399f6",
+      "date": 1582084831846
+    }
+  ]
+}

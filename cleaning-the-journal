@@ -1,0 +1,382 @@
+{
+  "title": "Cleaning the Journal",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7651ea5ef3a6ab04",
+      "text": "We're testing the new journal cleaner."
+    },
+    {
+      "type": "paragraph",
+      "id": "4f3cfeec99458a10",
+      "text": "We open these two pages, clicking their flags, using shift-click to open both at once."
+    },
+    {
+      "type": "pagefold",
+      "id": "d7958d51a672af82",
+      "text": "pages"
+    },
+    {
+      "type": "reference",
+      "id": "a57451bbfa71d7d9",
+      "site": "wiki-njnm.rhcloud.com",
+      "slug": "linkdump",
+      "title": "Linkdump",
+      "text": "This page has a long history including adds and deletes of many now forgotten items."
+    },
+    {
+      "type": "reference",
+      "id": "126714e2eb414309",
+      "site": "fed.wiki.org:4010",
+      "slug": "clean-transporter",
+      "title": "Clean Transporter",
+      "text": "This service removes from the journal of any history of items not present in the current story. Drop a page flag to preview a cleaned version."
+    },
+    {
+      "type": "pagefold",
+      "id": "205142bc189e3ac7",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "05e21a314a0fe217",
+      "text": "Then we drag the page flag from the first to the Transport dropzone on the second and wait."
+    },
+    {
+      "type": "paragraph",
+      "id": "592c615025e67a75",
+      "text": "In a few seconds we see a new copy of the dropped page. This is a ghost ready to be forked."
+    },
+    {
+      "type": "paragraph",
+      "id": "d8e06f0204c93217",
+      "text": "We save Neal's cleaned [[Linkdump]] so that he can fork it back to his own, older site."
+    },
+    {
+      "type": "paragraph",
+      "id": "7d5adcc5d8cae259",
+      "text": "The original Linkdump had 2500 journal actions for a story with 450 items. The cleaned Linkdump has 500 actions, 2000 less than we started with without losing history relevant to the current page."
+    },
+    {
+      "type": "paragraph",
+      "id": "613b5ff90f90248a",
+      "text": "We've been talking about [[Condensed Journal]] variations for two years. It's good to finally have a version implemented so we can get some experience."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Cleaning the Journal",
+        "story": []
+      },
+      "date": 1463280619373
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7651ea5ef3a6ab04"
+      },
+      "id": "7651ea5ef3a6ab04",
+      "type": "add",
+      "date": 1463280633993
+    },
+    {
+      "type": "edit",
+      "id": "7651ea5ef3a6ab04",
+      "item": {
+        "type": "paragraph",
+        "id": "7651ea5ef3a6ab04",
+        "text": "We're testing the new journal cleaner."
+      },
+      "date": 1463280741077
+    },
+    {
+      "type": "add",
+      "id": "4f3cfeec99458a10",
+      "item": {
+        "type": "paragraph",
+        "id": "4f3cfeec99458a10",
+        "text": "We open these two pages, clicking their flags, using shift-click to open both at once."
+      },
+      "after": "7651ea5ef3a6ab04",
+      "date": 1463280820128
+    },
+    {
+      "type": "add",
+      "id": "05e21a314a0fe217",
+      "item": {
+        "type": "paragraph",
+        "id": "05e21a314a0fe217",
+        "text": "Then we drag the page flag from the first to the Transport dropzone on the second and wait."
+      },
+      "after": "4f3cfeec99458a10",
+      "date": 1463280895455
+    },
+    {
+      "type": "add",
+      "id": "592c615025e67a75",
+      "item": {
+        "type": "paragraph",
+        "id": "592c615025e67a75",
+        "text": "In a few seconds we see a new copy of the dropped page. This is a ghost ready to be forked."
+      },
+      "after": "05e21a314a0fe217",
+      "date": 1463280992322
+    },
+    {
+      "type": "add",
+      "id": "d8e06f0204c93217",
+      "item": {
+        "type": "paragraph",
+        "id": "d8e06f0204c93217",
+        "text": "We save Neal's cleaned Linkmap so that he can fork it back to his own, older site."
+      },
+      "after": "592c615025e67a75",
+      "date": 1463281051788
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a57451bbfa71d7d9"
+      },
+      "id": "a57451bbfa71d7d9",
+      "type": "add",
+      "after": "d8e06f0204c93217",
+      "date": 1463281058179
+    },
+    {
+      "type": "move",
+      "order": [
+        "7651ea5ef3a6ab04",
+        "4f3cfeec99458a10",
+        "a57451bbfa71d7d9",
+        "05e21a314a0fe217",
+        "592c615025e67a75",
+        "d8e06f0204c93217"
+      ],
+      "id": "a57451bbfa71d7d9",
+      "date": 1463281064760
+    },
+    {
+      "type": "edit",
+      "id": "a57451bbfa71d7d9",
+      "item": {
+        "type": "reference",
+        "id": "a57451bbfa71d7d9",
+        "site": "wiki-njnm.rhcloud.com",
+        "slug": "linkdump",
+        "title": "Linkdump",
+        "text": "[https://en.wikipedia.org/wiki/Discworld#Novels Discworld - Wikipedia, the free encyclopedia]"
+      },
+      "date": 1463281080088
+    },
+    {
+      "type": "edit",
+      "id": "d8e06f0204c93217",
+      "item": {
+        "type": "paragraph",
+        "id": "d8e06f0204c93217",
+        "text": "We save Neal's cleaned [[Linkdump]] so that he can fork it back to his own, older site."
+      },
+      "date": 1463281106531
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "126714e2eb414309"
+      },
+      "id": "126714e2eb414309",
+      "type": "add",
+      "after": "d8e06f0204c93217",
+      "date": 1463281162901
+    },
+    {
+      "type": "move",
+      "order": [
+        "7651ea5ef3a6ab04",
+        "4f3cfeec99458a10",
+        "a57451bbfa71d7d9",
+        "126714e2eb414309",
+        "05e21a314a0fe217",
+        "592c615025e67a75",
+        "d8e06f0204c93217"
+      ],
+      "id": "126714e2eb414309",
+      "date": 1463281165934
+    },
+    {
+      "type": "edit",
+      "id": "126714e2eb414309",
+      "item": {
+        "type": "reference",
+        "id": "126714e2eb414309",
+        "site": "fed.wiki.org:4010",
+        "slug": "clean-transporter",
+        "title": "Clean Transporter",
+        "text": "This service removes from the journal of any history of items not present in the current story. Drop a page flag to preview a cleaned version."
+      },
+      "date": 1463281183024
+    },
+    {
+      "type": "edit",
+      "id": "a57451bbfa71d7d9",
+      "item": {
+        "type": "reference",
+        "id": "a57451bbfa71d7d9",
+        "site": "wiki-njnm.rhcloud.com",
+        "slug": "linkdump",
+        "title": "Linkdump",
+        "text": "This page has a long history including adds and deletes of many now forgotten items."
+      },
+      "date": 1463281238298
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d7958d51a672af82"
+      },
+      "id": "d7958d51a672af82",
+      "type": "add",
+      "after": "d8e06f0204c93217",
+      "date": 1463281312229
+    },
+    {
+      "type": "edit",
+      "id": "d7958d51a672af82",
+      "item": {
+        "type": "pagefold",
+        "id": "d7958d51a672af82",
+        "text": "remote"
+      },
+      "date": 1463281337447
+    },
+    {
+      "type": "move",
+      "order": [
+        "7651ea5ef3a6ab04",
+        "4f3cfeec99458a10",
+        "d7958d51a672af82",
+        "a57451bbfa71d7d9",
+        "126714e2eb414309",
+        "05e21a314a0fe217",
+        "592c615025e67a75",
+        "d8e06f0204c93217"
+      ],
+      "id": "d7958d51a672af82",
+      "date": 1463281343326
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "205142bc189e3ac7"
+      },
+      "id": "205142bc189e3ac7",
+      "type": "add",
+      "after": "d8e06f0204c93217",
+      "date": 1463281348203
+    },
+    {
+      "type": "edit",
+      "id": "205142bc189e3ac7",
+      "item": {
+        "type": "pagefold",
+        "id": "205142bc189e3ac7",
+        "text": "."
+      },
+      "date": 1463281353070
+    },
+    {
+      "type": "move",
+      "order": [
+        "7651ea5ef3a6ab04",
+        "4f3cfeec99458a10",
+        "d7958d51a672af82",
+        "a57451bbfa71d7d9",
+        "126714e2eb414309",
+        "205142bc189e3ac7",
+        "05e21a314a0fe217",
+        "592c615025e67a75",
+        "d8e06f0204c93217"
+      ],
+      "id": "205142bc189e3ac7",
+      "date": 1463281357288
+    },
+    {
+      "type": "edit",
+      "id": "d7958d51a672af82",
+      "item": {
+        "type": "pagefold",
+        "id": "d7958d51a672af82",
+        "text": "pages"
+      },
+      "date": 1463281385161
+    },
+    {
+      "type": "add",
+      "id": "7d5adcc5d8cae259",
+      "item": {
+        "type": "paragraph",
+        "id": "7d5adcc5d8cae259",
+        "text": "The original Linkdump had 2500 journal actions for a story with 450 items. The cleaned Linkdump has 500 actions, 2000 less than we started with without losing history relevant to the current page."
+      },
+      "after": "d8e06f0204c93217",
+      "date": 1463281718064
+    },
+    {
+      "type": "add",
+      "id": "613b5ff90f90248a",
+      "item": {
+        "type": "paragraph",
+        "id": "613b5ff90f90248a",
+        "text": "[[We've been talking about [[Condensed Journal]] variations for several years. It's good to finally have a version implemented so we can get some experience with the idea."
+      },
+      "after": "7d5adcc5d8cae259",
+      "date": 1463282577411
+    },
+    {
+      "type": "edit",
+      "id": "613b5ff90f90248a",
+      "item": {
+        "type": "paragraph",
+        "id": "613b5ff90f90248a",
+        "text": "[[We've been talking about [[Condensed Journal]] variations for several years. It's good to finally have a version implemented so we can get some experience."
+      },
+      "date": 1463282588761
+    },
+    {
+      "type": "edit",
+      "id": "613b5ff90f90248a",
+      "item": {
+        "type": "paragraph",
+        "id": "613b5ff90f90248a",
+        "text": "We've been talking about [[Condensed Journal]] variations for several years. It's good to finally have a version implemented so we can get some experience."
+      },
+      "date": 1463282597815
+    },
+    {
+      "type": "edit",
+      "id": "613b5ff90f90248a",
+      "item": {
+        "type": "paragraph",
+        "id": "613b5ff90f90248a",
+        "text": "We've been talking about [[Condensed Journal]] variations for two years. It's good to finally have a version implemented so we can get some experience."
+      },
+      "date": 1463282627544
+    },
+    {
+      "type": "fork",
+      "site": "neal.tries.fed.wiki",
+      "date": 1463366283342,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1463366298467
+    }
+  ]
+}

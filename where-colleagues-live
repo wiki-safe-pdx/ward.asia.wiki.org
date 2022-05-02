@@ -1,0 +1,229 @@
+{
+  "title": "Where Colleagues Live",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "8ed82e34e791eb61",
+      "text": "Here I identify residence locations for a colleague planning a trip to Portland. His specific request was advice on hip places to book a b&b and enjoy our bike culture. See [[Hip Portland]]"
+    },
+    {
+      "type": "map",
+      "id": "cc0616cad8492bb7",
+      "text": "Where Colleagues Live\nIn the Portland Metro Area\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen\n45.6013568, -122.5338650 MIke\nBOUNDARY 45.3266856, -122.8958130\nBOUNDARY 45.6520883, -122.4893188"
+    },
+    {
+      "type": "paragraph",
+      "id": "9604dab58246cda1",
+      "text": "See [[Biketown]] and associated map for station locations near our homes."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Where Colleagues Live",
+        "story": []
+      },
+      "date": 1468854935454
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8ed82e34e791eb61"
+      },
+      "id": "8ed82e34e791eb61",
+      "type": "add",
+      "date": 1468854938681
+    },
+    {
+      "type": "edit",
+      "id": "8ed82e34e791eb61",
+      "item": {
+        "type": "paragraph",
+        "id": "8ed82e34e791eb61",
+        "text": "Approximate locations of our homes."
+      },
+      "date": 1468854993659
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cc0616cad8492bb7"
+      },
+      "id": "cc0616cad8492bb7",
+      "type": "add",
+      "after": "8ed82e34e791eb61",
+      "date": 1468854995946
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "LINEUP"
+      },
+      "date": 1468855018598
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "LINEUP\n45.4692928, -122.7462745"
+      },
+      "date": 1468855047137
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Colleagues\nLINEUP\n45.4692928, -122.7462745 Ward"
+      },
+      "date": 1468855114068
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Colleagues\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260"
+      },
+      "date": 1468855136207
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Colleagues\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen"
+      },
+      "date": 1468855143318
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Colleagues\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen\n45.6013568, -122.5338650"
+      },
+      "date": 1468855170536
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Colleagues\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen\n45.6013568, -122.5338650 MIke"
+      },
+      "date": 1468855178983
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Colleagues\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen\n45.6013568, -122.5338650 MIke\n45.3266856, -122.8958130"
+      },
+      "date": 1468855219284
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Colleagues\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen\n45.6013568, -122.5338650 MIke\n45.3266856, -122.8958130\n45.6520883, -122.4893188"
+      },
+      "date": 1468855222380
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Colleagues\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen\n45.6013568, -122.5338650 MIke\nBOUNDARY 45.3266856, -122.8958130\nBOUNDARY 45.6520883, -122.4893188"
+      },
+      "date": 1468855244157
+    },
+    {
+      "type": "edit",
+      "id": "8ed82e34e791eb61",
+      "item": {
+        "type": "paragraph",
+        "id": "8ed82e34e791eb61",
+        "text": "We add to the markers at left the approximate locations of our homes."
+      },
+      "date": 1468855312532
+    },
+    {
+      "type": "edit",
+      "id": "8ed82e34e791eb61",
+      "item": {
+        "type": "paragraph",
+        "id": "8ed82e34e791eb61",
+        "text": "We add to the markers at left the approximate locations of our homes. See [[Hip Portland]]"
+      },
+      "date": 1468855351051
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Where Colleagues\nLive\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen\n45.6013568, -122.5338650 MIke\nBOUNDARY 45.3266856, -122.8958130\nBOUNDARY 45.6520883, -122.4893188"
+      },
+      "date": 1468855563532
+    },
+    {
+      "type": "edit",
+      "id": "cc0616cad8492bb7",
+      "item": {
+        "type": "map",
+        "id": "cc0616cad8492bb7",
+        "text": "Where Colleagues Live\nIn the Portland Metro Area\nLINEUP\n45.4692928, -122.7462745 Ward\n45.3456853, -122.8527260 Allen\n45.6013568, -122.5338650 MIke\nBOUNDARY 45.3266856, -122.8958130\nBOUNDARY 45.6520883, -122.4893188"
+      },
+      "date": 1468855591877
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9604dab58246cda1"
+      },
+      "id": "9604dab58246cda1",
+      "type": "add",
+      "after": "cc0616cad8492bb7",
+      "date": 1486395109310
+    },
+    {
+      "type": "edit",
+      "id": "9604dab58246cda1",
+      "item": {
+        "type": "paragraph",
+        "id": "9604dab58246cda1",
+        "text": "See [[Biketown]] and associated map for station locations near our homes."
+      },
+      "date": 1486395156835
+    },
+    {
+      "type": "edit",
+      "id": "8ed82e34e791eb61",
+      "item": {
+        "type": "paragraph",
+        "id": "8ed82e34e791eb61",
+        "text": "Here I identify residence locations for a colleague planning a trip to Portland. His specific request was advice on hip places to book a b&b and enjoy our bike culture. See [[Hip Portland]]"
+      },
+      "date": 1486396685148
+    }
+  ]
+}

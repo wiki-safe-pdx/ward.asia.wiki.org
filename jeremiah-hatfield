@@ -1,0 +1,144 @@
+{
+  "title": "Jeremiah Hatfield",
+  "story": [
+    {
+      "type": "graph",
+      "id": "82a7ba3378290331",
+      "text": "Union Anna & ES --> HERE\nHERE --> Union Rachel & Jeremiah\nRachel Vance --> Union Rachel & Jeremiah\n"
+    },
+    {
+      "type": "graph",
+      "id": "5c9a6635183cd256",
+      "text": "Rachel & Jeremiah --> Ephraim Hatfield\nRachel & Jeremiah --> Jacob Hatfield"
+    },
+    {
+      "type": "paragraph",
+      "id": "6a253414fc661095",
+      "text": "Try [[Graph Transporter]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Jeremiah Hatfield",
+        "story": []
+      },
+      "date": 1461640184889
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "82a7ba3378290331"
+      },
+      "id": "82a7ba3378290331",
+      "type": "add",
+      "date": 1461647548964
+    },
+    {
+      "type": "edit",
+      "id": "82a7ba3378290331",
+      "item": {
+        "type": "graph",
+        "id": "82a7ba3378290331",
+        "text": "Anna & ES --> HERE\nHERE --> Rachel & Jeremiah\nRachel Vance -> Rachel & Jeremiah"
+      },
+      "date": 1461647652229
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5c9a6635183cd256"
+      },
+      "id": "5c9a6635183cd256",
+      "type": "add",
+      "after": "82a7ba3378290331",
+      "date": 1461647656776
+    },
+    {
+      "type": "edit",
+      "id": "5c9a6635183cd256",
+      "item": {
+        "type": "graph",
+        "id": "5c9a6635183cd256",
+        "text": "Rachel & Jeremiah --> Ephraim Hatfield\nRachel & Jeremiah --> Jacob Hatfield"
+      },
+      "date": 1461647719764
+    },
+    {
+      "type": "fork",
+      "site": "hatfield.asia.wiki.org",
+      "date": 1461697447678
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6a253414fc661095"
+      },
+      "id": "6a253414fc661095",
+      "type": "add",
+      "after": "5c9a6635183cd256",
+      "date": 1461697449389
+    },
+    {
+      "type": "edit",
+      "id": "6a253414fc661095",
+      "item": {
+        "type": "paragraph",
+        "id": "6a253414fc661095",
+        "text": "Try [[Graph Transporter]]"
+      },
+      "date": 1461697469294
+    },
+    {
+      "type": "edit",
+      "id": "82a7ba3378290331",
+      "item": {
+        "type": "graph",
+        "id": "82a7ba3378290331",
+        "text": "Union Anna & ES --> HERE\nHERE --> Union Rachel & Jeremiah\nRachel Vance -> Union Rachel & Jeremiah"
+      },
+      "date": 1461953144952
+    },
+    {
+      "type": "edit",
+      "id": "82a7ba3378290331",
+      "item": {
+        "type": "graph",
+        "id": "82a7ba3378290331",
+        "text": "Union Anna & ES --> HERE\nHERE --> Union Rachel & Jeremiah\nRachel Vance --> Union Rachel & Jeremiah"
+      },
+      "date": 1461953694164
+    },
+    {
+      "type": "edit",
+      "id": "82a7ba3378290331",
+      "item": {
+        "type": "graph",
+        "id": "82a7ba3378290331",
+        "text": "Union Anna & ES --> HERE\nRachel Vance --> Union Rachel & Jeremiah\nHERE --> Union Rachel & Jeremiah\n"
+      },
+      "date": 1461953726244
+    },
+    {
+      "type": "edit",
+      "id": "82a7ba3378290331",
+      "item": {
+        "type": "graph",
+        "id": "82a7ba3378290331",
+        "text": "Union Anna & ES --> HERE\nRachel Vance\nHERE --> Union Rachel & Jeremiah\nRachel Vance --> Union Rachel & Jeremiah\n"
+      },
+      "date": 1461953839466
+    },
+    {
+      "type": "edit",
+      "id": "82a7ba3378290331",
+      "item": {
+        "type": "graph",
+        "id": "82a7ba3378290331",
+        "text": "Union Anna & ES --> HERE\nHERE --> Union Rachel & Jeremiah\nRachel Vance --> Union Rachel & Jeremiah\n"
+      },
+      "date": 1461955273730
+    }
+  ]
+}

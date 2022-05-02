@@ -1,0 +1,1187 @@
+{
+  "title": "Search Thoughts",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1f5e0be028b3b29c",
+      "text": "This page is some initial thoughts and experiments with searching the Federated Wiki sites. What is id doing on Decentralised Academy site?"
+    },
+    {
+      "type": "paragraph",
+      "id": "85d1261698f1c879",
+      "text": "I have realised that my wiki-writing has been using it as a personal writing space: it helps me to think and to formulate my thoughts if I want to communicate them to others. I also use it to annotate links I found."
+    },
+    {
+      "url": "https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg",
+      "text": "The answer is \"[https://twitter.com/j32804/status/664373923451183104 What if you decentralised all the things, but you don't know where the things are?]\"  [https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg source]",
+      "type": "image",
+      "id": "31cf0273052f5372"
+    },
+    {
+      "type": "paragraph",
+      "id": "046e2c0b590e1cf1",
+      "text": "The neighbourhood I usually search comes from people I know, so I find their wiki and reference it on my site: Ward, Mike, David etc. "
+    },
+    {
+      "type": "paragraph",
+      "id": "0ae1725c20178684",
+      "text": "At the same time I moan about the fact that many people I know use different tools for publishing that I can't federate properly - GitHub, MediaWiki, email (damn email, for publishing?), and Evernote. So I decided that I should crawl the Federation a bit more and get connected with people who already use Federated Wiki for their own purposes, so that I don't feel lonely. "
+    },
+    {
+      "type": "html",
+      "id": "ad5b2f45abeabccb",
+      "text": "<h3>Experiments"
+    },
+    {
+      "type": "paragraph",
+      "id": "a5128b57648fb4c0",
+      "text": "First I started to look at what people I reference fork from, and finally came across [http://search.fed.wiki.org/ search.fed.wiki.org]. This search is a bit weird - for example if I look for the word \"trust\" in this search and tick \"sites\" it will give me a bunch of welcome pages of the wikis that might have the word trust mentioned in them. "
+    },
+    {
+      "type": "paragraph",
+      "id": "bdfa0dba950a27a0",
+      "text": "To find a page, not a wiki, I can either tick \"page\" when I search, which will give me a bunch of pages (and takes a while to load) or I click on each welcome page individually and do an inner search, which, afaik, searches the first paragraph of the pages in that single site or its neighbourhood, provided there is one. "
+    },
+    {
+      "type": "paragraph",
+      "id": "8a562de5059bce82",
+      "text": "Weird thing is, that many of the sites which the [http://search.fed.wiki.org/ search.fed.wiki.org] suggests when I request \"trust\" in \"sites\" don't find the word I was looking for in the \"inner search\""
+    },
+    {
+      "text": "<div style=\"\n  padding: 12px;\n  background:#eee;\n  width:96%;\n  align=centered;\">\n\n<img style=\"\n  display:block;\n  margin:auto;\n  width:100%;\"\n  src=\"https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg\">\n\n<p class=caption>\nThe answer is \"[https://twitter.com/j32804/status/664373923451183104 What if you decentralised all the things, but you don't know where the things are?]\"  [https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg source]\n</p>\n</div>\n",
+      "type": "html",
+      "id": "a26bfbc846497384"
+    },
+    {
+      "type": "paragraph",
+      "id": "e85eeb52fc0a45a0",
+      "text": " "
+    },
+    {
+      "type": "html",
+      "id": "ecf9ed0cf80b866a",
+      "text": "<h3>Related pages and wikis"
+    },
+    {
+      "type": "reference",
+      "id": "0c7d4cf124d5201d",
+      "site": "future.fedwiki.org",
+      "slug": "federation-search",
+      "title": "Federation Search",
+      "text": "We're experimenting with full text search of the federation. For the moment this is both easier to code and easier to host than searching the web. [http://search.fed.wiki.org:3030 search]"
+    },
+    {
+      "type": "reference",
+      "id": "4910efc96c79f612",
+      "site": "future.fedwiki.org",
+      "slug": "search-research",
+      "title": "Search Research",
+      "text": "Here we take a look at options for searching the federation and individual Fedwiki sites."
+    },
+    {
+      "type": "markdown",
+      "id": "91706275179391c3",
+      "text": "# Revisited"
+    },
+    {
+      "type": "paragraph",
+      "id": "a5494a2d64603e8a",
+      "text": "I repeated David's experiment. I searched for \"trust\" and stumbled across a page I was looking for just yesterday and had given up assuming I never wrote it. Now there are two versions with an interesting contrast."
+    },
+    {
+      "type": "reference",
+      "id": "459f1ee314505bee",
+      "site": "video.fed.wiki.org",
+      "slug": "hack-summit",
+      "title": "Hack Summit",
+      "text": "Ward Cunningham and Kent Beck recall their work together in the Tektronix Computer Research Lab and how that has influenced their attitudes about programming throughout their careers."
+    },
+    {
+      "type": "reference",
+      "id": "e65c7d4932cf34bb",
+      "site": "forage.ward.fed.wiki.org",
+      "slug": "ward--kent-reunion",
+      "title": "Ward & Kent Reunion",
+      "text": "Ed Roman reminds me ... It's been almost a year since I spoke at hack.summit. "
+    },
+    {
+      "type": "paragraph",
+      "id": "9f8aec027f3cf172",
+      "text": "The interesting thing is how I remember the outline for the largely unscripted conversation. In the original I recalled three important aspects of a talk we had given, the second involving trust, hence the hit."
+    },
+    {
+      "type": "html",
+      "id": "2b2c8ac22561e2b9",
+      "text": "Be <b>Beautiful</b>. Trust that you can know this quality and that you can produce it, even embody it, bountifully."
+    },
+    {
+      "type": "paragraph",
+      "id": "cbe75dc2536d8a83",
+      "text": "Our televised conversation recalled a talk we had prepared 25 years ago. I remember the title exactly, Be Valuable. Why did I not search for that? Because wiki's search today is lame compared to google."
+    },
+    {
+      "type": "paragraph",
+      "id": "6381153a04224299",
+      "text": "Search for \"trust\" returns 411 titles alphabetized by domain name. A better approach would be to figure out how many ways the word is used and return the most useful site for each meaning. "
+    },
+    {
+      "type": "paragraph",
+      "id": "e0329c08d46b1b78",
+      "text": "Search for \"be valuable\", returns 433 titles, even more than the vague search \"trust\".  Common words in uncommon order won't find the desired result when search disregards adjacency in the text."
+    },
+    {
+      "type": "paragraph",
+      "id": "3cc2e3a20cfb264d",
+      "text": "A slow and dismal experience to be sure."
+    },
+    {
+      "type": "paragraph",
+      "id": "d769f59091ca4c6a",
+      "text": "[[Distributed Search]] could do better. In David's case repeated searches moving from locus to locus could move him towards the conversations he would find interesting. In my case, I was looking for my own work so full text searching out from there is exactly what I needed."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Search Thoughts",
+        "story": []
+      },
+      "date": 1449076281715
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e85eeb52fc0a45a0"
+      },
+      "id": "e85eeb52fc0a45a0",
+      "type": "add",
+      "date": 1449076282836
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "85d1261698f1c879",
+        "text": "I have recently realised that my wiki-writing style has been using it as a personal writing space: it helps me to think and to formulate my thoughts if I want to communicate them to others. I also use it to annotate links I found."
+      },
+      "id": "85d1261698f1c879",
+      "date": 1449076284344
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "046e2c0b590e1cf1",
+        "text": "The neighbourhood I usually search comes from people I know, so I find their wiki and reference it on my site: Ward, Mike etc. "
+      },
+      "after": "85d1261698f1c879",
+      "id": "046e2c0b590e1cf1",
+      "date": 1449076285953
+    },
+    {
+      "type": "edit",
+      "id": "e85eeb52fc0a45a0",
+      "item": {
+        "type": "paragraph",
+        "id": "e85eeb52fc0a45a0",
+        "text": "I came across "
+      },
+      "date": 1449076338198
+    },
+    {
+      "type": "edit",
+      "id": "e85eeb52fc0a45a0",
+      "item": {
+        "type": "paragraph",
+        "id": "e85eeb52fc0a45a0",
+        "text": " "
+      },
+      "date": 1449076353498
+    },
+    {
+      "type": "edit",
+      "id": "85d1261698f1c879",
+      "item": {
+        "type": "paragraph",
+        "id": "85d1261698f1c879",
+        "text": "I have realised that my wiki-writing has been using it as a personal writing space: it helps me to think and to formulate my thoughts if I want to communicate them to others. I also use it to annotate links I found."
+      },
+      "date": 1449076365350
+    },
+    {
+      "type": "add",
+      "id": "0ae1725c20178684",
+      "item": {
+        "type": "paragraph",
+        "id": "0ae1725c20178684",
+        "text": "At the same time I moan about the fact that many people I know use different tools for publishing that I can't federate properly - GitHub, MediaWiki, email (damn email, for publishing?), and Evernote. So I decided that I should crawl the Federation a bit more and get connected with people who already use Federated Wiki for their own purposes, so that I don't feel lonely. "
+      },
+      "after": "046e2c0b590e1cf1",
+      "date": 1449076576640
+    },
+    {
+      "type": "add",
+      "id": "a5128b57648fb4c0",
+      "item": {
+        "type": "paragraph",
+        "id": "a5128b57648fb4c0",
+        "text": "First I started to look at what people I reference fork from, and finally came across [http://search.fed.wiki.org/ search.fed.wiki.org]. "
+      },
+      "after": "0ae1725c20178684",
+      "date": 1449076627373
+    },
+    {
+      "type": "add",
+      "id": "e88185ca29dc6ab0",
+      "item": {
+        "type": "paragraph",
+        "id": "e88185ca29dc6ab0",
+        "text": "I started to play with Google Custom Search to create a tool which helps me to search the federation."
+      },
+      "after": "a5128b57648fb4c0",
+      "date": 1449076669398
+    },
+    {
+      "type": "edit",
+      "id": "a5128b57648fb4c0",
+      "item": {
+        "type": "paragraph",
+        "id": "a5128b57648fb4c0",
+        "text": "First I started to look at what people I reference fork from, and finally came across [http://search.fed.wiki.org/ search.fed.wiki.org]. This search is a bit weird - for example if I look for the word "
+      },
+      "date": 1449076687110
+    },
+    {
+      "type": "edit",
+      "id": "a5128b57648fb4c0",
+      "item": {
+        "type": "paragraph",
+        "id": "a5128b57648fb4c0",
+        "text": "First I started to look at what people I reference fork from, and finally came across [http://search.fed.wiki.org/ search.fed.wiki.org]. This search is a bit weird - for example if I look for the word \"trust\" in this search and tick \"sites\" it will give me a bunch of welcome pages of the wikis that might have the word trust mentioned in them. But"
+      },
+      "date": 1449076802616
+    },
+    {
+      "type": "edit",
+      "id": "a5128b57648fb4c0",
+      "item": {
+        "type": "paragraph",
+        "id": "a5128b57648fb4c0",
+        "text": "First I started to look at what people I reference fork from, and finally came across [http://search.fed.wiki.org/ search.fed.wiki.org]. This search is a bit weird - for example if I look for the word \"trust\" in this search and tick \"sites\" it will give me a bunch of welcome pages of the wikis that might have the word trust mentioned in them. (When I tick \"page\" it simply doesn't load.) So, I click on each welcome page individually and do an inner search, which, afaik, searches the first paragraph of the pages in that single site or its neighbourhood, prvided there is one. "
+      },
+      "date": 1449076913291
+    },
+    {
+      "type": "add",
+      "id": "8a562de5059bce82",
+      "item": {
+        "type": "paragraph",
+        "id": "8a562de5059bce82",
+        "text": "Weird thing is, that many of the sites which the "
+      },
+      "after": "a5128b57648fb4c0",
+      "date": 1449076932007
+    },
+    {
+      "type": "edit",
+      "id": "8a562de5059bce82",
+      "item": {
+        "type": "paragraph",
+        "id": "8a562de5059bce82",
+        "text": "Weird thing is, that many of the sites which the [http://search.fed.wiki.org/ search.fed.wiki.org] suggests don't find the word I was looking for in the \"inner search\""
+      },
+      "date": 1449076984509
+    },
+    {
+      "type": "edit",
+      "id": "e88185ca29dc6ab0",
+      "item": {
+        "type": "paragraph",
+        "id": "e88185ca29dc6ab0",
+        "text": "Long story short, I started to play with Google Custom Search to create a tool which helps me to search the federation."
+      },
+      "date": 1449076996955
+    },
+    {
+      "type": "edit",
+      "id": "a5128b57648fb4c0",
+      "item": {
+        "type": "paragraph",
+        "id": "a5128b57648fb4c0",
+        "text": "First I started to look at what people I reference fork from, and finally came across [http://search.fed.wiki.org/ search.fed.wiki.org]. This search is a bit weird - for example if I look for the word \"trust\" in this search and tick \"sites\" it will give me a bunch of welcome pages of the wikis that might have the word trust mentioned in them. "
+      },
+      "date": 1449077066265
+    },
+    {
+      "type": "add",
+      "id": "bdfa0dba950a27a0",
+      "item": {
+        "type": "paragraph",
+        "id": "bdfa0dba950a27a0",
+        "text": "To find a page, not a wiki, I can either tick \"page\" when I search, which will give me a bunch of pages (and takes a while to load) or I click on each welcome page individually and do an inner search, which, afaik, searches the first paragraph of the pages in that single site or its neighbourhood, provided there is one. "
+      },
+      "after": "a5128b57648fb4c0",
+      "date": 1449077152889
+    },
+    {
+      "type": "edit",
+      "id": "8a562de5059bce82",
+      "item": {
+        "type": "paragraph",
+        "id": "8a562de5059bce82",
+        "text": "Weird thing is, that many of the sites which the [http://search.fed.wiki.org/ search.fed.wiki.org] suggests when I request \"trust\" in \"sites\" don't find the word I was looking for in the \"inner search\""
+      },
+      "date": 1449077177480
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1c7c475268a4cadd"
+      },
+      "id": "1c7c475268a4cadd",
+      "type": "add",
+      "after": "e85eeb52fc0a45a0",
+      "date": 1449080683357
+    },
+    {
+      "type": "edit",
+      "id": "1c7c475268a4cadd",
+      "item": {
+        "type": "html",
+        "id": "1c7c475268a4cadd",
+        "text": "<ul>\n<li>[https://cse.google.co.uk/cse/publicurl?cx=001994538507449046028:_x0ia10ihoi Big WIki Search]\n<li>"
+      },
+      "date": 1449080712238
+    },
+    {
+      "type": "edit",
+      "id": "1c7c475268a4cadd",
+      "item": {
+        "type": "html",
+        "id": "1c7c475268a4cadd",
+        "text": "<ul>\n<li>[https://cse.google.co.uk/cse/publicurl?cx=001994538507449046028:_x0ia10ihoi Big WIki Search]\n<li>[https://cse.google.co.uk/cse/publicurl?cx=001994538507449046028:q6hvzifnf1k Few Random Familiar Wikis]"
+      },
+      "date": 1449080735450
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7ebd8c1a7d73e526"
+      },
+      "id": "7ebd8c1a7d73e526",
+      "type": "add",
+      "after": "1c7c475268a4cadd",
+      "date": 1449081188305
+    },
+    {
+      "type": "edit",
+      "id": "7ebd8c1a7d73e526",
+      "item": {
+        "type": "reference",
+        "id": "7ebd8c1a7d73e526",
+        "site": "ward.asia.wiki.org",
+        "slug": "sitemap-scrape-statistics",
+        "title": "Sitemap Scrape Statistics",
+        "text": "We collect various counts while scraping sitemaps and report them as a text file. Here we plot the most recent counts available. "
+      },
+      "date": 1449081194441
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ecf9ed0cf80b866a"
+      },
+      "id": "ecf9ed0cf80b866a",
+      "type": "add",
+      "after": "7ebd8c1a7d73e526",
+      "date": 1449081197324
+    },
+    {
+      "type": "move",
+      "order": [
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "0ae1725c20178684",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "ecf9ed0cf80b866a",
+      "date": 1449081200562
+    },
+    {
+      "type": "edit",
+      "id": "ecf9ed0cf80b866a",
+      "item": {
+        "type": "html",
+        "id": "ecf9ed0cf80b866a",
+        "text": "<h3>Related pages and wikis"
+      },
+      "date": 1449081213920
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "71ea6f7f19739792"
+      },
+      "id": "71ea6f7f19739792",
+      "type": "add",
+      "after": "7ebd8c1a7d73e526",
+      "date": 1449081472192
+    },
+    {
+      "type": "edit",
+      "id": "71ea6f7f19739792",
+      "item": {
+        "type": "paragraph",
+        "id": "71ea6f7f19739792",
+        "text": "[http://search.fed.wiki.org:3030/counts.html Search Visualisation]"
+      },
+      "date": 1449081510959
+    },
+    {
+      "type": "move",
+      "order": [
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "0ae1725c20178684",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "71ea6f7f19739792",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "71ea6f7f19739792",
+      "date": 1449081514463
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1f5e0be028b3b29c"
+      },
+      "id": "1f5e0be028b3b29c",
+      "type": "add",
+      "after": "7ebd8c1a7d73e526",
+      "date": 1449084952159
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "0ae1725c20178684",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "71ea6f7f19739792",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "1f5e0be028b3b29c",
+      "date": 1449084956389
+    },
+    {
+      "type": "edit",
+      "id": "1f5e0be028b3b29c",
+      "item": {
+        "type": "paragraph",
+        "id": "1f5e0be028b3b29c",
+        "text": "This page is some initial thoughts and experiments with searching the Federated Wiki sites. What is id doing on Decentralised Academy site? The answer is \"What if you decentralised all the things, but you don't know where the things are?\""
+      },
+      "date": 1449085029944
+    },
+    {
+      "type": "edit",
+      "id": "1f5e0be028b3b29c",
+      "item": {
+        "type": "paragraph",
+        "id": "1f5e0be028b3b29c",
+        "text": "This page is some initial thoughts and experiments with searching the Federated Wiki sites. What is id doing on Decentralised Academy site? The answer is \"[https://twitter.com/j32804/status/664373923451183104 What if you decentralised all the things, but you don't know where the things are]?\""
+      },
+      "date": 1449085110154
+    },
+    {
+      "type": "edit",
+      "id": "1f5e0be028b3b29c",
+      "item": {
+        "type": "paragraph",
+        "id": "1f5e0be028b3b29c",
+        "text": "This page is some initial thoughts and experiments with searching the Federated Wiki sites. What is id doing on Decentralised Academy site? The answer is \"[https://twitter.com/j32804/status/664373923451183104 What if you decentralised all the things, but you don't know where the things are?]\""
+      },
+      "date": 1449085133546
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ad5b2f45abeabccb"
+      },
+      "id": "ad5b2f45abeabccb",
+      "type": "add",
+      "after": "7ebd8c1a7d73e526",
+      "date": 1449085179132
+    },
+    {
+      "type": "edit",
+      "id": "ad5b2f45abeabccb",
+      "item": {
+        "type": "html",
+        "id": "ad5b2f45abeabccb",
+        "text": "<h3>Experiments"
+      },
+      "date": 1449085187622
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "0ae1725c20178684",
+        "ad5b2f45abeabccb",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "71ea6f7f19739792",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "ad5b2f45abeabccb",
+      "date": 1449085193682
+    },
+    {
+      "type": "edit",
+      "id": "046e2c0b590e1cf1",
+      "item": {
+        "type": "paragraph",
+        "id": "046e2c0b590e1cf1",
+        "text": "The neighbourhood I usually search comes from people I know, so I find their wiki and reference it on my site: Ward, Mike, David etc. "
+      },
+      "date": 1449085210291
+    },
+    {
+      "type": "fork",
+      "site": "ksenya.decentralised.academy",
+      "date": 1449085471974
+    },
+    {
+      "type": "add",
+      "item": {
+        "text": "<div style=\"\n  padding: 12px;\n  background:#eee;\n  width:96%;\n  align=centered;\">\n\n<img style=\"\n  display:block;\n  margin:auto;\n  width:100%;\"\n  src=\"https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg\">\n\n<p class=caption>\n  Transported image.\n  [https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg source]\n</p>\n</div>\n",
+        "type": "html",
+        "id": "a26bfbc846497384"
+      },
+      "after": "1f5e0be028b3b29c",
+      "id": "a26bfbc846497384",
+      "date": 1449085581962
+    },
+    {
+      "type": "edit",
+      "id": "1f5e0be028b3b29c",
+      "item": {
+        "type": "paragraph",
+        "id": "1f5e0be028b3b29c",
+        "text": "This page is some initial thoughts and experiments with searching the Federated Wiki sites. What is id doing on Decentralised Academy site?"
+      },
+      "date": 1449085597091
+    },
+    {
+      "type": "edit",
+      "id": "a26bfbc846497384",
+      "item": {
+        "text": "<div style=\"\n  padding: 12px;\n  background:#eee;\n  width:96%;\n  align=centered;\">\n\n<img style=\"\n  display:block;\n  margin:auto;\n  width:100%;\"\n  src=\"https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg\">\n\n<p class=caption>\n  The answer is \"[https://twitter.com/j32804/status/664373923451183104 What if you decentralised all the things, but you don't know where the things are?]\"  [https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg source]\n</p>\n</div>\n",
+        "type": "html",
+        "id": "a26bfbc846497384"
+      },
+      "date": 1449085620305
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "0ae1725c20178684",
+        "ad5b2f45abeabccb",
+        "a5128b57648fb4c0",
+        "a26bfbc846497384",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "71ea6f7f19739792",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "a26bfbc846497384",
+      "date": 1449085630305
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "0ae1725c20178684",
+        "a26bfbc846497384",
+        "ad5b2f45abeabccb",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "71ea6f7f19739792",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "a26bfbc846497384",
+      "date": 1449085634478
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "a26bfbc846497384",
+        "0ae1725c20178684",
+        "ad5b2f45abeabccb",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "71ea6f7f19739792",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "a26bfbc846497384",
+      "date": 1449085638557
+    },
+    {
+      "type": "add",
+      "item": {
+        "url": "https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg",
+        "text": "Transported image. [https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg source]",
+        "type": "image",
+        "id": "31cf0273052f5372"
+      },
+      "after": "85d1261698f1c879",
+      "id": "31cf0273052f5372",
+      "date": 1449085717316
+    },
+    {
+      "type": "edit",
+      "id": "a26bfbc846497384",
+      "item": {
+        "text": "<div style=\"\n  padding: 12px;\n  background:#eee;\n  width:96%;\n  align=centered;\">\n\n<img style=\"\n  display:block;\n  margin:auto;\n  width:100%;\"\n  src=\"https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg\">\n\n<p class=caption>\nThe answer is \"[https://twitter.com/j32804/status/664373923451183104 What if you decentralised all the things, but you don't know where the things are?]\"  [https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg source]\n</p>\n</div>\n",
+        "type": "html",
+        "id": "a26bfbc846497384"
+      },
+      "date": 1449085736060
+    },
+    {
+      "type": "edit",
+      "id": "31cf0273052f5372",
+      "item": {
+        "url": "https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg",
+        "text": "The answer is \"[https://twitter.com/j32804/status/664373923451183104 What if you decentralised all the things, but you don't know where the things are?]\"  [https://pbs.twimg.com/media/CThUhaXWsAAgGnK.jpg source]",
+        "type": "image",
+        "id": "31cf0273052f5372"
+      },
+      "date": 1449085741132
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "31cf0273052f5372",
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "a26bfbc846497384",
+        "0ae1725c20178684",
+        "ad5b2f45abeabccb",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "71ea6f7f19739792",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "31cf0273052f5372",
+      "date": 1449085744955
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "31cf0273052f5372",
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "0ae1725c20178684",
+        "ad5b2f45abeabccb",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "a26bfbc846497384",
+        "e88185ca29dc6ab0",
+        "e85eeb52fc0a45a0",
+        "1c7c475268a4cadd",
+        "ecf9ed0cf80b866a",
+        "71ea6f7f19739792",
+        "7ebd8c1a7d73e526"
+      ],
+      "id": "a26bfbc846497384",
+      "date": 1449085751735
+    },
+    {
+      "type": "remove",
+      "id": "e88185ca29dc6ab0",
+      "date": 1449085781345
+    },
+    {
+      "type": "remove",
+      "id": "1c7c475268a4cadd",
+      "date": 1449085785561
+    },
+    {
+      "type": "remove",
+      "id": "71ea6f7f19739792",
+      "date": 1449085803917
+    },
+    {
+      "type": "remove",
+      "id": "7ebd8c1a7d73e526",
+      "date": 1449085843726
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0c7d4cf124d5201d"
+      },
+      "id": "0c7d4cf124d5201d",
+      "type": "add",
+      "after": "ecf9ed0cf80b866a",
+      "date": 1449085852093
+    },
+    {
+      "type": "edit",
+      "id": "0c7d4cf124d5201d",
+      "item": {
+        "type": "reference",
+        "id": "0c7d4cf124d5201d",
+        "site": "future.fedwiki.org",
+        "slug": "federation-search",
+        "title": "Federation Search",
+        "text": "We're experimenting with full text search of the federation. For the moment this is both easier to code and easier to host than searching the web. [http://search.fed.wiki.org:3030 search]"
+      },
+      "date": 1449085854888
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4910efc96c79f612"
+      },
+      "id": "4910efc96c79f612",
+      "type": "add",
+      "after": "0c7d4cf124d5201d",
+      "date": 1449085858256
+    },
+    {
+      "type": "edit",
+      "id": "4910efc96c79f612",
+      "item": {
+        "type": "reference",
+        "id": "4910efc96c79f612",
+        "site": "future.fedwiki.org",
+        "slug": "search-research",
+        "title": "Search Research",
+        "text": "Here we take a look at options for searching the federation and individual Fedwiki sites."
+      },
+      "date": 1449085861164
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "85d1261698f1c879",
+        "046e2c0b590e1cf1",
+        "31cf0273052f5372",
+        "0ae1725c20178684",
+        "ad5b2f45abeabccb",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "a26bfbc846497384",
+        "e85eeb52fc0a45a0",
+        "ecf9ed0cf80b866a",
+        "0c7d4cf124d5201d",
+        "4910efc96c79f612"
+      ],
+      "id": "31cf0273052f5372",
+      "date": 1449085877225
+    },
+    {
+      "type": "move",
+      "order": [
+        "1f5e0be028b3b29c",
+        "85d1261698f1c879",
+        "31cf0273052f5372",
+        "046e2c0b590e1cf1",
+        "0ae1725c20178684",
+        "ad5b2f45abeabccb",
+        "a5128b57648fb4c0",
+        "bdfa0dba950a27a0",
+        "8a562de5059bce82",
+        "a26bfbc846497384",
+        "e85eeb52fc0a45a0",
+        "ecf9ed0cf80b866a",
+        "0c7d4cf124d5201d",
+        "4910efc96c79f612"
+      ],
+      "id": "31cf0273052f5372",
+      "date": 1449085889908
+    },
+    {
+      "type": "fork",
+      "site": "future.fedwiki.org",
+      "date": 1449236949666
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "91706275179391c3"
+      },
+      "id": "91706275179391c3",
+      "type": "add",
+      "after": "4910efc96c79f612",
+      "date": 1449236985741
+    },
+    {
+      "type": "edit",
+      "id": "91706275179391c3",
+      "item": {
+        "type": "markdown",
+        "id": "91706275179391c3",
+        "text": "# Revisited"
+      },
+      "date": 1449237058905
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a5494a2d64603e8a"
+      },
+      "id": "a5494a2d64603e8a",
+      "type": "add",
+      "after": "91706275179391c3",
+      "date": 1449237061770
+    },
+    {
+      "type": "edit",
+      "id": "a5494a2d64603e8a",
+      "item": {
+        "type": "paragraph",
+        "id": "a5494a2d64603e8a",
+        "text": "I repeated the experiment. I searched for \"trust\" and stumbled across a page I was looking for just yesterday and had given up assuming I never wrote it. Now there are two."
+      },
+      "date": 1449237155197
+    },
+    {
+      "type": "edit",
+      "id": "a5494a2d64603e8a",
+      "item": {
+        "type": "paragraph",
+        "id": "a5494a2d64603e8a",
+        "text": "I repeated the experiment. I searched for \"trust\" and stumbled across a page I was looking for just yesterday and had given up assuming I never wrote it. Now there are two versions with an interesting contrast."
+      },
+      "date": 1449237174839
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "459f1ee314505bee"
+      },
+      "id": "459f1ee314505bee",
+      "type": "add",
+      "after": "a5494a2d64603e8a",
+      "date": 1449237179770
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e65c7d4932cf34bb"
+      },
+      "id": "e65c7d4932cf34bb",
+      "type": "add",
+      "after": "459f1ee314505bee",
+      "date": 1449237181480
+    },
+    {
+      "type": "edit",
+      "id": "459f1ee314505bee",
+      "item": {
+        "type": "reference",
+        "id": "459f1ee314505bee",
+        "site": "video.fed.wiki.org",
+        "slug": "hack-summit",
+        "title": "Hack Summit",
+        "text": "Ward Cunningham and Kent Beck recall their work together in the Tektronix Computer Research Lab and how that has influenced their attitudes about programming throughout their careers."
+      },
+      "date": 1449237188094
+    },
+    {
+      "type": "edit",
+      "id": "e65c7d4932cf34bb",
+      "item": {
+        "type": "reference",
+        "id": "e65c7d4932cf34bb",
+        "site": "forage.ward.fed.wiki.org",
+        "slug": "ward--kent-reunion",
+        "title": "Ward & Kent Reunion",
+        "text": "Ed Roman reminds me ... It's been almost a year since you spoke at hack.summit. "
+      },
+      "date": 1449237233845
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9f8aec027f3cf172"
+      },
+      "id": "9f8aec027f3cf172",
+      "type": "add",
+      "after": "e65c7d4932cf34bb",
+      "date": 1449237286203
+    },
+    {
+      "type": "edit",
+      "id": "9f8aec027f3cf172",
+      "item": {
+        "type": "paragraph",
+        "id": "9f8aec027f3cf172",
+        "text": "The interesting thing is how I remember the outline for the largely unscripted conversation."
+      },
+      "date": 1449237347521
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "html",
+        "id": "2b2c8ac22561e2b9",
+        "text": "Be <b>Beautiful</b>. Trust that you can know this quality and that you can produce it, even embody it, bountifully."
+      },
+      "after": "9f8aec027f3cf172",
+      "id": "2b2c8ac22561e2b9",
+      "date": 1449237378631
+    },
+    {
+      "type": "edit",
+      "id": "9f8aec027f3cf172",
+      "item": {
+        "type": "paragraph",
+        "id": "9f8aec027f3cf172",
+        "text": "The interesting thing is how I remember the outline for the largely unscripted conversation. In the original I recalled three important aspects of a talk we had given, the second involving trust, hence the hit."
+      },
+      "date": 1449237470747
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cbe75dc2536d8a83"
+      },
+      "id": "cbe75dc2536d8a83",
+      "type": "add",
+      "after": "2b2c8ac22561e2b9",
+      "date": 1449237551776
+    },
+    {
+      "type": "edit",
+      "id": "cbe75dc2536d8a83",
+      "item": {
+        "type": "paragraph",
+        "id": "cbe75dc2536d8a83",
+        "text": "The talk was given maybe 25 years ago but I remember the title exactly, Be Valuable."
+      },
+      "date": 1449237641538
+    },
+    {
+      "type": "add",
+      "id": "6381153a04224299",
+      "item": {
+        "type": "paragraph",
+        "id": "6381153a04224299",
+        "text": "Search for \"ANY WORD trust\" returns 411 titles."
+      },
+      "after": "cbe75dc2536d8a83",
+      "date": 1449237763684
+    },
+    {
+      "type": "add",
+      "id": "e0329c08d46b1b78",
+      "item": {
+        "type": "paragraph",
+        "id": "e0329c08d46b1b78",
+        "text": "Search for \"ANY WORD be valuable\" returns"
+      },
+      "after": "6381153a04224299",
+      "date": 1449237791341
+    },
+    {
+      "type": "edit",
+      "id": "e0329c08d46b1b78",
+      "item": {
+        "type": "paragraph",
+        "id": "e0329c08d46b1b78",
+        "text": "Search for \"ANY WORD be valuable\" returns 433 titles."
+      },
+      "date": 1449237820211
+    },
+    {
+      "type": "edit",
+      "id": "cbe75dc2536d8a83",
+      "item": {
+        "type": "paragraph",
+        "id": "cbe75dc2536d8a83",
+        "text": "The talk was given maybe 25 years ago but I remember the title exactly, Be Valuable. Why did I not search for that?"
+      },
+      "date": 1449237983801
+    },
+    {
+      "type": "edit",
+      "id": "cbe75dc2536d8a83",
+      "item": {
+        "type": "paragraph",
+        "id": "cbe75dc2536d8a83",
+        "text": "The talk was given maybe 25 years ago but I remember the title exactly, Be Valuable. Why did I not search for that? Because search today is lame compared to google."
+      },
+      "date": 1449238025200
+    },
+    {
+      "type": "edit",
+      "id": "6381153a04224299",
+      "item": {
+        "type": "paragraph",
+        "id": "6381153a04224299",
+        "text": "Search for \"trust\" returns 411 titles alphabetized by domain name. A better approach would be to figure out how many ways the word is used and return the most useful site for each meaning. "
+      },
+      "date": 1449238171067
+    },
+    {
+      "type": "edit",
+      "id": "e0329c08d46b1b78",
+      "item": {
+        "type": "paragraph",
+        "id": "e0329c08d46b1b78",
+        "text": "Search for \"be valuable\", returns 433 titles, even more than the one word search. Both are common words and search result ordering disregards adjacency in the text. "
+      },
+      "date": 1449238662570
+    },
+    {
+      "type": "edit",
+      "id": "a5494a2d64603e8a",
+      "item": {
+        "type": "paragraph",
+        "id": "a5494a2d64603e8a",
+        "text": "I repeated David's experiment. I searched for \"trust\" and stumbled across a page I was looking for just yesterday and had given up assuming I never wrote it. Now there are two versions with an interesting contrast."
+      },
+      "date": 1449238720558
+    },
+    {
+      "type": "edit",
+      "id": "e65c7d4932cf34bb",
+      "item": {
+        "type": "reference",
+        "id": "e65c7d4932cf34bb",
+        "site": "forage.ward.fed.wiki.org",
+        "slug": "ward--kent-reunion",
+        "title": "Ward & Kent Reunion",
+        "text": "Ed Roman reminds me ... It's been almost a year since I spoke at hack.summit. "
+      },
+      "date": 1449238754005
+    },
+    {
+      "type": "edit",
+      "id": "cbe75dc2536d8a83",
+      "item": {
+        "type": "paragraph",
+        "id": "cbe75dc2536d8a83",
+        "text": "Our televised conversation recalled a talk we had prepared 25 years ago. I remember the title exactly, Be Valuable. Why did I not search for that? Because wiki's search today is lame compared to google."
+      },
+      "date": 1449238860440
+    },
+    {
+      "type": "edit",
+      "id": "e0329c08d46b1b78",
+      "item": {
+        "type": "paragraph",
+        "id": "e0329c08d46b1b78",
+        "text": "Search for \"be valuable\", returns 433 titles, even more than the one word search. Both are common words and search result ordering disregards adjacency in the text."
+      },
+      "date": 1449238940564
+    },
+    {
+      "type": "add",
+      "id": "3cc2e3a20cfb264d",
+      "item": {
+        "type": "paragraph",
+        "id": "3cc2e3a20cfb264d",
+        "text": "A slow and dismal experience to be sure."
+      },
+      "after": "e0329c08d46b1b78",
+      "date": 1449239171318
+    },
+    {
+      "type": "edit",
+      "id": "e0329c08d46b1b78",
+      "item": {
+        "type": "paragraph",
+        "id": "e0329c08d46b1b78",
+        "text": "Search for \"be valuable\", returns 433 titles, even more than the vague search \"trust\".  Common words in uncommon order won't find the desired result when search disregards adjacency in the text."
+      },
+      "date": 1449239302341
+    },
+    {
+      "type": "add",
+      "id": "d769f59091ca4c6a",
+      "item": {
+        "type": "paragraph",
+        "id": "d769f59091ca4c6a",
+        "text": "[[Distributed Search]] could do better. "
+      },
+      "after": "3cc2e3a20cfb264d",
+      "date": 1449239377736
+    },
+    {
+      "type": "edit",
+      "id": "d769f59091ca4c6a",
+      "item": {
+        "type": "paragraph",
+        "id": "d769f59091ca4c6a",
+        "text": "[[Distributed Search]] could do better. In David's case repeated searches moving from locus to locus could move him towards the conversations he would find interesting. In my case, I was looking for my own work so full text searching out from there is exactly what I needed."
+      },
+      "date": 1449239608966
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Testing Map Defaults",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "07f5ba6f34fbff28",
+      "text": "We still inherit defaults from the item and the plugin."
+    },
+    {
+      "type": "map",
+      "id": "70ab7213605ecdcc",
+      "text": "Close-up by the O2 Arena\n51.5, 0.0 North Greenwich",
+      "zoom": 15,
+      "tile": "http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+      "tileCredits": "Map tiles by <a href='http://stamen.com'>Stamen Design</a>, <a href='http://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a> &mdash; Map data &copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Testing Map Defaults",
+        "story": []
+      },
+      "date": 1467697438620
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "07f5ba6f34fbff28"
+      },
+      "id": "07f5ba6f34fbff28",
+      "type": "add",
+      "date": 1467697440726
+    },
+    {
+      "type": "edit",
+      "id": "07f5ba6f34fbff28",
+      "item": {
+        "type": "paragraph",
+        "id": "07f5ba6f34fbff28",
+        "text": "We still inherit defaults from the item and the plugin."
+      },
+      "date": 1467697472440
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "map",
+        "id": "70ab7213605ecdcc",
+        "text": "Close-up by the O2 Arena\n51.5, 0.0 North Greenwich",
+        "zoom": 15,
+        "tile": "http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+        "tileCredits": "Map tiles by <a href='http://stamen.com'>Stamen Design</a>, <a href='http://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a> &mdash; Map data &copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+      },
+      "after": "07f5ba6f34fbff28",
+      "id": "70ab7213605ecdcc",
+      "date": 1467697489460
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1467730780421
+    }
+  ]
+}

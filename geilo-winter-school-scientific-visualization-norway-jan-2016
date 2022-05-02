@@ -1,0 +1,183 @@
+{
+  "title": "Geilo Winter School: Scientific Visualization, Norway, Jan 2016",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "555d416374f36d05",
+      "text": "The 16th Geilo Winter School\n will take place January 17th-22nd, 2016 at Dr. Holms Hotel, Geilo. As\n you may already know, this year's topic is Scientific Visualization. [http://www.sintef.no/projectweb/geilowinterschool/2016-scientific-visualization/#/ site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "2aa881a5e7fdf327",
+      "text": "Visualization is an integral part of science, and a\n necessity for our understanding of complex processes and data. The\n word itself can have a broad interpretation, including creating\n trivial plots of values, advanced rendering techniques, and complex\n statistical data reasoning. "
+    },
+    {
+      "type": "paragraph",
+      "id": "f6c4e86b2ab493f6",
+      "text": "This winter school will target the process\n of understanding data through scientific visualization, and focus on\n extracting knowledge from data. With hands-on exercises, you will\n learn techniques, tools, and best practices for extracting knowledge\n from data. "
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Geilo Winter School: Scientific Visualization, Norway, Jan 2016",
+        "story": []
+      },
+      "date": 1450175302014
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "555d416374f36d05"
+      },
+      "id": "555d416374f36d05",
+      "type": "add",
+      "date": 1450175332596
+    },
+    {
+      "type": "edit",
+      "id": "555d416374f36d05",
+      "item": {
+        "type": "paragraph",
+        "id": "555d416374f36d05",
+        "text": "The 16th Geilo Winter School\n will take place January 17th-22nd, 2016 at Dr. Holms Hotel, Geilo. As\n you may already know, this year's topic is Scientific Visualization.\n\n Important information:\n - Registration deadline: December 17th, 2015.\n - Registration page: http://goo.gl/lkTB07\n - Webpage: http://www.sintef.no/GeiloWinterSchool/\n - Facebook: https://www.facebook.com/geilowinterschool/\n - Cost: Free to attend, but participants cover own travel and\n accommodation at Dr. Holms. See registration page for details.\n\n As you can see from the preliminary program (http://goo.gl/LTfwMF),\n this year's winter school will cover multiple aspects of scientific\n visualization, a topic we hope many of you find\n interesting. Visualization is an integral part of science, and a\n necessity for our understanding of complex processes and data. The\n word itself can have a broad interpretation, including creating\n trivial plots of values, advanced rendering techniques, and complex\n statistical data reasoning. This winter school will target the process\n of understanding data through scientific visualization, and focus on\n extracting knowledge from data. With hands-on exercises, you will\n learn techniques, tools, and best practices for extracting knowledge\n from data. The school is still awaiting confirmation from a couple of\n interesting speakers, so expect that the program will expand in the\n coming time. As in previous years, there will also be a poster session\n on Wednesday, where participants are encouraged to present their own\n research.\n"
+      },
+      "date": 1450175346322
+    },
+    {
+      "type": "edit",
+      "id": "555d416374f36d05",
+      "item": {
+        "type": "paragraph",
+        "id": "555d416374f36d05",
+        "text": "The 16th Geilo Winter School\n will take place January 17th-22nd, 2016 at Dr. Holms Hotel, Geilo. As\n you may already know, this year's topic is Scientific Visualization.\n\n Important information:\n - Registration deadline: December 17th, 2015.\n - Registration page: http://goo.gl/lkTB07\n - Webpage: http://www.sintef.no/GeiloWinterSchool/\n - Facebook: https://www.facebook.com/geilowinterschool/\n - Cost: Free to attend, but participants cover own travel and\n accommodation at Dr. Holms. See registration page for details.\n\n As you can see from the [http://goo.gl/LTfwMF preliminary program] \n this year's winter school will cover multiple aspects of scientific\n visualization, a topic we hope many of you find\n interesting. Visualization is an integral part of science, and a\n necessity for our understanding of complex processes and data. The\n word itself can have a broad interpretation, including creating\n trivial plots of values, advanced rendering techniques, and complex\n statistical data reasoning. This winter school will target the process\n of understanding data through scientific visualization, and focus on\n extracting knowledge from data. With hands-on exercises, you will\n learn techniques, tools, and best practices for extracting knowledge\n from data. The school is still awaiting confirmation from a couple of\n interesting speakers, so expect that the program will expand in the\n coming time. As in previous years, there will also be a poster session\n on Wednesday, where participants are encouraged to present their own\n research.\n"
+      },
+      "date": 1450175432128
+    },
+    {
+      "type": "fork",
+      "site": "noyes.fed.wiki.org",
+      "date": 1450214163302
+    },
+    {
+      "type": "edit",
+      "id": "555d416374f36d05",
+      "item": {
+        "type": "paragraph",
+        "id": "555d416374f36d05",
+        "text": "The 16th Geilo Winter School\n will take place January 17th-22nd, 2016 at Dr. Holms Hotel, Geilo. As\n you may already know, this year's topic is Scientific Visualization. [http://goo.gl/lkTB07 registration] [http://www.sintef.no/GeiloWinterSchool/ site]\n\n Important information:\n - Registration deadline: December 17th, 2015.\n - Registration \n - Webpage: \n - Cost: Free to attend, but participants cover own travel and\n accommodation at Dr. Holms. See registration page for details.\n\n As you can see from the [http://goo.gl/LTfwMF preliminary program] \n this year's winter school will cover multiple aspects of scientific\n visualization, a topic we hope many of you find\n interesting. Visualization is an integral part of science, and a\n necessity for our understanding of complex processes and data. The\n word itself can have a broad interpretation, including creating\n trivial plots of values, advanced rendering techniques, and complex\n statistical data reasoning. This winter school will target the process\n of understanding data through scientific visualization, and focus on\n extracting knowledge from data. With hands-on exercises, you will\n learn techniques, tools, and best practices for extracting knowledge\n from data. The school is still awaiting confirmation from a couple of\n interesting speakers, so expect that the program will expand in the\n coming time. As in previous years, there will also be a poster session\n on Wednesday, where participants are encouraged to present their own\n research.\n"
+      },
+      "date": 1450214285526
+    },
+    {
+      "type": "edit",
+      "id": "555d416374f36d05",
+      "item": {
+        "type": "paragraph",
+        "id": "555d416374f36d05",
+        "text": "The 16th Geilo Winter School\n will take place January 17th-22nd, 2016 at Dr. Holms Hotel, Geilo. As\n you may already know, this year's topic is Scientific Visualization. [http://www.sintef.no/GeiloWinterSchool/ site]\n\n Important information:\n - Registration deadline: December 17th, 2015.\n - Registration \n - Webpage: \n - Cost: Free to attend, but participants cover own travel and\n accommodation at Dr. Holms. See registration page for details.\n\n As you can see from the [http://goo.gl/LTfwMF preliminary program] \n this year's winter school will cover multiple aspects of scientific\n visualization, a topic we hope many of you find\n interesting. Visualization is an integral part of science, and a\n necessity for our understanding of complex processes and data. The\n word itself can have a broad interpretation, including creating\n trivial plots of values, advanced rendering techniques, and complex\n statistical data reasoning. This winter school will target the process\n of understanding data through scientific visualization, and focus on\n extracting knowledge from data. With hands-on exercises, you will\n learn techniques, tools, and best practices for extracting knowledge\n from data. The school is still awaiting confirmation from a couple of\n interesting speakers, so expect that the program will expand in the\n coming time. As in previous years, there will also be a poster session\n on Wednesday, where participants are encouraged to present their own\n research.\n"
+      },
+      "date": 1450214296884
+    },
+    {
+      "type": "edit",
+      "id": "555d416374f36d05",
+      "item": {
+        "type": "paragraph",
+        "id": "555d416374f36d05",
+        "text": "The 16th Geilo Winter School\n will take place January 17th-22nd, 2016 at Dr. Holms Hotel, Geilo. As\n you may already know, this year's topic is Scientific Visualization. [http://www.sintef.no/GeiloWinterSchool/ site]\n\n As you can see from the [http://goo.gl/LTfwMF preliminary program] \n this year's winter school will cover multiple aspects of scientific\n visualization, a topic we hope many of you find\n interesting. "
+      },
+      "date": 1450214327153
+    },
+    {
+      "type": "add",
+      "id": "2aa881a5e7fdf327",
+      "item": {
+        "type": "paragraph",
+        "id": "2aa881a5e7fdf327",
+        "text": "Visualization is an integral part of science, and a\n necessity for our understanding of complex processes and data. The\n word itself can have a broad interpretation, including creating\n trivial plots of values, advanced rendering techniques, and complex\n statistical data reasoning. "
+      },
+      "after": "555d416374f36d05",
+      "date": 1450214333081
+    },
+    {
+      "type": "add",
+      "id": "f6c4e86b2ab493f6",
+      "item": {
+        "type": "paragraph",
+        "id": "f6c4e86b2ab493f6",
+        "text": "This winter school will target the process\n of understanding data through scientific visualization, and focus on\n extracting knowledge from data. With hands-on exercises, you will\n learn techniques, tools, and best practices for extracting knowledge\n from data. The school is still awaiting confirmation from a couple of\n interesting speakers, so expect that the program will expand in the\n coming time. "
+      },
+      "after": "2aa881a5e7fdf327",
+      "date": 1450214339864
+    },
+    {
+      "type": "add",
+      "id": "e5e33d3fa33f8eac",
+      "item": {
+        "type": "paragraph",
+        "id": "e5e33d3fa33f8eac",
+        "text": "As in previous years, there will also be a poster session\n on Wednesday, where participants are encouraged to present their own\n research.\n"
+      },
+      "after": "f6c4e86b2ab493f6",
+      "date": 1450214345985
+    },
+    {
+      "type": "edit",
+      "id": "f6c4e86b2ab493f6",
+      "item": {
+        "type": "paragraph",
+        "id": "f6c4e86b2ab493f6",
+        "text": "This winter school will target the process\n of understanding data through scientific visualization, and focus on\n extracting knowledge from data. With hands-on exercises, you will\n learn techniques, tools, and best practices for extracting knowledge\n from data. "
+      },
+      "date": 1450214356498
+    },
+    {
+      "type": "add",
+      "id": "c6a9720e44d288e4",
+      "item": {
+        "type": "paragraph",
+        "id": "c6a9720e44d288e4",
+        "text": "The school is still awaiting confirmation from a couple of\n interesting speakers, so expect that the program will expand in the\n coming time. "
+      },
+      "after": "f6c4e86b2ab493f6",
+      "date": 1450214358345
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2698005adb0e47ff"
+      },
+      "id": "2698005adb0e47ff",
+      "type": "add",
+      "after": "e5e33d3fa33f8eac",
+      "date": 1450214430844
+    },
+    {
+      "type": "remove",
+      "id": "2698005adb0e47ff",
+      "date": 1450214440137
+    },
+    {
+      "type": "edit",
+      "id": "555d416374f36d05",
+      "item": {
+        "type": "paragraph",
+        "id": "555d416374f36d05",
+        "text": "The 16th Geilo Winter School\n will take place January 17th-22nd, 2016 at Dr. Holms Hotel, Geilo. As\n you may already know, this year's topic is Scientific Visualization. [http://www.sintef.no/projectweb/geilowinterschool/2016-scientific-visualization/#/ site]"
+      },
+      "date": 1450214669409
+    },
+    {
+      "type": "remove",
+      "id": "c6a9720e44d288e4",
+      "date": 1450214684463
+    },
+    {
+      "type": "remove",
+      "id": "e5e33d3fa33f8eac",
+      "date": 1450214688904
+    }
+  ]
+}

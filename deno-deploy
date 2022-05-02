@@ -1,0 +1,317 @@
+{
+  "title": "Deno Deploy",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ab230b06c11ac9fb",
+      "text": "Deno Deploy is a distributed system that allows you to run JavaScript, TypeScript, and WebAssembly close to users, at the edge, worldwide. Deeply integrated with the V8 runtime, our servers provide minimal latency and eliminate unnecessary abstractions. You can develop your script locally using the Deno CLI, and then deploy it to our managed infrastructure in less than a second, without the need to configure anything."
+    },
+    {
+      "type": "paragraph",
+      "id": "4546f9be83668aa4",
+      "text": "Projects. [https://dash.deno.com/projects deno]"
+    },
+    {
+      "type": "paragraph",
+      "id": "fbaf8805eb685531",
+      "text": "Sudoku. [https://sudokuku.deno.dev/?.3...1....24.3.5.....7.58...7...4.1.....8.7......579....6.5.3.7.4.......3...2..6. deno]"
+    },
+    {
+      "type": "paragraph",
+      "id": "0eb1cf9fed9bcbd4",
+      "text": "Successfully configured a project in deploy/github guided by the signup screens. Cloned the repo locally and pushed a variant of hello world to deploy without installing command line tool."
+    },
+    {
+      "type": "paragraph",
+      "id": "6af94323df9f0b01",
+      "text": "Successfully installed the command line tool to serve localhost with automatic reloads on file changes. Much faster turn around that github push which takes like three seconds to complete deploy."
+    },
+    {
+      "type": "pagefold",
+      "id": "fd1e7426a70a7f52",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "86c396d660101f9a",
+      "text": "Invited twitter to play sudokuku. Now collect statistics on running edge instances. [https://chart-embed.service.newrelic.com/herald/8761eb3b-615e-4f31-b5f8-d938c9594920?height=1200px&timepicker=true newrelic] [https://one.newrelic.com/launcher/dashboards.launcher?launcher=eyJwcmV2UmFuZ2UiOlsxNjE4NzY2NDg5NTQyLjM3MjgsMTYxODc2NzE1NjkxNS4yNTQyXX0=&pane=eyJuZXJkbGV0SWQiOiJkYXNoYm9hcmRzLmRhc2hib2FyZCIsImVudGl0eUlkIjoiTXpFek9EVXlOSHhXU1ZwOFJFRlRTRUpQUVZKRWZERTROemMwTmpVIiwidXNlRGVmYXVsdFRpbWVSYW5nZSI6ZmFsc2UsInNlbGVjdGVkUGFnZSI6Ik16RXpPRFV5Tkh4V1NWcDhSRUZUU0VKUFFWSkVmREU0TnpjME5qVSIsImVkaXRNb2RlIjpmYWxzZSwiaXNTYXZpbmdFZGl0Q2hhbmdlcyI6ZmFsc2UsImlzVGVtcGxhdGVFbXB0eSI6ZmFsc2V9&platform[accountId]=3138524&platform[$isFallbackTimeRange]=false&platform[timeRange][duration]=604800000 dashboard]"
+    },
+    {
+      "type": "paragraph",
+      "id": "400ffc33160bd513",
+      "text": "See [[Deno Server Starts]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Deno Deploy",
+        "story": []
+      },
+      "date": 1617050207145
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ab230b06c11ac9fb"
+      },
+      "id": "ab230b06c11ac9fb",
+      "type": "add",
+      "date": 1617050280140
+    },
+    {
+      "type": "edit",
+      "id": "ab230b06c11ac9fb",
+      "item": {
+        "type": "paragraph",
+        "id": "ab230b06c11ac9fb",
+        "text": "Deno Deploy is a distributed system that allows you to run JavaScript, TypeScript, and WebAssembly close to users, at the edge, worldwide. Deeply integrated with the V8 runtime, our servers provide minimal latency and eliminate unnecessary abstractions. You can develop your script locally using the Deno CLI, and then deploy it to our managed infrastructure in less than a second, without the need to configure anything."
+      },
+      "date": 1617050284005
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4546f9be83668aa4"
+      },
+      "id": "4546f9be83668aa4",
+      "type": "add",
+      "after": "ab230b06c11ac9fb",
+      "date": 1617050338281
+    },
+    {
+      "type": "edit",
+      "id": "4546f9be83668aa4",
+      "item": {
+        "type": "paragraph",
+        "id": "4546f9be83668aa4",
+        "text": "Projects. [https://dash.deno.com/projects deno]"
+      },
+      "date": 1617050354154
+    },
+    {
+      "type": "add",
+      "id": "fbaf8805eb685531",
+      "item": {
+        "type": "paragraph",
+        "id": "fbaf8805eb685531",
+        "text": "Sudoku. [sudokuku.deno.dev deno]"
+      },
+      "after": "4546f9be83668aa4",
+      "date": 1617050419339
+    },
+    {
+      "type": "edit",
+      "id": "fbaf8805eb685531",
+      "item": {
+        "type": "paragraph",
+        "id": "fbaf8805eb685531",
+        "text": "Sudoku. [https://sudokuku.deno.dev deno]"
+      },
+      "date": 1617050427507
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0eb1cf9fed9bcbd4"
+      },
+      "id": "0eb1cf9fed9bcbd4",
+      "type": "add",
+      "after": "fbaf8805eb685531",
+      "date": 1617050986622
+    },
+    {
+      "type": "edit",
+      "id": "0eb1cf9fed9bcbd4",
+      "item": {
+        "type": "paragraph",
+        "id": "0eb1cf9fed9bcbd4",
+        "text": "Successfully configured a project in deploy/github guided by the signup screens. Cloned the repo locally and pushed a variant of hello world to deploy."
+      },
+      "date": 1617051219865
+    },
+    {
+      "type": "edit",
+      "id": "0eb1cf9fed9bcbd4",
+      "item": {
+        "type": "paragraph",
+        "id": "0eb1cf9fed9bcbd4",
+        "text": "Successfully configured a project in deploy/github guided by the signup screens. Cloned the repo locally and pushed a variant of hello world to deploy without installing command line tool."
+      },
+      "date": 1617051258074
+    },
+    {
+      "type": "edit",
+      "id": "fbaf8805eb685531",
+      "item": {
+        "type": "paragraph",
+        "id": "fbaf8805eb685531",
+        "text": "Sudoku. [https://sudokuku.deno.dev/?.3...1....24.3.5.....7.58...7...4.1.....8.7......579....6.5.3.7.4.......3...2..6. deno]"
+      },
+      "date": 1617065878309
+    },
+    {
+      "type": "add",
+      "id": "6af94323df9f0b01",
+      "item": {
+        "type": "paragraph",
+        "id": "6af94323df9f0b01",
+        "text": "Successfully installed the command line tool to serve localhost with automatic reloads on file changes. Much faster turn around that github push which takes like three seconds to complete deploy."
+      },
+      "after": "0eb1cf9fed9bcbd4",
+      "date": 1617066190821
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b3150ef47d9aea5a"
+      },
+      "id": "b3150ef47d9aea5a",
+      "type": "add",
+      "after": "6af94323df9f0b01",
+      "date": 1618493304006
+    },
+    {
+      "type": "edit",
+      "id": "b3150ef47d9aea5a",
+      "item": {
+        "type": "frame",
+        "id": "b3150ef47d9aea5a",
+        "text": "<div style=\"position:relative;width:100%;height:0;padding-bottom:56.25%\"><iframe width=\"384\" height=\"216\" src=\"https://insights-embed.newrelic.com/embedded_widget/m0o2fm3Z9cdllNM9QoiBAgg30fy5jjGm\" frameborder=\"0\" style=\"position:absolute;width:100%;height:100%\"></iframe></div>"
+      },
+      "date": 1618493311616
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "84c4e5fd047136ce"
+      },
+      "id": "84c4e5fd047136ce",
+      "type": "add",
+      "after": "b3150ef47d9aea5a",
+      "date": 1618493326833
+    },
+    {
+      "type": "edit",
+      "id": "84c4e5fd047136ce",
+      "item": {
+        "type": "html",
+        "id": "84c4e5fd047136ce",
+        "text": "<div style=\"position:relative;width:100%;height:0;padding-bottom:56.25%\"><iframe width=\"384\" height=\"216\" src=\"https://insights-embed.newrelic.com/embedded_widget/m0o2fm3Z9cdllNM9QoiBAgg30fy5jjGm\" frameborder=\"0\" style=\"position:absolute;width:100%;height:100%\"></iframe></div>"
+      },
+      "date": 1618493332384
+    },
+    {
+      "type": "edit",
+      "id": "b3150ef47d9aea5a",
+      "item": {
+        "type": "frame",
+        "id": "b3150ef47d9aea5a",
+        "text": "https://insights-embed.newrelic.com/embedded_widget/m0o2fm3Z9cdllNM9QoiBAgg30fy5jjGm"
+      },
+      "date": 1618493373488
+    },
+    {
+      "type": "edit",
+      "id": "b3150ef47d9aea5a",
+      "item": {
+        "type": "frame",
+        "id": "b3150ef47d9aea5a",
+        "text": "https://insights-embed.newrelic.com/embedded_widget/m0o2fm3Z9cdllNM9QoiBAgg30fy5jjGm\nHEIGHT 400"
+      },
+      "date": 1618493404399
+    },
+    {
+      "type": "edit",
+      "id": "b3150ef47d9aea5a",
+      "item": {
+        "type": "frame",
+        "id": "b3150ef47d9aea5a",
+        "text": "https://insights-embed.newrelic.com/embedded_widget/m0o2fm3Z9cdllNM9QoiBAgg30fy5jjGm\nHEIGHT 350"
+      },
+      "date": 1618493413169
+    },
+    {
+      "type": "edit",
+      "id": "b3150ef47d9aea5a",
+      "item": {
+        "type": "frame",
+        "id": "b3150ef47d9aea5a",
+        "text": "https://insights-embed.newrelic.com/embedded_widget/m0o2fm3Z9cdllNM9QoiBAgg30fy5jjGm\nHEIGHT 300"
+      },
+      "date": 1618493422593
+    },
+    {
+      "type": "remove",
+      "id": "84c4e5fd047136ce",
+      "date": 1618493429872
+    },
+    {
+      "type": "remove",
+      "id": "b3150ef47d9aea5a",
+      "date": 1618761123596
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fd1e7426a70a7f52"
+      },
+      "id": "fd1e7426a70a7f52",
+      "type": "add",
+      "after": "6af94323df9f0b01",
+      "date": 1618761194834
+    },
+    {
+      "type": "edit",
+      "id": "fd1e7426a70a7f52",
+      "item": {
+        "type": "pagefold",
+        "id": "fd1e7426a70a7f52",
+        "text": "."
+      },
+      "date": 1618761200133
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "86c396d660101f9a"
+      },
+      "id": "86c396d660101f9a",
+      "type": "add",
+      "after": "fd1e7426a70a7f52",
+      "date": 1618761202106
+    },
+    {
+      "type": "edit",
+      "id": "86c396d660101f9a",
+      "item": {
+        "type": "paragraph",
+        "id": "86c396d660101f9a",
+        "text": "Invited twitter to play sudokuku. Now collect statistics on running edge instances. [https://chart-embed.service.newrelic.com/herald/8761eb3b-615e-4f31-b5f8-d938c9594920?height=1200px&timepicker=true newrelic]"
+      },
+      "date": 1618761269072
+    },
+    {
+      "type": "add",
+      "id": "400ffc33160bd513",
+      "item": {
+        "type": "paragraph",
+        "id": "400ffc33160bd513",
+        "text": "See [[Deno Server Starts]]"
+      },
+      "after": "86c396d660101f9a",
+      "date": 1618761324647
+    },
+    {
+      "type": "edit",
+      "id": "86c396d660101f9a",
+      "item": {
+        "type": "paragraph",
+        "id": "86c396d660101f9a",
+        "text": "Invited twitter to play sudokuku. Now collect statistics on running edge instances. [https://chart-embed.service.newrelic.com/herald/8761eb3b-615e-4f31-b5f8-d938c9594920?height=1200px&timepicker=true newrelic] [https://one.newrelic.com/launcher/dashboards.launcher?launcher=eyJwcmV2UmFuZ2UiOlsxNjE4NzY2NDg5NTQyLjM3MjgsMTYxODc2NzE1NjkxNS4yNTQyXX0=&pane=eyJuZXJkbGV0SWQiOiJkYXNoYm9hcmRzLmRhc2hib2FyZCIsImVudGl0eUlkIjoiTXpFek9EVXlOSHhXU1ZwOFJFRlRTRUpQUVZKRWZERTROemMwTmpVIiwidXNlRGVmYXVsdFRpbWVSYW5nZSI6ZmFsc2UsInNlbGVjdGVkUGFnZSI6Ik16RXpPRFV5Tkh4V1NWcDhSRUZUU0VKUFFWSkVmREU0TnpjME5qVSIsImVkaXRNb2RlIjpmYWxzZSwiaXNTYXZpbmdFZGl0Q2hhbmdlcyI6ZmFsc2UsImlzVGVtcGxhdGVFbXB0eSI6ZmFsc2V9&platform[accountId]=3138524&platform[$isFallbackTimeRange]=false&platform[timeRange][duration]=604800000 dashboard]"
+      },
+      "date": 1619098255743
+    }
+  ]
+}

@@ -1,0 +1,966 @@
+{
+  "title": "Testing Microtalk",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "c5d939efba565627",
+      "text": "We try a few examples of microtalk, a subset of lambdatalk, a dialect of lisp. "
+    },
+    {
+      "type": "paragraph",
+      "id": "75efcdc79ae649a1",
+      "text": "Here is an html only experiment with a few lines of javascript and a download from Alain Marti. [http://ward.asia.wiki.org/theme/lambdatalk.htm page]"
+    },
+    {
+      "type": "paragraph",
+      "id": "23c5880d273b33cc",
+      "text": "See [[About Microtalk Plugin]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "7cff324fe7043737",
+      "text": "See [[Microtalk Server]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "b90e6639957569bc",
+      "text": "We write expressions in a prefix notation using brackets. Away from brackets words are just words."
+    },
+    {
+      "type": "microtalk",
+      "id": "9049e112e02a6f1d",
+      "text": "the answer is {+ 2 3}"
+    },
+    {
+      "type": "paragraph",
+      "id": "c53a027fcd5c67db",
+      "text": "We have at our disposal all of the functions in lib."
+    },
+    {
+      "type": "microtalk",
+      "id": "c7df36712f98b718",
+      "text": "{lib}",
+      "alias": "9049e112e02a6f1d"
+    },
+    {
+      "type": "paragraph",
+      "id": "1f070b8fadf4b652",
+      "text": "We create functions with lambda and name them with def."
+    },
+    {
+      "type": "microtalk",
+      "id": "fdc02ef9e02296de",
+      "text": "{pre\n{def castel.interpol {lambda {:p0 :p1 :t}\n {cons {+ {* {car :p0} {- 1 :t}} {* {car :p1} :t}} \n       {+ {* {cdr :p0} {- 1 :t}} {* {cdr :p1} :t}}}}}\n{def castel.sub {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then nil\n  else {cons {castel.interpol {car :l} {car {cdr :l}} :t} \n             {castel.sub {cdr :l} :t}}}}}\n{def castel.point {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then {car :l}\n  else {castel.point {castel.sub :l :t} :t}}}}\n{def castel.build \n {lambda {:p :t0 :t1 :dt}\n  {list.new {map \n   {{lambda {:q} {castel.point :q}} :p} \n    {serie :t0 :t1 :dt}}}}}\n{def castel.split \n {def last {lambda {:l} \n  {if {equal? {cdr :l} nil}\n   then {car :l}\n   else {last {cdr :l}}}}}\n {def split_g {lambda {:l :g :t}\n  {if {equal? :l nil}\n   then :g\n   else {cons {car :l} \n              {split_g {castel.sub :l :t} :g :t}} }}}\n {def split_d {lambda {:l :d :t}\n  {if {equal? :l nil}\n   then :d\n   else {cons {last :l} \n        {split_d {castel.sub :l :t} :d :t}} }}}\n {lambda {:l :t0 :t1}\n  {split_d {split_g :l nil :t1} nil :t0} }}\n\n{def svg.frame {lambda {:w :h}\n  svg {@ width=\":wpx\" height=\":hpx\" \n         style=\"border:1px solid #888; box-shadow:0 0 8px;\"}}}\n{def svg.dot {lambda {:p}\n {circle {@ cx=\"{car :p}\" cy=\"{cdr :p}\" r=\"5\" \n            stroke=\"black\" stroke-width=\"3\"\n            fill=\"rgba(255,0,0,0.5)\"}}\n}}\n{def svg.poly\n {def svg.list2xy {lambda {:l}  \n  {if {equal? :l nil}\n   then else {car {car :l}} {cdr {car :l}} \n             {svg.list2xy {cdr :l}}}}}\n {lambda {:p :c :w}\n  {polyline {@ points=\"{svg.list2xy :p}\" \n    stroke=\":c\" fill=\"transparent\" stroke-width=\":w\"\n}}}}\n\n{def p0 {cons 80 20}} = {cons.disp {p0}}\n{def p1 {cons 280 100}} = {cons.disp {p1}}\n{def p2 {cons 60 150}} = {cons.disp {p2}}\n{def p3 {cons 200 190}} = {cons.disp {p3}}\n{def p4 {cons 280 30}} = {cons.disp {p4}}\n{def p5 {cons 160 150}} = {cons.disp {p5}}\n{def L6  {list.new {p0} {p1} {p2} {p3} {p4} {p5}}}\n{def sL6 {castel.split {L6} 0.25 0.75}}\n}\n\n{{svg.frame 350 200}  \n {svg.dot {p0}}\n {svg.dot {p1}}\n {svg.dot {p2}}\n {svg.dot {p3}}\n {svg.dot {p4}}\n {svg.dot {p5}}\n {svg.poly {L6} grey 1}          \n {svg.poly {castel.build {L6} -0.025 1.05 0.02} black 2}\n {svg.poly {sL6} grey 1}\n {svg.poly {castel.build {sL6} 0 1 0.05} red 4}\n} \n",
+      "alias": "9049e112e02a6f1d"
+    },
+    {
+      "type": "paragraph",
+      "id": "1c0b5d2994cabf65",
+      "text": "Microtalk could be integrated into federated wiki a number of different ways. Since its roots are as a whole document markup language it feels a little confined in the input/output format we use here."
+    },
+    {
+      "type": "paragraph",
+      "id": "cf3f7aff75406804",
+      "text": "See [[About Method Plugin]] for the style we mimic."
+    },
+    {
+      "type": "paragraph",
+      "id": "133ccdd0fd3286d4",
+      "text": "We've given little thought to how we manage scope. The wiki convention is to look up and to the left in the lineup for definitions. For now the plugin holds definitions and updates them whenever rendered."
+    },
+    {
+      "type": "microtalk",
+      "id": "7b19c1face38707f",
+      "text": "{fac 20}",
+      "alias": "9049e112e02a6f1d"
+    },
+    {
+      "type": "plugmatic",
+      "id": "7efe5f54cee34f2b",
+      "text": "wiki-plugin-microtalk"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Testing Microtalk",
+        "story": []
+      },
+      "date": 1439049530264
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "23c5880d273b33cc",
+        "text": "[[About Microtalk Plugin]]"
+      },
+      "id": "23c5880d273b33cc",
+      "date": 1439049535952
+    },
+    {
+      "type": "add",
+      "id": "8846df3b7c796227",
+      "item": {
+        "type": "paragraph",
+        "id": "8846df3b7c796227",
+        "text": "[[scratch]]"
+      },
+      "after": "23c5880d273b33cc",
+      "date": 1439049544775
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{+ 2 3}"
+      },
+      "after": "8846df3b7c796227",
+      "id": "9049e112e02a6f1d",
+      "date": 1439049571006
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "microtalk",
+        "id": "c7df36712f98b718",
+        "text": "{+ 2 3}",
+        "alias": "9049e112e02a6f1d"
+      },
+      "after": "8846df3b7c796227",
+      "id": "c7df36712f98b718",
+      "date": 1439049582370
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{lib}"
+      },
+      "date": 1439049707940
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{+ 2 3}\n"
+      },
+      "date": 1439049818289
+    },
+    {
+      "type": "edit",
+      "id": "c7df36712f98b718",
+      "item": {
+        "type": "microtalk",
+        "id": "c7df36712f98b718",
+        "text": "{lib}",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1439050082226
+    },
+    {
+      "type": "remove",
+      "id": "8846df3b7c796227",
+      "date": 1439050140078
+    },
+    {
+      "type": "edit",
+      "id": "23c5880d273b33cc",
+      "item": {
+        "type": "paragraph",
+        "id": "23c5880d273b33cc",
+        "text": "See [[About Microtalk Plugin]]"
+      },
+      "date": 1439050164245
+    },
+    {
+      "type": "add",
+      "id": "c5d939efba565627",
+      "item": {
+        "type": "paragraph",
+        "id": "c5d939efba565627",
+        "text": "We try a few examples of microtalk, a subset of lambdatalk, a dialect of lisp."
+      },
+      "after": "23c5880d273b33cc",
+      "date": 1439050220965
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "c7df36712f98b718",
+        "9049e112e02a6f1d"
+      ],
+      "id": "23c5880d273b33cc",
+      "date": 1439050227746
+    },
+    {
+      "type": "add",
+      "id": "b90e6639957569bc",
+      "item": {
+        "type": "paragraph",
+        "id": "b90e6639957569bc",
+        "text": "We write expressions in a prefix notation using brackets. "
+      },
+      "after": "23c5880d273b33cc",
+      "date": 1439050319368
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "c7df36712f98b718"
+      ],
+      "id": "9049e112e02a6f1d",
+      "date": 1439050342664
+    },
+    {
+      "type": "edit",
+      "id": "b90e6639957569bc",
+      "item": {
+        "type": "paragraph",
+        "id": "b90e6639957569bc",
+        "text": "We write expressions in a prefix notation using brackets."
+      },
+      "date": 1439050357332
+    },
+    {
+      "type": "add",
+      "id": "c53a027fcd5c67db",
+      "item": {
+        "type": "paragraph",
+        "id": "c53a027fcd5c67db",
+        "text": "We have at our disposal all of the functions in lib."
+      },
+      "after": "b90e6639957569bc",
+      "date": 1439050376690
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718"
+      ],
+      "id": "c53a027fcd5c67db",
+      "date": 1439050383171
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{+ 2 3\n"
+      },
+      "date": 1439051155906
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{+ 2 3}\n"
+      },
+      "date": 1439051189474
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1439051944404
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{p {+ 2 3}}\n"
+      },
+      "date": 1439051981897
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{p the answer is {+ 2 3}}\n"
+      },
+      "date": 1439051996399
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{the answer is {+ 2 3}}\n"
+      },
+      "date": 1439052112428
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "the answer is {+ 2 3}\n"
+      },
+      "date": 1439052141969
+    },
+    {
+      "type": "edit",
+      "id": "b90e6639957569bc",
+      "item": {
+        "type": "paragraph",
+        "id": "b90e6639957569bc",
+        "text": "We write expressions in a prefix notation using brackets. Outside of brackets words are just words."
+      },
+      "date": 1439052173733
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1c0b5d2994cabf65"
+      },
+      "id": "1c0b5d2994cabf65",
+      "type": "add",
+      "after": "c7df36712f98b718",
+      "date": 1439052407029
+    },
+    {
+      "type": "edit",
+      "id": "1c0b5d2994cabf65",
+      "item": {
+        "type": "paragraph",
+        "id": "1c0b5d2994cabf65",
+        "text": "Microtalk could be integrated into federated wiki a number of different ways. Since its roots are as a whole document markup language it feels a little confined in the input/output format we use here."
+      },
+      "date": 1439052559918
+    },
+    {
+      "type": "add",
+      "id": "cf3f7aff75406804",
+      "item": {
+        "type": "paragraph",
+        "id": "cf3f7aff75406804",
+        "text": "See [[About Method Plugin]] for the plugin style we adopted."
+      },
+      "after": "1c0b5d2994cabf65",
+      "date": 1439053864959
+    },
+    {
+      "type": "edit",
+      "id": "cf3f7aff75406804",
+      "item": {
+        "type": "paragraph",
+        "id": "cf3f7aff75406804",
+        "text": "See [[About Method Plugin]] for the plugin style we've adopted."
+      },
+      "date": 1439053877845
+    },
+    {
+      "type": "edit",
+      "id": "cf3f7aff75406804",
+      "item": {
+        "type": "paragraph",
+        "id": "cf3f7aff75406804",
+        "text": "See [[About Method Plugin]] for the style we've adopted."
+      },
+      "date": 1439053887591
+    },
+    {
+      "type": "edit",
+      "id": "cf3f7aff75406804",
+      "item": {
+        "type": "paragraph",
+        "id": "cf3f7aff75406804",
+        "text": "See [[About Method Plugin]] who's style we've adopted."
+      },
+      "date": 1439053916446
+    },
+    {
+      "type": "edit",
+      "id": "cf3f7aff75406804",
+      "item": {
+        "type": "paragraph",
+        "id": "cf3f7aff75406804",
+        "text": "See [[About Method Plugin]] whos style we've adopted."
+      },
+      "date": 1439053925679
+    },
+    {
+      "type": "edit",
+      "id": "cf3f7aff75406804",
+      "item": {
+        "type": "paragraph",
+        "id": "cf3f7aff75406804",
+        "text": "See [[About Method Plugin]] for the style we mimic."
+      },
+      "date": 1439053954896
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "microtalk",
+        "id": "cf896efbe2e9810b",
+        "text": "{h1 µ-talk}",
+        "alias": "9049e112e02a6f1d"
+      },
+      "after": "c7df36712f98b718",
+      "id": "cf896efbe2e9810b",
+      "date": 1439054716932
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "{def fac {lambda {:n}\n {if {< :n 1}\n   then 1\n   else {* :n {fac {- :n 1}}}}}}\n{fac 18} "
+      },
+      "date": 1439054726704
+    },
+    {
+      "type": "add",
+      "id": "1f070b8fadf4b652",
+      "item": {
+        "type": "paragraph",
+        "id": "1f070b8fadf4b652",
+        "text": "We create functions with lambda and name them with def."
+      },
+      "after": "c53a027fcd5c67db",
+      "date": 1439054966078
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718",
+        "1f070b8fadf4b652",
+        "cf896efbe2e9810b",
+        "1c0b5d2994cabf65",
+        "cf3f7aff75406804"
+      ],
+      "id": "1f070b8fadf4b652",
+      "date": 1439054971058
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org"
+    },
+    {
+      "type": "remove",
+      "id": "cf896efbe2e9810b",
+      "date": 1439055228760
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718",
+        "1f070b8fadf4b652",
+        "9049e112e02a6f1d",
+        "1c0b5d2994cabf65",
+        "cf3f7aff75406804"
+      ],
+      "id": "9049e112e02a6f1d",
+      "date": 1439055239316
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{h1 µ-talk}",
+        "alias": "9049e112e02a6f1d"
+      },
+      "after": "b90e6639957569bc",
+      "id": "fdc02ef9e02296de",
+      "date": 1439055255299
+    },
+    {
+      "type": "edit",
+      "id": "9049e112e02a6f1d",
+      "item": {
+        "type": "microtalk",
+        "id": "9049e112e02a6f1d",
+        "text": "the answer is {+ 2 3}"
+      },
+      "date": 1439055268722
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "fdc02ef9e02296de",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718",
+        "1f070b8fadf4b652",
+        "1c0b5d2994cabf65",
+        "cf3f7aff75406804"
+      ],
+      "id": "9049e112e02a6f1d",
+      "date": 1439055394459
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718",
+        "1f070b8fadf4b652",
+        "fdc02ef9e02296de",
+        "1c0b5d2994cabf65",
+        "cf3f7aff75406804"
+      ],
+      "id": "fdc02ef9e02296de",
+      "date": 1439055401143
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{def fac {lambda {:n}\n {if {< :n 1}\n   then 1\n   else {* :n {fac {- :n 1}}}}}}\n{fac 18} ",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1439055405074
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1439055670865
+    },
+    {
+      "type": "edit",
+      "id": "b90e6639957569bc",
+      "item": {
+        "type": "paragraph",
+        "id": "b90e6639957569bc",
+        "text": "We write expressions in a prefix notation using brackets. Away fro brackets words are just words."
+      },
+      "date": 1439056371637
+    },
+    {
+      "type": "fork",
+      "date": 1439056429805
+    },
+    {
+      "type": "edit",
+      "id": "b90e6639957569bc",
+      "item": {
+        "type": "paragraph",
+        "id": "b90e6639957569bc",
+        "text": "We write expressions in a prefix notation using brackets. Away from brackets words are just words."
+      },
+      "date": 1439056804828
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "microtalk",
+        "id": "7b19c1face38707f",
+        "text": "{h1 µ-talk}",
+        "alias": "9049e112e02a6f1d"
+      },
+      "after": "fdc02ef9e02296de",
+      "id": "7b19c1face38707f",
+      "date": 1439056968723
+    },
+    {
+      "type": "edit",
+      "id": "7b19c1face38707f",
+      "item": {
+        "type": "microtalk",
+        "id": "7b19c1face38707f",
+        "text": "{fac 20}",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1439056988394
+    },
+    {
+      "type": "add",
+      "id": "133ccdd0fd3286d4",
+      "item": {
+        "type": "paragraph",
+        "id": "133ccdd0fd3286d4",
+        "text": "We've given little thought to how we manage scope. The wiki convention is to look up and to the left in the lineup for definitions. For now the plugin holds definitions and updates them whenever rendered."
+      },
+      "after": "cf3f7aff75406804",
+      "date": 1439057192855
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718",
+        "1f070b8fadf4b652",
+        "fdc02ef9e02296de",
+        "1c0b5d2994cabf65",
+        "cf3f7aff75406804",
+        "133ccdd0fd3286d4",
+        "7b19c1face38707f"
+      ],
+      "id": "7b19c1face38707f",
+      "date": 1439057198108
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{def fac {lambda {:n}\n {if {< :n 1}\n   then 1\n   else {* :n {fac {- :n 1}}}}}}\n\n{fac 18} ",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1439058729124
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{def fac {lambda {:n}\n {if {< :n 1}\n   then 1\n   else {* :n {fac {- :n 1}}}}}}   {fac 18} ",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1439058762226
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{def fac {lambda {:n}\n {if {< :n 1}\n   then 1\n   else {* :n {fac {- :n 1}}}}}}\n{fac 18} ",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1439058784203
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2e44ca6056644f67"
+      },
+      "id": "2e44ca6056644f67",
+      "type": "add",
+      "after": "7b19c1face38707f",
+      "date": 1439302785372
+    },
+    {
+      "type": "edit",
+      "id": "2e44ca6056644f67",
+      "item": {
+        "type": "paragraph",
+        "id": "2e44ca6056644f67",
+        "text": "Try [http://search.fed.wiki.org:3030/#/find=plugins&within=pages&query=microtalk search for more examples of Microtalk."
+      },
+      "date": 1439302947356
+    },
+    {
+      "type": "edit",
+      "id": "2e44ca6056644f67",
+      "item": {
+        "type": "paragraph",
+        "id": "2e44ca6056644f67",
+        "text": "Try [http://search.fed.wiki.org:3030/#/find=plugins&within=pages&query=microtalk search] for more examples of Microtalk."
+      },
+      "date": 1439302959583
+    },
+    {
+      "type": "edit",
+      "id": "2e44ca6056644f67",
+      "item": {
+        "type": "paragraph",
+        "id": "2e44ca6056644f67",
+        "text": "Try [http://search.fed.wiki.org:3030/#/find=plugins&within=pages&query=microtalk search] for more examples."
+      },
+      "date": 1439303020654
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1440455163466
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{pre\n{def castel.interpol {lambda {:p0 :p1 :t}\n {cons {+ {* {car :p0} {- 1 :t}} {* {car :p1} :t}} \n       {+ {* {cdr :p0} {- 1 :t}} {* {cdr :p1} :t}}}}}\n{def castel.sub {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then nil\n  else {cons {castel.interpol {car :l} {car {cdr :l}} :t} \n             {castel.sub {cdr :l} :t}}}}}\n{def castel.point {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then {car :l}\n  else {castel.point {castel.sub :l :t} :t}}}}\n{def castel.build \n {lambda {:p :t0 :t1 :dt}\n  {list.new {map \n   {{lambda {:q} {castel.point :q}} :p} \n    {serie :t0 :t1 :dt}}}}}\n{def castel.split \n {def last {lambda {:l} \n  {if {equal? {cdr :l} nil}\n   then {car :l}\n   else {last {cdr :l}}}}}\n {def split_g {lambda {:l :g :t}\n  {if {equal? :l nil}\n   then :g\n   else {cons {car :l} \n              {split_g {castel.sub :l :t} :g :t}} }}}\n {def split_d {lambda {:l :d :t}\n  {if {equal? :l nil}\n   then :d\n   else {cons {last :l} \n        {split_d {castel.sub :l :t} :d :t}} }}}\n {lambda {:l :t0 :t1}\n  {split_d {split_g :l nil :t1} nil :t0} }}\n\n{def svg.frame {lambda {:w :h}\n  svg {@ width=\":wpx\" height=\":hpx\" \n         style=\"border:1px solid #888; box-shadow:0 0 8px;\"}}}\n{def svg.dot {lambda {:p}\n {circle {@ cx=\"{car :p}\" cy=\"{cdr :p}\" r=\"5\" \n            stroke=\"black\" stroke-width=\"3\"\n            fill=\"rgba(255,0,0,0.5)\"}}\n}}\n{def svg.poly\n {def svg.list2xy {lambda {:l}  \n  {if {equal? :l nil}\n   then else {car {car :l}} {cdr {car :l}} \n             {svg.list2xy {cdr :l}}}}}\n {lambda {:p :c :w}\n  {polyline {@ points=\"{svg.list2xy :p}\" \n    stroke=\":c\" fill=\"transparent\" stroke-width=\":w\"\n}}}}\n\n{def p0 {cons 80 20}} = {cons.disp {p0}}\n{def p1 {cons 480 100}} = {cons.disp {p1}}\n{def p2 {cons 60 150}} = {cons.disp {p2}}\n{def p3 {cons 400 190}} = {cons.disp {p3}}\n{def p4 {cons 480 30}} = {cons.disp {p4}}\n{def p5 {cons 160 150}} = {cons.disp {p5}}\n{def L6  {list.new {p0} {p1} {p2} {p3} {p4} {p5}}}\n{def sL6 {castel.split {L6} 0.25 0.75}}\n}\n\n{{svg.frame 490 200}  \n {svg.dot {p0}}\n {svg.dot {p1}}\n {svg.dot {p2}}\n {svg.dot {p3}}\n {svg.dot {p4}}\n {svg.dot {p5}}\n {svg.poly {L6} grey 1}          \n {svg.poly {castel.build {L6} -0.025 1.05 0.02} black 2}\n {svg.poly {sL6} grey 1}\n {svg.poly {castel.build {sL6} 0 1 0.05} red 4}\n} \n",
+        "alias": "9049e112e02a6f1d"
+      },
+      "site": "ward.asia.wiki.org",
+      "date": 1440455163464
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{pre\n{def castel.interpol {lambda {:p0 :p1 :t}\n {cons {+ {* {car :p0} {- 1 :t}} {* {car :p1} :t}} \n       {+ {* {cdr :p0} {- 1 :t}} {* {cdr :p1} :t}}}}}\n{def castel.sub {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then nil\n  else {cons {castel.interpol {car :l} {car {cdr :l}} :t} \n             {castel.sub {cdr :l} :t}}}}}\n{def castel.point {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then {car :l}\n  else {castel.point {castel.sub :l :t} :t}}}}\n{def castel.build \n {lambda {:p :t0 :t1 :dt}\n  {list.new {map \n   {{lambda {:q} {castel.point :q}} :p} \n    {serie :t0 :t1 :dt}}}}}\n{def castel.split \n {def last {lambda {:l} \n  {if {equal? {cdr :l} nil}\n   then {car :l}\n   else {last {cdr :l}}}}}\n {def split_g {lambda {:l :g :t}\n  {if {equal? :l nil}\n   then :g\n   else {cons {car :l} \n              {split_g {castel.sub :l :t} :g :t}} }}}\n {def split_d {lambda {:l :d :t}\n  {if {equal? :l nil}\n   then :d\n   else {cons {last :l} \n        {split_d {castel.sub :l :t} :d :t}} }}}\n {lambda {:l :t0 :t1}\n  {split_d {split_g :l nil :t1} nil :t0} }}\n\n{def svg.frame {lambda {:w :h}\n  svg {@ width=\":wpx\" height=\":hpx\" \n         style=\"border:1px solid #888; box-shadow:0 0 8px;\"}}}\n{def svg.dot {lambda {:p}\n {circle {@ cx=\"{car :p}\" cy=\"{cdr :p}\" r=\"5\" \n            stroke=\"black\" stroke-width=\"3\"\n            fill=\"rgba(255,0,0,0.5)\"}}\n}}\n{def svg.poly\n {def svg.list2xy {lambda {:l}  \n  {if {equal? :l nil}\n   then else {car {car :l}} {cdr {car :l}} \n             {svg.list2xy {cdr :l}}}}}\n {lambda {:p :c :w}\n  {polyline {@ points=\"{svg.list2xy :p}\" \n    stroke=\":c\" fill=\"transparent\" stroke-width=\":w\"\n}}}}\n\n{def p0 {cons 80 20}} = {cons.disp {p0}}\n{def p1 {cons 280 100}} = {cons.disp {p1}}\n{def p2 {cons 60 150}} = {cons.disp {p2}}\n{def p3 {cons 200 190}} = {cons.disp {p3}}\n{def p4 {cons 280 30}} = {cons.disp {p4}}\n{def p5 {cons 160 150}} = {cons.disp {p5}}\n{def L6  {list.new {p0} {p1} {p2} {p3} {p4} {p5}}}\n{def sL6 {castel.split {L6} 0.25 0.75}}\n}\n\n{{svg.frame 490 200}  \n {svg.dot {p0}}\n {svg.dot {p1}}\n {svg.dot {p2}}\n {svg.dot {p3}}\n {svg.dot {p4}}\n {svg.dot {p5}}\n {svg.poly {L6} grey 1}          \n {svg.poly {castel.build {L6} -0.025 1.05 0.02} black 2}\n {svg.poly {sL6} grey 1}\n {svg.poly {castel.build {sL6} 0 1 0.05} red 4}\n} \n",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1440455219487
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{pre\n{def castel.interpol {lambda {:p0 :p1 :t}\n {cons {+ {* {car :p0} {- 1 :t}} {* {car :p1} :t}} \n       {+ {* {cdr :p0} {- 1 :t}} {* {cdr :p1} :t}}}}}\n{def castel.sub {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then nil\n  else {cons {castel.interpol {car :l} {car {cdr :l}} :t} \n             {castel.sub {cdr :l} :t}}}}}\n{def castel.point {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then {car :l}\n  else {castel.point {castel.sub :l :t} :t}}}}\n{def castel.build \n {lambda {:p :t0 :t1 :dt}\n  {list.new {map \n   {{lambda {:q} {castel.point :q}} :p} \n    {serie :t0 :t1 :dt}}}}}\n{def castel.split \n {def last {lambda {:l} \n  {if {equal? {cdr :l} nil}\n   then {car :l}\n   else {last {cdr :l}}}}}\n {def split_g {lambda {:l :g :t}\n  {if {equal? :l nil}\n   then :g\n   else {cons {car :l} \n              {split_g {castel.sub :l :t} :g :t}} }}}\n {def split_d {lambda {:l :d :t}\n  {if {equal? :l nil}\n   then :d\n   else {cons {last :l} \n        {split_d {castel.sub :l :t} :d :t}} }}}\n {lambda {:l :t0 :t1}\n  {split_d {split_g :l nil :t1} nil :t0} }}\n\n{def svg.frame {lambda {:w :h}\n  svg {@ width=\":wpx\" height=\":hpx\" \n         style=\"border:1px solid #888; box-shadow:0 0 8px;\"}}}\n{def svg.dot {lambda {:p}\n {circle {@ cx=\"{car :p}\" cy=\"{cdr :p}\" r=\"5\" \n            stroke=\"black\" stroke-width=\"3\"\n            fill=\"rgba(255,0,0,0.5)\"}}\n}}\n{def svg.poly\n {def svg.list2xy {lambda {:l}  \n  {if {equal? :l nil}\n   then else {car {car :l}} {cdr {car :l}} \n             {svg.list2xy {cdr :l}}}}}\n {lambda {:p :c :w}\n  {polyline {@ points=\"{svg.list2xy :p}\" \n    stroke=\":c\" fill=\"transparent\" stroke-width=\":w\"\n}}}}\n\n{def p0 {cons 80 20}} = {cons.disp {p0}}\n{def p1 {cons 280 100}} = {cons.disp {p1}}\n{def p2 {cons 60 150}} = {cons.disp {p2}}\n{def p3 {cons 200 190}} = {cons.disp {p3}}\n{def p4 {cons 280 30}} = {cons.disp {p4}}\n{def p5 {cons 160 150}} = {cons.disp {p5}}\n{def L6  {list.new {p0} {p1} {p2} {p3} {p4} {p5}}}\n{def sL6 {castel.split {L6} 0.25 0.75}}\n}\n\n{{svg.frame 400 200}  \n {svg.dot {p0}}\n {svg.dot {p1}}\n {svg.dot {p2}}\n {svg.dot {p3}}\n {svg.dot {p4}}\n {svg.dot {p5}}\n {svg.poly {L6} grey 1}          \n {svg.poly {castel.build {L6} -0.025 1.05 0.02} black 2}\n {svg.poly {sL6} grey 1}\n {svg.poly {castel.build {sL6} 0 1 0.05} red 4}\n} \n",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1440455295880
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{pre\n{def castel.interpol {lambda {:p0 :p1 :t}\n {cons {+ {* {car :p0} {- 1 :t}} {* {car :p1} :t}} \n       {+ {* {cdr :p0} {- 1 :t}} {* {cdr :p1} :t}}}}}\n{def castel.sub {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then nil\n  else {cons {castel.interpol {car :l} {car {cdr :l}} :t} \n             {castel.sub {cdr :l} :t}}}}}\n{def castel.point {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then {car :l}\n  else {castel.point {castel.sub :l :t} :t}}}}\n{def castel.build \n {lambda {:p :t0 :t1 :dt}\n  {list.new {map \n   {{lambda {:q} {castel.point :q}} :p} \n    {serie :t0 :t1 :dt}}}}}\n{def castel.split \n {def last {lambda {:l} \n  {if {equal? {cdr :l} nil}\n   then {car :l}\n   else {last {cdr :l}}}}}\n {def split_g {lambda {:l :g :t}\n  {if {equal? :l nil}\n   then :g\n   else {cons {car :l} \n              {split_g {castel.sub :l :t} :g :t}} }}}\n {def split_d {lambda {:l :d :t}\n  {if {equal? :l nil}\n   then :d\n   else {cons {last :l} \n        {split_d {castel.sub :l :t} :d :t}} }}}\n {lambda {:l :t0 :t1}\n  {split_d {split_g :l nil :t1} nil :t0} }}\n\n{def svg.frame {lambda {:w :h}\n  svg {@ width=\":wpx\" height=\":hpx\" \n         style=\"border:1px solid #888; box-shadow:0 0 8px;\"}}}\n{def svg.dot {lambda {:p}\n {circle {@ cx=\"{car :p}\" cy=\"{cdr :p}\" r=\"5\" \n            stroke=\"black\" stroke-width=\"3\"\n            fill=\"rgba(255,0,0,0.5)\"}}\n}}\n{def svg.poly\n {def svg.list2xy {lambda {:l}  \n  {if {equal? :l nil}\n   then else {car {car :l}} {cdr {car :l}} \n             {svg.list2xy {cdr :l}}}}}\n {lambda {:p :c :w}\n  {polyline {@ points=\"{svg.list2xy :p}\" \n    stroke=\":c\" fill=\"transparent\" stroke-width=\":w\"\n}}}}\n\n{def p0 {cons 80 20}} = {cons.disp {p0}}\n{def p1 {cons 280 100}} = {cons.disp {p1}}\n{def p2 {cons 60 150}} = {cons.disp {p2}}\n{def p3 {cons 200 190}} = {cons.disp {p3}}\n{def p4 {cons 280 30}} = {cons.disp {p4}}\n{def p5 {cons 160 150}} = {cons.disp {p5}}\n{def L6  {list.new {p0} {p1} {p2} {p3} {p4} {p5}}}\n{def sL6 {castel.split {L6} 0.25 0.75}}\n}\n\n{{svg.frame 300 200}  \n {svg.dot {p0}}\n {svg.dot {p1}}\n {svg.dot {p2}}\n {svg.dot {p3}}\n {svg.dot {p4}}\n {svg.dot {p5}}\n {svg.poly {L6} grey 1}          \n {svg.poly {castel.build {L6} -0.025 1.05 0.02} black 2}\n {svg.poly {sL6} grey 1}\n {svg.poly {castel.build {sL6} 0 1 0.05} red 4}\n} \n",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1440455325550
+    },
+    {
+      "type": "edit",
+      "id": "fdc02ef9e02296de",
+      "item": {
+        "type": "microtalk",
+        "id": "fdc02ef9e02296de",
+        "text": "{pre\n{def castel.interpol {lambda {:p0 :p1 :t}\n {cons {+ {* {car :p0} {- 1 :t}} {* {car :p1} :t}} \n       {+ {* {cdr :p0} {- 1 :t}} {* {cdr :p1} :t}}}}}\n{def castel.sub {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then nil\n  else {cons {castel.interpol {car :l} {car {cdr :l}} :t} \n             {castel.sub {cdr :l} :t}}}}}\n{def castel.point {lambda {:l :t}\n {if {equal? {cdr :l} nil}\n  then {car :l}\n  else {castel.point {castel.sub :l :t} :t}}}}\n{def castel.build \n {lambda {:p :t0 :t1 :dt}\n  {list.new {map \n   {{lambda {:q} {castel.point :q}} :p} \n    {serie :t0 :t1 :dt}}}}}\n{def castel.split \n {def last {lambda {:l} \n  {if {equal? {cdr :l} nil}\n   then {car :l}\n   else {last {cdr :l}}}}}\n {def split_g {lambda {:l :g :t}\n  {if {equal? :l nil}\n   then :g\n   else {cons {car :l} \n              {split_g {castel.sub :l :t} :g :t}} }}}\n {def split_d {lambda {:l :d :t}\n  {if {equal? :l nil}\n   then :d\n   else {cons {last :l} \n        {split_d {castel.sub :l :t} :d :t}} }}}\n {lambda {:l :t0 :t1}\n  {split_d {split_g :l nil :t1} nil :t0} }}\n\n{def svg.frame {lambda {:w :h}\n  svg {@ width=\":wpx\" height=\":hpx\" \n         style=\"border:1px solid #888; box-shadow:0 0 8px;\"}}}\n{def svg.dot {lambda {:p}\n {circle {@ cx=\"{car :p}\" cy=\"{cdr :p}\" r=\"5\" \n            stroke=\"black\" stroke-width=\"3\"\n            fill=\"rgba(255,0,0,0.5)\"}}\n}}\n{def svg.poly\n {def svg.list2xy {lambda {:l}  \n  {if {equal? :l nil}\n   then else {car {car :l}} {cdr {car :l}} \n             {svg.list2xy {cdr :l}}}}}\n {lambda {:p :c :w}\n  {polyline {@ points=\"{svg.list2xy :p}\" \n    stroke=\":c\" fill=\"transparent\" stroke-width=\":w\"\n}}}}\n\n{def p0 {cons 80 20}} = {cons.disp {p0}}\n{def p1 {cons 280 100}} = {cons.disp {p1}}\n{def p2 {cons 60 150}} = {cons.disp {p2}}\n{def p3 {cons 200 190}} = {cons.disp {p3}}\n{def p4 {cons 280 30}} = {cons.disp {p4}}\n{def p5 {cons 160 150}} = {cons.disp {p5}}\n{def L6  {list.new {p0} {p1} {p2} {p3} {p4} {p5}}}\n{def sL6 {castel.split {L6} 0.25 0.75}}\n}\n\n{{svg.frame 350 200}  \n {svg.dot {p0}}\n {svg.dot {p1}}\n {svg.dot {p2}}\n {svg.dot {p3}}\n {svg.dot {p4}}\n {svg.dot {p5}}\n {svg.poly {L6} grey 1}          \n {svg.poly {castel.build {L6} -0.025 1.05 0.02} black 2}\n {svg.poly {sL6} grey 1}\n {svg.poly {castel.build {sL6} 0 1 0.05} red 4}\n} \n",
+        "alias": "9049e112e02a6f1d"
+      },
+      "date": 1440455341036
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718",
+        "fdc02ef9e02296de",
+        "1f070b8fadf4b652",
+        "1c0b5d2994cabf65",
+        "cf3f7aff75406804",
+        "133ccdd0fd3286d4",
+        "7b19c1face38707f",
+        "2e44ca6056644f67"
+      ],
+      "id": "fdc02ef9e02296de",
+      "date": 1440554905839,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718",
+        "1f070b8fadf4b652",
+        "1c0b5d2994cabf65",
+        "cf3f7aff75406804",
+        "133ccdd0fd3286d4",
+        "7b19c1face38707f",
+        "2e44ca6056644f67",
+        "fdc02ef9e02296de"
+      ],
+      "id": "fdc02ef9e02296de",
+      "date": 1440554917424,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "move",
+      "order": [
+        "c5d939efba565627",
+        "23c5880d273b33cc",
+        "b90e6639957569bc",
+        "9049e112e02a6f1d",
+        "c53a027fcd5c67db",
+        "c7df36712f98b718",
+        "1f070b8fadf4b652",
+        "fdc02ef9e02296de",
+        "1c0b5d2994cabf65",
+        "cf3f7aff75406804",
+        "133ccdd0fd3286d4",
+        "7b19c1face38707f",
+        "2e44ca6056644f67"
+      ],
+      "id": "fdc02ef9e02296de",
+      "date": 1440554937657,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1449636300950
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7efe5f54cee34f2b"
+      },
+      "id": "7efe5f54cee34f2b",
+      "type": "add",
+      "after": "2e44ca6056644f67",
+      "date": 1492695621938
+    },
+    {
+      "type": "edit",
+      "id": "7efe5f54cee34f2b",
+      "item": {
+        "type": "plugmatic",
+        "id": "7efe5f54cee34f2b",
+        "text": "wiki-plugin-microtalk"
+      },
+      "date": 1492695635124
+    },
+    {
+      "type": "fork",
+      "date": 1492696113708
+    },
+    {
+      "type": "remove",
+      "id": "2e44ca6056644f67",
+      "date": 1492696151946
+    },
+    {
+      "type": "edit",
+      "id": "c5d939efba565627",
+      "item": {
+        "type": "paragraph",
+        "id": "c5d939efba565627",
+        "text": "We try a few examples of microtalk, a subset of lambdatalk, a dialect of lisp. "
+      },
+      "date": 1499094939805
+    },
+    {
+      "type": "edit",
+      "id": "c5d939efba565627",
+      "item": {
+        "type": "paragraph",
+        "id": "c5d939efba565627",
+        "text": "We try a few examples of microtalk, a subset of lambdatalk, a dialect of lisp. [http://ward.asia.wiki.org/theme/lambdatalk.htm page]"
+      },
+      "date": 1499095021418
+    },
+    {
+      "type": "edit",
+      "id": "c5d939efba565627",
+      "item": {
+        "type": "paragraph",
+        "id": "c5d939efba565627",
+        "text": "We try a few examples of microtalk, a subset of lambdatalk, a dialect of lisp. "
+      },
+      "date": 1499095110740
+    },
+    {
+      "type": "add",
+      "id": "75efcdc79ae649a1",
+      "item": {
+        "type": "paragraph",
+        "id": "75efcdc79ae649a1",
+        "text": "We've written an html only test too. [http://ward.asia.wiki.org/theme/lambdatalk.htm page]"
+      },
+      "after": "c5d939efba565627",
+      "date": 1499095153385
+    },
+    {
+      "type": "edit",
+      "id": "75efcdc79ae649a1",
+      "item": {
+        "type": "paragraph",
+        "id": "75efcdc79ae649a1",
+        "text": "Here is an html page with a few lines of javascript and a download from Alain. [http://ward.asia.wiki.org/theme/lambdatalk.htm page]"
+      },
+      "date": 1499095209557
+    },
+    {
+      "type": "edit",
+      "id": "75efcdc79ae649a1",
+      "item": {
+        "type": "paragraph",
+        "id": "75efcdc79ae649a1",
+        "text": "Here is an html page with a few lines of javascript and a download from Alain Marti. [http://ward.asia.wiki.org/theme/lambdatalk.htm page]"
+      },
+      "date": 1499095231088
+    },
+    {
+      "type": "edit",
+      "id": "75efcdc79ae649a1",
+      "item": {
+        "type": "paragraph",
+        "id": "75efcdc79ae649a1",
+        "text": "Here is an html only experiment with a few lines of javascript and a download from Alain Marti. [http://ward.asia.wiki.org/theme/lambdatalk.htm page]"
+      },
+      "date": 1499095250702
+    },
+    {
+      "type": "add",
+      "id": "7cff324fe7043737",
+      "item": {
+        "type": "paragraph",
+        "id": "7cff324fe7043737",
+        "text": "See [[Microtalk Server]]"
+      },
+      "after": "23c5880d273b33cc",
+      "date": 1499180330093
+    }
+  ]
+}

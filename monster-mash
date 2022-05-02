@@ -1,0 +1,295 @@
+{
+  "title": "Monster Mash",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "888fb2f7009fdc15",
+      "text": "Many models, particularly those of organic forms, can be described by an ordered set of overlapping 2d regions. This abstraction makes the complex task of modeling much easier. The user creates regions by drawing their outlines, then the algorithm creates a model by stitching the regions together and inflating them."
+    },
+    {
+      "type": "paragraph",
+      "id": "f737f66c64442527",
+      "text": "A sketching tool for casual modeling and animation. [https://ai.googleblog.com/2021/04/monster-mash-sketch-based-tool-for.html site]"
+    },
+    {
+      "type": "html",
+      "id": "bff7b04f722d9759",
+      "text": "<img width+100% src=https://1.bp.blogspot.com/-ntq8xuq36Ok/YG86AsEcXZI/AAAAAAAA7NQ/acizJB-G39YjzhLZ4ZjiIQwtrql8bVXAACLcBGAsYHQ/s400/image10.gif>"
+    },
+    {
+      "type": "paragraph",
+      "id": "c00632071255e181",
+      "text": "All of the code for Monster Mash is available as open source. [https://github.com/google/monster-mash github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "c2111aaef6d377c1",
+      "text": "Watch our presentation and read our paper from SIGGRAPH Asia 2020. [https://dcgi.fel.cvut.cz/home/sykorad/monster_mash.html video] [https://dcgi.fel.cvut.cz/home/sykorad/Dvoroznak20-SA.pdf pdf]"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ba04f2e78ec6435",
+      "text": "We hope this software will make creating 3D animations more broadly accessible. Try out the online demo and see for yourself. [http://monstermash.zone/ site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "457392a85a9fee8b",
+      "text": "Monster Mash is the result of a collaboration between Google Research, Czech Technical University in Prague, ETH Zürich, and the University of Washington. Key contributors include Marek Dvorožňák, Daniel Sýkora, Cassidy Curtis, Brian Curless, Olga Sorkine-Hornung, and David Salesin. We are also grateful to Hélène Leroux, Neth Nom, David Murphy, Samuel Leather, Pavla Sýkorová, and Jakub Javora for participating in the early interactive sessions."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Monster Mash",
+        "story": []
+      },
+      "date": 1618024525556
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f737f66c64442527"
+      },
+      "id": "f737f66c64442527",
+      "type": "add",
+      "date": 1618024546202
+    },
+    {
+      "type": "edit",
+      "id": "f737f66c64442527",
+      "item": {
+        "type": "paragraph",
+        "id": "f737f66c64442527",
+        "text": "A Sketch-Based Tool for Casual 3D Modeling and Animation."
+      },
+      "date": 1618024552879
+    },
+    {
+      "type": "edit",
+      "id": "f737f66c64442527",
+      "item": {
+        "type": "paragraph",
+        "id": "f737f66c64442527",
+        "text": "A Sketch-Based Tool for Casual 3D Modeling and Animation. [https://ai.googleblog.com/2021/04/monster-mash-sketch-based-tool-for.html site]"
+      },
+      "date": 1618024566346
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bff7b04f722d9759"
+      },
+      "id": "bff7b04f722d9759",
+      "type": "add",
+      "after": "f737f66c64442527",
+      "date": 1618024610022
+    },
+    {
+      "type": "edit",
+      "id": "bff7b04f722d9759",
+      "item": {
+        "type": "html",
+        "id": "bff7b04f722d9759",
+        "text": "<img width+100% src=https://1.bp.blogspot.com/-ntq8xuq36Ok/YG86AsEcXZI/AAAAAAAA7NQ/acizJB-G39YjzhLZ4ZjiIQwtrql8bVXAACLcBGAsYHQ/s400/image10.gif>"
+      },
+      "date": 1618024630755
+    },
+    {
+      "type": "add",
+      "id": "888fb2f7009fdc15",
+      "item": {
+        "type": "paragraph",
+        "id": "888fb2f7009fdc15",
+        "text": "The insight that makes this casual sketching approach possible is that many 3D models, particularly those of organic forms, can be described by an ordered set of overlapping 2D regions. This abstraction makes the complex task of 3D modeling much easier: the user creates 2D regions by drawing their outlines, then the algorithm creates a 3D model by stitching the regions together and inflating them. The result is a simple and intuitive user interface for sketching 3D figures."
+      },
+      "after": "f737f66c64442527",
+      "date": 1618024680156
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c00632071255e181"
+      },
+      "id": "c00632071255e181",
+      "type": "add",
+      "after": "bff7b04f722d9759",
+      "date": 1618024775729
+    },
+    {
+      "type": "edit",
+      "id": "c00632071255e181",
+      "item": {
+        "type": "paragraph",
+        "id": "c00632071255e181",
+        "text": "All of the code for Monster Mash is available as open source, and you can watch our presentation and read our paper from SIGGRAPH Asia 2020 to learn more. We hope this software will make creating 3D animatio"
+      },
+      "date": 1618024787735
+    },
+    {
+      "type": "edit",
+      "id": "c00632071255e181",
+      "item": {
+        "type": "paragraph",
+        "id": "c00632071255e181",
+        "text": "All of the code for Monster Mash is available as open source, and you can watch our presentation and read our paper from SIGGRAPH Asia 2020 to learn more. "
+      },
+      "date": 1618024813252
+    },
+    {
+      "type": "add",
+      "id": "4ba04f2e78ec6435",
+      "item": {
+        "type": "paragraph",
+        "id": "4ba04f2e78ec6435",
+        "text": "We hope this software will make creating 3D animations more broadly accessible. Try out the online demo and see for yourself!"
+      },
+      "after": "c00632071255e181",
+      "date": 1618024814703
+    },
+    {
+      "type": "edit",
+      "id": "c00632071255e181",
+      "item": {
+        "type": "paragraph",
+        "id": "c00632071255e181",
+        "text": "All of the code for Monster Mash is available as open source. [https://github.com/google/monster-mash github]"
+      },
+      "date": 1618024851754
+    },
+    {
+      "type": "add",
+      "id": "c2111aaef6d377c1",
+      "item": {
+        "type": "paragraph",
+        "id": "c2111aaef6d377c1",
+        "text": "Watch our presentation and read our paper from SIGGRAPH Asia 2020."
+      },
+      "after": "c00632071255e181",
+      "date": 1618024871818
+    },
+    {
+      "type": "edit",
+      "id": "c2111aaef6d377c1",
+      "item": {
+        "type": "paragraph",
+        "id": "c2111aaef6d377c1",
+        "text": "Watch our presentation and read our paper from SIGGRAPH Asia 2020. [https://dcgi.fel.cvut.cz/home/sykorad/monster_mash.html video]"
+      },
+      "date": 1618024926619
+    },
+    {
+      "type": "edit",
+      "id": "c2111aaef6d377c1",
+      "item": {
+        "type": "paragraph",
+        "id": "c2111aaef6d377c1",
+        "text": "Watch our presentation and read our paper from SIGGRAPH Asia 2020. [https://dcgi.fel.cvut.cz/home/sykorad/monster_mash.html video] [https://dcgi.fel.cvut.cz/home/sykorad/Dvoroznak20-SA.pdf pdf]"
+      },
+      "date": 1618024963631
+    },
+    {
+      "type": "edit",
+      "id": "4ba04f2e78ec6435",
+      "item": {
+        "type": "paragraph",
+        "id": "4ba04f2e78ec6435",
+        "text": "We hope this software will make creating 3D animations more broadly accessible. Try out the online demo and see for yourself. [http://monstermash.zone/ site]"
+      },
+      "date": 1618025024186
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "457392a85a9fee8b"
+      },
+      "id": "457392a85a9fee8b",
+      "type": "add",
+      "after": "4ba04f2e78ec6435",
+      "date": 1618025626898
+    },
+    {
+      "type": "edit",
+      "id": "457392a85a9fee8b",
+      "item": {
+        "type": "paragraph",
+        "id": "457392a85a9fee8b",
+        "text": "Monster Mash is the result of a collaboration between Google Research, Czech Technical University in Prague, ETH Zürich, and the University of Washington. Key contributors include Marek Dvorožňák, Daniel Sýkora, Cassidy Curtis, Brian Curless, Olga Sorkine-Hornung, and David Salesin. We are also grateful to Hélène Leroux, Neth Nom, David Murphy, Samuel Leather, Pavla Sýkorová, and Jakub Javora for participating in the early interactive sessions."
+      },
+      "date": 1618025630496
+    },
+    {
+      "type": "edit",
+      "id": "f737f66c64442527",
+      "item": {
+        "type": "paragraph",
+        "id": "f737f66c64442527",
+        "text": "A Sketch-Based Tool for Casual Modeling and Animation. [https://ai.googleblog.com/2021/04/monster-mash-sketch-based-tool-for.html site]"
+      },
+      "date": 1618025695641
+    },
+    {
+      "type": "edit",
+      "id": "f737f66c64442527",
+      "item": {
+        "type": "paragraph",
+        "id": "f737f66c64442527",
+        "text": "A Sketching tool for casual modeling and animation. [https://ai.googleblog.com/2021/04/monster-mash-sketch-based-tool-for.html site]"
+      },
+      "date": 1618025729119
+    },
+    {
+      "type": "edit",
+      "id": "888fb2f7009fdc15",
+      "item": {
+        "type": "paragraph",
+        "id": "888fb2f7009fdc15",
+        "text": "The insight that makes this possible is that many models, particularly those of organic forms, can be described by an ordered set of overlapping 2d regions. This abstraction makes the complex task of modeling much easier: the user creates regions by drawing their outlines, then the algorithm creates a model by stitching the regions together and inflating them."
+      },
+      "date": 1618025829404
+    },
+    {
+      "type": "edit",
+      "id": "f737f66c64442527",
+      "item": {
+        "type": "paragraph",
+        "id": "f737f66c64442527",
+        "text": "A sketching tool for casual modeling and animation. [https://ai.googleblog.com/2021/04/monster-mash-sketch-based-tool-for.html site]"
+      },
+      "date": 1618025859847
+    },
+    {
+      "type": "edit",
+      "id": "888fb2f7009fdc15",
+      "item": {
+        "type": "paragraph",
+        "id": "888fb2f7009fdc15",
+        "text": "Many models, particularly those of organic forms, can be described by an ordered set of overlapping 2d regions. This abstraction makes the complex task of modeling much easier. The user creates regions by drawing their outlines, then the algorithm creates a model by stitching the regions together and inflating them."
+      },
+      "date": 1618025999413
+    },
+    {
+      "id": "888fb2f7009fdc15",
+      "type": "move",
+      "order": [
+        "888fb2f7009fdc15",
+        "f737f66c64442527",
+        "bff7b04f722d9759",
+        "c00632071255e181",
+        "c2111aaef6d377c1",
+        "4ba04f2e78ec6435",
+        "457392a85a9fee8b"
+      ],
+      "date": 1618606681952,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1618606733522
+    }
+  ]
+}

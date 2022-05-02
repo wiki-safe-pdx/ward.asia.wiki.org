@@ -1,0 +1,69 @@
+{
+  "title": "Digest 2015-07-29",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "a1542e53234e0cac",
+      "text": "Chat log from 29th July 2015 Hangout."
+    },
+    {
+      "type": "markdown",
+      "id": "85a52d8003cafcdf",
+      "text": "Ryan Bennett joined group chat.\n\nJon Richter joined group chat.\n\nJon Richter\n18:00\nhttp://cccamp.federated.wiki/view/welcome-visitors/dao.space/dao-space/view/dao-space-projects/ksenya.me/block-server/ksenya.me/federated-wiki-workshop/ksenya.me/distributed-media-channel/view/cluster-architecture/view/federated-wiki-plugins/view/storage-plugin/view/farm-plugin\n\nRyan Bennett\n18:00\nhttps://github.com/rynomad/wiki-chrome\n\nWard Cunningham\n18:01\nback in a sec\n\nWard Cunningham left group chat.\n\nWard Cunningham joined group chat.\n\nDavid Bovill joined group chat.\n\nWard Cunningham left group chat.\n\nWard Cunningham joined group chat.\n\nJon Richter\n18:09\nIs there a code repository?\nThis is the 'federated wiki as a protocol' idea again ￼\nnotes will be cached at https://text.allmende.io/p/20150729\n\nRandall Bohn joined group chat.\n\nRandall Bohn\n18:19\nLurking. Enjoy my massive forehead.\n\nJon Richter\n18:20\n/me switched to no-sound mode. people are occupying the kitchen which I'm occupying.\nTaiga.io has the same problem with synchronisation to the GitHub API\nthey have only one-way sync.\nToo bad I can't talk.\nRyan, why not present you wiki-chrome extension?\n+r\n\nRyan Bennett\n18:31\nbugfixing frantically apparently I broke it last night\nbut fixed now\n\nJon Richter\n18:31\nnot totally\nfedwiki is underground\nDavid was always the only person really interested in it.\nfirst iptables\nand your app needs to ask for permission to open a public socket\nrooted phones would do ￼\nsd binaries.\na very recent Docker link list:\nhttp://cccamp.federated.wiki/view/welcome-visitors/view/docker-provisioning/view/orchestration/view/scheduler/view/discovery/view/storage\nlater on, IPFS can help with offline caching federated wiki content.\nas it does not only offer file system storage, but allows for object storage, too.\nYes, installing Node on a Raspi is a huzzle.\n\nRyan Bennett\n18:36\nhmmm... doable though\n\nJon Richter\n18:36\nUsually you have to compile a lot of stuff first. Which takes hours, if you don't know how to do cross compilation on your workstation.\nthe IPFS white paper is actually quite nice. especially in background of the previous NDN experiments.\n\nRyan Bennett\n18:37\nyeah I've been taking a look, it's right up the icn alley\n\nJon Richter\n18:42\n\"the icy alley\" means a bit longing too far or actually well compiled and designed?\n\nRyan Bennett\n18:43\noh sorry ICN, information centric networking, the broader term for NDN and related projects like ipfs\n\nJon Richter\n18:44\ni see. new terms all the 2 months ￼\n\nRyan Bennett\n18:48\nalways\n\nJon Richter\n18:53\n:clap:\nwhat links here - back in the game\nin the end we'll have many of these scrapers walking around the federation.\nWard's bot won't be the last.\nWe had a case while writing a dummy wiki plugin where IDs had been reused ...\n\nRandall Bohn\n18:59\nGotta run, thanks all!\n\nRandall Bohn left group chat.\n\nJon Richter\n19:03\nour idea with local academies\nsolves the CORS\nbecause we can serve the IPFS gateway\nin the same domain as the wiki\njust another subdomain\nwhich format spec was this?\nI'm currently designing the fedwiki-IPFS implementation\nI could be with you on one of these Weekend mornings\nAugust 1 is booked? Or which day?\nOh \nthere was a tweet about this today ...\nPaul : http://sakurity.com/blog/2015/07/28/appcache.html\nthey are hiding their keys in cookies\n\nRyan Bennett\n19:12\necdsa/ecdh\n?\n\nJon Richter\n19:13\nWebID ?\nWe have @bblfish ...\n\nWard Cunningham\n19:13\nhttp://goals.pods.wiki.org/\n\nJon Richter\n19:14\nRyan\nare your old ideas about WIK part of this pod?\n\nRyan Bennett\n19:14\nI can get them in there\n\nChet Hendrickson joined group chat.\n\nJon Richter\n19:15\nhttp://wiki-allmende.rhcloud.com/view/welcome-visitors just restarted - it seems the free plan turns instances off\n\nRyan Bennett\n19:15\nI'll bring back rosewiki\n\nJon Richter\n19:16\nrosewiki.org ?!\nthe original one, yeah.\n\nRyan Bennett\n19:16\nyup\nhttps://github.com/rynomad/wiki-chrome\n\nChet Hendrickson left group chat.\n\nRyan Bennett left group chat.\n\nJon Richter\n19:17\ny'all!\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Digest 2015-07-29",
+        "story": []
+      },
+      "date": 1438196708482
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a1542e53234e0cac"
+      },
+      "id": "a1542e53234e0cac",
+      "type": "add",
+      "date": 1438196728583
+    },
+    {
+      "type": "edit",
+      "id": "a1542e53234e0cac",
+      "item": {
+        "type": "paragraph",
+        "id": "a1542e53234e0cac",
+        "text": "Chat log from 29th July 2015 Hangout."
+      },
+      "date": 1438196744668
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "85a52d8003cafcdf"
+      },
+      "id": "85a52d8003cafcdf",
+      "type": "add",
+      "after": "a1542e53234e0cac",
+      "date": 1438196751003
+    },
+    {
+      "type": "edit",
+      "id": "85a52d8003cafcdf",
+      "item": {
+        "type": "markdown",
+        "id": "85a52d8003cafcdf",
+        "text": "Ryan Bennett joined group chat.\n\nJon Richter joined group chat.\n\nJon Richter\n18:00\nhttp://cccamp.federated.wiki/view/welcome-visitors/dao.space/dao-space/view/dao-space-projects/ksenya.me/block-server/ksenya.me/federated-wiki-workshop/ksenya.me/distributed-media-channel/view/cluster-architecture/view/federated-wiki-plugins/view/storage-plugin/view/farm-plugin\n\nRyan Bennett\n18:00\nhttps://github.com/rynomad/wiki-chrome\n\nWard Cunningham\n18:01\nback in a sec\n\nWard Cunningham left group chat.\n\nWard Cunningham joined group chat.\n\nDavid Bovill joined group chat.\n\nWard Cunningham left group chat.\n\nWard Cunningham joined group chat.\n\nJon Richter\n18:09\nIs there a code repository?\nThis is the 'federated wiki as a protocol' idea again ￼\nnotes will be cached at https://text.allmende.io/p/20150729\n\nRandall Bohn joined group chat.\n\nRandall Bohn\n18:19\nLurking. Enjoy my massive forehead.\n\nJon Richter\n18:20\n/me switched to no-sound mode. people are occupying the kitchen which I'm occupying.\nTaiga.io has the same problem with synchronisation to the GitHub API\nthey have only one-way sync.\nToo bad I can't talk.\nRyan, why not present you wiki-chrome extension?\n+r\n\nRyan Bennett\n18:31\nbugfixing frantically apparently I broke it last night\nbut fixed now\n\nJon Richter\n18:31\nnot totally\nfedwiki is underground\nDavid was always the only person really interested in it.\nfirst iptables\nand your app needs to ask for permission to open a public socket\nrooted phones would do ￼\nsd binaries.\na very recent Docker link list:\nhttp://cccamp.federated.wiki/view/welcome-visitors/view/docker-provisioning/view/orchestration/view/scheduler/view/discovery/view/storage\nlater on, IPFS can help with offline caching federated wiki content.\nas it does not only offer file system storage, but allows for object storage, too.\nYes, installing Node on a Raspi is a huzzle.\n\nRyan Bennett\n18:36\nhmmm... doable though\n\nJon Richter\n18:36\nUsually you have to compile a lot of stuff first. Which takes hours, if you don't know how to do cross compilation on your workstation.\nthe IPFS white paper is actually quite nice. especially in background of the previous NDN experiments.\n\nRyan Bennett\n18:37\nyeah I've been taking a look, it's right up the icn alley\n\nJon Richter\n18:42\n\"the icy alley\" means a bit longing too far or actually well compiled and designed?\n\nRyan Bennett\n18:43\noh sorry ICN, information centric networking, the broader term for NDN and related projects like ipfs\n\nJon Richter\n18:44\ni see. new terms all the 2 months ￼\n\nRyan Bennett\n18:48\nalways\n\nJon Richter\n18:53\n:clap:\nwhat links here - back in the game\nin the end we'll have many of these scrapers walking around the federation.\nWard's bot won't be the last.\nWe had a case while writing a dummy wiki plugin where IDs had been reused ...\n\nRandall Bohn\n18:59\nGotta run, thanks all!\n\nRandall Bohn left group chat.\n\nJon Richter\n19:03\nour idea with local academies\nsolves the CORS\nbecause we can serve the IPFS gateway\nin the same domain as the wiki\njust another subdomain\nwhich format spec was this?\nI'm currently designing the fedwiki-IPFS implementation\nI could be with you on one of these Weekend mornings\nAugust 1 is booked? Or which day?\nOh \nthere was a tweet about this today ...\nPaul : http://sakurity.com/blog/2015/07/28/appcache.html\nthey are hiding their keys in cookies\n\nRyan Bennett\n19:12\necdsa/ecdh\n?\n\nJon Richter\n19:13\nWebID ?\nWe have @bblfish ...\n\nWard Cunningham\n19:13\nhttp://goals.pods.wiki.org/\n\nJon Richter\n19:14\nRyan\nare your old ideas about WIK part of this pod?\n\nRyan Bennett\n19:14\nI can get them in there\n\nChet Hendrickson joined group chat.\n\nJon Richter\n19:15\nhttp://wiki-allmende.rhcloud.com/view/welcome-visitors just restarted - it seems the free plan turns instances off\n\nRyan Bennett\n19:15\nI'll bring back rosewiki\n\nJon Richter\n19:16\nrosewiki.org ?!\nthe original one, yeah.\n\nRyan Bennett\n19:16\nyup\nhttps://github.com/rynomad/wiki-chrome\n\nChet Hendrickson left group chat.\n\nRyan Bennett left group chat.\n\nJon Richter\n19:17\ny'all!\n"
+      },
+      "date": 1438196879831
+    },
+    {
+      "type": "fork",
+      "site": "fedwiki.rodwell.me",
+      "date": 1438226619641
+    }
+  ]
+}

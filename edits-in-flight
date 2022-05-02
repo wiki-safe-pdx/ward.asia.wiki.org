@@ -1,0 +1,89 @@
+{
+  "title": "Edits in Flight",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d081e60e79835af8",
+      "text": "Editing continues while edits to previous items are traveling to and returning from the server. This state should be marked on the $item and rendered somehow with css."
+    },
+    {
+      "type": "paragraph",
+      "id": "e1f71d26e31b949f",
+      "text": "If the server times out or returns an error then the page should fork to local and no more actions applied at the server until another fork restores sync."
+    },
+    {
+      "type": "paragraph",
+      "id": "bdb2125138d19d42",
+      "text": "Local editing must be reliable. This might depend on our three-level abstraction of client-side storage."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Edits in Flight",
+        "story": []
+      },
+      "date": 1419193938606
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d081e60e79835af8"
+      },
+      "id": "d081e60e79835af8",
+      "type": "add",
+      "date": 1419193940518
+    },
+    {
+      "type": "edit",
+      "id": "d081e60e79835af8",
+      "item": {
+        "type": "paragraph",
+        "id": "d081e60e79835af8",
+        "text": "Editing continues while edits to previous items are traveling to and returning from the server. This state should be marked on the $item and rendered somehow with css."
+      },
+      "date": 1419194014585
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e1f71d26e31b949f"
+      },
+      "id": "e1f71d26e31b949f",
+      "type": "add",
+      "after": "d081e60e79835af8",
+      "date": 1419194029648
+    },
+    {
+      "type": "edit",
+      "id": "e1f71d26e31b949f",
+      "item": {
+        "type": "paragraph",
+        "id": "e1f71d26e31b949f",
+        "text": "If the server times out or returns an error then the page should fork to local and no more actions applied at the server until another fork restores sync."
+      },
+      "date": 1419194117301
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bdb2125138d19d42"
+      },
+      "id": "bdb2125138d19d42",
+      "type": "add",
+      "after": "e1f71d26e31b949f",
+      "date": 1419194134472
+    },
+    {
+      "type": "edit",
+      "id": "bdb2125138d19d42",
+      "item": {
+        "type": "paragraph",
+        "id": "bdb2125138d19d42",
+        "text": "Local editing must be reliable. This might depend on our three-level abstraction of client-side storage."
+      },
+      "date": 1419194173359
+    }
+  ]
+}

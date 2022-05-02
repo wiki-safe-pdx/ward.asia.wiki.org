@@ -1,0 +1,112 @@
+{
+  "title": "Bibliographic Refresh",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ac6294b156b71235",
+      "text": "Keep the bios of a class list up to date with student changes by tickling all references on a page of interest."
+    },
+    {
+      "type": "paragraph",
+      "id": "f4c6d5d339fa9008",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "id": "fa0219b42be96f9b",
+      "text": "Tickle is a technical term that means go get the new information if any is available."
+    },
+    {
+      "type": "paragraph",
+      "id": "3b44438b8f5e5978",
+      "text": ""
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Bibliographic Refresh",
+        "story": []
+      },
+      "date": 1419191113903
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ac6294b156b71235"
+      },
+      "id": "ac6294b156b71235",
+      "type": "add",
+      "date": 1419191116417
+    },
+    {
+      "type": "edit",
+      "id": "ac6294b156b71235",
+      "item": {
+        "type": "paragraph",
+        "id": "ac6294b156b71235",
+        "text": "Keep the bios of a class list up to date with student changes by tickling all references on a page of interest."
+      },
+      "date": 1419191210195
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "f4c6d5d339fa9008",
+        "text": ""
+      },
+      "id": "f4c6d5d339fa9008",
+      "type": "add",
+      "after": "ac6294b156b71235",
+      "date": 1419191210203
+    },
+    {
+      "type": "edit",
+      "id": "f4c6d5d339fa9008",
+      "item": {
+        "type": "paragraph",
+        "id": "f4c6d5d339fa9008",
+        "text": " "
+      },
+      "date": 1419191210432
+    },
+    {
+      "type": "remove",
+      "id": "3b44438b8f5e5978",
+      "date": 1419191210440
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "3b44438b8f5e5978",
+        "text": ""
+      },
+      "id": "3b44438b8f5e5978",
+      "type": "add",
+      "after": "f4c6d5d339fa9008",
+      "date": 1419191210446
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "fa0219b42be96f9b",
+        "text": ""
+      },
+      "id": "fa0219b42be96f9b",
+      "type": "add",
+      "after": "f4c6d5d339fa9008",
+      "date": 1419191210447
+    },
+    {
+      "type": "edit",
+      "id": "fa0219b42be96f9b",
+      "item": {
+        "type": "paragraph",
+        "id": "fa0219b42be96f9b",
+        "text": "Tickle is a technical term that means go get the new information if any is available."
+      },
+      "date": 1419191234154
+    }
+  ]
+}

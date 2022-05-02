@@ -1,0 +1,64 @@
+{
+  "title": "Favorite Slides",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "24a504f4fe97f605",
+      "text": "These are often composed in Keynote but find new life as jpeg files at well known addresses."
+    },
+    {
+      "type": "assets",
+      "id": "9774c30275a10655",
+      "text": "pages/favorite-slides"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Favorite Slides",
+        "story": []
+      },
+      "date": 1617124479320
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "24a504f4fe97f605"
+      },
+      "id": "24a504f4fe97f605",
+      "type": "add",
+      "date": 1617124487583
+    },
+    {
+      "type": "edit",
+      "id": "24a504f4fe97f605",
+      "item": {
+        "type": "paragraph",
+        "id": "24a504f4fe97f605",
+        "text": "These are often composed in Keynote but find new life as jpeg files at well known addresses."
+      },
+      "date": 1617124543241
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9774c30275a10655"
+      },
+      "id": "9774c30275a10655",
+      "type": "add",
+      "after": "24a504f4fe97f605",
+      "date": 1617124544600
+    },
+    {
+      "type": "edit",
+      "id": "9774c30275a10655",
+      "item": {
+        "type": "assets",
+        "id": "9774c30275a10655",
+        "text": "pages/favorite-slides"
+      },
+      "date": 1617124570015
+    }
+  ]
+}

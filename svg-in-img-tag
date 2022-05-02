@@ -1,0 +1,398 @@
+{
+  "title": "SVG in IMG Tag",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "bafa0095cb7aed5c",
+      "text": "We've made progress manipulating svg with jquery, particularly getting it to parse svg from javascript strings."
+    },
+    {
+      "type": "graph",
+      "id": "6982a2be8a97b9be",
+      "text": "Testing Graph Plugin --> SVG in IMG Tag\n\nSVG in IMG Tag --> Viewing Graphviz with Javascript\nDotViz --> About DotViz Plugin"
+    },
+    {
+      "type": "markdown",
+      "id": "cd9ff5267270e93a",
+      "text": "# Trouble"
+    },
+    {
+      "type": "paragraph",
+      "id": "45a6069d6b3b6359",
+      "text": "I noticed with the image transporter that svg works as well as jpg or png. Wierd."
+    },
+    {
+      "type": "html",
+      "id": "33cfcca13688f8fc",
+      "text": "<img src=\"http://c2.com/wiki/build2.svg\" width=420><p>Some amazing svg? I guess not.</p>"
+    },
+    {
+      "type": "html",
+      "id": "ce26bd21f1bf311d",
+      "text": "<img src=\"http://c2.com/c2.gif\" width=150><p>This works for gif, why not svg?</p>"
+    },
+    {
+      "type": "html",
+      "id": "992fa2ee9b59cf42",
+      "text": "<img src=\"https://www.npmjs.com/static/images/npm-logo.svg\" width=150><p>And it works with this svg, why not my svg?</p>"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "SVG in IMG Tag",
+        "story": []
+      },
+      "date": 1444602682258
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "45a6069d6b3b6359"
+      },
+      "id": "45a6069d6b3b6359",
+      "type": "add",
+      "date": 1444602684279
+    },
+    {
+      "type": "edit",
+      "id": "45a6069d6b3b6359",
+      "item": {
+        "type": "paragraph",
+        "id": "45a6069d6b3b6359",
+        "text": "I noticed with the image transporter that svg works as well as jpg or png. Wierd."
+      },
+      "date": 1444602723060
+    },
+    {
+      "type": "add",
+      "id": "33cfcca13688f8fc",
+      "item": {
+        "type": "paragraph",
+        "id": "33cfcca13688f8fc",
+        "text": "<img src=\"http://c2.com/wiki/build.svg\" width=420><p>some amazing svg</p>"
+      },
+      "after": "45a6069d6b3b6359",
+      "date": 1444602763719
+    },
+    {
+      "type": "edit",
+      "id": "33cfcca13688f8fc",
+      "item": {
+        "type": "html",
+        "id": "33cfcca13688f8fc",
+        "text": "<img src=\"http://c2.com/wiki/build.svg\" width=420><p>some amazing svg</p>"
+      },
+      "date": 1444602767210
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ce26bd21f1bf311d"
+      },
+      "id": "ce26bd21f1bf311d",
+      "type": "add",
+      "after": "33cfcca13688f8fc",
+      "date": 1444602972950
+    },
+    {
+      "type": "edit",
+      "id": "ce26bd21f1bf311d",
+      "item": {
+        "type": "paragraph",
+        "id": "ce26bd21f1bf311d",
+        "text": "<img src=\"http://c2.com/wiki/build.svg\" width=420><p>some amazing svg</p>"
+      },
+      "date": 1444602990086
+    },
+    {
+      "type": "edit",
+      "id": "ce26bd21f1bf311d",
+      "item": {
+        "type": "html",
+        "id": "ce26bd21f1bf311d",
+        "text": "<img src=\"http://c2.com/wiki/build.svg\" width=420><p>some amazing svg</p>"
+      },
+      "date": 1444603006256
+    },
+    {
+      "type": "edit",
+      "id": "ce26bd21f1bf311d",
+      "item": {
+        "type": "html",
+        "id": "ce26bd21f1bf311d",
+        "text": "<img src=\"http://c2.com/c2.gif\" width=420><p>some amazing svg</p>"
+      },
+      "date": 1444603014300
+    },
+    {
+      "type": "edit",
+      "id": "ce26bd21f1bf311d",
+      "item": {
+        "type": "html",
+        "id": "ce26bd21f1bf311d",
+        "text": "<img src=\"http://c2.com/c2.gif\" width=100><p>some amazing svg</p>"
+      },
+      "date": 1444603032609
+    },
+    {
+      "type": "edit",
+      "id": "ce26bd21f1bf311d",
+      "item": {
+        "type": "html",
+        "id": "ce26bd21f1bf311d",
+        "text": "<img src=\"http://c2.com/c2.gif\" width=150><p>some amazing svg</p>"
+      },
+      "date": 1444603041483
+    },
+    {
+      "type": "edit",
+      "id": "ce26bd21f1bf311d",
+      "item": {
+        "type": "html",
+        "id": "ce26bd21f1bf311d",
+        "text": "<img src=\"http://c2.com/c2.gif\" width=150><p>This works for gif, why not svg?</p>"
+      },
+      "date": 1444603061029
+    },
+    {
+      "type": "edit",
+      "id": "33cfcca13688f8fc",
+      "item": {
+        "type": "html",
+        "id": "33cfcca13688f8fc",
+        "text": "<img src=\"http://c2.com/wiki/build.svg\" width=420><p>Some amazing svg? I guess not.</p>"
+      },
+      "date": 1444603102879
+    },
+    {
+      "type": "edit",
+      "id": "33cfcca13688f8fc",
+      "item": {
+        "type": "html",
+        "id": "33cfcca13688f8fc",
+        "text": "<img src=\"http://c2.com/wiki/build2.svg\" width=420><p>Some amazing svg? I guess not.</p>"
+      },
+      "date": 1444603497064
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "992fa2ee9b59cf42"
+      },
+      "id": "992fa2ee9b59cf42",
+      "type": "add",
+      "after": "ce26bd21f1bf311d",
+      "date": 1444603551857
+    },
+    {
+      "type": "edit",
+      "id": "992fa2ee9b59cf42",
+      "item": {
+        "type": "html",
+        "id": "992fa2ee9b59cf42",
+        "text": "<img src=\"http://c2.com/c2.gif\" width=150><p>This works for gif, why not svg?</p>"
+      },
+      "date": 1444603572640
+    },
+    {
+      "type": "edit",
+      "id": "992fa2ee9b59cf42",
+      "item": {
+        "type": "html",
+        "id": "992fa2ee9b59cf42",
+        "text": "<img src=\"https://www.npmjs.com/static/images/npm-logo.svg\" width=150><p>This works for gif, why not svg?</p>"
+      },
+      "date": 1444603596428
+    },
+    {
+      "type": "edit",
+      "id": "992fa2ee9b59cf42",
+      "item": {
+        "type": "html",
+        "id": "992fa2ee9b59cf42",
+        "text": "<img src=\"https://www.npmjs.com/static/images/npm-logo.svg\" width=150><p>And it works with this svg, why not my svg?</p>"
+      },
+      "date": 1444603627446
+    },
+    {
+      "type": "edit",
+      "id": "33cfcca13688f8fc",
+      "item": {
+        "type": "html",
+        "id": "33cfcca13688f8fc",
+        "text": "<img src=\"http://c2.com/wiki/build2.svg\" width=3420><p>Some amazing svg? I guess not.</p>"
+      },
+      "date": 1444603920563
+    },
+    {
+      "type": "edit",
+      "id": "33cfcca13688f8fc",
+      "item": {
+        "type": "html",
+        "id": "33cfcca13688f8fc",
+        "text": "<img src=\"http://c2.com/wiki/build2.svg\" width=420><p>Some amazing svg? I guess not.</p>"
+      },
+      "date": 1444603956745
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1461478609037
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cd9ff5267270e93a"
+      },
+      "id": "cd9ff5267270e93a",
+      "type": "add",
+      "after": "992fa2ee9b59cf42",
+      "date": 1461478608705,
+      "error": {
+        "type": "error",
+        "msg": "Not Found",
+        "response": "Page not found"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1461478623196
+    },
+    {
+      "type": "edit",
+      "id": "cd9ff5267270e93a",
+      "item": {
+        "type": "paragraph",
+        "id": "cd9ff5267270e93a",
+        "text": "# Progress"
+      },
+      "date": 1461478640265
+    },
+    {
+      "type": "add",
+      "id": "bafa0095cb7aed5c",
+      "item": {
+        "type": "paragraph",
+        "id": "bafa0095cb7aed5c",
+        "text": "We've made progress manipulating svg with jquery, particularly getting it to parse svg from javascript strings."
+      },
+      "after": "cd9ff5267270e93a",
+      "date": 1461478741244
+    },
+    {
+      "type": "edit",
+      "id": "cd9ff5267270e93a",
+      "item": {
+        "type": "markdown",
+        "id": "cd9ff5267270e93a",
+        "text": "# Progress"
+      },
+      "date": 1461478744659
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "graph",
+        "id": "6982a2be8a97b9be",
+        "text": "Welcome Visitors\n  --> Testing Graph Plugin\n    --> About Graph Plugin\n\nTesting Graph Plugin <-- SVG in IMG Tag\n"
+      },
+      "after": "bafa0095cb7aed5c",
+      "id": "6982a2be8a97b9be",
+      "date": 1461478755892
+    },
+    {
+      "type": "edit",
+      "id": "6982a2be8a97b9be",
+      "item": {
+        "type": "graph",
+        "id": "6982a2be8a97b9be",
+        "text": "Testing Graph Plugin --> SVG in IMG Tag\n\nSVG in IMG Tag --> \n"
+      },
+      "date": 1461478816229
+    },
+    {
+      "type": "edit",
+      "id": "6982a2be8a97b9be",
+      "item": {
+        "type": "graph",
+        "id": "6982a2be8a97b9be",
+        "text": "Testing Graph Plugin --> SVG in IMG Tag\n\nSVG in IMG Tag --> Viewing Graphviz with Javascript\n"
+      },
+      "date": 1461478864981
+    },
+    {
+      "type": "edit",
+      "id": "6982a2be8a97b9be",
+      "item": {
+        "type": "graph",
+        "id": "6982a2be8a97b9be",
+        "text": "Testing Graph Plugin --> SVG in IMG Tag\n\nSVG in IMG Tag --> Viewing Graphviz with Javascript\nSVG in IMG Tag --> DotViz --> About DotViz Plugin"
+      },
+      "date": 1461478975023
+    },
+    {
+      "type": "edit",
+      "id": "6982a2be8a97b9be",
+      "item": {
+        "type": "graph",
+        "id": "6982a2be8a97b9be",
+        "text": "Testing Graph Plugin --> SVG in IMG Tag\n\nSVG in IMG Tag --> Viewing Graphviz with Javascript\nDotViz --> About DotViz Plugin"
+      },
+      "date": 1461479010264
+    },
+    {
+      "type": "move",
+      "order": [
+        "bafa0095cb7aed5c",
+        "45a6069d6b3b6359",
+        "33cfcca13688f8fc",
+        "ce26bd21f1bf311d",
+        "992fa2ee9b59cf42",
+        "cd9ff5267270e93a",
+        "6982a2be8a97b9be"
+      ],
+      "id": "bafa0095cb7aed5c",
+      "date": 1461479158988
+    },
+    {
+      "type": "move",
+      "order": [
+        "bafa0095cb7aed5c",
+        "6982a2be8a97b9be",
+        "45a6069d6b3b6359",
+        "33cfcca13688f8fc",
+        "ce26bd21f1bf311d",
+        "992fa2ee9b59cf42",
+        "cd9ff5267270e93a"
+      ],
+      "id": "6982a2be8a97b9be",
+      "date": 1461479166499
+    },
+    {
+      "type": "move",
+      "order": [
+        "bafa0095cb7aed5c",
+        "6982a2be8a97b9be",
+        "cd9ff5267270e93a",
+        "45a6069d6b3b6359",
+        "33cfcca13688f8fc",
+        "ce26bd21f1bf311d",
+        "992fa2ee9b59cf42"
+      ],
+      "id": "cd9ff5267270e93a",
+      "date": 1461479175556
+    },
+    {
+      "type": "edit",
+      "id": "cd9ff5267270e93a",
+      "item": {
+        "type": "markdown",
+        "id": "cd9ff5267270e93a",
+        "text": "# Trouble"
+      },
+      "date": 1461479183155
+    }
+  ]
+}

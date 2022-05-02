@@ -1,0 +1,771 @@
+{
+  "title": "WikiPLACE Second Pilot",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d0b67a4ad062dc46",
+      "text": "WikiPLACE is a simple urban scenario-modeling system with the ease of use of a web -based wiki, combined with the power of numerical calculations. It uses the new \"Federated Wiki\" system now in development by wiki inventor Ward Cunningham."
+    },
+    {
+      "type": "paragraph",
+      "id": "2801bdaaaeb58323",
+      "text": "WikiPLACE is able to calculate the predicted change to a given \"externality,\" such as greenhouse gas emissions per person, in response to certain kinds of urban design changes.  The changes are represented in the model by \"patterns\" -- descriptions of urban design features that fit into a network or \"language.\"  "
+    },
+    {
+      "type": "paragraph",
+      "id": "e2ad90da9e55ffa5",
+      "text": "As with any language, this \"pattern language\" is a flexible system that makes it possible to quickly construct different configurations and explore how they perform.   The configurations can be easily adapted to specific kinds of problems and contexts. (That's why WikiPLACE is short for \"Wiki-based Pattern Language Adaptive Calculator of Externalities.\")   "
+    },
+    {
+      "type": "paragraph",
+      "id": "125efdc68b59ee83",
+      "text": "This second pilot version uses just five patterns, but in principle this kind of model could grow and evolve to become more complex in response to the particular problems being studied. "
+    },
+    {
+      "type": "paragraph",
+      "id": "8c52a2568266ca5e",
+      "text": "The five patterns are updated versions of classic patterns from the 1977 book <i>A Pattern Language</i>.    The book was written by architect Christopher Alexander and his colleagues, but the system has proven to be useful in many other fields (notably software)."
+    },
+    {
+      "type": "paragraph",
+      "id": "2380fa58f6b72fef",
+      "text": "In this pilot version, only one metric is of interest: greenhouse gas equivalent emissions per person. Each pattern has been re-written to follow recent peer-reviewed research, and to generate a predicted reduction in greenhouse gas emissions per person."
+    },
+    {
+      "type": "paragraph",
+      "id": "f7bc199252fdeeed",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "id": "a35d6f78ae25a2a9",
+      "text": "The five patterns are:"
+    },
+    {
+      "type": "paragraph",
+      "id": "9dd2f4030dce08c9",
+      "text": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "0d46932c1400459f",
+      "text": "[[Identifiable Neighborhood]].  Identify an area that includes the basic complements of neighborhood life: shopping, recreation, homes, workplaces.  Place a network of through streets at no more than ¼ mile within this structure.  Provide for retail and commercial along these through streets, especially at intersections.  Provide for transit on these streets as well."
+    },
+    {
+      "type": "paragraph",
+      "id": "22510685ff0b7b5a",
+      "text": "ONCE YOU HAVE IDENTIFIED THE AREA, you can explore patterns that can help you to improve neighborhood-scale performance."
+    },
+    {
+      "type": "paragraph",
+      "id": "0755e3e67a181345",
+      "text": "  "
+    },
+    {
+      "type": "paragraph",
+      "id": "7fe98087e6b26b97",
+      "text": "[[Density Rings]].  Establish the overall density within the neighborhood, but use ring-like zones with greater or lesser density. Greater density is generally advantageous, but a range should be offered to meet varied needs and preferences."
+    },
+    {
+      "type": "paragraph",
+      "id": "446f81c0646844ab",
+      "text": "[[Web of Transportation]].  Assure that transit is provided within a network of interchanges, such that pedestrians can find nearby transit lines, and transit riders can find convenient connections to other destinations.  Assure that personal vehicles (cars, bicycles) are also accommodated."
+    },
+    {
+      "type": "paragraph",
+      "id": "3e6f806caaadce1e",
+      "text": "[[Degrees of Publicness]].  Assure that the structure of lots provides a variety of zones between the most public and the most private."
+    },
+    {
+      "type": "paragraph",
+      "id": "d057c66c3757013b",
+      "text": "[[Web of Shopping and Activities]].  Assure that opportunities have been provided to create retail, office, recreation and other elements of a complete community, within a general maximum spacing of ¼ mile."
+    },
+    {
+      "type": "paragraph",
+      "id": "508ebd7f66764eda",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "id": "14ded1663c981cf8",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "id": "d821d2572f6e0a33",
+      "text": ""
+    },
+    {
+      "type": "paragraph",
+      "id": "cdef8ba8891d870c",
+      "text": ""
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "WikiPLACE Second Pilot",
+        "story": []
+      },
+      "date": 1385323707146
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d0b67a4ad062dc46"
+      },
+      "id": "d0b67a4ad062dc46",
+      "type": "add",
+      "date": 1385323708556
+    },
+    {
+      "type": "edit",
+      "id": "d0b67a4ad062dc46",
+      "item": {
+        "type": "paragraph",
+        "id": "d0b67a4ad062dc46",
+        "text": "We believe revised versions of these five classic patterns makes for a good foundation of innovative neighborhood scenario modeling system."
+      },
+      "date": 1385323797716
+    },
+    {
+      "type": "edit",
+      "id": "d0b67a4ad062dc46",
+      "item": {
+        "type": "paragraph",
+        "id": "d0b67a4ad062dc46",
+        "text": "We believe revised versions of these five classic patterns make for a good foundation of innovative neighborhood scenario modeling system."
+      },
+      "date": 1385323807304
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0d46932c1400459f"
+      },
+      "id": "0d46932c1400459f",
+      "type": "add",
+      "after": "d0b67a4ad062dc46",
+      "date": 1385324172751
+    },
+    {
+      "type": "edit",
+      "id": "0d46932c1400459f",
+      "item": {
+        "type": "paragraph",
+        "id": "0d46932c1400459f",
+        "text": "Identifiable Neighborhood.  Identify an area that includes the basic complements of neighborhood life: shopping, recreation, homes, workplaces.  Place a network of through streets at no more than ¼ mile within this structure.  Provide for retail and commercial along these through streets, especially at intersections.  Provide for transit on these streets as well.\n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nDensity Rings.  Set the density within the area, but create ring-like zones with greater or lesser density. Greater density is generally advantageous, but should be chosen according to varied preferences.\n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nWeb of Public Transportation.  Assure that transit is provided within a network of interchanges, such that pedestrians can find nearby transit lines, and transit riders can find convenient connections to other destinations.  Assure that personal vehicles (cars, bicycles) are also accommodated.\n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nWeb of Shopping (and More).  Assure that opportunities have been provided to create retail, office, recreation and other elements of a complete community, within a general maximum spacing of ¼ mile.  \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nDegrees of Publicness.  Assure that the structure of lots provides a variety of \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\n"
+      },
+      "date": 1385324178794
+    },
+    {
+      "type": "edit",
+      "id": "0d46932c1400459f",
+      "item": {
+        "type": "paragraph",
+        "id": "0d46932c1400459f",
+        "text": "[[Identifiable Neighborhood]].  Identify an area that includes the basic complements of neighborhood life: shopping, recreation, homes, workplaces.  Place a network of through streets at no more than ¼ mile within this structure.  Provide for retail and commercial along these through streets, especially at intersections.  Provide for transit on these streets as well."
+      },
+      "date": 1385324217051
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "7fe98087e6b26b97",
+        "text": "\nDensity Rings.  Set the density within the area, but create ring-like zones with greater or lesser density. Greater density is generally advantageous, but should be chosen according to varied preferences.\n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nWeb of Public Transportation.  Assure that transit is provided within a network of interchanges, such that pedestrians can find nearby transit lines, and transit riders can find convenient connections to other destinations.  Assure that personal vehicles (cars, bicycles) are also accommodated.\n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nWeb of Shopping (and More).  Assure that opportunities have been provided to create retail, office, recreation and other elements of a complete community, within a general maximum spacing of ¼ mile.  \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nDegrees of Publicness.  Assure that the structure of lots provides a variety of \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\n"
+      },
+      "id": "7fe98087e6b26b97",
+      "type": "add",
+      "after": "0d46932c1400459f",
+      "date": 1385324217558
+    },
+    {
+      "type": "edit",
+      "id": "7fe98087e6b26b97",
+      "item": {
+        "type": "paragraph",
+        "id": "7fe98087e6b26b97",
+        "text": "[[Density Rings]].  Set the density within the area, but create ring-like zones with greater or lesser density. Greater density is generally advantageous, but should be chosen according to varied preferences."
+      },
+      "date": 1385324236594
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "446f81c0646844ab",
+        "text": "Web of Public Transportation.  Assure that transit is provided within a network of interchanges, such that pedestrians can find nearby transit lines, and transit riders can find convenient connections to other destinations.  Assure that personal vehicles (cars, bicycles) are also accommodated.\n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nWeb of Shopping (and More).  Assure that opportunities have been provided to create retail, office, recreation and other elements of a complete community, within a general maximum spacing of ¼ mile.  \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nDegrees of Publicness.  Assure that the structure of lots provides a variety of \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\n"
+      },
+      "id": "446f81c0646844ab",
+      "type": "add",
+      "after": "7fe98087e6b26b97",
+      "date": 1385324237100
+    },
+    {
+      "type": "edit",
+      "id": "446f81c0646844ab",
+      "item": {
+        "type": "paragraph",
+        "id": "446f81c0646844ab",
+        "text": "[[Web of Public Transportation]].  Assure that transit is provided within a network of interchanges, such that pedestrians can find nearby transit lines, and transit riders can find convenient connections to other destinations.  Assure that personal vehicles (cars, bicycles) are also accommodated."
+      },
+      "date": 1385324253830
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "d057c66c3757013b",
+        "text": "Web of Shopping (and More).  Assure that opportunities have been provided to create retail, office, recreation and other elements of a complete community, within a general maximum spacing of ¼ mile.  \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\nDegrees of Publicness.  Assure that the structure of lots provides a variety of \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\n"
+      },
+      "id": "d057c66c3757013b",
+      "type": "add",
+      "after": "446f81c0646844ab",
+      "date": 1385324254336
+    },
+    {
+      "type": "edit",
+      "id": "d057c66c3757013b",
+      "item": {
+        "type": "paragraph",
+        "id": "d057c66c3757013b",
+        "text": "[[Web of Shopping (and More)]].  Assure that opportunities have been provided to create retail, office, recreation and other elements of a complete community, within a general maximum spacing of ¼ mile."
+      },
+      "date": 1385324279481
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "3e6f806caaadce1e",
+        "text": "Degrees of Publicness.  Assure that the structure of lots provides a variety of \n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\n"
+      },
+      "id": "3e6f806caaadce1e",
+      "type": "add",
+      "after": "d057c66c3757013b",
+      "date": 1385324279987
+    },
+    {
+      "type": "edit",
+      "id": "3e6f806caaadce1e",
+      "item": {
+        "type": "paragraph",
+        "id": "3e6f806caaadce1e",
+        "text": "[[Degrees of Publicness]].  Assure that the structure of lots provides a variety of zones between the most public and the most private."
+      },
+      "date": 1385324319604
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "508ebd7f66764eda",
+        "text": "\n\n__ Prerequisite.  The pattern has been met.\n__ Delta Range.  The pattern is met to greater or lesser degrees.  (See instructions.)\n\n"
+      },
+      "id": "508ebd7f66764eda",
+      "type": "add",
+      "after": "3e6f806caaadce1e",
+      "date": 1385324320109
+    },
+    {
+      "type": "edit",
+      "id": "508ebd7f66764eda",
+      "item": {
+        "type": "paragraph",
+        "id": "508ebd7f66764eda",
+        "text": " "
+      },
+      "date": 1385324324854
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "cdef8ba8891d870c",
+        "text": ""
+      },
+      "id": "cdef8ba8891d870c",
+      "type": "add",
+      "after": "508ebd7f66764eda",
+      "date": 1385324325358
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "14ded1663c981cf8",
+        "text": ""
+      },
+      "id": "14ded1663c981cf8",
+      "type": "add",
+      "after": "508ebd7f66764eda",
+      "date": 1385324325361
+    },
+    {
+      "type": "edit",
+      "id": "14ded1663c981cf8",
+      "item": {
+        "type": "paragraph",
+        "id": "14ded1663c981cf8",
+        "text": " "
+      },
+      "date": 1385324326367
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "d997d844eb080b55",
+        "text": ""
+      },
+      "id": "d997d844eb080b55",
+      "type": "add",
+      "after": "14ded1663c981cf8",
+      "date": 1385324326875
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "d821d2572f6e0a33",
+        "text": ""
+      },
+      "id": "d821d2572f6e0a33",
+      "type": "add",
+      "after": "14ded1663c981cf8",
+      "date": 1385324326871
+    },
+    {
+      "type": "remove",
+      "id": "d997d844eb080b55",
+      "date": 1385324336228
+    },
+    {
+      "type": "edit",
+      "id": "0d46932c1400459f",
+      "item": {
+        "type": "paragraph",
+        "id": "0d46932c1400459f",
+        "text": "[[Identifiable Neighborhood Increment]].  Identify an area that includes the basic complements of neighborhood life: shopping, recreation, homes, workplaces.  Place a network of through streets at no more than ¼ mile within this structure.  Provide for retail and commercial along these through streets, especially at intersections.  Provide for transit on these streets as well."
+      },
+      "date": 1385324355106
+    },
+    {
+      "type": "edit",
+      "id": "0d46932c1400459f",
+      "item": {
+        "type": "paragraph",
+        "id": "0d46932c1400459f",
+        "text": "[[Identifiable Neighborhood]].  Identify an area that includes the basic complements of neighborhood life: shopping, recreation, homes, workplaces.  Place a network of through streets at no more than ¼ mile within this structure.  Provide for retail and commercial along these through streets, especially at intersections.  Provide for transit on these streets as well."
+      },
+      "date": 1385324407498
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "22510685ff0b7b5a",
+        "text": ""
+      },
+      "id": "22510685ff0b7b5a",
+      "type": "add",
+      "after": "0d46932c1400459f",
+      "date": 1388869788595
+    },
+    {
+      "type": "edit",
+      "id": "22510685ff0b7b5a",
+      "item": {
+        "type": "paragraph",
+        "id": "22510685ff0b7b5a",
+        "text": "ONCE YOU HAVE IDENTIFIED THE AREA, you can explore patterns that can help you to pmprove your performance."
+      },
+      "date": 1388869846958
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "0755e3e67a181345",
+        "text": "  "
+      },
+      "id": "0755e3e67a181345",
+      "type": "add",
+      "after": "22510685ff0b7b5a",
+      "date": 1388869847462
+    },
+    {
+      "type": "edit",
+      "id": "d0b67a4ad062dc46",
+      "item": {
+        "type": "paragraph",
+        "id": "d0b67a4ad062dc46",
+        "text": "These five classic patterns (updated) serve as the foundation of our neighborhood scenario modeling system."
+      },
+      "date": 1388869891109
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "61d76ac9faae47e3"
+      },
+      "id": "61d76ac9faae47e3",
+      "type": "add",
+      "after": "cdef8ba8891d870c",
+      "date": 1388869895341
+    },
+    {
+      "type": "edit",
+      "id": "d0b67a4ad062dc46",
+      "item": {
+        "type": "paragraph",
+        "id": "d0b67a4ad062dc46",
+        "text": "These five classic patterns from the 1977 book <i>A Pattern Language</i> serve as the foundation of a simple but effective neighborhood scenario modeling system.  Each pattern has been re-written to follow recent peer-reviewed research, and to generate a predicted reduction in greenhouse gas emissions per person."
+      },
+      "date": 1388870061328
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "5c15a14befbc0bb0",
+        "text": ""
+      },
+      "id": "5c15a14befbc0bb0",
+      "type": "add",
+      "after": "d0b67a4ad062dc46",
+      "date": 1388870061832
+    },
+    {
+      "type": "remove",
+      "id": "5c15a14befbc0bb0",
+      "date": 1388870074018
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "f7bc199252fdeeed",
+        "text": " "
+      },
+      "id": "f7bc199252fdeeed",
+      "type": "add",
+      "after": "d0b67a4ad062dc46",
+      "date": 1388870079958
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "9dd2f4030dce08c9",
+        "text": ""
+      },
+      "id": "9dd2f4030dce08c9",
+      "type": "add",
+      "after": "f7bc199252fdeeed",
+      "date": 1388870080135
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "a35d6f78ae25a2a9",
+        "text": ""
+      },
+      "id": "a35d6f78ae25a2a9",
+      "type": "add",
+      "after": "f7bc199252fdeeed",
+      "date": 1388870080140
+    },
+    {
+      "type": "edit",
+      "id": "a35d6f78ae25a2a9",
+      "item": {
+        "type": "paragraph",
+        "id": "a35d6f78ae25a2a9",
+        "text": "The five patterns are:"
+      },
+      "date": 1388870097037
+    },
+    {
+      "type": "edit",
+      "id": "d0b67a4ad062dc46",
+      "item": {
+        "type": "paragraph",
+        "id": "d0b67a4ad062dc46",
+        "text": "WikiPlace is a simple scenario-modeling system with the ease of use of a wiki, combined with the power of numerical calculations. It uses the new \"Federated Wiki\" system in development by wiki inventor Ward Cunningham."
+      },
+      "date": 1388871162671
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "125efdc68b59ee83",
+        "text": " These five classic patterns from the 1977 book <i>A Pattern Language</i> serve as the foundation of a simple but effective neighborhood scenario modeling system.  Each pattern has been re-written to follow recent peer-reviewed research, and to generate a predicted reduction in greenhouse gas emissions per person."
+      },
+      "id": "125efdc68b59ee83",
+      "type": "add",
+      "after": "d0b67a4ad062dc46",
+      "date": 1388871163179
+    },
+    {
+      "type": "edit",
+      "id": "125efdc68b59ee83",
+      "item": {
+        "type": "paragraph",
+        "id": "125efdc68b59ee83",
+        "text": "These five classic patterns from the 1977 book <i>A Pattern Language</i> serve as the foundation of a simple but effective neighborhood scenario modeling system.  Each pattern has been re-written to follow recent peer-reviewed research, and to generate a predicted reduction in greenhouse gas emissions per person."
+      },
+      "date": 1388871177783
+    },
+    {
+      "type": "edit",
+      "id": "d0b67a4ad062dc46",
+      "item": {
+        "type": "paragraph",
+        "id": "d0b67a4ad062dc46",
+        "text": "WikiPLACE is a simple urban scenario-modeling system with the ease of use of a web -based wiki, combined with the power of numerical calculations. It uses the new \"Federated Wiki\" system now in development by wiki inventor Ward Cunningham."
+      },
+      "date": 1388871291967
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "2801bdaaaeb58323",
+        "text": ""
+      },
+      "id": "2801bdaaaeb58323",
+      "type": "add",
+      "after": "d0b67a4ad062dc46",
+      "date": 1388871292471
+    },
+    {
+      "type": "edit",
+      "id": "2801bdaaaeb58323",
+      "item": {
+        "type": "paragraph",
+        "id": "2801bdaaaeb58323",
+        "text": "WikiPLACE is able to calculate the predicted change to a given \"externality,\" such as greenhouse gas emissions per person, in response to certain kinds of urban design changes.  The changes are represented in the model by \"patterns\" -- descriptions of urban design features that fit into a network or \"language.\"   "
+      },
+      "date": 1388871583751
+    },
+    {
+      "type": "edit",
+      "id": "125efdc68b59ee83",
+      "item": {
+        "type": "paragraph",
+        "id": "125efdc68b59ee83",
+        "text": "This second pilot version uses just five patterns, but in principle this kind of model could grow and evolve to become more complex in response to the particular problems being studied. "
+      },
+      "date": 1388871657151
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "8c52a2568266ca5e",
+        "text": " five classic patterns from the 1977 book <i>A Pattern Language</i> serve as the foundation of a simple but effective neighborhood scenario modeling system.  Each pattern has been re-written to follow recent peer-reviewed research, and to generate a predicted reduction in greenhouse gas emissions per person."
+      },
+      "id": "8c52a2568266ca5e",
+      "type": "add",
+      "after": "125efdc68b59ee83",
+      "date": 1388871657656
+    },
+    {
+      "type": "edit",
+      "id": "2801bdaaaeb58323",
+      "item": {
+        "type": "paragraph",
+        "id": "2801bdaaaeb58323",
+        "text": "WikiPLACE is able to calculate the predicted change to a given \"externality,\" such as greenhouse gas emissions per person, in response to certain kinds of urban design changes.  The changes are represented in the model by \"patterns\" -- descriptions of urban design features that fit into a network or \"language.\"  "
+      },
+      "date": 1388871698726
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "e2ad90da9e55ffa5",
+        "text": "(That's why WikiPLACE is short for \"Wiki-based Pattern Language Adaptive Calculator of Externalities.\")   "
+      },
+      "id": "e2ad90da9e55ffa5",
+      "type": "add",
+      "after": "2801bdaaaeb58323",
+      "date": 1388871699232
+    },
+    {
+      "type": "edit",
+      "id": "e2ad90da9e55ffa5",
+      "item": {
+        "type": "paragraph",
+        "id": "e2ad90da9e55ffa5",
+        "text": "As with any language, this \"pattern language\" is a flexible system that makes it possible to quickly construct different configurations and explore how they perform.   The configurations can be easily adapted to specific kinds of problems and contexts. (That's why WikiPLACE is short for \"Wiki-based Pattern Language Adaptive Calculator of Externalities.\")   "
+      },
+      "date": 1388871790537
+    },
+    {
+      "type": "edit",
+      "id": "8c52a2568266ca5e",
+      "item": {
+        "type": "paragraph",
+        "id": "8c52a2568266ca5e",
+        "text": "The five patterns are updated versions of classic patterns from the 1977 book <i>A Pattern Language</i>.  "
+      },
+      "date": 1388871864520
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "2380fa58f6b72fef",
+        "text": "In this case, only one metric is of interest: greenhouse gas equivalent emissions per person. Each pattern has been re-written to follow recent peer-reviewed research, and to generate a predicted reduction in greenhouse gas emissions per person."
+      },
+      "id": "2380fa58f6b72fef",
+      "type": "add",
+      "after": "8c52a2568266ca5e",
+      "date": 1388871865025
+    },
+    {
+      "type": "edit",
+      "id": "8c52a2568266ca5e",
+      "item": {
+        "type": "paragraph",
+        "id": "8c52a2568266ca5e",
+        "text": "The five patterns are updated versions of classic patterns from the 1977 book <i>A Pattern Language</i>.    The book was written by architect Christopher Alexander and his colleagues, but the system has proven to be useful in many other fields (notably software)."
+      },
+      "date": 1388871987561
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "6bb38488e27e66a0",
+        "text": ""
+      },
+      "id": "6bb38488e27e66a0",
+      "type": "add",
+      "after": "8c52a2568266ca5e",
+      "date": 1388871988070
+    },
+    {
+      "type": "remove",
+      "id": "6bb38488e27e66a0",
+      "date": 1388871988879
+    },
+    {
+      "type": "edit",
+      "id": "2380fa58f6b72fef",
+      "item": {
+        "type": "paragraph",
+        "id": "2380fa58f6b72fef",
+        "text": "In this pilot version, only one metric is of interest: greenhouse gas equivalent emissions per person. Each pattern has been re-written to follow recent peer-reviewed research, and to generate a predicted reduction in greenhouse gas emissions per person."
+      },
+      "date": 1388872009456
+    },
+    {
+      "type": "edit",
+      "id": "22510685ff0b7b5a",
+      "item": {
+        "type": "paragraph",
+        "id": "22510685ff0b7b5a",
+        "text": "ONCE YOU HAVE IDENTIFIED THE AREA, you can explore patterns that can help you to improve neighborhood-scale performance."
+      },
+      "date": 1388872057555
+    },
+    {
+      "type": "edit",
+      "id": "7fe98087e6b26b97",
+      "item": {
+        "type": "paragraph",
+        "id": "7fe98087e6b26b97",
+        "text": "[[Density Rings]].  Establish the overall density within the neighborhood, but use ring-like zones with greater or lesser density. Greater density is generally advantageous, but a range should be offered to meet varied needs and preferences."
+      },
+      "date": 1388872133235
+    },
+    {
+      "type": "edit",
+      "id": "446f81c0646844ab",
+      "item": {
+        "type": "paragraph",
+        "id": "446f81c0646844ab",
+        "text": "[[Web of Transportation]].  Assure that transit is provided within a network of interchanges, such that pedestrians can find nearby transit lines, and transit riders can find convenient connections to other destinations.  Assure that personal vehicles (cars, bicycles) are also accommodated."
+      },
+      "date": 1388872327867
+    },
+    {
+      "type": "edit",
+      "id": "d057c66c3757013b",
+      "item": {
+        "type": "paragraph",
+        "id": "d057c66c3757013b",
+        "text": "[[Web of Shopping and Activities]].  Assure that opportunities have been provided to create retail, office, recreation and other elements of a complete community, within a general maximum spacing of ¼ mile."
+      },
+      "date": 1388880621240
+    },
+    {
+      "type": "move",
+      "order": [
+        "d0b67a4ad062dc46",
+        "2801bdaaaeb58323",
+        "e2ad90da9e55ffa5",
+        "125efdc68b59ee83",
+        "8c52a2568266ca5e",
+        "2380fa58f6b72fef",
+        "f7bc199252fdeeed",
+        "a35d6f78ae25a2a9",
+        "9dd2f4030dce08c9",
+        "0d46932c1400459f",
+        "22510685ff0b7b5a",
+        "0755e3e67a181345",
+        "7fe98087e6b26b97",
+        "446f81c0646844ab",
+        "d057c66c3757013b",
+        "61d76ac9faae47e3",
+        "3e6f806caaadce1e",
+        "508ebd7f66764eda",
+        "14ded1663c981cf8",
+        "d821d2572f6e0a33",
+        "cdef8ba8891d870c"
+      ],
+      "id": "61d76ac9faae47e3",
+      "date": 1388888848712
+    },
+    {
+      "type": "remove",
+      "id": "61d76ac9faae47e3",
+      "date": 1388893321463
+    },
+    {
+      "type": "move",
+      "order": [
+        "d0b67a4ad062dc46",
+        "2801bdaaaeb58323",
+        "e2ad90da9e55ffa5",
+        "125efdc68b59ee83",
+        "8c52a2568266ca5e",
+        "2380fa58f6b72fef",
+        "f7bc199252fdeeed",
+        "a35d6f78ae25a2a9",
+        "9dd2f4030dce08c9",
+        "0d46932c1400459f",
+        "22510685ff0b7b5a",
+        "0755e3e67a181345",
+        "7fe98087e6b26b97",
+        "446f81c0646844ab",
+        "3e6f806caaadce1e",
+        "d057c66c3757013b",
+        "508ebd7f66764eda",
+        "14ded1663c981cf8",
+        "d821d2572f6e0a33",
+        "cdef8ba8891d870c"
+      ],
+      "id": "3e6f806caaadce1e",
+      "date": 1388893324237
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "method",
+        "id": "7f6da77c5ab79ace",
+        "text": "Dwelling (Units / Acre)\nResidents / Unit\nNeighborhood Increment (Acre)\nPRODUCT\nSHOW Total Residents"
+      },
+      "after": "2801bdaaaeb58323",
+      "id": "7f6da77c5ab79ace",
+      "date": 1388982491617
+    },
+    {
+      "type": "remove",
+      "id": "7f6da77c5ab79ace",
+      "date": 1388982505734
+    },
+    {
+      "type": "fork",
+      "site": "mehaffy.fed.wiki.org",
+      "date": 1511461980017
+    }
+  ]
+}

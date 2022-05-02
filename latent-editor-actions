@@ -1,0 +1,292 @@
+{
+  "title": "Latent Editor Actions",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3be423dbae251e5b",
+      "text": "We've revised the paragraph editing logic to be more economical in how and when it sends update actions to a wiki server. This shows as simpler sequences in the page journal and hopefully fewer lost paragraphs while editing over slow connections. [https://github.com/fedwiki/wiki-client/pull/75 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "38c1034e27f922e8",
+      "text": "Type enter to split a paragraph in two."
+    },
+    {
+      "type": "paragraph",
+      "id": "da48126c23653f44",
+      "text": "Type delete to rejoin paragraphs after a split."
+    },
+    {
+      "type": "paragraph",
+      "id": "6315a369eadd3b6e",
+      "text": "We call split & join as paragraph refactorings because they change the item structure of the page."
+    },
+    {
+      "type": "paragraph",
+      "id": "c062bedb1d111cbd",
+      "text": "We once held to the principle that there would be an item on the server underneath every editing textarea on the screen. We've relaxed this expectation in order to optimize the interactions between client and server."
+    },
+    {
+      "type": "paragraph",
+      "id": "00c1ed0c72bab74f",
+      "text": "We now withhold information about an open textarea until editing is complete. Where we would once add an empty item before editing it we now add a completed item."
+    },
+    {
+      "type": "paragraph",
+      "id": "2403ffd227f63f51",
+      "text": "The editor keeps more state in order to know what actions are appropriate in any given sequence of splits, edits and joins. We call this state the latent actions. "
+    },
+    {
+      "type": "paragraph",
+      "id": "112c8668d99e59b6",
+      "text": "We can have latent actions that will be discarded without the server ever seeing them. For example, a long sequence of enter, delete, enter, delete, will create and destroy a latent item without ever sending it to the server or recording it in the journal."
+    },
+    {
+      "type": "paragraph",
+      "id": "490e6745e8e41300",
+      "text": "Think of latent actions as provisional actions that prove useless and are then filtered out of the edit stream before they reach the server or the journal."
+    },
+    {
+      "type": "paragraph",
+      "id": "8e7d7aeb0ede5083",
+      "text": "Nick Hallahan wrote the original split/join logic and suggested this optimization at that time. I argued for the simpler and more tightly synchronized editor and prevailed."
+    },
+    {
+      "type": "paragraph",
+      "id": "aec63ff10e8705ae",
+      "text": "Jon Richter and other contributors complained of useless actions in the journal. Again I argued that they could be condensed in various ways as a post process and prevailed."
+    },
+    {
+      "type": "paragraph",
+      "id": "d45cecb9ade62e1c",
+      "text": "I know folks have suffered data loss due to my insistence on guidance from experience. For this I apologize. The optimizations now coded as latent actions have been needed for some time. Agile developers recite YAGNI, You Aren't Going to Need It. This case they are wrong. "
+    },
+    {
+      "type": "paragraph",
+      "id": "2aa390d726790f3f",
+      "text": "For a demonstration of the new editor, see the journal up to this paragraph."
+    },
+    {
+      "type": "paragraph",
+      "id": "c91a80b2d251e7d2",
+      "text": " "
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Latent Editor Actions",
+        "story": []
+      },
+      "date": 1419210281364
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3be423dbae251e5b"
+      },
+      "id": "3be423dbae251e5b",
+      "type": "add",
+      "date": 1419210294064
+    },
+    {
+      "type": "edit",
+      "id": "3be423dbae251e5b",
+      "item": {
+        "type": "paragraph",
+        "id": "3be423dbae251e5b",
+        "text": "We've revised the paragraph editing logic to be more economical in how and when it sends update actions to a wiki server. This shows as simpler sequences in the page journal and hopefully fewer lost paragraphs while editing over slow connections."
+      },
+      "date": 1419210591116
+    },
+    {
+      "type": "add",
+      "id": "38c1034e27f922e8",
+      "item": {
+        "type": "paragraph",
+        "id": "38c1034e27f922e8",
+        "text": "Type enter to split a paragraph in two."
+      },
+      "after": "3be423dbae251e5b",
+      "date": 1419210779282
+    },
+    {
+      "type": "add",
+      "id": "da48126c23653f44",
+      "item": {
+        "type": "paragraph",
+        "id": "da48126c23653f44",
+        "text": "Type delete to rejoin paragraphs after a split."
+      },
+      "after": "38c1034e27f922e8",
+      "date": 1419210800111
+    },
+    {
+      "type": "add",
+      "id": "6315a369eadd3b6e",
+      "item": {
+        "type": "paragraph",
+        "id": "6315a369eadd3b6e",
+        "text": "We call split & join as paragraph refactorings because they change the item structure of the page."
+      },
+      "after": "da48126c23653f44",
+      "date": 1419210878848
+    },
+    {
+      "type": "add",
+      "id": "c062bedb1d111cbd",
+      "item": {
+        "type": "paragraph",
+        "id": "c062bedb1d111cbd",
+        "text": "We once held to the principle that there would be an item on the server underneath every editing textarea on the screen."
+      },
+      "after": "6315a369eadd3b6e",
+      "date": 1419210942795
+    },
+    {
+      "type": "edit",
+      "id": "c062bedb1d111cbd",
+      "item": {
+        "type": "paragraph",
+        "id": "c062bedb1d111cbd",
+        "text": "We once held to the principle that there would be an item on the server underneath every editing textarea on the screen. We've relaxed this expectation in order to optimize the interactions between client and server."
+      },
+      "date": 1419210984248
+    },
+    {
+      "type": "add",
+      "id": "00c1ed0c72bab74f",
+      "item": {
+        "type": "paragraph",
+        "id": "00c1ed0c72bab74f",
+        "text": "We now withhold information about an open textarea until editing is complete. Where we would once add an empty item before editing it we now add a completed item."
+      },
+      "after": "c062bedb1d111cbd",
+      "date": 1419211274179
+    },
+    {
+      "type": "add",
+      "id": "2403ffd227f63f51",
+      "item": {
+        "type": "paragraph",
+        "id": "2403ffd227f63f51",
+        "text": "The editor keeps more state in order to know what actions are appropriate in any given sequence of splits, edits and joins. We call this state the latent actions. "
+      },
+      "after": "00c1ed0c72bab74f",
+      "date": 1419211427444
+    },
+    {
+      "type": "add",
+      "id": "112c8668d99e59b6",
+      "item": {
+        "type": "paragraph",
+        "id": "112c8668d99e59b6",
+        "text": "We can have latent actions that will be discarded without the server ever seeing them. For example, a long sequence of enter, delete, enter, delete, will create and destroy a latent item without ever sending it to the server or recording it in the journal."
+      },
+      "after": "2403ffd227f63f51",
+      "date": 1419211533640
+    },
+    {
+      "type": "add",
+      "id": "490e6745e8e41300",
+      "item": {
+        "type": "paragraph",
+        "id": "490e6745e8e41300",
+        "text": "Think of latent actions as provisional actions that prove useless and are then filtered out of the edit stream before they reach the server or the journal."
+      },
+      "after": "112c8668d99e59b6",
+      "date": 1419211665897
+    },
+    {
+      "type": "add",
+      "id": "c91a80b2d251e7d2",
+      "item": {
+        "type": "paragraph",
+        "id": "c91a80b2d251e7d2",
+        "text": " "
+      },
+      "after": "490e6745e8e41300",
+      "date": 1419211780402
+    },
+    {
+      "type": "add",
+      "id": "8e7d7aeb0ede5083",
+      "item": {
+        "type": "paragraph",
+        "id": "8e7d7aeb0ede5083",
+        "text": "Nick Hallahan wrote the original split/join logic and suggested this optimization at that time. I argued for the simpler and more tightly synchronized editor and prevailed. "
+      },
+      "after": "490e6745e8e41300",
+      "date": 1419212017986
+    },
+    {
+      "type": "edit",
+      "id": "8e7d7aeb0ede5083",
+      "item": {
+        "type": "paragraph",
+        "id": "8e7d7aeb0ede5083",
+        "text": "Nick Hallahan wrote the original split/join logic and suggested this optimization at that time. I argued for the simpler and more tightly synchronized editor and prevailed."
+      },
+      "date": 1419212103719
+    },
+    {
+      "type": "add",
+      "id": "aec63ff10e8705ae",
+      "item": {
+        "type": "paragraph",
+        "id": "aec63ff10e8705ae",
+        "text": "Various contributors complained of useless actions in the journal. Again I argued that they could be condensed in various ways as a post process and prevailed."
+      },
+      "after": "8e7d7aeb0ede5083",
+      "date": 1419212198726
+    },
+    {
+      "type": "add",
+      "id": "d45cecb9ade62e1c",
+      "item": {
+        "type": "paragraph",
+        "id": "d45cecb9ade62e1c",
+        "text": "I know folks have suffered data loss due to my insistence on guidance from experience. For this I apologize. The optimizations now coded as latent actions have been needed for some time. Agile developers recite YAGNI, You Aren't Going to Need It. This case they are wrong. "
+      },
+      "after": "aec63ff10e8705ae",
+      "date": 1419212512650
+    },
+    {
+      "type": "add",
+      "id": "2aa390d726790f3f",
+      "item": {
+        "type": "paragraph",
+        "id": "2aa390d726790f3f",
+        "text": "For a demonstration of the new editor, see the journal up to this paragraph."
+      },
+      "after": "d45cecb9ade62e1c",
+      "date": 1419212579605
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1419212610803
+    },
+    {
+      "type": "edit",
+      "id": "aec63ff10e8705ae",
+      "item": {
+        "type": "paragraph",
+        "id": "aec63ff10e8705ae",
+        "text": "Jon Richter and other contributors complained of useless actions in the journal. Again I argued that they could be condensed in various ways as a post process and prevailed."
+      },
+      "date": 1419221865056
+    },
+    {
+      "type": "edit",
+      "id": "3be423dbae251e5b",
+      "item": {
+        "type": "paragraph",
+        "id": "3be423dbae251e5b",
+        "text": "We've revised the paragraph editing logic to be more economical in how and when it sends update actions to a wiki server. This shows as simpler sequences in the page journal and hopefully fewer lost paragraphs while editing over slow connections. [https://github.com/fedwiki/wiki-client/pull/75 github]"
+      },
+      "date": 1419264934614
+    }
+  ]
+}

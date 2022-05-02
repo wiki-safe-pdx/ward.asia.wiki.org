@@ -1,0 +1,437 @@
+{
+  "title": "Do Internal Link",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "fd45b464b141876e",
+      "text": "The wiki global offers plugins an implementation of [[Collaborative Link]] called doInternalLink."
+    },
+    {
+      "type": "paragraph",
+      "id": "d899f844322a3b01",
+      "text": "We have noticed that Graphviz diagrams don't resolve links when rendered in a ghost page. Is this expected behavior, we inquire."
+    },
+    {
+      "type": "paragraph",
+      "id": "f0e6a81f29bfa4ca",
+      "text": "Graphviz 0.10.0 did call this function. [https://github.com/dobbs/wiki-plugin-graphviz/blob/2391fa8e40fc4b0014e283ba4f66556374d967e4/client/graphviz.js#L449 github]"
+    },
+    {
+      "type": "code",
+      "id": "949a6d15e936f942",
+      "text": "wiki.doInternalLink(title, $page)"
+    },
+    {
+      "type": "paragraph",
+      "id": "154ef23939cdffd9",
+      "text": "We will trace through this call and establish where the collaborative resolution takes place."
+    },
+    {
+      "type": "paragraph",
+      "id": "569e62447a0a8f50",
+      "text": "The wiki global initialization pulls this function from links.coffee. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/wiki.coffee#L53 github]"
+    },
+    {
+      "type": "code",
+      "id": "9e94a7de9a936bc3",
+      "text": "wiki.doInternalLink = link.doInternalLink"
+    },
+    {
+      "type": "paragraph",
+      "id": "f4fe2057b062289d",
+      "text": "Link.coffee delegates to its own showPage and creatPage which allocates panel space in the lineup and runs the primitive refresh.cycle. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/link.coffee#L30 github]"
+    },
+    {
+      "type": "code",
+      "id": "83b785b793566691",
+      "text": "showPage(slug, site, title)"
+    },
+    {
+      "type": "paragraph",
+      "id": "19b26fa4c89102ab",
+      "text": "Link's showPage creates the panel dom structure and guesses where the page will be found. This will be revised later in the collaborative linking process. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/link.coffee#L19 github]"
+    },
+    {
+      "type": "code",
+      "id": "4fc15055b23fcda0",
+      "text": "class=\"favicon\" src=\"#{wiki.site(site).flag()}\""
+    },
+    {
+      "type": "paragraph",
+      "id": "2547d4a9f4a54b0e",
+      "text": "Refresh.coffee assembles a pageInfo structure and then calls pageHandler's get function with success and fail callbacks. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/refresh.coffee#L451 github]"
+    },
+    {
+      "type": "code",
+      "id": "0c2f32fdeb2a023d",
+      "text": "pageHandler.get\n  whenGotten: whenGotten\n  whenNotGotten: whenNotGotten\n  pageInformation: pageInformation"
+    },
+    {
+      "type": "paragraph",
+      "id": "83edb18812b6f587",
+      "text": "PageHandler.coffee enters the recursive enumeration of possible sites mysteriously constructed as pageHander.context. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/pageHandler.coffee#L89 github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Do Internal Link",
+        "story": []
+      },
+      "date": 1641877097131
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fd45b464b141876e"
+      },
+      "id": "fd45b464b141876e",
+      "type": "add",
+      "date": 1641877101020
+    },
+    {
+      "type": "edit",
+      "id": "fd45b464b141876e",
+      "item": {
+        "type": "paragraph",
+        "id": "fd45b464b141876e",
+        "text": "The wiki global offers plugins an implementation of [[Collaborative Links]] called doInternalLink."
+      },
+      "date": 1641877149078
+    },
+    {
+      "type": "edit",
+      "id": "fd45b464b141876e",
+      "item": {
+        "type": "paragraph",
+        "id": "fd45b464b141876e",
+        "text": "The wiki global offers plugins an implementation of [[Collaborative Link]] called doInternalLink."
+      },
+      "date": 1641877161227
+    },
+    {
+      "type": "add",
+      "id": "d899f844322a3b01",
+      "item": {
+        "type": "paragraph",
+        "id": "d899f844322a3b01",
+        "text": "We have noticed that Graphviz diagrams don't resolve links when rendered in a ghost page. Is this expected behavior, we inquire."
+      },
+      "after": "fd45b464b141876e",
+      "date": 1641877260616
+    },
+    {
+      "type": "add",
+      "id": "f0e6a81f29bfa4ca",
+      "item": {
+        "type": "paragraph",
+        "id": "f0e6a81f29bfa4ca",
+        "text": "Graphviz 0.10.0 did call this function. [https://github.com/dobbs/wiki-plugin-graphviz/blob/2391fa8e40fc4b0014e283ba4f66556374d967e4/client/graphviz.js#L449 github]"
+      },
+      "after": "d899f844322a3b01",
+      "date": 1641877351997
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "154ef23939cdffd9"
+      },
+      "id": "154ef23939cdffd9",
+      "type": "add",
+      "after": "f0e6a81f29bfa4ca",
+      "date": 1641877378605
+    },
+    {
+      "type": "edit",
+      "id": "154ef23939cdffd9",
+      "item": {
+        "type": "paragraph",
+        "id": "154ef23939cdffd9",
+        "text": "We will trace through this call and establish where the collaborative resolution takes place."
+      },
+      "date": 1641877431919
+    },
+    {
+      "type": "add",
+      "id": "569e62447a0a8f50",
+      "item": {
+        "type": "paragraph",
+        "id": "569e62447a0a8f50",
+        "text": "The wiki global initialization pulls this function from links.coffee. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/wiki.coffee#L53 github]"
+      },
+      "after": "154ef23939cdffd9",
+      "date": 1641877547962
+    },
+    {
+      "type": "add",
+      "id": "f4fe2057b062289d",
+      "item": {
+        "type": "paragraph",
+        "id": "f4fe2057b062289d",
+        "text": "Link.coffee delegates to its own "
+      },
+      "after": "569e62447a0a8f50",
+      "date": 1641877874875
+    },
+    {
+      "type": "edit",
+      "id": "f4fe2057b062289d",
+      "item": {
+        "type": "paragraph",
+        "id": "f4fe2057b062289d",
+        "text": "Link.coffee delegates to its own showPage and creatPage which allocates panel space in the lineup. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/link.coffee#L30 github]"
+      },
+      "date": 1641877932972
+    },
+    {
+      "type": "edit",
+      "id": "f4fe2057b062289d",
+      "item": {
+        "type": "paragraph",
+        "id": "f4fe2057b062289d",
+        "text": "Link.coffee delegates to its own showPage and creatPage which allocates panel space in the lineup and runs the primitive refresh.cycle. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/link.coffee#L30 github]"
+      },
+      "date": 1641878001209
+    },
+    {
+      "type": "add",
+      "id": "19b26fa4c89102ab",
+      "item": {
+        "type": "paragraph",
+        "id": "19b26fa4c89102ab",
+        "text": "Link's showPage creates the panel dom structure and guesses where the page will be found. This will be revised later in the collaborative linking process. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/link.coffee#L19 github]"
+      },
+      "after": "f4fe2057b062289d",
+      "date": 1641878214831
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "949a6d15e936f942"
+      },
+      "id": "949a6d15e936f942",
+      "type": "add",
+      "after": "19b26fa4c89102ab",
+      "date": 1641878269431
+    },
+    {
+      "type": "edit",
+      "id": "949a6d15e936f942",
+      "item": {
+        "type": "code",
+        "id": "949a6d15e936f942",
+        "text": "wiki.doInternalLink(title, $page)"
+      },
+      "date": 1641878272679
+    },
+    {
+      "id": "949a6d15e936f942",
+      "type": "move",
+      "order": [
+        "fd45b464b141876e",
+        "d899f844322a3b01",
+        "f0e6a81f29bfa4ca",
+        "949a6d15e936f942",
+        "154ef23939cdffd9",
+        "569e62447a0a8f50",
+        "f4fe2057b062289d",
+        "19b26fa4c89102ab"
+      ],
+      "date": 1641878275705
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9e94a7de9a936bc3"
+      },
+      "id": "9e94a7de9a936bc3",
+      "type": "add",
+      "after": "19b26fa4c89102ab",
+      "date": 1641878294244
+    },
+    {
+      "type": "edit",
+      "id": "9e94a7de9a936bc3",
+      "item": {
+        "type": "code",
+        "id": "9e94a7de9a936bc3",
+        "text": "wiki.doInternalLink = link.doInternalLink"
+      },
+      "date": 1641878297490
+    },
+    {
+      "id": "9e94a7de9a936bc3",
+      "type": "move",
+      "order": [
+        "fd45b464b141876e",
+        "d899f844322a3b01",
+        "f0e6a81f29bfa4ca",
+        "949a6d15e936f942",
+        "154ef23939cdffd9",
+        "569e62447a0a8f50",
+        "9e94a7de9a936bc3",
+        "f4fe2057b062289d",
+        "19b26fa4c89102ab"
+      ],
+      "date": 1641878300582
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "83b785b793566691"
+      },
+      "id": "83b785b793566691",
+      "type": "add",
+      "after": "19b26fa4c89102ab",
+      "date": 1641878327873
+    },
+    {
+      "type": "edit",
+      "id": "83b785b793566691",
+      "item": {
+        "type": "code",
+        "id": "83b785b793566691",
+        "text": "showPage(slug, site, title)"
+      },
+      "date": 1641878333106
+    },
+    {
+      "id": "83b785b793566691",
+      "type": "move",
+      "order": [
+        "fd45b464b141876e",
+        "d899f844322a3b01",
+        "f0e6a81f29bfa4ca",
+        "949a6d15e936f942",
+        "154ef23939cdffd9",
+        "569e62447a0a8f50",
+        "9e94a7de9a936bc3",
+        "f4fe2057b062289d",
+        "83b785b793566691",
+        "19b26fa4c89102ab"
+      ],
+      "date": 1641878336940
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4fc15055b23fcda0"
+      },
+      "id": "4fc15055b23fcda0",
+      "type": "add",
+      "after": "19b26fa4c89102ab",
+      "date": 1641878377496
+    },
+    {
+      "type": "edit",
+      "id": "4fc15055b23fcda0",
+      "item": {
+        "type": "code",
+        "id": "4fc15055b23fcda0",
+        "text": "class=\"favicon\" src=\"#{wiki.site(site).flag()}\""
+      },
+      "date": 1641878384092
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2547d4a9f4a54b0e"
+      },
+      "id": "2547d4a9f4a54b0e",
+      "type": "add",
+      "after": "4fc15055b23fcda0",
+      "date": 1641878646029
+    },
+    {
+      "type": "edit",
+      "id": "2547d4a9f4a54b0e",
+      "item": {
+        "type": "paragraph",
+        "id": "2547d4a9f4a54b0e",
+        "text": "Refresh.coffee assembles a pageInfo structure and then calls its own get function with success and fail options. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/refresh.coffee#L451 [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/refresh.coffee#L451 github]"
+      },
+      "date": 1641878788475
+    },
+    {
+      "type": "edit",
+      "id": "2547d4a9f4a54b0e",
+      "item": {
+        "type": "paragraph",
+        "id": "2547d4a9f4a54b0e",
+        "text": "Refresh.coffee assembles a pageInfo structure and then calls its own get function with success and fail options. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/refresh.coffee#L451 github]"
+      },
+      "date": 1641878812893
+    },
+    {
+      "type": "edit",
+      "id": "2547d4a9f4a54b0e",
+      "item": {
+        "type": "paragraph",
+        "id": "2547d4a9f4a54b0e",
+        "text": "Refresh.coffee assembles a pageInfo structure and then calls pageHandler's get function with success and fail options. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/refresh.coffee#L451 github]"
+      },
+      "date": 1641878909220
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0c2f32fdeb2a023d"
+      },
+      "id": "0c2f32fdeb2a023d",
+      "type": "add",
+      "after": "2547d4a9f4a54b0e",
+      "date": 1641878911155
+    },
+    {
+      "type": "edit",
+      "id": "0c2f32fdeb2a023d",
+      "item": {
+        "type": "code",
+        "id": "0c2f32fdeb2a023d",
+        "text": "pageHandler.get\n  whenGotten: whenGotten\n  whenNotGotten: whenNotGotten\n  pageInformation: pageInformation"
+      },
+      "date": 1641878932877
+    },
+    {
+      "type": "edit",
+      "id": "2547d4a9f4a54b0e",
+      "item": {
+        "type": "paragraph",
+        "id": "2547d4a9f4a54b0e",
+        "text": "Refresh.coffee assembles a pageInfo structure and then calls pageHandler's get function with success and fail callbacks. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/refresh.coffee#L451 github]"
+      },
+      "date": 1641878988585
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "83edb18812b6f587"
+      },
+      "id": "83edb18812b6f587",
+      "type": "add",
+      "after": "0c2f32fdeb2a023d",
+      "date": 1641879422957
+    },
+    {
+      "type": "edit",
+      "id": "83edb18812b6f587",
+      "item": {
+        "type": "paragraph",
+        "id": "83edb18812b6f587",
+        "text": "PageHandler.coffee enters the recursive enumeration of possible sites. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/pageHandler.coffee#L89 github]"
+      },
+      "date": 1641879515224
+    },
+    {
+      "type": "edit",
+      "id": "83edb18812b6f587",
+      "item": {
+        "type": "paragraph",
+        "id": "83edb18812b6f587",
+        "text": "PageHandler.coffee enters the recursive enumeration of possible sites mysteriously constructed as pageHander.context. [https://github.com/fedwiki/wiki-client/blob/9ab91291c067bf09f77ba3d51dd3c8e7549b4bfd/lib/pageHandler.coffee#L89 github]"
+      },
+      "date": 1641879882036
+    }
+  ]
+}

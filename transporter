@@ -1,0 +1,456 @@
+{
+  "title": "Transporter",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "37bf98a3704d7060",
+      "text": "Here we describe the present state and future directions of the Transporter concept."
+    },
+    {
+      "type": "markdown",
+      "id": "9aba404c3ea45860",
+      "text": "# Current Features"
+    },
+    {
+      "type": "paragraph",
+      "id": "e374896cffbe1482",
+      "text": "This [[About Transport Plugin]] provides interactive access to remote services that can read content you drop and create from it useful pages that appear ready to be saved or used at one's discretion. [https://github.com/WardCunningham/wiki-plugin-transport github]"
+    },
+    {
+      "type": "markdown",
+      "id": "40c6f8e7d861515d",
+      "text": "Features include:\n* POST to a URL specified"
+    },
+    {
+      "type": "markdown",
+      "id": "2f2970d549e2510f",
+      "text": "# Task:\n- [ ] [[Transporter Tools]]\n- [x] Fix [[Flag Drop]] onto Transporter"
+    },
+    {
+      "type": "markdown",
+      "id": "3f34932c1d362707",
+      "text": "# Suggestions"
+    },
+    {
+      "text": "<blockquote><b style='color: darkgreen'>Suggestion: </b><br>\n\nWe suggest that transporters are able to advertise a regular expression or list of regular expressions which match dropped url's - indicating that they are able to respond to a [[Transporter Drop]].",
+      "id": "cec79293b6479153",
+      "type": "html"
+    },
+    {
+      "type": "paragraph",
+      "id": "51bf4caff4ccdee9",
+      "text": "We handle drops on the background which goes through a different path from Factory and Transport. It adds remote or ghost pages (Import plugin) to the lineup. It could also match available transporters and offer a choice of all those that match. This raises some questions."
+    },
+    {
+      "type": "paragraph",
+      "id": "b7c590fe0914b5a3",
+      "text": "Do we poll all Transport plugins to see if their transporters are ready?"
+    },
+    {
+      "type": "paragraph",
+      "id": "3b64b61443fb3094",
+      "text": "Do we offer to try Transport plugins that haven't described what they are able to transport?"
+    },
+    {
+      "type": "paragraph",
+      "id": "56becc71ed8cb801",
+      "text": "Do we worry about abusive Transports? What is the attack surface?"
+    },
+    {
+      "type": "paragraph",
+      "id": "39cdfebbfee8c55a",
+      "text": "Do we offer a second chance if the first Transport doesn't satisfy the user?"
+    },
+    {
+      "type": "paragraph",
+      "id": "54e08e42de166234",
+      "text": "Do we want to make more of the hamburger menu (≣) in the web page footer? Things that apply to the server or the neighborhood should be brought up from there."
+    },
+    {
+      "type": "paragraph",
+      "id": "3125b0c3d0358f4e",
+      "text": "Do we demand that transporters meet some uniform expectation of behavior. When will we know what that is?"
+    },
+    {
+      "type": "paragraph",
+      "id": "cf92e84cecb7fa60",
+      "text": "Do we look for an experience more like Kaiten? How does its 'connectors' relate to our transporters?"
+    },
+    {
+      "type": "reference",
+      "id": "626012f1dab6fa4a",
+      "site": "ward.bay.wiki.org",
+      "slug": "kaiten-continuous-experience",
+      "title": "Kaiten Continuous Experience",
+      "text": "A new (2011) navigation model for web applications that allows you to browse thru one or several applications in a single continuous space, much like wiki's lineup. [http://un2k.com/~~kaiten~~/ site]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Transporter",
+        "story": []
+      },
+      "date": 1460906846561
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "37bf98a3704d7060"
+      },
+      "id": "37bf98a3704d7060",
+      "type": "add",
+      "date": 1460906848134
+    },
+    {
+      "type": "edit",
+      "id": "37bf98a3704d7060",
+      "item": {
+        "type": "paragraph",
+        "id": "37bf98a3704d7060",
+        "text": "Here we describe the present state and future directions of the Transporter concept."
+      },
+      "date": 1460906882162
+    },
+    {
+      "type": "add",
+      "id": "9aba404c3ea45860",
+      "item": {
+        "type": "paragraph",
+        "id": "9aba404c3ea45860",
+        "text": "# Current Features"
+      },
+      "after": "37bf98a3704d7060",
+      "date": 1460906908665
+    },
+    {
+      "type": "add",
+      "id": "3f34932c1d362707",
+      "item": {
+        "type": "paragraph",
+        "id": "3f34932c1d362707",
+        "text": "# Suggestions"
+      },
+      "after": "9aba404c3ea45860",
+      "date": 1460906916621
+    },
+    {
+      "type": "add",
+      "id": "9e7d6a15ba206e36",
+      "item": {
+        "type": "paragraph",
+        "id": "9e7d6a15ba206e36",
+        "text": "# Tasks"
+      },
+      "after": "3f34932c1d362707",
+      "date": 1460906934771
+    },
+    {
+      "type": "add",
+      "id": "40c6f8e7d861515d",
+      "item": {
+        "type": "paragraph",
+        "id": "40c6f8e7d861515d",
+        "text": "Currently the transporter allows you to:* POST to a URL specified"
+      },
+      "after": "9aba404c3ea45860",
+      "date": 1460906990430
+    },
+    {
+      "type": "edit",
+      "id": "9aba404c3ea45860",
+      "item": {
+        "type": "markdown",
+        "id": "9aba404c3ea45860",
+        "text": "# Current Features"
+      },
+      "date": 1460906991955
+    },
+    {
+      "type": "edit",
+      "id": "40c6f8e7d861515d",
+      "item": {
+        "type": "markdown",
+        "id": "40c6f8e7d861515d",
+        "text": "Currently the transporter allows you to:* POST to a URL specified"
+      },
+      "date": 1460907002422
+    },
+    {
+      "type": "edit",
+      "id": "40c6f8e7d861515d",
+      "item": {
+        "type": "markdown",
+        "id": "40c6f8e7d861515d",
+        "text": "Currently the [[About transporter Plugin]] allows you to:\n* POST to a URL specified"
+      },
+      "date": 1460907028888
+    },
+    {
+      "type": "edit",
+      "id": "40c6f8e7d861515d",
+      "item": {
+        "type": "markdown",
+        "id": "40c6f8e7d861515d",
+        "text": "Currently the [[About Transport Plugin]] allows you to:\n* POST to a URL specified"
+      },
+      "date": 1460907039048
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "e374896cffbe1482",
+        "text": "This plugin provides interactive access to remote services that can read content you drop and create from it useful pages that appear ready to be saved or used at one's discretion. [https://github.com/WardCunningham/wiki-plugin-transport github]"
+      },
+      "after": "9aba404c3ea45860",
+      "id": "e374896cffbe1482",
+      "date": 1460907054539
+    },
+    {
+      "type": "edit",
+      "id": "40c6f8e7d861515d",
+      "item": {
+        "type": "markdown",
+        "id": "40c6f8e7d861515d",
+        "text": "Features include:\n* POST to a URL specified"
+      },
+      "date": 1460907077369
+    },
+    {
+      "type": "edit",
+      "id": "e374896cffbe1482",
+      "item": {
+        "type": "paragraph",
+        "id": "e374896cffbe1482",
+        "text": "This [[About Transport Plugin]] provides interactive access to remote services that can read content you drop and create from it useful pages that appear ready to be saved or used at one's discretion. [https://github.com/WardCunningham/wiki-plugin-transport github]"
+      },
+      "date": 1460907081937
+    },
+    {
+      "type": "edit",
+      "id": "3f34932c1d362707",
+      "item": {
+        "type": "markdown",
+        "id": "3f34932c1d362707",
+        "text": "# Suggestions"
+      },
+      "date": 1460907089123
+    },
+    {
+      "type": "edit",
+      "id": "9e7d6a15ba206e36",
+      "item": {
+        "type": "markdown",
+        "id": "9e7d6a15ba206e36",
+        "text": "# Tasks"
+      },
+      "date": 1460907090191
+    },
+    {
+      "type": "move",
+      "order": [
+        "37bf98a3704d7060",
+        "9aba404c3ea45860",
+        "e374896cffbe1482",
+        "40c6f8e7d861515d",
+        "9e7d6a15ba206e36",
+        "3f34932c1d362707"
+      ],
+      "id": "3f34932c1d362707",
+      "date": 1460907093389
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "2f2970d549e2510f",
+        "text": "# Task:\n- [ ] [[HAP Search]]\n- [ ] [[markdown]]\n- [ ] [[rigDbJoin]] or [[rigDbFrom]]\n- [x] [[Active Record Library]]\n- [x] [[URI Routing]]\n- [x] [[Controllers]]\n- [x] [[Views]]\n- [ ] [[rigOutputCache]]"
+      },
+      "after": "9e7d6a15ba206e36",
+      "id": "2f2970d549e2510f",
+      "date": 1460907213458
+    },
+    {
+      "type": "remove",
+      "id": "9e7d6a15ba206e36",
+      "date": 1460907216437
+    },
+    {
+      "type": "add",
+      "item": {
+        "text": "<blockquote><b style='color: darkgreen'>Suggestion: </b><br>\n\nwe can use a number of different ways to format things like suggestions. Here we use a <code>br</code> tag.",
+        "id": "cec79293b6479153",
+        "type": "html"
+      },
+      "after": "3f34932c1d362707",
+      "id": "cec79293b6479153",
+      "date": 1460907235965
+    },
+    {
+      "type": "edit",
+      "id": "2f2970d549e2510f",
+      "item": {
+        "type": "markdown",
+        "id": "2f2970d549e2510f",
+        "text": "# Task:\n- [ ] [[Transporter Tools]]\n- [ ] Fix Flag Drop onto Transporter"
+      },
+      "date": 1460907332859
+    },
+    {
+      "type": "edit",
+      "id": "cec79293b6479153",
+      "item": {
+        "text": "<blockquote><b style='color: darkgreen'>Suggestion: </b><br>\n\nWe suggest that transporters are able to advertise a regular expression or list of regular expressions which match dropped url's - indicating that they are able to respond to a [[Transporter Drop]].",
+        "id": "cec79293b6479153",
+        "type": "html"
+      },
+      "date": 1460907431178
+    },
+    {
+      "type": "edit",
+      "id": "2f2970d549e2510f",
+      "item": {
+        "type": "markdown",
+        "id": "2f2970d549e2510f",
+        "text": "# Task:\n- [ ] [[Transporter Tools]]\n- [ ] Fix [[Flag Drop]] onto Transporter"
+      },
+      "date": 1460907445446
+    },
+    {
+      "type": "fork",
+      "site": "future.fedwiki.org"
+    },
+    {
+      "type": "edit",
+      "id": "2f2970d549e2510f",
+      "item": {
+        "type": "markdown",
+        "id": "2f2970d549e2510f",
+        "text": "# Task:\n- [ ] [[Transporter Tools]]\n- [x] Fix [[Flag Drop]] onto Transporter"
+      },
+      "date": 1460929894325
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "51bf4caff4ccdee9"
+      },
+      "id": "51bf4caff4ccdee9",
+      "type": "add",
+      "after": "cec79293b6479153",
+      "date": 1460930129511
+    },
+    {
+      "type": "edit",
+      "id": "51bf4caff4ccdee9",
+      "item": {
+        "type": "paragraph",
+        "id": "51bf4caff4ccdee9",
+        "text": "We handle drops on the background which goes through a different path from Factory and Transport. It adds remote or ghost pages (Import plugin) to the lineup. It could also match available transporters and offer a choice of all those that match. This raises some questions."
+      },
+      "date": 1460930590425
+    },
+    {
+      "type": "add",
+      "id": "b7c590fe0914b5a3",
+      "item": {
+        "type": "paragraph",
+        "id": "b7c590fe0914b5a3",
+        "text": "Do we poll all Transport plugins to see if their transporters are ready?"
+      },
+      "after": "51bf4caff4ccdee9",
+      "date": 1460930635358
+    },
+    {
+      "type": "add",
+      "id": "3b64b61443fb3094",
+      "item": {
+        "type": "paragraph",
+        "id": "3b64b61443fb3094",
+        "text": "Do we offer to try Transport plugins that haven't described what they are able to transport?"
+      },
+      "after": "b7c590fe0914b5a3",
+      "date": 1460930670916
+    },
+    {
+      "type": "add",
+      "id": "56becc71ed8cb801",
+      "item": {
+        "type": "paragraph",
+        "id": "56becc71ed8cb801",
+        "text": "Do we worry about abusive Transports? What is the attack surface?"
+      },
+      "after": "3b64b61443fb3094",
+      "date": 1460930730662
+    },
+    {
+      "type": "add",
+      "id": "39cdfebbfee8c55a",
+      "item": {
+        "type": "paragraph",
+        "id": "39cdfebbfee8c55a",
+        "text": "Do we offer a second chance if the first Transport doesn't satisfy the user?"
+      },
+      "after": "56becc71ed8cb801",
+      "date": 1460930810509
+    },
+    {
+      "type": "add",
+      "id": "3125b0c3d0358f4e",
+      "item": {
+        "type": "paragraph",
+        "id": "3125b0c3d0358f4e",
+        "text": "Do we demand that transporters meet some uniform expectation of behavior. When will we know what that is?"
+      },
+      "after": "39cdfebbfee8c55a",
+      "date": 1460930886138
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "626012f1dab6fa4a"
+      },
+      "id": "626012f1dab6fa4a",
+      "type": "add",
+      "after": "3125b0c3d0358f4e",
+      "date": 1460930990680
+    },
+    {
+      "type": "edit",
+      "id": "626012f1dab6fa4a",
+      "item": {
+        "type": "reference",
+        "id": "626012f1dab6fa4a",
+        "site": "ward.bay.wiki.org",
+        "slug": "kaiten-continuous-experience",
+        "title": "Kaiten Continuous Experience",
+        "text": "A new (2011) navigation model for web applications that allows you to browse thru one or several applications in a single continuous space, much like wiki's lineup. [http://un2k.com/~~kaiten~~/ site]"
+      },
+      "date": 1460930999567
+    },
+    {
+      "type": "add",
+      "id": "cf92e84cecb7fa60",
+      "item": {
+        "type": "paragraph",
+        "id": "cf92e84cecb7fa60",
+        "text": "Do we look for an experience more like Kaiten? How does its 'connectors' relate to our transporters?"
+      },
+      "after": "3125b0c3d0358f4e",
+      "date": 1460931070038
+    },
+    {
+      "type": "add",
+      "id": "54e08e42de166234",
+      "item": {
+        "type": "paragraph",
+        "id": "54e08e42de166234",
+        "text": "Do we want to make more of the hamburger menu (≣) in the web page footer? Things that apply to the server or the neighborhood should be brought up from there."
+      },
+      "after": "39cdfebbfee8c55a",
+      "date": 1460931359631
+    }
+  ]
+}

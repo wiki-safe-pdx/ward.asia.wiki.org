@@ -1,0 +1,185 @@
+{
+  "title": "Lost Trails",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9e5b9106a8ae17d6",
+      "text": "We noticed a gap from Sept 5 to Sept 20 and wondered if we had really just stopped exploring in that interval. Then we noticed more."
+    },
+    {
+      "type": "paragraph",
+      "id": "0f9dd174cea8283e",
+      "text": "We notice [[Chronological Destinations]] has a suspiciously duplicated entry, one made Sept 5 and the other Sept 20."
+    },
+    {
+      "type": "paragraph",
+      "id": "a420d33c97539a6b",
+      "text": "We could go back to EXIF data but instead examine the formatted dates on all trail pages which has been mechanically produced from EXIF."
+    },
+    {
+      "type": "assets",
+      "id": "628b96ddff9ed709",
+      "text": "pages/lost-trails"
+    },
+    {
+      "type": "frame",
+      "id": "dc577c1900c761e8",
+      "text": "http://ward.asia.wiki.org/assets/pages/lost-trails/scan-for-dates.html\nHEIGHT 500"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Lost Trails",
+        "story": []
+      },
+      "date": 1632498290011
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9e5b9106a8ae17d6"
+      },
+      "id": "9e5b9106a8ae17d6",
+      "type": "add",
+      "date": 1632498292300
+    },
+    {
+      "type": "edit",
+      "id": "9e5b9106a8ae17d6",
+      "item": {
+        "type": "paragraph",
+        "id": "9e5b9106a8ae17d6",
+        "text": "We noticed a gap from Sept 5 to Sept 20 and wondered if we had really just stopped exploring in that interval. Then we noticed more."
+      },
+      "date": 1632498365795
+    },
+    {
+      "type": "add",
+      "id": "0f9dd174cea8283e",
+      "item": {
+        "type": "paragraph",
+        "id": "0f9dd174cea8283e",
+        "text": "We drive a lot of aggregation off of the page, [[Chronological Destinations]] which has a suspiciously duplicated entry, one made Sept 5 and the other Sept 20. Hmmm."
+      },
+      "after": "9e5b9106a8ae17d6",
+      "date": 1632498470536
+    },
+    {
+      "type": "edit",
+      "id": "0f9dd174cea8283e",
+      "item": {
+        "type": "paragraph",
+        "id": "0f9dd174cea8283e",
+        "text": "We drive a lot of aggregation off of [[Chronological Destinations]] which has a suspiciously duplicated entry, one made Sept 5 and the other Sept 20. Hmmm."
+      },
+      "date": 1632498485965
+    },
+    {
+      "type": "edit",
+      "id": "0f9dd174cea8283e",
+      "item": {
+        "type": "paragraph",
+        "id": "0f9dd174cea8283e",
+        "text": "We notice [[Chronological Destinations]] has a suspiciously duplicated entry, one made Sept 5 and the other Sept 20. Hmmm."
+      },
+      "date": 1632498508266
+    },
+    {
+      "type": "edit",
+      "id": "0f9dd174cea8283e",
+      "item": {
+        "type": "paragraph",
+        "id": "0f9dd174cea8283e",
+        "text": "We notice [[Chronological Destinations]] has a suspiciously duplicated entry, one made Sept 5 and the other Sept 20."
+      },
+      "date": 1632498516951
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a420d33c97539a6b"
+      },
+      "id": "a420d33c97539a6b",
+      "type": "add",
+      "after": "0f9dd174cea8283e",
+      "date": 1632498579532
+    },
+    {
+      "type": "edit",
+      "id": "a420d33c97539a6b",
+      "item": {
+        "type": "paragraph",
+        "id": "a420d33c97539a6b",
+        "text": "We could go back to EXIF data but instead examine the formatted dates on all trail pages which has been mechanically produced from EXIF."
+      },
+      "date": 1632498670968
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "628b96ddff9ed709"
+      },
+      "id": "628b96ddff9ed709",
+      "type": "add",
+      "after": "a420d33c97539a6b",
+      "date": 1632498699338
+    },
+    {
+      "type": "edit",
+      "id": "628b96ddff9ed709",
+      "item": {
+        "type": "assets",
+        "id": "628b96ddff9ed709",
+        "text": "pages/lost-trails"
+      },
+      "date": 1632498705320
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8b70270476dcc1d6"
+      },
+      "id": "8b70270476dcc1d6",
+      "type": "add",
+      "after": "628b96ddff9ed709",
+      "date": 1632504503222
+    },
+    {
+      "type": "remove",
+      "id": "8b70270476dcc1d6",
+      "date": 1632504512192
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dc577c1900c761e8"
+      },
+      "id": "dc577c1900c761e8",
+      "type": "add",
+      "after": "628b96ddff9ed709",
+      "date": 1632504513919
+    },
+    {
+      "type": "edit",
+      "id": "dc577c1900c761e8",
+      "item": {
+        "type": "frame",
+        "id": "dc577c1900c761e8",
+        "text": "http://ward.asia.wiki.org/assets/pages/lost-trails/scan-for-dates.html"
+      },
+      "date": 1632504517695
+    },
+    {
+      "type": "edit",
+      "id": "dc577c1900c761e8",
+      "item": {
+        "type": "frame",
+        "id": "dc577c1900c761e8",
+        "text": "http://ward.asia.wiki.org/assets/pages/lost-trails/scan-for-dates.html\nHEIGHT 500"
+      },
+      "date": 1632505725777
+    }
+  ]
+}

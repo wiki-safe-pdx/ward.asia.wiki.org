@@ -1,0 +1,114 @@
+{
+  "title": "Powdery Mildew",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e12bbcf15fcb6e28",
+      "text": "Powdery mildew is a fungal disease that affects a wide range of plants. Powdery mildew diseases are caused by many different species of fungi in the order Erysiphales, with Podosphaera xanthii being the most commonly reported cause. [https://en.wikipedia.org/wiki/Powdery_mildew wikipedia]"
+    },
+    {
+      "type": "html",
+      "id": "c32445632d1582ee",
+      "text": "<img width=100% src=https://upload.wikimedia.org/wikipedia/commons/b/b8/Downy_and_Powdery_mildew_on_grape_leaf.JPG>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8964585e60639414",
+      "text": "Vineyards are subject to devastating outbreaks depending on climate, elevation, temperature, humidity and sunlight. Remote sensing weather stations can sample the microclimate in each vineyard block and thus alert when application of chemicals is needed."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Powdery Mildew",
+        "story": []
+      },
+      "date": 1546711192697
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e12bbcf15fcb6e28"
+      },
+      "id": "e12bbcf15fcb6e28",
+      "type": "add",
+      "date": 1546711194958
+    },
+    {
+      "type": "edit",
+      "id": "e12bbcf15fcb6e28",
+      "item": {
+        "type": "paragraph",
+        "id": "e12bbcf15fcb6e28",
+        "text": "Powdery mildew\nDowny and Powdery mildew on grape leaf.JPG\nExample of powdery mildew (right) along with Downy mildew on a grape leaf\nCausal agents\tSpecies of fungi in the orders Erysiphales\nHosts\tplants\nPowdery mildew is a fungal disease that affects a wide range of plants. Powdery mildew diseases are caused by many different species of fungi in the order Erysiphales, with Podosphaera xanthii being the most commonly reported cause."
+      },
+      "date": 1546711215796
+    },
+    {
+      "type": "edit",
+      "id": "e12bbcf15fcb6e28",
+      "item": {
+        "type": "paragraph",
+        "id": "e12bbcf15fcb6e28",
+        "text": "\nPowdery mildew is a fungal disease that affects a wide range of plants. Powdery mildew diseases are caused by many different species of fungi in the order Erysiphales, with Podosphaera xanthii being the most commonly reported cause."
+      },
+      "date": 1546711240899
+    },
+    {
+      "type": "edit",
+      "id": "e12bbcf15fcb6e28",
+      "item": {
+        "type": "paragraph",
+        "id": "e12bbcf15fcb6e28",
+        "text": "Powdery mildew is a fungal disease that affects a wide range of plants. Powdery mildew diseases are caused by many different species of fungi in the order Erysiphales, with Podosphaera xanthii being the most commonly reported cause. [https://en.wikipedia.org/wiki/Powdery_mildew wikipedia]"
+      },
+      "date": 1546711265516
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c32445632d1582ee"
+      },
+      "id": "c32445632d1582ee",
+      "type": "add",
+      "after": "e12bbcf15fcb6e28",
+      "date": 1546711336431
+    },
+    {
+      "type": "edit",
+      "id": "c32445632d1582ee",
+      "item": {
+        "type": "html",
+        "id": "c32445632d1582ee",
+        "text": "<img width=100% src=https://upload.wikimedia.org/wikipedia/commons/b/b8/Downy_and_Powdery_mildew_on_grape_leaf.JPG>"
+      },
+      "date": 1546711364565
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8964585e60639414"
+      },
+      "id": "8964585e60639414",
+      "type": "add",
+      "after": "c32445632d1582ee",
+      "date": 1558806864297
+    },
+    {
+      "type": "edit",
+      "id": "8964585e60639414",
+      "item": {
+        "type": "paragraph",
+        "id": "8964585e60639414",
+        "text": "Vineyards are subject to devastating outbreaks depending on climate, elevation, temperature, humidity and sunlight. Remote sensing weather stations can sample the microclimate in each vineyard block and thus alert when application of chemicals is needed."
+      },
+      "date": 1558807191741
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1558807215991
+    }
+  ]
+}

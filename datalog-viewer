@@ -1,0 +1,571 @@
+{
+  "title": "Datalog Viewer",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "c14c86554a600e69",
+      "text": "The Datalog plugin acquires and stores data often conveniently represented as multiple lines in a timeseries chart. We have been replicating an html/plotly.js application for this purpose. Here we consider replacing these with a plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "d356eadf31dd24d8",
+      "text": "Advantages include direct control over a proliferation of views and possible drill-down into chart data within wiki."
+    },
+    {
+      "type": "paragraph",
+      "id": "2be9628618a24ed9",
+      "text": "Disadvantages include living with or working around smaller screen space and publishing experiments in npm."
+    },
+    {
+      "type": "markdown",
+      "id": "5f3bdf5915ace82f",
+      "text": "# Structure"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ea6cce747cf8383",
+      "text": "The current scripts follow a pattern visible with \"show page source\". We'll examine a recent variation. [http://ward.asia.wiki.org/assets/plugins/datalog/ft8-decodes-datalog/plot-decodes.html?site=found.ward.bay.wiki.org&slug=ft8-attention-datalog&chunk=day&min=25&keep=3 plot]"
+    },
+    {
+      "type": "paragraph",
+      "id": "d9d3f51c0345994f",
+      "text": "Load plotly.js from CDN."
+    },
+    {
+      "type": "paragraph",
+      "id": "c0d7bc2eda89336c",
+      "text": "Parse url for parameters."
+    },
+    {
+      "type": "paragraph",
+      "id": "a09d61211f7e57d7",
+      "text": "Fetch recent Datalog files."
+    },
+    {
+      "type": "paragraph",
+      "id": "58821144190c3f55",
+      "text": "Reformat data into traces."
+    },
+    {
+      "type": "paragraph",
+      "id": "0f805ebe5faa3b48",
+      "text": "Invoke and interact with plotly."
+    },
+    {
+      "type": "markdown",
+      "id": "578520ec8a224ef2",
+      "text": "# Opportunity"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a951c37598e18b1",
+      "text": "Many parameters could be discovered by a plugin locating the relevant Datalog and interacting with it."
+    },
+    {
+      "type": "paragraph",
+      "id": "47ff441a630d6537",
+      "text": "Markup could specify additional preferences. Adjusting number of days to plot would then involve item editing rather than browser url editing. "
+    },
+    {
+      "type": "paragraph",
+      "id": "26959d702f0fdbcc",
+      "text": "Datalog files would be similarly fetched. Some optimization might be possible should multiple plugins desire the same files. Incremental updates could come directly from the Datalog plugin via client-side events."
+    },
+    {
+      "type": "paragraph",
+      "id": "cb6f1178d50eb954",
+      "text": "Markup could direct reformatting into traces. Some options would be general like choosing which of many items are to be plotted or smoothing algorithms employed. Other items might be source specific."
+    },
+    {
+      "type": "paragraph",
+      "id": "5bf816b8c288c68c",
+      "text": "Converting temperature to Fahrenheit."
+    },
+    {
+      "type": "paragraph",
+      "id": "77331323afde2b35",
+      "text": "Averaging multiple colocated sensors."
+    },
+    {
+      "type": "paragraph",
+      "id": "302028958befaed6",
+      "text": "Computing timestamp jitter."
+    },
+    {
+      "type": "paragraph",
+      "id": "59f70b8912a5e285",
+      "text": "Recognizing missing values."
+    },
+    {
+      "type": "paragraph",
+      "id": "646996b9cf8e780e",
+      "text": "Selecting traces by property."
+    },
+    {
+      "type": "paragraph",
+      "id": "4b34ecb173679c72",
+      "text": "Perhaps Plotly could be configured to use the space available to a plugin more effectively say by smaller margins and pop-up key? A version of enlarge, as for images, should be made to work."
+    },
+    {
+      "type": "markdown",
+      "id": "3007760922f2ec46",
+      "text": "# Interaction"
+    },
+    {
+      "type": "paragraph",
+      "id": "0d6029ec9f680e0c",
+      "text": "The plugin should find the nearest datalog-source or possibly multiple-compatible sources. Tempo and blocking could be reconciled if desires were specified abstractly. Data shape would be harder to coerce without heuristics."
+    },
+    {
+      "type": "paragraph",
+      "id": "c368bf555e73a84d",
+      "text": "A plugin could make its Plotly traces available to other plugins. Perhaps data wrangling and rendering could be separate plugins."
+    },
+    {
+      "type": "paragraph",
+      "id": "778dea500f4262cd",
+      "text": "Multiple plugins could provide coordinated views into related data such that pan and zoom in one is echoed in others. Example is two-way Data interaction with Line."
+    },
+    {
+      "type": "markdown",
+      "id": "5e7d3c8d528c6759",
+      "text": "# Resources"
+    },
+    {
+      "type": "paragraph",
+      "id": "fb70f414f014c7fd",
+      "text": "Our Pingdom replacement benefits from tabular display of processed Datalog records. See [[Ping Wiki Servers]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Datalog Viewer",
+        "story": []
+      },
+      "date": 1570981266535
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c14c86554a600e69"
+      },
+      "id": "c14c86554a600e69",
+      "type": "add",
+      "date": 1570981283441
+    },
+    {
+      "type": "edit",
+      "id": "c14c86554a600e69",
+      "item": {
+        "type": "paragraph",
+        "id": "c14c86554a600e69",
+        "text": "The Datalog plugin acquires and stores data often conveniently represented as multiple lines in a timeseries chart. We have been replicating an html/plotly.js application for this purpose. Here we consider replacing these with a plugin."
+      },
+      "date": 1570981702485
+    },
+    {
+      "type": "add",
+      "id": "d356eadf31dd24d8",
+      "item": {
+        "type": "paragraph",
+        "id": "d356eadf31dd24d8",
+        "text": "Advantages include direct control over a proliferation of views and possible drill-down into chart data within wiki."
+      },
+      "after": "c14c86554a600e69",
+      "date": 1570981892694
+    },
+    {
+      "type": "add",
+      "id": "2be9628618a24ed9",
+      "item": {
+        "type": "paragraph",
+        "id": "2be9628618a24ed9",
+        "text": "Disadvantages include living with or working around smaller screen space and publishing experiments in npm."
+      },
+      "after": "d356eadf31dd24d8",
+      "date": 1570981973141
+    },
+    {
+      "type": "add",
+      "id": "5f3bdf5915ace82f",
+      "item": {
+        "type": "factory",
+        "id": "5f3bdf5915ace82f",
+        "text": "Structure"
+      },
+      "after": "2be9628618a24ed9",
+      "date": 1570982182921
+    },
+    {
+      "type": "edit",
+      "id": "5f3bdf5915ace82f",
+      "item": {
+        "type": "markdown",
+        "id": "5f3bdf5915ace82f",
+        "text": "# Structure"
+      },
+      "date": 1570982189311
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6ea6cce747cf8383"
+      },
+      "id": "6ea6cce747cf8383",
+      "type": "add",
+      "after": "5f3bdf5915ace82f",
+      "date": 1570982195723
+    },
+    {
+      "type": "edit",
+      "id": "6ea6cce747cf8383",
+      "item": {
+        "type": "paragraph",
+        "id": "6ea6cce747cf8383",
+        "text": "The current scripts follow a pattern visible with \"show page source\". We'll examine a recent variation. [view-source:http://ward.asia.wiki.org/assets/plugins/datalog/ft8-decodes-datalog/plot-decodes.html?site=found.ward.bay.wiki.org&slug=ft8-attention-datalog&chunk=day&min=25&keep=3 plot]"
+      },
+      "date": 1570982328633
+    },
+    {
+      "type": "edit",
+      "id": "6ea6cce747cf8383",
+      "item": {
+        "type": "paragraph",
+        "id": "6ea6cce747cf8383",
+        "text": "The current scripts follow a pattern visible with \"show page source\". We'll examine a recent variation. [http://ward.asia.wiki.org/assets/plugins/datalog/ft8-decodes-datalog/plot-decodes.html?site=found.ward.bay.wiki.org&slug=ft8-attention-datalog&chunk=day&min=25&keep=3 plot]"
+      },
+      "date": 1570982389434
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d9d3f51c0345994f"
+      },
+      "id": "d9d3f51c0345994f",
+      "type": "add",
+      "after": "6ea6cce747cf8383",
+      "date": 1570982402862
+    },
+    {
+      "type": "edit",
+      "id": "d9d3f51c0345994f",
+      "item": {
+        "type": "paragraph",
+        "id": "d9d3f51c0345994f",
+        "text": "Load plotly.js from CDN."
+      },
+      "date": 1570982426791
+    },
+    {
+      "type": "add",
+      "id": "c0d7bc2eda89336c",
+      "item": {
+        "type": "paragraph",
+        "id": "c0d7bc2eda89336c",
+        "text": "Parse url for parameters."
+      },
+      "after": "d9d3f51c0345994f",
+      "date": 1570982450069
+    },
+    {
+      "type": "add",
+      "id": "a09d61211f7e57d7",
+      "item": {
+        "type": "paragraph",
+        "id": "a09d61211f7e57d7",
+        "text": "Fetch recent Datalog files."
+      },
+      "after": "c0d7bc2eda89336c",
+      "date": 1570982476324
+    },
+    {
+      "type": "add",
+      "id": "58821144190c3f55",
+      "item": {
+        "type": "paragraph",
+        "id": "58821144190c3f55",
+        "text": "Reformat data into traces."
+      },
+      "after": "a09d61211f7e57d7",
+      "date": 1570982514666
+    },
+    {
+      "type": "add",
+      "id": "0f805ebe5faa3b48",
+      "item": {
+        "type": "paragraph",
+        "id": "0f805ebe5faa3b48",
+        "text": "Invoke and interact with plotly."
+      },
+      "after": "58821144190c3f55",
+      "date": 1570982540501
+    },
+    {
+      "type": "add",
+      "id": "578520ec8a224ef2",
+      "item": {
+        "type": "paragraph",
+        "id": "578520ec8a224ef2",
+        "text": "Opportunity"
+      },
+      "after": "0f805ebe5faa3b48",
+      "date": 1570982591775
+    },
+    {
+      "type": "add",
+      "id": "7a951c37598e18b1",
+      "item": {
+        "type": "paragraph",
+        "id": "7a951c37598e18b1",
+        "text": "Many parameters could be discovered by a plugin locating the relevant Datalog and interacting with it."
+      },
+      "after": "578520ec8a224ef2",
+      "date": 1570982666447
+    },
+    {
+      "type": "edit",
+      "id": "578520ec8a224ef2",
+      "item": {
+        "type": "markdown",
+        "id": "578520ec8a224ef2",
+        "text": "# Opportunity"
+      },
+      "date": 1570982687214
+    },
+    {
+      "type": "add",
+      "id": "47ff441a630d6537",
+      "item": {
+        "type": "paragraph",
+        "id": "47ff441a630d6537",
+        "text": "Markup could specify additional preferences. Adjusting number of days to plot would then intail "
+      },
+      "after": "7a951c37598e18b1",
+      "date": 1570982854614
+    },
+    {
+      "type": "edit",
+      "id": "47ff441a630d6537",
+      "item": {
+        "type": "paragraph",
+        "id": "47ff441a630d6537",
+        "text": "Markup could specify additional preferences. Adjusting number of days to plot would then involve item editing rather than browser url editing. "
+      },
+      "date": 1570982911736
+    },
+    {
+      "type": "add",
+      "id": "26959d702f0fdbcc",
+      "item": {
+        "type": "paragraph",
+        "id": "26959d702f0fdbcc",
+        "text": "Datalog files would be similarly fetched. Some optimization might be possible should multiple copies desire the same files. Incremental updates could come directly from the Datalog plugin via client-side events."
+      },
+      "after": "47ff441a630d6537",
+      "date": 1570983145863
+    },
+    {
+      "type": "edit",
+      "id": "26959d702f0fdbcc",
+      "item": {
+        "type": "paragraph",
+        "id": "26959d702f0fdbcc",
+        "text": "Datalog files would be similarly fetched. Some optimization might be possible should multiple plugins desire the same files. Incremental updates could come directly from the Datalog plugin via client-side events."
+      },
+      "date": 1570983164742
+    },
+    {
+      "type": "add",
+      "id": "cb6f1178d50eb954",
+      "item": {
+        "type": "paragraph",
+        "id": "cb6f1178d50eb954",
+        "text": "Markup could direct reformatting into traces. Some options would be general like choosing which of many items are to be plotted or smoothing algorithms employed. Other items might be source specific."
+      },
+      "after": "26959d702f0fdbcc",
+      "date": 1570983704175
+    },
+    {
+      "type": "add",
+      "id": "5bf816b8c288c68c",
+      "item": {
+        "type": "paragraph",
+        "id": "5bf816b8c288c68c",
+        "text": "Converting temperature to Fahrenheit."
+      },
+      "after": "cb6f1178d50eb954",
+      "date": 1570983750797
+    },
+    {
+      "type": "add",
+      "id": "77331323afde2b35",
+      "item": {
+        "type": "paragraph",
+        "id": "77331323afde2b35",
+        "text": "Averaging multiple colocated sensors."
+      },
+      "after": "5bf816b8c288c68c",
+      "date": 1570983776671
+    },
+    {
+      "type": "add",
+      "id": "302028958befaed6",
+      "item": {
+        "type": "paragraph",
+        "id": "302028958befaed6",
+        "text": "Computing timestamp jitter."
+      },
+      "after": "77331323afde2b35",
+      "date": 1570983928793
+    },
+    {
+      "type": "add",
+      "id": "59f70b8912a5e285",
+      "item": {
+        "type": "paragraph",
+        "id": "59f70b8912a5e285",
+        "text": "Recognizing missing values."
+      },
+      "after": "302028958befaed6",
+      "date": 1570983938663
+    },
+    {
+      "type": "add",
+      "id": "646996b9cf8e780e",
+      "item": {
+        "type": "paragraph",
+        "id": "646996b9cf8e780e",
+        "text": "Selecting traces by property."
+      },
+      "after": "59f70b8912a5e285",
+      "date": 1570983997638
+    },
+    {
+      "type": "add",
+      "id": "4b34ecb173679c72",
+      "item": {
+        "type": "paragraph",
+        "id": "4b34ecb173679c72",
+        "text": "Plotly could be configured to use the space available to a plugin more effectively say by smaller margins and pop-up key?"
+      },
+      "after": "646996b9cf8e780e",
+      "date": 1570984193015
+    },
+    {
+      "type": "edit",
+      "id": "4b34ecb173679c72",
+      "item": {
+        "type": "paragraph",
+        "id": "4b34ecb173679c72",
+        "text": "Perhaps Plotly could be configured to use the space available to a plugin more effectively say by smaller margins and pop-up key? A version of enlarge, as for images, should be made to work."
+      },
+      "date": 1570984256559
+    },
+    {
+      "type": "add",
+      "id": "3007760922f2ec46",
+      "item": {
+        "type": "paragraph",
+        "id": "3007760922f2ec46",
+        "text": "# Interaction"
+      },
+      "after": "4b34ecb173679c72",
+      "date": 1570984326213
+    },
+    {
+      "type": "add",
+      "id": "0d6029ec9f680e0c",
+      "item": {
+        "type": "paragraph",
+        "id": "0d6029ec9f680e0c",
+        "text": "The plugin should find the nearest datalog-source or possibly multiple-compatible sources. Tempo and blocking could be reconciled if desires were specified abstractly. Data shape would be harder to coerce without heuristics."
+      },
+      "after": "3007760922f2ec46",
+      "date": 1570984637698
+    },
+    {
+      "type": "add",
+      "id": "c368bf555e73a84d",
+      "item": {
+        "type": "paragraph",
+        "id": "c368bf555e73a84d",
+        "text": "A plugin could make its Plotly traces available to other plugins. Perhaps data wrangling and rendering could be separate plugins."
+      },
+      "after": "0d6029ec9f680e0c",
+      "date": 1570984759133
+    },
+    {
+      "type": "add",
+      "id": "778dea500f4262cd",
+      "item": {
+        "type": "paragraph",
+        "id": "778dea500f4262cd",
+        "text": "Multiple plugins could provide coordinated views into related data such that pan and zoom in one is echoed in others. Example is two-way Data interaction with Line."
+      },
+      "after": "c368bf555e73a84d",
+      "date": 1570985026095
+    },
+    {
+      "type": "edit",
+      "id": "3007760922f2ec46",
+      "item": {
+        "type": "markdown",
+        "id": "3007760922f2ec46",
+        "text": "# Interaction"
+      },
+      "date": 1570985030670
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5e7d3c8d528c6759"
+      },
+      "id": "5e7d3c8d528c6759",
+      "type": "add",
+      "after": "778dea500f4262cd",
+      "date": 1570985669463
+    },
+    {
+      "type": "edit",
+      "id": "5e7d3c8d528c6759",
+      "item": {
+        "type": "markdown",
+        "id": "5e7d3c8d528c6759",
+        "text": "# Resources"
+      },
+      "date": 1570985679105
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fb70f414f014c7fd"
+      },
+      "id": "fb70f414f014c7fd",
+      "type": "add",
+      "after": "5e7d3c8d528c6759",
+      "date": 1570985681695
+    },
+    {
+      "type": "edit",
+      "id": "fb70f414f014c7fd",
+      "item": {
+        "type": "paragraph",
+        "id": "fb70f414f014c7fd",
+        "text": "Our Pingdom replacement uses Datalog but benefits from tabular display of processed records. See [[Ping Wiki Servers]]"
+      },
+      "date": 1570985766098
+    },
+    {
+      "type": "edit",
+      "id": "fb70f414f014c7fd",
+      "item": {
+        "type": "paragraph",
+        "id": "fb70f414f014c7fd",
+        "text": "Our Pingdom replacement benefits from tabular display of processed Datalog records. See [[Ping Wiki Servers]]"
+      },
+      "date": 1570985795127
+    }
+  ]
+}

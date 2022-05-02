@@ -1,0 +1,916 @@
+{
+  "title": "Microtalk Server",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7283ddea49a10e82",
+      "text": "We create a small express server that can evaluate microtalk server-side."
+    },
+    {
+      "type": "paragraph",
+      "id": "701fe18a9143a933",
+      "text": "Begin by installing node for server-side javascript. [https://nodejs.org site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "4b07fb13d80b2d16",
+      "text": "Then unzip microtalk-server to get three files.  [http:/theme/microtalk.zip zip]"
+    },
+    {
+      "type": "markdown",
+      "id": "a1603f2e70794ef6",
+      "text": "- microtalk.js with a module.export added.\n- index.js web server that runs microtalk.\n- package.json instructions for installing and starting."
+    },
+    {
+      "type": "paragraph",
+      "id": "67b962d8aa3e4e98",
+      "text": "Here is index.js which uses express for routing. [https://expressjs.com/en/guide/routing.html site]"
+    },
+    {
+      "type": "code",
+      "id": "b22c1e6fb98d4cc5",
+      "text": "const express = require('express')\nconst microtalk = require('./microtalk.js')\n\nconst app = express()\n\napp.get('/', function (req, res) {\n res.send('microtalk')\n})\n\napp.get('/eval/:expr', function (req, res) {\n var expr = req.params.expr\n result = microtalk.evaluate(expr)\n res.send(result.val)\n})\n\napp.listen(4444, function () {\n console.log('listening on port 4444')\n console.log('try http://localhost:4444/eval/{lib}')\n})"
+    },
+    {
+      "type": "paragraph",
+      "id": "e7e77a9d9482057b",
+      "text": "Use node package manager (npm) to install the rest."
+    },
+    {
+      "type": "html",
+      "id": "82258bd4f078b527",
+      "text": "<img src=\"http:/theme/install.png\" width=420>"
+    },
+    {
+      "type": "paragraph",
+      "id": "e89740ef2328d778",
+      "text": "Use npm to start the server."
+    },
+    {
+      "type": "html",
+      "id": "609f166b2bde3325",
+      "text": "<img src=\"http:/theme/start.png\" width=420>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6c618b4c2698233b",
+      "text": "Visit the microtalk server at [http://localhost:4444 http://localhost:4444]"
+    },
+    {
+      "type": "html",
+      "id": "e78b821e939ed1a4",
+      "text": "<img src=\"http:/theme/root.png\" width=420>"
+    },
+    {
+      "type": "paragraph",
+      "id": "ea836faaca3a39fa",
+      "text": "Try evaluating [http://localhost:4444/eval/{lib} http://localhost:4444/eval/{lib}]"
+    },
+    {
+      "type": "html",
+      "id": "a34d015c5ec392bc",
+      "text": "<img src=\"http:/theme/lib.png\" width=420>"
+    },
+    {
+      "type": "paragraph",
+      "id": "1b9eb9e00a922931",
+      "text": "The server is a running program that keeps its bindings until stopped. For example, try these in any order.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "f92b160e665b2e34",
+      "text": "[http://localhost:4444/eval/%7Bdef%20friend%20Ward%20Cunningham%7D http://localhost:4444/eval/{def friend Ward Cunningham}]"
+    },
+    {
+      "type": "paragraph",
+      "id": "06a8dc5c45f2e06d",
+      "text": "[http://localhost:4444/eval/%7Bdef%20friend%20Alain%20Marty%7D http://localhost:4444/eval/{def friend Alain Marty}]"
+    },
+    {
+      "type": "paragraph",
+      "id": "a41398f5e351361e",
+      "text": "[http://localhost:4444/eval/%7Bh1%20Hello%20%7Bfriend%7D%7D http://localhost:4444/eval/{h1 Hello {friend}}]"
+    },
+    {
+      "type": "html",
+      "id": "defc88cf2b335d40",
+      "text": "<img src=\"http:/theme/hello.png\" width=420>"
+    },
+    {
+      "type": "paragraph",
+      "id": "03e37fbf7852af68",
+      "text": "See [[Testing Microtalk]] for other experiments."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Microtalk Server",
+        "story": []
+      },
+      "date": 1499180335663
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7283ddea49a10e82"
+      },
+      "id": "7283ddea49a10e82",
+      "type": "add",
+      "date": 1499180337742
+    },
+    {
+      "type": "edit",
+      "id": "7283ddea49a10e82",
+      "item": {
+        "type": "paragraph",
+        "id": "7283ddea49a10e82",
+        "text": "We create a small express server that can evaluate microtalk server-side."
+      },
+      "date": 1499180364272
+    },
+    {
+      "type": "add",
+      "id": "7c805ba104482482",
+      "item": {
+        "type": "paragraph",
+        "id": "7c805ba104482482",
+        "text": "[http:/theme/microtalk.zip zip]"
+      },
+      "after": "7283ddea49a10e82",
+      "date": 1499180403465
+    },
+    {
+      "type": "remove",
+      "id": "7c805ba104482482",
+      "date": 1499180409418
+    },
+    {
+      "type": "edit",
+      "id": "7283ddea49a10e82",
+      "item": {
+        "type": "paragraph",
+        "id": "7283ddea49a10e82",
+        "text": "We create a small express server that can evaluate microtalk server-side. [http:/theme/microtalk.zip zip]"
+      },
+      "date": 1499180412104
+    },
+    {
+      "type": "add",
+      "id": "701fe18a9143a933",
+      "item": {
+        "type": "paragraph",
+        "id": "701fe18a9143a933",
+        "text": "Begin by installing node for server-side javascript. [https://nodejs.org site]"
+      },
+      "after": "7283ddea49a10e82",
+      "date": 1499180463172
+    },
+    {
+      "type": "add",
+      "id": "4b07fb13d80b2d16",
+      "item": {
+        "type": "paragraph",
+        "id": "4b07fb13d80b2d16",
+        "text": "Then unzip microtalk-server. It contains three files: microtalk.js is an only slightly modified version of something you sent me, index.js a web server that will eval microtalk expressions included in the url, and package.json contains instructions for installing and starting the server."
+      },
+      "after": "701fe18a9143a933",
+      "date": 1499180495619
+    },
+    {
+      "type": "edit",
+      "id": "4b07fb13d80b2d16",
+      "item": {
+        "type": "paragraph",
+        "id": "4b07fb13d80b2d16",
+        "text": "Then unzip microtalk-server. It contains three files. "
+      },
+      "date": 1499180552294
+    },
+    {
+      "type": "add",
+      "id": "ad1c0cc5085b2592",
+      "item": {
+        "type": "paragraph",
+        "id": "ad1c0cc5085b2592",
+        "text": "◼︎ microtalk.js with module.export"
+      },
+      "after": "4b07fb13d80b2d16",
+      "date": 1499180598485
+    },
+    {
+      "type": "add",
+      "id": "e0a95d05e14f7458",
+      "item": {
+        "type": "paragraph",
+        "id": "e0a95d05e14f7458",
+        "text": "◼︎ index.js a web server that will eval expressions included in the url"
+      },
+      "after": "ad1c0cc5085b2592",
+      "date": 1499180625789
+    },
+    {
+      "type": "add",
+      "id": "dac945155c410bb1",
+      "item": {
+        "type": "paragraph",
+        "id": "dac945155c410bb1",
+        "text": "◼︎ package.json instructions for installing and starting the server."
+      },
+      "after": "e0a95d05e14f7458",
+      "date": 1499180646955
+    },
+    {
+      "type": "edit",
+      "id": "ad1c0cc5085b2592",
+      "item": {
+        "type": "paragraph",
+        "id": "ad1c0cc5085b2592",
+        "text": "◼︎ microtalk.js with a module.export added."
+      },
+      "date": 1499180662210
+    },
+    {
+      "type": "edit",
+      "id": "ad1c0cc5085b2592",
+      "item": {
+        "type": "paragraph",
+        "id": "ad1c0cc5085b2592",
+        "text": "microtalk.js with a module.export added."
+      },
+      "date": 1499180670354
+    },
+    {
+      "type": "edit",
+      "id": "ad1c0cc5085b2592",
+      "item": {
+        "type": "paragraph",
+        "id": "ad1c0cc5085b2592",
+        "text": "• microtalk.js with a module.export added."
+      },
+      "date": 1499180684947
+    },
+    {
+      "type": "edit",
+      "id": "ad1c0cc5085b2592",
+      "item": {
+        "type": "paragraph",
+        "id": "ad1c0cc5085b2592",
+        "text": "￭ microtalk.js with a module.export added."
+      },
+      "date": 1499180727624
+    },
+    {
+      "type": "edit",
+      "id": "e0a95d05e14f7458",
+      "item": {
+        "type": "paragraph",
+        "id": "e0a95d05e14f7458",
+        "text": "￭  index.js web server that runs microtalk"
+      },
+      "date": 1499180762053
+    },
+    {
+      "type": "edit",
+      "id": "dac945155c410bb1",
+      "item": {
+        "type": "paragraph",
+        "id": "dac945155c410bb1",
+        "text": "￭  package.json instructions for installing and starting."
+      },
+      "date": 1499180780915
+    },
+    {
+      "type": "edit",
+      "id": "e0a95d05e14f7458",
+      "item": {
+        "type": "paragraph",
+        "id": "e0a95d05e14f7458",
+        "text": "￭  index.js web server that runs microtalk."
+      },
+      "date": 1499180785234
+    },
+    {
+      "type": "edit",
+      "id": "7283ddea49a10e82",
+      "item": {
+        "type": "paragraph",
+        "id": "7283ddea49a10e82",
+        "text": "We create a small express server that can evaluate microtalk server-side."
+      },
+      "date": 1499180803111
+    },
+    {
+      "type": "edit",
+      "id": "4b07fb13d80b2d16",
+      "item": {
+        "type": "paragraph",
+        "id": "4b07fb13d80b2d16",
+        "text": "Then unzip microtalk-server.  [http:/theme/microtalk.zip zip]"
+      },
+      "date": 1499180813150
+    },
+    {
+      "type": "edit",
+      "id": "4b07fb13d80b2d16",
+      "item": {
+        "type": "paragraph",
+        "id": "4b07fb13d80b2d16",
+        "text": "Then unzip microtalk-server to get three files.  [http:/theme/microtalk.zip zip]"
+      },
+      "date": 1499180830178
+    },
+    {
+      "type": "add",
+      "id": "e7e77a9d9482057b",
+      "item": {
+        "type": "paragraph",
+        "id": "e7e77a9d9482057b",
+        "text": "Use node package manager (npm) to install the remaining files."
+      },
+      "after": "dac945155c410bb1",
+      "date": 1499180887657
+    },
+    {
+      "type": "edit",
+      "id": "e7e77a9d9482057b",
+      "item": {
+        "type": "paragraph",
+        "id": "e7e77a9d9482057b",
+        "text": "Use node package manager (npm) to install dependencies."
+      },
+      "date": 1499180904317
+    },
+    {
+      "type": "edit",
+      "id": "e7e77a9d9482057b",
+      "item": {
+        "type": "paragraph",
+        "id": "e7e77a9d9482057b",
+        "text": "Use node package manager (npm) to install the rest."
+      },
+      "date": 1499180918582
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "82258bd4f078b527"
+      },
+      "id": "82258bd4f078b527",
+      "type": "add",
+      "after": "e7e77a9d9482057b",
+      "date": 1499180923168
+    },
+    {
+      "type": "edit",
+      "id": "82258bd4f078b527",
+      "item": {
+        "type": "html",
+        "id": "82258bd4f078b527",
+        "text": "<img src=\"http:/theme/install.png\" width=420>"
+      },
+      "date": 1499180992746
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e89740ef2328d778"
+      },
+      "id": "e89740ef2328d778",
+      "type": "add",
+      "after": "82258bd4f078b527",
+      "date": 1499181022216
+    },
+    {
+      "type": "edit",
+      "id": "e89740ef2328d778",
+      "item": {
+        "type": "paragraph",
+        "id": "e89740ef2328d778",
+        "text": "Use npm to start the server."
+      },
+      "date": 1499181027486
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "609f166b2bde3325"
+      },
+      "id": "609f166b2bde3325",
+      "type": "add",
+      "after": "e89740ef2328d778",
+      "date": 1499181066855
+    },
+    {
+      "type": "edit",
+      "id": "609f166b2bde3325",
+      "item": {
+        "type": "html",
+        "id": "609f166b2bde3325",
+        "text": "<img src=\"http:/theme/start.png\" width=420>"
+      },
+      "date": 1499181075250
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6c618b4c2698233b"
+      },
+      "id": "6c618b4c2698233b",
+      "type": "add",
+      "after": "609f166b2bde3325",
+      "date": 1499181100434
+    },
+    {
+      "type": "edit",
+      "id": "6c618b4c2698233b",
+      "item": {
+        "type": "paragraph",
+        "id": "6c618b4c2698233b",
+        "text": "Visit the microtalk server at [http://localhost:4444 http://localhost:4444]"
+      },
+      "date": 1499181118857
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b22c1e6fb98d4cc5"
+      },
+      "id": "b22c1e6fb98d4cc5",
+      "type": "add",
+      "after": "6c618b4c2698233b",
+      "date": 1499181269551
+    },
+    {
+      "type": "edit",
+      "id": "b22c1e6fb98d4cc5",
+      "item": {
+        "type": "code",
+        "id": "b22c1e6fb98d4cc5",
+        "text": "const express = require('express')\nconst microtalk = require('./microtalk.js')\n\nconst app = express()\n\napp.get('/', function (req, res) {\n res.send('microtalk')\n})\n\napp.get('/eval/:expr', function (req, res) {\n var expr = req.params.expr\n result = microtalk.evaluate(expr)\n res.send(result.val)\n})\n\napp.listen(4444, function () {\n console.log('listening on port 4444')\n console.log('try http://localhost:4444/eval/{lib}')\n})"
+      },
+      "date": 1499181274085
+    },
+    {
+      "type": "move",
+      "order": [
+        "7283ddea49a10e82",
+        "701fe18a9143a933",
+        "4b07fb13d80b2d16",
+        "ad1c0cc5085b2592",
+        "e0a95d05e14f7458",
+        "dac945155c410bb1",
+        "e7e77a9d9482057b",
+        "b22c1e6fb98d4cc5",
+        "82258bd4f078b527",
+        "e89740ef2328d778",
+        "609f166b2bde3325",
+        "6c618b4c2698233b"
+      ],
+      "id": "b22c1e6fb98d4cc5",
+      "date": 1499181293471
+    },
+    {
+      "type": "move",
+      "order": [
+        "7283ddea49a10e82",
+        "701fe18a9143a933",
+        "4b07fb13d80b2d16",
+        "ad1c0cc5085b2592",
+        "e0a95d05e14f7458",
+        "dac945155c410bb1",
+        "b22c1e6fb98d4cc5",
+        "e7e77a9d9482057b",
+        "82258bd4f078b527",
+        "e89740ef2328d778",
+        "609f166b2bde3325",
+        "6c618b4c2698233b"
+      ],
+      "id": "e7e77a9d9482057b",
+      "date": 1499181299325
+    },
+    {
+      "type": "add",
+      "id": "67b962d8aa3e4e98",
+      "item": {
+        "type": "paragraph",
+        "id": "67b962d8aa3e4e98",
+        "text": "Here is index.js."
+      },
+      "after": "dac945155c410bb1",
+      "date": 1499181319466
+    },
+    {
+      "type": "remove",
+      "id": "dac945155c410bb1",
+      "date": 1499181357335
+    },
+    {
+      "type": "remove",
+      "id": "e0a95d05e14f7458",
+      "date": 1499181361755
+    },
+    {
+      "type": "remove",
+      "id": "ad1c0cc5085b2592",
+      "date": 1499181369186
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a1603f2e70794ef6"
+      },
+      "id": "a1603f2e70794ef6",
+      "type": "add",
+      "after": "6c618b4c2698233b",
+      "date": 1499181374573
+    },
+    {
+      "type": "edit",
+      "id": "a1603f2e70794ef6",
+      "item": {
+        "type": "markdown",
+        "id": "a1603f2e70794ef6",
+        "text": "- microtalk.js with a module.export added.\n- index.js web server that runs microtalk.\n- package.json instructions for installing and starting."
+      },
+      "date": 1499181403447
+    },
+    {
+      "type": "move",
+      "order": [
+        "7283ddea49a10e82",
+        "701fe18a9143a933",
+        "4b07fb13d80b2d16",
+        "a1603f2e70794ef6",
+        "67b962d8aa3e4e98",
+        "b22c1e6fb98d4cc5",
+        "e7e77a9d9482057b",
+        "82258bd4f078b527",
+        "e89740ef2328d778",
+        "609f166b2bde3325",
+        "6c618b4c2698233b"
+      ],
+      "id": "a1603f2e70794ef6",
+      "date": 1499181413854
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e78b821e939ed1a4"
+      },
+      "id": "e78b821e939ed1a4",
+      "type": "add",
+      "after": "6c618b4c2698233b",
+      "date": 1499181511054
+    },
+    {
+      "type": "edit",
+      "id": "e78b821e939ed1a4",
+      "item": {
+        "type": "html",
+        "id": "e78b821e939ed1a4",
+        "text": "<img src=\"http:/theme/root.png\" width=420>"
+      },
+      "date": 1499181519223
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ea836faaca3a39fa"
+      },
+      "id": "ea836faaca3a39fa",
+      "type": "add",
+      "after": "e78b821e939ed1a4",
+      "date": 1499181541328
+    },
+    {
+      "type": "edit",
+      "id": "ea836faaca3a39fa",
+      "item": {
+        "type": "paragraph",
+        "id": "ea836faaca3a39fa",
+        "text": "Try evaluating [http://localhost/4444/eval/{lib} http://localhost/4444/eval/{lib}]"
+      },
+      "date": 1499181576022
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f1880da652a6e6fd"
+      },
+      "id": "f1880da652a6e6fd",
+      "type": "add",
+      "after": "ea836faaca3a39fa",
+      "date": 1499181583286
+    },
+    {
+      "type": "edit",
+      "id": "f1880da652a6e6fd",
+      "item": {
+        "type": "paragraph",
+        "id": "f1880da652a6e6fd",
+        "text": "<img src=\"http:/theme/lib.png\" width=420>"
+      },
+      "date": 1499181598731
+    },
+    {
+      "type": "remove",
+      "id": "f1880da652a6e6fd",
+      "date": 1499181607373
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a34d015c5ec392bc"
+      },
+      "id": "a34d015c5ec392bc",
+      "type": "add",
+      "after": "ea836faaca3a39fa",
+      "date": 1499181609552
+    },
+    {
+      "type": "edit",
+      "id": "a34d015c5ec392bc",
+      "item": {
+        "type": "html",
+        "id": "a34d015c5ec392bc",
+        "text": "<img src=\"http:/theme/lib.png\" width=420>"
+      },
+      "date": 1499181613491
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1b9eb9e00a922931"
+      },
+      "id": "1b9eb9e00a922931",
+      "type": "add",
+      "after": "a34d015c5ec392bc",
+      "date": 1499181634133
+    },
+    {
+      "type": "edit",
+      "id": "1b9eb9e00a922931",
+      "item": {
+        "type": "paragraph",
+        "id": "1b9eb9e00a922931",
+        "text": "The server is a running program that keeps its bindings until stopped. For example, try these in order.\n\n"
+      },
+      "date": 1499181646600
+    },
+    {
+      "type": "add",
+      "id": "f92b160e665b2e34",
+      "item": {
+        "type": "paragraph",
+        "id": "f92b160e665b2e34",
+        "text": "[http://localhost:4444/eval/{def ward Ward Cunningham} http://localhost:4444/eval/{def ward Ward Cunningham}]"
+      },
+      "after": "1b9eb9e00a922931",
+      "date": 1499181662685
+    },
+    {
+      "type": "add",
+      "id": "a41398f5e351361e",
+      "item": {
+        "type": "paragraph",
+        "id": "a41398f5e351361e",
+        "text": "[http://localhost:4444/eval/{h1 Hello {ward}} {h1 Hello {ward}}]"
+      },
+      "after": "f92b160e665b2e34",
+      "date": 1499181689479
+    },
+    {
+      "type": "edit",
+      "id": "f92b160e665b2e34",
+      "item": {
+        "type": "paragraph",
+        "id": "f92b160e665b2e34",
+        "text": "[http://localhost:4444/eval/%7Bdef%20ward%20Ward%20Cunningham%7D /eval/{def ward Ward Cunningham}]"
+      },
+      "date": 1499181812787
+    },
+    {
+      "type": "edit",
+      "id": "f92b160e665b2e34",
+      "item": {
+        "type": "paragraph",
+        "id": "f92b160e665b2e34",
+        "text": "[http://localhost:4444/eval/%7Bdef%20ward%20Ward%20Cunningham%7D http://localhost:4444/eval/{def ward Ward Cunningham}]"
+      },
+      "date": 1499181842642
+    },
+    {
+      "type": "edit",
+      "id": "a41398f5e351361e",
+      "item": {
+        "type": "paragraph",
+        "id": "a41398f5e351361e",
+        "text": "[http://localhost:4444/eval/%7Bh1%20Hello%20%7Bward%7D%7D http://localhost:4444/eval/{h1 Hello {ward}}]"
+      },
+      "date": 1499181922048
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "92416335f0fdd687"
+      },
+      "id": "92416335f0fdd687",
+      "type": "add",
+      "after": "a41398f5e351361e",
+      "date": 1499181934179
+    },
+    {
+      "type": "remove",
+      "id": "92416335f0fdd687",
+      "date": 1499181944027
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "defc88cf2b335d40"
+      },
+      "id": "defc88cf2b335d40",
+      "type": "add",
+      "after": "a41398f5e351361e",
+      "date": 1499181946016
+    },
+    {
+      "type": "edit",
+      "id": "defc88cf2b335d40",
+      "item": {
+        "type": "html",
+        "id": "defc88cf2b335d40",
+        "text": "<img src=\"http:/theme/hello.png\" width=420>"
+      },
+      "date": 1499181953295
+    },
+    {
+      "type": "edit",
+      "id": "ea836faaca3a39fa",
+      "item": {
+        "type": "paragraph",
+        "id": "ea836faaca3a39fa",
+        "text": "Try evaluating [http://localhost:4444/eval/{lib} http://localhost/4444/eval/{lib}]"
+      },
+      "date": 1499182225730
+    },
+    {
+      "type": "edit",
+      "id": "ea836faaca3a39fa",
+      "item": {
+        "type": "paragraph",
+        "id": "ea836faaca3a39fa",
+        "text": "Try evaluating [http://localhost:4444/eval/{lib} http://localhost:4444/eval/{lib}]"
+      },
+      "date": 1499182235543
+    },
+    {
+      "type": "edit",
+      "id": "67b962d8aa3e4e98",
+      "item": {
+        "type": "paragraph",
+        "id": "67b962d8aa3e4e98",
+        "text": "Here is index.js which uses express for routing. [https://expressjs.com/en/guide/routing.html site]"
+      },
+      "date": 1499182753990
+    },
+    {
+      "type": "edit",
+      "id": "a41398f5e351361e",
+      "item": {
+        "type": "paragraph",
+        "id": "a41398f5e351361e",
+        "text": "[http://localhost:4444/eval/%7Bh1%20Hello%20%7Bward%7D%7D http://localhost:4444/eval/{h1 Hello {friend}}]"
+      },
+      "date": 1499182905412
+    },
+    {
+      "type": "edit",
+      "id": "1b9eb9e00a922931",
+      "item": {
+        "type": "paragraph",
+        "id": "1b9eb9e00a922931",
+        "text": "The server is a running program that keeps its bindings until stopped. For example, try these in any order.\n\n"
+      },
+      "date": 1499182917405
+    },
+    {
+      "type": "edit",
+      "id": "a41398f5e351361e",
+      "item": {
+        "type": "paragraph",
+        "id": "a41398f5e351361e",
+        "text": "[http://localhost:4444/eval/%7Bh1%20Hello%20%7Bfriend%7D%7D http://localhost:4444/eval/{h1 Hello {friend}}]"
+      },
+      "date": 1499182935995
+    },
+    {
+      "type": "edit",
+      "id": "f92b160e665b2e34",
+      "item": {
+        "type": "paragraph",
+        "id": "f92b160e665b2e34",
+        "text": "[http://localhost:4444/eval/%7Bdef%20friend%20Ward%20Cunningham%7D http://localhost:4444/eval/{def friend Ward Cunningham}]"
+      },
+      "date": 1499182987390
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "06a8dc5c45f2e06d"
+      },
+      "id": "06a8dc5c45f2e06d",
+      "type": "add",
+      "after": "defc88cf2b335d40",
+      "date": 1499183026036
+    },
+    {
+      "type": "edit",
+      "id": "06a8dc5c45f2e06d",
+      "item": {
+        "type": "paragraph",
+        "id": "06a8dc5c45f2e06d",
+        "text": "[http://localhost:4444/eval/%7Bdef%20friend%20Adrin Marty%7D http://localhost:4444/eval/{def friend Ward Cunningham}]"
+      },
+      "date": 1499183050837
+    },
+    {
+      "type": "edit",
+      "id": "06a8dc5c45f2e06d",
+      "item": {
+        "type": "paragraph",
+        "id": "06a8dc5c45f2e06d",
+        "text": "[http://localhost:4444/eval/%7Bdef%20friend%20Alian Marty%7D http://localhost:4444/eval/{def friend Alian Marty}]"
+      },
+      "date": 1499183093334
+    },
+    {
+      "type": "edit",
+      "id": "06a8dc5c45f2e06d",
+      "item": {
+        "type": "paragraph",
+        "id": "06a8dc5c45f2e06d",
+        "text": "[http://localhost:4444/eval/%7Bdef%20friend%20Alian%20Marty%7D http://localhost:4444/eval/{def friend Alian Marty}]"
+      },
+      "date": 1499183135865
+    },
+    {
+      "type": "edit",
+      "id": "06a8dc5c45f2e06d",
+      "item": {
+        "type": "paragraph",
+        "id": "06a8dc5c45f2e06d",
+        "text": "[http://localhost:4444/eval/%7Bdef%20friend%20Alain%20Marty%7D http://localhost:4444/eval/{def friend Alain Marty}]"
+      },
+      "date": 1499183198466
+    },
+    {
+      "type": "move",
+      "order": [
+        "7283ddea49a10e82",
+        "701fe18a9143a933",
+        "4b07fb13d80b2d16",
+        "a1603f2e70794ef6",
+        "67b962d8aa3e4e98",
+        "b22c1e6fb98d4cc5",
+        "e7e77a9d9482057b",
+        "82258bd4f078b527",
+        "e89740ef2328d778",
+        "609f166b2bde3325",
+        "6c618b4c2698233b",
+        "e78b821e939ed1a4",
+        "ea836faaca3a39fa",
+        "a34d015c5ec392bc",
+        "1b9eb9e00a922931",
+        "f92b160e665b2e34",
+        "06a8dc5c45f2e06d",
+        "a41398f5e351361e",
+        "defc88cf2b335d40"
+      ],
+      "id": "06a8dc5c45f2e06d",
+      "date": 1499183205655
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "03e37fbf7852af68"
+      },
+      "id": "03e37fbf7852af68",
+      "type": "add",
+      "after": "defc88cf2b335d40",
+      "date": 1499183491431
+    },
+    {
+      "type": "edit",
+      "id": "03e37fbf7852af68",
+      "item": {
+        "type": "paragraph",
+        "id": "03e37fbf7852af68",
+        "text": "See [[Testing Microtalk]] for other experiments."
+      },
+      "date": 1499183509443
+    }
+  ]
+}

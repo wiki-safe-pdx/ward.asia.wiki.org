@@ -1,0 +1,100 @@
+{
+  "title": "Servo Developer Preview",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "661aea848ffb2cf7",
+      "text": "Servo is a modern, high-performance browser engine being developed for application and embedded use.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "576929ee65e44c22",
+      "text": "These pre-built nightly snapshots allow developers to try Servo and report issues without building Servo locally. Reports go straight to github where developers are waiting. [http://download.servo.org/ page]"
+    },
+    {
+      "type": "paragraph",
+      "id": "08fc3c63dfff2569",
+      "text": "assertion failed: !self.Document().needs_reflow() || self.window_size.get().is_none() || self.suppress_reflow.get() [https://github.com/servo/servo/issues/12150 github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Servo Developer Preview",
+        "story": []
+      },
+      "date": 1467428734065
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "661aea848ffb2cf7"
+      },
+      "id": "661aea848ffb2cf7",
+      "type": "add",
+      "date": 1467428777889
+    },
+    {
+      "type": "edit",
+      "id": "661aea848ffb2cf7",
+      "item": {
+        "type": "paragraph",
+        "id": "661aea848ffb2cf7",
+        "text": "Servo is a modern, high-performance browser engine being developed for application and embedded use.\n\n"
+      },
+      "date": 1467428785893
+    },
+    {
+      "type": "add",
+      "id": "576929ee65e44c22",
+      "item": {
+        "type": "paragraph",
+        "id": "576929ee65e44c22",
+        "text": "These pre-built nightly snapshots allow developers to try Servo and report issues without building Servo locally."
+      },
+      "after": "661aea848ffb2cf7",
+      "date": 1467428787360
+    },
+    {
+      "type": "edit",
+      "id": "576929ee65e44c22",
+      "item": {
+        "type": "paragraph",
+        "id": "576929ee65e44c22",
+        "text": "These pre-built nightly snapshots allow developers to try Servo and report issues without building Servo locally. Reports go straight to github where developers are waiting. [http://download.servo.org/ page]"
+      },
+      "date": 1467428885324
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "08fc3c63dfff2569"
+      },
+      "id": "08fc3c63dfff2569",
+      "type": "add",
+      "after": "576929ee65e44c22",
+      "date": 1467428974889
+    },
+    {
+      "type": "edit",
+      "id": "08fc3c63dfff2569",
+      "item": {
+        "type": "paragraph",
+        "id": "08fc3c63dfff2569",
+        "text": "assertion failed: !self.Document().needs_reflow() || self.window_size.get().is_none() || self.suppress_reflow.get()"
+      },
+      "date": 1467428984743
+    },
+    {
+      "type": "edit",
+      "id": "08fc3c63dfff2569",
+      "item": {
+        "type": "paragraph",
+        "id": "08fc3c63dfff2569",
+        "text": "assertion failed: !self.Document().needs_reflow() || self.window_size.get().is_none() || self.suppress_reflow.get() [https://github.com/servo/servo/issues/12150 github]"
+      },
+      "date": 1467429007588
+    }
+  ]
+}

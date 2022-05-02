@@ -1,0 +1,403 @@
+{
+  "title": "Five Shot Video Template",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d6dc8929464b0948",
+      "text": "Use this template for stories about people engaged in activities. Shoot in order five 10 second takes from the vantage point and viewing angle described."
+    },
+    {
+      "type": "paragraph",
+      "id": "ba8c1bd4ada2f6be",
+      "text": "A closeup on the hands – showing WHAT is happening\n"
+    },
+    {
+      "type": "factory",
+      "prompt": "Tap to START Recording",
+      "id": "8ca82192b3ee1993"
+    },
+    {
+      "type": "paragraph",
+      "id": "167c559578b98cbb",
+      "text": "A closeup on the face – WHO is doing it\n"
+    },
+    {
+      "type": "factory",
+      "prompt": "Tap to START Recording",
+      "id": "b9107458a21b083c"
+    },
+    {
+      "type": "paragraph",
+      "id": "1439ea38463b4fc4",
+      "text": "A wide shot – WHERE its happening\n"
+    },
+    {
+      "type": "factory",
+      "prompt": "Tap to START Recording",
+      "id": "e31bdfa116e6d4af"
+    },
+    {
+      "type": "paragraph",
+      "id": "ce80ef4a7a2b4207",
+      "text": "An over the shoulder – linking the previous three concepts\n"
+    },
+    {
+      "type": "factory",
+      "prompt": "Tap to START Recording",
+      "id": "ffe0cdbab0f088b1"
+    },
+    {
+      "type": "paragraph",
+      "id": "423f248e2a079f2f",
+      "text": "An unusual, or side/low shot – story-specific context"
+    },
+    {
+      "type": "factory",
+      "prompt": "Tap to START Recording",
+      "id": "0cdca7fbab09e1a2"
+    },
+    {
+      "type": "paragraph",
+      "id": "bb325f6dc3fb146e",
+      "text": "Instructions here to preview this story quickly in a private youtube channel at moderate resolution. [http://example.com preview]"
+    },
+    {
+      "type": "paragraph",
+      "id": "29075f2342eb80d9",
+      "text": "Instructions here to publish this story in high definition in the preconfigured content delivery network. [http://example.com publish]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Five Shot Video Template",
+        "story": []
+      },
+      "date": 1438352914136
+    },
+    {
+      "item": {
+        "type": "factory",
+        "prompt": "Tap to START Recording",
+        "id": "d6dc8929464b0948"
+      },
+      "id": "d6dc8929464b0948",
+      "type": "add",
+      "date": 1438352923321
+    },
+    {
+      "type": "edit",
+      "id": "d6dc8929464b0948",
+      "item": {
+        "type": "paragraph",
+        "id": "d6dc8929464b0948",
+        "text": "Use this template for stories about people engaged in activities. Shoot in order five 10 second takes from the vantage point and viewing angle described."
+      },
+      "date": 1438353059755
+    },
+    {
+      "type": "add",
+      "id": "ba8c1bd4ada2f6be",
+      "item": {
+        "type": "paragraph",
+        "id": "ba8c1bd4ada2f6be",
+        "text": "A closeup on the hands of a subject – showing WHAT is happening\n"
+      },
+      "after": "d6dc8929464b0948",
+      "date": 1438353068279
+    },
+    {
+      "type": "add",
+      "id": "167c559578b98cbb",
+      "item": {
+        "type": "paragraph",
+        "id": "167c559578b98cbb",
+        "text": "A closeup on the face – WHO is doing it\n"
+      },
+      "after": "ba8c1bd4ada2f6be",
+      "date": 1438353071733
+    },
+    {
+      "type": "add",
+      "id": "1439ea38463b4fc4",
+      "item": {
+        "type": "paragraph",
+        "id": "1439ea38463b4fc4",
+        "text": "A wide shot – WHERE its happening\n"
+      },
+      "after": "167c559578b98cbb",
+      "date": 1438353074546
+    },
+    {
+      "type": "add",
+      "id": "ce80ef4a7a2b4207",
+      "item": {
+        "type": "paragraph",
+        "id": "ce80ef4a7a2b4207",
+        "text": "An over the shoulder shot (OTS) – linking together the previous three concepts\n"
+      },
+      "after": "1439ea38463b4fc4",
+      "date": 1438353078580
+    },
+    {
+      "type": "add",
+      "id": "423f248e2a079f2f",
+      "item": {
+        "type": "paragraph",
+        "id": "423f248e2a079f2f",
+        "text": "An unusual, or side/low shot – providing story-specific context"
+      },
+      "after": "ce80ef4a7a2b4207",
+      "date": 1438353079907
+    },
+    {
+      "item": {
+        "type": "factory",
+        "prompt": "Tap to START Recording",
+        "id": "8ca82192b3ee1993"
+      },
+      "id": "8ca82192b3ee1993",
+      "type": "add",
+      "after": "423f248e2a079f2f",
+      "date": 1438353088909
+    },
+    {
+      "type": "move",
+      "order": [
+        "d6dc8929464b0948",
+        "ba8c1bd4ada2f6be",
+        "8ca82192b3ee1993",
+        "167c559578b98cbb",
+        "1439ea38463b4fc4",
+        "ce80ef4a7a2b4207",
+        "423f248e2a079f2f"
+      ],
+      "id": "8ca82192b3ee1993",
+      "date": 1438353092477
+    },
+    {
+      "item": {
+        "type": "factory",
+        "prompt": "Tap to START Recording",
+        "id": "b9107458a21b083c"
+      },
+      "id": "b9107458a21b083c",
+      "type": "add",
+      "after": "423f248e2a079f2f",
+      "date": 1438353095215
+    },
+    {
+      "type": "move",
+      "order": [
+        "d6dc8929464b0948",
+        "ba8c1bd4ada2f6be",
+        "8ca82192b3ee1993",
+        "167c559578b98cbb",
+        "b9107458a21b083c",
+        "1439ea38463b4fc4",
+        "ce80ef4a7a2b4207",
+        "423f248e2a079f2f"
+      ],
+      "id": "b9107458a21b083c",
+      "date": 1438353098306
+    },
+    {
+      "item": {
+        "type": "factory",
+        "prompt": "Tap to START Recording",
+        "id": "e31bdfa116e6d4af"
+      },
+      "id": "e31bdfa116e6d4af",
+      "type": "add",
+      "after": "423f248e2a079f2f",
+      "date": 1438353102088
+    },
+    {
+      "type": "move",
+      "order": [
+        "d6dc8929464b0948",
+        "ba8c1bd4ada2f6be",
+        "8ca82192b3ee1993",
+        "167c559578b98cbb",
+        "b9107458a21b083c",
+        "1439ea38463b4fc4",
+        "e31bdfa116e6d4af",
+        "ce80ef4a7a2b4207",
+        "423f248e2a079f2f"
+      ],
+      "id": "e31bdfa116e6d4af",
+      "date": 1438353105077
+    },
+    {
+      "item": {
+        "type": "factory",
+        "prompt": "Tap to START Recording",
+        "id": "ffe0cdbab0f088b1"
+      },
+      "id": "ffe0cdbab0f088b1",
+      "type": "add",
+      "after": "423f248e2a079f2f",
+      "date": 1438353107078
+    },
+    {
+      "type": "move",
+      "order": [
+        "d6dc8929464b0948",
+        "ba8c1bd4ada2f6be",
+        "8ca82192b3ee1993",
+        "167c559578b98cbb",
+        "b9107458a21b083c",
+        "1439ea38463b4fc4",
+        "e31bdfa116e6d4af",
+        "ce80ef4a7a2b4207",
+        "ffe0cdbab0f088b1",
+        "423f248e2a079f2f"
+      ],
+      "id": "ffe0cdbab0f088b1",
+      "date": 1438353110559
+    },
+    {
+      "item": {
+        "type": "factory",
+        "prompt": "Tap to START Recording",
+        "id": "0cdca7fbab09e1a2"
+      },
+      "id": "0cdca7fbab09e1a2",
+      "type": "add",
+      "after": "423f248e2a079f2f",
+      "date": 1438353112860
+    },
+    {
+      "type": "edit",
+      "id": "ba8c1bd4ada2f6be",
+      "item": {
+        "type": "paragraph",
+        "id": "ba8c1bd4ada2f6be",
+        "text": "A closeup on the hands – showing WHAT is happening\n"
+      },
+      "date": 1438355845640
+    },
+    {
+      "type": "edit",
+      "id": "ce80ef4a7a2b4207",
+      "item": {
+        "type": "paragraph",
+        "id": "ce80ef4a7a2b4207",
+        "text": "An over the shoulder – linking the previous three concepts\n"
+      },
+      "date": 1438355872930
+    },
+    {
+      "type": "edit",
+      "id": "423f248e2a079f2f",
+      "item": {
+        "type": "paragraph",
+        "id": "423f248e2a079f2f",
+        "text": "An unusual, or side/low shot – story-specific context"
+      },
+      "date": 1438355882695
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bb325f6dc3fb146e"
+      },
+      "id": "bb325f6dc3fb146e",
+      "type": "add",
+      "after": "0cdca7fbab09e1a2",
+      "date": 1438355968652
+    },
+    {
+      "type": "edit",
+      "id": "bb325f6dc3fb146e",
+      "item": {
+        "type": "paragraph",
+        "id": "bb325f6dc3fb146e",
+        "text": "Instructions here to preview this story in a private youtube channel. "
+      },
+      "date": 1438356024363
+    },
+    {
+      "type": "add",
+      "id": "29075f2342eb80d9",
+      "item": {
+        "type": "paragraph",
+        "id": "29075f2342eb80d9",
+        "text": "Instructions here to publish this story in high definition in the preconfigured content delivery network."
+      },
+      "after": "bb325f6dc3fb146e",
+      "date": 1438356072907
+    },
+    {
+      "type": "edit",
+      "id": "bb325f6dc3fb146e",
+      "item": {
+        "type": "paragraph",
+        "id": "bb325f6dc3fb146e",
+        "text": "Instructions here to preview this story in a private youtube channel at moderate fidelity."
+      },
+      "date": 1438356154198
+    },
+    {
+      "type": "edit",
+      "id": "bb325f6dc3fb146e",
+      "item": {
+        "type": "paragraph",
+        "id": "bb325f6dc3fb146e",
+        "text": "Instructions here to preview this story in a private youtube channel at moderate fidelity. [http://example.com preview]"
+      },
+      "date": 1438356194143
+    },
+    {
+      "type": "edit",
+      "id": "29075f2342eb80d9",
+      "item": {
+        "type": "paragraph",
+        "id": "29075f2342eb80d9",
+        "text": "Instructions here to publish this story in high definition in the preconfigured content delivery network. [http://example.com publish]"
+      },
+      "date": 1438356210380
+    },
+    {
+      "type": "edit",
+      "id": "bb325f6dc3fb146e",
+      "item": {
+        "type": "paragraph",
+        "id": "bb325f6dc3fb146e",
+        "text": "Instructions here to preview this story in a private youtube channel at moderate resolution. [http://example.com preview]"
+      },
+      "date": 1438356255795
+    },
+    {
+      "type": "edit",
+      "id": "bb325f6dc3fb146e",
+      "item": {
+        "type": "paragraph",
+        "id": "bb325f6dc3fb146e",
+        "text": "Instructions here to preview this story quickly in a private youtube channel at moderate resolution. [http://example.com preview]"
+      },
+      "date": 1438356269577
+    },
+    {
+      "type": "edit",
+      "id": "ce80ef4a7a2b4207",
+      "item": {
+        "type": "paragraph",
+        "id": "ce80ef4a7a2b4207",
+        "text": "An over the shoulder – LINKING the previous three concepts\n"
+      },
+      "date": 1438358284669
+    },
+    {
+      "type": "edit",
+      "id": "ce80ef4a7a2b4207",
+      "item": {
+        "type": "paragraph",
+        "id": "ce80ef4a7a2b4207",
+        "text": "An over the shoulder – linking the previous three concepts\n"
+      },
+      "date": 1438358292382
+    }
+  ]
+}

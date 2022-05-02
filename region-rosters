@@ -1,0 +1,81 @@
+{
+  "title": "Region Rosters",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3e768c167904cac7",
+      "text": "Region crawling [[Configuration]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "653e16d207c73a9a",
+      "text": "[[One Degree]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "74aac4158603efcc",
+      "text": "[[Two Degrees]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "a9ab45a878d2c657",
+      "text": "[[Three Degrees]]"
+    }
+  ],
+  "dynamic": true,
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Region Rosters",
+        "story": []
+      },
+      "date": 1589414224550
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "3e768c167904cac7",
+        "text": "Region crawling [[Configuration]]"
+      },
+      "id": "3e768c167904cac7",
+      "date": 1589414224550
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "653e16d207c73a9a",
+        "text": "[[One Degree]]"
+      },
+      "id": "653e16d207c73a9a",
+      "date": 1589414224550
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "74aac4158603efcc",
+        "text": "[[Two Degrees]]"
+      },
+      "id": "74aac4158603efcc",
+      "date": 1589414224550
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "a9ab45a878d2c657",
+        "text": "[[Three Degrees]]"
+      },
+      "id": "a9ab45a878d2c657",
+      "date": 1589414224550
+    },
+    {
+      "type": "fork",
+      "site": "scrape.seran.c2.com",
+      "date": 1589414236893
+    }
+  ]
+}

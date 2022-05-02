@@ -1,0 +1,581 @@
+{
+  "title": "Recover File from Backup",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "a8805e5752c0db80",
+      "text": "I recently lost a file while debugging from the presumed trustworthy admin site asia.wiki.org. This doesn't make sense. But these are the steps I followed to recover the file and these do make sense."
+    },
+    {
+      "type": "markdown",
+      "id": "03e851bd457d8d63",
+      "text": "# on backup server"
+    },
+    {
+      "type": "paragraph",
+      "id": "6d3b19e31fbcee51",
+      "text": "Find the archive. It is at c2.com:wiki/asia"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ba7e4f860867212",
+      "text": "Find recent work with ls -ltr."
+    },
+    {
+      "type": "paragraph",
+      "id": "91118695eeac11ac",
+      "text": "Examine getum.sh script which included the key step."
+    },
+    {
+      "type": "paragraph",
+      "id": "ea9b0e84b034ec7e",
+      "text": "Perform the key step for missing file."
+    },
+    {
+      "type": "code",
+      "id": "288a113c5a13ef46",
+      "text": "tar xOzf store/Tue.tgz .wiki/asia.wiki.org/pages/server-configuration >server-configuration"
+    },
+    {
+      "type": "markdown",
+      "id": "b2c6fbadf99193cb",
+      "text": "# on laptop with broad access creds"
+    },
+    {
+      "type": "paragraph",
+      "id": "2667b12fbfa63726",
+      "text": "Move the file to root on asia.wiki.org"
+    },
+    {
+      "type": "code",
+      "id": "995e9ba1c951ee95",
+      "text": "scp c2.com:wiki/asia/server-configuration .\nscp server-configuration asia/server-configuration"
+    },
+    {
+      "type": "markdown",
+      "id": "d2a6d220715d55ca",
+      "text": "# on wiki server"
+    },
+    {
+      "type": "paragraph",
+      "id": "f8e86d7a3f377716",
+      "text": "Confirm that the file is missing"
+    },
+    {
+      "type": "code",
+      "id": "52aad42f281c5b74",
+      "text": "ls .wiki/asia.wiki.org/pages/"
+    },
+    {
+      "type": "paragraph",
+      "id": "974104cd4f744297",
+      "text": "Install the recovered file"
+    },
+    {
+      "type": "code",
+      "id": "25398e05cd0cf539",
+      "text": "mv server-configuration .wiki/asia.wiki.org/pages/"
+    },
+    {
+      "type": "paragraph",
+      "id": "23258cac779b4c02",
+      "text": "Confirm that the pages is again available in wiki"
+    },
+    {
+      "type": "pagefold",
+      "id": "6ddd972f06810bf4",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "a1e616679ff51d3a",
+      "text": "I cannot explain how it is that the page vanish except that I was using it to explore cross-site some problems experienced with Plugmatic elsewhere. I was so shocked that I went straight to my backup. Later I thought I should check the recycler which showed the missing file present there but would flash briefly when selected then return to the missing file ghost page. From the command line I see that the recycler file was an empty file. Where did that come from?"
+    },
+    {
+      "type": "code",
+      "id": "093d1a835126a721",
+      "text": "~/.wiki/asia.wiki.org/recycle# ls -ltr\ntotal 8\n-rw-r--r-- 1 root root 4491 Apr 18  2019 custom-plugins\n-rw-r--r-- 1 root root    0 Jan  6 14:27 server-configuration"
+    },
+    {
+      "type": "paragraph",
+      "id": "ca19a1cb686b454b",
+      "text": "I don't think anything I might have done from the command line could have zeroed the recycler file. I check the timestamp on the restored file that indicate my messing around was well after the recycler entry was made."
+    },
+    {
+      "type": "code",
+      "id": "0f0c87cb7f5e1204",
+      "text": "-rw-r--r-- 1 root root  2345 Jan  6 14:54 server-configuration"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Recover File from Backup",
+        "story": []
+      },
+      "date": 1609945095962
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a8805e5752c0db80"
+      },
+      "id": "a8805e5752c0db80",
+      "type": "add",
+      "date": 1609945104040
+    },
+    {
+      "type": "edit",
+      "id": "a8805e5752c0db80",
+      "item": {
+        "type": "paragraph",
+        "id": "a8805e5752c0db80",
+        "text": "I recently lost a file while debugging from the presumed trustworthy admin site asia.wiki.org. This doesn't make sense. But these are the steps I followed to recover the file and these do make sense."
+      },
+      "date": 1609945212540
+    },
+    {
+      "type": "add",
+      "id": "6d3b19e31fbcee51",
+      "item": {
+        "type": "paragraph",
+        "id": "6d3b19e31fbcee51",
+        "text": "Find the archive. It is at c2.com:wiki/asia"
+      },
+      "after": "a8805e5752c0db80",
+      "date": 1609945257547
+    },
+    {
+      "type": "add",
+      "id": "4ba7e4f860867212",
+      "item": {
+        "type": "paragraph",
+        "id": "4ba7e4f860867212",
+        "text": "Find recent work with ls -ltr."
+      },
+      "after": "6d3b19e31fbcee51",
+      "date": 1609945298191
+    },
+    {
+      "type": "add",
+      "id": "91118695eeac11ac",
+      "item": {
+        "type": "paragraph",
+        "id": "91118695eeac11ac",
+        "text": "Examine getum.sh script which included the key step."
+      },
+      "after": "4ba7e4f860867212",
+      "date": 1609945346736
+    },
+    {
+      "type": "add",
+      "id": "ea9b0e84b034ec7e",
+      "item": {
+        "type": "paragraph",
+        "id": "ea9b0e84b034ec7e",
+        "text": "Perform the key step for missing file."
+      },
+      "after": "91118695eeac11ac",
+      "date": 1609945537334
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "288a113c5a13ef46"
+      },
+      "id": "288a113c5a13ef46",
+      "type": "add",
+      "after": "ea9b0e84b034ec7e",
+      "date": 1609945539005
+    },
+    {
+      "type": "edit",
+      "id": "288a113c5a13ef46",
+      "item": {
+        "type": "code",
+        "id": "288a113c5a13ef46",
+        "text": "tar xOzf store/Tue.tgz .wiki/asia.wiki.org/pages/server-configuration >server-configuration"
+      },
+      "date": 1609945543021
+    },
+    {
+      "type": "add",
+      "id": "03e851bd457d8d63",
+      "item": {
+        "type": "paragraph",
+        "id": "03e851bd457d8d63",
+        "text": "# on backup server"
+      },
+      "after": "a8805e5752c0db80",
+      "date": 1609945605297
+    },
+    {
+      "type": "edit",
+      "id": "03e851bd457d8d63",
+      "item": {
+        "type": "markdown",
+        "id": "03e851bd457d8d63",
+        "text": "# on backup server"
+      },
+      "date": 1609945608525
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b2c6fbadf99193cb"
+      },
+      "id": "b2c6fbadf99193cb",
+      "type": "add",
+      "after": "288a113c5a13ef46",
+      "date": 1609945611179
+    },
+    {
+      "type": "edit",
+      "id": "b2c6fbadf99193cb",
+      "item": {
+        "type": "paragraph",
+        "id": "b2c6fbadf99193cb",
+        "text": "# on laptop with broad access creds"
+      },
+      "date": 1609945634238
+    },
+    {
+      "type": "edit",
+      "id": "b2c6fbadf99193cb",
+      "item": {
+        "type": "markdown",
+        "id": "b2c6fbadf99193cb",
+        "text": "# on laptop with broad access creds"
+      },
+      "date": 1609945637942
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "995e9ba1c951ee95"
+      },
+      "id": "995e9ba1c951ee95",
+      "type": "add",
+      "after": "b2c6fbadf99193cb",
+      "date": 1609945639621
+    },
+    {
+      "type": "edit",
+      "id": "995e9ba1c951ee95",
+      "item": {
+        "type": "factory",
+        "id": "995e9ba1c951ee95",
+        "text": "scp c2.com:wiki/asia/server-configuration ."
+      },
+      "date": 1609945710886
+    },
+    {
+      "type": "edit",
+      "id": "995e9ba1c951ee95",
+      "item": {
+        "type": "code",
+        "id": "995e9ba1c951ee95",
+        "text": "scp c2.com:wiki/asia/server-configuration .\nscp server-configuration asia"
+      },
+      "date": 1609945748103
+    },
+    {
+      "type": "add",
+      "id": "2667b12fbfa63726",
+      "item": {
+        "type": "paragraph",
+        "id": "2667b12fbfa63726",
+        "text": "Move the file to root on asia.wiki.org"
+      },
+      "after": "ea9b0e84b034ec7e",
+      "date": 1609945774443
+    },
+    {
+      "id": "2667b12fbfa63726",
+      "type": "move",
+      "order": [
+        "a8805e5752c0db80",
+        "03e851bd457d8d63",
+        "6d3b19e31fbcee51",
+        "4ba7e4f860867212",
+        "91118695eeac11ac",
+        "ea9b0e84b034ec7e",
+        "288a113c5a13ef46",
+        "b2c6fbadf99193cb",
+        "2667b12fbfa63726",
+        "995e9ba1c951ee95"
+      ],
+      "date": 1609945777393
+    },
+    {
+      "type": "edit",
+      "id": "995e9ba1c951ee95",
+      "item": {
+        "type": "code",
+        "id": "995e9ba1c951ee95",
+        "text": "scp c2.com:wiki/asia/server-configuration .\nscp server-configuration asia/server-configuration"
+      },
+      "date": 1609945795341
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d2a6d220715d55ca"
+      },
+      "id": "d2a6d220715d55ca",
+      "type": "add",
+      "after": "995e9ba1c951ee95",
+      "date": 1609945798553
+    },
+    {
+      "type": "edit",
+      "id": "d2a6d220715d55ca",
+      "item": {
+        "type": "paragraph",
+        "id": "d2a6d220715d55ca",
+        "text": "# on wiki server"
+      },
+      "date": 1609945819478
+    },
+    {
+      "type": "add",
+      "id": "f8e86d7a3f377716",
+      "item": {
+        "type": "paragraph",
+        "id": "f8e86d7a3f377716",
+        "text": "Confirm that the file is missing"
+      },
+      "after": "d2a6d220715d55ca",
+      "date": 1609945851860
+    },
+    {
+      "type": "edit",
+      "id": "d2a6d220715d55ca",
+      "item": {
+        "type": "markdown",
+        "id": "d2a6d220715d55ca",
+        "text": "# on wiki server"
+      },
+      "date": 1609945854099
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "52aad42f281c5b74"
+      },
+      "id": "52aad42f281c5b74",
+      "type": "add",
+      "after": "f8e86d7a3f377716",
+      "date": 1609945888088
+    },
+    {
+      "type": "edit",
+      "id": "52aad42f281c5b74",
+      "item": {
+        "type": "code",
+        "id": "52aad42f281c5b74",
+        "text": "ls .wiki/asia.wiki.org/pages/"
+      },
+      "date": 1609945893148
+    },
+    {
+      "type": "add",
+      "id": "974104cd4f744297",
+      "item": {
+        "type": "paragraph",
+        "id": "974104cd4f744297",
+        "text": "Install the recovered file"
+      },
+      "after": "f8e86d7a3f377716",
+      "date": 1609945916957
+    },
+    {
+      "id": "974104cd4f744297",
+      "type": "move",
+      "order": [
+        "a8805e5752c0db80",
+        "03e851bd457d8d63",
+        "6d3b19e31fbcee51",
+        "4ba7e4f860867212",
+        "91118695eeac11ac",
+        "ea9b0e84b034ec7e",
+        "288a113c5a13ef46",
+        "b2c6fbadf99193cb",
+        "2667b12fbfa63726",
+        "995e9ba1c951ee95",
+        "d2a6d220715d55ca",
+        "f8e86d7a3f377716",
+        "52aad42f281c5b74",
+        "974104cd4f744297"
+      ],
+      "date": 1609945919833
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "25398e05cd0cf539"
+      },
+      "id": "25398e05cd0cf539",
+      "type": "add",
+      "after": "974104cd4f744297",
+      "date": 1609945942246
+    },
+    {
+      "type": "edit",
+      "id": "25398e05cd0cf539",
+      "item": {
+        "type": "code",
+        "id": "25398e05cd0cf539",
+        "text": "mv server-configuration .wiki/asia.wiki.org/pages/"
+      },
+      "date": 1609945948897
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "23258cac779b4c02"
+      },
+      "id": "23258cac779b4c02",
+      "type": "add",
+      "after": "25398e05cd0cf539",
+      "date": 1609945972573
+    },
+    {
+      "type": "edit",
+      "id": "23258cac779b4c02",
+      "item": {
+        "type": "paragraph",
+        "id": "23258cac779b4c02",
+        "text": "Confirm that the pages is again available in wiki"
+      },
+      "date": 1609945990172
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a1e616679ff51d3a"
+      },
+      "id": "a1e616679ff51d3a",
+      "type": "add",
+      "after": "23258cac779b4c02",
+      "date": 1609946385324
+    },
+    {
+      "type": "edit",
+      "id": "a1e616679ff51d3a",
+      "item": {
+        "type": "paragraph",
+        "id": "a1e616679ff51d3a",
+        "text": "I cannot explain how it is that the page vanish except that I was using it to explore cross-site some problems experienced with Plugmatic elsewhere. I was so shocked that I went straight to my backup. Later I thought I should check the recycler which showed the missing file present there but would flash briefly when selected then return to the missing file ghost page. From the command line I see that the recycler file was an empty file. Where did that come from?"
+      },
+      "date": 1609946606114
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "093d1a835126a721"
+      },
+      "id": "093d1a835126a721",
+      "type": "add",
+      "after": "a1e616679ff51d3a",
+      "date": 1609946608373
+    },
+    {
+      "type": "edit",
+      "id": "093d1a835126a721",
+      "item": {
+        "type": "code",
+        "id": "093d1a835126a721",
+        "text": "~/.wiki/asia.wiki.org/recycle# ls -ltr\ntotal 8\n-rw-r--r-- 1 root root 4491 Apr 18  2019 custom-plugins\n-rw-r--r-- 1 root root    0 Jan  6 14:27 server-configuration"
+      },
+      "date": 1609946612972
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6ddd972f06810bf4"
+      },
+      "id": "6ddd972f06810bf4",
+      "type": "add",
+      "after": "093d1a835126a721",
+      "date": 1609946648412
+    },
+    {
+      "type": "edit",
+      "id": "6ddd972f06810bf4",
+      "item": {
+        "type": "pagefold",
+        "id": "6ddd972f06810bf4",
+        "text": "."
+      },
+      "date": 1609946652901
+    },
+    {
+      "id": "6ddd972f06810bf4",
+      "type": "move",
+      "order": [
+        "a8805e5752c0db80",
+        "03e851bd457d8d63",
+        "6d3b19e31fbcee51",
+        "4ba7e4f860867212",
+        "91118695eeac11ac",
+        "ea9b0e84b034ec7e",
+        "288a113c5a13ef46",
+        "b2c6fbadf99193cb",
+        "2667b12fbfa63726",
+        "995e9ba1c951ee95",
+        "d2a6d220715d55ca",
+        "f8e86d7a3f377716",
+        "52aad42f281c5b74",
+        "974104cd4f744297",
+        "25398e05cd0cf539",
+        "23258cac779b4c02",
+        "6ddd972f06810bf4",
+        "a1e616679ff51d3a",
+        "093d1a835126a721"
+      ],
+      "date": 1609946656229
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ca19a1cb686b454b"
+      },
+      "id": "ca19a1cb686b454b",
+      "type": "add",
+      "after": "093d1a835126a721",
+      "date": 1609946741346
+    },
+    {
+      "type": "edit",
+      "id": "ca19a1cb686b454b",
+      "item": {
+        "type": "paragraph",
+        "id": "ca19a1cb686b454b",
+        "text": "I don't think anything I might have done from the command line could have zeroed the recycler file. I check the timestamp on the restored file that indicate my messing around was well after the recycler entry was made."
+      },
+      "date": 1609946827271
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0f0c87cb7f5e1204"
+      },
+      "id": "0f0c87cb7f5e1204",
+      "type": "add",
+      "after": "ca19a1cb686b454b",
+      "date": 1609946830676
+    },
+    {
+      "type": "edit",
+      "id": "0f0c87cb7f5e1204",
+      "item": {
+        "type": "code",
+        "id": "0f0c87cb7f5e1204",
+        "text": "-rw-r--r-- 1 root root  2345 Jan  6 14:54 server-configuration"
+      },
+      "date": 1609946835868
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "title": "Javascript Slide presentation",
+  "story": [
+    {
+      "type": "markdown",
+      "id": "c3f4c057ccc0b549",
+      "text": "% Eating Habits\n% John Doe\n% March 22, 2005\n\n# In the morning\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n- Eat spaghetti\n- Drink wine\n\n# Conclusion\n\n- And the answer is...\n- $f(x)=\\sum_{n=0}^\\infty\\frac{f^{(n)}(a)}{n!}(x-a)^n$"
+    },
+    {
+      "type": "paragraph",
+      "id": "7afddb4d864a8158",
+      "text": "The text above is a [[markdown]] document, and it can be rendered to a [[reveal.js]] slice presentation with the following [[pandoc]] command:"
+    },
+    {
+      "type": "code",
+      "id": "ae85a412306b427f",
+      "text": "pandoc -s --mathjax -i -t revealjs SLIDES -o example16d.html"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Javascript Slide presentation",
+        "story": []
+      },
+      "date": 1451697476323
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c3f4c057ccc0b549"
+      },
+      "id": "c3f4c057ccc0b549",
+      "type": "add",
+      "date": 1451697477342
+    },
+    {
+      "type": "edit",
+      "id": "c3f4c057ccc0b549",
+      "item": {
+        "type": "paragraph",
+        "id": "c3f4c057ccc0b549",
+        "text": "% Eating Habits\n% John Doe\n% March 22, 2005\n\n# In the morning\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n- Eat spaghetti\n- Drink wine\n\n# Conclusion\n\n- And the answer is...\n- $f(x)=\\sum_{n=0}^\\infty\\frac{f^{(n)}(a)}{n!}(x-a)^n$"
+      },
+      "date": 1451697498087
+    },
+    {
+      "type": "edit",
+      "id": "c3f4c057ccc0b549",
+      "item": {
+        "type": "markdown",
+        "id": "c3f4c057ccc0b549",
+        "text": "% Eating Habits\n% John Doe\n% March 22, 2005\n\n# In the morning\n\n- Eat eggs\n- Drink coffee\n\n# In the evening\n\n- Eat spaghetti\n- Drink wine\n\n# Conclusion\n\n- And the answer is...\n- $f(x)=\\sum_{n=0}^\\infty\\frac{f^{(n)}(a)}{n!}(x-a)^n$"
+      },
+      "date": 1451697503543
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7afddb4d864a8158"
+      },
+      "id": "7afddb4d864a8158",
+      "type": "add",
+      "after": "c3f4c057ccc0b549",
+      "date": 1451697518702
+    },
+    {
+      "type": "edit",
+      "id": "7afddb4d864a8158",
+      "item": {
+        "type": "paragraph",
+        "id": "7afddb4d864a8158",
+        "text": "The text below is a [[markdown]] document, and it can be rendered to a [[reveal.js]] slice presentation with the following [[pandoc]] command:"
+      },
+      "date": 1451697595060
+    },
+    {
+      "type": "move",
+      "order": [
+        "7afddb4d864a8158",
+        "c3f4c057ccc0b549"
+      ],
+      "id": "7afddb4d864a8158",
+      "date": 1451697598310
+    },
+    {
+      "type": "edit",
+      "id": "7afddb4d864a8158",
+      "item": {
+        "type": "paragraph",
+        "id": "7afddb4d864a8158",
+        "text": "The text above is a [[markdown]] document, and it can be rendered to a [[reveal.js]] slice presentation with the following [[pandoc]] command:"
+      },
+      "date": 1451697609718
+    },
+    {
+      "type": "move",
+      "order": [
+        "c3f4c057ccc0b549",
+        "7afddb4d864a8158"
+      ],
+      "id": "7afddb4d864a8158",
+      "date": 1451697612061
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ae85a412306b427f"
+      },
+      "id": "ae85a412306b427f",
+      "type": "add",
+      "after": "7afddb4d864a8158",
+      "date": 1451697613316
+    },
+    {
+      "type": "edit",
+      "id": "ae85a412306b427f",
+      "item": {
+        "type": "code",
+        "id": "ae85a412306b427f",
+        "text": "pandoc -s --mathjax -i -t revealjs SLIDES -o example16d.html"
+      },
+      "date": 1451697648041
+    },
+    {
+      "type": "fork",
+      "site": "c0de.academy",
+      "date": 1459363287390
+    }
+  ]
+}

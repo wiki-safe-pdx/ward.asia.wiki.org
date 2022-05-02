@@ -1,0 +1,172 @@
+{
+  "title": "A Tiny, Static, Full-Text Search",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b7512608956d36a0",
+      "text": "Let's run all articles through a generator that creates a tiny, self-contained search index using this magical data structure called a Bloom Filter. [https://endler.dev/2019/tinysearch/ post]"
+    },
+    {
+      "type": "paragraph",
+      "id": "9e6fd70fdd13673f",
+      "text": "A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Bloom. [https://en.wikipedia.org/wiki/Bloom_filter wikipedia]"
+    },
+    {
+      "type": "pagefold",
+      "id": "ce7439bb439539a7",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "df2ca3eba755232a",
+      "text": "The article talks about both server and client side code developed in rust. I'm less interested in the technology than the scaling properties of bloom filters as a preselector for the tree-based search that we now have."
+    },
+    {
+      "type": "paragraph",
+      "id": "734bea91e1193920",
+      "text": "The neat thing about the bloom filters are that they can compose with some predictable increase in false positives but those don't hurt if this is just in front of our site by site full text search trees. This is how we can make regional search be a reality for every community, no matter how large or overlapped in the federation."
+    },
+    {
+      "type": "paragraph",
+      "id": "4231275adf85e810",
+      "text": "See [[Search over the Horizon]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "A Tiny, Static, Full-Text Search",
+        "story": []
+      },
+      "date": 1591758678257
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b7512608956d36a0"
+      },
+      "id": "b7512608956d36a0",
+      "type": "add",
+      "date": 1591758733761
+    },
+    {
+      "type": "edit",
+      "id": "b7512608956d36a0",
+      "item": {
+        "type": "paragraph",
+        "id": "b7512608956d36a0",
+        "text": "Let's run all articles through a generator that creates a tiny, self-contained search index using this magical data structure called a Bloom Filter."
+      },
+      "date": 1591758746255
+    },
+    {
+      "type": "edit",
+      "id": "b7512608956d36a0",
+      "item": {
+        "type": "paragraph",
+        "id": "b7512608956d36a0",
+        "text": "Let's run all articles through a generator that creates a tiny, self-contained search index using this magical data structure called a Bloom Filter. [https://endler.dev/2019/tinysearch/ post]"
+      },
+      "date": 1591758854807
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ce7439bb439539a7"
+      },
+      "id": "ce7439bb439539a7",
+      "type": "add",
+      "after": "b7512608956d36a0",
+      "date": 1591758856509
+    },
+    {
+      "type": "edit",
+      "id": "ce7439bb439539a7",
+      "item": {
+        "type": "pagefold",
+        "id": "ce7439bb439539a7",
+        "text": "."
+      },
+      "date": 1591758860943
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "df2ca3eba755232a"
+      },
+      "id": "df2ca3eba755232a",
+      "type": "add",
+      "after": "ce7439bb439539a7",
+      "date": 1591758862682
+    },
+    {
+      "type": "edit",
+      "id": "df2ca3eba755232a",
+      "item": {
+        "type": "paragraph",
+        "id": "df2ca3eba755232a",
+        "text": "The article talks about both server and client side code developed in rust. I'm less interested in the technology than the scaling properties of bloom filters as a preselector for the tree-based search that we now have."
+      },
+      "date": 1591759689880
+    },
+    {
+      "type": "add",
+      "id": "734bea91e1193920",
+      "item": {
+        "type": "paragraph",
+        "id": "734bea91e1193920",
+        "text": "The neat thing about the bloom filters are that they can compose with some predictable increase in false positives but those don't hurt if this is just in front of our site by site full text search trees. This is how we can make regional search be a reality for every community, no matter how large or overlapped in the federation."
+      },
+      "after": "df2ca3eba755232a",
+      "date": 1591761473628
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1591762488676
+    },
+    {
+      "type": "add",
+      "id": "4231275adf85e810",
+      "item": {
+        "type": "paragraph",
+        "id": "4231275adf85e810",
+        "text": "See [[Search over the Horizon]]"
+      },
+      "after": "734bea91e1193920",
+      "date": 1591762497547
+    },
+    {
+      "type": "add",
+      "id": "9e6fd70fdd13673f",
+      "item": {
+        "type": "paragraph",
+        "id": "9e6fd70fdd13673f",
+        "text": "A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970."
+      },
+      "after": "b7512608956d36a0",
+      "date": 1591762588684
+    },
+    {
+      "type": "edit",
+      "id": "9e6fd70fdd13673f",
+      "item": {
+        "type": "paragraph",
+        "id": "9e6fd70fdd13673f",
+        "text": "A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom. [https://en.wikipedia.org/wiki/Bloom_filter wikipedia]"
+      },
+      "date": 1591762614749
+    },
+    {
+      "type": "edit",
+      "id": "9e6fd70fdd13673f",
+      "item": {
+        "type": "paragraph",
+        "id": "9e6fd70fdd13673f",
+        "text": "A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Bloom. [https://en.wikipedia.org/wiki/Bloom_filter wikipedia]"
+      },
+      "date": 1591762635220
+    }
+  ]
+}

@@ -1,0 +1,919 @@
+{
+  "title": "Historic Custom Events",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "76744b94c6d8f636",
+      "text": "We've allowed plugins to devise their own mutually acceptable signaling strategy that range from plundering the dom to streaming over websockets."
+    },
+    {
+      "type": "markdown",
+      "id": "e9e609cef10753d9",
+      "text": "# Data"
+    },
+    {
+      "type": "paragraph",
+      "id": "5ef46d6c76da52d7",
+      "text": "The Data plugin held mostly tabular data which could be constructed by a Factory on drop of a csv file. The plugin both emitted and listened for thumb events that would scroll through the available data. See [[About Data Plugin]]"
+    },
+    {
+      "type": "code",
+      "id": "ab4db173ea1f0c8e",
+      "text": "$(div).trigger('thumb', thumb)"
+    },
+    {
+      "type": "code",
+      "id": "644833b59d723427",
+      "text": "$(\".main\").on 'thumb', (evt, thumb) ->"
+    },
+    {
+      "type": "paragraph",
+      "id": "40bab5b8e8ef0abe",
+      "text": "Items of type 'data' kept their tabular data in a corresponding field that could be indexed by the thumb."
+    },
+    {
+      "type": "code",
+      "id": "c861aad97d92433f",
+      "text": "field = item.data[thumb]"
+    },
+    {
+      "type": "markdown",
+      "id": "92d7254790aab46b",
+      "text": "# Scatter"
+    },
+    {
+      "type": "paragraph",
+      "id": "1fe54cba86cd152d",
+      "text": "The Scatter plugin could render multi-dimensional data graphically choosing 'total' for y and one other dimension for x selected by thumb events. The plugin would scan the dom for a plugin known to support the Data style interaction and pull the json derived item.data out of it. See [[About Scatter Plugin]]"
+    },
+    {
+      "type": "code",
+      "id": "a58b1739ef766b42",
+      "text": "who = $('.chart,.data,.calculator').last()\ndata = who.data('item').data\n"
+    },
+    {
+      "type": "code",
+      "id": "e8568adb41b07c22",
+      "text": "who.bind 'thumb', (e, thumb) ->"
+    },
+    {
+      "type": "markdown",
+      "id": "8f15d2d2391d3ef9",
+      "text": "# Chart"
+    },
+    {
+      "type": "paragraph",
+      "id": "e1c1b414d34c660d",
+      "text": "The Chart plugin holds time-series data as tuples. It both emits and listens for thumb events to select a specific point in time. See [[About Chart Plugin]]"
+    },
+    {
+      "type": "code",
+      "id": "f878dd75c5eec5fc",
+      "text": "for data in item.data\n  return data if data[0] is thumb"
+    },
+    {
+      "type": "markdown",
+      "id": "09e92d847ba995a6",
+      "text": "# Line"
+    },
+    {
+      "type": "paragraph",
+      "id": "145cb66f1212cf4b",
+      "text": "The Line plugin renders time-series data as a graph where data points are circles and one, the thumb, is larger than others. Line queries the dom for a .sequence-source and failing that queries the wiki global. See [[About Line Plugin]]"
+    },
+    {
+      "type": "code",
+      "id": "c9f28c33f6e91085",
+      "text": "candidates = $(\".item:lt(#{$('.item').index(div)})\")\nwho = candidates.filter \".sequence-source\" "
+    },
+    {
+      "type": "paragraph",
+      "id": "2bc33070198795ec",
+      "text": "The older Scatter data location logic was added to the wiki global with the thought that it might know the names of sources before this false start was abandoned. [https://github.com/fedwiki/wiki-client/blob/a355f5ff8b1e8db27c00c3a9e68e55391445146f/lib/wiki.coffee#L74-L86 github]"
+    },
+    {
+      "type": "code",
+      "id": "dcffba6aa1cb45ba",
+      "text": "series = wiki.getData()"
+    },
+    {
+      "type": "paragraph",
+      "id": "d5d3927f3ac58ecf",
+      "text": "See [[Data Sources Cataloged]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Historic Custom Events",
+        "story": []
+      },
+      "date": 1562442145285
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "76744b94c6d8f636"
+      },
+      "id": "76744b94c6d8f636",
+      "type": "add",
+      "date": 1562442150463
+    },
+    {
+      "type": "edit",
+      "id": "76744b94c6d8f636",
+      "item": {
+        "type": "paragraph",
+        "id": "76744b94c6d8f636",
+        "text": "We've allowed plugins to devise their own mutually acceptable signaling strategy that range from plundering the dom to streaming over websockets."
+      },
+      "date": 1562442300586
+    },
+    {
+      "type": "add",
+      "id": "e9e609cef10753d9",
+      "item": {
+        "type": "paragraph",
+        "id": "e9e609cef10753d9",
+        "text": "# Data"
+      },
+      "after": "76744b94c6d8f636",
+      "date": 1562442346815
+    },
+    {
+      "type": "add",
+      "id": "5ef46d6c76da52d7",
+      "item": {
+        "type": "paragraph",
+        "id": "5ef46d6c76da52d7",
+        "text": "The Data plugin held mostly tabular data which could be constructed by a Factory on drop of a csv file."
+      },
+      "after": "e9e609cef10753d9",
+      "date": 1562442475220
+    },
+    {
+      "type": "edit",
+      "id": "e9e609cef10753d9",
+      "item": {
+        "type": "markdown",
+        "id": "e9e609cef10753d9",
+        "text": "# Data"
+      },
+      "date": 1562442483631
+    },
+    {
+      "type": "edit",
+      "id": "5ef46d6c76da52d7",
+      "item": {
+        "type": "paragraph",
+        "id": "5ef46d6c76da52d7",
+        "text": "The Data plugin held mostly tabular data which could be constructed by a Factory on drop of a csv file. The plugin both emitted and listened for thumb events that would scroll through the available data."
+      },
+      "date": 1562443064803
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ab4db173ea1f0c8e"
+      },
+      "id": "ab4db173ea1f0c8e",
+      "type": "add",
+      "after": "5ef46d6c76da52d7",
+      "date": 1562443067482
+    },
+    {
+      "type": "edit",
+      "id": "ab4db173ea1f0c8e",
+      "item": {
+        "type": "code",
+        "id": "ab4db173ea1f0c8e",
+        "text": "$(div).trigger('thumb', thumb)"
+      },
+      "date": 1562443072709
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "644833b59d723427"
+      },
+      "id": "644833b59d723427",
+      "type": "add",
+      "after": "ab4db173ea1f0c8e",
+      "date": 1562443127212
+    },
+    {
+      "type": "edit",
+      "id": "644833b59d723427",
+      "item": {
+        "type": "code",
+        "id": "644833b59d723427",
+        "text": "$(\".main\").on 'thumb', (evt, thumb) ->"
+      },
+      "date": 1562443135032
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "40bab5b8e8ef0abe"
+      },
+      "id": "40bab5b8e8ef0abe",
+      "type": "add",
+      "after": "644833b59d723427",
+      "date": 1562443441327
+    },
+    {
+      "type": "edit",
+      "id": "40bab5b8e8ef0abe",
+      "item": {
+        "type": "paragraph",
+        "id": "40bab5b8e8ef0abe",
+        "text": "Items of type 'data' kept their tabular data in a corresponding field that could be indexed by the thumb."
+      },
+      "date": 1562443570153
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c861aad97d92433f"
+      },
+      "id": "c861aad97d92433f",
+      "type": "add",
+      "after": "40bab5b8e8ef0abe",
+      "date": 1562443573172
+    },
+    {
+      "type": "edit",
+      "id": "c861aad97d92433f",
+      "item": {
+        "type": "code",
+        "id": "c861aad97d92433f",
+        "text": "field = item.data[thumb]"
+      },
+      "date": 1562443578626
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "92d7254790aab46b"
+      },
+      "id": "92d7254790aab46b",
+      "type": "add",
+      "after": "c861aad97d92433f",
+      "date": 1562443760244
+    },
+    {
+      "type": "edit",
+      "id": "92d7254790aab46b",
+      "item": {
+        "type": "markdown",
+        "id": "92d7254790aab46b",
+        "text": "# Scatter"
+      },
+      "date": 1562443769749
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1fe54cba86cd152d"
+      },
+      "id": "1fe54cba86cd152d",
+      "type": "add",
+      "after": "92d7254790aab46b",
+      "date": 1562443772261
+    },
+    {
+      "type": "edit",
+      "id": "1fe54cba86cd152d",
+      "item": {
+        "type": "paragraph",
+        "id": "1fe54cba86cd152d",
+        "text": "The Scatter plugin could render multi-dimensional data graphically choosing 'total' for y and one other dimension for x selected by thumb events."
+      },
+      "date": 1562443917246
+    },
+    {
+      "type": "edit",
+      "id": "1fe54cba86cd152d",
+      "item": {
+        "type": "paragraph",
+        "id": "1fe54cba86cd152d",
+        "text": "The Scatter plugin could render multi-dimensional data graphically choosing 'total' for y and one other dimension for x selected by thumb events. The plugin would scan the dom for a plugin known to support the Data style interaction and pull the json derived item out of it."
+      },
+      "date": 1562444052222
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a58b1739ef766b42"
+      },
+      "id": "a58b1739ef766b42",
+      "type": "add",
+      "after": "1fe54cba86cd152d",
+      "date": 1562444055271
+    },
+    {
+      "type": "edit",
+      "id": "a58b1739ef766b42",
+      "item": {
+        "type": "code",
+        "id": "a58b1739ef766b42",
+        "text": "who = $('.chart,.data,.calculator').last()\ndata = who.data('item').data\n"
+      },
+      "date": 1562444070499
+    },
+    {
+      "type": "edit",
+      "id": "1fe54cba86cd152d",
+      "item": {
+        "type": "paragraph",
+        "id": "1fe54cba86cd152d",
+        "text": "The Scatter plugin could render multi-dimensional data graphically choosing 'total' for y and one other dimension for x selected by thumb events. The plugin would scan the dom for a plugin known to support the Data style interaction and pull the json derived item.data out of it."
+      },
+      "date": 1562444113048
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e8568adb41b07c22"
+      },
+      "id": "e8568adb41b07c22",
+      "type": "add",
+      "after": "a58b1739ef766b42",
+      "date": 1562444181760
+    },
+    {
+      "type": "edit",
+      "id": "e8568adb41b07c22",
+      "item": {
+        "type": "code",
+        "id": "e8568adb41b07c22",
+        "text": "who.bind 'thumb', (e, thumb) ->"
+      },
+      "date": 1562444187015
+    },
+    {
+      "type": "edit",
+      "id": "5ef46d6c76da52d7",
+      "item": {
+        "type": "paragraph",
+        "id": "5ef46d6c76da52d7",
+        "text": "The Data plugin held mostly tabular data which could be constructed by a Factory on drop of a csv file. The plugin both emitted and listened for thumb events that would scroll through the available data. See [[About Data Plugin]]"
+      },
+      "date": 1562444416138
+    },
+    {
+      "type": "edit",
+      "id": "1fe54cba86cd152d",
+      "item": {
+        "type": "paragraph",
+        "id": "1fe54cba86cd152d",
+        "text": "The Scatter plugin could render multi-dimensional data graphically choosing 'total' for y and one other dimension for x selected by thumb events. The plugin would scan the dom for a plugin known to support the Data style interaction and pull the json derived item.data out of it. See [[About Scatter Plugin]]"
+      },
+      "date": 1562444435253
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e1c1b414d34c660d"
+      },
+      "id": "e1c1b414d34c660d",
+      "type": "add",
+      "after": "e8568adb41b07c22",
+      "date": 1562444954026
+    },
+    {
+      "type": "edit",
+      "id": "e1c1b414d34c660d",
+      "item": {
+        "type": "paragraph",
+        "id": "e1c1b414d34c660d",
+        "text": "See [[About Chart Plugin]]"
+      },
+      "date": 1562444964324
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8f15d2d2391d3ef9"
+      },
+      "id": "8f15d2d2391d3ef9",
+      "type": "add",
+      "after": "e1c1b414d34c660d",
+      "date": 1562445009603
+    },
+    {
+      "type": "edit",
+      "id": "8f15d2d2391d3ef9",
+      "item": {
+        "type": "markdown",
+        "id": "8f15d2d2391d3ef9",
+        "text": "# Chart"
+      },
+      "date": 1562445021194
+    },
+    {
+      "type": "move",
+      "order": [
+        "76744b94c6d8f636",
+        "e9e609cef10753d9",
+        "5ef46d6c76da52d7",
+        "ab4db173ea1f0c8e",
+        "644833b59d723427",
+        "40bab5b8e8ef0abe",
+        "c861aad97d92433f",
+        "92d7254790aab46b",
+        "1fe54cba86cd152d",
+        "a58b1739ef766b42",
+        "e8568adb41b07c22",
+        "8f15d2d2391d3ef9",
+        "e1c1b414d34c660d"
+      ],
+      "id": "8f15d2d2391d3ef9",
+      "date": 1562445024849
+    },
+    {
+      "type": "edit",
+      "id": "e1c1b414d34c660d",
+      "item": {
+        "type": "paragraph",
+        "id": "e1c1b414d34c660d",
+        "text": "The Chart plugin holds time-series data as tuples. It both emits and listens to thumb events to select a specific point in time. See [[About Chart Plugin]]"
+      },
+      "date": 1562445217101
+    },
+    {
+      "type": "edit",
+      "id": "e1c1b414d34c660d",
+      "item": {
+        "type": "paragraph",
+        "id": "e1c1b414d34c660d",
+        "text": "The Chart plugin holds time-series data as tuples. It both emits and listens for thumb events to select a specific point in time. See [[About Chart Plugin]]"
+      },
+      "date": 1562445243852
+    },
+    {
+      "type": "add",
+      "id": "d2db28b343674420",
+      "item": {
+        "type": "paragraph",
+        "id": "d2db28b343674420",
+        "text": "See [[About D3 Line]]"
+      },
+      "after": "e1c1b414d34c660d",
+      "date": 1562445455053
+    },
+    {
+      "type": "edit",
+      "id": "d2db28b343674420",
+      "item": {
+        "type": "paragraph",
+        "id": "d2db28b343674420",
+        "text": "See [[About Line Plugin]]"
+      },
+      "date": 1562445468406
+    },
+    {
+      "type": "add",
+      "id": "09e92d847ba995a6",
+      "item": {
+        "type": "paragraph",
+        "id": "09e92d847ba995a6",
+        "text": "# Line"
+      },
+      "after": "e1c1b414d34c660d",
+      "date": 1562445609673
+    },
+    {
+      "type": "add",
+      "id": "145cb66f1212cf4b",
+      "item": {
+        "type": "paragraph",
+        "id": "145cb66f1212cf4b",
+        "text": "The Line plugin renders time-series data as a graph where data points are circles and one, the thumb, is larger than others. Line queries the dom for a .sequence-source and failing that queries the wiki global for data."
+      },
+      "after": "09e92d847ba995a6",
+      "date": 1562445789851
+    },
+    {
+      "type": "edit",
+      "id": "09e92d847ba995a6",
+      "item": {
+        "type": "markdown",
+        "id": "09e92d847ba995a6",
+        "text": "# Line"
+      },
+      "date": 1562445793133
+    },
+    {
+      "type": "edit",
+      "id": "145cb66f1212cf4b",
+      "item": {
+        "type": "paragraph",
+        "id": "145cb66f1212cf4b",
+        "text": "The Line plugin renders time-series data as a graph where data points are circles and one, the thumb, is larger than others. Line queries the dom for a .sequence-source and failing that queries the wiki global getData()."
+      },
+      "date": 1562445959837
+    },
+    {
+      "type": "edit",
+      "id": "145cb66f1212cf4b",
+      "item": {
+        "type": "paragraph",
+        "id": "145cb66f1212cf4b",
+        "text": "The Line plugin renders time-series data as a graph where data points are circles and one, the thumb, is larger than others. Line queries the dom for a .sequence-source and failing that queries the wiki global getData."
+      },
+      "date": 1562445971917
+    },
+    {
+      "type": "remove",
+      "id": "d2db28b343674420",
+      "date": 1562445978045
+    },
+    {
+      "type": "edit",
+      "id": "145cb66f1212cf4b",
+      "item": {
+        "type": "paragraph",
+        "id": "145cb66f1212cf4b",
+        "text": "The Line plugin renders time-series data as a graph where data points are circles and one, the thumb, is larger than others. Line queries the dom for a .sequence-source and failing that queries the wiki global getData. See [[About Line Plugin]]"
+      },
+      "date": 1562445980965
+    },
+    {
+      "type": "edit",
+      "id": "145cb66f1212cf4b",
+      "item": {
+        "type": "paragraph",
+        "id": "145cb66f1212cf4b",
+        "text": "The Line plugin renders time-series data as a graph where data points are circles and one, the thumb, is larger than others. Line queries the dom for a .sequence-source and failing that queries the wiki global. See [[About Line Plugin]]"
+      },
+      "date": 1562445990580
+    },
+    {
+      "type": "add",
+      "id": "2bc33070198795ec",
+      "item": {
+        "type": "paragraph",
+        "id": "2bc33070198795ec",
+        "text": "[https://github.com/fedwiki/wiki-client/blob/a355f5ff8b1e8db27c00c3a9e68e55391445146f/lib/wiki.coffee#L74-L86 github]"
+      },
+      "after": "145cb66f1212cf4b",
+      "date": 1562446050995
+    },
+    {
+      "type": "edit",
+      "id": "2bc33070198795ec",
+      "item": {
+        "type": "paragraph",
+        "id": "2bc33070198795ec",
+        "text": "The Scatter data location logic was added to the wiki global with the thought that it might know the names of sources before this false start was abandoned. [https://github.com/fedwiki/wiki-client/blob/a355f5ff8b1e8db27c00c3a9e68e55391445146f/lib/wiki.coffee#L74-L86 github]"
+      },
+      "date": 1562446252747
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dcffba6aa1cb45ba"
+      },
+      "id": "dcffba6aa1cb45ba",
+      "type": "add",
+      "after": "2bc33070198795ec",
+      "date": 1562446347491
+    },
+    {
+      "type": "edit",
+      "id": "dcffba6aa1cb45ba",
+      "item": {
+        "type": "code",
+        "id": "dcffba6aa1cb45ba",
+        "text": "series = wiki.getData()"
+      },
+      "date": 1562446352884
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c9f28c33f6e91085"
+      },
+      "id": "c9f28c33f6e91085",
+      "type": "add",
+      "after": "dcffba6aa1cb45ba",
+      "date": 1562446422980
+    },
+    {
+      "type": "edit",
+      "id": "c9f28c33f6e91085",
+      "item": {
+        "type": "code",
+        "id": "c9f28c33f6e91085",
+        "text": "candidates = $(\".item:lt(#{$('.item').index(div)})\")\nif (who = candidates.filter \".sequence-source\").length\n  choice = who[who.length-1]\n"
+      },
+      "date": 1562446438871
+    },
+    {
+      "type": "edit",
+      "id": "c9f28c33f6e91085",
+      "item": {
+        "type": "code",
+        "id": "c9f28c33f6e91085",
+        "text": "candidates = $(\".item:lt(#{$('.item').index(div)})\")\nwho = candidates.filter \".sequence-source\" "
+      },
+      "date": 1562446502364
+    },
+    {
+      "type": "move",
+      "order": [
+        "76744b94c6d8f636",
+        "e9e609cef10753d9",
+        "5ef46d6c76da52d7",
+        "ab4db173ea1f0c8e",
+        "644833b59d723427",
+        "40bab5b8e8ef0abe",
+        "c861aad97d92433f",
+        "92d7254790aab46b",
+        "1fe54cba86cd152d",
+        "a58b1739ef766b42",
+        "e8568adb41b07c22",
+        "8f15d2d2391d3ef9",
+        "e1c1b414d34c660d",
+        "09e92d847ba995a6",
+        "145cb66f1212cf4b",
+        "c9f28c33f6e91085",
+        "2bc33070198795ec",
+        "dcffba6aa1cb45ba"
+      ],
+      "id": "c9f28c33f6e91085",
+      "date": 1562446506012
+    },
+    {
+      "type": "edit",
+      "id": "2bc33070198795ec",
+      "item": {
+        "type": "paragraph",
+        "id": "2bc33070198795ec",
+        "text": "The older Scatter data location logic was added to the wiki global with the thought that it might know the names of sources before this false start was abandoned. [https://github.com/fedwiki/wiki-client/blob/a355f5ff8b1e8db27c00c3a9e68e55391445146f/lib/wiki.coffee#L74-L86 github]"
+      },
+      "date": 1562446547419
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f878dd75c5eec5fc"
+      },
+      "id": "f878dd75c5eec5fc",
+      "type": "add",
+      "after": "dcffba6aa1cb45ba",
+      "date": 1562446666287
+    },
+    {
+      "type": "move",
+      "order": [
+        "76744b94c6d8f636",
+        "e9e609cef10753d9",
+        "5ef46d6c76da52d7",
+        "ab4db173ea1f0c8e",
+        "644833b59d723427",
+        "40bab5b8e8ef0abe",
+        "c861aad97d92433f",
+        "92d7254790aab46b",
+        "1fe54cba86cd152d",
+        "a58b1739ef766b42",
+        "e8568adb41b07c22",
+        "8f15d2d2391d3ef9",
+        "e1c1b414d34c660d",
+        "f878dd75c5eec5fc",
+        "09e92d847ba995a6",
+        "145cb66f1212cf4b",
+        "c9f28c33f6e91085",
+        "2bc33070198795ec",
+        "dcffba6aa1cb45ba"
+      ],
+      "id": "f878dd75c5eec5fc",
+      "date": 1562446671487
+    },
+    {
+      "type": "edit",
+      "id": "f878dd75c5eec5fc",
+      "item": {
+        "type": "code",
+        "id": "f878dd75c5eec5fc",
+        "text": "for data in item.data\n  return data if data[0] is thumb"
+      },
+      "date": 1562446687992
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dae8cfd9ff627b3a"
+      },
+      "id": "dae8cfd9ff627b3a",
+      "type": "add",
+      "after": "dcffba6aa1cb45ba",
+      "date": 1562459150644
+    },
+    {
+      "type": "edit",
+      "id": "dae8cfd9ff627b3a",
+      "item": {
+        "type": "markdown",
+        "id": "dae8cfd9ff627b3a",
+        "text": "force-source force\nforce-source linkmap\n\ngraph-source graph\ngraph-source markdown\ngraph-source transport\n\nmarker-source map\n\nradar-source calendar\nradar-source metabolism\nradar-source method\nradar-source radar\nradar-source reduce\n\nroster-source activity\nroster-source club\n\nsequence-source line\nsequence-source txtzyme"
+      },
+      "date": 1562459162804
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "df03d341e4d19e73"
+      },
+      "id": "df03d341e4d19e73",
+      "type": "add",
+      "after": "dae8cfd9ff627b3a",
+      "date": 1562459215441
+    },
+    {
+      "type": "edit",
+      "id": "df03d341e4d19e73",
+      "item": {
+        "type": "code",
+        "id": "df03d341e4d19e73",
+        "text": "egrep '\\w+-source' ../wiki-plugin-*/client/*.coffee"
+      },
+      "date": 1562459221429
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dfb5ec4f52cc7a6e"
+      },
+      "id": "dfb5ec4f52cc7a6e",
+      "type": "add",
+      "after": "df03d341e4d19e73",
+      "date": 1562459243218
+    },
+    {
+      "type": "edit",
+      "id": "dfb5ec4f52cc7a6e",
+      "item": {
+        "type": "pagefold",
+        "id": "dfb5ec4f52cc7a6e",
+        "text": "more"
+      },
+      "date": 1562459248732
+    },
+    {
+      "type": "move",
+      "order": [
+        "76744b94c6d8f636",
+        "e9e609cef10753d9",
+        "5ef46d6c76da52d7",
+        "ab4db173ea1f0c8e",
+        "644833b59d723427",
+        "40bab5b8e8ef0abe",
+        "c861aad97d92433f",
+        "92d7254790aab46b",
+        "1fe54cba86cd152d",
+        "a58b1739ef766b42",
+        "e8568adb41b07c22",
+        "8f15d2d2391d3ef9",
+        "e1c1b414d34c660d",
+        "f878dd75c5eec5fc",
+        "09e92d847ba995a6",
+        "145cb66f1212cf4b",
+        "c9f28c33f6e91085",
+        "2bc33070198795ec",
+        "dcffba6aa1cb45ba",
+        "dfb5ec4f52cc7a6e",
+        "dae8cfd9ff627b3a",
+        "df03d341e4d19e73"
+      ],
+      "id": "dfb5ec4f52cc7a6e",
+      "date": 1562459258166
+    },
+    {
+      "type": "move",
+      "order": [
+        "76744b94c6d8f636",
+        "e9e609cef10753d9",
+        "5ef46d6c76da52d7",
+        "ab4db173ea1f0c8e",
+        "644833b59d723427",
+        "40bab5b8e8ef0abe",
+        "c861aad97d92433f",
+        "92d7254790aab46b",
+        "1fe54cba86cd152d",
+        "a58b1739ef766b42",
+        "e8568adb41b07c22",
+        "8f15d2d2391d3ef9",
+        "e1c1b414d34c660d",
+        "f878dd75c5eec5fc",
+        "09e92d847ba995a6",
+        "145cb66f1212cf4b",
+        "c9f28c33f6e91085",
+        "2bc33070198795ec",
+        "dcffba6aa1cb45ba",
+        "dfb5ec4f52cc7a6e",
+        "df03d341e4d19e73",
+        "dae8cfd9ff627b3a"
+      ],
+      "id": "df03d341e4d19e73",
+      "date": 1562459264422
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d5d3927f3ac58ecf"
+      },
+      "id": "d5d3927f3ac58ecf",
+      "type": "add",
+      "after": "dae8cfd9ff627b3a",
+      "date": 1562459276170
+    },
+    {
+      "type": "edit",
+      "id": "d5d3927f3ac58ecf",
+      "item": {
+        "type": "paragraph",
+        "id": "d5d3927f3ac58ecf",
+        "text": "We conduct a search for source references in fedwiki and my own local development directories."
+      },
+      "date": 1562459326818
+    },
+    {
+      "type": "move",
+      "order": [
+        "76744b94c6d8f636",
+        "e9e609cef10753d9",
+        "5ef46d6c76da52d7",
+        "ab4db173ea1f0c8e",
+        "644833b59d723427",
+        "40bab5b8e8ef0abe",
+        "c861aad97d92433f",
+        "92d7254790aab46b",
+        "1fe54cba86cd152d",
+        "a58b1739ef766b42",
+        "e8568adb41b07c22",
+        "8f15d2d2391d3ef9",
+        "e1c1b414d34c660d",
+        "f878dd75c5eec5fc",
+        "09e92d847ba995a6",
+        "145cb66f1212cf4b",
+        "c9f28c33f6e91085",
+        "2bc33070198795ec",
+        "dcffba6aa1cb45ba",
+        "dfb5ec4f52cc7a6e",
+        "d5d3927f3ac58ecf",
+        "df03d341e4d19e73",
+        "dae8cfd9ff627b3a"
+      ],
+      "id": "d5d3927f3ac58ecf",
+      "date": 1562459333265
+    },
+    {
+      "type": "edit",
+      "id": "dae8cfd9ff627b3a",
+      "item": {
+        "type": "markdown",
+        "id": "dae8cfd9ff627b3a",
+        "text": "force-source force\nforce-source linkmap\ngraph-source cytodemo\ngraph-source graph\ngraph-source markdown\ngraph-source transport\nmarker-source bikeshare\nmarker-source map\nmid-source cytodemo\nradar-source calendar\nradar-source fivestar\nradar-source metabolism\nradar-source method\nradar-source radar\nradar-source reduce\nradar-source rollup\nroster-source activity\nroster-source roster\nsequence-source line\nsequence-source txtzyme\nserver-source alert\nserver-source datalog\nserver-source detect\ntoc-source activity\ntoc-source cytodemo\n"
+      },
+      "date": 1562469556440
+    },
+    {
+      "type": "edit",
+      "id": "dae8cfd9ff627b3a",
+      "item": {
+        "type": "markdown",
+        "id": "dae8cfd9ff627b3a",
+        "text": "force-source force\nforce-source linkmap\n\ngraph-source cytodemo\ngraph-source graph\ngraph-source markdown\ngraph-source transport\n\nmarker-source bikeshare\nmarker-source map\n\nmid-source cytodemo\n\nradar-source calendar\nradar-source fivestar\nradar-source metabolism\nradar-source method\nradar-source radar\nradar-source reduce\nradar-source rollup\n\nroster-source activity\nroster-source roster\n\nsequence-source line\nsequence-source txtzyme\n\nserver-source alert\nserver-source datalog\nserver-source detect\n\ntoc-source activity\ntoc-source cytodemo\n"
+      },
+      "date": 1562469583426
+    },
+    {
+      "type": "edit",
+      "id": "d5d3927f3ac58ecf",
+      "item": {
+        "type": "paragraph",
+        "id": "d5d3927f3ac58ecf",
+        "text": "See [[Data Sources Cataloged]]"
+      },
+      "date": 1562469641070
+    },
+    {
+      "type": "remove",
+      "id": "dae8cfd9ff627b3a",
+      "date": 1562470270005
+    },
+    {
+      "type": "remove",
+      "id": "dfb5ec4f52cc7a6e",
+      "date": 1562470593920
+    },
+    {
+      "type": "remove",
+      "id": "df03d341e4d19e73",
+      "date": 1562470598976
+    }
+  ]
+}

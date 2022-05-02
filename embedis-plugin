@@ -1,0 +1,268 @@
+{
+  "title": "Embedis Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1a0f811328cc7b0d",
+      "text": "Notes for installing Arduino/Embedis for the ESP8266 processor. Surprisingly a middle level library takes care of CORS headers so everything else is straightforward. [https://github.com/esp8266/Arduino/search?utf8=%E2%9C%93&q=Access-Control-Allow-Origin github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "d624b7deb50500e3",
+      "text": "Use Arduino 1.6.5 but no later (yet). [https://www.arduino.cc/en/Main/OldSoftwareReleases#previous page]"
+    },
+    {
+      "type": "paragraph",
+      "id": "ffe9f03d22e387ba",
+      "text": "Tool chain for ESP8266. 1.6.5 for the moment. [https://github.com/esp8266/Arduino github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "77b3bf554d2ec12a",
+      "text": "File system download tool. [https://github.com/esp8266/arduino-esp8266fs-plugin github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "ceea3927a8f61fc3",
+      "text": "Port cu.usbmodem..."
+    },
+    {
+      "type": "paragraph",
+      "id": "0a47dffd51e48d2a",
+      "text": "Serial 115,000"
+    },
+    {
+      "type": "paragraph",
+      "id": "a3fd0e10faa9edb2",
+      "text": "Library manager install library: Embedis."
+    },
+    {
+      "type": "paragraph",
+      "id": "05eff735b7d6fd48",
+      "text": "Resolve .h problems using Tom's files. (manual install to hardware directory) [https://github.com/PatternAgents/Arduino_Boards github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "b4f141c638b533be",
+      "text": "Remaining sync/reset problems on download. Probably something about mac usb/serial driver."
+    },
+    {
+      "type": "markdown",
+      "id": "d136db8004eb563f",
+      "text": "# Resources"
+    },
+    {
+      "type": "paragraph",
+      "id": "a28c9c620e97b5e3",
+      "text": "ArduinoJson parses and generates the transport format without heap allocation of strings. [https://github.com/bblanchon/ArduinoJson github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Embedis Plugin",
+        "story": []
+      },
+      "date": 1455580971557
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1a0f811328cc7b0d"
+      },
+      "id": "1a0f811328cc7b0d",
+      "type": "add",
+      "date": 1455580973093
+    },
+    {
+      "type": "edit",
+      "id": "1a0f811328cc7b0d",
+      "item": {
+        "type": "paragraph",
+        "id": "1a0f811328cc7b0d",
+        "text": "Notes for installing Arduino/Embedis for the ESP8266 processor."
+      },
+      "date": 1455580998957
+    },
+    {
+      "type": "add",
+      "id": "d624b7deb50500e3",
+      "item": {
+        "type": "paragraph",
+        "id": "d624b7deb50500e3",
+        "text": "Use Arduino 1.6.5 but no later (yet)."
+      },
+      "after": "1a0f811328cc7b0d",
+      "date": 1455581025841
+    },
+    {
+      "type": "edit",
+      "id": "d624b7deb50500e3",
+      "item": {
+        "type": "paragraph",
+        "id": "d624b7deb50500e3",
+        "text": "Use Arduino 1.6.5 but no later (yet). [https://www.arduino.cc/en/Main/OldSoftwareReleases#previous page]"
+      },
+      "date": 1455581049071
+    },
+    {
+      "type": "add",
+      "id": "ffe9f03d22e387ba",
+      "item": {
+        "type": "paragraph",
+        "id": "ffe9f03d22e387ba",
+        "text": "Tool chain for ESP8266. [https://github.com/esp8266/Arduino github]"
+      },
+      "after": "d624b7deb50500e3",
+      "date": 1455581101633
+    },
+    {
+      "type": "edit",
+      "id": "ffe9f03d22e387ba",
+      "item": {
+        "type": "paragraph",
+        "id": "ffe9f03d22e387ba",
+        "text": "Tool chain for ESP8266. Version 1.6.5 for the moment. [https://github.com/esp8266/Arduino github]"
+      },
+      "date": 1455581240425
+    },
+    {
+      "type": "edit",
+      "id": "ffe9f03d22e387ba",
+      "item": {
+        "type": "paragraph",
+        "id": "ffe9f03d22e387ba",
+        "text": "Tool chain for ESP8266. 1.6.5 for the moment. [https://github.com/esp8266/Arduino github]"
+      },
+      "date": 1455581247247
+    },
+    {
+      "type": "add",
+      "id": "77b3bf554d2ec12a",
+      "item": {
+        "type": "paragraph",
+        "id": "77b3bf554d2ec12a",
+        "text": "File system download tool. [https://github.com/esp8266/arduino-esp8266fs-plugin github]"
+      },
+      "after": "ffe9f03d22e387ba",
+      "date": 1455581449268
+    },
+    {
+      "type": "add",
+      "id": "ceea3927a8f61fc3",
+      "item": {
+        "type": "paragraph",
+        "id": "ceea3927a8f61fc3",
+        "text": "Port cu.usbmodem..."
+      },
+      "after": "77b3bf554d2ec12a",
+      "date": 1455582017501
+    },
+    {
+      "type": "add",
+      "id": "0a47dffd51e48d2a",
+      "item": {
+        "type": "paragraph",
+        "id": "0a47dffd51e48d2a",
+        "text": "Serial 115,000"
+      },
+      "after": "ceea3927a8f61fc3",
+      "date": 1455582034347
+    },
+    {
+      "type": "add",
+      "id": "a3fd0e10faa9edb2",
+      "item": {
+        "type": "paragraph",
+        "id": "a3fd0e10faa9edb2",
+        "text": "Library manager install library: Embedis."
+      },
+      "after": "0a47dffd51e48d2a",
+      "date": 1455582341227
+    },
+    {
+      "type": "add",
+      "id": "05eff735b7d6fd48",
+      "item": {
+        "type": "paragraph",
+        "id": "05eff735b7d6fd48",
+        "text": "Resolve .h problems using Tom's files. [https://github.com/PatternAgents/Arduino_Boards github]"
+      },
+      "after": "a3fd0e10faa9edb2",
+      "date": 1455583020574
+    },
+    {
+      "type": "edit",
+      "id": "05eff735b7d6fd48",
+      "item": {
+        "type": "paragraph",
+        "id": "05eff735b7d6fd48",
+        "text": "Resolve .h problems using Tom's files. (manual install to hardware directory) [https://github.com/PatternAgents/Arduino_Boards github]"
+      },
+      "date": 1455583139267
+    },
+    {
+      "type": "edit",
+      "id": "1a0f811328cc7b0d",
+      "item": {
+        "type": "paragraph",
+        "id": "1a0f811328cc7b0d",
+        "text": "Notes for installing Arduino/Embedis for the ESP8266 processor. Surprisingly a middle level library takes care of CORS headers so everything else is straightforward. [https://github.com/esp8266/Arduino/search?utf8=%E2%9C%93&q=Access-Control-Allow-Origin github]"
+      },
+      "date": 1455588401753
+    },
+    {
+      "type": "add",
+      "id": "b4f141c638b533be",
+      "item": {
+        "type": "paragraph",
+        "id": "b4f141c638b533be",
+        "text": "Remaining sync/reset problems on download. Probably something about mac usb/serial driver."
+      },
+      "after": "05eff735b7d6fd48",
+      "date": 1455588458722
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d136db8004eb563f"
+      },
+      "id": "d136db8004eb563f",
+      "type": "add",
+      "after": "b4f141c638b533be",
+      "date": 1455639479995
+    },
+    {
+      "type": "edit",
+      "id": "d136db8004eb563f",
+      "item": {
+        "type": "paragraph",
+        "id": "d136db8004eb563f",
+        "text": "# Resources"
+      },
+      "date": 1455639488093
+    },
+    {
+      "type": "add",
+      "id": "a28c9c620e97b5e3",
+      "item": {
+        "type": "paragraph",
+        "id": "a28c9c620e97b5e3",
+        "text": "ArduinoJson parses and generates the transport format without heap allocation of strings. [https://github.com/bblanchon/ArduinoJson github]"
+      },
+      "after": "d136db8004eb563f",
+      "date": 1455639566561
+    },
+    {
+      "type": "edit",
+      "id": "d136db8004eb563f",
+      "item": {
+        "type": "markdown",
+        "id": "d136db8004eb563f",
+        "text": "# Resources"
+      },
+      "date": 1455639570495
+    }
+  ]
+}

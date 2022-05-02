@@ -1,0 +1,220 @@
+{
+  "title": "Bagby Confluence",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1708e1e5be4eb570",
+      "text": "This confluence is in the Clackamas River Ranger District of the section of the Mount Hood National Forest. It is six miles southeast of the Ripplebrook Ranger Station, in the same general area as Bagby Hot Springs. September 23, 2000. [http://c2.com/ward/confluence/n45w122/ page]"
+    },
+    {
+      "type": "map",
+      "id": "6b762151f36c3531",
+      "text": "Bagby Confluence visited in 2000.\n45.0, -122.0 [[Bagby Confluence]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "6ecee736494f9769",
+      "text": "My son and I headed out for this confluence at 4:30 pm a warm Saturday afternoon. The Garmin quoted sunset at 7:05 which sounded like plenty of time until we hit the weekend traffic the interstate. "
+    },
+    {
+      "type": "paragraph",
+      "id": "de1f57e54fe03b3f",
+      "text": "By the time we got to Estacada,we knew our schedule would be tight. Still, we knew we had paved roads for almost all of the remaining 25 miles. "
+    },
+    {
+      "type": "paragraph",
+      "id": "0c627bd9324f644c",
+      "text": "From Estacada take state road 224 south to Ripplebrook. Continue south forest road 46, past Clackamas River Road, to forest road 6310. Follow this for 1.6 miles to Granite road. Expect gravel, and possibly a gate, in 1.6 miles. One half mile further is the closest approach to the confluence."
+    },
+    {
+      "type": "paragraph",
+      "id": "8f4fe453123dbf35",
+      "text": "We drove a few hundred feet further to find a wide spot in the road in which to park. By now it was a quarter to seven. The only sunlight was the peaks across the valley.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "8645e2518301f1e0",
+      "text": "The confluence is located in second growth forest 600 feet down and east of the road. Heavy brush clung to the thirty degree down slope. We made way as best we could for a hundred feet or so. This took 15 minutes which brought us to within five minutes of sunset. "
+    },
+    {
+      "type": "paragraph",
+      "id": "a2dddae0d92233bb",
+      "text": "We knew the light would hang after that. But at fifteen minutes per hundred feet we didn't believe we could safely reach the confluence and return. We settled for shots in dim light 500 feet from our goal. So close but yet so far.\n\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Bagby Confluence",
+        "story": []
+      },
+      "date": 1467763406647
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1708e1e5be4eb570"
+      },
+      "id": "1708e1e5be4eb570",
+      "type": "add",
+      "date": 1467763442606
+    },
+    {
+      "type": "edit",
+      "id": "1708e1e5be4eb570",
+      "item": {
+        "type": "paragraph",
+        "id": "1708e1e5be4eb570",
+        "text": "This confluence is in the Clackamas River Ranger District of the section of the Mount Hood National Forest. It is six miles southeast of the Ripplebrook Ranger Station, in the same general area as Bagby Hot Springs."
+      },
+      "date": 1467763449594
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Portland Confluences visited in 2000.\n46.0, -122.0 [[Wind River Confluence]]\n45.0, -122.0 [[Bagby Confluence]]\n45.0, -123.0 [[Salem Confluence]]\nBOUNDARY 46.2, -122.0"
+      },
+      "after": "1708e1e5be4eb570",
+      "id": "6b762151f36c3531",
+      "date": 1467763477093
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Bagby Confluences visited in 2000.\n45.0, -122.0 [[Bagby Confluence]]"
+      },
+      "date": 1467763511530
+    },
+    {
+      "type": "edit",
+      "id": "6b762151f36c3531",
+      "item": {
+        "type": "map",
+        "id": "6b762151f36c3531",
+        "text": "Bagby Confluence visited in 2000.\n45.0, -122.0 [[Bagby Confluence]]"
+      },
+      "date": 1467763892480
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6ecee736494f9769"
+      },
+      "id": "6ecee736494f9769",
+      "type": "add",
+      "after": "6b762151f36c3531",
+      "date": 1467765232262
+    },
+    {
+      "type": "edit",
+      "id": "6ecee736494f9769",
+      "item": {
+        "type": "paragraph",
+        "id": "6ecee736494f9769",
+        "text": "My son and I headed out for this confluence at 4:30 pm a warm Saturday afternoon. The Garmin quoted sunset at 7:05 which sounded like plenty of time until we hit the weekend traffic the interstate. By the time we got to Estacada,we knew our schedule would be tight. Still, we knew we had paved roads for almost all of the remaining 25 miles. You will notice that we did have the lights when we finally encountered gravel, and a hefty (though disassembled) gate, a half mile from our goal.\n\n"
+      },
+      "date": 1467765237271
+    },
+    {
+      "type": "edit",
+      "id": "6ecee736494f9769",
+      "item": {
+        "type": "paragraph",
+        "id": "6ecee736494f9769",
+        "text": "My son and I headed out for this confluence at 4:30 pm a warm Saturday afternoon. The Garmin quoted sunset at 7:05 which sounded like plenty of time until we hit the weekend traffic the interstate. "
+      },
+      "date": 1467765253369
+    },
+    {
+      "type": "add",
+      "id": "de1f57e54fe03b3f",
+      "item": {
+        "type": "paragraph",
+        "id": "de1f57e54fe03b3f",
+        "text": "By the time we got to Estacada,we knew our schedule would be tight. Still, we knew we had paved roads for almost all of the remaining 25 miles. \n"
+      },
+      "after": "6ecee736494f9769",
+      "date": 1467765273622
+    },
+    {
+      "type": "add",
+      "id": "8f4fe453123dbf35",
+      "item": {
+        "type": "paragraph",
+        "id": "8f4fe453123dbf35",
+        "text": "We drove a few hundred feet further to find a wide spot in the road in which to park. By now it was a quarter to seven. The only sunlight was the peaks across the valley.\n\n"
+      },
+      "after": "de1f57e54fe03b3f",
+      "date": 1467765304165
+    },
+    {
+      "type": "edit",
+      "id": "de1f57e54fe03b3f",
+      "item": {
+        "type": "paragraph",
+        "id": "de1f57e54fe03b3f",
+        "text": "By the time we got to Estacada,we knew our schedule would be tight. Still, we knew we had paved roads for almost all of the remaining 25 miles. "
+      },
+      "date": 1467765340859
+    },
+    {
+      "type": "add",
+      "id": "0c627bd9324f644c",
+      "item": {
+        "type": "paragraph",
+        "id": "0c627bd9324f644c",
+        "text": "From Estacada take state road 224 south to Ripplebrook. Continue south forest road 46, past Clackamas River Road, to forest road 6310. Follow this for 1.6 miles to Granite road. Expect gravel, and possibly a gate, in 1.6 miles. One half mile further is the closest approach to the confluence."
+      },
+      "after": "de1f57e54fe03b3f",
+      "date": 1467765353018
+    },
+    {
+      "type": "add",
+      "id": "8645e2518301f1e0",
+      "item": {
+        "type": "paragraph",
+        "id": "8645e2518301f1e0",
+        "text": "The confluence is located in second growth forest 600 feet down and east of the road. Heavy brush clung to the thirty degree down slope. We made way as best we could for a hundred feet or so. This took 15 minutes which brought us to within five minutes of sunset. "
+      },
+      "after": "8f4fe453123dbf35",
+      "date": 1467765393667
+    },
+    {
+      "type": "add",
+      "id": "a2dddae0d92233bb",
+      "item": {
+        "type": "paragraph",
+        "id": "a2dddae0d92233bb",
+        "text": "We knew the light would hang after that. But at fifteen minutes per hundred feet we didn't believe we could safely reach the confluence and return. We settled for shots in dim light 500 feet from our goal. So close but yet so far.\n\n"
+      },
+      "after": "8645e2518301f1e0",
+      "date": 1467765408093
+    },
+    {
+      "type": "edit",
+      "id": "1708e1e5be4eb570",
+      "item": {
+        "type": "paragraph",
+        "id": "1708e1e5be4eb570",
+        "text": "This confluence is in the Clackamas River Ranger District of the section of the Mount Hood National Forest. It is six miles southeast of the Ripplebrook Ranger Station, in the same general area as Bagby Hot Springs. September 23, 2000."
+      },
+      "date": 1467765544385
+    },
+    {
+      "type": "edit",
+      "id": "1708e1e5be4eb570",
+      "item": {
+        "type": "paragraph",
+        "id": "1708e1e5be4eb570",
+        "text": "This confluence is in the Clackamas River Ranger District of the section of the Mount Hood National Forest. It is six miles southeast of the Ripplebrook Ranger Station, in the same general area as Bagby Hot Springs. September 23, 2000. [http://c2.com/ward/confluence/n45w122/ page]"
+      },
+      "date": 1467765570399
+    }
+  ]
+}

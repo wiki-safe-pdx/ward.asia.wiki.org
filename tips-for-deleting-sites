@@ -1,0 +1,439 @@
+{
+  "title": "Tips For Deleting Sites",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "85145f33d26b45e0",
+      "text": "Our create on first access can lead to may junk sites. Here we look for safe strategies for removing them."
+    },
+    {
+      "type": "paragraph",
+      "id": "4dc0359885326dc7",
+      "text": "Our general strategy is to work within the .wiki directory, find empty or missing things, then remove the site that holds them. We use perl to convert find output to the commands we want and then pipe that into bash."
+    },
+    {
+      "type": "code",
+      "id": "28a1a3da721037ba",
+      "text": "find ... | perl -ne ... | bash"
+    },
+    {
+      "type": "paragraph",
+      "id": "959b908ec433e27f",
+      "text": "We dry-run these commands by omitting the final bash."
+    },
+    {
+      "type": "markdown",
+      "id": "a6a493e5079e7028",
+      "text": "# Empty"
+    },
+    {
+      "type": "paragraph",
+      "id": "aaf7f87a34ca0603",
+      "text": "We feel free to discard sites with no pages."
+    },
+    {
+      "type": "code",
+      "id": "7e52d73ca0b7b355",
+      "text": "find . -name pages -empty |\\\nperl -ne 'chop; s/\\/pages//; print \"rm -r $_\\n\"'"
+    },
+    {
+      "type": "paragraph",
+      "id": "8285e5c3151ea23f",
+      "text": "Beware: an empty ./pages will emit rm -r ."
+    },
+    {
+      "type": "paragraph",
+      "id": "fa8db3ea9e0100a7",
+      "text": "Beware: a subdomain named 'pages'"
+    },
+    {
+      "type": "paragraph",
+      "id": "36cfd1a340e4e4b4",
+      "text": "Beware: metacharacters like * in subdomain."
+    },
+    {
+      "type": "markdown",
+      "id": "fe2b6b867518f5ee",
+      "text": "# Unclaimed"
+    },
+    {
+      "type": "paragraph",
+      "id": "a106cb3e78ec3ed2",
+      "text": "We might look inside unclaimed sites."
+    },
+    {
+      "type": "code",
+      "id": "d4aa52d52acf73c0",
+      "text": "find . -name status \\! -exec test -e '{}/owner.json' \\; -print |\\\nperl -ne 'chop; s/\\/status//; print \"ls $_/pages\\n\"'"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Tips For Deleting Sites",
+        "story": []
+      },
+      "date": 1573361280204
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "85145f33d26b45e0"
+      },
+      "id": "85145f33d26b45e0",
+      "type": "add",
+      "date": 1573361283798
+    },
+    {
+      "type": "edit",
+      "id": "85145f33d26b45e0",
+      "item": {
+        "type": "paragraph",
+        "id": "85145f33d26b45e0",
+        "text": "Our create on first access can lead to may junk sites. Here we look for safe strategies for removing them."
+      },
+      "date": 1573361390452
+    },
+    {
+      "type": "add",
+      "id": "4dc0359885326dc7",
+      "item": {
+        "type": "paragraph",
+        "id": "4dc0359885326dc7",
+        "text": "Our general strategy is to work within the .wiki directory, find empty or missing things, then remove the site that holds them. We use perl to convert find output to the commands we want and then pipe that into bash."
+      },
+      "after": "85145f33d26b45e0",
+      "date": 1573361625166
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "28a1a3da721037ba"
+      },
+      "id": "28a1a3da721037ba",
+      "type": "add",
+      "after": "4dc0359885326dc7",
+      "date": 1573361631325
+    },
+    {
+      "type": "edit",
+      "id": "28a1a3da721037ba",
+      "item": {
+        "type": "code",
+        "id": "28a1a3da721037ba",
+        "text": "find ... | perl -ne ... | bash"
+      },
+      "date": 1573361692583
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "959b908ec433e27f"
+      },
+      "id": "959b908ec433e27f",
+      "type": "add",
+      "after": "28a1a3da721037ba",
+      "date": 1573361694816
+    },
+    {
+      "type": "edit",
+      "id": "959b908ec433e27f",
+      "item": {
+        "type": "paragraph",
+        "id": "959b908ec433e27f",
+        "text": "We dry-run these commands by omitting the final bash."
+      },
+      "date": 1573361723394
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a6a493e5079e7028"
+      },
+      "id": "a6a493e5079e7028",
+      "type": "add",
+      "after": "959b908ec433e27f",
+      "date": 1573361731936
+    },
+    {
+      "type": "edit",
+      "id": "a6a493e5079e7028",
+      "item": {
+        "type": "paragraph",
+        "id": "a6a493e5079e7028",
+        "text": "# Empty"
+      },
+      "date": 1573361798025
+    },
+    {
+      "type": "add",
+      "id": "aaf7f87a34ca0603",
+      "item": {
+        "type": "paragraph",
+        "id": "aaf7f87a34ca0603",
+        "text": "We feel free to discard sites with no pages."
+      },
+      "after": "a6a493e5079e7028",
+      "date": 1573361830681
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7e52d73ca0b7b355"
+      },
+      "id": "7e52d73ca0b7b355",
+      "type": "add",
+      "after": "aaf7f87a34ca0603",
+      "date": 1573361833593
+    },
+    {
+      "type": "edit",
+      "id": "7e52d73ca0b7b355",
+      "item": {
+        "type": "code",
+        "id": "7e52d73ca0b7b355",
+        "text": "find . "
+      },
+      "date": 1573361850374
+    },
+    {
+      "type": "edit",
+      "id": "7e52d73ca0b7b355",
+      "item": {
+        "type": "code",
+        "id": "7e52d73ca0b7b355",
+        "text": "find . -name pages -empty \\|\nperl -ne 'chop; s/"
+      },
+      "date": 1573361912574
+    },
+    {
+      "type": "edit",
+      "id": "7e52d73ca0b7b355",
+      "item": {
+        "type": "code",
+        "id": "7e52d73ca0b7b355",
+        "text": "find . -name pages -empty \\|\nperl -ne 'chop; s/\\/pages//; print \"rm -r $_\\n\"'"
+      },
+      "date": 1573361966009
+    },
+    {
+      "type": "edit",
+      "id": "a6a493e5079e7028",
+      "item": {
+        "type": "markdown",
+        "id": "a6a493e5079e7028",
+        "text": "# Empty"
+      },
+      "date": 1573361969137
+    },
+    {
+      "type": "edit",
+      "id": "7e52d73ca0b7b355",
+      "item": {
+        "type": "code",
+        "id": "7e52d73ca0b7b355",
+        "text": "find . -name pages -empty |\\\nperl -ne 'chop; s/\\/pages//; print \"rm -r $_\\n\"'"
+      },
+      "date": 1573362057596
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fe2b6b867518f5ee"
+      },
+      "id": "fe2b6b867518f5ee",
+      "type": "add",
+      "after": "7e52d73ca0b7b355",
+      "date": 1573363315032
+    },
+    {
+      "type": "edit",
+      "id": "fe2b6b867518f5ee",
+      "item": {
+        "type": "paragraph",
+        "id": "fe2b6b867518f5ee",
+        "text": "# Unowned"
+      },
+      "date": 1573363327070
+    },
+    {
+      "type": "edit",
+      "id": "fe2b6b867518f5ee",
+      "item": {
+        "type": "paragraph",
+        "id": "fe2b6b867518f5ee",
+        "text": "# Unclaimed"
+      },
+      "date": 1573363343429
+    },
+    {
+      "type": "add",
+      "id": "a106cb3e78ec3ed2",
+      "item": {
+        "type": "paragraph",
+        "id": "a106cb3e78ec3ed2",
+        "text": "We might look inside unclaimed sites."
+      },
+      "after": "fe2b6b867518f5ee",
+      "date": 1573363392957
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d4aa52d52acf73c0"
+      },
+      "id": "d4aa52d52acf73c0",
+      "type": "add",
+      "after": "a106cb3e78ec3ed2",
+      "date": 1573363395979
+    },
+    {
+      "type": "edit",
+      "id": "d4aa52d52acf73c0",
+      "item": {
+        "type": "code",
+        "id": "d4aa52d52acf73c0",
+        "text": "find . -name status \\! -exec test -e '{}/owner.json' \\; -print |\\"
+      },
+      "date": 1573363409057
+    },
+    {
+      "type": "edit",
+      "id": "d4aa52d52acf73c0",
+      "item": {
+        "type": "code",
+        "id": "d4aa52d52acf73c0",
+        "text": "find . -name status \\! -exec test -e '{}/owner.json' \\; -print |\\\nperl -ne 'chop; s/\\/status//; print \"ls $_/*\\n\"'"
+      },
+      "date": 1573363727019
+    },
+    {
+      "type": "edit",
+      "id": "aaf7f87a34ca0603",
+      "item": {
+        "type": "paragraph",
+        "id": "aaf7f87a34ca0603",
+        "text": "We feel free to discard sites with no pages. Beware: an empty ./pages will emit rm -r ."
+      },
+      "date": 1573364141889
+    },
+    {
+      "type": "edit",
+      "id": "aaf7f87a34ca0603",
+      "item": {
+        "type": "paragraph",
+        "id": "aaf7f87a34ca0603",
+        "text": "We feel free to discard sites with no pages."
+      },
+      "date": 1573364153528
+    },
+    {
+      "type": "add",
+      "id": "8285e5c3151ea23f",
+      "item": {
+        "type": "paragraph",
+        "id": "8285e5c3151ea23f",
+        "text": "Beware: an empty ./pages will emit rm -r ."
+      },
+      "after": "aaf7f87a34ca0603",
+      "date": 1573364157578
+    },
+    {
+      "type": "move",
+      "order": [
+        "85145f33d26b45e0",
+        "4dc0359885326dc7",
+        "28a1a3da721037ba",
+        "959b908ec433e27f",
+        "a6a493e5079e7028",
+        "aaf7f87a34ca0603",
+        "7e52d73ca0b7b355",
+        "8285e5c3151ea23f",
+        "fe2b6b867518f5ee",
+        "a106cb3e78ec3ed2",
+        "d4aa52d52acf73c0"
+      ],
+      "id": "8285e5c3151ea23f",
+      "date": 1573364161271
+    },
+    {
+      "type": "move",
+      "order": [
+        "85145f33d26b45e0",
+        "4dc0359885326dc7",
+        "28a1a3da721037ba",
+        "959b908ec433e27f",
+        "8285e5c3151ea23f",
+        "a6a493e5079e7028",
+        "aaf7f87a34ca0603",
+        "7e52d73ca0b7b355",
+        "fe2b6b867518f5ee",
+        "a106cb3e78ec3ed2",
+        "d4aa52d52acf73c0"
+      ],
+      "id": "8285e5c3151ea23f",
+      "date": 1573364598005
+    },
+    {
+      "type": "move",
+      "order": [
+        "85145f33d26b45e0",
+        "4dc0359885326dc7",
+        "28a1a3da721037ba",
+        "959b908ec433e27f",
+        "a6a493e5079e7028",
+        "aaf7f87a34ca0603",
+        "7e52d73ca0b7b355",
+        "8285e5c3151ea23f",
+        "fe2b6b867518f5ee",
+        "a106cb3e78ec3ed2",
+        "d4aa52d52acf73c0"
+      ],
+      "id": "8285e5c3151ea23f",
+      "date": 1573364613290
+    },
+    {
+      "type": "add",
+      "id": "fa8db3ea9e0100a7",
+      "item": {
+        "type": "paragraph",
+        "id": "fa8db3ea9e0100a7",
+        "text": "Beware: a subdomain named 'pages'"
+      },
+      "after": "8285e5c3151ea23f",
+      "date": 1573364649546
+    },
+    {
+      "type": "add",
+      "id": "36cfd1a340e4e4b4",
+      "item": {
+        "type": "paragraph",
+        "id": "36cfd1a340e4e4b4",
+        "text": "Beware: metacharacters like * in subdomain."
+      },
+      "after": "fa8db3ea9e0100a7",
+      "date": 1573364696849
+    },
+    {
+      "type": "edit",
+      "id": "fe2b6b867518f5ee",
+      "item": {
+        "type": "markdown",
+        "id": "fe2b6b867518f5ee",
+        "text": "# Unclaimed"
+      },
+      "date": 1573364702577
+    },
+    {
+      "type": "edit",
+      "id": "d4aa52d52acf73c0",
+      "item": {
+        "type": "code",
+        "id": "d4aa52d52acf73c0",
+        "text": "find . -name status \\! -exec test -e '{}/owner.json' \\; -print |\\\nperl -ne 'chop; s/\\/status//; print \"ls $_/pages\\n\"'"
+      },
+      "date": 1573365032568
+    }
+  ]
+}

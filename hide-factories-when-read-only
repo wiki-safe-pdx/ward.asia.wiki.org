@@ -1,0 +1,97 @@
+{
+  "title": "Hide Factories when Read-Only",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "64e0b2453a28f041",
+      "text": "Jon suggests, we could do well in hiding empty factories from wiki viewers, when the checkmark is not set. "
+    },
+    {
+      "type": "paragraph",
+      "id": "bdf8c83ca468ffcf",
+      "text": "The switch influences the page render logic without consulting plugins. However, the 'factory' type could be examined in the render logic and emit/bind simply avoided."
+    },
+    {
+      "type": "paragraph",
+      "id": "c8160f1c20772359",
+      "text": "If a Factory is configured with a prompt as they often are in Template pages then hiding it might make the flow of the template mysterious. But then why are readers even seeing Templates? Perhaps they have stumbled upon the Making of This Wiki Site page that discusses how authoring was done."
+    },
+    {
+      "type": "paragraph",
+      "id": "5c2accfe8976a87d",
+      "text": "Jon goes on, selecting a plugin during read mode should also not (1) render an unstyled factory instead of (2) showing the chosen plugin as when activating wiki mode. the factory's state should not have changed in the first place."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Hide Factories when Read-Only",
+        "story": []
+      },
+      "date": 1580442089650
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "64e0b2453a28f041"
+      },
+      "id": "64e0b2453a28f041",
+      "type": "add",
+      "date": 1580442091030
+    },
+    {
+      "type": "edit",
+      "id": "64e0b2453a28f041",
+      "item": {
+        "type": "paragraph",
+        "id": "64e0b2453a28f041",
+        "text": "Jon suggests, we could do well in hiding empty factories from wiki viewers, when the checkmark is not set. "
+      },
+      "date": 1580442107152
+    },
+    {
+      "type": "add",
+      "id": "bdf8c83ca468ffcf",
+      "item": {
+        "type": "paragraph",
+        "id": "bdf8c83ca468ffcf",
+        "text": "The switch influences the page render logic without consulting plugins. However, the 'factory' type could be examined in the render logic and emit/bind simply avoided."
+      },
+      "after": "64e0b2453a28f041",
+      "date": 1580442279841
+    },
+    {
+      "type": "add",
+      "id": "c8160f1c20772359",
+      "item": {
+        "type": "paragraph",
+        "id": "c8160f1c20772359",
+        "text": "If a Factory is configured with a prompt as they often are in Template pages then hiding it might make the flow of the template mysterious. "
+      },
+      "after": "bdf8c83ca468ffcf",
+      "date": 1580442441414
+    },
+    {
+      "type": "edit",
+      "id": "c8160f1c20772359",
+      "item": {
+        "type": "paragraph",
+        "id": "c8160f1c20772359",
+        "text": "If a Factory is configured with a prompt as they often are in Template pages then hiding it might make the flow of the template mysterious. But then why are readers even seeing Templates? Perhaps they have stumbled upon the Making of This Wiki Site page that discusses how authoring was done."
+      },
+      "date": 1580442524274
+    },
+    {
+      "type": "add",
+      "id": "5c2accfe8976a87d",
+      "item": {
+        "type": "paragraph",
+        "id": "5c2accfe8976a87d",
+        "text": "Jon goes on, selecting a plugin during read mode should also not (1) render an unstyled factory instead of (2) showing the chosen plugin as when activating wiki mode. the factory's state should not have changed in the first place."
+      },
+      "after": "c8160f1c20772359",
+      "date": 1580442760052
+    }
+  ]
+}

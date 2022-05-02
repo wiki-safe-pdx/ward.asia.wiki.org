@@ -1,0 +1,44 @@
+{
+  "title": "Tweets in Natural Order",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "83cc02fc12441192",
+      "text": "Twitter's algorithm confounds and annoys. But their search, when asked politely, will give you what you expect. Try this link. [https://twitter.com/search?f=tweets&q=filter%3Afollows%20-filter%3Areplies&src=typd twitter]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Tweets in Natural Order",
+        "story": []
+      },
+      "date": 1536806846464
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "83cc02fc12441192"
+      },
+      "id": "83cc02fc12441192",
+      "type": "add",
+      "date": 1536806850063
+    },
+    {
+      "type": "edit",
+      "id": "83cc02fc12441192",
+      "item": {
+        "type": "paragraph",
+        "id": "83cc02fc12441192",
+        "text": "Twitter's algorithm confounds and annoys. But their search, when asked politely, will give you what you expect. Try this link. [https://twitter.com/search?f=tweets&q=filter%3Afollows%20-filter%3Areplies&src=typd twitter]"
+      },
+      "date": 1536806941223
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1537022491078
+    }
+  ]
+}

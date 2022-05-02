@@ -1,0 +1,154 @@
+{
+  "title": "Human Performance in Systems",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "fc0a19b5c869275b",
+      "text": "How Your Systems Keep Running Day After Day. John Allspaw at Velocity 2017."
+    },
+    {
+      "type": "video",
+      "id": "2024f590e819daf4",
+      "text": "YOUTUBE xA5U85LSk0M\nPublished on Nov 15, 2017."
+    },
+    {
+      "type": "paragraph",
+      "id": "0c1af59a339e960d",
+      "text": "Social Issues In Postmortems.\nThis is an excerpt from the Stella Report, which is the result of the first project “Coping With Complexity” performed by the Resilience Engineering In Business-Critical Software Consortium, SNAFUcatchers. [https://medium.com/@allspaw/social-issues-in-postmortems-d48dde624d18 medium]"
+    },
+    {
+      "type": "paragraph",
+      "id": "fbfbde36ba61c375",
+      "text": "Doctors David Woods and Richard Cook present the report of the Stella meeting and the first year of SNAFU Catchers work to the attendees of the Velocity Meeting in New York City. [https://www.snafucatchers.com/single-post/2017/10/29/Velocity-NYC-2017-and-the-Stella-Report post] [https://drive.google.com/file/d/0B7kFkt5WxLeDTml5cTFsWXFCb1U/view report]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Human Performance in Systems",
+        "story": []
+      },
+      "date": 1523388313330
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fc0a19b5c869275b"
+      },
+      "id": "fc0a19b5c869275b",
+      "type": "add",
+      "date": 1523388345519
+    },
+    {
+      "type": "edit",
+      "id": "fc0a19b5c869275b",
+      "item": {
+        "type": "paragraph",
+        "id": "fc0a19b5c869275b",
+        "text": "How Your Systems Keep Running Day After Day. John Allspaw at Velocity 2017."
+      },
+      "date": 1523388365746
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2024f590e819daf4"
+      },
+      "id": "2024f590e819daf4",
+      "type": "add",
+      "after": "fc0a19b5c869275b",
+      "date": 1523388368240
+    },
+    {
+      "type": "edit",
+      "id": "2024f590e819daf4",
+      "item": {
+        "type": "video",
+        "id": "2024f590e819daf4",
+        "text": "YOUTUBE xA5U85LSk0M\n(double-click to edit caption)\n"
+      },
+      "date": 1523388378095
+    },
+    {
+      "type": "edit",
+      "id": "2024f590e819daf4",
+      "item": {
+        "type": "video",
+        "id": "2024f590e819daf4",
+        "text": "YOUTUBE xA5U85LSk0M\nPublished on Nov 15, 2017."
+      },
+      "date": 1523388399556
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0c1af59a339e960d"
+      },
+      "id": "0c1af59a339e960d",
+      "type": "add",
+      "after": "2024f590e819daf4",
+      "date": 1523388530181
+    },
+    {
+      "type": "edit",
+      "id": "0c1af59a339e960d",
+      "item": {
+        "type": "paragraph",
+        "id": "0c1af59a339e960d",
+        "text": "Social Issues In Postmortems.\nThis is an excerpt from the Stella Report, which is the result of the first project “Coping With Complexity” performed by the Resilience Engineering In Business-Critical Software Consortium, SNAFUcatchers."
+      },
+      "date": 1523388568785
+    },
+    {
+      "type": "edit",
+      "id": "0c1af59a339e960d",
+      "item": {
+        "type": "paragraph",
+        "id": "0c1af59a339e960d",
+        "text": "Social Issues In Postmortems.\nThis is an excerpt from the Stella Report, which is the result of the first project “Coping With Complexity” performed by the Resilience Engineering In Business-Critical Software Consortium, SNAFUcatchers. [https://medium.com/@allspaw/social-issues-in-postmortems-d48dde624d18 medium]"
+      },
+      "date": 1523388589008
+    },
+    {
+      "type": "add",
+      "id": "fbfbde36ba61c375",
+      "item": {
+        "type": "paragraph",
+        "id": "fbfbde36ba61c375",
+        "text": "Doctors David Woods and Richard Cook present the report of the Stella meeting and the first year of SNAFU Catchers work to the attendees of the Velocity Meeting in New York City."
+      },
+      "after": "0c1af59a339e960d",
+      "date": 1523388695226
+    },
+    {
+      "type": "edit",
+      "id": "fbfbde36ba61c375",
+      "item": {
+        "type": "paragraph",
+        "id": "fbfbde36ba61c375",
+        "text": "Doctors David Woods and Richard Cook present the report of the Stella meeting and the first year of SNAFU Catchers work to the attendees of the Velocity Meeting in New York City. [https://www.snafucatchers.com/single-post/2017/10/29/Velocity-NYC-2017-and-the-Stella-Report post]"
+      },
+      "date": 1523388719871
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org"
+    },
+    {
+      "type": "edit",
+      "id": "fbfbde36ba61c375",
+      "item": {
+        "type": "paragraph",
+        "id": "fbfbde36ba61c375",
+        "text": "Doctors David Woods and Richard Cook present the report of the Stella meeting and the first year of SNAFU Catchers work to the attendees of the Velocity Meeting in New York City. [https://www.snafucatchers.com/single-post/2017/10/29/Velocity-NYC-2017-and-the-Stella-Report post] [https://drive.google.com/file/d/0B7kFkt5WxLeDTml5cTFsWXFCb1U/view report]"
+      },
+      "date": 1524775215754
+    },
+    {
+      "type": "fork",
+      "site": "ward.bay.wiki.org",
+      "date": 1533953456456
+    }
+  ]
+}

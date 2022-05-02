@@ -1,0 +1,71 @@
+{
+  "title": "David Bovill",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "0be1d0b068d20eca",
+      "text": "David is a prolific producer of both sites and pages."
+    },
+    {
+      "type": "paragraph",
+      "id": "bcf67a0ed327b489",
+      "text": "See [[Recent Changes]]"
+    },
+    {
+      "type": "roster",
+      "id": "235abf29d8f277ed",
+      "text": "David's Sites\n\ndavid.bovill.me\ndavid.cryptoacademy.org\ndavid.viral.academy\ndavid.viral.academy\ndavid.utopia.institute\nd.plantoid.cc\n\nWorld Sites\n\nutopia.academy\ndaisy.world\nform.world\ntekno.world\ndreamcraft.academy\nspaceship.academy\n\nFedwiki Sites\n\nfedwiki.org\nhacks.fedwiki.org\nfuture.fedwiki.org\nissues.fedwiki.org\ndata.fedwiki.org\n\nAcademy Sites\n\ncommons.academy\nbio.commons.academy\nmedical.commons.academy\n\nCrypto Sites\n\ncryptoacademy.org\neris.academy\nwiki.futurelaw.org\nwiki.parliamentofthings.org\n\nDavid's Code Sites\n\nc0de.academy\nlivecode.viral.academy\njavascript.viral.academy\n\nDavid's Viral Academy Sites\n\nwiki.viral.academy\norientation.viral.academy\ntime.viral.academy\nvideo.viral.academy\n\nLiquid Sites\n\nliquiddemocracy.org\nliquiddemocracy.net\ngraph.liquiddemocracy.org\nliquidlaw.net\n\nDecentralised Sites\n\ndata.decentralised.academy\ndecentralised.academy\ndistributed.academy\n\nOther Sites\n\nwiki.utopia.academy\nagileteacher.net\nagile.viral.academy\nbeingarthur.org\npattern.academy\nethereum.cryptoacademy.org\nfederated.academy\nwiki.rspace.org\n\nDead Sites\n\ndata.distributed.academy\ndata.federated.academy\nswarm.academy"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "David Bovill",
+        "story": []
+      },
+      "date": 1440715428600
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0be1d0b068d20eca"
+      },
+      "id": "0be1d0b068d20eca",
+      "type": "add",
+      "date": 1440715461644
+    },
+    {
+      "type": "edit",
+      "id": "0be1d0b068d20eca",
+      "item": {
+        "type": "paragraph",
+        "id": "0be1d0b068d20eca",
+        "text": "David is a prolific producer of both sites and pages."
+      },
+      "date": 1440715489276
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "roster",
+        "id": "235abf29d8f277ed",
+        "text": "David's Sites\n\ndavid.bovill.me\ndavid.cryptoacademy.org\ndavid.viral.academy\ndavid.viral.academy\ndavid.utopia.institute\nd.plantoid.cc\n\nWorld Sites\n\nutopia.academy\ndaisy.world\nform.world\ntekno.world\ndreamcraft.academy\nspaceship.academy\n\nFedwiki Sites\n\nfedwiki.org\nhacks.fedwiki.org\nfuture.fedwiki.org\nissues.fedwiki.org\ndata.fedwiki.org\n\nAcademy Sites\n\ncommons.academy\nbio.commons.academy\nmedical.commons.academy\n\nCrypto Sites\n\ncryptoacademy.org\neris.academy\nwiki.futurelaw.org\nwiki.parliamentofthings.org\n\nDavid's Code Sites\n\nc0de.academy\nlivecode.viral.academy\njavascript.viral.academy\n\nDavid's Viral Academy Sites\n\nwiki.viral.academy\norientation.viral.academy\ntime.viral.academy\nvideo.viral.academy\n\nLiquid Sites\n\nliquiddemocracy.org\nliquiddemocracy.net\ngraph.liquiddemocracy.org\nliquidlaw.net\n\nDecentralised Sites\n\ndata.decentralised.academy\ndecentralised.academy\ndistributed.academy\n\nOther Sites\n\nwiki.utopia.academy\nagileteacher.net\nagile.viral.academy\nbeingarthur.org\npattern.academy\nethereum.cryptoacademy.org\nfederated.academy\nwiki.rspace.org\n\nDead Sites\n\ndata.distributed.academy\ndata.federated.academy\nswarm.academy"
+      },
+      "after": "0be1d0b068d20eca",
+      "id": "235abf29d8f277ed",
+      "date": 1440715511142
+    },
+    {
+      "type": "add",
+      "id": "bcf67a0ed327b489",
+      "item": {
+        "type": "paragraph",
+        "id": "bcf67a0ed327b489",
+        "text": "See [[Recent Changes]]"
+      },
+      "after": "0be1d0b068d20eca",
+      "date": 1440715552173
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "title": "Network Explorer's Toolkit",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "a9f9fe635388e98a",
+      "text": "We're seeing a lot of interesting new technology that might just all work together. Let me fantasize about how a few of my favorites might connect."
+    },
+    {
+      "type": "markdown",
+      "id": "31106825f1fc67d8",
+      "text": "# History"
+    },
+    {
+      "type": "paragraph",
+      "id": "8c49a1d6b09c1a5b",
+      "text": "[[Exploratory Parsing]] used a web app to build and manage feature extraction from huge datasets such as all of wikipedia. First we consider what has worked well there."
+    },
+    {
+      "type": "paragraph",
+      "id": "6d8597aef1a7114f",
+      "text": "The PEG grammar's backtracking and disambiguation allowed us to describe and analyze what we didn't know. "
+    },
+    {
+      "type": "paragraph",
+      "id": "d064b494e284feba",
+      "text": "Piumarta's peg/leg implementation ran extremely fast by collapsing the generated C functions into one giant inline with no dynamic storage allocation. [https://www.piumarta.com/software/peg/ site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "6b6f22f287ac0800",
+      "text": "A Sinatra app managed the authoring, building and running of batch jobs that spun out rich status information as they progressed."
+    },
+    {
+      "type": "paragraph",
+      "id": "ef61e23f67797ef2",
+      "text": "The web server could shell out to manage an inventory of parsing experiments with sampled results graphically indexed while also managing huge datasets and selective extracts from these supporting ongoing development."
+    },
+    {
+      "type": "paragraph",
+      "id": "28325cd082f5cb05",
+      "text": "What's not to like? The web app began to feel like handcuffs in that it only did what it had been programmed to do. And enhancing the program was progressively more tedious. This brings me to the compositional model of federated wiki."
+    },
+    {
+      "type": "markdown",
+      "id": "b866c01c185cddd9",
+      "text": "# Future"
+    },
+    {
+      "type": "paragraph",
+      "id": "64e6f225486d5309",
+      "text": "Federated wiki brings three things to this application: hypertext for managing various projects, the journal for tracking improvements on each project, and the lineup for ad hoc rearrangement of its computational pipeline."
+    },
+    {
+      "type": "paragraph",
+      "id": "d7efa18ba26c9bd0",
+      "text": "Viz.js brings Graphviz's excellent place and route to the clickable interactive world of client-side SVG."
+    },
+    {
+      "type": "paragraph",
+      "id": "fe8185302b5ec0b6",
+      "text": "PegJs brings parser generation and execution to Javascript where its byte-offset from-to error diagnostics provide welcome support for casual revision of complex grammars."
+    },
+    {
+      "type": "paragraph",
+      "id": "a28cde226a9ce29e",
+      "text": "ES6 brings modules, promises and lambda notation to the already ubiquitous async language on both client and server side of the network."
+    },
+    {
+      "type": "paragraph",
+      "id": "f0d4413614a2518e",
+      "text": "Deno brings simple package management with direct web addresses and automatic caching to make the build environment. Maybe it also has sufficient foreign-function interface (FFI) to reach into the resources of the machine without talking through the shell."
+    },
+    {
+      "type": "paragraph",
+      "id": "4db74b5d91976b5f",
+      "text": "WASM and WebWorkers offer access to the compute resources of a multi-core workstation. "
+    },
+    {
+      "type": "paragraph",
+      "id": "014e320bccc1b1f6",
+      "text": "Extended BPF offers intimate access to at least network traffic without system call overhead."
+    },
+    {
+      "type": "paragraph",
+      "id": "a693006ab987c477",
+      "text": "Imagine this all configured and then ultimately driving table-top virtual reality. Where to start?"
+    },
+    {
+      "type": "markdown",
+      "id": "4f4379a40b15b12a",
+      "text": "# Plugins"
+    },
+    {
+      "type": "paragraph",
+      "id": "8147b0aa2a7cf50d",
+      "text": "I'm trying to imagine what plugins might look like if there were no npm and Plugmatic to manage them. Could they be as simple as an ES6 module delivered over the internet? This seems to be what Deno wants."
+    },
+    {
+      "type": "paragraph",
+      "id": "2bdb831aa7604a4e",
+      "text": "What if I wrote these modules as easily as I once wrote cgi scripts. Open an editor, define some entry points, drop this into a directory of static files to be served to my Deno jobs that need them?"
+    },
+    {
+      "type": "paragraph",
+      "id": "6909b5c144ca327a",
+      "text": "I'm imagining a line of representation. I write in hypertext that I share above the line and javascript plugins that I share below the line. This part of my vision is new. New to me even since I started enumerating the new technologies at my finger tip 60 minutes ago."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Network Explorer's Toolkit",
+        "story": []
+      },
+      "date": 1580127335431
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a9f9fe635388e98a"
+      },
+      "id": "a9f9fe635388e98a",
+      "type": "add",
+      "date": 1580127337621
+    },
+    {
+      "type": "edit",
+      "id": "a9f9fe635388e98a",
+      "item": {
+        "type": "paragraph",
+        "id": "a9f9fe635388e98a",
+        "text": "We're seeing a lot of interesting new technology that might just all work together. Let me fantisize "
+      },
+      "date": 1580127446508
+    },
+    {
+      "type": "edit",
+      "id": "a9f9fe635388e98a",
+      "item": {
+        "type": "paragraph",
+        "id": "a9f9fe635388e98a",
+        "text": "We're seeing a lot of interesting new technology that might just all work together. Let me fantasize about how a few of my favorites might connect."
+      },
+      "date": 1580127495276
+    },
+    {
+      "type": "add",
+      "id": "8c49a1d6b09c1a5b",
+      "item": {
+        "type": "paragraph",
+        "id": "8c49a1d6b09c1a5b",
+        "text": "Here I will build on a recent reimplementation of [[Exploratory Parsing]]."
+      },
+      "after": "a9f9fe635388e98a",
+      "date": 1580128232336
+    },
+    {
+      "type": "edit",
+      "id": "8c49a1d6b09c1a5b",
+      "item": {
+        "type": "paragraph",
+        "id": "8c49a1d6b09c1a5b",
+        "text": "[[Exploratory Parsing]] used a web app to build and manage feature extraction from huge datasets such as all of wikipedia. First we consider what has worked well there."
+      },
+      "date": 1580128533136
+    },
+    {
+      "type": "add",
+      "id": "6d8597aef1a7114f",
+      "item": {
+        "type": "paragraph",
+        "id": "6d8597aef1a7114f",
+        "text": "The PEG grammar's backtracking and disambiguation allowed us to describe and analyze what we didn't know. "
+      },
+      "after": "8c49a1d6b09c1a5b",
+      "date": 1580128660962
+    },
+    {
+      "type": "add",
+      "id": "d064b494e284feba",
+      "item": {
+        "type": "paragraph",
+        "id": "d064b494e284feba",
+        "text": "Piumarta's peg/leg implementation ran extremely fast by collapsing the generated functions into one giant inline with no dynamic storage allocation. [https://www.piumarta.com/software/peg/ site]"
+      },
+      "after": "6d8597aef1a7114f",
+      "date": 1580128864368
+    },
+    {
+      "type": "edit",
+      "id": "d064b494e284feba",
+      "item": {
+        "type": "paragraph",
+        "id": "d064b494e284feba",
+        "text": "Piumarta's peg/leg implementation ran extremely fast by collapsing the generated C functions into one giant inline with no dynamic storage allocation. [https://www.piumarta.com/software/peg/ site]"
+      },
+      "date": 1580128878269
+    },
+    {
+      "type": "add",
+      "id": "6b6f22f287ac0800",
+      "item": {
+        "type": "paragraph",
+        "id": "6b6f22f287ac0800",
+        "text": "A Sinatra app managed the authoring, building and running of batch jobs that spun out rich status information as they progressed."
+      },
+      "after": "d064b494e284feba",
+      "date": 1580129025532
+    },
+    {
+      "type": "add",
+      "id": "ef61e23f67797ef2",
+      "item": {
+        "type": "paragraph",
+        "id": "ef61e23f67797ef2",
+        "text": "The web server could shell out to manage an inventory of parsing experiments with sampled results graphically indexed while also managing huge datasets and selective extracts from these supporting ongoing development."
+      },
+      "after": "6b6f22f287ac0800",
+      "date": 1580129369918
+    },
+    {
+      "type": "add",
+      "id": "28325cd082f5cb05",
+      "item": {
+        "type": "paragraph",
+        "id": "28325cd082f5cb05",
+        "text": "What's not to like? The web app began to feel like handcuffs in that it only did what it had been programmed to do. And enhancing the program was progressively more tedious. This brings me to the compositional model of federated wiki."
+      },
+      "after": "ef61e23f67797ef2",
+      "date": 1580129503725
+    },
+    {
+      "type": "add",
+      "id": "b866c01c185cddd9",
+      "item": {
+        "type": "paragraph",
+        "id": "b866c01c185cddd9",
+        "text": "# Future"
+      },
+      "after": "28325cd082f5cb05",
+      "date": 1580129520088
+    },
+    {
+      "type": "add",
+      "id": "31106825f1fc67d8",
+      "item": {
+        "type": "paragraph",
+        "id": "31106825f1fc67d8",
+        "text": "# History"
+      },
+      "after": "a9f9fe635388e98a",
+      "date": 1580129528392
+    },
+    {
+      "type": "edit",
+      "id": "31106825f1fc67d8",
+      "item": {
+        "type": "markdown",
+        "id": "31106825f1fc67d8",
+        "text": "# History"
+      },
+      "date": 1580129532102
+    },
+    {
+      "type": "add",
+      "id": "64e6f225486d5309",
+      "item": {
+        "type": "paragraph",
+        "id": "64e6f225486d5309",
+        "text": "Federated wiki brings to this application hypertext for managing various projects, the journal for tracking improvements on each project, and the lineup for ad hoc rearrangement of pipeline computations."
+      },
+      "after": "b866c01c185cddd9",
+      "date": 1580129700596
+    },
+    {
+      "type": "edit",
+      "id": "b866c01c185cddd9",
+      "item": {
+        "type": "markdown",
+        "id": "b866c01c185cddd9",
+        "text": "# Future"
+      },
+      "date": 1580129703227
+    },
+    {
+      "type": "add",
+      "id": "d7efa18ba26c9bd0",
+      "item": {
+        "type": "paragraph",
+        "id": "d7efa18ba26c9bd0",
+        "text": "Viz.js brings Graphviz's excellent place and route to the clickable interactive world of client-side SVG."
+      },
+      "after": "64e6f225486d5309",
+      "date": 1580129870026
+    },
+    {
+      "type": "add",
+      "id": "fe8185302b5ec0b6",
+      "item": {
+        "type": "paragraph",
+        "id": "fe8185302b5ec0b6",
+        "text": "PegJs brings parser generation and execution to Javascript where its byte-offset from-to error diagnostics provide welcome support for casual revision of complex grammars."
+      },
+      "after": "d7efa18ba26c9bd0",
+      "date": 1580130103775
+    },
+    {
+      "type": "add",
+      "id": "a28cde226a9ce29e",
+      "item": {
+        "type": "paragraph",
+        "id": "a28cde226a9ce29e",
+        "text": "ES6 brings modules, promises and lambda notation to the already ubiquitous language on both client and server side of the network."
+      },
+      "after": "fe8185302b5ec0b6",
+      "date": 1580130269433
+    },
+    {
+      "type": "edit",
+      "id": "a28cde226a9ce29e",
+      "item": {
+        "type": "paragraph",
+        "id": "a28cde226a9ce29e",
+        "text": "ES6 brings modules, promises and lambda notation to the already ubiquitous async language on both client and server side of the network."
+      },
+      "date": 1580130295509
+    },
+    {
+      "type": "add",
+      "id": "f0d4413614a2518e",
+      "item": {
+        "type": "paragraph",
+        "id": "f0d4413614a2518e",
+        "text": "Deno brings simple package management with direct web addresses and automatic caching to make the build environment. Maybe it also has sufficient foreign-function interface (FFI) to reach into the resources of the machine without talking through the shell."
+      },
+      "after": "a28cde226a9ce29e",
+      "date": 1580130538202
+    },
+    {
+      "type": "add",
+      "id": "4db74b5d91976b5f",
+      "item": {
+        "type": "paragraph",
+        "id": "4db74b5d91976b5f",
+        "text": "WASM and WebWorkers offer access to the compute resources of a multi-core workstation. "
+      },
+      "after": "f0d4413614a2518e",
+      "date": 1580130645522
+    },
+    {
+      "type": "add",
+      "id": "014e320bccc1b1f6",
+      "item": {
+        "type": "paragraph",
+        "id": "014e320bccc1b1f6",
+        "text": "Extended BPF offers intimate access to at least network traffic without system call overhead."
+      },
+      "after": "4db74b5d91976b5f",
+      "date": 1580130923740
+    },
+    {
+      "type": "add",
+      "id": "a693006ab987c477",
+      "item": {
+        "type": "paragraph",
+        "id": "a693006ab987c477",
+        "text": "Imagine this all configured and then ultimately driving table-top virtual reality. Where to start?"
+      },
+      "after": "014e320bccc1b1f6",
+      "date": 1580131010142
+    },
+    {
+      "type": "add",
+      "id": "4f4379a40b15b12a",
+      "item": {
+        "type": "paragraph",
+        "id": "4f4379a40b15b12a",
+        "text": "# Plugins"
+      },
+      "after": "a693006ab987c477",
+      "date": 1580131055622
+    },
+    {
+      "type": "add",
+      "id": "8147b0aa2a7cf50d",
+      "item": {
+        "type": "paragraph",
+        "id": "8147b0aa2a7cf50d",
+        "text": "I'm trying to imagine what plugins might look like if there were no npm and Plugmatic to manage them. Could they be as simple as an ES6 module delivered over the internet? This seems to be what Deno wants."
+      },
+      "after": "4f4379a40b15b12a",
+      "date": 1580131214551
+    },
+    {
+      "type": "add",
+      "id": "2bdb831aa7604a4e",
+      "item": {
+        "type": "paragraph",
+        "id": "2bdb831aa7604a4e",
+        "text": "What if I wrote these modules as easily as I once wrote cgi scripts. Open an editor, define some entry points, drop this into a directory of static files to be served to my Deno jobs that need them?"
+      },
+      "after": "8147b0aa2a7cf50d",
+      "date": 1580131379669
+    },
+    {
+      "type": "add",
+      "id": "6909b5c144ca327a",
+      "item": {
+        "type": "paragraph",
+        "id": "6909b5c144ca327a",
+        "text": "I'm imagining a line of representation. I write in hypertext that I share above the line and javascript plugins that I share below the line. "
+      },
+      "after": "2bdb831aa7604a4e",
+      "date": 1580131599646
+    },
+    {
+      "type": "edit",
+      "id": "4f4379a40b15b12a",
+      "item": {
+        "type": "markdown",
+        "id": "4f4379a40b15b12a",
+        "text": "# Plugins"
+      },
+      "date": 1580131605665
+    },
+    {
+      "type": "edit",
+      "id": "6909b5c144ca327a",
+      "item": {
+        "type": "paragraph",
+        "id": "6909b5c144ca327a",
+        "text": "I'm imagining a line of representation. I write in hypertext that I share above the line and javascript plugins that I share below the line. This part of my vision is new. New to me even since I started enumerating the new technologies at my finger tip 60 minutes ago."
+      },
+      "date": 1580131725084
+    },
+    {
+      "type": "edit",
+      "id": "64e6f225486d5309",
+      "item": {
+        "type": "paragraph",
+        "id": "64e6f225486d5309",
+        "text": "Federated wiki brings three things to this application: hypertext for managing various projects, the journal for tracking improvements on each project, and the lineup for ad hoc rearrangement of pipeline computations."
+      },
+      "date": 1580133022023
+    },
+    {
+      "type": "edit",
+      "id": "64e6f225486d5309",
+      "item": {
+        "type": "paragraph",
+        "id": "64e6f225486d5309",
+        "text": "Federated wiki brings three things to this application: hypertext for managing various projects, the journal for tracking improvements on each project, and the lineup for ad hoc rearrangement of the project's pipeline of computations."
+      },
+      "date": 1580133065806
+    },
+    {
+      "type": "edit",
+      "id": "64e6f225486d5309",
+      "item": {
+        "type": "paragraph",
+        "id": "64e6f225486d5309",
+        "text": "Federated wiki brings three things to this application: hypertext for managing various projects, the journal for tracking improvements on each project, and the lineup for ad hoc rearrangement of the project's computational pipeline."
+      },
+      "date": 1580133090753
+    },
+    {
+      "type": "edit",
+      "id": "64e6f225486d5309",
+      "item": {
+        "type": "paragraph",
+        "id": "64e6f225486d5309",
+        "text": "Federated wiki brings three things to this application: hypertext for managing various projects, the journal for tracking improvements on each project, and the lineup for ad hoc rearrangement of its computational pipeline."
+      },
+      "date": 1580133119065
+    }
+  ]
+}

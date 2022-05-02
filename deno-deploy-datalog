@@ -1,0 +1,409 @@
+{
+  "title": "Deno Deploy Datalog",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e7f81c6cd60ed493",
+      "text": "We'll watch retained endpoint hit counts over time. "
+    },
+    {
+      "type": "datalog",
+      "id": "06a2b468ef2bc792",
+      "text": "SENSOR small https://small.deno.dev/system/countmap.json\nDAY 144\nKEEP 15"
+    },
+    {
+      "type": "code",
+      "id": "30e8d7de9b05ed83",
+      "text": "let key = \"/system/countmap.json\"\nlet x = data.map(s => new Date(s.clock))\nlet y = data.map(s => s.result[0].data[key])\ntraces = [{x,y}]"
+    },
+    {
+      "type": "frame",
+      "id": "8ba5dc3287f5e343",
+      "text": "http://ward.asia.wiki.org/assets/plugins/datalog/plot-context.html\nHEIGHT 500"
+    },
+    {
+      "type": "assets",
+      "id": "93366a34f2ee891b",
+      "text": "plugins/datalog"
+    },
+    {
+      "type": "assets",
+      "id": "42f31548ffe82171",
+      "text": "plugins/datalog/deno-deploy-datalog"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Deno Deploy Datalog",
+        "story": []
+      },
+      "date": 1617669485723
+    },
+    {
+      "id": "06a2b468ef2bc792",
+      "type": "add",
+      "item": {
+        "type": "datalog",
+        "id": "06a2b468ef2bc792",
+        "text": "SENSOR asia http://ward.asia.wiki.org/plugin/wsjt/stats\nDAY 1440\nKEEP 15"
+      },
+      "date": 1617669544500
+    },
+    {
+      "type": "edit",
+      "id": "06a2b468ef2bc792",
+      "item": {
+        "type": "datalog",
+        "id": "06a2b468ef2bc792",
+        "text": "SENSOR small https://small.deno.dev/system/countmap.json\nDAY 1440\nKEEP 15"
+      },
+      "date": 1617669637288
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "42f31548ffe82171"
+      },
+      "id": "42f31548ffe82171",
+      "type": "add",
+      "after": "06a2b468ef2bc792",
+      "date": 1617669661649
+    },
+    {
+      "type": "edit",
+      "id": "42f31548ffe82171",
+      "item": {
+        "type": "assets",
+        "id": "42f31548ffe82171",
+        "text": "plugins/datalog/deno-deploy-datalog"
+      },
+      "date": 1617669682221
+    },
+    {
+      "id": "e7f81c6cd60ed493",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "e7f81c6cd60ed493",
+        "text": "We'll watch reported and collected decodes over time. View multiple measures over multiple days in one Plot.ly  graph. [http://ward.asia.wiki.org/assets/plugins/datalog/ft8-decodes-datalog/plot-decodes.html?keep=4 plot]"
+      },
+      "date": 1617669758635
+    },
+    {
+      "type": "edit",
+      "id": "e7f81c6cd60ed493",
+      "item": {
+        "type": "paragraph",
+        "id": "e7f81c6cd60ed493",
+        "text": "We'll watch retained endpoint hit counts over time. View multiple measures over multiple days in one Plot.ly  graph. [http://ward.asia.wiki.org/assets/plugins/datalog/ft8-decodes-datalog/plot-decodes.html?keep=4 plot]"
+      },
+      "date": 1617669896953
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "93366a34f2ee891b"
+      },
+      "id": "93366a34f2ee891b",
+      "type": "add",
+      "after": "42f31548ffe82171",
+      "date": 1617669935963
+    },
+    {
+      "type": "edit",
+      "id": "93366a34f2ee891b",
+      "item": {
+        "type": "assets",
+        "id": "93366a34f2ee891b",
+        "text": "plugins/datalog"
+      },
+      "date": 1617669939993
+    },
+    {
+      "type": "edit",
+      "id": "e7f81c6cd60ed493",
+      "item": {
+        "type": "paragraph",
+        "id": "e7f81c6cd60ed493",
+        "text": "We'll watch retained endpoint hit counts over time. View multiple measures over multiple days in one Plot.ly  graph. [http://ward.asia.wiki.org/assets/plugins/datalog/plot-raw-datalog.html?slug=deno-deploy-datalog&keep=1 plot]"
+      },
+      "date": 1617670110001
+    },
+    {
+      "type": "edit",
+      "id": "e7f81c6cd60ed493",
+      "item": {
+        "type": "paragraph",
+        "id": "e7f81c6cd60ed493",
+        "text": "We'll watch retained endpoint hit counts over time. "
+      },
+      "date": 1617670875935
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8ba5dc3287f5e343"
+      },
+      "id": "8ba5dc3287f5e343",
+      "type": "add",
+      "after": "93366a34f2ee891b",
+      "date": 1617828388141
+    },
+    {
+      "type": "edit",
+      "id": "8ba5dc3287f5e343",
+      "item": {
+        "type": "frame",
+        "id": "8ba5dc3287f5e343",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/plot-context.html"
+      },
+      "date": 1617828395645
+    },
+    {
+      "id": "8ba5dc3287f5e343",
+      "type": "move",
+      "order": [
+        "e7f81c6cd60ed493",
+        "06a2b468ef2bc792",
+        "42f31548ffe82171",
+        "8ba5dc3287f5e343",
+        "93366a34f2ee891b"
+      ],
+      "date": 1617828405567
+    },
+    {
+      "type": "fork",
+      "date": 1617839636296
+    },
+    {
+      "type": "edit",
+      "id": "8ba5dc3287f5e343",
+      "item": {
+        "type": "frame",
+        "id": "8ba5dc3287f5e343",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/plot-context.html\nHEIGHT 400"
+      },
+      "date": 1617839948171
+    },
+    {
+      "type": "edit",
+      "id": "8ba5dc3287f5e343",
+      "item": {
+        "type": "frame",
+        "id": "8ba5dc3287f5e343",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/plot-context.html\nHEIGHT 500"
+      },
+      "date": 1617839984809
+    },
+    {
+      "id": "42f31548ffe82171",
+      "type": "move",
+      "order": [
+        "e7f81c6cd60ed493",
+        "06a2b468ef2bc792",
+        "8ba5dc3287f5e343",
+        "93366a34f2ee891b",
+        "42f31548ffe82171"
+      ],
+      "date": 1617841161639
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "30e8d7de9b05ed83"
+      },
+      "id": "30e8d7de9b05ed83",
+      "type": "add",
+      "after": "42f31548ffe82171",
+      "date": 1617841900676
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "2 + 3"
+      },
+      "date": 1617841909865
+    },
+    {
+      "id": "30e8d7de9b05ed83",
+      "type": "move",
+      "order": [
+        "e7f81c6cd60ed493",
+        "06a2b468ef2bc792",
+        "8ba5dc3287f5e343",
+        "30e8d7de9b05ed83",
+        "93366a34f2ee891b",
+        "42f31548ffe82171"
+      ],
+      "date": 1617841914454
+    },
+    {
+      "id": "30e8d7de9b05ed83",
+      "type": "move",
+      "order": [
+        "e7f81c6cd60ed493",
+        "06a2b468ef2bc792",
+        "30e8d7de9b05ed83",
+        "8ba5dc3287f5e343",
+        "93366a34f2ee891b",
+        "42f31548ffe82171"
+      ],
+      "date": 1617841918212
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "traces = ["
+      },
+      "date": 1617842167586
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "traces = [{ x: [1, 2, 3, 4], y: [10, 15, 13, 17]}]"
+      },
+      "date": 1617842191042
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "traces = [\n{ x: [1, 2, 3, 4], y: [10, 15, 13, 17]},\n{ x: [1, 2, 3, 4], y: [16, 5, 11, 9]}]"
+      },
+      "date": 1617842323459
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let clock = data.map(samp => samp.clock)\nlet count = data.map(samp => samp.\ntraces = [\n{ x: [1, 2, 3, 4], y: [10, 15, 13, 17]},\n{ x: [1, 2, 3, 4], y: [16, 5, 11, 9]}]"
+      },
+      "date": 1617842827434
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let clock = data.map(samp => samp.clock)\nlet count = data.map(samp => samp.result[0].\ntraces = [\n{ x: [1, 2, 3, 4], y: [10, 15, 13, 17]},\n{ x: [1, 2, 3, 4], y: [16, 5, 11, 9]}]"
+      },
+      "date": 1617842965626
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let clock = data.map(samp => samp.clock)\nlet count = data.map(samp => samp.result[0].data\ntraces = [\n{ x: [1, 2, 3, 4], y: [10, 15, 13, 17]},\n{ x: [1, 2, 3, 4], y: [16, 5, 11, 9]}]"
+      },
+      "date": 1617842988715
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let clock = data.map(samp => samp.clock)\nlet count = data.map(samp => samp.result[0].data[\"/system/countmap.json\"]\n\ntraces = [{ x: clock, y: count}]"
+      },
+      "date": 1617843108675
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let clock = data.map(samp => samp.clock)\nlet count = data.map(samp => samp.result[0].data[\"/system/countmap.json\"])\n\ntraces = [{ x: clock, y: count}]"
+      },
+      "date": 1617843128224
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let clock = data.map(samp => new Date(samp.clock))\nlet count = data.map(samp => samp.result[0].data[\"/system/countmap.json\"])\n\ntraces = [{ x: clock, y: count}]"
+      },
+      "date": 1617843154208
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let key = \"/system/countmap.json\"\nlet clock = data.map(s => new Date(s.clock))\nlet count = data.map(s => s.result[0].data[key])\n\ntraces = [{ x: clock, y: count}]"
+      },
+      "date": 1617843330909
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let key = \"/system/countmap.json\"\nlet x = data.map(s => new Date(s.clock))\nlet y = data.map(s => s.result[0].data[key])\n\ntraces = [{x,y}]"
+      },
+      "date": 1617843387145
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let key = \"/system/countmap.json\"\nlet x = data.map(s => new Date(s.clock))\nlet y = data.map(s => s.result[0].data[key])\ntraces = [{x,y}]"
+      },
+      "date": 1617843472832
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let key = \"/system/countmap.json\"\nlet x = data.map(s => new Date(s.clock))\nlet y = data.map(s => s.result[0].data[key])\ntraces = [{x,y,name:key}]"
+      },
+      "date": 1617844133833
+    },
+    {
+      "type": "edit",
+      "id": "30e8d7de9b05ed83",
+      "item": {
+        "type": "code",
+        "id": "30e8d7de9b05ed83",
+        "text": "let key = \"/system/countmap.json\"\nlet x = data.map(s => new Date(s.clock))\nlet y = data.map(s => s.result[0].data[key])\ntraces = [{x,y}]"
+      },
+      "date": 1617844159508
+    },
+    {
+      "type": "edit",
+      "id": "06a2b468ef2bc792",
+      "item": {
+        "type": "datalog",
+        "id": "06a2b468ef2bc792",
+        "text": "SENSOR small https://small.deno.dev/system/countmap.json\nDAY 144\nKEEP 15"
+      },
+      "date": 1617895701165
+    }
+  ]
+}

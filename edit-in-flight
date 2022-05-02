@@ -1,0 +1,139 @@
+{
+  "title": "Edit in Flight",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d84152fe01fa5158",
+      "text": "When posting edits to a server we expect the server to always be caught up. We should show a translucent spinner over items until we get an acknowledgement from the server. There are network failures that wait for a timeout to be thrown."
+    },
+    {
+      "type": "paragraph",
+      "id": "dcce63861c610f01",
+      "text": "A spinner flashing by almost imperceptibly would indicate a good connection to a responsive server."
+    },
+    {
+      "type": "paragraph",
+      "id": "f7910416f932f16c",
+      "text": "A spinner noticeably and reliably rotating would indicate long network delays or consistently slow server."
+    },
+    {
+      "type": "paragraph",
+      "id": "7218c2d3decf6278",
+      "text": "A spinner that is only occasionally noticed to spin would signal busty delays in server or network. Time for local."
+    },
+    {
+      "type": "paragraph",
+      "id": "2237fe8d16ff2189",
+      "text": "A spinner that gets stuck spinning indicates serious trouble. Wait for a timeout. Your page will go local."
+    },
+    {
+      "type": "paragraph",
+      "id": "35e6147d2be11625",
+      "text": "We might prevent further editing of items that are still spinning. Our split logic would allow someone to continue editing and piling up the spinners. That would be cool, but explaining why join won't work in this case could be hard."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Edit in Flight",
+        "story": []
+      },
+      "date": 1421692946733
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d84152fe01fa5158"
+      },
+      "id": "d84152fe01fa5158",
+      "type": "add",
+      "date": 1421692948394
+    },
+    {
+      "type": "edit",
+      "id": "d84152fe01fa5158",
+      "item": {
+        "type": "paragraph",
+        "id": "d84152fe01fa5158",
+        "text": "When posting edits to a server we expect the server to always be caught up. We should show a translucent spinner over items until we get an acknowledgement from the server. There are network failures that wait for a timeout to be thrown."
+      },
+      "date": 1421693097463
+    },
+    {
+      "type": "add",
+      "id": "dcce63861c610f01",
+      "item": {
+        "type": "paragraph",
+        "id": "dcce63861c610f01",
+        "text": "A spinner flashing by almost imperceptibly would indicate a good connection to a responsive server."
+      },
+      "after": "d84152fe01fa5158",
+      "date": 1421693171517
+    },
+    {
+      "type": "add",
+      "id": "f7910416f932f16c",
+      "item": {
+        "type": "paragraph",
+        "id": "f7910416f932f16c",
+        "text": "A spinner noticeably and reliably rotating would indicate long network delays or consistently slow server."
+      },
+      "after": "dcce63861c610f01",
+      "date": 1421693231979
+    },
+    {
+      "type": "add",
+      "id": "7218c2d3decf6278",
+      "item": {
+        "type": "paragraph",
+        "id": "7218c2d3decf6278",
+        "text": "A spinner that is only occasionally noticed to spin would signal busty delays in server or network. Good time to go local."
+      },
+      "after": "f7910416f932f16c",
+      "date": 1421693309657
+    },
+    {
+      "type": "edit",
+      "id": "7218c2d3decf6278",
+      "item": {
+        "type": "paragraph",
+        "id": "7218c2d3decf6278",
+        "text": "A spinner that is only occasionally noticed to spin would signal busty delays in server or network. Good time for local."
+      },
+      "date": 1421693318033
+    },
+    {
+      "type": "edit",
+      "id": "7218c2d3decf6278",
+      "item": {
+        "type": "paragraph",
+        "id": "7218c2d3decf6278",
+        "text": "A spinner that is only occasionally noticed to spin would signal busty delays in server or network. Time for local."
+      },
+      "date": 1421693330945
+    },
+    {
+      "type": "add",
+      "id": "2237fe8d16ff2189",
+      "item": {
+        "type": "paragraph",
+        "id": "2237fe8d16ff2189",
+        "text": "A spinner that gets stuck spinning indicates serious trouble. Wait for a timeout. Your page will go local."
+      },
+      "after": "7218c2d3decf6278",
+      "date": 1421693399799
+    },
+    {
+      "type": "add",
+      "id": "35e6147d2be11625",
+      "item": {
+        "type": "paragraph",
+        "id": "35e6147d2be11625",
+        "text": "We might prevent further editing of items that are still spinning. Our split logic would allow someone to continue editing and piling up the spinners. That would be cool, but explaining why join won't work in this case could be hard."
+      },
+      "after": "2237fe8d16ff2189",
+      "date": 1421693490629
+    }
+  ]
+}

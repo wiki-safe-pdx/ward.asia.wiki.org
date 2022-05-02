@@ -1,0 +1,304 @@
+{
+  "title": "Ping Home Servers",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "4d1cd36fe8e48bfe",
+      "text": "We host several experimental services some without backup power that require restarts after utility interruptions. [http:/assets/plugins/datalog/plot-curl.html?slug=ping-home-servers&chunk=month&keep=3 plot] "
+    },
+    {
+      "type": "paragraph",
+      "id": "adbcd56569a469c8",
+      "text": "See [[Alert on Home Outage]]"
+    },
+    {
+      "type": "datalog",
+      "id": "073306613faa06cb",
+      "text": "SENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\nSENSOR image http:/plugin/datalog/curl?url=home.c2.com:4010\nSENSOR search http:/plugin/datalog/curl?url=home.c2.com:3030/\nSENSOR pi http:/plugin/datalog/curl?url=home.c2.com:3000/\n\nMONTH 4320\nKEEP 14"
+    },
+    {
+      "type": "assets",
+      "id": "2f0b2df33786f8c9",
+      "text": "plugins/datalog/ping-home-servers"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ee66a98a7543c30",
+      "text": "We compute uptime stats reporting by hour, day or month."
+    },
+    {
+      "type": "frame",
+      "id": "7513838bd9330f75",
+      "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-home-servers&chunk=month&keep=2&report=day&show=31&\nHEIGHT 720"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Ping Home Servers",
+        "story": []
+      },
+      "date": 1557019294809
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4d1cd36fe8e48bfe"
+      },
+      "id": "4d1cd36fe8e48bfe",
+      "type": "add",
+      "date": 1557019310198
+    },
+    {
+      "type": "edit",
+      "id": "4d1cd36fe8e48bfe",
+      "item": {
+        "type": "paragraph",
+        "id": "4d1cd36fe8e48bfe",
+        "text": "We host several experimental services some without backup power that require restarts after utility interruptions."
+      },
+      "date": 1557019406203
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "073306613faa06cb"
+      },
+      "id": "073306613faa06cb",
+      "type": "add",
+      "after": "4d1cd36fe8e48bfe",
+      "date": 1557019410748
+    },
+    {
+      "type": "edit",
+      "id": "073306613faa06cb",
+      "item": {
+        "type": "datalog",
+        "id": "073306613faa06cb",
+        "text": "SENSOR sensor http:/"
+      },
+      "date": 1557019440414
+    },
+    {
+      "type": "edit",
+      "id": "073306613faa06cb",
+      "item": {
+        "type": "datalog",
+        "id": "073306613faa06cb",
+        "text": "SENSOR sensor http:/plugin/datalog/curl?url=eu.wiki.org"
+      },
+      "date": 1557019468033
+    },
+    {
+      "type": "edit",
+      "id": "073306613faa06cb",
+      "item": {
+        "type": "datalog",
+        "id": "073306613faa06cb",
+        "text": "SENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss"
+      },
+      "date": 1557019578934
+    },
+    {
+      "type": "edit",
+      "id": "073306613faa06cb",
+      "item": {
+        "type": "datalog",
+        "id": "073306613faa06cb",
+        "text": "SENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557019665252
+    },
+    {
+      "type": "edit",
+      "id": "073306613faa06cb",
+      "item": {
+        "type": "datalog",
+        "id": "073306613faa06cb",
+        "text": "SENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\nSENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4010\n\nSENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\n\nSENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557019856368
+    },
+    {
+      "type": "edit",
+      "id": "073306613faa06cb",
+      "item": {
+        "type": "datalog",
+        "id": "073306613faa06cb",
+        "text": "SENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\nSENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4010\nSENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:3030/\n\nSENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557019940458
+    },
+    {
+      "type": "edit",
+      "id": "073306613faa06cb",
+      "item": {
+        "type": "datalog",
+        "id": "073306613faa06cb",
+        "text": "SENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\nSENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4010\nSENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:3030/\n\nSENSOR pi http:/plugin/datalog/curl?url=home.c2.com:3000/\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557020073601
+    },
+    {
+      "type": "edit",
+      "id": "073306613faa06cb",
+      "item": {
+        "type": "datalog",
+        "id": "073306613faa06cb",
+        "text": "SENSOR sensor http:/plugin/datalog/curl?url=home.c2.com:4567/ss\nSENSOR image http:/plugin/datalog/curl?url=home.c2.com:4010\nSENSOR search http:/plugin/datalog/curl?url=home.c2.com:3030/\nSENSOR pi http:/plugin/datalog/curl?url=home.c2.com:3000/\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557020102136
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2f0b2df33786f8c9"
+      },
+      "id": "2f0b2df33786f8c9",
+      "type": "add",
+      "after": "073306613faa06cb",
+      "date": 1557020154696
+    },
+    {
+      "type": "edit",
+      "id": "2f0b2df33786f8c9",
+      "item": {
+        "type": "assets",
+        "id": "2f0b2df33786f8c9",
+        "text": "plugins/datalog/ping-home-servers"
+      },
+      "date": 1557020164518
+    },
+    {
+      "type": "edit",
+      "id": "4d1cd36fe8e48bfe",
+      "item": {
+        "type": "paragraph",
+        "id": "4d1cd36fe8e48bfe",
+        "text": "We host several experimental services some without backup power that require restarts after utility interruptions. [http:/assets/plugins/datalog/plot-curl.html?slug=ping-home-servers&chunk=month&keep=3 plot] "
+      },
+      "date": 1557064254362
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1557151783101
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "2ee66a98a7543c30",
+        "text": "We compute uptime stats reporting by hour, day or month."
+      },
+      "after": "2f0b2df33786f8c9",
+      "id": "2ee66a98a7543c30",
+      "date": 1557152191382
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour&show=24\nHEIGHT 720"
+      },
+      "after": "2ee66a98a7543c30",
+      "id": "7513838bd9330f75",
+      "date": 1557152205126
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-home-servers&chunk=month&keep=1&report=hour&show=24\nHEIGHT 720"
+      },
+      "date": 1557152253573
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-home-servers&chunk=month&keep=1&report=day&show=24\nHEIGHT 720"
+      },
+      "date": 1557288433960
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "adbcd56569a469c8"
+      },
+      "id": "adbcd56569a469c8",
+      "type": "add",
+      "after": "7513838bd9330f75",
+      "date": 1558800445788
+    },
+    {
+      "type": "edit",
+      "id": "adbcd56569a469c8",
+      "item": {
+        "type": "paragraph",
+        "id": "adbcd56569a469c8",
+        "text": "See [[Alert Home Outage]]"
+      },
+      "date": 1558800502126
+    },
+    {
+      "type": "edit",
+      "id": "adbcd56569a469c8",
+      "item": {
+        "type": "paragraph",
+        "id": "adbcd56569a469c8",
+        "text": "See [[Alert onHome Outage]]"
+      },
+      "date": 1558800780910
+    },
+    {
+      "type": "edit",
+      "id": "adbcd56569a469c8",
+      "item": {
+        "type": "paragraph",
+        "id": "adbcd56569a469c8",
+        "text": "See [[Alert on Home Outage]]"
+      },
+      "date": 1558800787061
+    },
+    {
+      "type": "move",
+      "order": [
+        "4d1cd36fe8e48bfe",
+        "adbcd56569a469c8",
+        "073306613faa06cb",
+        "2f0b2df33786f8c9",
+        "2ee66a98a7543c30",
+        "7513838bd9330f75"
+      ],
+      "id": "adbcd56569a469c8",
+      "date": 1558842130200
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-home-servers&chunk=month&keep=2&report=day&show=24\nHEIGHT 720"
+      },
+      "date": 1559360040725
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-home-servers&chunk=month&keep=2&report=day&show=31&\nHEIGHT 720"
+      },
+      "date": 1617302367889
+    }
+  ]
+}

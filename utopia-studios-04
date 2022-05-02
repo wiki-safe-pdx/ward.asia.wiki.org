@@ -1,0 +1,157 @@
+{
+  "title": "Utopia Studios: 04",
+  "journal": [
+    {
+      "date": 1450620744989,
+      "type": "create",
+      "item": {
+        "story": "",
+        "title": "Utopia Studios: 04"
+      }
+    },
+    {
+      "type": "add",
+      "id": "a0fc3c3396497f564694423a342c58fec26e5597",
+      "item": {
+        "type": "factory",
+        "id": "a0fc3c3396497f564694423a342c58fec26e5597"
+      },
+      "date": 1450620744989
+    },
+    {
+      "type": "edit",
+      "id": "a0fc3c3396497f564694423a342c58fec26e5597",
+      "item": {
+        "id": "a0fc3c3396497f564694423a342c58fec26e5597",
+        "type": "paragraph",
+        "text": "Music, mobile interface, and multi-channel sound for the #BuildingUtopia project."
+      },
+      "date": 1450620744989
+    },
+    {
+      "type": "add",
+      "id": "90602dac55b2170043592dae1602a087cf360723",
+      "after": "a0fc3c3396497f564694423a342c58fec26e5597",
+      "item": {
+        "type": "factory",
+        "id": "90602dac55b2170043592dae1602a087cf360723"
+      },
+      "date": 1450620744990
+    },
+    {
+      "type": "edit",
+      "id": "90602dac55b2170043592dae1602a087cf360723",
+      "item": {
+        "id": "90602dac55b2170043592dae1602a087cf360723",
+        "type": "html",
+        "text": "<div align=center><img src=\"http://d15mj6e6qmt1na.cloudfront.net/i/12086538\" width=428></div>"
+      },
+      "date": 1450620744990
+    },
+    {
+      "type": "add",
+      "id": "12d8bf8951bd3c6924fce21dd2cc16736a835c9f",
+      "after": "90602dac55b2170043592dae1602a087cf360723",
+      "item": {
+        "type": "factory",
+        "id": "12d8bf8951bd3c6924fce21dd2cc16736a835c9f"
+      },
+      "date": 1450620744990
+    },
+    {
+      "type": "edit",
+      "id": "12d8bf8951bd3c6924fce21dd2cc16736a835c9f",
+      "item": {
+        "id": "12d8bf8951bd3c6924fce21dd2cc16736a835c9f",
+        "type": "audio",
+        "text": "\n."
+      },
+      "date": 1450620744990
+    },
+    {
+      "type": "add",
+      "id": "pID",
+      "after": "12d8bf8951bd3c6924fce21dd2cc16736a835c9f",
+      "item": {
+        "type": "factory",
+        "id": "pID"
+      },
+      "date": 1450620744990
+    },
+    {
+      "type": "edit",
+      "id": "pID",
+      "item": {
+        "id": "pID",
+        "type": "map",
+        "zoom": 17,
+        "latlng": {
+          "lng": -0.103633,
+          "lat": 51.5634
+        },
+        "text": "[[London]], Greater London, United Kingdom - [http://www.openstreetmap.org/#map=17/51.5634/-0.103633 openstreetmap]"
+      },
+      "date": 1450620744990
+    },
+    {
+      "type": "add",
+      "id": "b301f6bebd6f7dcb38017606cfb4bd742af40cd3",
+      "after": "pID",
+      "item": {
+        "type": "factory",
+        "id": "b301f6bebd6f7dcb38017606cfb4bd742af40cd3"
+      },
+      "date": 1450620744990
+    },
+    {
+      "type": "edit",
+      "id": "b301f6bebd6f7dcb38017606cfb4bd742af40cd3",
+      "item": {
+        "id": "b301f6bebd6f7dcb38017606cfb4bd742af40cd3",
+        "type": "paragraph",
+        "text": "This recording was made near [[ London]],  by [[fortyfoxes]], on  Dec 15, 2014 at 9:18 AM - [http://audioboom.com/boos/2732523-utopia-studios-04 audioboom]"
+      },
+      "date": 1450620744990
+    },
+    {
+      "type": "fork",
+      "date": 1450620778171
+    },
+    {
+      "type": "fork",
+      "date": 1450620788511
+    }
+  ],
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "a0fc3c3396497f564694423a342c58fec26e5597",
+      "text": "Music, mobile interface, and multi-channel sound for the #BuildingUtopia project."
+    },
+    {
+      "type": "html",
+      "id": "90602dac55b2170043592dae1602a087cf360723",
+      "text": "<div align=center><img src=\"http://d15mj6e6qmt1na.cloudfront.net/i/12086538\" width=428></div>"
+    },
+    {
+      "type": "audio",
+      "id": "12d8bf8951bd3c6924fce21dd2cc16736a835c9f",
+      "text": "\n."
+    },
+    {
+      "type": "map",
+      "id": "pID",
+      "zoom": 17,
+      "latlng": {
+        "lng": -0.103633,
+        "lat": 51.5634
+      },
+      "text": "[[London]], Greater London, United Kingdom - [http://www.openstreetmap.org/#map=17/51.5634/-0.103633 openstreetmap]"
+    },
+    {
+      "type": "paragraph",
+      "id": "b301f6bebd6f7dcb38017606cfb4bd742af40cd3",
+      "text": "This recording was made near [[ London]],  by [[fortyfoxes]], on  Dec 15, 2014 at 9:18 AM - [http://audioboom.com/boos/2732523-utopia-studios-04 audioboom]"
+    }
+  ]
+}

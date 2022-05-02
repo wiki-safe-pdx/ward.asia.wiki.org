@@ -1,0 +1,494 @@
+{
+  "title": "Ambient Federation",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "be18b783231c2057",
+      "text": "We imagine the day not far away when talking to a computer in public will not sound like science fiction. We'll live in a world of muffled speech. A few dialogs will be about important things other than ordering pizza."
+    },
+    {
+      "type": "markdown",
+      "id": "cb54ec63a8c9b35c",
+      "text": "# Voice Design"
+    },
+    {
+      "type": "paragraph",
+      "id": "b1b5cb94d7245534",
+      "text": "Voice communication is intimate and immediate. We mumble and jest about what is right here right now. We will not talk casually to our computers until they can keep up with our attention depleted expression. A personal hypertext may be the only solution."
+    },
+    {
+      "type": "paragraph",
+      "id": "f242048392874abe",
+      "text": "[[Hello Echo]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "551e732ec0875812",
+      "text": "Amazon put a kindle in a tube with a good speaker and an excellent microphone. One addresses it as Alexa."
+    },
+    {
+      "type": "code",
+      "id": "f94f34ec80ba3d3e",
+      "text": "me: Alexa, set a timer for fifteen minutes.\nit: Fifteen minutes starting now."
+    },
+    {
+      "type": "paragraph",
+      "id": "ab409392449f72ea",
+      "text": "Excellent voice design confirms recognition while exposing assumptions so as to minimize the confusion within ambiguous expression. [https://developer.amazon.com/public/community/post/Tx205N9U1UD338H/Introducing-the-Alexa-Skills-Kit-Enabling-Developers-to-Create-Entirely-New-Voice amazon]"
+    },
+    {
+      "type": "code",
+      "id": "7b1809597a63a7ed",
+      "text": "me: Alexa, what's new on wiki.\nit: Mike has two new articles, David continues one.\nme: What has Mike written?\nit: Mike wrote about Browsing and Editing\nme: Tell me about Editing.\nit: We hear repeatedly that fedwiki is confusing to beginners. One solution might be a simple entry-level editor.\nme: Skim it for me.\nit: People have asked me ...\nit: Cant be installed ...\nit: Inaccessible to vision-impaired ...\nme: Go on.\nit: Visually overwhelming ...\nit: An ideal starter environment ... \nme: What?\nit An ideal environment ... might look familiar ... only a few differences ... quickly explained."
+    },
+    {
+      "type": "paragraph",
+      "id": "2953e3236e9be2f4",
+      "text": "Mike has written about entry level browsing and editing especially by the vision impaired. See [[Minimum Specs for Entry Level Editor]] "
+    },
+    {
+      "type": "paragraph",
+      "id": "91af2ce22f20c77b",
+      "text": "Imagine a sighted person studying complex visualizations and then explaining the insights the might get through the experience. Then imagine the Echo's deep learning reading those insights and highlighting the operative words that would be read to the sightless. Do they match? "
+    },
+    {
+      "type": "paragraph",
+      "id": "674bc6eba03e7a39",
+      "text": "Would communication happen? Is there a better word? Better sentence structure. A more important thing to say right away? Would the sightless be the only one to benefit from this robotic proof reading?"
+    },
+    {
+      "type": "paragraph",
+      "id": "324e7b7bed5ecc93",
+      "text": "Try condensing this transcript: [[Digest 2015-07-29]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1aa6ac49e23f17bf",
+      "text": "Is authoring assistance possible? Valuable? Educational even? Would people express themselves better if the were use to speaking and typing to the Echo? Would beauty disappear? Or would it move to a different level?"
+    },
+    {
+      "type": "markdown",
+      "id": "382110cf9c8499f8",
+      "text": "# Blind Creatives"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ef21e10008b2da7",
+      "text": "I worked with a blind compiler writer years ago. His was challenging work and mistakes were common. I wrote tools that helped me debug. One out of four errors were in the compiler. (But then, one out of forty errors were in the chips themselves.)"
+    },
+    {
+      "type": "paragraph",
+      "id": "367999337da0c059",
+      "text": "Compiler errors were common because a blind compiler writer could not see all of the self-similar parts of the code. If the logic were wrong in one place is was probably equally wrong in a dozen others. But each bug would have to be found, reported, understood and repaired individually."
+    },
+    {
+      "type": "paragraph",
+      "id": "2fcbeb511abebd0d",
+      "text": "If the visually privileged find federation confusing what do they think any traditionally sighted task is like to the blind? We advise programmers to identify the thing they find most difficult and do a lot of it."
+    },
+    {
+      "type": "paragraph",
+      "id": "b0099be37f1a20bd",
+      "text": "Could a blind compiler writer write a better compiler if he hand to speak it to Echo from across the room? What would Echo have to do to help? What would every sighted person in the federation have to do to help Echo? That is the browse/editor of the future."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Ambient Federation",
+        "story": []
+      },
+      "date": 1438224617636
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "be18b783231c2057"
+      },
+      "id": "be18b783231c2057",
+      "type": "add",
+      "date": 1438224619869
+    },
+    {
+      "type": "edit",
+      "id": "be18b783231c2057",
+      "item": {
+        "type": "paragraph",
+        "id": "be18b783231c2057",
+        "text": "We imagine the day not far away when talking to a computer in public will not sound like science fiction. How can we make it more than ordering pizza?"
+      },
+      "date": 1438224694512
+    },
+    {
+      "type": "add",
+      "id": "b1b5cb94d7245534",
+      "item": {
+        "type": "paragraph",
+        "id": "b1b5cb94d7245534",
+        "text": "Voice communication is intimate and immediate. We mumble and jest about what is right here right now. We will not talk casually to our computers until they can keep up with our attention depleted expression. A personal hypertext may be the only solution."
+      },
+      "after": "be18b783231c2057",
+      "date": 1438224898445
+    },
+    {
+      "type": "add",
+      "id": "f242048392874abe",
+      "item": {
+        "type": "paragraph",
+        "id": "f242048392874abe",
+        "text": "[[Hello Echo]]"
+      },
+      "after": "b1b5cb94d7245534",
+      "date": 1438224948034
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f94f34ec80ba3d3e"
+      },
+      "id": "f94f34ec80ba3d3e",
+      "type": "add",
+      "after": "f242048392874abe",
+      "date": 1438224960802
+    },
+    {
+      "type": "edit",
+      "id": "f94f34ec80ba3d3e",
+      "item": {
+        "type": "code",
+        "id": "f94f34ec80ba3d3e",
+        "text": "me: Alexa, set a timer for fifteen minutes.\nit: Fifteen minutes starting now."
+      },
+      "date": 1438225018931
+    },
+    {
+      "type": "add",
+      "id": "551e732ec0875812",
+      "item": {
+        "type": "paragraph",
+        "id": "551e732ec0875812",
+        "text": "Amazon put a kindle in a tube with a good speaker and an excellent microphone. One addresses it as Alexa."
+      },
+      "after": "f242048392874abe",
+      "date": 1438225115499
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ab409392449f72ea"
+      },
+      "id": "ab409392449f72ea",
+      "type": "add",
+      "after": "f94f34ec80ba3d3e",
+      "date": 1438225135149
+    },
+    {
+      "type": "edit",
+      "id": "ab409392449f72ea",
+      "item": {
+        "type": "paragraph",
+        "id": "ab409392449f72ea",
+        "text": "Excellent voice design confirms recognition while exposing assumptions so as to minimize the confusion within ambiguous expression. "
+      },
+      "date": 1438225391346
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7b1809597a63a7ed"
+      },
+      "id": "7b1809597a63a7ed",
+      "type": "add",
+      "after": "ab409392449f72ea",
+      "date": 1438225435125
+    },
+    {
+      "type": "edit",
+      "id": "7b1809597a63a7ed",
+      "item": {
+        "type": "code",
+        "id": "7b1809597a63a7ed",
+        "text": "me: Alexa, what's new on wiki.\nit: Mike has two new articles, David continues one.\nme: What has Mike written?\nit: "
+      },
+      "date": 1438225509283
+    },
+    {
+      "type": "edit",
+      "id": "7b1809597a63a7ed",
+      "item": {
+        "type": "code",
+        "id": "7b1809597a63a7ed",
+        "text": "me: Alexa, what's new on wiki.\nit: Mike has two new articles, David continues one.\nme: What has Mike written?\nit: Mike wrote about Entry Level Browsing and Editing\nme: Tell me about Editing.\nit: We hear repeatedly that fedwiki is confusing to beginners"
+      },
+      "date": 1438225785894
+    },
+    {
+      "type": "edit",
+      "id": "7b1809597a63a7ed",
+      "item": {
+        "type": "code",
+        "id": "7b1809597a63a7ed",
+        "text": "me: Alexa, what's new on wiki.\nit: Mike has two new articles, David continues one.\nme: What has Mike written?\nit: Mike wrote about Entry Level Browsing and Editing\nme: Tell me about Editing.\nit: We hear repeatedly that fedwiki is confusing to beginners."
+      },
+      "date": 1438225801524
+    },
+    {
+      "type": "edit",
+      "id": "7b1809597a63a7ed",
+      "item": {
+        "type": "code",
+        "id": "7b1809597a63a7ed",
+        "text": "me: Alexa, what's new on wiki.\nit: Mike has two new articles, David continues one.\nme: What has Mike written?\nit: Mike wrote about Entry Level Browsing and Editing\nme: Tell me about Editing.\nit: We hear repeatedly that fedwiki is confusing to beginners. One solution might be a simple entry-level editor."
+      },
+      "date": 1438225813553
+    },
+    {
+      "type": "edit",
+      "id": "7b1809597a63a7ed",
+      "item": {
+        "type": "code",
+        "id": "7b1809597a63a7ed",
+        "text": "me: Alexa, what's new on wiki.\nit: Mike has two new articles, David continues one.\nme: What has Mike written?\nit: Mike wrote about Browsing and Editing\nme: Tell me about Editing.\nit: We hear repeatedly that fedwiki is confusing to beginners. One solution might be a simple entry-level editor."
+      },
+      "date": 1438225858159
+    },
+    {
+      "type": "edit",
+      "id": "7b1809597a63a7ed",
+      "item": {
+        "type": "code",
+        "id": "7b1809597a63a7ed",
+        "text": "me: Alexa, what's new on wiki.\nit: Mike has two new articles, David continues one.\nme: What has Mike written?\nit: Mike wrote about Browsing and Editing\nme: Tell me about Editing.\nit: We hear repeatedly that fedwiki is confusing to beginners. One solution might be a simple entry-level editor.\nme: Skim it for me.\nit: People have asked me ...\nit: Can't be installed ...\nit: Inaccessible to vision-impaired ...\nme: Go on.\nit: Visually overwhelming ...\nit: An ideal starter environment ... \nme: What?\nit An ideal environment ... might look familiar ... only a few differences ... quickly explained."
+      },
+      "date": 1438226199198
+    },
+    {
+      "type": "edit",
+      "id": "7b1809597a63a7ed",
+      "item": {
+        "type": "code",
+        "id": "7b1809597a63a7ed",
+        "text": "me: Alexa, what's new on wiki.\nit: Mike has two new articles, David continues one.\nme: What has Mike written?\nit: Mike wrote about Browsing and Editing\nme: Tell me about Editing.\nit: We hear repeatedly that fedwiki is confusing to beginners. One solution might be a simple entry-level editor.\nme: Skim it for me.\nit: People have asked me ...\nit: Cant be installed ...\nit: Inaccessible to vision-impaired ...\nme: Go on.\nit: Visually overwhelming ...\nit: An ideal starter environment ... \nme: What?\nit An ideal environment ... might look familiar ... only a few differences ... quickly explained."
+      },
+      "date": 1438226218211
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2953e3236e9be2f4"
+      },
+      "id": "2953e3236e9be2f4",
+      "type": "add",
+      "after": "7b1809597a63a7ed",
+      "date": 1438226350702
+    },
+    {
+      "type": "edit",
+      "id": "2953e3236e9be2f4",
+      "item": {
+        "type": "paragraph",
+        "id": "2953e3236e9be2f4",
+        "text": "Mike has written about entry level browsing and editing especially by the vision impaired. See [[Minimum Specs for Entry Level Editor]] "
+      },
+      "date": 1438226482107
+    },
+    {
+      "type": "add",
+      "id": "91af2ce22f20c77b",
+      "item": {
+        "type": "paragraph",
+        "id": "91af2ce22f20c77b",
+        "text": "Imagine a sighted person studying complex visualizations and then explaining the insights the might get through the experience. Then imagine the Echo's deep learning reading those insights and highlighting the operative words that would be read to the sightless. Do they match? "
+      },
+      "after": "2953e3236e9be2f4",
+      "date": 1438226956201
+    },
+    {
+      "type": "add",
+      "id": "674bc6eba03e7a39",
+      "item": {
+        "type": "paragraph",
+        "id": "674bc6eba03e7a39",
+        "text": "Would communication happen? Is there a better word? Better sentence structure. A more important thing to say right away? Would the sightless be the only one to benefit from this robotic proof reading?"
+      },
+      "after": "91af2ce22f20c77b",
+      "date": 1438226996388
+    },
+    {
+      "type": "add",
+      "id": "324e7b7bed5ecc93",
+      "item": {
+        "type": "paragraph",
+        "id": "324e7b7bed5ecc93",
+        "text": "Try condensing the transcript from today's video hangout: [[Digest 2015-07-29]]"
+      },
+      "after": "674bc6eba03e7a39",
+      "date": 1438227112185
+    },
+    {
+      "type": "edit",
+      "id": "324e7b7bed5ecc93",
+      "item": {
+        "type": "paragraph",
+        "id": "324e7b7bed5ecc93",
+        "text": "Try condensing this transcript: [[Digest 2015-07-29]]"
+      },
+      "date": 1438227137767
+    },
+    {
+      "type": "add",
+      "id": "1aa6ac49e23f17bf",
+      "item": {
+        "type": "paragraph",
+        "id": "1aa6ac49e23f17bf",
+        "text": "Is authoring assistance possible? Valuable? Educational even? Would people express themselves better if the were use to speaking and typing to the Echo? Would beauty disappear? Or would it move to a different level?"
+      },
+      "after": "324e7b7bed5ecc93",
+      "date": 1438227285263
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cb54ec63a8c9b35c"
+      },
+      "id": "cb54ec63a8c9b35c",
+      "type": "add",
+      "after": "1aa6ac49e23f17bf",
+      "date": 1438227335926
+    },
+    {
+      "type": "edit",
+      "id": "cb54ec63a8c9b35c",
+      "item": {
+        "type": "markdown",
+        "id": "cb54ec63a8c9b35c",
+        "text": "# Voice Design"
+      },
+      "date": 1438227344780
+    },
+    {
+      "type": "move",
+      "order": [
+        "be18b783231c2057",
+        "cb54ec63a8c9b35c",
+        "b1b5cb94d7245534",
+        "f242048392874abe",
+        "551e732ec0875812",
+        "f94f34ec80ba3d3e",
+        "ab409392449f72ea",
+        "7b1809597a63a7ed",
+        "2953e3236e9be2f4",
+        "91af2ce22f20c77b",
+        "674bc6eba03e7a39",
+        "324e7b7bed5ecc93",
+        "1aa6ac49e23f17bf"
+      ],
+      "id": "cb54ec63a8c9b35c",
+      "date": 1438227349876
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "382110cf9c8499f8"
+      },
+      "id": "382110cf9c8499f8",
+      "type": "add",
+      "after": "1aa6ac49e23f17bf",
+      "date": 1438227353479
+    },
+    {
+      "type": "edit",
+      "id": "382110cf9c8499f8",
+      "item": {
+        "type": "markdown",
+        "id": "382110cf9c8499f8",
+        "text": "# Blind Creatives"
+      },
+      "date": 1438227365102
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0ef21e10008b2da7"
+      },
+      "id": "0ef21e10008b2da7",
+      "type": "add",
+      "after": "382110cf9c8499f8",
+      "date": 1438227372148
+    },
+    {
+      "type": "edit",
+      "id": "0ef21e10008b2da7",
+      "item": {
+        "type": "paragraph",
+        "id": "0ef21e10008b2da7",
+        "text": "I worked with a blind compiler writer years ago. His was challenging work and mistakes were common. I wrote tools that helped me debug. One out of four errors were in the compiler. (But then, one out of forty errors were in the chips themselves.)"
+      },
+      "date": 1438227507290
+    },
+    {
+      "type": "add",
+      "id": "367999337da0c059",
+      "item": {
+        "type": "paragraph",
+        "id": "367999337da0c059",
+        "text": "Compiler errors were common because a blind compiler writer could not see all of the self-similar parts of the code. If the logic were wrong in one place is was probably equally wrong in a dozen others. But each bug would have to be found, reported, understood and repaired individually."
+      },
+      "after": "0ef21e10008b2da7",
+      "date": 1438227816978
+    },
+    {
+      "type": "add",
+      "id": "2fcbeb511abebd0d",
+      "item": {
+        "type": "paragraph",
+        "id": "2fcbeb511abebd0d",
+        "text": "If the visually privileged find federation confusing what do they think any traditionally sighted task is like to the blind? We advise programmers to identify the thing they find most difficult and do a lot of it."
+      },
+      "after": "367999337da0c059",
+      "date": 1438228785095
+    },
+    {
+      "type": "add",
+      "id": "b0099be37f1a20bd",
+      "item": {
+        "type": "paragraph",
+        "id": "b0099be37f1a20bd",
+        "text": "Could a blind compiler writer write a better compiler if they hand to speak it to Echo from across the room? What would Echo have to do to help? What would every sighted person in the federation have to do to help Echo? That is the browse/editor of the future."
+      },
+      "after": "2fcbeb511abebd0d",
+      "date": 1438228889053
+    },
+    {
+      "type": "edit",
+      "id": "be18b783231c2057",
+      "item": {
+        "type": "paragraph",
+        "id": "be18b783231c2057",
+        "text": "We imagine the day not far away when talking to a computer in public will not sound like science fiction. We'll live in a world of muffled speech. A few dialogs will be about important things other than ordering pizza."
+      },
+      "date": 1438229072361
+    },
+    {
+      "type": "edit",
+      "id": "b0099be37f1a20bd",
+      "item": {
+        "type": "paragraph",
+        "id": "b0099be37f1a20bd",
+        "text": "Could a blind compiler writer write a better compiler if he hand to speak it to Echo from across the room? What would Echo have to do to help? What would every sighted person in the federation have to do to help Echo? That is the browse/editor of the future."
+      },
+      "date": 1438229156895
+    },
+    {
+      "type": "edit",
+      "id": "ab409392449f72ea",
+      "item": {
+        "type": "paragraph",
+        "id": "ab409392449f72ea",
+        "text": "Excellent voice design confirms recognition while exposing assumptions so as to minimize the confusion within ambiguous expression. [https://developer.amazon.com/public/community/post/Tx205N9U1UD338H/Introducing-the-Alexa-Skills-Kit-Enabling-Developers-to-Create-Entirely-New-Voice amazon]"
+      },
+      "date": 1438232606111
+    }
+  ]
+}

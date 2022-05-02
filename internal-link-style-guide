@@ -1,0 +1,622 @@
+{
+  "title": "Internal Link Style Guide",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e65680faf8051b74",
+      "text": "Double-square-brackets makes a word or phrase into a hyperlink. This works best if the link is surrounded by words or placed in a context that makes it clear to a reader when thy might benefit from a shift of context."
+    },
+    {
+      "type": "paragraph",
+      "id": "16589dbf6457b532",
+      "text": "See also [[Link Word]] for external citatons."
+    },
+    {
+      "type": "pagefold",
+      "id": "96f18730252aabb7",
+      "text": "itemization"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0681a27b6c06daa",
+      "text": "If the link is one of a set of choices let it stand alone."
+    },
+    {
+      "type": "paragraph",
+      "id": "95f2cc1732275337",
+      "text": "[[Digression Workflow]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "c72f54605a1146fd",
+      "text": "Some lists deserve links with clarifying subtitles."
+    },
+    {
+      "type": "paragraph",
+      "id": "fc72e1a014df6fb4",
+      "text": "[[Digression Workflow]] accommodates attention deficit"
+    },
+    {
+      "type": "pagefold",
+      "id": "c875a6953cd02aa5",
+      "text": "elaboration"
+    },
+    {
+      "type": "paragraph",
+      "id": "aca38e56e8fbdd0e",
+      "text": "If the link adds relevant material offer direction."
+    },
+    {
+      "type": "paragraph",
+      "id": "477dc4b8e8cc52cf",
+      "text": "See [[Digression Workflow]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "ee00d8f9793b58e7",
+      "text": "Use stronger direction to emphasise importance."
+    },
+    {
+      "type": "paragraph",
+      "id": "3bb8731e986d89c0",
+      "text": "See also [[Digression Workflow]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "4cd4343668aef46b",
+      "text": "Add clarification to qualify the direction."
+    },
+    {
+      "type": "paragraph",
+      "id": "83da645c55f1dbe8",
+      "text": "See [[Digression Workflow]] when you find pages ramble."
+    },
+    {
+      "type": "pagefold",
+      "id": "4cbdb0ec38cc8bb2",
+      "text": "expansion"
+    },
+    {
+      "type": "paragraph",
+      "id": "830c002759ed8e30",
+      "text": "If the link expands one paragraph then elaborate within."
+    },
+    {
+      "type": "paragraph",
+      "id": "f96e5b7fac2e8f8d",
+      "text": "Writers can capture thoughts outside their current focus by spawning new pages and leaving appropriate citations behind. See [[Digression Workflow]]"
+    },
+    {
+      "type": "pagefold",
+      "id": "ee50f1dc0dff7dea",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "7afbce3c165872af",
+      "text": "There are link forms we discourage or recommend only be used in specialized circumstances. "
+    },
+    {
+      "type": "paragraph",
+      "id": "d04cf503e5306ac7",
+      "text": "Link words embedded in text. This disrupts the flow of the text creating a mental burden on the reader. It also suggests that the link is an accident rather than a sincere recommendation of the author. Especially avoid linking words or phrases for emphasis with no intention for them to name pages in a site."
+    },
+    {
+      "type": "paragraph",
+      "id": "9faaccb28db4f88a",
+      "text": "Duplicated links. When talking about a page one can link the first reference but not any other. Use title case for all references since the title is a proper noun. However, words used to express an idea independent of a page should not be linked or capitalized."
+    },
+    {
+      "type": "paragraph",
+      "id": "c37dc103e759ad5e",
+      "text": "Free Association. Resist the temptation to recommend to the reader content that they might also like because the pages are a favorite of yours and just came to you."
+    },
+    {
+      "type": "paragraph",
+      "id": "1132db33d672628a",
+      "text": "Mechanical Lists. One can configure the Activity plugin to behave like a table of contents. This really only works for sites that are databases without any particular structure."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Internal Citation Style Guide",
+        "story": []
+      },
+      "date": 1513535050452
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e65680faf8051b74"
+      },
+      "id": "e65680faf8051b74",
+      "type": "add",
+      "date": 1513535140585
+    },
+    {
+      "type": "edit",
+      "id": "e65680faf8051b74",
+      "item": {
+        "type": "paragraph",
+        "id": "e65680faf8051b74",
+        "text": "Double-square-brackets makes a word or phrase into a hyperlink. This works best if the link is surrounded by words or placed in a context that makes it clear to a reader when thy might benefit from a shift of context."
+      },
+      "date": 1513535325183
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "96f18730252aabb7"
+      },
+      "id": "96f18730252aabb7",
+      "type": "add",
+      "after": "e65680faf8051b74",
+      "date": 1513535385411
+    },
+    {
+      "type": "edit",
+      "id": "96f18730252aabb7",
+      "item": {
+        "type": "pagefold",
+        "id": "96f18730252aabb7",
+        "text": "itemization"
+      },
+      "date": 1513535401260
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f0681a27b6c06daa"
+      },
+      "id": "f0681a27b6c06daa",
+      "type": "add",
+      "after": "96f18730252aabb7",
+      "date": 1513535410617
+    },
+    {
+      "type": "edit",
+      "id": "f0681a27b6c06daa",
+      "item": {
+        "type": "paragraph",
+        "id": "f0681a27b6c06daa",
+        "text": "If the link is just one of a set of choices let it stand alone."
+      },
+      "date": 1513535481467
+    },
+    {
+      "type": "add",
+      "id": "95f2cc1732275337",
+      "item": {
+        "type": "paragraph",
+        "id": "95f2cc1732275337",
+        "text": "[[Digression Workflow]]"
+      },
+      "after": "f0681a27b6c06daa",
+      "date": 1513535498761
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c875a6953cd02aa5"
+      },
+      "id": "c875a6953cd02aa5",
+      "type": "add",
+      "after": "95f2cc1732275337",
+      "date": 1513535501838
+    },
+    {
+      "type": "edit",
+      "id": "c875a6953cd02aa5",
+      "item": {
+        "type": "pagefold",
+        "id": "c875a6953cd02aa5",
+        "text": "elaboration"
+      },
+      "date": 1513535515514
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "aca38e56e8fbdd0e"
+      },
+      "id": "aca38e56e8fbdd0e",
+      "type": "add",
+      "after": "c875a6953cd02aa5",
+      "date": 1513535517834
+    },
+    {
+      "type": "edit",
+      "id": "aca38e56e8fbdd0e",
+      "item": {
+        "type": "paragraph",
+        "id": "aca38e56e8fbdd0e",
+        "text": "If the cited page adds relevant material offer direction."
+      },
+      "date": 1513535697275
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "477dc4b8e8cc52cf"
+      },
+      "id": "477dc4b8e8cc52cf",
+      "type": "add",
+      "after": "aca38e56e8fbdd0e",
+      "date": 1513535699953
+    },
+    {
+      "type": "edit",
+      "id": "477dc4b8e8cc52cf",
+      "item": {
+        "type": "paragraph",
+        "id": "477dc4b8e8cc52cf",
+        "text": "See [[Digression Workflow]]"
+      },
+      "date": 1513535714364
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4cbdb0ec38cc8bb2"
+      },
+      "id": "4cbdb0ec38cc8bb2",
+      "type": "add",
+      "after": "477dc4b8e8cc52cf",
+      "date": 1513535800110
+    },
+    {
+      "type": "edit",
+      "id": "4cbdb0ec38cc8bb2",
+      "item": {
+        "type": "pagefold",
+        "id": "4cbdb0ec38cc8bb2",
+        "text": "expansion"
+      },
+      "date": 1513535815191
+    },
+    {
+      "type": "edit",
+      "id": "aca38e56e8fbdd0e",
+      "item": {
+        "type": "paragraph",
+        "id": "aca38e56e8fbdd0e",
+        "text": "If the link adds relevant material offer direction."
+      },
+      "date": 1513535878695
+    },
+    {
+      "type": "edit",
+      "id": "f0681a27b6c06daa",
+      "item": {
+        "type": "paragraph",
+        "id": "f0681a27b6c06daa",
+        "text": "If the link is one of a set of choices let it stand alone."
+      },
+      "date": 1513535888237
+    },
+    {
+      "type": "edit",
+      "id": "aca38e56e8fbdd0e",
+      "item": {
+        "type": "paragraph",
+        "id": "aca38e56e8fbdd0e",
+        "text": "If the link adds relevant but optional material offer direction."
+      },
+      "date": 1513535909333
+    },
+    {
+      "type": "edit",
+      "id": "aca38e56e8fbdd0e",
+      "item": {
+        "type": "paragraph",
+        "id": "aca38e56e8fbdd0e",
+        "text": "If the link adds relevant material offer direction."
+      },
+      "date": 1513535918533
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "830c002759ed8e30"
+      },
+      "id": "830c002759ed8e30",
+      "type": "add",
+      "after": "4cbdb0ec38cc8bb2",
+      "date": 1513535954105
+    },
+    {
+      "type": "edit",
+      "id": "830c002759ed8e30",
+      "item": {
+        "type": "paragraph",
+        "id": "830c002759ed8e30",
+        "text": "If the link expands an existing paragraph, elaborate within."
+      },
+      "date": 1513536037128
+    },
+    {
+      "type": "edit",
+      "id": "830c002759ed8e30",
+      "item": {
+        "type": "paragraph",
+        "id": "830c002759ed8e30",
+        "text": "If the link expands one paragraph then elaborate within."
+      },
+      "date": 1513536089632
+    },
+    {
+      "type": "add",
+      "id": "f96e5b7fac2e8f8d",
+      "item": {
+        "type": "paragraph",
+        "id": "f96e5b7fac2e8f8d",
+        "text": "Writers can capture thoughts outside their current focus by spawning new pages and leaving appropriate citations behind. See [[Digression Workflow]]"
+      },
+      "after": "830c002759ed8e30",
+      "date": 1513536353439
+    },
+    {
+      "type": "add",
+      "id": "c72f54605a1146fd",
+      "item": {
+        "type": "paragraph",
+        "id": "c72f54605a1146fd",
+        "text": "Consistently append a clarification as a subtitle, or not."
+      },
+      "after": "95f2cc1732275337",
+      "date": 1513536684038
+    },
+    {
+      "type": "edit",
+      "id": "c72f54605a1146fd",
+      "item": {
+        "type": "paragraph",
+        "id": "c72f54605a1146fd",
+        "text": "Some list links deserve clarifying subtitles."
+      },
+      "date": 1513536744878
+    },
+    {
+      "type": "add",
+      "id": "fc72e1a014df6fb4",
+      "item": {
+        "type": "paragraph",
+        "id": "fc72e1a014df6fb4",
+        "text": "[[Digression Workflow]] accommodates attention deficit"
+      },
+      "after": "c72f54605a1146fd",
+      "date": 1513536780075
+    },
+    {
+      "type": "edit",
+      "id": "c72f54605a1146fd",
+      "item": {
+        "type": "paragraph",
+        "id": "c72f54605a1146fd",
+        "text": "Some lists deserve links with clarifying subtitles."
+      },
+      "date": 1513536877665
+    },
+    {
+      "type": "add",
+      "id": "ee00d8f9793b58e7",
+      "item": {
+        "type": "paragraph",
+        "id": "ee00d8f9793b58e7",
+        "text": "Use stronger direction to emphasise importance."
+      },
+      "after": "477dc4b8e8cc52cf",
+      "date": 1513537232814
+    },
+    {
+      "type": "add",
+      "id": "3bb8731e986d89c0",
+      "item": {
+        "type": "paragraph",
+        "id": "3bb8731e986d89c0",
+        "text": "See also [[Digression Workflow]]"
+      },
+      "after": "ee00d8f9793b58e7",
+      "date": 1513537246247
+    },
+    {
+      "type": "add",
+      "id": "4cd4343668aef46b",
+      "item": {
+        "type": "paragraph",
+        "id": "4cd4343668aef46b",
+        "text": "Add clarification to qualify the direction."
+      },
+      "after": "3bb8731e986d89c0",
+      "date": 1513537346498
+    },
+    {
+      "type": "add",
+      "id": "83da645c55f1dbe8",
+      "item": {
+        "type": "paragraph",
+        "id": "83da645c55f1dbe8",
+        "text": "See [[Digression Workflow]] when you find pages ramble."
+      },
+      "after": "4cd4343668aef46b",
+      "date": 1513537388730
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ee50f1dc0dff7dea"
+      },
+      "id": "ee50f1dc0dff7dea",
+      "type": "add",
+      "after": "f96e5b7fac2e8f8d",
+      "date": 1513538805995
+    },
+    {
+      "type": "edit",
+      "id": "ee50f1dc0dff7dea",
+      "item": {
+        "type": "pagefold",
+        "id": "ee50f1dc0dff7dea",
+        "text": "."
+      },
+      "date": 1513538811304
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7afbce3c165872af"
+      },
+      "id": "7afbce3c165872af",
+      "type": "add",
+      "after": "ee50f1dc0dff7dea",
+      "date": 1513538831288
+    },
+    {
+      "type": "edit",
+      "id": "7afbce3c165872af",
+      "item": {
+        "type": "paragraph",
+        "id": "7afbce3c165872af",
+        "text": "There are link forms we discourage or recommend only be used in specialized circumstances. "
+      },
+      "date": 1513538877286
+    },
+    {
+      "type": "add",
+      "id": "d04cf503e5306ac7",
+      "item": {
+        "type": "paragraph",
+        "id": "d04cf503e5306ac7",
+        "text": "Link words embedded in text. This disrupts the flow of the text creating a mental burden on the reader. It also suggests that the link is an accident rather than a sincere recommendation of the author."
+      },
+      "after": "7afbce3c165872af",
+      "date": 1513539052528
+    },
+    {
+      "type": "add",
+      "id": "9faaccb28db4f88a",
+      "item": {
+        "type": "paragraph",
+        "id": "9faaccb28db4f88a",
+        "text": "Duplicated links. When talking about a page one can link the first reference but not any other. Use title case for all references since the title is a proper noun. However, words used to express an idea independent of a page should not be linked or capitalized."
+      },
+      "after": "d04cf503e5306ac7",
+      "date": 1513539496307
+    },
+    {
+      "type": "add",
+      "id": "c37dc103e759ad5e",
+      "item": {
+        "type": "paragraph",
+        "id": "c37dc103e759ad5e",
+        "text": "Free Association. Resist the temptation to recommend to the reader content that they might also like because the pages are a favorite of yours and just came to you while writing."
+      },
+      "after": "9faaccb28db4f88a",
+      "date": 1513540074290
+    },
+    {
+      "type": "edit",
+      "id": "c37dc103e759ad5e",
+      "item": {
+        "type": "paragraph",
+        "id": "c37dc103e759ad5e",
+        "text": "Free Association. Resist the temptation to recommend to the reader content that they might also like because the pages are a favorite of yours and just came to you."
+      },
+      "date": 1513540120467
+    },
+    {
+      "type": "add",
+      "id": "1132db33d672628a",
+      "item": {
+        "type": "paragraph",
+        "id": "1132db33d672628a",
+        "text": "Mechanical Lists. It is possible to configure the Activity plugin like a table of contents. This really only works for sites that are really just databases without any particular structure."
+      },
+      "after": "c37dc103e759ad5e",
+      "date": 1513540248702
+    },
+    {
+      "type": "edit",
+      "id": "1132db33d672628a",
+      "item": {
+        "type": "paragraph",
+        "id": "1132db33d672628a",
+        "text": "Mechanical Lists. One can configure the Activity plugin to behave like a table of contents. This really only works for sites that are just databases without any particular structure."
+      },
+      "date": 1513540290564
+    },
+    {
+      "type": "edit",
+      "id": "1132db33d672628a",
+      "item": {
+        "type": "paragraph",
+        "id": "1132db33d672628a",
+        "text": "Mechanical Lists. One can configure the Activity plugin to behave like a table of contents. This really only works for sites that are databases without any particular structure."
+      },
+      "date": 1513540299078
+    },
+    {
+      "type": "edit",
+      "id": "d04cf503e5306ac7",
+      "item": {
+        "type": "paragraph",
+        "id": "d04cf503e5306ac7",
+        "text": "Link words embedded in text. This disrupts the flow of the text creating a mental burden on the reader. It also suggests that the link is an accident rather than a sincere recommendation of the author. Especially avoid linking words or phrases for emphasis with no intention for them to name pages in a site."
+      },
+      "date": 1513540543309
+    },
+    {
+      "type": "add",
+      "id": "16589dbf6457b532",
+      "item": {
+        "type": "paragraph",
+        "id": "16589dbf6457b532",
+        "text": "See also [[Link Words]]"
+      },
+      "after": "1132db33d672628a",
+      "date": 1513540755678
+    },
+    {
+      "type": "edit",
+      "id": "16589dbf6457b532",
+      "item": {
+        "type": "paragraph",
+        "id": "16589dbf6457b532",
+        "text": "See also [[Link Word]] for external citatons."
+      },
+      "date": 1513540782861
+    },
+    {
+      "type": "move",
+      "order": [
+        "e65680faf8051b74",
+        "16589dbf6457b532",
+        "96f18730252aabb7",
+        "f0681a27b6c06daa",
+        "95f2cc1732275337",
+        "c72f54605a1146fd",
+        "fc72e1a014df6fb4",
+        "c875a6953cd02aa5",
+        "aca38e56e8fbdd0e",
+        "477dc4b8e8cc52cf",
+        "ee00d8f9793b58e7",
+        "3bb8731e986d89c0",
+        "4cd4343668aef46b",
+        "83da645c55f1dbe8",
+        "4cbdb0ec38cc8bb2",
+        "830c002759ed8e30",
+        "f96e5b7fac2e8f8d",
+        "ee50f1dc0dff7dea",
+        "7afbce3c165872af",
+        "d04cf503e5306ac7",
+        "9faaccb28db4f88a",
+        "c37dc103e759ad5e",
+        "1132db33d672628a"
+      ],
+      "id": "16589dbf6457b532",
+      "date": 1513540799113
+    }
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "title": "Implementing Service Logic",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ad10f5cbac2e23c6",
+      "text": "We're developing the run-time background service composition machinery called [[Service Logic]]."
+    },
+    {
+      "type": "pagefold",
+      "id": "09e75e7d06319a7f",
+      "text": "done"
+    },
+    {
+      "type": "paragraph",
+      "id": "90f98ccbfd42cb2c",
+      "text": "Bad bug due to accidental global scope of $page in the client-side service discovery logic. Let solves it."
+    },
+    {
+      "type": "code",
+      "id": "cd86c6c5249868c5",
+      "text": "  function emit($item, item) {\n    let $page = $item.parents('.page')\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "6cb3cfa57590195b",
+      "text": "Detect when all samples are trouble or all are not. Notify accordingly."
+    },
+    {
+      "type": "pagefold",
+      "id": "16c3195d5dd02792",
+      "text": "todo"
+    },
+    {
+      "type": "paragraph",
+      "id": "720268147c464b76",
+      "text": "Private config of AWS services through Alert ui."
+    },
+    {
+      "type": "paragraph",
+      "id": "5a305872ca21ee98",
+      "text": "Write-through save schedule and restore on restart."
+    },
+    {
+      "type": "paragraph",
+      "id": "eb67e8e3a0b0f76d",
+      "text": "Log notices in an assets file."
+    },
+    {
+      "type": "paragraph",
+      "id": "4f493fbaa8630745",
+      "text": "Report server-side schedule when running."
+    },
+    {
+      "type": "paragraph",
+      "id": "59e8ffd053c4fbc8",
+      "text": "Diff running services with those in lineup?"
+    },
+    {
+      "type": "pagefold",
+      "id": "00572891885b2aa2",
+      "text": "."
+    },
+    {
+      "type": "plugmatic",
+      "id": "223c4cdb956f5363",
+      "text": "wiki-plugin-assets\nwiki-plugin-datalog\nwiki-plugin-detect"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Implementing Service Logic",
+        "story": []
+      },
+      "date": 1559741329937
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ad10f5cbac2e23c6"
+      },
+      "id": "ad10f5cbac2e23c6",
+      "type": "add",
+      "date": 1559741332114
+    },
+    {
+      "type": "edit",
+      "id": "ad10f5cbac2e23c6",
+      "item": {
+        "type": "paragraph",
+        "id": "ad10f5cbac2e23c6",
+        "text": "We're developing the run-time background service composition machinery called [[Service Logic]]."
+      },
+      "date": 1559741396702
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3b64df998df5e6fb"
+      },
+      "id": "3b64df998df5e6fb",
+      "type": "add",
+      "after": "ad10f5cbac2e23c6",
+      "date": 1559741432984
+    },
+    {
+      "type": "remove",
+      "id": "3b64df998df5e6fb",
+      "date": 1559741458307
+    },
+    {
+      "type": "add",
+      "id": "90f98ccbfd42cb2c",
+      "item": {
+        "type": "paragraph",
+        "id": "90f98ccbfd42cb2c",
+        "text": "Bad bug due to accidental global scope of $page in the service discovery logic client-side. Solution is to add prefix let."
+      },
+      "after": "ad10f5cbac2e23c6",
+      "date": 1559741542505
+    },
+    {
+      "type": "edit",
+      "id": "90f98ccbfd42cb2c",
+      "item": {
+        "type": "paragraph",
+        "id": "90f98ccbfd42cb2c",
+        "text": "Bad bug due to accidental global scope of $page in the service discovery logic client-side. Let solves it."
+      },
+      "date": 1559741560415
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cd86c6c5249868c5"
+      },
+      "id": "cd86c6c5249868c5",
+      "type": "add",
+      "after": "90f98ccbfd42cb2c",
+      "date": 1559741580859
+    },
+    {
+      "type": "edit",
+      "id": "cd86c6c5249868c5",
+      "item": {
+        "type": "code",
+        "id": "cd86c6c5249868c5",
+        "text": "  function emit($item, item) {\n    let $page = $item.parents('.page')\n"
+      },
+      "date": 1559741586018
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a030f20268fa4baa"
+      },
+      "id": "a030f20268fa4baa",
+      "type": "add",
+      "after": "cd86c6c5249868c5",
+      "date": 1559741628167
+    },
+    {
+      "type": "edit",
+      "id": "a030f20268fa4baa",
+      "item": {
+        "type": "paragraph",
+        "id": "a030f20268fa4baa",
+        "text": "Should a service consumer know if a source is running?"
+      },
+      "date": 1559741696588
+    },
+    {
+      "type": "edit",
+      "id": "a030f20268fa4baa",
+      "item": {
+        "type": "paragraph",
+        "id": "a030f20268fa4baa",
+        "text": "Should a service consumer know if a source is running? How should this be communicated?"
+      },
+      "date": 1559741710531
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "plugmatic",
+        "id": "223c4cdb956f5363",
+        "text": "wiki-plugin-assets\nwiki-plugin-datalog\nwiki-plugin-detect"
+      },
+      "after": "a030f20268fa4baa",
+      "id": "223c4cdb956f5363",
+      "date": 1559741751511
+    },
+    {
+      "type": "edit",
+      "id": "90f98ccbfd42cb2c",
+      "item": {
+        "type": "paragraph",
+        "id": "90f98ccbfd42cb2c",
+        "text": "Bad bug due to accidental global scope of $page in the client-side service discovery logic. Let solves it."
+      },
+      "date": 1559741830844
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "09e75e7d06319a7f"
+      },
+      "id": "09e75e7d06319a7f",
+      "type": "add",
+      "after": "223c4cdb956f5363",
+      "date": 1560052255184
+    },
+    {
+      "type": "edit",
+      "id": "09e75e7d06319a7f",
+      "item": {
+        "type": "pagefold",
+        "id": "09e75e7d06319a7f",
+        "text": "done"
+      },
+      "date": 1560052259416
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "16c3195d5dd02792"
+      },
+      "id": "16c3195d5dd02792",
+      "type": "add",
+      "after": "09e75e7d06319a7f",
+      "date": 1560052262065
+    },
+    {
+      "type": "edit",
+      "id": "16c3195d5dd02792",
+      "item": {
+        "type": "pagefold",
+        "id": "16c3195d5dd02792",
+        "text": "todo"
+      },
+      "date": 1560052269091
+    },
+    {
+      "type": "move",
+      "order": [
+        "ad10f5cbac2e23c6",
+        "09e75e7d06319a7f",
+        "90f98ccbfd42cb2c",
+        "cd86c6c5249868c5",
+        "a030f20268fa4baa",
+        "223c4cdb956f5363",
+        "16c3195d5dd02792"
+      ],
+      "id": "09e75e7d06319a7f",
+      "date": 1560052273620
+    },
+    {
+      "type": "move",
+      "order": [
+        "ad10f5cbac2e23c6",
+        "09e75e7d06319a7f",
+        "90f98ccbfd42cb2c",
+        "cd86c6c5249868c5",
+        "16c3195d5dd02792",
+        "a030f20268fa4baa",
+        "223c4cdb956f5363"
+      ],
+      "id": "16c3195d5dd02792",
+      "date": 1560052279569
+    },
+    {
+      "type": "add",
+      "id": "6cb3cfa57590195b",
+      "item": {
+        "type": "paragraph",
+        "id": "6cb3cfa57590195b",
+        "text": "Detect when all samples are trouble or all are not. Notify accordingly."
+      },
+      "after": "a030f20268fa4baa",
+      "date": 1560052358993
+    },
+    {
+      "type": "move",
+      "order": [
+        "ad10f5cbac2e23c6",
+        "09e75e7d06319a7f",
+        "90f98ccbfd42cb2c",
+        "cd86c6c5249868c5",
+        "16c3195d5dd02792",
+        "6cb3cfa57590195b",
+        "a030f20268fa4baa",
+        "223c4cdb956f5363"
+      ],
+      "id": "6cb3cfa57590195b",
+      "date": 1560052362698
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "00572891885b2aa2"
+      },
+      "id": "00572891885b2aa2",
+      "type": "add",
+      "after": "223c4cdb956f5363",
+      "date": 1560052369210
+    },
+    {
+      "type": "edit",
+      "id": "00572891885b2aa2",
+      "item": {
+        "type": "pagefold",
+        "id": "00572891885b2aa2",
+        "text": "."
+      },
+      "date": 1560052374392
+    },
+    {
+      "type": "move",
+      "order": [
+        "ad10f5cbac2e23c6",
+        "09e75e7d06319a7f",
+        "90f98ccbfd42cb2c",
+        "cd86c6c5249868c5",
+        "16c3195d5dd02792",
+        "6cb3cfa57590195b",
+        "a030f20268fa4baa",
+        "00572891885b2aa2",
+        "223c4cdb956f5363"
+      ],
+      "id": "00572891885b2aa2",
+      "date": 1560052377371
+    },
+    {
+      "type": "move",
+      "order": [
+        "ad10f5cbac2e23c6",
+        "09e75e7d06319a7f",
+        "90f98ccbfd42cb2c",
+        "cd86c6c5249868c5",
+        "6cb3cfa57590195b",
+        "16c3195d5dd02792",
+        "a030f20268fa4baa",
+        "00572891885b2aa2",
+        "223c4cdb956f5363"
+      ],
+      "id": "6cb3cfa57590195b",
+      "date": 1560055776756
+    },
+    {
+      "type": "add",
+      "id": "eb67e8e3a0b0f76d",
+      "item": {
+        "type": "paragraph",
+        "id": "eb67e8e3a0b0f76d",
+        "text": "Log notices in an assets file."
+      },
+      "after": "a030f20268fa4baa",
+      "date": 1560055799817
+    },
+    {
+      "type": "move",
+      "order": [
+        "ad10f5cbac2e23c6",
+        "09e75e7d06319a7f",
+        "90f98ccbfd42cb2c",
+        "cd86c6c5249868c5",
+        "6cb3cfa57590195b",
+        "16c3195d5dd02792",
+        "eb67e8e3a0b0f76d",
+        "a030f20268fa4baa",
+        "00572891885b2aa2",
+        "223c4cdb956f5363"
+      ],
+      "id": "eb67e8e3a0b0f76d",
+      "date": 1560055804176
+    },
+    {
+      "type": "add",
+      "id": "5a305872ca21ee98",
+      "item": {
+        "type": "paragraph",
+        "id": "5a305872ca21ee98",
+        "text": "Write-through save schedule and restore on restart."
+      },
+      "after": "eb67e8e3a0b0f76d",
+      "date": 1560055830353
+    },
+    {
+      "type": "add",
+      "id": "4f493fbaa8630745",
+      "item": {
+        "type": "paragraph",
+        "id": "4f493fbaa8630745",
+        "text": "Report server-side schedule when running."
+      },
+      "after": "5a305872ca21ee98",
+      "date": 1560056864932
+    },
+    {
+      "type": "remove",
+      "id": "a030f20268fa4baa",
+      "date": 1560057068254
+    },
+    {
+      "type": "add",
+      "id": "720268147c464b76",
+      "item": {
+        "type": "paragraph",
+        "id": "720268147c464b76",
+        "text": "Private config of AWS services through Alert ui."
+      },
+      "after": "4f493fbaa8630745",
+      "date": 1560130127455
+    },
+    {
+      "type": "move",
+      "order": [
+        "ad10f5cbac2e23c6",
+        "09e75e7d06319a7f",
+        "90f98ccbfd42cb2c",
+        "cd86c6c5249868c5",
+        "6cb3cfa57590195b",
+        "16c3195d5dd02792",
+        "720268147c464b76",
+        "eb67e8e3a0b0f76d",
+        "5a305872ca21ee98",
+        "4f493fbaa8630745",
+        "00572891885b2aa2",
+        "223c4cdb956f5363"
+      ],
+      "id": "720268147c464b76",
+      "date": 1560130132121
+    },
+    {
+      "type": "move",
+      "order": [
+        "ad10f5cbac2e23c6",
+        "09e75e7d06319a7f",
+        "90f98ccbfd42cb2c",
+        "cd86c6c5249868c5",
+        "6cb3cfa57590195b",
+        "16c3195d5dd02792",
+        "720268147c464b76",
+        "5a305872ca21ee98",
+        "eb67e8e3a0b0f76d",
+        "4f493fbaa8630745",
+        "00572891885b2aa2",
+        "223c4cdb956f5363"
+      ],
+      "id": "5a305872ca21ee98",
+      "date": 1560130142820
+    },
+    {
+      "type": "edit",
+      "id": "4f493fbaa8630745",
+      "item": {
+        "type": "paragraph",
+        "id": "4f493fbaa8630745",
+        "text": "Report server-side schedule when running. Diff with lineup?"
+      },
+      "date": 1560130157211
+    },
+    {
+      "type": "edit",
+      "id": "4f493fbaa8630745",
+      "item": {
+        "type": "paragraph",
+        "id": "4f493fbaa8630745",
+        "text": "Report server-side schedule when running."
+      },
+      "date": 1560130162500
+    },
+    {
+      "type": "add",
+      "id": "59e8ffd053c4fbc8",
+      "item": {
+        "type": "paragraph",
+        "id": "59e8ffd053c4fbc8",
+        "text": "Diff running services with those in lineup?"
+      },
+      "after": "4f493fbaa8630745",
+      "date": 1560130186746
+    }
+  ]
+}

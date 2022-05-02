@@ -1,0 +1,328 @@
+{
+  "title": "Robust and Compositional Verification of Object Capability Patterns",
+  "story": [
+    {
+      "type": "markdown",
+      "id": "12e69f75370c1f47",
+      "text": "Mike Stay: \t\n\"Ocaps is for reasoning about authority to cause potential side effects. In pure functional programming, they do that by saying \"there aren't any\". Functions only have access to inputs that are in their lexical scope. If they have any effects at all, it's on data that was explicitly passed in. \n\nIn functional *reactive* programming, there's a lot of state that's outside the functional code, like message queues and databases. There's an implicit fold over the stream of incoming events.\""
+    },
+    {
+      "type": "video",
+      "id": "7288a6853f8d162c",
+      "text": "YOUTUBE hLjtIQWU0gk\nDavid Swasey, Deepak Garg, Derek Dreyer\n"
+    },
+    {
+      "type": "markdown",
+      "id": "f397d28570fcf661",
+      "text": "Mark Miller: \n\"Swasey, David et al is a great paper. Won best paper award at OOPSLA 2017. Here's the talk.  "
+    },
+    {
+      "type": "markdown",
+      "id": "43999268fa1ad1c7",
+      "text": "\n\n\"In scenarios such as web programming, where code is linked together from multiple sources, \\emph{object capability patterns} (OCPs) provide an essential safeguard, enabling programmers to protect the private state of their objects from corruption by unknown and untrusted code. However, the benefits of OCPs in terms of program verification have never been properly formalized. In this paper, building on the recently developed Iris framework for concurrent separation logic, we develop OCPL, the first program logic for compositionally specifying and verifying OCPs in a language with closures, mutable state, and concurrency. The key idea of OCPL is to account for the interface between verified and untrusted code by adopting a well-known idea from the literature on security protocol verification, namely \\emph{robust safety}. Programs that export only properly wrapped values to their environment can be proven robustly safe, meaning that their untrusted environment cannot violate their internal invariants. We use OCPL to give the first general, compositional, and machine-checked specs for several commonly-used OCPs—including the \\emph{dynamic sealing}, \\emph{membrane}, and \\emph{caretaker} patterns—which we then use to verify robust safety for representative client code. All our results are fully mechanized in the Coq proof assistant. [https://people.mpi-sws.org/~dreyer/papers/ocpl/paper.pdf paper]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Robust and Compositional Verification of Object Capability Patterns",
+        "story": []
+      },
+      "date": 1559668266404
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f397d28570fcf661"
+      },
+      "id": "f397d28570fcf661",
+      "type": "add",
+      "date": 1559668267688
+    },
+    {
+      "type": "edit",
+      "id": "f397d28570fcf661",
+      "item": {
+        "type": "markdown",
+        "id": "f397d28570fcf661",
+        "text": "Mark Miller and Mike Stay had commented that  "
+      },
+      "date": 1559668307264
+    },
+    {
+      "type": "edit",
+      "id": "f397d28570fcf661",
+      "item": {
+        "type": "markdown",
+        "id": "f397d28570fcf661",
+        "text": "Mark Miller and Mike Stay had commented that Swasey, David et al is a great paper. Won "
+      },
+      "date": 1559668359944
+    },
+    {
+      "type": "edit",
+      "id": "f397d28570fcf661",
+      "item": {
+        "type": "markdown",
+        "id": "f397d28570fcf661",
+        "text": "Mark Miller and Mike Stay had commented that Swasey, David et al is a great paper. Won best paper award at OOPSLA.  "
+      },
+      "date": 1559668394080
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7288a6853f8d162c"
+      },
+      "id": "7288a6853f8d162c",
+      "type": "add",
+      "after": "f397d28570fcf661",
+      "date": 1559668398527
+    },
+    {
+      "type": "edit",
+      "id": "7288a6853f8d162c",
+      "item": {
+        "type": "video",
+        "id": "7288a6853f8d162c",
+        "text": "YOUTUBE hLjtIQWU0gk\n(double-click to edit caption)\n"
+      },
+      "date": 1559668438537
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "43999268fa1ad1c7"
+      },
+      "id": "43999268fa1ad1c7",
+      "type": "add",
+      "after": "7288a6853f8d162c",
+      "date": 1559668521123
+    },
+    {
+      "type": "edit",
+      "id": "43999268fa1ad1c7",
+      "item": {
+        "type": "markdown",
+        "id": "43999268fa1ad1c7",
+        "text": "David Swasey, Deepak Garg, Derek Dreyer\nIn scenarios such as web programming, where code is linked together from multiple sources, \\emph{object capability patterns} (OCPs) provide an essential safeguard, enabling programmers to protect the private state of their objects from corruption by unknown and untrusted code. However, the benefits of OCPs in terms of program verification have never been properly formalized. In this paper, building on the recently developed Iris framework for concurrent separation logic, we develop OCPL, the first program logic for compositionally specifying and verifying OCPs in a language with closures, mutable state, and concurrency. The key idea of OCPL is to account for the interface between verified and untrusted code by adopting a well-known idea from the literature on security protocol verification, namely \\emph{robust safety}. Programs that export only properly wrapped values to their environment can be proven robustly safe, meaning that their untrusted environment cannot violate their internal invariants. We use OCPL to give the first general, compositional, and machine-checked specs for several commonly-used OCPs—including the \\emph{dynamic sealing}, \\emph{membrane}, and \\emph{caretaker} patterns—which we then use to verify robust safety for representative client code. All our results are fully mechanized in the Coq proof assistant."
+      },
+      "date": 1559668531199
+    },
+    {
+      "type": "edit",
+      "id": "7288a6853f8d162c",
+      "item": {
+        "type": "video",
+        "id": "7288a6853f8d162c",
+        "text": "YOUTUBE hLjtIQWU0gk\nDavid Swasey - Splash 2017\n"
+      },
+      "date": 1559668572949
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3e200b242334cc6f"
+      },
+      "id": "3e200b242334cc6f",
+      "type": "add",
+      "after": "43999268fa1ad1c7",
+      "date": 1559668579709
+    },
+    {
+      "type": "edit",
+      "id": "3e200b242334cc6f",
+      "item": {
+        "type": "html",
+        "id": "3e200b242334cc6f",
+        "text": "[https://people.mpi-sws.org/~dreyer/papers/ocpl/paper.pdf paper]"
+      },
+      "date": 1559668637530
+    },
+    {
+      "type": "remove",
+      "id": "3e200b242334cc6f",
+      "date": 1559668657694
+    },
+    {
+      "type": "edit",
+      "id": "43999268fa1ad1c7",
+      "item": {
+        "type": "markdown",
+        "id": "43999268fa1ad1c7",
+        "text": "David Swasey, Deepak Garg, Derek Dreyer\nIn scenarios such as web programming, where code is linked together from multiple sources, \\emph{object capability patterns} (OCPs) provide an essential safeguard, enabling programmers to protect the private state of their objects from corruption by unknown and untrusted code. However, the benefits of OCPs in terms of program verification have never been properly formalized. In this paper, building on the recently developed Iris framework for concurrent separation logic, we develop OCPL, the first program logic for compositionally specifying and verifying OCPs in a language with closures, mutable state, and concurrency. The key idea of OCPL is to account for the interface between verified and untrusted code by adopting a well-known idea from the literature on security protocol verification, namely \\emph{robust safety}. Programs that export only properly wrapped values to their environment can be proven robustly safe, meaning that their untrusted environment cannot violate their internal invariants. We use OCPL to give the first general, compositional, and machine-checked specs for several commonly-used OCPs—including the \\emph{dynamic sealing}, \\emph{membrane}, and \\emph{caretaker} patterns—which we then use to verify robust safety for representative client code. All our results are fully mechanized in the Coq proof assistant. [https://people.mpi-sws.org/~dreyer/papers/ocpl/paper.pdf paper]"
+      },
+      "date": 1559668672610
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7164b77cacd14779"
+      },
+      "id": "7164b77cacd14779",
+      "type": "add",
+      "after": "43999268fa1ad1c7",
+      "date": 1559668677599
+    },
+    {
+      "type": "remove",
+      "id": "7164b77cacd14779",
+      "date": 1559668686994
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "12e69f75370c1f47"
+      },
+      "id": "12e69f75370c1f47",
+      "type": "add",
+      "after": "43999268fa1ad1c7",
+      "date": 1559668703494
+    },
+    {
+      "type": "edit",
+      "id": "12e69f75370c1f47",
+      "item": {
+        "type": "markdown",
+        "id": "12e69f75370c1f47",
+        "text": "Mike Stay: \t\n\"Ocaps is for reasoning about authority to cause potential side effects. In pure functional programming, they do that by saying \"there aren't any\". Functions only have access to inputs that are in their lexical scope. If they have any effects at all, it's on data that was explicitly passed in. \n\nIn functional *reactive* programming, there's a lot of state that's outside the functional code, like message queues and databases. There's an implicit fold over the stream of incoming events.\""
+      },
+      "date": 1559668777625
+    },
+    {
+      "type": "move",
+      "order": [
+        "f397d28570fcf661",
+        "7288a6853f8d162c",
+        "12e69f75370c1f47",
+        "43999268fa1ad1c7"
+      ],
+      "id": "12e69f75370c1f47",
+      "date": 1559668811669
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4aded6ec822ee179"
+      },
+      "id": "4aded6ec822ee179",
+      "type": "add",
+      "after": "43999268fa1ad1c7",
+      "date": 1559668813980
+    },
+    {
+      "type": "edit",
+      "id": "4aded6ec822ee179",
+      "item": {
+        "type": "markdown",
+        "id": "4aded6ec822ee179",
+        "text": "Mike Stay\t\nOcaps is for reasoning about authority to cause potential side effects. In pure functional programming, they do that by saying \"there aren't any\". Functions only have access to inputs that are in their lexical scope. If they have any effects at all, it's on data that was explicitly passed in. \n\nIn functional *reactive* programming, there's a lot of state that's outside the functional code, like message queues and databases. There's an implicit fold over the stream of incoming events. "
+      },
+      "date": 1559668869053
+    },
+    {
+      "type": "edit",
+      "id": "f397d28570fcf661",
+      "item": {
+        "type": "markdown",
+        "id": "f397d28570fcf661",
+        "text": "Mark Miller had commented that Swasey, David et al is a great paper. Won best paper award at OOPSLA. Here's the talk.  "
+      },
+      "date": 1559668915202
+    },
+    {
+      "type": "move",
+      "order": [
+        "12e69f75370c1f47",
+        "f397d28570fcf661",
+        "7288a6853f8d162c",
+        "43999268fa1ad1c7",
+        "4aded6ec822ee179"
+      ],
+      "id": "12e69f75370c1f47",
+      "date": 1559668955758
+    },
+    {
+      "type": "edit",
+      "id": "f397d28570fcf661",
+      "item": {
+        "type": "markdown",
+        "id": "f397d28570fcf661",
+        "text": "Mark Miller: Commented that Swasey, David et al is a great paper. Won best paper award at OOPSLA. Here's the talk.  "
+      },
+      "date": 1559668982934
+    },
+    {
+      "type": "remove",
+      "id": "4aded6ec822ee179",
+      "date": 1559668995186
+    },
+    {
+      "type": "edit",
+      "id": "43999268fa1ad1c7",
+      "item": {
+        "type": "markdown",
+        "id": "43999268fa1ad1c7",
+        "text": "David Swasey, Deepak Garg, Derek Dreyer\n\n\"In scenarios such as web programming, where code is linked together from multiple sources, \\emph{object capability patterns} (OCPs) provide an essential safeguard, enabling programmers to protect the private state of their objects from corruption by unknown and untrusted code. However, the benefits of OCPs in terms of program verification have never been properly formalized. In this paper, building on the recently developed Iris framework for concurrent separation logic, we develop OCPL, the first program logic for compositionally specifying and verifying OCPs in a language with closures, mutable state, and concurrency. The key idea of OCPL is to account for the interface between verified and untrusted code by adopting a well-known idea from the literature on security protocol verification, namely \\emph{robust safety}. Programs that export only properly wrapped values to their environment can be proven robustly safe, meaning that their untrusted environment cannot violate their internal invariants. We use OCPL to give the first general, compositional, and machine-checked specs for several commonly-used OCPs—including the \\emph{dynamic sealing}, \\emph{membrane}, and \\emph{caretaker} patterns—which we then use to verify robust safety for representative client code. All our results are fully mechanized in the Coq proof assistant. [https://people.mpi-sws.org/~dreyer/papers/ocpl/paper.pdf paper]"
+      },
+      "date": 1559669020961
+    },
+    {
+      "type": "edit",
+      "id": "f397d28570fcf661",
+      "item": {
+        "type": "markdown",
+        "id": "f397d28570fcf661",
+        "text": "Mark Miller: Commented that Swasey, David et al is a great paper. Won best paper award at OOPSLA 2017. Here's the talk.  "
+      },
+      "date": 1559669044322
+    },
+    {
+      "type": "edit",
+      "id": "43999268fa1ad1c7",
+      "item": {
+        "type": "markdown",
+        "id": "43999268fa1ad1c7",
+        "text": "\n\n\"In scenarios such as web programming, where code is linked together from multiple sources, \\emph{object capability patterns} (OCPs) provide an essential safeguard, enabling programmers to protect the private state of their objects from corruption by unknown and untrusted code. However, the benefits of OCPs in terms of program verification have never been properly formalized. In this paper, building on the recently developed Iris framework for concurrent separation logic, we develop OCPL, the first program logic for compositionally specifying and verifying OCPs in a language with closures, mutable state, and concurrency. The key idea of OCPL is to account for the interface between verified and untrusted code by adopting a well-known idea from the literature on security protocol verification, namely \\emph{robust safety}. Programs that export only properly wrapped values to their environment can be proven robustly safe, meaning that their untrusted environment cannot violate their internal invariants. We use OCPL to give the first general, compositional, and machine-checked specs for several commonly-used OCPs—including the \\emph{dynamic sealing}, \\emph{membrane}, and \\emph{caretaker} patterns—which we then use to verify robust safety for representative client code. All our results are fully mechanized in the Coq proof assistant. [https://people.mpi-sws.org/~dreyer/papers/ocpl/paper.pdf paper]"
+      },
+      "date": 1559669060554
+    },
+    {
+      "type": "edit",
+      "id": "7288a6853f8d162c",
+      "item": {
+        "type": "video",
+        "id": "7288a6853f8d162c",
+        "text": "YOUTUBE hLjtIQWU0gk\nDavid Swasey, Deepak Garg, Derek Dreyer\n"
+      },
+      "date": 1559669096477
+    },
+    {
+      "type": "edit",
+      "id": "f397d28570fcf661",
+      "item": {
+        "type": "markdown",
+        "id": "f397d28570fcf661",
+        "text": "Mark Miller: \n\"Swasey, David et al is a great paper. Won best paper award at OOPSLA 2017. Here's the talk.  "
+      },
+      "date": 1559669121617
+    },
+    {
+      "type": "fork",
+      "site": "clive.tries.fed.wiki",
+      "date": 1559753981970
+    },
+    {
+      "type": "move",
+      "order": [
+        "12e69f75370c1f47",
+        "7288a6853f8d162c",
+        "f397d28570fcf661",
+        "43999268fa1ad1c7"
+      ],
+      "id": "f397d28570fcf661",
+      "date": 1559754007762
+    }
+  ]
+}

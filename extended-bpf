@@ -1,0 +1,375 @@
+{
+  "title": "Extended BPF",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b7a71fbcd8c22fe5",
+      "text": "BPF programs are a new type of software that makes a fundamental change to a 50-year old kernel model by introducing a new interface for applications to make kernel requests, alongside syscalls. [http://www.brendangregg.com/blog/2019-12-02/bpf-a-new-type-of-software.html post]"
+    },
+    {
+      "type": "video",
+      "id": "730ab4f08cdfe054",
+      "text": "YOUTUBE 7pmXdG8-7WU\nPublished Nov 28, 2019."
+    },
+    {
+      "type": "paragraph",
+      "id": "0ce3f608a79a8258",
+      "text": "At Netflix we have 15 BPF programs running on cloud servers by default; Facebook has 40. These programs are not processes or kernel modules, and don't appear in traditional observability tools. "
+    },
+    {
+      "type": "paragraph",
+      "id": "3c0fa5556cc39446",
+      "text": "BPF originally stood for Berkeley Packet Filter, but has been extended in Linux to become a generic kernel execution engine, capable of running a new type of user-defined and kernel-mode applications. This is what BPF is really about, and I described this for the first time in my Ubuntu Masters keynote.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "8959ca6314576ef7",
+      "text": "Tools for BPF-based Linux IO analysis, networking, monitoring, and more. [https://github.com/iovisor/bcc github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0993de7a4c6e457",
+      "text": "See [[Linux Systems Performance]] for more context."
+    },
+    {
+      "type": "paragraph",
+      "id": "0baea6cdb51081b8",
+      "text": "See [[Little Language]] where BPF was mentioned years ago."
+    },
+    {
+      "type": "paragraph",
+      "id": "9b40cca8e71b23d9",
+      "text": "How to write cross-platform packet capture from scratch in 1000 LOC. [https://medium.com/@c_bata_/how-to-write-cross-platform-packet-capture-using-raw-socket-and-bpf-bab3b614bc03 medium]"
+    },
+    {
+      "type": "paragraph",
+      "id": "358739c0d5375136",
+      "text": "Linux Async I/O for eBPF with  io_uring. [https://thenewstack.io/how-io_uring-and-ebpf-will-revolutionize-programming-in-linux/ post]"
+    },
+    {
+      "type": "paragraph",
+      "id": "67cbdcb99ab938ca",
+      "text": "Post Hype Microservices with Bryan Cantrill. [https://www.youtube.com/watch?time_continue=36&v=1NHbPN9pNPM&feature=emb_logo video]"
+    },
+    {
+      "type": "paragraph",
+      "id": "f29495009c3bb43d",
+      "text": "Extended BPF has a new homepage. [https://ebpf.io site]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Extended BPF",
+        "story": []
+      },
+      "date": 1575387345665
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0ce3f608a79a8258"
+      },
+      "id": "0ce3f608a79a8258",
+      "type": "add",
+      "date": 1575387400100
+    },
+    {
+      "type": "edit",
+      "id": "0ce3f608a79a8258",
+      "item": {
+        "type": "paragraph",
+        "id": "0ce3f608a79a8258",
+        "text": "At Netflix we have 15 BPF programs running on cloud servers by default; Facebook has 40. These programs are not processes or kernel modules, and don't appear in traditional observability tools. "
+      },
+      "date": 1575387425773
+    },
+    {
+      "type": "add",
+      "id": "b7a71fbcd8c22fe5",
+      "item": {
+        "type": "paragraph",
+        "id": "b7a71fbcd8c22fe5",
+        "text": "They are a new type of software, and make a fundamental change to a 50-year old kernel model by introducing a new interface for applications to make kernel requests, alongside syscalls.\n\nBPF originally stood for Berkeley Packet Filter, but has been extended in Linux to become a generic kernel execution engine, capable of running a new type of user-defined and kernel-mode applications. This is what BPF is really about, and I described this for the first time in my Ubuntu Masters keynote.\n\n"
+      },
+      "after": "0ce3f608a79a8258",
+      "date": 1575387428383
+    },
+    {
+      "type": "edit",
+      "id": "b7a71fbcd8c22fe5",
+      "item": {
+        "type": "paragraph",
+        "id": "b7a71fbcd8c22fe5",
+        "text": "They are a new type of software, and make a fundamental change to a 50-year old kernel model by introducing a new interface for applications to make kernel requests, alongside syscalls.\n\n"
+      },
+      "date": 1575387441477
+    },
+    {
+      "type": "add",
+      "id": "3c0fa5556cc39446",
+      "item": {
+        "type": "paragraph",
+        "id": "3c0fa5556cc39446",
+        "text": "BPF originally stood for Berkeley Packet Filter, but has been extended in Linux to become a generic kernel execution engine, capable of running a new type of user-defined and kernel-mode applications. This is what BPF is really about, and I described this for the first time in my Ubuntu Masters keynote.\n\n"
+      },
+      "after": "b7a71fbcd8c22fe5",
+      "date": 1575387442715
+    },
+    {
+      "id": "b7a71fbcd8c22fe5",
+      "type": "move",
+      "order": [
+        "b7a71fbcd8c22fe5",
+        "0ce3f608a79a8258",
+        "3c0fa5556cc39446"
+      ],
+      "date": 1575387447542
+    },
+    {
+      "type": "edit",
+      "id": "b7a71fbcd8c22fe5",
+      "item": {
+        "type": "paragraph",
+        "id": "b7a71fbcd8c22fe5",
+        "text": "BPF programs are a new type of software that makes a fundamental change to a 50-year old kernel model by introducing a new interface for applications to make kernel requests, alongside syscalls.\n\n"
+      },
+      "date": 1575387509435
+    },
+    {
+      "type": "edit",
+      "id": "b7a71fbcd8c22fe5",
+      "item": {
+        "type": "paragraph",
+        "id": "b7a71fbcd8c22fe5",
+        "text": "BPF programs are a new type of software that makes a fundamental change to a 50-year old kernel model by introducing a new interface for applications to make kernel requests, alongside syscalls. [http://www.brendangregg.com/blog/2019-12-02/bpf-a-new-type-of-software.html post]"
+      },
+      "date": 1575387536332
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "730ab4f08cdfe054"
+      },
+      "id": "730ab4f08cdfe054",
+      "type": "add",
+      "after": "3c0fa5556cc39446",
+      "date": 1575387550655
+    },
+    {
+      "id": "730ab4f08cdfe054",
+      "type": "move",
+      "order": [
+        "b7a71fbcd8c22fe5",
+        "730ab4f08cdfe054",
+        "0ce3f608a79a8258",
+        "3c0fa5556cc39446"
+      ],
+      "date": 1575387554265
+    },
+    {
+      "type": "edit",
+      "id": "730ab4f08cdfe054",
+      "item": {
+        "type": "video",
+        "id": "730ab4f08cdfe054",
+        "text": "YOUTUBE 7pmXdG8-7WU\n(double-click to edit caption)\n"
+      },
+      "date": 1575387591467
+    },
+    {
+      "type": "edit",
+      "id": "730ab4f08cdfe054",
+      "item": {
+        "type": "video",
+        "id": "730ab4f08cdfe054",
+        "text": "YOUTUBE 7pmXdG8-7WU\nPublished Nov 28, 2019."
+      },
+      "date": 1575387625747
+    },
+    {
+      "type": "add",
+      "id": "f0993de7a4c6e457",
+      "item": {
+        "type": "paragraph",
+        "id": "f0993de7a4c6e457",
+        "text": "See [[Linux Systems Performance]] for more context."
+      },
+      "after": "3c0fa5556cc39446",
+      "date": 1575387710565
+    },
+    {
+      "type": "add",
+      "id": "0baea6cdb51081b8",
+      "item": {
+        "type": "paragraph",
+        "id": "0baea6cdb51081b8",
+        "text": "See [[Little Language]] where BPF was mentioned years ago."
+      },
+      "after": "f0993de7a4c6e457",
+      "date": 1575389526181
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8959ca6314576ef7"
+      },
+      "id": "8959ca6314576ef7",
+      "type": "add",
+      "after": "0baea6cdb51081b8",
+      "date": 1575489124711
+    },
+    {
+      "type": "edit",
+      "id": "8959ca6314576ef7",
+      "item": {
+        "type": "paragraph",
+        "id": "8959ca6314576ef7",
+        "text": "Tools for BPF-based Linux IO analysis, networking, monitoring, and more."
+      },
+      "date": 1575489135983
+    },
+    {
+      "type": "edit",
+      "id": "8959ca6314576ef7",
+      "item": {
+        "type": "paragraph",
+        "id": "8959ca6314576ef7",
+        "text": "Tools for BPF-based Linux IO analysis, networking, monitoring, and more. [https://github.com/iovisor/bcc github]"
+      },
+      "date": 1575489157737
+    },
+    {
+      "id": "8959ca6314576ef7",
+      "type": "move",
+      "order": [
+        "b7a71fbcd8c22fe5",
+        "730ab4f08cdfe054",
+        "0ce3f608a79a8258",
+        "3c0fa5556cc39446",
+        "8959ca6314576ef7",
+        "f0993de7a4c6e457",
+        "0baea6cdb51081b8"
+      ],
+      "date": 1575489166490
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9b40cca8e71b23d9"
+      },
+      "id": "9b40cca8e71b23d9",
+      "type": "add",
+      "after": "0baea6cdb51081b8",
+      "date": 1580127039229
+    },
+    {
+      "type": "edit",
+      "id": "9b40cca8e71b23d9",
+      "item": {
+        "type": "paragraph",
+        "id": "9b40cca8e71b23d9",
+        "text": "How to write cross-platform packet capture from scratch in 1000 LOC."
+      },
+      "date": 1580127048574
+    },
+    {
+      "type": "edit",
+      "id": "9b40cca8e71b23d9",
+      "item": {
+        "type": "paragraph",
+        "id": "9b40cca8e71b23d9",
+        "text": "How to write cross-platform packet capture from scratch in 1000 LOC. [https://medium.com/@c_bata_/how-to-write-cross-platform-packet-capture-using-raw-socket-and-bpf-bab3b614bc03 medium]"
+      },
+      "date": 1580127067945
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org"
+    },
+    {
+      "type": "add",
+      "id": "358739c0d5375136",
+      "item": {
+        "type": "paragraph",
+        "id": "358739c0d5375136",
+        "text": "See Linux Async I/O for the eBPF connector."
+      },
+      "after": "9b40cca8e71b23d9",
+      "date": 1587784448829
+    },
+    {
+      "type": "edit",
+      "id": "358739c0d5375136",
+      "item": {
+        "type": "paragraph",
+        "id": "358739c0d5375136",
+        "text": "See Linux Async I/O for the eBPF connector. [https://thenewstack.io/how-io_uring-and-ebpf-will-revolutionize-programming-in-linux/ post]"
+      },
+      "date": 1587784475974
+    },
+    {
+      "type": "edit",
+      "id": "358739c0d5375136",
+      "item": {
+        "type": "paragraph",
+        "id": "358739c0d5375136",
+        "text": "See Linux io_uring Async I/O for the eBPF connector. [https://thenewstack.io/how-io_uring-and-ebpf-will-revolutionize-programming-in-linux/ post]"
+      },
+      "date": 1587784508839
+    },
+    {
+      "type": "edit",
+      "id": "358739c0d5375136",
+      "item": {
+        "type": "paragraph",
+        "id": "358739c0d5375136",
+        "text": "See Linux io_uring Async I/O the eBPF connector. [https://thenewstack.io/how-io_uring-and-ebpf-will-revolutionize-programming-in-linux/ post]"
+      },
+      "date": 1587784529338
+    },
+    {
+      "type": "edit",
+      "id": "358739c0d5375136",
+      "item": {
+        "type": "paragraph",
+        "id": "358739c0d5375136",
+        "text": "Linux Async I/O for eBPF with  io_uring. [https://thenewstack.io/how-io_uring-and-ebpf-will-revolutionize-programming-in-linux/ post]"
+      },
+      "date": 1587784606764
+    },
+    {
+      "type": "add",
+      "id": "67cbdcb99ab938ca",
+      "item": {
+        "type": "paragraph",
+        "id": "67cbdcb99ab938ca",
+        "text": "Post Hype Microservices with Bryan Cantrill."
+      },
+      "after": "358739c0d5375136",
+      "date": 1592601678586
+    },
+    {
+      "type": "edit",
+      "id": "67cbdcb99ab938ca",
+      "item": {
+        "type": "paragraph",
+        "id": "67cbdcb99ab938ca",
+        "text": "Post Hype Microservices with Bryan Cantrill. [https://www.youtube.com/watch?time_continue=36&v=1NHbPN9pNPM&feature=emb_logo video]"
+      },
+      "date": 1592601691307
+    },
+    {
+      "type": "add",
+      "id": "f29495009c3bb43d",
+      "item": {
+        "type": "paragraph",
+        "id": "f29495009c3bb43d",
+        "text": "Extended BPF has a new homepage. [https://ebpf.io site]"
+      },
+      "after": "67cbdcb99ab938ca",
+      "date": 1597261630522
+    }
+  ]
+}

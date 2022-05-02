@@ -1,0 +1,428 @@
+{
+  "title": "Wiki's Most Replicated",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ebb5a59c8c11f6e6",
+      "text": "I've suggested that a certain writing style favors replication. Can we learn something about style by study of replications we find by search? Not yet. But maybe."
+    },
+    {
+      "type": "paragraph",
+      "id": "880a44b9b694ff71",
+      "text": "We start by looking for item ids that are replicated on multiple pages. Often these are twins, but not always. Here is one I have copied often, has have others."
+    },
+    {
+      "type": "search",
+      "id": "c03a65b20bec3407",
+      "text": "SEARCH ITEMS dcf2b5140b411c4b"
+    },
+    {
+      "type": "paragraph",
+      "id": "26f072c7fb4d3c93",
+      "text": "We can list all of the item ids search has encountered, here with the most frequent first. \n [http://ward.asia.wiki.org/assets/pages/wikis-most-replicated/items.txt items]"
+    },
+    {
+      "type": "search",
+      "id": "82a5914b978c3aa0",
+      "text": "ALL ITEMS INPUT"
+    },
+    {
+      "type": "paragraph",
+      "id": "710ea4fb67021e02",
+      "text": "I assembled this list with a short script that counts uniques among all sites indexed."
+    },
+    {
+      "type": "code",
+      "id": "3d6683d00b97b8ff",
+      "text": "(cd sites; ls | while read i; do cat $i/items.txt; done) | sort | uniq -c | sort -nr >most/items.txt"
+    },
+    {
+      "type": "paragraph",
+      "id": "19482f1f0185e145",
+      "text": "Here I've applied it to other tallies, slugs being most informative."
+    },
+    {
+      "type": "assets",
+      "id": "f461cdd00a10039d",
+      "text": "pages/wikis-most-replicated"
+    },
+    {
+      "type": "paragraph",
+      "id": "d879ce36b375d4c6",
+      "text": "The analysis I've done here can be improved. See [[Search Index Downloads]] for a tgz file of all indices."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Wiki's Most Replicated",
+        "story": []
+      },
+      "date": 1560027366737
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ebb5a59c8c11f6e6"
+      },
+      "id": "ebb5a59c8c11f6e6",
+      "type": "add",
+      "date": 1560027373018
+    },
+    {
+      "type": "edit",
+      "id": "ebb5a59c8c11f6e6",
+      "item": {
+        "type": "paragraph",
+        "id": "ebb5a59c8c11f6e6",
+        "text": "I've suggested that a certain writing style favors replication. Can we learn something about style by study of replications we find by search? Not yet. But maybe."
+      },
+      "date": 1560027504579
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f461cdd00a10039d"
+      },
+      "id": "f461cdd00a10039d",
+      "type": "add",
+      "after": "ebb5a59c8c11f6e6",
+      "date": 1560027509069
+    },
+    {
+      "type": "edit",
+      "id": "f461cdd00a10039d",
+      "item": {
+        "type": "assets",
+        "id": "f461cdd00a10039d",
+        "text": "pages/wikis-most-replicated"
+      },
+      "date": 1560027534906
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3d6683d00b97b8ff"
+      },
+      "id": "3d6683d00b97b8ff",
+      "type": "add",
+      "after": "f461cdd00a10039d",
+      "date": 1560027587281
+    },
+    {
+      "type": "edit",
+      "id": "3d6683d00b97b8ff",
+      "item": {
+        "type": "code",
+        "id": "3d6683d00b97b8ff",
+        "text": "(cd sites; ls | while read i; do cat $i/plugins.txt; done) | sort | uniq -c | sort -nr >most/plugins.txt"
+      },
+      "date": 1560027682864
+    },
+    {
+      "type": "add",
+      "id": "880a44b9b694ff71",
+      "item": {
+        "type": "paragraph",
+        "id": "880a44b9b694ff71",
+        "text": "We start by looking for item ids that are replicated on multiple pages. Often these are twins, but not always. [http://ward.asia.wiki.org/assets/pages/wikis-most-replicated/items.txt items]"
+      },
+      "after": "ebb5a59c8c11f6e6",
+      "date": 1560028169859
+    },
+    {
+      "type": "edit",
+      "id": "880a44b9b694ff71",
+      "item": {
+        "type": "paragraph",
+        "id": "880a44b9b694ff71",
+        "text": "We start by looking for item ids that are replicated on multiple pages. Often these are twins, but not always. Search to find the pages.\n [http://ward.asia.wiki.org/assets/pages/wikis-most-replicated/items.txt items]"
+      },
+      "date": 1560028277351
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "82a5914b978c3aa0"
+      },
+      "id": "82a5914b978c3aa0",
+      "type": "add",
+      "after": "3d6683d00b97b8ff",
+      "date": 1560028307176
+    },
+    {
+      "type": "edit",
+      "id": "82a5914b978c3aa0",
+      "item": {
+        "type": "search",
+        "id": "82a5914b978c3aa0",
+        "text": "ALL ITEMS INPUT"
+      },
+      "date": 1560028323718
+    },
+    {
+      "type": "move",
+      "order": [
+        "ebb5a59c8c11f6e6",
+        "880a44b9b694ff71",
+        "82a5914b978c3aa0",
+        "f461cdd00a10039d",
+        "3d6683d00b97b8ff"
+      ],
+      "id": "82a5914b978c3aa0",
+      "date": 1560028327782
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7d0d731718a0d3ed"
+      },
+      "id": "7d0d731718a0d3ed",
+      "type": "add",
+      "after": "3d6683d00b97b8ff",
+      "date": 1560028425637
+    },
+    {
+      "type": "remove",
+      "id": "7d0d731718a0d3ed",
+      "date": 1560028425710
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c03a65b20bec3407"
+      },
+      "id": "c03a65b20bec3407",
+      "type": "add",
+      "after": "3d6683d00b97b8ff",
+      "date": 1560028434414
+    },
+    {
+      "type": "edit",
+      "id": "c03a65b20bec3407",
+      "item": {
+        "type": "search",
+        "id": "c03a65b20bec3407",
+        "text": "ITEMS ffcd52d2ec129d7d"
+      },
+      "date": 1560028451952
+    },
+    {
+      "type": "edit",
+      "id": "c03a65b20bec3407",
+      "item": {
+        "type": "search",
+        "id": "c03a65b20bec3407",
+        "text": "SEARCH ITEMS ffcd52d2ec129d7d"
+      },
+      "date": 1560028470930
+    },
+    {
+      "type": "edit",
+      "id": "c03a65b20bec3407",
+      "item": {
+        "type": "search",
+        "id": "c03a65b20bec3407",
+        "text": "SEARCH ITEMS dcf2b5140b411c4b"
+      },
+      "date": 1560028619710
+    },
+    {
+      "type": "move",
+      "order": [
+        "ebb5a59c8c11f6e6",
+        "880a44b9b694ff71",
+        "c03a65b20bec3407",
+        "82a5914b978c3aa0",
+        "f461cdd00a10039d",
+        "3d6683d00b97b8ff"
+      ],
+      "id": "c03a65b20bec3407",
+      "date": 1560028721521
+    },
+    {
+      "type": "edit",
+      "id": "880a44b9b694ff71",
+      "item": {
+        "type": "paragraph",
+        "id": "880a44b9b694ff71",
+        "text": "We start by looking for item ids that are replicated on multiple pages. Often these are twins, but not always. "
+      },
+      "date": 1560028792003
+    },
+    {
+      "type": "add",
+      "id": "26f072c7fb4d3c93",
+      "item": {
+        "type": "paragraph",
+        "id": "26f072c7fb4d3c93",
+        "text": "Search to find the pages.\n [http://ward.asia.wiki.org/assets/pages/wikis-most-replicated/items.txt items]"
+      },
+      "after": "880a44b9b694ff71",
+      "date": 1560028795497
+    },
+    {
+      "type": "move",
+      "order": [
+        "ebb5a59c8c11f6e6",
+        "880a44b9b694ff71",
+        "c03a65b20bec3407",
+        "26f072c7fb4d3c93",
+        "82a5914b978c3aa0",
+        "f461cdd00a10039d",
+        "3d6683d00b97b8ff"
+      ],
+      "id": "26f072c7fb4d3c93",
+      "date": 1560028800192
+    },
+    {
+      "type": "edit",
+      "id": "880a44b9b694ff71",
+      "item": {
+        "type": "paragraph",
+        "id": "880a44b9b694ff71",
+        "text": "We start by looking for item ids that are replicated on multiple pages. Often these are twins, but not always. Here is one I copy copy often."
+      },
+      "date": 1560028829417
+    },
+    {
+      "type": "edit",
+      "id": "880a44b9b694ff71",
+      "item": {
+        "type": "paragraph",
+        "id": "880a44b9b694ff71",
+        "text": "We start by looking for item ids that are replicated on multiple pages. Often these are twins, but not always. Here is one I have copied often, has have others."
+      },
+      "date": 1560028857670
+    },
+    {
+      "type": "edit",
+      "id": "26f072c7fb4d3c93",
+      "item": {
+        "type": "paragraph",
+        "id": "26f072c7fb4d3c93",
+        "text": "We can list all of the item ids search has encountered, here with the most frequent first. Check them out.\n [http://ward.asia.wiki.org/assets/pages/wikis-most-replicated/items.txt items]"
+      },
+      "date": 1560028954781
+    },
+    {
+      "type": "edit",
+      "id": "26f072c7fb4d3c93",
+      "item": {
+        "type": "paragraph",
+        "id": "26f072c7fb4d3c93",
+        "text": "We can list all of the item ids search has encountered, here with the most frequent first. \n [http://ward.asia.wiki.org/assets/pages/wikis-most-replicated/items.txt items]"
+      },
+      "date": 1560028965573
+    },
+    {
+      "type": "edit",
+      "id": "3d6683d00b97b8ff",
+      "item": {
+        "type": "code",
+        "id": "3d6683d00b97b8ff",
+        "text": "(cd sites; ls | while read i; do cat $i/items.txt; done) | sort | uniq -c | sort -nr >most/items.txt"
+      },
+      "date": 1560029003765
+    },
+    {
+      "type": "add",
+      "id": "710ea4fb67021e02",
+      "item": {
+        "type": "paragraph",
+        "id": "710ea4fb67021e02",
+        "text": "I assembled this list with a short script that counts uniques among all sites indexed."
+      },
+      "after": "26f072c7fb4d3c93",
+      "date": 1560029124240
+    },
+    {
+      "type": "move",
+      "order": [
+        "ebb5a59c8c11f6e6",
+        "880a44b9b694ff71",
+        "c03a65b20bec3407",
+        "26f072c7fb4d3c93",
+        "82a5914b978c3aa0",
+        "710ea4fb67021e02",
+        "f461cdd00a10039d",
+        "3d6683d00b97b8ff"
+      ],
+      "id": "710ea4fb67021e02",
+      "date": 1560029132890
+    },
+    {
+      "type": "move",
+      "order": [
+        "ebb5a59c8c11f6e6",
+        "880a44b9b694ff71",
+        "c03a65b20bec3407",
+        "26f072c7fb4d3c93",
+        "82a5914b978c3aa0",
+        "710ea4fb67021e02",
+        "3d6683d00b97b8ff",
+        "f461cdd00a10039d"
+      ],
+      "id": "3d6683d00b97b8ff",
+      "date": 1560029135862
+    },
+    {
+      "type": "add",
+      "id": "19482f1f0185e145",
+      "item": {
+        "type": "paragraph",
+        "id": "19482f1f0185e145",
+        "text": "Here I've applied it to other tallies. "
+      },
+      "after": "710ea4fb67021e02",
+      "date": 1560029175149
+    },
+    {
+      "type": "move",
+      "order": [
+        "ebb5a59c8c11f6e6",
+        "880a44b9b694ff71",
+        "c03a65b20bec3407",
+        "26f072c7fb4d3c93",
+        "82a5914b978c3aa0",
+        "710ea4fb67021e02",
+        "3d6683d00b97b8ff",
+        "19482f1f0185e145",
+        "f461cdd00a10039d"
+      ],
+      "id": "19482f1f0185e145",
+      "date": 1560029178178
+    },
+    {
+      "type": "edit",
+      "id": "19482f1f0185e145",
+      "item": {
+        "type": "paragraph",
+        "id": "19482f1f0185e145",
+        "text": "Here I've applied it to other tallies, slugs being most informative."
+      },
+      "date": 1560029340597
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d879ce36b375d4c6"
+      },
+      "id": "d879ce36b375d4c6",
+      "type": "add",
+      "after": "f461cdd00a10039d",
+      "date": 1560029577154
+    },
+    {
+      "type": "edit",
+      "id": "d879ce36b375d4c6",
+      "item": {
+        "type": "paragraph",
+        "id": "d879ce36b375d4c6",
+        "text": "The analysis I've done here can be improved. See [[Search Index Downloads]] for a tgz file of all indices."
+      },
+      "date": 1560029662787
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "title": "Wiki Browses Bikeshares",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "200d64b332cf741d",
+      "text": "Wiki assembles pages from various sites into a Lineup within which useful computations can take place. Here we use maps and bikeshare online data to illustrate how this works."
+    },
+    {
+      "type": "paragraph",
+      "id": "638f33c59510802a",
+      "text": "Eugene, Oregon, has recently deployed a bikeshare system and provides station information in a standard, open, login-free format. Wiki's Bikeshare plugin understands this format and is configured on any individual page by adding the system's web address as markup."
+    },
+    {
+      "type": "paragraph",
+      "id": "c055f4df1fc4fc7b",
+      "text": "[[Peace Health Rides]] with plugin configured for Eugene."
+    },
+    {
+      "type": "paragraph",
+      "id": "2c5beb04dbac6f80",
+      "text": "With each view of this page the current station configuration is loaded and made available to subsequent pages in the lineup. Click the Street Map link to view current station locations on a map."
+    },
+    {
+      "type": "paragraph",
+      "id": "3d59b82f89dabc54",
+      "text": "Tip: use arrow keys to scroll left or right."
+    },
+    {
+      "type": "paragraph",
+      "id": "eb7713ae7449ca1e",
+      "text": "The station coordinates flow from page to page in the browser as new pages are opened."
+    },
+    {
+      "type": "html",
+      "id": "c34725d47f2305e8",
+      "text": "<center>Peace Health ⇒ Street Map"
+    },
+    {
+      "type": "paragraph",
+      "id": "1a8369a87e20b4a1",
+      "text": "If we are interested in stations near specific locations we can map those locations and feed them into the Bikeshare plugin to find the nearby stations."
+    },
+    {
+      "type": "paragraph",
+      "id": "4a1cf10eaa52823a",
+      "text": "Say we were planning to visit all of the Eugene pubs operated by McMenamins, a northwest pub empire. We start with their three Eugene pubs marked on a map."
+    },
+    {
+      "type": "paragraph",
+      "id": "8d9adf43d4d4e182",
+      "text": "[[McMenamins of Eugene]] marked on a map."
+    },
+    {
+      "type": "paragraph",
+      "id": "340e842f232ef5d5",
+      "text": "We can follow the links on this page to the bikeshare and then to the station map now augmented with stations nearby each pub. Data flows from page to page."
+    },
+    {
+      "type": "html",
+      "id": "bf25875f0a24d58f",
+      "text": "<center>McMenamins ⇒ Peace Health ⇒ Street Map"
+    },
+    {
+      "type": "paragraph",
+      "id": "a7925957f2fedd80",
+      "text": "If we select any one pub, then only its coordinate flows into the bikeshare and one set of neighbors comes out the other side to make for a more detailed street map of the stations."
+    },
+    {
+      "type": "paragraph",
+      "id": "d535249fe04392c4",
+      "text": "The Bikeshare plugin looks up, down, left and right to find up to four stations for each destination. This route planning sensitivity is possible because the plugin understands how bikes are used."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Wiki Browses Bikeshares",
+        "story": []
+      },
+      "date": 1533141514336
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "200d64b332cf741d"
+      },
+      "id": "200d64b332cf741d",
+      "type": "add",
+      "date": 1533141526575
+    },
+    {
+      "type": "edit",
+      "id": "200d64b332cf741d",
+      "item": {
+        "type": "paragraph",
+        "id": "200d64b332cf741d",
+        "text": "Wiki assembles pages from various sites into a Lineup within which useful computations can take place. Here we use maps and bikeshare online data to illustrate how this works."
+      },
+      "date": 1533141663367
+    },
+    {
+      "type": "add",
+      "id": "638f33c59510802a",
+      "item": {
+        "type": "paragraph",
+        "id": "638f33c59510802a",
+        "text": "Eugene, Oregon, has recently deployed a bikeshare system and provides station information in a standard, open, login-free format. Wiki's Bikeshare plugin understands this format and is configured on any individual page by adding the system's web address as markup."
+      },
+      "after": "200d64b332cf741d",
+      "date": 1533154175218
+    },
+    {
+      "type": "add",
+      "id": "c055f4df1fc4fc7b",
+      "item": {
+        "type": "paragraph",
+        "id": "c055f4df1fc4fc7b",
+        "text": "[[Peace Health Rides]] bikeshare in Eugene"
+      },
+      "after": "638f33c59510802a",
+      "date": 1533154268150
+    },
+    {
+      "type": "edit",
+      "id": "c055f4df1fc4fc7b",
+      "item": {
+        "type": "paragraph",
+        "id": "c055f4df1fc4fc7b",
+        "text": "[[Peace Health Rides]] with plugin configured for Eugene."
+      },
+      "date": 1533154363924
+    },
+    {
+      "type": "add",
+      "id": "2c5beb04dbac6f80",
+      "item": {
+        "type": "paragraph",
+        "id": "2c5beb04dbac6f80",
+        "text": "With each view of this page the current station configuration is loaded and made available to subsequent pages in the lineup. Click the Street Map link to view current station locations on a map."
+      },
+      "after": "c055f4df1fc4fc7b",
+      "date": 1533154476608
+    },
+    {
+      "type": "add",
+      "id": "eb7713ae7449ca1e",
+      "item": {
+        "type": "paragraph",
+        "id": "eb7713ae7449ca1e",
+        "text": "The station coordinates flow from page to page in the browser as new pages are opened."
+      },
+      "after": "2c5beb04dbac6f80",
+      "date": 1533154636148
+    },
+    {
+      "type": "add",
+      "id": "c34725d47f2305e8",
+      "item": {
+        "type": "paragraph",
+        "id": "c34725d47f2305e8",
+        "text": "Peace Health Rides ⇒ Street Map"
+      },
+      "after": "eb7713ae7449ca1e",
+      "date": 1533154685228
+    },
+    {
+      "type": "add",
+      "id": "1a8369a87e20b4a1",
+      "item": {
+        "type": "paragraph",
+        "id": "1a8369a87e20b4a1",
+        "text": "If we are interested in stations near specific locations we can map those locations and feed them into the Bikeshare plugin to find the nearby stations."
+      },
+      "after": "c34725d47f2305e8",
+      "date": 1533154769122
+    },
+    {
+      "type": "add",
+      "id": "4a1cf10eaa52823a",
+      "item": {
+        "type": "paragraph",
+        "id": "4a1cf10eaa52823a",
+        "text": "Say we were planning to visit all of the Eugene pubs operated by the "
+      },
+      "after": "1a8369a87e20b4a1",
+      "date": 1533154879854
+    },
+    {
+      "type": "edit",
+      "id": "4a1cf10eaa52823a",
+      "item": {
+        "type": "paragraph",
+        "id": "4a1cf10eaa52823a",
+        "text": "Say we were planning to visit all of the Eugene pubs operated by McMenamins, a northwest pub empire. We start with their three Eugene pubs marked on a map."
+      },
+      "date": 1533155000235
+    },
+    {
+      "type": "add",
+      "id": "8d9adf43d4d4e182",
+      "item": {
+        "type": "paragraph",
+        "id": "8d9adf43d4d4e182",
+        "text": "[[McMenamins of Eugene]] marked on a map."
+      },
+      "after": "4a1cf10eaa52823a",
+      "date": 1533155073079
+    },
+    {
+      "type": "add",
+      "id": "340e842f232ef5d5",
+      "item": {
+        "type": "paragraph",
+        "id": "340e842f232ef5d5",
+        "text": "We can follow the links on this page to the bikeshare and then to the station map now augmented with stations nearby each pub."
+      },
+      "after": "8d9adf43d4d4e182",
+      "date": 1533155278291
+    },
+    {
+      "type": "add",
+      "id": "bf25875f0a24d58f",
+      "item": {
+        "type": "paragraph",
+        "id": "bf25875f0a24d58f",
+        "text": "McMenamins of Eugene ⇒ Peace Health Rides ⇒ Street Map"
+      },
+      "after": "340e842f232ef5d5",
+      "date": 1533155312545
+    },
+    {
+      "type": "edit",
+      "id": "bf25875f0a24d58f",
+      "item": {
+        "type": "paragraph",
+        "id": "bf25875f0a24d58f",
+        "text": "McMenamins ⇒ Peace Health ⇒ Street Map"
+      },
+      "date": 1533155344433
+    },
+    {
+      "type": "edit",
+      "id": "c34725d47f2305e8",
+      "item": {
+        "type": "paragraph",
+        "id": "c34725d47f2305e8",
+        "text": "Peace Health ⇒ Street Map"
+      },
+      "date": 1533155352520
+    },
+    {
+      "type": "edit",
+      "id": "c34725d47f2305e8",
+      "item": {
+        "type": "html",
+        "id": "c34725d47f2305e8",
+        "text": "<center>Peace Health ⇒ Street Map"
+      },
+      "date": 1533155372784
+    },
+    {
+      "type": "edit",
+      "id": "bf25875f0a24d58f",
+      "item": {
+        "type": "html",
+        "id": "bf25875f0a24d58f",
+        "text": "<center>McMenamins ⇒ Peace Health ⇒ Street Map"
+      },
+      "date": 1533155392183
+    },
+    {
+      "type": "edit",
+      "id": "340e842f232ef5d5",
+      "item": {
+        "type": "paragraph",
+        "id": "340e842f232ef5d5",
+        "text": "We can follow the links on this page to the bikeshare and then to the station map now augmented with stations nearby each pub. Data flows from page to page."
+      },
+      "date": 1533155437309
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a7925957f2fedd80"
+      },
+      "id": "a7925957f2fedd80",
+      "type": "add",
+      "after": "bf25875f0a24d58f",
+      "date": 1533155572836
+    },
+    {
+      "type": "edit",
+      "id": "a7925957f2fedd80",
+      "item": {
+        "type": "paragraph",
+        "id": "a7925957f2fedd80",
+        "text": "If we select any one pub, then only its coordinate flows into the bikeshare and one set of neighbors comes out the other side to make for a more detailed street map of the stations."
+      },
+      "date": 1533155658433
+    },
+    {
+      "type": "add",
+      "id": "d535249fe04392c4",
+      "item": {
+        "type": "paragraph",
+        "id": "d535249fe04392c4",
+        "text": "The Bikeshare plugin looks up, down, left and right to find up to four stations for each destination. This route planning sensitivity is possible because the plugin understands how bikes are used."
+      },
+      "after": "a7925957f2fedd80",
+      "date": 1533156743471
+    },
+    {
+      "type": "add",
+      "id": "3d59b82f89dabc54",
+      "item": {
+        "type": "paragraph",
+        "id": "3d59b82f89dabc54",
+        "text": "Tip: use arrow keys to scroll the lineup."
+      },
+      "after": "c055f4df1fc4fc7b",
+      "date": 1533156934260
+    },
+    {
+      "type": "edit",
+      "id": "3d59b82f89dabc54",
+      "item": {
+        "type": "paragraph",
+        "id": "3d59b82f89dabc54",
+        "text": "Tip: use arrow keys to scroll left or right."
+      },
+      "date": 1533156954443
+    },
+    {
+      "type": "move",
+      "order": [
+        "200d64b332cf741d",
+        "638f33c59510802a",
+        "c055f4df1fc4fc7b",
+        "2c5beb04dbac6f80",
+        "3d59b82f89dabc54",
+        "eb7713ae7449ca1e",
+        "c34725d47f2305e8",
+        "1a8369a87e20b4a1",
+        "4a1cf10eaa52823a",
+        "8d9adf43d4d4e182",
+        "340e842f232ef5d5",
+        "bf25875f0a24d58f",
+        "a7925957f2fedd80",
+        "d535249fe04392c4"
+      ],
+      "id": "3d59b82f89dabc54",
+      "date": 1533156977310
+    }
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "title": "Family of Flags",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e455b95e7cf76c30",
+      "text": "Wiki uses the favicon mechanism to label the origin in a browser tab. We call these flags and use them in many other circumstances. We generate them so that they are recognizable as distinct but still part of a family."
+    },
+    {
+      "type": "paragraph",
+      "id": "996a39909cbf4a61",
+      "text": "The algorithm picks a light and dark color and then generates a gradient between them. The gradient from light to dark goes from top to bottom with a random rotational gradient from -90 to +90 degrees. [https://github.com/WardCunningham/Smallest-Federated-Wiki/blob/master/server/sinatra/favicon.rb github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "12b4cee6d9647609",
+      "text": "The artistic vision was a landscape with sky over ground."
+    },
+    {
+      "type": "paragraph",
+      "id": "7f6b1094904634e4",
+      "text": "Our second server implementation placed dark over light. The effect is that of landscape at night. [https://github.com/fedwiki/wiki-plugin-favicon/blob/master/client/favicon.coffee github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1402d8d55ee74551",
+      "text": "We call these Flags. The are not icons because they don't represent anything. Flags are used as backgrounds for fork actions. Gradients work for this. Pictures don't."
+    },
+    {
+      "type": "code",
+      "id": "4b42289c177ab69a",
+      "text": "wiki.getPlugin('favicon',\n  function(favicon){favicon.create()})"
+    },
+    {
+      "type": "markdown",
+      "id": "0d124428fc634526",
+      "text": "# Replace"
+    },
+    {
+      "type": "paragraph",
+      "id": "64c4d0080ee35194",
+      "text": "You can generate a replacement flag if luck has cursed you with a confusing one."
+    },
+    {
+      "type": "paragraph",
+      "id": "2301aea149eceae4",
+      "text": "Our vision has always been to evolve flags by selection as Richard Dawkins did in his cute bug making program so long ago. This gives us a nice balance between individual preference and family resemblance."
+    },
+    {
+      "type": "paragraph",
+      "id": "a5ab0068d13bfb94",
+      "text": "For a ruby/sinatra wiki ask the server for a new flag. Keep refreshing until you get one you like."
+    },
+    {
+      "type": "code",
+      "id": "c8de5e877b0510f3",
+      "text": "localhost://random.png"
+    },
+    {
+      "type": "paragraph",
+      "id": "529db32024b00839",
+      "text": "For a node/express wiki run this code in the browser's console. Use up-arrow repeat until you get one you like."
+    },
+    {
+      "type": "code",
+      "id": "1f9f409059164115",
+      "text": "wiki.getPlugin('favicon',\n    function(favicon){favicon.create()})"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Family of Flags",
+        "story": []
+      },
+      "date": 1418855173794
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e455b95e7cf76c30"
+      },
+      "id": "e455b95e7cf76c30",
+      "type": "add",
+      "date": 1418855176331
+    },
+    {
+      "type": "edit",
+      "id": "e455b95e7cf76c30",
+      "item": {
+        "type": "paragraph",
+        "id": "e455b95e7cf76c30",
+        "text": "Wiki uses the favicon mechanism to label the origin in a browser tab. We call these flags and use them in many other circumstances. We generate them so that they are recognizable as distinct but still part of a family."
+      },
+      "date": 1418855304317
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "996a39909cbf4a61"
+      },
+      "id": "996a39909cbf4a61",
+      "type": "add",
+      "after": "e455b95e7cf76c30",
+      "date": 1418855307111
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "12b4cee6d9647609",
+        "text": ""
+      },
+      "id": "12b4cee6d9647609",
+      "type": "add",
+      "after": "996a39909cbf4a61",
+      "date": 1418855482780
+    },
+    {
+      "type": "edit",
+      "id": "12b4cee6d9647609",
+      "item": {
+        "type": "paragraph",
+        "id": "12b4cee6d9647609",
+        "text": "The artistic vision was a landscape with sky over ground."
+      },
+      "date": 1418855524482
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7f6b1094904634e4"
+      },
+      "id": "7f6b1094904634e4",
+      "type": "add",
+      "after": "12b4cee6d9647609",
+      "date": 1418855534644
+    },
+    {
+      "type": "edit",
+      "id": "7f6b1094904634e4",
+      "item": {
+        "type": "paragraph",
+        "id": "7f6b1094904634e4",
+        "text": "Our second server implementation placed dark over light. The effect is that of landscape at night."
+      },
+      "date": 1418855613018
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1402d8d55ee74551"
+      },
+      "id": "1402d8d55ee74551",
+      "type": "add",
+      "after": "7f6b1094904634e4",
+      "date": 1418855651453
+    },
+    {
+      "type": "edit",
+      "id": "1402d8d55ee74551",
+      "item": {
+        "type": "paragraph",
+        "id": "1402d8d55ee74551",
+        "text": "We call these Flags. The are not icons because they don't represent anything. Flags are used as backgrounds for fork actions. Gradients work for this. Pictures don't."
+      },
+      "date": 1418855780650
+    },
+    {
+      "type": "edit",
+      "id": "996a39909cbf4a61",
+      "item": {
+        "type": "paragraph",
+        "id": "996a39909cbf4a61",
+        "text": "The algorithm picks a light and dark color and then generates a gradient between them. The gradient from light to dark goes from top to bottom with a random rotational gradient from -90 to +90 degrees. [https://github.com/WardCunningham/Smallest-Federated-Wiki/blob/master/server/sinatra/favicon.rb github]"
+      },
+      "date": 1418855919154
+    },
+    {
+      "type": "edit",
+      "id": "7f6b1094904634e4",
+      "item": {
+        "type": "paragraph",
+        "id": "7f6b1094904634e4",
+        "text": "Our second server implementation placed dark over light. The effect is that of landscape at night. [https://github.com/fedwiki/wiki-plugin-favicon/blob/master/client/favicon.coffee github]"
+      },
+      "date": 1418856343410
+    },
+    {
+      "type": "fork",
+      "site": "forage.ward.fed.wiki.org",
+      "date": 1418885081478
+    },
+    {
+      "type": "fork",
+      "site": "ramble.nrn.io"
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4b42289c177ab69a"
+      },
+      "id": "4b42289c177ab69a",
+      "type": "add",
+      "after": "1402d8d55ee74551",
+      "date": 1419114108265
+    },
+    {
+      "type": "edit",
+      "id": "4b42289c177ab69a",
+      "item": {
+        "type": "code",
+        "id": "4b42289c177ab69a",
+        "text": "wiki.getPlugin('favicon',\n  function(favicon){favicon.create()})"
+      },
+      "date": 1419114253730
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0d124428fc634526"
+      },
+      "id": "0d124428fc634526",
+      "type": "add",
+      "after": "4b42289c177ab69a",
+      "date": 1419114308955
+    },
+    {
+      "type": "edit",
+      "id": "0d124428fc634526",
+      "item": {
+        "type": "markdown",
+        "id": "0d124428fc634526",
+        "text": "# Replace"
+      },
+      "date": 1419114405565
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "64c4d0080ee35194"
+      },
+      "id": "64c4d0080ee35194",
+      "type": "add",
+      "after": "0d124428fc634526",
+      "date": 1419114412011
+    },
+    {
+      "type": "edit",
+      "id": "64c4d0080ee35194",
+      "item": {
+        "type": "paragraph",
+        "id": "64c4d0080ee35194",
+        "text": "You can generate a replacement flag if luck has cursed you with a confusing one."
+      },
+      "date": 1419114455798
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "2301aea149eceae4",
+        "text": ""
+      },
+      "id": "2301aea149eceae4",
+      "type": "add",
+      "after": "64c4d0080ee35194",
+      "date": 1419114455804
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "d6131f8818a7b496",
+        "text": ""
+      },
+      "id": "d6131f8818a7b496",
+      "type": "add",
+      "after": "2301aea149eceae4",
+      "date": 1419114562735
+    },
+    {
+      "type": "remove",
+      "id": "d6131f8818a7b496",
+      "date": 1419114564618
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "e0c6f706f6a671d4",
+        "text": ""
+      },
+      "id": "e0c6f706f6a671d4",
+      "type": "add",
+      "after": "2301aea149eceae4",
+      "date": 1419114577501
+    },
+    {
+      "type": "remove",
+      "id": "e0c6f706f6a671d4",
+      "date": 1419114579555
+    },
+    {
+      "type": "edit",
+      "id": "2301aea149eceae4",
+      "item": {
+        "type": "paragraph",
+        "id": "2301aea149eceae4",
+        "text": "Our vision has always been to evolve flags by selection as Richard Dawkins did in his cute bug making program so long ago. This gives us a nice balance between individual preference and family resemblance."
+      },
+      "date": 1419114630323
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "a5ab0068d13bfb94",
+        "text": ""
+      },
+      "id": "a5ab0068d13bfb94",
+      "type": "add",
+      "after": "2301aea149eceae4",
+      "date": 1419114630328
+    },
+    {
+      "type": "edit",
+      "id": "a5ab0068d13bfb94",
+      "item": {
+        "type": "paragraph",
+        "id": "a5ab0068d13bfb94",
+        "text": "For a ruby/sinatra wiki ask the server for a new flag."
+      },
+      "date": 1419114699098
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c8de5e877b0510f3"
+      },
+      "id": "c8de5e877b0510f3",
+      "type": "add",
+      "after": "a5ab0068d13bfb94",
+      "date": 1419114705224
+    },
+    {
+      "type": "edit",
+      "id": "c8de5e877b0510f3",
+      "item": {
+        "type": "code",
+        "id": "c8de5e877b0510f3",
+        "text": "localhost://system/random.png"
+      },
+      "date": 1419114744760
+    },
+    {
+      "type": "edit",
+      "id": "c8de5e877b0510f3",
+      "item": {
+        "type": "code",
+        "id": "c8de5e877b0510f3",
+        "text": "localhost://random.png"
+      },
+      "date": 1419114843646
+    },
+    {
+      "type": "edit",
+      "id": "a5ab0068d13bfb94",
+      "item": {
+        "type": "paragraph",
+        "id": "a5ab0068d13bfb94",
+        "text": "For a ruby/sinatra wiki ask the server for a new flag. Keep refreshing until you get one you like."
+      },
+      "date": 1419114869594
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "529db32024b00839"
+      },
+      "id": "529db32024b00839",
+      "type": "add",
+      "after": "c8de5e877b0510f3",
+      "date": 1419114873304
+    },
+    {
+      "type": "edit",
+      "id": "529db32024b00839",
+      "item": {
+        "type": "paragraph",
+        "id": "529db32024b00839",
+        "text": "Fora node/express wiki run this code in the browser's console. Use the inspector to see what you got."
+      },
+      "date": 1419114933562
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1f9f409059164115"
+      },
+      "id": "1f9f409059164115",
+      "type": "add",
+      "after": "529db32024b00839",
+      "date": 1419114938022
+    },
+    {
+      "type": "edit",
+      "id": "1f9f409059164115",
+      "item": {
+        "type": "code",
+        "id": "1f9f409059164115",
+        "text": "wiki.getPlugin('favicon',\n    function(favicon){favicon.create()})"
+      },
+      "date": 1419114960842
+    },
+    {
+      "type": "edit",
+      "id": "529db32024b00839",
+      "item": {
+        "type": "paragraph",
+        "id": "529db32024b00839",
+        "text": "For a node/express wiki run this code in the browser's console. Use the inspector to see what you got."
+      },
+      "date": 1419114983689
+    },
+    {
+      "type": "edit",
+      "id": "529db32024b00839",
+      "item": {
+        "type": "paragraph",
+        "id": "529db32024b00839",
+        "text": "For a node/express wiki run this code in the browser's console. Use up-arrow repeat until you get one you like."
+      },
+      "date": 1419115162287
+    }
+  ]
+}

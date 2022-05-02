@@ -1,0 +1,125 @@
+{
+  "title": "Sunday Parkways",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "dd2873f86f6eecfd",
+      "text": "On June 26th, thousands of smiling faces will gather in North Portland to bike, walk, and roll across the double loop 9.5 mile scenic route that glides along the Willamette Boulevard and over to Peninsula Rose Garden, Arbor Lodge, Kenton, and McCoy Parks. [https://www.portlandoregon.gov/transportation/67622 post]"
+    },
+    {
+      "type": "html",
+      "id": "b885b4355122869f",
+      "text": "<img src=\"http://c2.com/wiki/North_Parkways_2016.png\" width=420><center>North Sunday Parkways <a href=\"http://c2.com/wiki/North_Parkways_2016.png\">enlarge</a></center>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6f584d112f9bcff0",
+      "text": "I'll be riding this bike route today between sessions hacking on federated wiki."
+    },
+    {
+      "type": "paragraph",
+      "id": "9a108213bb640049",
+      "text": "See [[Testing Map Enhancements]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Sunday Parkways",
+        "story": []
+      },
+      "date": 1466956792102
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dd2873f86f6eecfd"
+      },
+      "id": "dd2873f86f6eecfd",
+      "type": "add",
+      "date": 1466956834270
+    },
+    {
+      "type": "edit",
+      "id": "dd2873f86f6eecfd",
+      "item": {
+        "type": "paragraph",
+        "id": "dd2873f86f6eecfd",
+        "text": "On June 26th, thousands of smiling faces will gather in North Portland to bike, walk, and roll across the double loop 9.5 mile scenic route that glides along the Willamette Boulevard and over to Peninsula Rose Garden, Arbor Lodge, Kenton, and McCoy Parks. While you are there, enjoy a spot of good food, good laughs, and good music."
+      },
+      "date": 1466956846773
+    },
+    {
+      "type": "edit",
+      "id": "dd2873f86f6eecfd",
+      "item": {
+        "type": "paragraph",
+        "id": "dd2873f86f6eecfd",
+        "text": "On June 26th, thousands of smiling faces will gather in North Portland to bike, walk, and roll across the double loop 9.5 mile scenic route that glides along the Willamette Boulevard and over to Peninsula Rose Garden, Arbor Lodge, Kenton, and McCoy Parks. [https://www.portlandoregon.gov/transportation/67622 post]"
+      },
+      "date": 1466956883071
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b885b4355122869f"
+      },
+      "id": "b885b4355122869f",
+      "type": "add",
+      "after": "dd2873f86f6eecfd",
+      "date": 1466957061788
+    },
+    {
+      "type": "edit",
+      "id": "b885b4355122869f",
+      "item": {
+        "type": "html",
+        "id": "b885b4355122869f",
+        "text": "<img src=\"http://c2.com/wiki/North_Parkways_2016.png\" width=420><center>North Sunday Parkways</center>"
+      },
+      "date": 1466957123568
+    },
+    {
+      "type": "edit",
+      "id": "b885b4355122869f",
+      "item": {
+        "type": "html",
+        "id": "b885b4355122869f",
+        "text": "<img src=\"http://c2.com/wiki/North_Parkways_2016.png\" width=420><center>North Sunday Parkways <a href=\"http://c2.com/wiki/North_Parkways_2016.png\">enlarge</a></center>"
+      },
+      "date": 1466957175848
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6f584d112f9bcff0"
+      },
+      "id": "6f584d112f9bcff0",
+      "type": "add",
+      "after": "b885b4355122869f",
+      "date": 1466957344702
+    },
+    {
+      "type": "edit",
+      "id": "6f584d112f9bcff0",
+      "item": {
+        "type": "paragraph",
+        "id": "6f584d112f9bcff0",
+        "text": "I'll be riding this bike route today between sessions hacking on federated wiki."
+      },
+      "date": 1466957421503
+    },
+    {
+      "type": "add",
+      "id": "9a108213bb640049",
+      "item": {
+        "type": "paragraph",
+        "id": "9a108213bb640049",
+        "text": "See [[Testing Map Enhancements]]"
+      },
+      "after": "6f584d112f9bcff0",
+      "date": 1466957474254
+    }
+  ]
+}

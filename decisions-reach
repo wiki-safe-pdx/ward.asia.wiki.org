@@ -1,0 +1,313 @@
+{
+  "title": "Decision's Reach",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7f9174bcbbccd09c",
+      "text": "We consider how in wiki the decisions we make impact others and over what distance that influence is felt."
+    },
+    {
+      "type": "paragraph",
+      "id": "3e61ee1ef27c0090",
+      "text": "Item"
+    },
+    {
+      "type": "paragraph",
+      "id": "ce3a4a06c118e425",
+      "text": "Page"
+    },
+    {
+      "type": "paragraph",
+      "id": "f8d5e92c34d8c98d",
+      "text": "Lineup"
+    },
+    {
+      "type": "paragraph",
+      "id": "b26e843b9c9691f8",
+      "text": "Template"
+    },
+    {
+      "type": "paragraph",
+      "id": "96c36a69316362d1",
+      "text": "Site"
+    },
+    {
+      "type": "paragraph",
+      "id": "e3b62ba27a65e7fb",
+      "text": "Neighborhood"
+    },
+    {
+      "type": "paragraph",
+      "id": "8f385632920b323a",
+      "text": "Transporter"
+    },
+    {
+      "type": "paragraph",
+      "id": "73a4407e96685f4b",
+      "text": "Farm"
+    },
+    {
+      "type": "paragraph",
+      "id": "875a0884240ad742",
+      "text": "Spider"
+    },
+    {
+      "type": "paragraph",
+      "id": "bae196ea0773655c",
+      "text": "Federation"
+    },
+    {
+      "type": "paragraph",
+      "id": "0896f28bd62c1723",
+      "text": "Internet"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Decision's Reach",
+        "story": []
+      },
+      "date": 1498489169863
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "7f9174bcbbccd09c",
+        "text": "We consider how in wiki the decisions we make impact others and over what distance that influence is felt."
+      },
+      "id": "7f9174bcbbccd09c",
+      "type": "add",
+      "date": 1498489171805
+    },
+    {
+      "type": "edit",
+      "id": "7f9174bcbbccd09c",
+      "item": {
+        "type": "paragraph",
+        "id": "7f9174bcbbccd09c",
+        "text": "We consider how in wiki the decisions we make impact others and over what distance that influence is felt."
+      },
+      "date": 1498489256094
+    },
+    {
+      "type": "add",
+      "id": "3e61ee1ef27c0090",
+      "item": {
+        "type": "paragraph",
+        "id": "3e61ee1ef27c0090",
+        "text": "Paragraph"
+      },
+      "after": "7f9174bcbbccd09c",
+      "date": 1498489277465
+    },
+    {
+      "type": "add",
+      "id": "ce3a4a06c118e425",
+      "item": {
+        "type": "paragraph",
+        "id": "ce3a4a06c118e425",
+        "text": "Page"
+      },
+      "after": "3e61ee1ef27c0090",
+      "date": 1498489284340
+    },
+    {
+      "type": "add",
+      "id": "96c36a69316362d1",
+      "item": {
+        "type": "paragraph",
+        "id": "96c36a69316362d1",
+        "text": "Site"
+      },
+      "after": "ce3a4a06c118e425",
+      "date": 1498489299405
+    },
+    {
+      "type": "add",
+      "id": "b26e843b9c9691f8",
+      "item": {
+        "type": "paragraph",
+        "id": "b26e843b9c9691f8",
+        "text": "Template"
+      },
+      "after": "96c36a69316362d1",
+      "date": 1498489301985
+    },
+    {
+      "type": "add",
+      "id": "e3b62ba27a65e7fb",
+      "item": {
+        "type": "paragraph",
+        "id": "e3b62ba27a65e7fb",
+        "text": "Neighborhood"
+      },
+      "after": "b26e843b9c9691f8",
+      "date": 1498489306988
+    },
+    {
+      "type": "add",
+      "id": "f8d5e92c34d8c98d",
+      "item": {
+        "type": "paragraph",
+        "id": "f8d5e92c34d8c98d",
+        "text": "Lineup"
+      },
+      "after": "e3b62ba27a65e7fb",
+      "date": 1498489310470
+    },
+    {
+      "type": "add",
+      "id": "73a4407e96685f4b",
+      "item": {
+        "type": "paragraph",
+        "id": "73a4407e96685f4b",
+        "text": "Farm"
+      },
+      "after": "f8d5e92c34d8c98d",
+      "date": 1498489322673
+    },
+    {
+      "type": "move",
+      "order": [
+        "7f9174bcbbccd09c",
+        "3e61ee1ef27c0090",
+        "ce3a4a06c118e425",
+        "f8d5e92c34d8c98d",
+        "96c36a69316362d1",
+        "b26e843b9c9691f8",
+        "e3b62ba27a65e7fb",
+        "73a4407e96685f4b",
+        "99fdb4d4db2727fb"
+      ],
+      "id": "f8d5e92c34d8c98d",
+      "date": 1498489331617,
+      "error": {
+        "type": "error",
+        "msg": "Internal Server Error",
+        "response": "Server Ignoring move. Try reload."
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1498489373507
+    },
+    {
+      "type": "move",
+      "order": [
+        "7f9174bcbbccd09c",
+        "3e61ee1ef27c0090",
+        "ce3a4a06c118e425",
+        "f8d5e92c34d8c98d",
+        "b26e843b9c9691f8",
+        "96c36a69316362d1",
+        "e3b62ba27a65e7fb",
+        "73a4407e96685f4b"
+      ],
+      "id": "b26e843b9c9691f8",
+      "date": 1498489473547
+    },
+    {
+      "type": "add",
+      "id": "8f385632920b323a",
+      "item": {
+        "type": "paragraph",
+        "id": "8f385632920b323a",
+        "text": "Install"
+      },
+      "after": "73a4407e96685f4b",
+      "date": 1498489507620
+    },
+    {
+      "type": "edit",
+      "id": "8f385632920b323a",
+      "item": {
+        "type": "paragraph",
+        "id": "8f385632920b323a",
+        "text": "Version"
+      },
+      "date": 1498489534585
+    },
+    {
+      "type": "edit",
+      "id": "3e61ee1ef27c0090",
+      "item": {
+        "type": "paragraph",
+        "id": "3e61ee1ef27c0090",
+        "text": "Item"
+      },
+      "date": 1498489545775
+    },
+    {
+      "type": "add",
+      "id": "bae196ea0773655c",
+      "item": {
+        "type": "paragraph",
+        "id": "bae196ea0773655c",
+        "text": "Federation"
+      },
+      "after": "73a4407e96685f4b",
+      "date": 1498490634743
+    },
+    {
+      "type": "edit",
+      "id": "8f385632920b323a",
+      "item": {
+        "type": "paragraph",
+        "id": "8f385632920b323a",
+        "text": "Transporters"
+      },
+      "date": 1498490688597
+    },
+    {
+      "type": "move",
+      "order": [
+        "7f9174bcbbccd09c",
+        "3e61ee1ef27c0090",
+        "ce3a4a06c118e425",
+        "f8d5e92c34d8c98d",
+        "b26e843b9c9691f8",
+        "96c36a69316362d1",
+        "e3b62ba27a65e7fb",
+        "8f385632920b323a",
+        "73a4407e96685f4b",
+        "bae196ea0773655c"
+      ],
+      "id": "8f385632920b323a",
+      "date": 1498490699708
+    },
+    {
+      "type": "add",
+      "id": "0896f28bd62c1723",
+      "item": {
+        "type": "paragraph",
+        "id": "0896f28bd62c1723",
+        "text": "Internet"
+      },
+      "after": "bae196ea0773655c",
+      "date": 1498490715344
+    },
+    {
+      "type": "edit",
+      "id": "8f385632920b323a",
+      "item": {
+        "type": "paragraph",
+        "id": "8f385632920b323a",
+        "text": "Transporter"
+      },
+      "date": 1498490737813
+    },
+    {
+      "type": "add",
+      "id": "875a0884240ad742",
+      "item": {
+        "type": "paragraph",
+        "id": "875a0884240ad742",
+        "text": "Spider"
+      },
+      "after": "73a4407e96685f4b",
+      "date": 1498490755787
+    }
+  ]
+}

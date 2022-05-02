@@ -1,0 +1,709 @@
+{
+  "title": "Markdown Test",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "74b9b387165df6bf",
+      "text": "Mike renders some dialect of markdown and compares it to wiki flavored markdown. Here we explore how we should handle blockquote. We're close to coding. [https://github.com/fedwiki/wiki-plugin-markdown/issues/14 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "4ca6fe6b6dbb320f",
+      "text": "We've modeled our markdown on github flavor which has a few special features. We added check boxes because they interact nicely with the journal. But what about the basics. Can we agree?"
+    },
+    {
+      "type": "paragraph",
+      "id": "5a0927191ab8b4be",
+      "text": "We would prefer to make a special fedwiki flavor in which an initial > would blockquote the whole markdown item. In other words, if the first character is the angle bracket wrap the whole item in blockquote and ignore subsequent angle brackets. If you want something outside blockquotes, make a new item. This is the simplest solution and it fits with the movable items philosophy of federated wiki."
+    },
+    {
+      "type": "pagefold",
+      "id": "a686a3064231b426",
+      "text": "background"
+    },
+    {
+      "type": "paragraph",
+      "id": "8b167e90a5c147ed",
+      "text": "Mike has been using the > notation for blockquote. This brings forward the email convention what ever that is. I've resisted coding context sensitive rules in wiki flavored markdown. Does one line influence the interpretation of the next? There be dragons."
+    },
+    {
+      "type": "paragraph",
+      "id": "eb8fc2627300597e",
+      "text": "I'd rather find a way to make text editor split and join work for the Markdown plugin than do context sensitive markup. That's just my opinion of course. But I would love to make the wiki implementation comprehensible."
+    },
+    {
+      "type": "pagefold",
+      "id": "9def4dd4e1a49e2f",
+      "text": "tests"
+    },
+    {
+      "type": "paragraph",
+      "id": "d5029a7f95ef5e94",
+      "text": "This is a first line."
+    },
+    {
+      "type": "markdown",
+      "id": "785cfda6dd239308",
+      "text": "> Followed by a second line in Markdown"
+    },
+    {
+      "type": "markdown",
+      "id": "27a9aebf4d481e3a",
+      "text": "# Followed by a third line in text."
+    },
+    {
+      "type": "paragraph",
+      "id": "756c8f4aca624f22",
+      "text": "Let's try [[Markdown Test #2]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "42ed235d03a0a24e",
+      "text": "Let's try [[Markdown Test #3]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "31c3f828b7f1315b",
+      "text": "----"
+    },
+    {
+      "type": "paragraph",
+      "id": "2e708037b13b7d46",
+      "text": "It could work a number of other ways. "
+    },
+    {
+      "type": "paragraph",
+      "id": "97b65004339f1c7a",
+      "text": "The other approach to markdown markup would replace the line-initial > with a opening <blockquote> and then look for the first \\n after it and close the </blockquote>. The specs say this way should be supported in all markdown flavors. The issue here is that subsequent paragraphs have small breaks in the formatting, which could be misread as signalling separate quotations."
+    },
+    {
+      "type": "paragraph",
+      "id": "751b54972fafd64b",
+      "text": "The recommended way (supposedly for readability) it multiple hand broken lines, like"
+    },
+    {
+      "type": "paragraph",
+      "id": "a55c4f24431b7d50",
+      "text": "> this is a paragraph that uses the"
+    },
+    {
+      "type": "paragraph",
+      "id": "bf56fb91ad61065c",
+      "text": "> other markdown style"
+    },
+    {
+      "type": "paragraph",
+      "id": "f077f7e8eb6a21fe",
+      "text": "That way seems superfluous to me. I'm blockquoting the paragraph, so why am I putting it in front of lines? The argument is readability, and I think that may be the case when there is MULTIPLE levels of indentation. But I don't think we need to support multiple levels of indentation at this point. I've managed to work around multiple indentations with other conventions, and I've blockquoted hundreds of items at this point. - [[Mike Caulfield]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Markdown Test",
+        "story": []
+      },
+      "date": 1438977649986
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "74b9b387165df6bf"
+      },
+      "id": "74b9b387165df6bf",
+      "type": "add",
+      "date": 1438977651003
+    },
+    {
+      "type": "edit",
+      "id": "74b9b387165df6bf",
+      "item": {
+        "type": "paragraph",
+        "id": "74b9b387165df6bf",
+        "text": "This is a first line."
+      },
+      "date": 1438977662864
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "785cfda6dd239308"
+      },
+      "id": "785cfda6dd239308",
+      "type": "add",
+      "after": "74b9b387165df6bf",
+      "date": 1438977664283
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "27a9aebf4d481e3a"
+      },
+      "id": "27a9aebf4d481e3a",
+      "type": "add",
+      "after": "785cfda6dd239308",
+      "date": 1438977686589
+    },
+    {
+      "type": "edit",
+      "id": "785cfda6dd239308",
+      "item": {
+        "type": "markdown",
+        "id": "785cfda6dd239308",
+        "text": "> Followed by a second line in Markdown"
+      },
+      "date": 1438977688181
+    },
+    {
+      "type": "edit",
+      "id": "27a9aebf4d481e3a",
+      "item": {
+        "type": "paragraph",
+        "id": "27a9aebf4d481e3a",
+        "text": "Followed by a third line in text."
+      },
+      "date": 1438977712536
+    },
+    {
+      "type": "add",
+      "id": "756c8f4aca624f22",
+      "item": {
+        "type": "paragraph",
+        "id": "756c8f4aca624f22",
+        "text": "Let's try [[Markdown Test #2]]"
+      },
+      "after": "27a9aebf4d481e3a",
+      "date": 1438977744947
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "42ed235d03a0a24e"
+      },
+      "id": "42ed235d03a0a24e",
+      "type": "add",
+      "after": "756c8f4aca624f22",
+      "date": 1438977833644
+    },
+    {
+      "type": "edit",
+      "id": "42ed235d03a0a24e",
+      "item": {
+        "type": "paragraph",
+        "id": "42ed235d03a0a24e",
+        "text": "Let's try [[Markdown Test #3]]"
+      },
+      "date": 1438977838914
+    },
+    {
+      "type": "edit",
+      "id": "27a9aebf4d481e3a",
+      "item": {
+        "type": "paragraph",
+        "id": "27a9aebf4d481e3a",
+        "text": "# Followed by a third line in text."
+      },
+      "date": 1438979800351
+    },
+    {
+      "type": "edit",
+      "id": "27a9aebf4d481e3a",
+      "item": {
+        "type": "markdown",
+        "id": "27a9aebf4d481e3a",
+        "text": "# Followed by a third line in text."
+      },
+      "date": 1438979802765
+    },
+    {
+      "type": "fork",
+      "site": "journal.hapgood.net",
+      "date": 1439003399312
+    },
+    {
+      "type": "fork",
+      "date": 1439003419033
+    },
+    {
+      "type": "edit",
+      "id": "74b9b387165df6bf",
+      "item": {
+        "type": "paragraph",
+        "id": "74b9b387165df6bf",
+        "text": "Mike renders some dialect of markdown and compares it to wiki flavor markdown. This is a first line."
+      },
+      "date": 1439003471561
+    },
+    {
+      "type": "edit",
+      "id": "74b9b387165df6bf",
+      "item": {
+        "type": "paragraph",
+        "id": "74b9b387165df6bf",
+        "text": "Mike renders some dialect of markdown and compares it to wiki flavored markdown. "
+      },
+      "date": 1439003485623
+    },
+    {
+      "type": "add",
+      "id": "d5029a7f95ef5e94",
+      "item": {
+        "type": "paragraph",
+        "id": "d5029a7f95ef5e94",
+        "text": "This is a first line."
+      },
+      "after": "74b9b387165df6bf",
+      "date": 1439003489243
+    },
+    {
+      "type": "edit",
+      "id": "74b9b387165df6bf",
+      "item": {
+        "type": "paragraph",
+        "id": "74b9b387165df6bf",
+        "text": "Mike renders some dialect of markdown and compares it to wiki flavored markdown. We've modeled our markdown on github flavor which has a few special features. But what about the basics. Can we agree?"
+      },
+      "date": 1439003556894
+    },
+    {
+      "type": "add",
+      "id": "8b167e90a5c147ed",
+      "item": {
+        "type": "paragraph",
+        "id": "8b167e90a5c147ed",
+        "text": "Mike has been using the > notation for blockquote. This brings forward the email convention what ever that is. I've resisted coding context sensitive rules in wiki flavored markdown. Does one line influence the interpretation of the next? There be dragons."
+      },
+      "after": "74b9b387165df6bf",
+      "date": 1439003792383
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9def4dd4e1a49e2f"
+      },
+      "id": "9def4dd4e1a49e2f",
+      "type": "add",
+      "after": "42ed235d03a0a24e",
+      "date": 1439003801133
+    },
+    {
+      "type": "edit",
+      "id": "9def4dd4e1a49e2f",
+      "item": {
+        "type": "pagefold",
+        "id": "9def4dd4e1a49e2f",
+        "text": "tests"
+      },
+      "date": 1439003808103
+    },
+    {
+      "type": "move",
+      "order": [
+        "74b9b387165df6bf",
+        "8b167e90a5c147ed",
+        "9def4dd4e1a49e2f",
+        "d5029a7f95ef5e94",
+        "785cfda6dd239308",
+        "27a9aebf4d481e3a",
+        "756c8f4aca624f22",
+        "42ed235d03a0a24e"
+      ],
+      "id": "9def4dd4e1a49e2f",
+      "date": 1439003813812
+    },
+    {
+      "type": "edit",
+      "id": "74b9b387165df6bf",
+      "item": {
+        "type": "paragraph",
+        "id": "74b9b387165df6bf",
+        "text": "Mike renders some dialect of markdown and compares it to wiki flavored markdown. We've modeled our markdown on github flavor which has a few special features. We added check boxes because they interact nicely with the journal. But what about the basics. Can we agree?"
+      },
+      "date": 1439003861177
+    },
+    {
+      "type": "add",
+      "id": "eb8fc2627300597e",
+      "item": {
+        "type": "paragraph",
+        "id": "eb8fc2627300597e",
+        "text": "I'd rather find a way to make text editor split and join work for the Markdown plugin than do context sensitive markup. That's just my opinion of course. But I would love to make the wiki implementation comprehensible."
+      },
+      "after": "8b167e90a5c147ed",
+      "date": 1439004005504
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org"
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "31c3f828b7f1315b"
+      },
+      "id": "31c3f828b7f1315b",
+      "type": "add",
+      "after": "42ed235d03a0a24e",
+      "date": 1439089926689
+    },
+    {
+      "type": "edit",
+      "id": "31c3f828b7f1315b",
+      "item": {
+        "type": "paragraph",
+        "id": "31c3f828b7f1315b",
+        "text": "----"
+      },
+      "date": 1439089929893
+    },
+    {
+      "type": "add",
+      "id": "2e708037b13b7d46",
+      "item": {
+        "type": "paragraph",
+        "id": "2e708037b13b7d46",
+        "text": "I think it could work either way. I would be fine with an initial > just blockquoting the whole markdown item. "
+      },
+      "after": "31c3f828b7f1315b",
+      "date": 1439089995885
+    },
+    {
+      "type": "edit",
+      "id": "2e708037b13b7d46",
+      "item": {
+        "type": "paragraph",
+        "id": "2e708037b13b7d46",
+        "text": "I think it could work either way. "
+      },
+      "date": 1439090000729
+    },
+    {
+      "type": "add",
+      "id": "5a0927191ab8b4be",
+      "item": {
+        "type": "paragraph",
+        "id": "5a0927191ab8b4be",
+        "text": "I would be fine with an initial > just blockquoting the whole markdown item. If the first character is the angle bracket wrap the whole thing in blockquote and ignore everything else. "
+      },
+      "after": "2e708037b13b7d46",
+      "date": 1439090179575
+    },
+    {
+      "type": "edit",
+      "id": "5a0927191ab8b4be",
+      "item": {
+        "type": "paragraph",
+        "id": "5a0927191ab8b4be",
+        "text": "I would be fine with an initial > just blockquoting the whole markdown item. If the first character is the angle bracket wrap the whole thing in blockquote and ignore subsequent angle brackets. "
+      },
+      "date": 1439090203980
+    },
+    {
+      "type": "add",
+      "id": "97b65004339f1c7a",
+      "item": {
+        "type": "paragraph",
+        "id": "97b65004339f1c7a",
+        "text": "But the traditional markdown markup just replaces the line-initial > with a opening <blockquote> and then looks for the first \\n after it and closes the </blockquote>."
+      },
+      "after": "5a0927191ab8b4be",
+      "date": 1439090353596
+    },
+    {
+      "type": "edit",
+      "id": "97b65004339f1c7a",
+      "item": {
+        "type": "paragraph",
+        "id": "97b65004339f1c7a",
+        "text": "But one traditional approach to markdown markup just replaces the line-initial > with a opening <blockquote> and then looks for the first \\n after it and closes the </blockquote>."
+      },
+      "date": 1439090467717
+    },
+    {
+      "type": "fork",
+      "date": 1439090733629
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "751b54972fafd64b"
+      },
+      "id": "751b54972fafd64b",
+      "type": "add",
+      "after": "97b65004339f1c7a",
+      "date": 1439090739682
+    },
+    {
+      "type": "edit",
+      "id": "751b54972fafd64b",
+      "item": {
+        "type": "paragraph",
+        "id": "751b54972fafd64b",
+        "text": "The recommended way (supposedly for readability) "
+      },
+      "date": 1439090778925
+    },
+    {
+      "type": "edit",
+      "id": "97b65004339f1c7a",
+      "item": {
+        "type": "paragraph",
+        "id": "97b65004339f1c7a",
+        "text": "But one traditional approach to markdown markup just replaces the line-initial > with a opening <blockquote> and then looks for the first \\n after it and closes the </blockquote>. The specs say this way should be supported in all markdown flavors."
+      },
+      "date": 1439090806007
+    },
+    {
+      "type": "edit",
+      "id": "751b54972fafd64b",
+      "item": {
+        "type": "paragraph",
+        "id": "751b54972fafd64b",
+        "text": "The recommended way (supposedly for readability) it multiple hand broken lines, like"
+      },
+      "date": 1439090825629
+    },
+    {
+      "type": "add",
+      "id": "a55c4f24431b7d50",
+      "item": {
+        "type": "paragraph",
+        "id": "a55c4f24431b7d50",
+        "text": "> this is a paragraph that uses the"
+      },
+      "after": "751b54972fafd64b",
+      "date": 1439090840123
+    },
+    {
+      "type": "add",
+      "id": "bf56fb91ad61065c",
+      "item": {
+        "type": "paragraph",
+        "id": "bf56fb91ad61065c",
+        "text": "> other markdown style"
+      },
+      "after": "a55c4f24431b7d50",
+      "date": 1439090850127
+    },
+    {
+      "type": "add",
+      "id": "f077f7e8eb6a21fe",
+      "item": {
+        "type": "paragraph",
+        "id": "f077f7e8eb6a21fe",
+        "text": "That way seems superfluous to me. I'm blockquoting the paragraph, so why am I putting it in front of lines? The argument is readability, and I think that may be the case when there is MULTIPLE levels of indentation. But I don't think we need to support multiple levels of indentation at this point. I've managed to work around multiple indentations with other conventions, and I've blockquoted hundreds of items at this point."
+      },
+      "after": "bf56fb91ad61065c",
+      "date": 1439091142723
+    },
+    {
+      "type": "edit",
+      "id": "f077f7e8eb6a21fe",
+      "item": {
+        "type": "paragraph",
+        "id": "f077f7e8eb6a21fe",
+        "text": "That way seems superfluous to me. I'm blockquoting the paragraph, so why am I putting it in front of lines? The argument is readability, and I think that may be the case when there is MULTIPLE levels of indentation. But I don't think we need to support multiple levels of indentation at this point. I've managed to work around multiple indentations with other conventions, and I've blockquoted hundreds of items at this point. - [[Mike Caulfield]]"
+      },
+      "date": 1439091161686
+    },
+    {
+      "type": "edit",
+      "id": "5a0927191ab8b4be",
+      "item": {
+        "type": "paragraph",
+        "id": "5a0927191ab8b4be",
+        "text": "I would be fine with an initial > just blockquoting the whole markdown item. If the first character is the angle bracket wrap the whole item in blockquote and ignore subsequent angle brackets. If you want something outside blockquotes, make a new item. This is the simplest solution and it fits with the movable items philosophy of federated wiki."
+      },
+      "date": 1439092816277
+    },
+    {
+      "type": "edit",
+      "id": "97b65004339f1c7a",
+      "item": {
+        "type": "paragraph",
+        "id": "97b65004339f1c7a",
+        "text": "The other approach to markdown markup would replace the line-initial > with a opening <blockquote> and then looks for the first \\n after it and closes the </blockquote>. The specs say this way should be supported in all markdown flavors. The issue here is that subsequent paragraphs have small breaks in the formatting, which could be misread as signalling separate quotations."
+      },
+      "date": 1439093050845
+    },
+    {
+      "type": "edit",
+      "id": "5a0927191ab8b4be",
+      "item": {
+        "type": "paragraph",
+        "id": "5a0927191ab8b4be",
+        "text": "I would prefer to make a fedwiki flavor in which an initial > would blockquote the whole markdown item. In other words, if the first character is the angle bracket wrap the whole item in blockquote and ignore subsequent angle brackets. If you want something outside blockquotes, make a new item. This is the simplest solution and it fits with the movable items philosophy of federated wiki."
+      },
+      "date": 1439093138755
+    },
+    {
+      "type": "edit",
+      "id": "97b65004339f1c7a",
+      "item": {
+        "type": "paragraph",
+        "id": "97b65004339f1c7a",
+        "text": "The other approach to markdown markup would replace the line-initial > with a opening <blockquote> and then look for the first \\n after it and closes the </blockquote>. The specs say this way should be supported in all markdown flavors. The issue here is that subsequent paragraphs have small breaks in the formatting, which could be misread as signalling separate quotations."
+      },
+      "date": 1439093262572
+    },
+    {
+      "type": "edit",
+      "id": "5a0927191ab8b4be",
+      "item": {
+        "type": "paragraph",
+        "id": "5a0927191ab8b4be",
+        "text": "I would prefer to make a special fedwiki flavor in which an initial > would blockquote the whole markdown item. In other words, if the first character is the angle bracket wrap the whole item in blockquote and ignore subsequent angle brackets. If you want something outside blockquotes, make a new item. This is the simplest solution and it fits with the movable items philosophy of federated wiki."
+      },
+      "date": 1439093283261
+    },
+    {
+      "type": "edit",
+      "id": "2e708037b13b7d46",
+      "item": {
+        "type": "paragraph",
+        "id": "2e708037b13b7d46",
+        "text": "I think it could work a number of ways. "
+      },
+      "date": 1439093343666
+    },
+    {
+      "type": "edit",
+      "id": "97b65004339f1c7a",
+      "item": {
+        "type": "paragraph",
+        "id": "97b65004339f1c7a",
+        "text": "The other approach to markdown markup would replace the line-initial > with a opening <blockquote> and then look for the first \\n after it and close the </blockquote>. The specs say this way should be supported in all markdown flavors. The issue here is that subsequent paragraphs have small breaks in the formatting, which could be misread as signalling separate quotations."
+      },
+      "date": 1439094328406
+    },
+    {
+      "type": "fork",
+      "site": "journal.hapgood.net",
+      "date": 1439118848279
+    },
+    {
+      "type": "edit",
+      "id": "74b9b387165df6bf",
+      "item": {
+        "type": "paragraph",
+        "id": "74b9b387165df6bf",
+        "text": "Mike renders some dialect of markdown and compares it to wiki flavored markdown. Here we explore how we should handle blockquote. We're close to coding. [https://github.com/fedwiki/wiki-plugin-markdown/issues/14 github]"
+      },
+      "date": 1439119172399
+    },
+    {
+      "type": "add",
+      "id": "4ca6fe6b6dbb320f",
+      "item": {
+        "type": "paragraph",
+        "id": "4ca6fe6b6dbb320f",
+        "text": "We've modeled our markdown on github flavor which has a few special features. We added check boxes because they interact nicely with the journal. But what about the basics. Can we agree?"
+      },
+      "after": "74b9b387165df6bf",
+      "date": 1439119177080
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a686a3064231b426"
+      },
+      "id": "a686a3064231b426",
+      "type": "add",
+      "after": "f077f7e8eb6a21fe",
+      "date": 1439119248515
+    },
+    {
+      "type": "edit",
+      "id": "a686a3064231b426",
+      "item": {
+        "type": "pagefold",
+        "id": "a686a3064231b426",
+        "text": "background"
+      },
+      "date": 1439119256310
+    },
+    {
+      "type": "move",
+      "order": [
+        "74b9b387165df6bf",
+        "4ca6fe6b6dbb320f",
+        "a686a3064231b426",
+        "8b167e90a5c147ed",
+        "eb8fc2627300597e",
+        "9def4dd4e1a49e2f",
+        "d5029a7f95ef5e94",
+        "785cfda6dd239308",
+        "27a9aebf4d481e3a",
+        "756c8f4aca624f22",
+        "42ed235d03a0a24e",
+        "31c3f828b7f1315b",
+        "2e708037b13b7d46",
+        "5a0927191ab8b4be",
+        "97b65004339f1c7a",
+        "751b54972fafd64b",
+        "a55c4f24431b7d50",
+        "bf56fb91ad61065c",
+        "f077f7e8eb6a21fe"
+      ],
+      "id": "a686a3064231b426",
+      "date": 1439119263736
+    },
+    {
+      "type": "move",
+      "order": [
+        "74b9b387165df6bf",
+        "4ca6fe6b6dbb320f",
+        "5a0927191ab8b4be",
+        "a686a3064231b426",
+        "8b167e90a5c147ed",
+        "eb8fc2627300597e",
+        "9def4dd4e1a49e2f",
+        "d5029a7f95ef5e94",
+        "785cfda6dd239308",
+        "27a9aebf4d481e3a",
+        "756c8f4aca624f22",
+        "42ed235d03a0a24e",
+        "31c3f828b7f1315b",
+        "2e708037b13b7d46",
+        "97b65004339f1c7a",
+        "751b54972fafd64b",
+        "a55c4f24431b7d50",
+        "bf56fb91ad61065c",
+        "f077f7e8eb6a21fe"
+      ],
+      "id": "5a0927191ab8b4be",
+      "date": 1439119281907
+    },
+    {
+      "type": "edit",
+      "id": "5a0927191ab8b4be",
+      "item": {
+        "type": "paragraph",
+        "id": "5a0927191ab8b4be",
+        "text": "We would prefer to make a special fedwiki flavor in which an initial > would blockquote the whole markdown item. In other words, if the first character is the angle bracket wrap the whole item in blockquote and ignore subsequent angle brackets. If you want something outside blockquotes, make a new item. This is the simplest solution and it fits with the movable items philosophy of federated wiki."
+      },
+      "date": 1439119296480
+    },
+    {
+      "type": "edit",
+      "id": "2e708037b13b7d46",
+      "item": {
+        "type": "paragraph",
+        "id": "2e708037b13b7d46",
+        "text": "I think it could work a number of other ways. "
+      },
+      "date": 1439119326404
+    },
+    {
+      "type": "edit",
+      "id": "2e708037b13b7d46",
+      "item": {
+        "type": "paragraph",
+        "id": "2e708037b13b7d46",
+        "text": "It could work a number of other ways. "
+      },
+      "date": 1439119339117
+    }
+  ]
+}

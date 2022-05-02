@@ -1,0 +1,86 @@
+{
+  "title": "Weekly Roster",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1a719b260b3ee12c",
+      "text": "We list sites in the visible federation active in a week of six hour period. Click » to add these to your neighborhood then see [[Recent Changes]] for details. Time in UTC."
+    },
+    {
+      "type": "roster",
+      "id": "f07b85379c93cbbb",
+      "text": "ROSTER search.fed.wiki.org:3030/recent-activity"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Weekly Roster",
+        "story": []
+      },
+      "date": 1527430508512
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "1a719b260b3ee12c",
+        "text": "Here we list sites in the visible federation that have been changed in a recent six hour period. Click » to add these to your neighborhood. See [[Recent Changes]], [http://search.fed.wiki.org:3030/counts.html plot] [http://search.fed.wiki.org:3030/logs log]"
+      },
+      "id": "1a719b260b3ee12c",
+      "date": 1527430650887
+    },
+    {
+      "type": "edit",
+      "id": "1a719b260b3ee12c",
+      "item": {
+        "type": "paragraph",
+        "id": "1a719b260b3ee12c",
+        "text": "We list sites in the visible federation active in a recent six hour period. Click » to add these to your neighborhood then see [[Recent Changes]] for details. [http://search.fed.wiki.org:3030/counts.html plot] [http://search.fed.wiki.org:3030/logs log]"
+      },
+      "date": 1527430804451
+    },
+    {
+      "type": "edit",
+      "id": "1a719b260b3ee12c",
+      "item": {
+        "type": "paragraph",
+        "id": "1a719b260b3ee12c",
+        "text": "We list sites in the visible federation active in a recent six hour period. Click » to add these to your neighborhood then see [[Recent Changes]] for details. "
+      },
+      "date": 1527430817497
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "roster",
+        "id": "f07b85379c93cbbb",
+        "text": "ROSTER search.fed.wiki.org:3030/recent-activity"
+      },
+      "after": "1a719b260b3ee12c",
+      "id": "f07b85379c93cbbb",
+      "date": 1527430824360
+    },
+    {
+      "type": "edit",
+      "id": "1a719b260b3ee12c",
+      "item": {
+        "type": "paragraph",
+        "id": "1a719b260b3ee12c",
+        "text": "We list sites in the visible federation active in a week of six hour period. Click » to add these to your neighborhood then see [[Recent Changes]] for details. "
+      },
+      "date": 1527432123684
+    },
+    {
+      "type": "edit",
+      "id": "1a719b260b3ee12c",
+      "item": {
+        "type": "paragraph",
+        "id": "1a719b260b3ee12c",
+        "text": "We list sites in the visible federation active in a week of six hour period. Click » to add these to your neighborhood then see [[Recent Changes]] for details. Time in UTC."
+      },
+      "date": 1527432157937
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "title": "Recorded Action Errors",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "c1fbd451cb5990b6",
+      "text": "The client recovers from server errors by annotating the action with an \"error\" field and saving the edit in browser local storage. Here is how developers can see the details."
+    },
+    {
+      "type": "paragraph",
+      "id": "35fd02f79d3f4382",
+      "text": "You can see actions in their json form by clicking on an action and then double-clicking on the timestamp of the revision so retrieved. This requires guesswork to find the action with the error.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "59ceb92b86cfee09",
+      "text": "You can retrieve the full json text for a page from the json link in the page footer. Use your browser's text search to find \"error\" in this text. Using this technique I found one recorded error ward.bay.wiki.org:\n\n"
+    },
+    {
+      "type": "code",
+      "id": "766b29a86cbc2683",
+      "text": "\"id\": \"6d0590647712c41e\",\n\"date\": 1431797119637,\n\"error\": {\n  \"type\": \"error\",\n  \"msg\": \"Internal Server Error\",\n  \"response\": \"Server Ignoring move. Try reload.\"\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "acc6f4d1ea46068d",
+      "text": "This says that a move got lost on 16 May 2015 when the server couldn't find the destination for the move. [https://github.com/search?q=org%3Afedwiki+Server+Ignoring+move.+Try+reload&type=Code github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "0ce042eded4428ae",
+      "text": "See [[Grep For Errors]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Recorded Action Errors",
+        "story": []
+      },
+      "date": 1466774831848
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "35fd02f79d3f4382"
+      },
+      "id": "35fd02f79d3f4382",
+      "type": "add",
+      "date": 1466774862238
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "c1fbd451cb5990b6",
+        "text": "The client records journal actions as they are returned from the server. Should the server return a 500 error it usually means the action did not get recorded. The client recovers by annotating the action with an \"error\" field and saving the edit in browser local storage."
+      },
+      "id": "c1fbd451cb5990b6",
+      "date": 1466774880536
+    },
+    {
+      "type": "edit",
+      "id": "c1fbd451cb5990b6",
+      "item": {
+        "type": "paragraph",
+        "id": "c1fbd451cb5990b6",
+        "text": "The client recovers from server errors by annotating the action with an \"error\" field and saving the edit in browser local storage. Developers may want to see details. Here is how."
+      },
+      "date": 1466774984601
+    },
+    {
+      "type": "edit",
+      "id": "c1fbd451cb5990b6",
+      "item": {
+        "type": "paragraph",
+        "id": "c1fbd451cb5990b6",
+        "text": "The client recovers from server errors by annotating the action with an \"error\" field and saving the edit in browser local storage. Here is how developers can see the details."
+      },
+      "date": 1466775016378
+    },
+    {
+      "type": "edit",
+      "id": "35fd02f79d3f4382",
+      "item": {
+        "type": "paragraph",
+        "id": "35fd02f79d3f4382",
+        "text": "You can see actions in their json form by clicking on an action and then double-clicking on the timestamp of the revision so retrieved. This requires guesswork to find the action with the error.\n\n"
+      },
+      "date": 1466775066216
+    },
+    {
+      "type": "add",
+      "id": "59ceb92b86cfee09",
+      "item": {
+        "type": "paragraph",
+        "id": "59ceb92b86cfee09",
+        "text": "You can retrieve the full json text for a page from the json link in the page footer. Use your browser's text search to find \"error\" in this text. Using this technique I found one recorded error ward.bay.wiki.org:\n\n"
+      },
+      "after": "35fd02f79d3f4382",
+      "date": 1466775068313
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "766b29a86cbc2683"
+      },
+      "id": "766b29a86cbc2683",
+      "type": "add",
+      "after": "59ceb92b86cfee09",
+      "date": 1466775133548
+    },
+    {
+      "type": "edit",
+      "id": "766b29a86cbc2683",
+      "item": {
+        "type": "code",
+        "id": "766b29a86cbc2683",
+        "text": "\"id\": \"6d0590647712c41e\",\n\"date\": 1431797119637,\n\"error\": {\n  \"type\": \"error\",\n  \"msg\": \"Internal Server Error\",\n  \"response\": \"Server Ignoring move. Try reload.\"\n}"
+      },
+      "date": 1466775139409
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "acc6f4d1ea46068d"
+      },
+      "id": "acc6f4d1ea46068d",
+      "type": "add",
+      "after": "766b29a86cbc2683",
+      "date": 1466775199659
+    },
+    {
+      "type": "edit",
+      "id": "acc6f4d1ea46068d",
+      "item": {
+        "type": "paragraph",
+        "id": "acc6f4d1ea46068d",
+        "text": "This tells me that some move got lost on 16 May 2015 when the server couldn't find the destination for the move. [https://github.com/search?q=org%3Afedwiki+Server+Ignoring+move.+Try+reload&type=Code github]"
+      },
+      "date": 1466775225149
+    },
+    {
+      "type": "edit",
+      "id": "acc6f4d1ea46068d",
+      "item": {
+        "type": "paragraph",
+        "id": "acc6f4d1ea46068d",
+        "text": "This says that a move got lost on 16 May 2015 when the server couldn't find the destination for the move. [https://github.com/search?q=org%3Afedwiki+Server+Ignoring+move.+Try+reload&type=Code github]"
+      },
+      "date": 1466775272419
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0ce042eded4428ae"
+      },
+      "id": "0ce042eded4428ae",
+      "type": "add",
+      "after": "acc6f4d1ea46068d",
+      "date": 1466775291848
+    },
+    {
+      "type": "edit",
+      "id": "0ce042eded4428ae",
+      "item": {
+        "type": "paragraph",
+        "id": "0ce042eded4428ae",
+        "text": "See [[Grep For Errors]]"
+      },
+      "date": 1466775307512
+    }
+  ]
+}

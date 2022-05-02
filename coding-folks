@@ -1,0 +1,759 @@
+{
+  "title": "Coding Folks",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "2f6b26c3b4b0f034",
+      "text": "If you're talking about federated wiki code, add your site here and you will be heard sooner. You can, but need not, use the same site as the happening."
+    },
+    {
+      "type": "paragraph",
+      "id": "497b6fd621430f14",
+      "text": "See [[Special Interest Groups]]"
+    },
+    {
+      "type": "pagefold",
+      "id": "412cc9993cc3b4fd",
+      "text": "happening"
+    },
+    {
+      "type": "reference",
+      "id": "227a76b748f708c3",
+      "site": "forage.ward.fed.wiki.org",
+      "title": "Ward Cunningham",
+      "text": "My happening space. I can fork content without concern for the information architecture that results."
+    },
+    {
+      "type": "reference",
+      "id": "788306fadd020855",
+      "site": "fedwikihappening.rodwell.me",
+      "title": "Paul Rodwell",
+      "text": "A coder, and curator on [https://github.com/fedwiki github], of fedwiki."
+    },
+    {
+      "type": "reference",
+      "id": "338f1a614adbea12",
+      "site": "ramble.nrn.io",
+      "title": "Nick Niemeir",
+      "text": "Nick is a JavaScript nerd, and contributor to [[Smallest Federated Wiki]]."
+    },
+    {
+      "type": "reference",
+      "id": "89ba3f7157a7530b",
+      "site": "tim.ny.fedwikihappening.net",
+      "title": "Tim Owens",
+      "text": "I could have **sworn** I already added a bio here. Maybe I imagined it. Anyways...."
+    },
+    {
+      "type": "reference",
+      "id": "28a91819d339e817",
+      "site": "wiki.jasongreen.net",
+      "title": "Jason Green",
+      "text": "Jason Green (jason)"
+    },
+    {
+      "type": "reference",
+      "id": "295a25c72e725396",
+      "site": "alex.au.fedwikihappening.net",
+      "title": "Alex North",
+      "text": "Alex is a software engineer in Sydney, Australia. He previously worked on [[Google Wave]]."
+    },
+    {
+      "type": "pagefold",
+      "id": "bb99607de67b4b40",
+      "text": "other"
+    },
+    {
+      "type": "reference",
+      "id": "536fc8107871f85b",
+      "site": "ward.fed.wiki.org",
+      "title": "Ward Cunningham",
+      "text": "I wrote [[Federated Wiki]] while I served as Nike's open-data fellow. I currently work for [[NewRelic]] in Portland, Oregon."
+    },
+    {
+      "type": "reference",
+      "id": "06fde7cc84c3dfa5",
+      "site": "ward.asia.wiki.org",
+      "title": "Ward Cunningham",
+      "text": "I'm a big fan of Mike Caulfield who knows my work better than I do. He pushes federated wiki forward."
+    },
+    {
+      "type": "reference",
+      "id": "0e4a08db1063d02f",
+      "site": "nrn.io",
+      "title": "Nick Niemeir",
+      "text": "Nick is a JavaScript nerd, and contributor to [[Smallest Federated Wiki]]."
+    },
+    {
+      "type": "reference",
+      "id": "9c3b4370969a2331",
+      "site": "tim.federatedwiki.org",
+      "title": "Tim Owens",
+      "text": "I help run [[Reclaim Hosting]] and hope to make it as easy as possible for people to get started with [[Smallest Federated Wiki]]. That being said I have no idea what I'm doing. Let's learn together!"
+    },
+    {
+      "type": "reference",
+      "id": "8b7d79b13b470fd0",
+      "site": "128.199.166.158",
+      "title": "128.199.166.158",
+      "text": "This is the first [[Nameless Wiki]] hosted through Digital Ocean in Singapore by [[Ward Cunningham]]."
+    },
+    {
+      "type": "pagefold",
+      "id": "eecc939292dc0ba7",
+      "text": "."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Coding Folks",
+        "story": []
+      },
+      "date": 1419108832128
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ef5a7278ed73b4f7"
+      },
+      "id": "ef5a7278ed73b4f7",
+      "type": "add",
+      "date": 1419108834400
+    },
+    {
+      "type": "edit",
+      "id": "ef5a7278ed73b4f7",
+      "item": {
+        "type": "paragraph",
+        "id": "ef5a7278ed73b4f7",
+        "text": "This wiki is hosted on github and uses its issues system to talk about bugs."
+      },
+      "date": 1419108885667
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2f6b26c3b4b0f034"
+      },
+      "id": "2f6b26c3b4b0f034",
+      "type": "add",
+      "after": "ef5a7278ed73b4f7",
+      "date": 1419108888688
+    },
+    {
+      "type": "edit",
+      "id": "2f6b26c3b4b0f034",
+      "item": {
+        "type": "paragraph",
+        "id": "2f6b26c3b4b0f034",
+        "text": "If you're talking about federated wiki code, add your site here and you will be heard sooner. You can, but need not, use the same site as the happening."
+      },
+      "date": 1419109160465
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "ef5a7278ed73b4f7"
+      ],
+      "id": "2f6b26c3b4b0f034",
+      "date": 1419109163965
+    },
+    {
+      "type": "remove",
+      "id": "ef5a7278ed73b4f7",
+      "date": 1419109168880
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "536fc8107871f85b"
+      },
+      "id": "536fc8107871f85b",
+      "type": "add",
+      "after": "2f6b26c3b4b0f034",
+      "date": 1419109222767
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "227a76b748f708c3"
+      },
+      "id": "227a76b748f708c3",
+      "type": "add",
+      "after": "536fc8107871f85b",
+      "date": 1419109224433
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "788306fadd020855"
+      },
+      "id": "788306fadd020855",
+      "type": "add",
+      "after": "227a76b748f708c3",
+      "date": 1419109226053
+    },
+    {
+      "type": "edit",
+      "id": "536fc8107871f85b",
+      "item": {
+        "type": "reference",
+        "id": "536fc8107871f85b",
+        "site": "ward.fed.wiki.org",
+        "title": "Ward Cunningham",
+        "text": "I wrote [[Federated Wiki]] while I served as Nike's open-data fellow. I currently work for [[NewRelic]] in Portland, Oregon."
+      },
+      "date": 1419109234225
+    },
+    {
+      "type": "edit",
+      "id": "227a76b748f708c3",
+      "item": {
+        "type": "reference",
+        "id": "227a76b748f708c3",
+        "site": "forage.ward.fed.wiki.org",
+        "title": "Ward Cunningham",
+        "text": "I'm enjoying reading more in the federation. Here is a place that I can fork content without concern for the information architecture that results."
+      },
+      "date": 1419109319639
+    },
+    {
+      "type": "edit",
+      "id": "227a76b748f708c3",
+      "item": {
+        "type": "reference",
+        "id": "227a76b748f708c3",
+        "site": "forage.ward.fed.wiki.org",
+        "title": "Ward Cunningham",
+        "text": "I'm enjoying writing more in the federation with a place that I can fork content without concern for the information architecture that results."
+      },
+      "date": 1419109366229
+    },
+    {
+      "type": "edit",
+      "id": "227a76b748f708c3",
+      "item": {
+        "type": "reference",
+        "id": "227a76b748f708c3",
+        "site": "forage.ward.fed.wiki.org",
+        "title": "Ward Cunningham",
+        "text": "My happening space. I can fork content without concern for the information architecture that results."
+      },
+      "date": 1419109397871
+    },
+    {
+      "type": "edit",
+      "id": "788306fadd020855",
+      "item": {
+        "type": "reference",
+        "id": "788306fadd020855",
+        "site": "fedwikihappening.rodwell.me",
+        "title": "Paul Rodwell",
+        "text": "A coder, and curator on [https://github.com/fedwiki github], of fedwiki."
+      },
+      "date": 1419109481694
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8b7d79b13b470fd0"
+      },
+      "id": "8b7d79b13b470fd0",
+      "type": "add",
+      "after": "788306fadd020855",
+      "date": 1419109600191
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "338f1a614adbea12"
+      },
+      "id": "338f1a614adbea12",
+      "type": "add",
+      "after": "8b7d79b13b470fd0",
+      "date": 1419109601748
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "412cc9993cc3b4fd"
+      },
+      "id": "412cc9993cc3b4fd",
+      "type": "add",
+      "after": "338f1a614adbea12",
+      "date": 1419109603743
+    },
+    {
+      "type": "edit",
+      "id": "8b7d79b13b470fd0",
+      "item": {
+        "type": "reference",
+        "id": "8b7d79b13b470fd0",
+        "site": "128.199.166.158",
+        "title": "128.199.166.158",
+        "text": "This is the first [[Nameless Wiki]] hosted through Digital Ocean in Singapore by [[Ward Cunningham]]."
+      },
+      "date": 1419109607883
+    },
+    {
+      "type": "edit",
+      "id": "338f1a614adbea12",
+      "item": {
+        "type": "reference",
+        "id": "338f1a614adbea12",
+        "site": "ramble.nrn.io",
+        "title": "Nick Niemeir",
+        "text": "Nick is a JavaScript nerd, and contributor to [[Smallest Federated Wiki]]."
+      },
+      "date": 1419109692431
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bb99607de67b4b40"
+      },
+      "id": "bb99607de67b4b40",
+      "type": "add",
+      "after": "412cc9993cc3b4fd",
+      "date": 1419109697671
+    },
+    {
+      "type": "edit",
+      "id": "412cc9993cc3b4fd",
+      "item": {
+        "type": "pagefold",
+        "id": "412cc9993cc3b4fd",
+        "text": "happening"
+      },
+      "date": 1419109705921
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "536fc8107871f85b",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "8b7d79b13b470fd0",
+        "338f1a614adbea12",
+        "bb99607de67b4b40"
+      ],
+      "id": "412cc9993cc3b4fd",
+      "date": 1419109710144
+    },
+    {
+      "type": "edit",
+      "id": "bb99607de67b4b40",
+      "item": {
+        "type": "pagefold",
+        "id": "bb99607de67b4b40",
+        "text": "other"
+      },
+      "date": 1419109723296
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "eecc939292dc0ba7"
+      },
+      "id": "eecc939292dc0ba7",
+      "type": "add",
+      "after": "bb99607de67b4b40",
+      "date": 1419109725543
+    },
+    {
+      "type": "edit",
+      "id": "eecc939292dc0ba7",
+      "item": {
+        "type": "pagefold",
+        "id": "eecc939292dc0ba7",
+        "text": "."
+      },
+      "date": 1419109729180
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "536fc8107871f85b",
+        "788306fadd020855",
+        "8b7d79b13b470fd0",
+        "338f1a614adbea12",
+        "bb99607de67b4b40",
+        "eecc939292dc0ba7"
+      ],
+      "id": "227a76b748f708c3",
+      "date": 1419109737627
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "536fc8107871f85b",
+        "8b7d79b13b470fd0",
+        "338f1a614adbea12",
+        "bb99607de67b4b40",
+        "eecc939292dc0ba7"
+      ],
+      "id": "788306fadd020855",
+      "date": 1419109741756
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "536fc8107871f85b",
+        "8b7d79b13b470fd0",
+        "bb99607de67b4b40",
+        "eecc939292dc0ba7"
+      ],
+      "id": "338f1a614adbea12",
+      "date": 1419109745075
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "bb99607de67b4b40",
+        "536fc8107871f85b",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7"
+      ],
+      "id": "bb99607de67b4b40",
+      "date": 1419109750522
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "89ba3f7157a7530b"
+      },
+      "id": "89ba3f7157a7530b",
+      "type": "add",
+      "after": "eecc939292dc0ba7",
+      "date": 1419109995258
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9c3b4370969a2331"
+      },
+      "id": "9c3b4370969a2331",
+      "type": "add",
+      "after": "89ba3f7157a7530b",
+      "date": 1419109997797
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "bb99607de67b4b40",
+        "89ba3f7157a7530b",
+        "536fc8107871f85b",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7",
+        "9c3b4370969a2331"
+      ],
+      "id": "89ba3f7157a7530b",
+      "date": 1419110001727
+    },
+    {
+      "type": "edit",
+      "id": "89ba3f7157a7530b",
+      "item": {
+        "type": "reference",
+        "id": "89ba3f7157a7530b",
+        "site": "tim.ny.fedwikihappening.net",
+        "title": "Tim Owens",
+        "text": "I could have **sworn** I already added a bio here. Maybe I imagined it. Anyways...."
+      },
+      "date": 1419110020767
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "89ba3f7157a7530b",
+        "bb99607de67b4b40",
+        "536fc8107871f85b",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7",
+        "9c3b4370969a2331"
+      ],
+      "id": "89ba3f7157a7530b",
+      "date": 1419110025826
+    },
+    {
+      "type": "edit",
+      "id": "9c3b4370969a2331",
+      "item": {
+        "type": "reference",
+        "id": "9c3b4370969a2331",
+        "site": "tim.federatedwiki.org",
+        "title": "Tim Owens",
+        "text": "I help run [[Reclaim Hosting]] and hope to make it as easy as possible for people to get started with [[Smallest Federated Wiki]]. That being said I have no idea what I'm doing. Let's learn together!"
+      },
+      "date": 1419110036309
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "89ba3f7157a7530b",
+        "bb99607de67b4b40",
+        "536fc8107871f85b",
+        "9c3b4370969a2331",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7"
+      ],
+      "id": "9c3b4370969a2331",
+      "date": 1419110041385
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "295a25c72e725396"
+      },
+      "id": "295a25c72e725396",
+      "type": "add",
+      "after": "eecc939292dc0ba7",
+      "date": 1419110366769
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "89ba3f7157a7530b",
+        "bb99607de67b4b40",
+        "536fc8107871f85b",
+        "9c3b4370969a2331",
+        "295a25c72e725396",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7"
+      ],
+      "id": "295a25c72e725396",
+      "date": 1419110371430
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "89ba3f7157a7530b",
+        "295a25c72e725396",
+        "bb99607de67b4b40",
+        "536fc8107871f85b",
+        "9c3b4370969a2331",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7"
+      ],
+      "id": "295a25c72e725396",
+      "date": 1419110377084
+    },
+    {
+      "type": "edit",
+      "id": "295a25c72e725396",
+      "item": {
+        "type": "reference",
+        "id": "295a25c72e725396",
+        "site": "alex.au.fedwikihappening.net",
+        "title": "Alex North",
+        "text": "Alex is a software engineer in Sydney, Australia. He previously worked on [[Google Wave]]."
+      },
+      "date": 1419110390464
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "497b6fd621430f14",
+        "text": ""
+      },
+      "id": "497b6fd621430f14",
+      "type": "add",
+      "after": "2f6b26c3b4b0f034",
+      "date": 1419110510309
+    },
+    {
+      "type": "edit",
+      "id": "497b6fd621430f14",
+      "item": {
+        "type": "paragraph",
+        "id": "497b6fd621430f14",
+        "text": "See [[Special Interest Groups]]"
+      },
+      "date": 1419110519378
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "06fde7cc84c3dfa5"
+      },
+      "id": "06fde7cc84c3dfa5",
+      "type": "add",
+      "after": "eecc939292dc0ba7",
+      "date": 1419110665418
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "497b6fd621430f14",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "89ba3f7157a7530b",
+        "295a25c72e725396",
+        "bb99607de67b4b40",
+        "536fc8107871f85b",
+        "06fde7cc84c3dfa5",
+        "9c3b4370969a2331",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7"
+      ],
+      "id": "06fde7cc84c3dfa5",
+      "date": 1419110668917
+    },
+    {
+      "type": "edit",
+      "id": "06fde7cc84c3dfa5",
+      "item": {
+        "type": "reference",
+        "id": "06fde7cc84c3dfa5",
+        "site": "ward.asia.wiki.org",
+        "title": "Ward Cunningham",
+        "text": "I'm a big fan of Mike Caulfield who knows my work better than I do. He pushes federated wiki forward."
+      },
+      "date": 1419110696609
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0e4a08db1063d02f"
+      },
+      "id": "0e4a08db1063d02f",
+      "type": "add",
+      "after": "eecc939292dc0ba7",
+      "date": 1419110749744
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "497b6fd621430f14",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "89ba3f7157a7530b",
+        "295a25c72e725396",
+        "bb99607de67b4b40",
+        "536fc8107871f85b",
+        "06fde7cc84c3dfa5",
+        "0e4a08db1063d02f",
+        "9c3b4370969a2331",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7"
+      ],
+      "id": "0e4a08db1063d02f",
+      "date": 1419110754901
+    },
+    {
+      "type": "edit",
+      "id": "0e4a08db1063d02f",
+      "item": {
+        "type": "reference",
+        "id": "0e4a08db1063d02f",
+        "site": "nrn.io",
+        "title": "Nick Niemeir",
+        "text": "Nick is a JavaScript nerd, and contributor to [[Smallest Federated Wiki]]."
+      },
+      "date": 1419110764504
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "28a91819d339e817"
+      },
+      "id": "28a91819d339e817",
+      "type": "add",
+      "after": "eecc939292dc0ba7",
+      "date": 1419111017036
+    },
+    {
+      "type": "move",
+      "order": [
+        "2f6b26c3b4b0f034",
+        "497b6fd621430f14",
+        "412cc9993cc3b4fd",
+        "227a76b748f708c3",
+        "788306fadd020855",
+        "338f1a614adbea12",
+        "89ba3f7157a7530b",
+        "28a91819d339e817",
+        "295a25c72e725396",
+        "bb99607de67b4b40",
+        "536fc8107871f85b",
+        "06fde7cc84c3dfa5",
+        "0e4a08db1063d02f",
+        "9c3b4370969a2331",
+        "8b7d79b13b470fd0",
+        "eecc939292dc0ba7"
+      ],
+      "id": "28a91819d339e817",
+      "date": 1419111022067
+    },
+    {
+      "type": "edit",
+      "id": "28a91819d339e817",
+      "item": {
+        "type": "reference",
+        "id": "28a91819d339e817",
+        "site": "wiki.jasongreen.net",
+        "title": "Jason Green",
+        "text": "Jason Green (jason)"
+      },
+      "date": 1419111026860
+    },
+    {
+      "type": "fork",
+      "site": "forage.ward.fed.wiki.org",
+      "date": 1419169569779
+    }
+  ]
+}

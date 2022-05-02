@@ -1,0 +1,82 @@
+{
+  "title": "Dropbox",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5f4660c332ce5ca2",
+      "text": "I sometimes struggle to share files between apple computers on my local area network. When all else fails I use my wiki server in Singapore."
+    },
+    {
+      "type": "assets",
+      "id": "aeb72616d341f9b2",
+      "text": "pages/dropbox"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Dropbox",
+        "story": []
+      },
+      "date": 1641843257182,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1641843276817
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "aeb72616d341f9b2"
+      },
+      "id": "aeb72616d341f9b2",
+      "type": "add",
+      "date": 1641843281082
+    },
+    {
+      "type": "edit",
+      "id": "aeb72616d341f9b2",
+      "item": {
+        "type": "assets",
+        "id": "aeb72616d341f9b2",
+        "text": "pages/dropbox"
+      },
+      "date": 1641843291553
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5f4660c332ce5ca2"
+      },
+      "id": "5f4660c332ce5ca2",
+      "type": "add",
+      "after": "aeb72616d341f9b2",
+      "date": 1641843340818
+    },
+    {
+      "type": "edit",
+      "id": "5f4660c332ce5ca2",
+      "item": {
+        "type": "paragraph",
+        "id": "5f4660c332ce5ca2",
+        "text": "I sometimes struggle to share files between apple computers on my local area network. When all else fails I use my wiki server in Singapore."
+      },
+      "date": 1641843452171
+    },
+    {
+      "id": "5f4660c332ce5ca2",
+      "type": "move",
+      "order": [
+        "5f4660c332ce5ca2",
+        "aeb72616d341f9b2"
+      ],
+      "date": 1641843456879
+    }
+  ]
+}

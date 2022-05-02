@@ -1,0 +1,277 @@
+{
+  "title": "Mobile Activity Feed",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "cd917848a853607e",
+      "text": "Here we suggest a mobile-first application that might drive our client-side to be more mobile friendly. We had considered a vertical lineup before but that was really bringing existing thinking to a new format. Think bigger."
+    },
+    {
+      "type": "paragraph",
+      "id": "ed364636c46953d9",
+      "text": "See [[Flutter Client]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "b9702af887c94aad",
+      "text": "It might be evil but it is what has come to mind: Federated Wiki News Feed. "
+    },
+    {
+      "type": "paragraph",
+      "id": "3ba7763a74e6f255",
+      "text": "This program would create a mobile experience somewhat like Twitter or Facebook. It would include an algorithm that selects contents of interest to each registered user with a latency measured in minutes, not hours or days. User interactions with the algorithm would be restricted to favorite and block. Items in the feed's \"timeline\" would look like a continuously evolving search result."
+    },
+    {
+      "type": "paragraph",
+      "id": "d019f21b7ab4114f",
+      "text": "A more advanced Feed might let you respond to any observed item with mobile text that goes into a forked copy of the page. Multiple people watching the same feed would then find that they almost have a chat system.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "49c9d3b5c241e203",
+      "text": "The thing that makes this a mobile experiment is that the index.html implementation can effectively browse on a small screen with a mixture of familiar \"legacy\" item types and maybe a few specific to this application.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "62c9710d3911313f",
+      "text": "The thing that makes this an outpost is the algorithm that creates the user specific feed from frequent federation scrapes, at least once an hour, and then much faster for sites known to be actively changed."
+    },
+    {
+      "type": "pagefold",
+      "id": "a7485a40e9d83702",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "f2c6201d2336f7fa",
+      "text": "It wouldn't actually be evil because any community could run their own outpost and configure the algorithm to meet their needs. Forks from these outposts would follow our usual open conventions."
+    },
+    {
+      "type": "paragraph",
+      "id": "d4058afe49ac12ca",
+      "text": "It might be a good time to explore mobile friendly css because we have yet to build a new legacy there and the custom element approach gives us more css modularity."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Mobile Activity Feed",
+        "story": []
+      },
+      "date": 1585840663525
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cd917848a853607e"
+      },
+      "id": "cd917848a853607e",
+      "type": "add",
+      "date": 1585840738366
+    },
+    {
+      "type": "edit",
+      "id": "cd917848a853607e",
+      "item": {
+        "type": "paragraph",
+        "id": "cd917848a853607e",
+        "text": "Here we suggest "
+      },
+      "date": 1585840903237
+    },
+    {
+      "type": "edit",
+      "id": "cd917848a853607e",
+      "item": {
+        "type": "paragraph",
+        "id": "cd917848a853607e",
+        "text": "Here we suggest a mobile-first application that might drive the "
+      },
+      "date": 1585840939777
+    },
+    {
+      "type": "edit",
+      "id": "cd917848a853607e",
+      "item": {
+        "type": "paragraph",
+        "id": "cd917848a853607e",
+        "text": "Here we suggest a mobile-first application that might drive our client-side to be more mobile friendly."
+      },
+      "date": 1585840977575
+    },
+    {
+      "type": "edit",
+      "id": "cd917848a853607e",
+      "item": {
+        "type": "paragraph",
+        "id": "cd917848a853607e",
+        "text": "Here we suggest a mobile-first application that might drive our client-side to be more mobile friendly. We had considered a vertical lineup before but that was really bringing existing thinking to a new format. Time for crazy thinking."
+      },
+      "date": 1585841265479
+    },
+    {
+      "type": "edit",
+      "id": "cd917848a853607e",
+      "item": {
+        "type": "paragraph",
+        "id": "cd917848a853607e",
+        "text": "Here we suggest a mobile-first application that might drive our client-side to be more mobile friendly. We had considered a vertical lineup before but that was really bringing existing thinking to a new format. Think bigger."
+      },
+      "date": 1585841278386
+    },
+    {
+      "type": "add",
+      "id": "ed364636c46953d9",
+      "item": {
+        "type": "paragraph",
+        "id": "ed364636c46953d9",
+        "text": "See [[Flutter Client]]"
+      },
+      "after": "cd917848a853607e",
+      "date": 1585841298550
+    },
+    {
+      "type": "add",
+      "id": "b9702af887c94aad",
+      "item": {
+        "type": "paragraph",
+        "id": "b9702af887c94aad",
+        "text": "It might be evil but it is what has come to mind: Federated Wiki News Feed. "
+      },
+      "after": "ed364636c46953d9",
+      "date": 1585841352520
+    },
+    {
+      "type": "add",
+      "id": "3ba7763a74e6f255",
+      "item": {
+        "type": "paragraph",
+        "id": "3ba7763a74e6f255",
+        "text": "This program would create a mobile experience somewhat like Twitter or Facebook. It would include an algorithm that selects contents of interest to each registered user with a latency measured in minutes, not hours or days. User interactions with the algorithm would be restricted to favorite and block. Items in the feed's \"timeline\" would look like a continuously evolving search result."
+      },
+      "after": "b9702af887c94aad",
+      "date": 1585841378186
+    },
+    {
+      "type": "add",
+      "id": "d019f21b7ab4114f",
+      "item": {
+        "type": "paragraph",
+        "id": "d019f21b7ab4114f",
+        "text": "A more advanced Feed might let you respond to any observed item with mobile text that goes into a forked copy of the page.\n"
+      },
+      "after": "3ba7763a74e6f255",
+      "date": 1585841392802
+    },
+    {
+      "type": "add",
+      "id": "19af8c1d2f2af5e0",
+      "item": {
+        "type": "paragraph",
+        "id": "19af8c1d2f2af5e0",
+        "text": "Multiple people watching the same feed would then find that they almost have a chat system going.\n\n"
+      },
+      "after": "d019f21b7ab4114f",
+      "date": 1585841402382
+    },
+    {
+      "type": "add",
+      "id": "49c9d3b5c241e203",
+      "item": {
+        "type": "paragraph",
+        "id": "49c9d3b5c241e203",
+        "text": "The thing that makes this a mobile experiment is that the index.html implementation can effectively browse on a small screen with a mixture of familiar \"legacy\" item types and maybe a few specific to this application.\n\n"
+      },
+      "after": "19af8c1d2f2af5e0",
+      "date": 1585841417243
+    },
+    {
+      "type": "add",
+      "id": "62c9710d3911313f",
+      "item": {
+        "type": "paragraph",
+        "id": "62c9710d3911313f",
+        "text": "The thing that makes this an outpost is the algorithm that creates the user specific feed from frequent federation scrapes, at least once an hour, and then much faster for sites known to be actively changed."
+      },
+      "after": "49c9d3b5c241e203",
+      "date": 1585841437502
+    },
+    {
+      "type": "remove",
+      "id": "19af8c1d2f2af5e0",
+      "date": 1585841558331
+    },
+    {
+      "type": "edit",
+      "id": "d019f21b7ab4114f",
+      "item": {
+        "type": "paragraph",
+        "id": "d019f21b7ab4114f",
+        "text": "A more advanced Feed might let you respond to any observed item with mobile text that goes into a forked copy of the page. Multiple people watching the same feed would then find that they almost have a chat system going.\n\n"
+      },
+      "date": 1585841570403
+    },
+    {
+      "type": "edit",
+      "id": "d019f21b7ab4114f",
+      "item": {
+        "type": "paragraph",
+        "id": "d019f21b7ab4114f",
+        "text": "A more advanced Feed might let you respond to any observed item with mobile text that goes into a forked copy of the page. Multiple people watching the same feed would then find that they almost have a chat system.\n\n"
+      },
+      "date": 1585841577662
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a7485a40e9d83702"
+      },
+      "id": "a7485a40e9d83702",
+      "type": "add",
+      "after": "62c9710d3911313f",
+      "date": 1585841620086
+    },
+    {
+      "type": "edit",
+      "id": "a7485a40e9d83702",
+      "item": {
+        "type": "pagefold",
+        "id": "a7485a40e9d83702",
+        "text": "."
+      },
+      "date": 1585841624591
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f2c6201d2336f7fa"
+      },
+      "id": "f2c6201d2336f7fa",
+      "type": "add",
+      "after": "a7485a40e9d83702",
+      "date": 1585841626277
+    },
+    {
+      "type": "edit",
+      "id": "f2c6201d2336f7fa",
+      "item": {
+        "type": "paragraph",
+        "id": "f2c6201d2336f7fa",
+        "text": "It wouldn't actually be evil because any community could run their own outpost and configure the algorithm to meet their needs. Forks from these outposts would follow our usual open conventions."
+      },
+      "date": 1585841779935
+    },
+    {
+      "type": "add",
+      "id": "d4058afe49ac12ca",
+      "item": {
+        "type": "paragraph",
+        "id": "d4058afe49ac12ca",
+        "text": "It might be a good time to explore mobile friendly css because we have yet to build a new legacy there and the custom element approach gives us more css modularity."
+      },
+      "after": "f2c6201d2336f7fa",
+      "date": 1585841884454
+    }
+  ]
+}

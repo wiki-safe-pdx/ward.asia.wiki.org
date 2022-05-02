@@ -1,0 +1,357 @@
+{
+  "title": "Server Startup",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "85336c8a630dea5e",
+      "text": "We run a few servers in screen jobs. We restart these after power failures."
+    },
+    {
+      "type": "pagefold",
+      "id": "aa6f9bb107fde5a1",
+      "text": "nr"
+    },
+    {
+      "type": "paragraph",
+      "id": "b08275f1baf32c31",
+      "text": "this machine will sleep on power failure"
+    },
+    {
+      "type": "code",
+      "id": "8b9ecdc6f2931b6a",
+      "text": "cd ~/FedWiki/search\nscreen -S search\nruby server.rb -p 3030"
+    },
+    {
+      "type": "code",
+      "id": "60208989c63b4c2e",
+      "text": "cd ~/FedWiki/transporters/image-transporter\nscreen -S image\nruby server.rb"
+    },
+    {
+      "type": "pagefold",
+      "id": "d8445650871ad629",
+      "text": "jd"
+    },
+    {
+      "type": "paragraph",
+      "id": "02b472f3f9692fcf",
+      "text": "this machine will crash on power failure"
+    },
+    {
+      "type": "code",
+      "id": "119a1eb8a32b2819",
+      "text": "screen -S remote\ncd Txtzyme/projects/remote\nrvm 1.9.2\nruby server.rb \n"
+    },
+    {
+      "type": "code",
+      "id": "54a42b8a5c4aae30",
+      "text": "screen -S farm\ncd wiki/farm-8080/server/sinatra\nrvm 1.9.2\nbundle exec rackup -s webrick -p 8080\n"
+    },
+    {
+      "type": "code",
+      "id": "e28016ac534c41d8",
+      "text": "screen -S peg\ncd peg/exploratory-parsing\nrvm 1.9.2\nruby server.rb\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Server Startup",
+        "story": []
+      },
+      "date": 1546796057381
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "85336c8a630dea5e"
+      },
+      "id": "85336c8a630dea5e",
+      "type": "add",
+      "date": 1546796059251
+    },
+    {
+      "type": "edit",
+      "id": "85336c8a630dea5e",
+      "item": {
+        "type": "paragraph",
+        "id": "85336c8a630dea5e",
+        "text": "We run a few servers in screen jobs. We restart these after power failures."
+      },
+      "date": 1546796097667
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "aa6f9bb107fde5a1"
+      },
+      "id": "aa6f9bb107fde5a1",
+      "type": "add",
+      "after": "85336c8a630dea5e",
+      "date": 1546796105045
+    },
+    {
+      "type": "edit",
+      "id": "aa6f9bb107fde5a1",
+      "item": {
+        "type": "pagefold",
+        "id": "aa6f9bb107fde5a1",
+        "text": "nr"
+      },
+      "date": 1546796120015
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8b9ecdc6f2931b6a"
+      },
+      "id": "8b9ecdc6f2931b6a",
+      "type": "add",
+      "after": "aa6f9bb107fde5a1",
+      "date": 1546796125929
+    },
+    {
+      "type": "edit",
+      "id": "8b9ecdc6f2931b6a",
+      "item": {
+        "type": "code",
+        "id": "8b9ecdc6f2931b6a",
+        "text": "cd ~/FedWiki/search\nscreen -S search\nruby server.rb -p 3030"
+      },
+      "date": 1546796186847
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d8445650871ad629"
+      },
+      "id": "d8445650871ad629",
+      "type": "add",
+      "after": "8b9ecdc6f2931b6a",
+      "date": 1546796200173
+    },
+    {
+      "type": "edit",
+      "id": "d8445650871ad629",
+      "item": {
+        "type": "pagefold",
+        "id": "d8445650871ad629",
+        "text": "jd"
+      },
+      "date": 1546796211303
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "119a1eb8a32b2819"
+      },
+      "id": "119a1eb8a32b2819",
+      "type": "add",
+      "after": "d8445650871ad629",
+      "date": 1546796214205
+    },
+    {
+      "type": "fork",
+      "date": 1546796346038
+    },
+    {
+      "type": "remove",
+      "id": "d9d65e7d7652ba65",
+      "date": 1546796349650
+    },
+    {
+      "type": "edit",
+      "id": "119a1eb8a32b2819",
+      "item": {
+        "type": "paragraph",
+        "id": "119a1eb8a32b2819",
+        "text": "cd Txtzyme/projects/remote\nscreen -S remote\nrvm 1.9.2\nruby server.rb\n"
+      },
+      "date": 1546796525469
+    },
+    {
+      "type": "edit",
+      "id": "119a1eb8a32b2819",
+      "item": {
+        "type": "code",
+        "id": "119a1eb8a32b2819",
+        "text": "cd Txtzyme/projects/remote\nscreen -S remote\nrvm 1.9.2\nruby server.rb \n"
+      },
+      "date": 1546796551283
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "54a42b8a5c4aae30"
+      },
+      "id": "54a42b8a5c4aae30",
+      "type": "add",
+      "after": "119a1eb8a32b2819",
+      "date": 1546796606329
+    },
+    {
+      "type": "edit",
+      "id": "54a42b8a5c4aae30",
+      "item": {
+        "type": "code",
+        "id": "54a42b8a5c4aae30",
+        "text": "cd wiki/farm-8080/server/sinatra\nscreen -S farm\nrvm 1.9.2\nbundle exec rackup -s webrick -p 8080\n"
+      },
+      "date": 1546796624477
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e28016ac534c41d8"
+      },
+      "id": "e28016ac534c41d8",
+      "type": "add",
+      "after": "54a42b8a5c4aae30",
+      "date": 1546796677071
+    },
+    {
+      "type": "edit",
+      "id": "e28016ac534c41d8",
+      "item": {
+        "type": "code",
+        "id": "e28016ac534c41d8",
+        "text": "cd peg/exploratory-parsing\nscreen -S peg\nrvm 1.9.2\nruby server.rb\n"
+      },
+      "date": 1546796692540
+    },
+    {
+      "type": "fork",
+      "date": 1547063205836
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "60208989c63b4c2e"
+      },
+      "id": "60208989c63b4c2e",
+      "type": "add",
+      "after": "e28016ac534c41d8",
+      "date": 1547063208871
+    },
+    {
+      "type": "edit",
+      "id": "60208989c63b4c2e",
+      "item": {
+        "type": "code",
+        "id": "60208989c63b4c2e",
+        "text": "cd FedWiki/transporters/image-transporter\nscreen -S image\nruby server.rb"
+      },
+      "date": 1547063246928
+    },
+    {
+      "type": "move",
+      "order": [
+        "85336c8a630dea5e",
+        "aa6f9bb107fde5a1",
+        "8b9ecdc6f2931b6a",
+        "60208989c63b4c2e",
+        "d8445650871ad629",
+        "119a1eb8a32b2819",
+        "54a42b8a5c4aae30",
+        "e28016ac534c41d8"
+      ],
+      "id": "60208989c63b4c2e",
+      "date": 1547063252009
+    },
+    {
+      "type": "edit",
+      "id": "60208989c63b4c2e",
+      "item": {
+        "type": "code",
+        "id": "60208989c63b4c2e",
+        "text": "cd ~/FedWiki/transporters/image-transporter\nscreen -S image\nruby server.rb"
+      },
+      "date": 1547063267288
+    },
+    {
+      "type": "edit",
+      "id": "119a1eb8a32b2819",
+      "item": {
+        "type": "code",
+        "id": "119a1eb8a32b2819",
+        "text": "screen -S remote\ncd Txtzyme/projects/remote\nrvm 1.9.2\nruby server.rb \n"
+      },
+      "date": 1551277983071
+    },
+    {
+      "type": "edit",
+      "id": "54a42b8a5c4aae30",
+      "item": {
+        "type": "code",
+        "id": "54a42b8a5c4aae30",
+        "text": "screen -S farm\ncd wiki/farm-8080/server/sinatra\nrvm 1.9.2\nbundle exec rackup -s webrick -p 8080\n"
+      },
+      "date": 1551278039353
+    },
+    {
+      "type": "edit",
+      "id": "e28016ac534c41d8",
+      "item": {
+        "type": "code",
+        "id": "e28016ac534c41d8",
+        "text": "screen -S peg\ncd peg/exploratory-parsing\nrvm 1.9.2\nruby server.rb\n"
+      },
+      "date": 1551278056934
+    },
+    {
+      "type": "add",
+      "id": "b08275f1baf32c31",
+      "item": {
+        "type": "paragraph",
+        "id": "b08275f1baf32c31",
+        "text": "this machine will sleep on power failure"
+      },
+      "after": "85336c8a630dea5e",
+      "date": 1551278451015
+    },
+    {
+      "type": "move",
+      "order": [
+        "85336c8a630dea5e",
+        "aa6f9bb107fde5a1",
+        "b08275f1baf32c31",
+        "8b9ecdc6f2931b6a",
+        "60208989c63b4c2e",
+        "d8445650871ad629",
+        "119a1eb8a32b2819",
+        "54a42b8a5c4aae30",
+        "e28016ac534c41d8"
+      ],
+      "id": "b08275f1baf32c31",
+      "date": 1551278457368
+    },
+    {
+      "type": "add",
+      "id": "02b472f3f9692fcf",
+      "item": {
+        "type": "paragraph",
+        "id": "02b472f3f9692fcf",
+        "text": "this machine will crash on power failure"
+      },
+      "after": "b08275f1baf32c31",
+      "date": 1551278475152
+    },
+    {
+      "type": "move",
+      "order": [
+        "85336c8a630dea5e",
+        "aa6f9bb107fde5a1",
+        "b08275f1baf32c31",
+        "8b9ecdc6f2931b6a",
+        "60208989c63b4c2e",
+        "d8445650871ad629",
+        "02b472f3f9692fcf",
+        "119a1eb8a32b2819",
+        "54a42b8a5c4aae30",
+        "e28016ac534c41d8"
+      ],
+      "id": "02b472f3f9692fcf",
+      "date": 1551278479660
+    }
+  ]
+}

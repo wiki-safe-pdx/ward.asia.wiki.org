@@ -1,0 +1,97 @@
+{
+  "title": "Title Space in File Browsing",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "85e30b767e706158",
+      "text": "We thought our deno based wiki server would be good for exposing aspects of resources not easily moved. We picked the host computer's file system as something interesting that we might want to browse."
+    },
+    {
+      "type": "paragraph",
+      "id": "7490dbf88699f524",
+      "text": "We were immediately confronted with problems."
+    },
+    {
+      "type": "paragraph",
+      "id": "37ba0c91371c8b8b",
+      "text": "If a file were to be described by a page, what would be the natural title of that page? We came up with several suggestions but none handled the natural hierarchy well."
+    },
+    {
+      "type": "paragraph",
+      "id": "099229e14187bc5d",
+      "text": "Our deeply ingrained title-as-slug mechanism gave us case independence that we didn't want and threw away all the punctuation we needed. We could have gone after deep solutions here but quickly found other interests."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Title Space in File Browsing",
+        "story": []
+      },
+      "date": 1585769217639
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "85e30b767e706158"
+      },
+      "id": "85e30b767e706158",
+      "type": "add",
+      "date": 1585769221289
+    },
+    {
+      "type": "edit",
+      "id": "85e30b767e706158",
+      "item": {
+        "type": "paragraph",
+        "id": "85e30b767e706158",
+        "text": "We thought our deno based wiki server would be good for exposing aspects of resources not easily moved. We picked the host computer's file system as something interesting that we might want to browse."
+      },
+      "date": 1585769397251
+    },
+    {
+      "type": "add",
+      "id": "7490dbf88699f524",
+      "item": {
+        "type": "paragraph",
+        "id": "7490dbf88699f524",
+        "text": "We were immediately confronted with problems."
+      },
+      "after": "85e30b767e706158",
+      "date": 1585769451837
+    },
+    {
+      "type": "add",
+      "id": "37ba0c91371c8b8b",
+      "item": {
+        "type": "paragraph",
+        "id": "37ba0c91371c8b8b",
+        "text": "If a file were to be described by a page, what would be the natural title of that page? We came up with several suggestions but none handled the natural hierarchy well."
+      },
+      "after": "7490dbf88699f524",
+      "date": 1585769628083
+    },
+    {
+      "type": "add",
+      "id": "099229e14187bc5d",
+      "item": {
+        "type": "paragraph",
+        "id": "099229e14187bc5d",
+        "text": "Our deeply ingrained title-as-slug mechanism gave us case independence that we didn't want and threw away all the punctuation we needed. We could have gone after deep solutions here but quickly found more interesting work."
+      },
+      "after": "37ba0c91371c8b8b",
+      "date": 1585769846494
+    },
+    {
+      "type": "edit",
+      "id": "099229e14187bc5d",
+      "item": {
+        "type": "paragraph",
+        "id": "099229e14187bc5d",
+        "text": "Our deeply ingrained title-as-slug mechanism gave us case independence that we didn't want and threw away all the punctuation we needed. We could have gone after deep solutions here but quickly found other interests."
+      },
+      "date": 1585769863920
+    }
+  ]
+}

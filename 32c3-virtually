@@ -1,0 +1,214 @@
+{
+  "title": "32C3 Virtually",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "37c91b6ba1d15a77",
+      "text": "We're pleased to be partially present at the CCC event. Here I keep track of what I've promised and how it worked. See [[Federation Search]], [[Recent Changes]]"
+    },
+    {
+      "type": "roster",
+      "id": "5ff0ae37f610663f",
+      "text": "CCC Sites\n\nccc.ward.bay.wiki.org\nccc.cryptoacademy.org\n\nRelated Technology\n\nplugin.fedwiki.org\nfuture.fedwiki.org\naudio.commons.academy\ncryptoacademy.org"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "32C3 Virtually",
+        "story": []
+      },
+      "date": 1451194953334
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "37c91b6ba1d15a77"
+      },
+      "id": "37c91b6ba1d15a77",
+      "type": "add",
+      "date": 1451194965348
+    },
+    {
+      "type": "edit",
+      "id": "37c91b6ba1d15a77",
+      "item": {
+        "type": "paragraph",
+        "id": "37c91b6ba1d15a77",
+        "text": "We're pleased to be partially present at the CCC event December 27-29, 2015."
+      },
+      "date": 1451195073982
+    },
+    {
+      "type": "edit",
+      "id": "37c91b6ba1d15a77",
+      "item": {
+        "type": "paragraph",
+        "id": "37c91b6ba1d15a77",
+        "text": "We're pleased to be partially present at the CCC event December 27-29, 2015. Here I keep track of what I've promised and how it worked."
+      },
+      "date": 1451195175228
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5ff0ae37f610663f"
+      },
+      "id": "5ff0ae37f610663f",
+      "type": "add",
+      "after": "37c91b6ba1d15a77",
+      "date": 1451195237070
+    },
+    {
+      "type": "edit",
+      "id": "5ff0ae37f610663f",
+      "item": {
+        "type": "roster",
+        "id": "5ff0ae37f610663f",
+        "text": "future.fedwiki.org"
+      },
+      "date": 1451195248768
+    },
+    {
+      "type": "edit",
+      "id": "5ff0ae37f610663f",
+      "item": {
+        "type": "roster",
+        "id": "5ff0ae37f610663f",
+        "text": "future.fedwiki.org\naudio.commons.academy"
+      },
+      "date": 1451195343613
+    },
+    {
+      "type": "edit",
+      "id": "5ff0ae37f610663f",
+      "item": {
+        "type": "roster",
+        "id": "5ff0ae37f610663f",
+        "text": "ccc.ward.bay.wiki.org\nfuture.fedwiki.org\naudio.commons.academy"
+      },
+      "date": 1451195368430
+    },
+    {
+      "type": "edit",
+      "id": "5ff0ae37f610663f",
+      "item": {
+        "type": "roster",
+        "id": "5ff0ae37f610663f",
+        "text": "ccc.ward.bay.wiki.org\nfuture.fedwiki.org\naudio.commons.academy\nplugin.fedwiki.org"
+      },
+      "date": 1451195417435
+    },
+    {
+      "type": "edit",
+      "id": "37c91b6ba1d15a77",
+      "item": {
+        "type": "paragraph",
+        "id": "37c91b6ba1d15a77",
+        "text": "We're pleased to be partially present at the CCC event December 27-29, 2015. Here I keep track of what I've promised and how it worked. [[Federation Search]]"
+      },
+      "date": 1451195505065
+    },
+    {
+      "type": "edit",
+      "id": "37c91b6ba1d15a77",
+      "item": {
+        "type": "paragraph",
+        "id": "37c91b6ba1d15a77",
+        "text": "We're pleased to be partially present at the CCC event December 27-29, 2015. Here I keep track of what I've promised and how it worked. See [[Federation Search]]"
+      },
+      "date": 1451195516950
+    },
+    {
+      "type": "edit",
+      "id": "5ff0ae37f610663f",
+      "item": {
+        "type": "roster",
+        "id": "5ff0ae37f610663f",
+        "text": "CCC Sites\n\nccc.ward.bay.wiki.org\nccc.cryptoacademy.org\n\nRelated Technology\n\nplugin.fedwiki.org\nfuture.fedwiki.org\naudio.commons.academy\n"
+      },
+      "date": 1451195624826
+    },
+    {
+      "type": "edit",
+      "id": "5ff0ae37f610663f",
+      "item": {
+        "type": "roster",
+        "id": "5ff0ae37f610663f",
+        "text": "CCC Sites\n\nccc.ward.bay.wiki.org\nccc.cryptoacademy.org\n\nRelated Technology\n\nplugin.fedwiki.org\nfuture.fedwiki.org\naudio.commons.academy"
+      },
+      "date": 1451195634773
+    },
+    {
+      "type": "edit",
+      "id": "5ff0ae37f610663f",
+      "item": {
+        "type": "roster",
+        "id": "5ff0ae37f610663f",
+        "text": "CCC Sites\n\nccc.ward.bay.wiki.org\nccc.cryptoacademy.org\n\nRelated Technology\n\nplugin.fedwiki.org\nfuture.fedwiki.org\naudio.commons.academy\ncryptoacademy.org"
+      },
+      "date": 1451195787769
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "activity",
+        "id": "e9e9f102158e1382"
+      },
+      "after": "5ff0ae37f610663f",
+      "id": "e9e9f102158e1382",
+      "date": 1451195890201
+    },
+    {
+      "type": "edit",
+      "id": "e9e9f102158e1382",
+      "item": {
+        "type": "activity",
+        "id": "e9e9f102158e1382",
+        "text": "LIMIT 100"
+      },
+      "date": 1451195905364
+    },
+    {
+      "type": "edit",
+      "id": "e9e9f102158e1382",
+      "item": {
+        "type": "activity",
+        "id": "e9e9f102158e1382",
+        "text": "SINCE 1 days"
+      },
+      "date": 1451195992806
+    },
+    {
+      "type": "edit",
+      "id": "e9e9f102158e1382",
+      "item": {
+        "type": "activity",
+        "id": "e9e9f102158e1382",
+        "text": "SINCE 1 hours"
+      },
+      "date": 1451196002273
+    },
+    {
+      "type": "remove",
+      "id": "e9e9f102158e1382",
+      "date": 1451196306021
+    },
+    {
+      "type": "edit",
+      "id": "37c91b6ba1d15a77",
+      "item": {
+        "type": "paragraph",
+        "id": "37c91b6ba1d15a77",
+        "text": "We're pleased to be partially present at the CCC event. Here I keep track of what I've promised and how it worked. See [[Federation Search]], [[Recent Changes]]"
+      },
+      "date": 1451196364964
+    },
+    {
+      "type": "fork",
+      "site": "ccc.ward.bay.wiki.org",
+      "date": 1451223303786
+    }
+  ]
+}

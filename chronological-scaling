@@ -1,0 +1,218 @@
+{
+  "title": "Chronological Scaling",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "31d5da9d93d40b76",
+      "text": "As I become more involved with k12 education I start thinking that our outlook on media preservation will need some help from experts that schools can't afford. Here is part of a pitch for volunteers."
+    },
+    {
+      "type": "paragraph",
+      "id": "17be60951e627e92",
+      "text": "I would like to say a few words about the challenge I think we face which I would like to call “chronological scaling”. Let me describe this in terms of a question a high school student might ask:\n\n"
+    },
+    {
+      "type": "html",
+      "id": "1a53f0cc6c5ae898",
+      "text": "<center><i>Will I still have what I write today<br>when my children enter high school?\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "0641c992b1b7f6f3",
+      "text": "This is a technological question which trades off complexity against longevity in a way that doesn’t fit nicely into the entrepreneurial formula. I have been working this problem since I built the first wiki, a wiki for pattern languages, a place that spawned many printed volumes, most volumes now regrettably out of print. My pattern language distribution has outlived the print distribution maintained by publishers. Of this I am proud. And I have learned a lesson. It is an economic reality that if today’s student wants to save their work they are going to have to save it themselves.\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "ad2f7c64b6d7e5da",
+      "text": "Let’s set a goal for chronologically scaling our initiative. Let’s assemble the parts and practices that will be needed. Let’s help schools build systems that they can legally own and afford to operated for a generation. Let’s call this the 25 year solution. Let’s make sure that every student, teacher and administrator can take what they do with them and share it with others even after they leave the school. This is not a business as usual proposition. Nor can we predict the technological future. But we can establish a tradition of honest respect for the digital lives that start in our schools."
+    },
+    {
+      "type": "pagefold",
+      "id": "d4d05c69f3b3a1c7",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "d90ae9d44b676df1",
+      "text": "A request was made on my behalf for help \"scaling\" federated wiki. I wanted to resist this notion which would most likely be interpreted as \"scale big\". The best antidote will be to redirect energy toward \"scale long\" instead."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Chronological Scaling",
+        "story": []
+      },
+      "date": 1520346931117
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "31d5da9d93d40b76"
+      },
+      "id": "31d5da9d93d40b76",
+      "type": "add",
+      "date": 1520346938877
+    },
+    {
+      "type": "edit",
+      "id": "31d5da9d93d40b76",
+      "item": {
+        "type": "paragraph",
+        "id": "31d5da9d93d40b76",
+        "text": "As I become more involved with k12 education I start thinking that our outlook on media preservation will need some help from experts that they can't afford. Here is part of a pitch for volunteers."
+      },
+      "date": 1520347173014
+    },
+    {
+      "type": "add",
+      "id": "17be60951e627e92",
+      "item": {
+        "type": "paragraph",
+        "id": "17be60951e627e92",
+        "text": "I would like to say a few words about the challenge I think we face which I would like to call “chronological scaling”. Let me describe this in terms of a question a high school student might ask:\n\n"
+      },
+      "after": "31d5da9d93d40b76",
+      "date": 1520347227571
+    },
+    {
+      "type": "add",
+      "id": "1a53f0cc6c5ae898",
+      "item": {
+        "type": "paragraph",
+        "id": "1a53f0cc6c5ae898",
+        "text": "Will I still have what I write today when my children enter high school?\n\n"
+      },
+      "after": "17be60951e627e92",
+      "date": 1520347231908
+    },
+    {
+      "type": "add",
+      "id": "0641c992b1b7f6f3",
+      "item": {
+        "type": "paragraph",
+        "id": "0641c992b1b7f6f3",
+        "text": "This is a technological question which trades off complexity against longevity in a way that doesn’t fit nicely into the entrepreneurial formula. I have been working this problem since I built the first wiki, a wiki for pattern languages, a place that spawned many printed volumes, most volumes now regrettably out of print. My pattern language distribution has outlived the print distribution maintained by publishers. Of this I am proud. And I have learned a lesson. It is an economic reality that if today’s student wants to save their work they are going to have to save it themselves.\n\n"
+      },
+      "after": "1a53f0cc6c5ae898",
+      "date": 1520347275853
+    },
+    {
+      "type": "add",
+      "id": "ad2f7c64b6d7e5da",
+      "item": {
+        "type": "paragraph",
+        "id": "ad2f7c64b6d7e5da",
+        "text": "Let’s set a goal for chronologically scaling this initiative. Let’s assemble the parts and practices that will be needed. Let’s help schools build systems that they can legally own and afford to operated for a generation. Let’s call this the 25 year solution. Let’s make sure that every student, teacher and administrator can take what they do with them and share it with others even after they leave the school. This is not a business as usual proposition. Nor can we predict the technological future. But we can establish a tradition of honest respect for the digital lives that start in our schools."
+      },
+      "after": "0641c992b1b7f6f3",
+      "date": 1520347313784
+    },
+    {
+      "type": "edit",
+      "id": "1a53f0cc6c5ae898",
+      "item": {
+        "type": "markdown",
+        "id": "1a53f0cc6c5ae898",
+        "text": "_Will I still have what I write today when my children enter high school?_\n\n"
+      },
+      "date": 1520347345521
+    },
+    {
+      "type": "edit",
+      "id": "ad2f7c64b6d7e5da",
+      "item": {
+        "type": "paragraph",
+        "id": "ad2f7c64b6d7e5da",
+        "text": "Let’s set a goal for chronologically scaling our initiative. Let’s assemble the parts and practices that will be needed. Let’s help schools build systems that they can legally own and afford to operated for a generation. Let’s call this the 25 year solution. Let’s make sure that every student, teacher and administrator can take what they do with them and share it with others even after they leave the school. This is not a business as usual proposition. Nor can we predict the technological future. But we can establish a tradition of honest respect for the digital lives that start in our schools."
+      },
+      "date": 1520347385423
+    },
+    {
+      "type": "edit",
+      "id": "1a53f0cc6c5ae898",
+      "item": {
+        "type": "html",
+        "id": "1a53f0cc6c5ae898",
+        "text": "<center><i>Will I still have what I write today<br>when my children enter high school?\n\n"
+      },
+      "date": 1520347453205
+    },
+    {
+      "type": "edit",
+      "id": "0641c992b1b7f6f3",
+      "item": {
+        "type": "paragraph",
+        "id": "0641c992b1b7f6f3",
+        "text": "This is a technological question which trades off complexity against longevity in a way that doesn’t fit nicely into the entrepreneurial formula. "
+      },
+      "date": 1520347501436
+    },
+    {
+      "type": "edit",
+      "id": "0641c992b1b7f6f3",
+      "item": {
+        "type": "paragraph",
+        "id": "0641c992b1b7f6f3",
+        "text": "This is a technological question which trades off complexity against longevity in a way that doesn’t fit nicely into the entrepreneurial formula. I have been working this problem since I built the first wiki, a wiki for pattern languages, a place that spawned many printed volumes, most volumes now regrettably out of print. My pattern language distribution has outlived the print distribution maintained by publishers. Of this I am proud. And I have learned a lesson. It is an economic reality that if today’s student wants to save their work they are going to have to save it themselves.\n\n"
+      },
+      "date": 1520347527098
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d4d05c69f3b3a1c7"
+      },
+      "id": "d4d05c69f3b3a1c7",
+      "type": "add",
+      "after": "ad2f7c64b6d7e5da",
+      "date": 1520347591274
+    },
+    {
+      "type": "edit",
+      "id": "d4d05c69f3b3a1c7",
+      "item": {
+        "type": "pagefold",
+        "id": "d4d05c69f3b3a1c7",
+        "text": "."
+      },
+      "date": 1520347599313
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d90ae9d44b676df1"
+      },
+      "id": "d90ae9d44b676df1",
+      "type": "add",
+      "after": "d4d05c69f3b3a1c7",
+      "date": 1520347606201
+    },
+    {
+      "type": "edit",
+      "id": "d90ae9d44b676df1",
+      "item": {
+        "type": "paragraph",
+        "id": "d90ae9d44b676df1",
+        "text": "A request was made on my behalf for help \"scaling\" federated wiki. I wanted to resist this notion which would most likely be interpreted as \"scale big\". The best antidote will be to redirect energy toward \"scale long\" instead."
+      },
+      "date": 1520347868848
+    },
+    {
+      "type": "edit",
+      "id": "31d5da9d93d40b76",
+      "item": {
+        "type": "paragraph",
+        "id": "31d5da9d93d40b76",
+        "text": "As I become more involved with k12 education I start thinking that our outlook on media preservation will need some help from experts that schools can't afford. Here is part of a pitch for volunteers."
+      },
+      "date": 1520348072841
+    },
+    {
+      "type": "fork",
+      "site": "ward.bay.wiki.org",
+      "date": 1630176416504
+    }
+  ]
+}

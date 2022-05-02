@@ -1,0 +1,292 @@
+{
+  "title": "Social Library",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e370f9a43c826936",
+      "text": "This entry primarily refers to the use of the word 'library' as an abstract noun, like the word network. This does not exclude the term library also referring to a tangible place."
+    },
+    {
+      "type": "paragraph",
+      "id": "257c3b25351bc8bb",
+      "text": "The Social Library is a superset of the library. It supplements the function of 'storing' and ordering books with the additional function of maintaining the connection between readers. It is informed by paradigmatic shifts in reading texts such as the [[Distant Reading]] model proposed by [[Franco Moretti]]."
+    },
+    {
+      "type": "paragraph",
+      "id": "cbc6d5fd93a5b314",
+      "text": "These diverse types of connections can be considered as interesting in their own right. They may be topologically interesting (think 6 degrees of separation), they may be novel and they are expressive of the contextual understanding of a topic."
+    },
+    {
+      "type": "paragraph",
+      "id": "1b3384a59e89b61d",
+      "text": "Topology. Your friends are also reading ..."
+    },
+    {
+      "type": "paragraph",
+      "id": "8acf8b92ae5e4995",
+      "text": "Novelty. Newly released this week ..."
+    },
+    {
+      "type": "paragraph",
+      "id": "55e4af0b0dd5ad0e",
+      "text": "Topicality. Everything you wanted to know about ..."
+    },
+    {
+      "type": "paragraph",
+      "id": "547f67a3e675e71e",
+      "text": "In this sense, a social library takes the readers and their relationships to the content (and also other readers) as a form of semantic content. The readers' networks are themselves book-like content."
+    },
+    {
+      "type": "paragraph",
+      "id": "0d185a13aeb72196",
+      "text": "Ethnography. Down and out in ..."
+    },
+    {
+      "type": "paragraph",
+      "id": "7d9310f6dc1fe545",
+      "text": "This creates a holographic, fractal universe of relationships between the animate and the inanimate. Books become waypoints on a map for the complex and dynamic relations between readers.  "
+    },
+    {
+      "type": "paragraph",
+      "id": "d237b7e11373572f",
+      "text": "See [[Three Ways We Must Think]] in order to consume the ideas in front of us. We will find a good story alone insufficient."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Social Library",
+        "story": []
+      },
+      "date": 1508676004333
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e370f9a43c826936"
+      },
+      "id": "e370f9a43c826936",
+      "type": "add",
+      "date": 1508676006099
+    },
+    {
+      "type": "edit",
+      "id": "e370f9a43c826936",
+      "item": {
+        "type": "paragraph",
+        "id": "e370f9a43c826936",
+        "text": "The Social Library is a superset of the library. It supplements the function of 'storing' and ordering books with"
+      },
+      "date": 1508676135828
+    },
+    {
+      "type": "edit",
+      "id": "e370f9a43c826936",
+      "item": {
+        "type": "paragraph",
+        "id": "e370f9a43c826936",
+        "text": "The Social Library is a superset of the library. It supplements the function of 'storing' and ordering books with the additional function of maintaining the connection between readers."
+      },
+      "date": 1508676233453
+    },
+    {
+      "type": "add",
+      "id": "cbc6d5fd93a5b314",
+      "item": {
+        "type": "paragraph",
+        "id": "cbc6d5fd93a5b314",
+        "text": "These diverse types of connections can be considered as interesting in their own right. They may be topologically interesting (think 6 degrees of separation), they may be novel and they are expressive of the contextual understanding of a topic."
+      },
+      "after": "e370f9a43c826936",
+      "date": 1508676409422
+    },
+    {
+      "type": "add",
+      "id": "547f67a3e675e71e",
+      "item": {
+        "type": "paragraph",
+        "id": "547f67a3e675e71e",
+        "text": "In this sense, a social library takes the readers and their relationships to the content (and also other readers) as a form of semantic content. The readers' networks are themselves book-like content."
+      },
+      "after": "cbc6d5fd93a5b314",
+      "date": 1508676585393
+    },
+    {
+      "type": "add",
+      "id": "7d9310f6dc1fe545",
+      "item": {
+        "type": "paragraph",
+        "id": "7d9310f6dc1fe545",
+        "text": "This creates a holographic, fractal universe of relationships between the animate and the inanimate. Books become ciphers for the complex dynamic relations between readers.  "
+      },
+      "after": "547f67a3e675e71e",
+      "date": 1508676770769
+    },
+    {
+      "type": "edit",
+      "id": "7d9310f6dc1fe545",
+      "item": {
+        "type": "paragraph",
+        "id": "7d9310f6dc1fe545",
+        "text": "This creates a holographic, fractal universe of relationships between the animate and the inanimate. Books become waypoints on a map for the complex and dynamic relations between readers.  "
+      },
+      "date": 1508676885590
+    },
+    {
+      "type": "fork",
+      "site": "andreworford.com",
+      "date": 1508696676280
+    },
+    {
+      "type": "add",
+      "id": "1b3384a59e89b61d",
+      "item": {
+        "type": "paragraph",
+        "id": "1b3384a59e89b61d",
+        "text": "Topology. Your friends are also reading ..."
+      },
+      "after": "cbc6d5fd93a5b314",
+      "date": 1508696744672
+    },
+    {
+      "type": "add",
+      "id": "8acf8b92ae5e4995",
+      "item": {
+        "type": "paragraph",
+        "id": "8acf8b92ae5e4995",
+        "text": "Novelty. New releases this week ..."
+      },
+      "after": "1b3384a59e89b61d",
+      "date": 1508696774417
+    },
+    {
+      "type": "add",
+      "id": "55e4af0b0dd5ad0e",
+      "item": {
+        "type": "paragraph",
+        "id": "55e4af0b0dd5ad0e",
+        "text": "Topic. Everything you always wanted to know about ..."
+      },
+      "after": "8acf8b92ae5e4995",
+      "date": 1508696863317
+    },
+    {
+      "type": "add",
+      "id": "0d185a13aeb72196",
+      "item": {
+        "type": "paragraph",
+        "id": "0d185a13aeb72196",
+        "text": "Ethnography. Down and out in ..."
+      },
+      "after": "547f67a3e675e71e",
+      "date": 1508697128029
+    },
+    {
+      "type": "edit",
+      "id": "55e4af0b0dd5ad0e",
+      "item": {
+        "type": "paragraph",
+        "id": "55e4af0b0dd5ad0e",
+        "text": "Topical. Everything you always wanted to know about ..."
+      },
+      "date": 1508697519937
+    },
+    {
+      "type": "edit",
+      "id": "8acf8b92ae5e4995",
+      "item": {
+        "type": "paragraph",
+        "id": "8acf8b92ae5e4995",
+        "text": "Novelty. Newly released this week ..."
+      },
+      "date": 1508697537720
+    },
+    {
+      "type": "edit",
+      "id": "55e4af0b0dd5ad0e",
+      "item": {
+        "type": "paragraph",
+        "id": "55e4af0b0dd5ad0e",
+        "text": "Topicality. Everything you wanted to know about ..."
+      },
+      "date": 1508697610422
+    },
+    {
+      "type": "add",
+      "id": "d237b7e11373572f",
+      "item": {
+        "type": "paragraph",
+        "id": "d237b7e11373572f",
+        "text": "See [[Three Ways We Must Think]] in order to consume the ideas in front of us. We will find a good story alone insufficient."
+      },
+      "after": "7d9310f6dc1fe545",
+      "date": 1508697829727
+    },
+    {
+      "type": "edit",
+      "id": "e370f9a43c826936",
+      "item": {
+        "type": "paragraph",
+        "id": "e370f9a43c826936",
+        "text": "This entry refers to the use of the word 'library' as an abstract noun, like the word network."
+      },
+      "date": 1508941706794
+    },
+    {
+      "type": "add",
+      "id": "257c3b25351bc8bb",
+      "item": {
+        "type": "paragraph",
+        "id": "257c3b25351bc8bb",
+        "text": "The Social Library is a superset of the library. It supplements the function of 'storing' and ordering books with the additional function of maintaining the connection between readers."
+      },
+      "after": "e370f9a43c826936",
+      "date": 1508941711662
+    },
+    {
+      "type": "edit",
+      "id": "e370f9a43c826936",
+      "item": {
+        "type": "paragraph",
+        "id": "e370f9a43c826936",
+        "text": "This entry refers to the use of the word 'library' as an abstract noun, like the word network. This does not exclude the term library also referring to a tangible place."
+      },
+      "date": 1508941882866
+    },
+    {
+      "type": "edit",
+      "id": "e370f9a43c826936",
+      "item": {
+        "type": "paragraph",
+        "id": "e370f9a43c826936",
+        "text": "This entry primarily refers to the use of the word 'library' as an abstract noun, like the word network. This does not exclude the term library also referring to a tangible place."
+      },
+      "date": 1508942243450
+    },
+    {
+      "type": "edit",
+      "id": "257c3b25351bc8bb",
+      "item": {
+        "type": "paragraph",
+        "id": "257c3b25351bc8bb",
+        "text": "The Social Library is a superset of the library. It supplements the function of 'storing' and ordering books with the additional function of maintaining the connection between readers. It is informed by paradigmatic shifts in reading texts such as the [[Distant Reading]] model proposed by [[Franco Moretti]]."
+      },
+      "date": 1510314605367
+    },
+    {
+      "type": "fork",
+      "site": "andreworford.com",
+      "date": 1510326388096
+    },
+    {
+      "type": "fork",
+      "date": 1510326475848
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1510328340184
+    }
+  ]
+}

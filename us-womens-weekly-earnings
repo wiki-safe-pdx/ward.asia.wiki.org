@@ -1,0 +1,66 @@
+{
+  "title": "US Women's Weekly Earnings",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "6ec62b0f08f7cd1c",
+      "text": "We test with US Women's weekly earnings. [https://commons.wikimedia.org/wiki/Data:Bls.gov/US_Women%27s_weekly_earnings_as_a_percent_of_men%27s_by_age,_annual_averages.tab commons]"
+    },
+    {
+      "type": "tab",
+      "id": "7ae719d30d63098a",
+      "text": "Bls.gov/US Women's weekly earnings as a percent of men's by age, annual averages.tab"
+    },
+    {
+      "type": "paragraph",
+      "id": "8f258b2d8a8d6d55",
+      "text": "See [[Radar Chart]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "US Women's Weekly Earnings",
+        "story": []
+      },
+      "date": 1484177822843
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "tab",
+        "id": "7ae719d30d63098a",
+        "text": "Bls.gov/US Women's weekly earnings as a percent of men's by age, annual averages.tab"
+      },
+      "id": "7ae719d30d63098a",
+      "date": 1484177847815
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "8f258b2d8a8d6d55",
+        "text": "See [[Radar Chart]]"
+      },
+      "after": "7ae719d30d63098a",
+      "id": "8f258b2d8a8d6d55",
+      "date": 1484177869634
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "6ec62b0f08f7cd1c",
+        "text": "We test with US Women's weekly earnings. [https://commons.wikimedia.org/wiki/Data:Bls.gov/US_Women%27s_weekly_earnings_as_a_percent_of_men%27s_by_age,_annual_averages.tab commons]"
+      },
+      "id": "6ec62b0f08f7cd1c",
+      "date": 1484177898637
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1485138042067
+    }
+  ]
+}

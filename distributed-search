@@ -1,0 +1,714 @@
+{
+  "title": "Distributed Search",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3c0f375963497740",
+      "text": "Our scraping experience suggests we should distribute the function across all servers and move slowly enough that site owners can direct the spider's progress."
+    },
+    {
+      "type": "paragraph",
+      "id": "3cc4de17c2add609",
+      "text": "See [[Search Index]] coding details."
+    },
+    {
+      "type": "paragraph",
+      "id": "0b14f259611078e9",
+      "text": "Search operates by accumulating information by scraping and delivering it by query. We will consider both in turn."
+    },
+    {
+      "type": "markdown",
+      "id": "14f07b5655fe3bdc",
+      "text": "# Scrape"
+    },
+    {
+      "type": "paragraph",
+      "id": "5e52ab1dc2808319",
+      "text": "A page viewed scrapes its neighbors. We examine the sites mentioned in any page and go fetch their sitemaps. This is the scrape step. It need not be directed by readers."
+    },
+    {
+      "type": "paragraph",
+      "id": "2e16c235348e7b54",
+      "text": "We suggest that every server should scrape the neighborhood of the pages it serves before they are viewed by readers."
+    },
+    {
+      "type": "paragraph",
+      "id": "85b01eb8526583ff",
+      "text": "A server could scrape further to the neighborhood of its neighbors or beyond. For a small server with few sites and few pages within those sites a deeper search might make sense, or not."
+    },
+    {
+      "type": "markdown",
+      "id": "69af6c80deebde25",
+      "text": "# Query"
+    },
+    {
+      "type": "paragraph",
+      "id": "d5a0bc6fb3e67995",
+      "text": "We've seen the utility of searching scraped sites for many properties from words present to plugins in use. But we find query for items of common origin to be most interesting and also one of the easiest queries to pose."
+    },
+    {
+      "type": "paragraph",
+      "id": "08927a77208e3ab2",
+      "text": "Show me pages that share this page's history. Show me pages with ids I have here. Show me where this came from and where it is going. Show me more."
+    },
+    {
+      "type": "paragraph",
+      "id": "5f96ad726f98ebbe",
+      "text": "A page could be adorned with a 'more' query in the space remaining after we add licence, json and site of residence. A link to 'more' would ask the server hosting the page in question to show us more based on page ids."
+    },
+    {
+      "type": "paragraph",
+      "id": "a5b58d2173aa0d4a",
+      "text": "Aside: We have a trial implementation of the 'more' query where it is called simply 'search'. [https://github.com/fedwiki/wiki-client/pull/132 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "a90dde3e24d3886d",
+      "text": "The 'more' query would bring up a search result looking like a Roster of sites organized by the page names that they share in common and restricted to pages that share at least one story item sharing an id with our source."
+    },
+    {
+      "type": "paragraph",
+      "id": "36bc733b459ab19c",
+      "text": "As with familiar Rosters, the 'more' search result can be explored by calling into the browser's neighborhood the sitemaps of individual sites or by retrieving whole rows of sitemaps from the » link."
+    },
+    {
+      "type": "paragraph",
+      "id": "5e4bd84badb5d6f9",
+      "text": "Should the result of a search disappoint, should it not reach far enough into the federation, then the result itself could include another 'more' link that would extend the query to the hosts found in the current result. By the application of 'more', 'more', 'more', the reader can progress breadth first to where they have not read before."
+    },
+    {
+      "type": "markdown",
+      "id": "5214972286ccc521",
+      "text": "# Behavior"
+    },
+    {
+      "type": "paragraph",
+      "id": "1bbd460773d01a43",
+      "text": "We suggested that the scrape of any given server may not need to go beyond the sites found on its own pages. We suggest that is true because the curious reader can extend this frontier at will by saving even one page from the beyond. The server's next scrape which could be only minutes away will now include pages from the site now brought within the server's natural neighborhood."
+    },
+    {
+      "type": "paragraph",
+      "id": "0b43ce859e1c557d",
+      "text": "When we exploit unbounded search to provide symmetrical links between pages we expose ourselves to \"follower spam\" as one now finds on facebook and twitter. The unbounded link store provided by unrestricted search exhibits this vulnerability. Our practical desire to limit the depth of automatic search is exactly the protection we need so long as there is a human mediated mechanism for extending these limits."
+    },
+    {
+      "type": "paragraph",
+      "id": "a364b97825ab50d0",
+      "text": "Should we make farm servers responsible for exploring the server-visible neighborhoods described here then we will find that we have placed additional trust on those writing within the farm. Farms then must protect themselves against the bad actor who would trick the server's search to extend into undesirable neighborhoods."
+    },
+    {
+      "type": "paragraph",
+      "id": "befec65948503627",
+      "text": "A site operator will need the ability to expel any site that fails to operate within the best interests of the others and to thereby expunge bad neighbors from its search. Site operators will then become the judges who in their small realm must distinguish the progressive from the subversive, the griefers from the good."
+    },
+    {
+      "type": "paragraph",
+      "id": "141a1d6ac6181a61",
+      "text": "The intellectual health of the federation and the culture it supports then depends on careful admission of new authors into farms hosted and paid for with a purpose. Should these become a network of ingroups then we will face an arms race between progressives and griefers which I expect the progressives will win. "
+    },
+    {
+      "type": "markdown",
+      "id": "d0184a26ae75f77a",
+      "text": "# Examples"
+    },
+    {
+      "type": "paragraph",
+      "id": "804af69b15445f90",
+      "text": "[[Search Thoughts]] describes two search cases that intersect in curious ways. Both could be improved by the locality suggested here."
+    },
+    {
+      "type": "markdown",
+      "id": "b1317f209b4933c6",
+      "text": "# Resources"
+    },
+    {
+      "type": "paragraph",
+      "id": "8a2b6f042a750a4a",
+      "text": "Nedb is a dependency-free in-memory db with indices and an append-only backing store. Seems to be good for 10,000s of documents. [https://github.com/louischatriot/nedb github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "744f47672ab96273",
+      "text": "An\nIntroduction\nto\nInformation\nRetrieval. This\nbook presents the scientific underpinnings of this field, at a level accessible\nto graduate students as well as advanced undergraduates. [https://nlp.stanford.edu/IR-book/ pdf]"
+    },
+    {
+      "type": "paragraph",
+      "id": "07f8c96ed1b8a3ed",
+      "text": "Machine Learning: Full-Text Search in Javascript. Part 1: Relevance Scoring. [http://burakkanber.com/blog/machine-learning-full-text-search-in-javascript-relevance-scoring/ post]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Distributed Search",
+        "story": []
+      },
+      "date": 1439435322148
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3c0f375963497740"
+      },
+      "id": "3c0f375963497740",
+      "type": "add",
+      "date": 1439435324094
+    },
+    {
+      "type": "edit",
+      "id": "3c0f375963497740",
+      "item": {
+        "type": "paragraph",
+        "id": "3c0f375963497740",
+        "text": "Our scraping experience suggests we should distribute the function across all servers and move slowly enough that site owners can direct the spider's progress."
+      },
+      "date": 1439435486474
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0b14f259611078e9"
+      },
+      "id": "0b14f259611078e9",
+      "type": "add",
+      "after": "3c0f375963497740",
+      "date": 1439435503586
+    },
+    {
+      "type": "edit",
+      "id": "0b14f259611078e9",
+      "item": {
+        "type": "paragraph",
+        "id": "0b14f259611078e9",
+        "text": "Search operates by accumulating information by scraping and delivering it by query. We will consider both in turn."
+      },
+      "date": 1439435579560
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "14f07b5655fe3bdc"
+      },
+      "id": "14f07b5655fe3bdc",
+      "type": "add",
+      "after": "2a003a3de04aef89",
+      "date": 1439435588673
+    },
+    {
+      "type": "edit",
+      "id": "14f07b5655fe3bdc",
+      "item": {
+        "type": "markdown",
+        "id": "14f07b5655fe3bdc",
+        "text": "# Scrape"
+      },
+      "date": 1439435598466
+    },
+    {
+      "type": "move",
+      "order": [
+        "3c0f375963497740",
+        "0b14f259611078e9",
+        "14f07b5655fe3bdc"
+      ],
+      "id": "14f07b5655fe3bdc",
+      "date": 1439435605879
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5e52ab1dc2808319"
+      },
+      "id": "5e52ab1dc2808319",
+      "type": "add",
+      "after": "14f07b5655fe3bdc",
+      "date": 1439435608112
+    },
+    {
+      "type": "edit",
+      "id": "5e52ab1dc2808319",
+      "item": {
+        "type": "paragraph",
+        "id": "5e52ab1dc2808319",
+        "text": "A page viewed scrapes its neighbors. We examine the sites mentioned in any page and go fetch their sitemaps. This is the scrape step. It need not be directed by readers."
+      },
+      "date": 1439435697331
+    },
+    {
+      "type": "add",
+      "id": "2e16c235348e7b54",
+      "item": {
+        "type": "paragraph",
+        "id": "2e16c235348e7b54",
+        "text": "We suggest that every server should scrape the neighborhood of the pages it serves. "
+      },
+      "after": "5e52ab1dc2808319",
+      "date": 1439437303889
+    },
+    {
+      "type": "edit",
+      "id": "2e16c235348e7b54",
+      "item": {
+        "type": "paragraph",
+        "id": "2e16c235348e7b54",
+        "text": "We suggest that every server should scrape the neighborhood of the pages it serves before they are viewed by readers."
+      },
+      "date": 1439441240235
+    },
+    {
+      "type": "add",
+      "id": "85b01eb8526583ff",
+      "item": {
+        "type": "paragraph",
+        "id": "85b01eb8526583ff",
+        "text": "A server could scrape further to the neighborhood of its neighbors or beyond. For a small server with few sites and few pages within those sites a deeper search might make sense, or not."
+      },
+      "after": "2e16c235348e7b54",
+      "date": 1439441488004
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "69af6c80deebde25"
+      },
+      "id": "69af6c80deebde25",
+      "type": "add",
+      "after": "85b01eb8526583ff",
+      "date": 1439441530666
+    },
+    {
+      "type": "edit",
+      "id": "69af6c80deebde25",
+      "item": {
+        "type": "markdown",
+        "id": "69af6c80deebde25",
+        "text": "# Query"
+      },
+      "date": 1439441542866
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d5a0bc6fb3e67995"
+      },
+      "id": "d5a0bc6fb3e67995",
+      "type": "add",
+      "after": "69af6c80deebde25",
+      "date": 1439441569504
+    },
+    {
+      "type": "edit",
+      "id": "d5a0bc6fb3e67995",
+      "item": {
+        "type": "paragraph",
+        "id": "d5a0bc6fb3e67995",
+        "text": "We've seen the utility of searching scraped sites for many properties from words present to plugins in use. But we find query for items of common origin to be one of the most exciting queries and also one of the easiest queries to pose. Show me pages that share this page's history. Show me pages with ids I have here."
+      },
+      "date": 1439441872070
+    },
+    {
+      "type": "add",
+      "id": "01de2bf4f08176a7",
+      "item": {
+        "type": "paragraph",
+        "id": "01de2bf4f08176a7",
+        "text": "Consi"
+      },
+      "after": "d5a0bc6fb3e67995",
+      "date": 1439441913424
+    },
+    {
+      "type": "remove",
+      "id": "01de2bf4f08176a7",
+      "date": 1439441987139
+    },
+    {
+      "type": "edit",
+      "id": "d5a0bc6fb3e67995",
+      "item": {
+        "type": "paragraph",
+        "id": "d5a0bc6fb3e67995",
+        "text": "We've seen the utility of searching scraped sites for many properties from words present to plugins in use. But we find query for items of common origin to be one of the most exciting queries and also one of the easiest queries to pose."
+      },
+      "date": 1439441992450
+    },
+    {
+      "type": "add",
+      "id": "08927a77208e3ab2",
+      "item": {
+        "type": "paragraph",
+        "id": "08927a77208e3ab2",
+        "text": "Show me pages that share this page's history. Show me pages with ids I have here. Show me more."
+      },
+      "after": "d5a0bc6fb3e67995",
+      "date": 1439442005088
+    },
+    {
+      "type": "edit",
+      "id": "d5a0bc6fb3e67995",
+      "item": {
+        "type": "paragraph",
+        "id": "d5a0bc6fb3e67995",
+        "text": "We've seen the utility of searching scraped sites for many properties from words present to plugins in use. But we find query for items of common origin to be most interesting and also one of the easiest queries to pose."
+      },
+      "date": 1439442090284
+    },
+    {
+      "type": "edit",
+      "id": "08927a77208e3ab2",
+      "item": {
+        "type": "paragraph",
+        "id": "08927a77208e3ab2",
+        "text": "Show me pages that share this page's history. Show me pages with ids I have here. Show me where this came from and where it is going. Show me more."
+      },
+      "date": 1439442137974
+    },
+    {
+      "type": "add",
+      "id": "5f96ad726f98ebbe",
+      "item": {
+        "type": "paragraph",
+        "id": "5f96ad726f98ebbe",
+        "text": "A page could be adorned with a 'more' query in the space remaining after we add licence, json and site of residence. A link to 'more' would ask the server hosting the page in question to show us more based on page ids."
+      },
+      "after": "08927a77208e3ab2",
+      "date": 1439442311764
+    },
+    {
+      "type": "add",
+      "id": "a90dde3e24d3886d",
+      "item": {
+        "type": "paragraph",
+        "id": "a90dde3e24d3886d",
+        "text": "The more query would bring up a search result looking like a Roster of sites organized by the page names that they share in common and restricted to pages that share at least one story item sharing an id with our source."
+      },
+      "after": "5f96ad726f98ebbe",
+      "date": 1439442483431
+    },
+    {
+      "type": "edit",
+      "id": "a90dde3e24d3886d",
+      "item": {
+        "type": "paragraph",
+        "id": "a90dde3e24d3886d",
+        "text": "The 'more' query would bring up a search result looking like a Roster of sites organized by the page names that they share in common and restricted to pages that share at least one story item sharing an id with our source."
+      },
+      "date": 1439442501042
+    },
+    {
+      "type": "add",
+      "id": "36bc733b459ab19c",
+      "item": {
+        "type": "paragraph",
+        "id": "36bc733b459ab19c",
+        "text": "As with familiar Rosters, the 'more' search result can be explored by calling into the browser's neighborhood the sitemaps of individual sites or whole rows of sites from the » link."
+      },
+      "after": "a90dde3e24d3886d",
+      "date": 1439443115472
+    },
+    {
+      "type": "edit",
+      "id": "36bc733b459ab19c",
+      "item": {
+        "type": "paragraph",
+        "id": "36bc733b459ab19c",
+        "text": "As with familiar Rosters, the 'more' search result can be explored by calling into the browser's neighborhood the sitemaps of individual sites or by retrieving whole rows of sitemaps from the » link."
+      },
+      "date": 1439443175725
+    },
+    {
+      "type": "add",
+      "id": "5e4bd84badb5d6f9",
+      "item": {
+        "type": "paragraph",
+        "id": "5e4bd84badb5d6f9",
+        "text": "Should the result of a search disappoint, should it not reach far enough into the federation, then the result itself could include another 'more' link that would extend the query to the hosts found in the current result. By the application of 'more', 'more', 'more', the reader can progress breadth first to where they have not read before."
+      },
+      "after": "36bc733b459ab19c",
+      "date": 1439443400462
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5214972286ccc521"
+      },
+      "id": "5214972286ccc521",
+      "type": "add",
+      "after": "5e4bd84badb5d6f9",
+      "date": 1439443501165
+    },
+    {
+      "type": "edit",
+      "id": "5214972286ccc521",
+      "item": {
+        "type": "markdown",
+        "id": "5214972286ccc521",
+        "text": "# Behavior"
+      },
+      "date": 1439443510718
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1bbd460773d01a43"
+      },
+      "id": "1bbd460773d01a43",
+      "type": "add",
+      "after": "5214972286ccc521",
+      "date": 1439443517080
+    },
+    {
+      "type": "edit",
+      "id": "1bbd460773d01a43",
+      "item": {
+        "type": "paragraph",
+        "id": "1bbd460773d01a43",
+        "text": "We suggested that the scrape of any given server may not need to go beyond the sites found on its own pages. We suggest that is true because the curious reader can extend this frontier at will by saving even one page from the beyond. The server's next scrape which could be only minutes away will now include pages from the site now brought within the server's natural neighborhood."
+      },
+      "date": 1439443859123
+    },
+    {
+      "type": "add",
+      "id": "0b43ce859e1c557d",
+      "item": {
+        "type": "paragraph",
+        "id": "0b43ce859e1c557d",
+        "text": "When we exploit unbounded search to provide symmetrical links between pages we expose ourselves to \"follower spam\" as one now finds on facebook and twitter. The unbounded link store provided by unrestricted search exhibits this vulnerability. Our practical desire to limit the depth of automatic search is exactly the protection we need so long as there is a human mediated mechanism for extending these limits."
+      },
+      "after": "1bbd460773d01a43",
+      "date": 1439444246305
+    },
+    {
+      "type": "add",
+      "id": "a364b97825ab50d0",
+      "item": {
+        "type": "paragraph",
+        "id": "a364b97825ab50d0",
+        "text": "Should we make farm servers responsible for exploring the server-visible neighborhoods described here then we will find that we have placed additional trust on those writing within the farm. Farms then must protect themselves against the bad actor who would trick the server's search to extend into undesirable neighborhoods."
+      },
+      "after": "0b43ce859e1c557d",
+      "date": 1439444891764
+    },
+    {
+      "type": "add",
+      "id": "141a1d6ac6181a61",
+      "item": {
+        "type": "paragraph",
+        "id": "141a1d6ac6181a61",
+        "text": "The intellectual health of the federation and the culture it supports then depends on careful admission of new authors into farms hosted and paid for with a purpose. Should these become a network of ingroups then we will face an arms race between progressives and griefers which I expect the progressives will win. "
+      },
+      "after": "a364b97825ab50d0",
+      "date": 1439445188552
+    },
+    {
+      "type": "add",
+      "id": "befec65948503627",
+      "item": {
+        "type": "paragraph",
+        "id": "befec65948503627",
+        "text": "A site operator will need the ability to expel any site that fails to operate within the best interests of the others and to thereby expunge bad neighbors from its search. Site operators will then become the judges who in their small realm must distinguish the progressive from the subversive, the griefers from the good."
+      },
+      "after": "a364b97825ab50d0",
+      "date": 1439445412899
+    },
+    {
+      "type": "add",
+      "id": "a5b58d2173aa0d4a",
+      "item": {
+        "type": "paragraph",
+        "id": "a5b58d2173aa0d4a",
+        "text": "We have a trial implementation of the 'more' query where it is called simply 'search'. [https://github.com/fedwiki/wiki-client/pull/132 github]"
+      },
+      "after": "5f96ad726f98ebbe",
+      "date": 1448473114737
+    },
+    {
+      "type": "edit",
+      "id": "a5b58d2173aa0d4a",
+      "item": {
+        "type": "paragraph",
+        "id": "a5b58d2173aa0d4a",
+        "text": "Aside: We have a trial implementation of the 'more' query where it is called simply 'search'. [https://github.com/fedwiki/wiki-client/pull/132 github]"
+      },
+      "date": 1448473129452
+    },
+    {
+      "type": "add",
+      "id": "3cc4de17c2add609",
+      "item": {
+        "type": "paragraph",
+        "id": "3cc4de17c2add609",
+        "text": "See [[Search Index]] coding details"
+      },
+      "after": "3c0f375963497740",
+      "date": 1448576770555
+    },
+    {
+      "type": "edit",
+      "id": "3cc4de17c2add609",
+      "item": {
+        "type": "paragraph",
+        "id": "3cc4de17c2add609",
+        "text": "See [[Search Index]] coding details."
+      },
+      "date": 1448576780399
+    },
+    {
+      "type": "add",
+      "id": "d0184a26ae75f77a",
+      "item": {
+        "type": "paragraph",
+        "id": "d0184a26ae75f77a",
+        "text": "# Examples"
+      },
+      "after": "141a1d6ac6181a61",
+      "date": 1449239671691
+    },
+    {
+      "type": "add",
+      "id": "804af69b15445f90",
+      "item": {
+        "type": "paragraph",
+        "id": "804af69b15445f90",
+        "text": "[[Search Thoughs]] describes two search cases that intersect in curious ways. Both could be improved by the locality suggested here."
+      },
+      "after": "d0184a26ae75f77a",
+      "date": 1449239744893
+    },
+    {
+      "type": "edit",
+      "id": "d0184a26ae75f77a",
+      "item": {
+        "type": "markdown",
+        "id": "d0184a26ae75f77a",
+        "text": "# Examples"
+      },
+      "date": 1449239749570
+    },
+    {
+      "type": "add",
+      "id": "b1317f209b4933c6",
+      "item": {
+        "type": "paragraph",
+        "id": "b1317f209b4933c6",
+        "text": "# Resources"
+      },
+      "after": "804af69b15445f90",
+      "date": 1470147521820
+    },
+    {
+      "type": "add",
+      "id": "8a2b6f042a750a4a",
+      "item": {
+        "type": "paragraph",
+        "id": "8a2b6f042a750a4a",
+        "text": "Nedb is a dependency free in memory db with indices and an append-only backing store. Seems to be good for 10,000s of documents. [https://github.com/louischatriot/nedb github]"
+      },
+      "after": "b1317f209b4933c6",
+      "date": 1470147719053
+    },
+    {
+      "type": "edit",
+      "id": "b1317f209b4933c6",
+      "item": {
+        "type": "markdown",
+        "id": "b1317f209b4933c6",
+        "text": "# Resources"
+      },
+      "date": 1470147730906
+    },
+    {
+      "type": "edit",
+      "id": "8a2b6f042a750a4a",
+      "item": {
+        "type": "paragraph",
+        "id": "8a2b6f042a750a4a",
+        "text": "Nedb is a dependency-free in-memory db with indices and an append-only backing store. Seems to be good for 10,000s of documents. [https://github.com/louischatriot/nedb github]"
+      },
+      "date": 1470147756121
+    },
+    {
+      "type": "add",
+      "id": "744f47672ab96273",
+      "item": {
+        "type": "paragraph",
+        "id": "744f47672ab96273",
+        "text": "[https://nlp.stanford.edu/IR-book/ site]"
+      },
+      "after": "8a2b6f042a750a4a",
+      "date": 1525375237466
+    },
+    {
+      "type": "edit",
+      "id": "744f47672ab96273",
+      "item": {
+        "type": "paragraph",
+        "id": "744f47672ab96273",
+        "text": "This\nbook presents the scientific underpinnings of this field, at a level accessible\nto graduate students as well as advanced undergraduates. x[https://nlp.stanford.edu/IR-book/ site]"
+      },
+      "date": 1525375382883
+    },
+    {
+      "type": "edit",
+      "id": "744f47672ab96273",
+      "item": {
+        "type": "paragraph",
+        "id": "744f47672ab96273",
+        "text": "An\nIntroduction\nto\nInformation\nRetrieval. This\nbook presents the scientific underpinnings of this field, at a level accessible\nto graduate students as well as advanced undergraduates. x[https://nlp.stanford.edu/IR-book/ site]"
+      },
+      "date": 1525375440899
+    },
+    {
+      "type": "edit",
+      "id": "744f47672ab96273",
+      "item": {
+        "type": "paragraph",
+        "id": "744f47672ab96273",
+        "text": "An\nIntroduction\nto\nInformation\nRetrieval. This\nbook presents the scientific underpinnings of this field, at a level accessible\nto graduate students as well as advanced undergraduates. [https://nlp.stanford.edu/IR-book/ site]"
+      },
+      "date": 1525375455788
+    },
+    {
+      "type": "edit",
+      "id": "744f47672ab96273",
+      "item": {
+        "type": "paragraph",
+        "id": "744f47672ab96273",
+        "text": "An\nIntroduction\nto\nInformation\nRetrieval. This\nbook presents the scientific underpinnings of this field, at a level accessible\nto graduate students as well as advanced undergraduates. [https://nlp.stanford.edu/IR-book/ pdf]"
+      },
+      "date": 1525375471237
+    },
+    {
+      "type": "edit",
+      "id": "804af69b15445f90",
+      "item": {
+        "type": "paragraph",
+        "id": "804af69b15445f90",
+        "text": "[[Search Thoughts]] describes two search cases that intersect in curious ways. Both could be improved by the locality suggested here."
+      },
+      "date": 1544552645266
+    },
+    {
+      "type": "add",
+      "id": "07f8c96ed1b8a3ed",
+      "item": {
+        "type": "paragraph",
+        "id": "07f8c96ed1b8a3ed",
+        "text": "Machine Learning: Full-Text Search in Javascript. Part 1: Relevance Scoring."
+      },
+      "after": "744f47672ab96273",
+      "date": 1553364606070
+    },
+    {
+      "type": "edit",
+      "id": "07f8c96ed1b8a3ed",
+      "item": {
+        "type": "paragraph",
+        "id": "07f8c96ed1b8a3ed",
+        "text": "Machine Learning: Full-Text Search in Javascript. Part 1: Relevance Scoring. [http://burakkanber.com/blog/machine-learning-full-text-search-in-javascript-relevance-scoring/ post]"
+      },
+      "date": 1553364635379
+    }
+  ]
+}

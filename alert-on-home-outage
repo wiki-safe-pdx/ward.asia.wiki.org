@@ -1,0 +1,256 @@
+{
+  "title": "Alert on Home Outage",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "eba9e568937f0271",
+      "text": "We configure a Detect and Alert with a hair trigger as a test case of the [[Alert Prototype]]. We can stop and start home servers without much disruption and from Singapore ping timeouts make them appear more flaky than they really are. See [[Ping Home Servers]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "5fe459afa4e336e4",
+      "text": "[[Testing Random Source]]"
+    },
+    {
+      "type": "detect",
+      "id": "cc24c85393cad69b",
+      "text": "detect changes of significance on home servers"
+    },
+    {
+      "type": "alert",
+      "id": "2a8960ea642876ef",
+      "text": "alert significant change via text message"
+    },
+    {
+      "type": "plugmatic",
+      "id": "015d11ccf96816d7",
+      "text": "wiki-plugin-datalog\nwiki-plugin-detect\nwiki-plugin-alert"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Alert on Home Outage",
+        "story": []
+      },
+      "date": 1558800797206
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "eba9e568937f0271",
+        "text": "We configure a Detect and Alert with a hair trigger as a test case of the [[Alert Prototype]]. We can stop and start these servers without much disruption and from Singapore ping timeouts make them appear more flaky than they really are."
+      },
+      "id": "eba9e568937f0271",
+      "date": 1558800804603
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "015d11ccf96816d7"
+      },
+      "id": "015d11ccf96816d7",
+      "type": "add",
+      "after": "eba9e568937f0271",
+      "date": 1558801014776
+    },
+    {
+      "type": "edit",
+      "id": "015d11ccf96816d7",
+      "item": {
+        "type": "plugmatic",
+        "id": "015d11ccf96816d7",
+        "text": "wiki-plugin-detect\nwiki-plugin-alert"
+      },
+      "date": 1558801039360
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "94b8bd6bac99647b"
+      },
+      "id": "94b8bd6bac99647b",
+      "type": "add",
+      "after": "015d11ccf96816d7",
+      "date": 1558801117757
+    },
+    {
+      "type": "edit",
+      "id": "94b8bd6bac99647b",
+      "item": {
+        "type": "paragraph",
+        "id": "94b8bd6bac99647b",
+        "text": "We will configure Detect to watch [[Ping Home Servers]]"
+      },
+      "date": 1558801166643
+    },
+    {
+      "type": "edit",
+      "id": "94b8bd6bac99647b",
+      "item": {
+        "type": "paragraph",
+        "id": "94b8bd6bac99647b",
+        "text": "We will configure Detect to watch [[Ping Home Servers]]."
+      },
+      "date": 1558801174012
+    },
+    {
+      "type": "edit",
+      "id": "94b8bd6bac99647b",
+      "item": {
+        "type": "paragraph",
+        "id": "94b8bd6bac99647b",
+        "text": "We configure Detect to watch [[Ping Home Servers]]."
+      },
+      "date": 1558801184116
+    },
+    {
+      "type": "move",
+      "order": [
+        "eba9e568937f0271",
+        "94b8bd6bac99647b",
+        "015d11ccf96816d7"
+      ],
+      "id": "94b8bd6bac99647b",
+      "date": 1558801217975
+    },
+    {
+      "type": "remove",
+      "id": "94b8bd6bac99647b",
+      "date": 1558801221652
+    },
+    {
+      "type": "edit",
+      "id": "eba9e568937f0271",
+      "item": {
+        "type": "paragraph",
+        "id": "eba9e568937f0271",
+        "text": "We configure a Detect and Alert with a hair trigger as a test case of the [[Alert Prototype]]. We can stop and start these servers without much disruption and from Singapore ping timeouts make them appear more flaky than they really are. See [[Ping Home Servers]]"
+      },
+      "date": 1558801234906
+    },
+    {
+      "type": "edit",
+      "id": "eba9e568937f0271",
+      "item": {
+        "type": "paragraph",
+        "id": "eba9e568937f0271",
+        "text": "We configure a Detect and Alert with a hair trigger as a test case of the [[Alert Prototype]]. We can stop and start home servers without much disruption and from Singapore ping timeouts make them appear more flaky than they really are. See [[Ping Home Servers]]"
+      },
+      "date": 1558801303377
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1558802145987
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cc24c85393cad69b"
+      },
+      "id": "cc24c85393cad69b",
+      "type": "add",
+      "after": "015d11ccf96816d7",
+      "date": 1558803062380
+    },
+    {
+      "type": "edit",
+      "id": "cc24c85393cad69b",
+      "item": {
+        "type": "detect",
+        "id": "cc24c85393cad69b",
+        "text": "detect changes of significance on [[Ping Home Servers]]"
+      },
+      "date": 1558803125592
+    },
+    {
+      "type": "edit",
+      "id": "cc24c85393cad69b",
+      "item": {
+        "type": "detect",
+        "id": "cc24c85393cad69b",
+        "text": "detect changes of significance on Ping Home Servers."
+      },
+      "date": 1558803137072
+    },
+    {
+      "type": "edit",
+      "id": "cc24c85393cad69b",
+      "item": {
+        "type": "detect",
+        "id": "cc24c85393cad69b",
+        "text": "detect changes of significance on home servers"
+      },
+      "date": 1558803146415
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2a8960ea642876ef"
+      },
+      "id": "2a8960ea642876ef",
+      "type": "add",
+      "after": "cc24c85393cad69b",
+      "date": 1558803156863
+    },
+    {
+      "type": "edit",
+      "id": "2a8960ea642876ef",
+      "item": {
+        "type": "alert",
+        "id": "2a8960ea642876ef",
+        "text": "alert significant change via text message"
+      },
+      "date": 1558803181831
+    },
+    {
+      "id": "015d11ccf96816d7",
+      "type": "move",
+      "order": [
+        "eba9e568937f0271",
+        "cc24c85393cad69b",
+        "2a8960ea642876ef",
+        "015d11ccf96816d7"
+      ],
+      "date": 1558803228676
+    },
+    {
+      "type": "add",
+      "id": "5fe459afa4e336e4",
+      "item": {
+        "type": "paragraph",
+        "id": "5fe459afa4e336e4",
+        "text": "[[Testing Random Source]]"
+      },
+      "after": "eba9e568937f0271",
+      "date": 1558812672656,
+      "error": {
+        "type": "error",
+        "msg": "Internal Server Error",
+        "response": "Server Error: EACCES: permission denied, open '/Users/ward/.wiki/localhost/pages/alert-on-home-outage'"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1558812703112
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1558826491617
+    },
+    {
+      "type": "edit",
+      "id": "015d11ccf96816d7",
+      "item": {
+        "type": "plugmatic",
+        "id": "015d11ccf96816d7",
+        "text": "wiki-plugin-datalog\nwiki-plugin-detect\nwiki-plugin-alert"
+      },
+      "date": 1558826519662
+    }
+  ]
+}

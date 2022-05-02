@@ -1,0 +1,209 @@
+{
+  "title": "Heap Datalog",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "f670fea86182bf64",
+      "text": "We've seen server-side plugin network activity appear to run the server out of memory. So we now watch v8 heap stats more closely. See [[Unexpected Server Restarts]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "ffbf81ce3a3e86c2",
+      "text": "Datalog plugin version 0.1.8 now offers a cors endpoint for sampling memory usage. [https://github.com/WardCunningham/wiki-plugin-datalog/commit/739b4ce4cab46fdc90a1432d724be0cd2cd33802 github]"
+    },
+    {
+      "type": "datalog",
+      "id": "bca23a543595002e",
+      "text": "SENSOR heap http:/plugin/datalog/heap\nHOUR 360\nKEEP 96"
+    },
+    {
+      "type": "paragraph",
+      "id": "7c55bbca13f9e26a",
+      "text": "We can plot this data using some html first written for viewing esp sensor server data. [https://github.com/WardCunningham/SensorServer/blob/master/esp_sensor_server/plot-raw-datalog.html github] [http://ward.asia.wiki.org/assets/plugins/datalog/plot-raw-datalog.html?slug=heap-datalog&keep=8 plot]"
+    },
+    {
+      "type": "assets",
+      "id": "9791ce1102c98cc4",
+      "text": "plugins/datalog/heap-datalog"
+    },
+    {
+      "type": "paragraph",
+      "id": "4421def37ca4938a",
+      "text": "These results require some interpretation because even an idle server will see some memory activity as this datalog busies itself watching itself. It may be useful to compare with heap behavior on localhost. [http://localhost:3000/assets/plugins/datalog/plot-raw-datalog.html?slug=heap-datalog&keep=8 plot]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Heap Datalog",
+        "story": []
+      },
+      "date": 1567250092940
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f670fea86182bf64"
+      },
+      "id": "f670fea86182bf64",
+      "type": "add",
+      "date": 1567250099702
+    },
+    {
+      "type": "edit",
+      "id": "f670fea86182bf64",
+      "item": {
+        "type": "paragraph",
+        "id": "f670fea86182bf64",
+        "text": "We've seen server-side plugin network activity appear to run the server out of memory. So we now watch v8 heap stats more closely. See [[Unexpected Server Restarts]]"
+      },
+      "date": 1567250216773
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4421def37ca4938a"
+      },
+      "id": "4421def37ca4938a",
+      "type": "add",
+      "after": "f670fea86182bf64",
+      "date": 1567250255756
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "datalog",
+        "id": "bca23a543595002e",
+        "text": "SENSOR heap http:/plugin/datalog/heap\nHOUR 360\nKEEP 24"
+      },
+      "after": "f670fea86182bf64",
+      "id": "bca23a543595002e",
+      "date": 1567250311106
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "assets",
+        "id": "9791ce1102c98cc4",
+        "text": "plugins/datalog/heap-datalog"
+      },
+      "after": "bca23a543595002e",
+      "id": "9791ce1102c98cc4",
+      "date": 1567250325399
+    },
+    {
+      "type": "edit",
+      "id": "4421def37ca4938a",
+      "item": {
+        "type": "paragraph",
+        "id": "4421def37ca4938a",
+        "text": "These results require some interpretation because even an idle server will see some memory activity as this datalog busies itself watching itself."
+      },
+      "date": 1567250718145
+    },
+    {
+      "type": "add",
+      "id": "7c55bbca13f9e26a",
+      "item": {
+        "type": "paragraph",
+        "id": "7c55bbca13f9e26a",
+        "text": "We can plot this data using some html first written for viewing esp sensor server data. [https://github.com/WardCunningham/SensorServer/blob/master/esp_sensor_server/plot-raw-datalog.html github]"
+      },
+      "after": "4421def37ca4938a",
+      "date": 1567251652868
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "assets",
+        "id": "64aa8e744044c912",
+        "text": "plugins/datalog"
+      },
+      "after": "7c55bbca13f9e26a",
+      "id": "64aa8e744044c912",
+      "date": 1567252042523
+    },
+    {
+      "type": "edit",
+      "id": "7c55bbca13f9e26a",
+      "item": {
+        "type": "paragraph",
+        "id": "7c55bbca13f9e26a",
+        "text": "We can plot this data using some html first written for viewing esp sensor server data. [https://github.com/WardCunningham/SensorServer/blob/master/esp_sensor_server/plot-raw-datalog.html github] [http://ward.asia.wiki.org/assets/plugins/datalog/plot-raw-datalog.html?slug=heap-datalog&keep=8 plot]"
+      },
+      "date": 1567252232291
+    },
+    {
+      "type": "remove",
+      "id": "64aa8e744044c912",
+      "date": 1567252852748
+    },
+    {
+      "type": "move",
+      "order": [
+        "f670fea86182bf64",
+        "bca23a543595002e",
+        "9791ce1102c98cc4",
+        "7c55bbca13f9e26a",
+        "4421def37ca4938a"
+      ],
+      "id": "4421def37ca4938a",
+      "date": 1567252856341
+    },
+    {
+      "type": "edit",
+      "id": "4421def37ca4938a",
+      "item": {
+        "type": "paragraph",
+        "id": "4421def37ca4938a",
+        "text": "These results require some interpretation because even an idle server will see some memory activity as this datalog busies itself watching itself. Compare with heap on localhost. [http://localhost:3000/assets/plugins/datalog/plot-raw-datalog.html?slug=heap-datalog&keep=8 plot]"
+      },
+      "date": 1567253068282
+    },
+    {
+      "type": "edit",
+      "id": "4421def37ca4938a",
+      "item": {
+        "type": "paragraph",
+        "id": "4421def37ca4938a",
+        "text": "These results require some interpretation because even an idle server will see some memory activity as this datalog busies itself watching itself. It may be useful to compare with heap behavior on localhost. [http://localhost:3000/assets/plugins/datalog/plot-raw-datalog.html?slug=heap-datalog&keep=8 plot]"
+      },
+      "date": 1567253101862
+    },
+    {
+      "type": "add",
+      "id": "ffbf81ce3a3e86c2",
+      "item": {
+        "type": "paragraph",
+        "id": "ffbf81ce3a3e86c2",
+        "text": "Datalog plugin version 0.1.8 now offers a cors endpoint for sampling memory usage. [https://github.com/WardCunningham/wiki-plugin-datalog/commit/739b4ce4cab46fdc90a1432d724be0cd2cd33802 github]"
+      },
+      "after": "f670fea86182bf64",
+      "date": 1567276641869
+    },
+    {
+      "type": "edit",
+      "id": "bca23a543595002e",
+      "item": {
+        "type": "datalog",
+        "id": "bca23a543595002e",
+        "text": "SENSOR heap http:/plugin/datalog/heap\nHOUR 360\nKEEP 96"
+      },
+      "date": 1567292700209
+    },
+    {
+      "type": "move",
+      "order": [
+        "f670fea86182bf64",
+        "ffbf81ce3a3e86c2",
+        "bca23a543595002e",
+        "7c55bbca13f9e26a",
+        "9791ce1102c98cc4",
+        "4421def37ca4938a"
+      ],
+      "id": "9791ce1102c98cc4",
+      "date": 1571172210459
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "title": "Plotly Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "655de8abdc055666",
+      "text": "The javascript reimplementation of the venerable Plotly charting library provides a highly functional wrapper around d3 and svg. Most notable is its ability to gracefully browse tens of thousands of samples. We also admire its flicker-free incremental live updates. [http://found.ward.bay.wiki.org/assets/plugins/datalog/plot-datalog.html?slug=esp8266-datalog&chunk=day&keep=3 example]"
+    },
+    {
+      "type": "paragraph",
+      "id": "0b9e3ddfd4e5aa9a",
+      "text": "First we should duplicate within the plugin paradigm the Datalog viewing that we now do with ad-hoc html/script pages. We anticipated this function with our earliest plugins. See [[About Line Plugin]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "3c137a6971714f40",
+      "text": "Plotly provides excellent pan and zoom functionality and will emit events such that a plugin can capture and distribute the selected data. [https://plot.ly/javascript/plotlyjs-events/ plotly]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Plotly Plugin",
+        "story": []
+      },
+      "date": 1549681565609
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "655de8abdc055666"
+      },
+      "id": "655de8abdc055666",
+      "type": "add",
+      "date": 1549681568194
+    },
+    {
+      "type": "edit",
+      "id": "655de8abdc055666",
+      "item": {
+        "type": "paragraph",
+        "id": "655de8abdc055666",
+        "text": "The javascript reimplementation of the venerable Plotly charting library provides a highly functional wrapper around d3 and svg. Most notable is its ability to gracefully browse tens of thousands of samples. We also admire its flicker-free incremental live updates."
+      },
+      "date": 1549681733771
+    },
+    {
+      "type": "add",
+      "id": "0b9e3ddfd4e5aa9a",
+      "item": {
+        "type": "paragraph",
+        "id": "0b9e3ddfd4e5aa9a",
+        "text": "First we should duplicate within the plugin paradigm the Datalog viewing that we now do with ad-hoc html/script pages. We anticipated this function with our earliest plugins. See [[About D3 Line Plugin]]"
+      },
+      "after": "655de8abdc055666",
+      "date": 1549681936458
+    },
+    {
+      "type": "edit",
+      "id": "0b9e3ddfd4e5aa9a",
+      "item": {
+        "type": "paragraph",
+        "id": "0b9e3ddfd4e5aa9a",
+        "text": "First we should duplicate within the plugin paradigm the Datalog viewing that we now do with ad-hoc html/script pages. We anticipated this function with our earliest plugins. See [[About Line Plugin]]"
+      },
+      "date": 1549681948357
+    },
+    {
+      "type": "add",
+      "id": "3c137a6971714f40",
+      "item": {
+        "type": "paragraph",
+        "id": "3c137a6971714f40",
+        "text": "Plotly provides excellent pan and zoom functionality and will emit events such that a plugin can capture and distribute the selected data. "
+      },
+      "after": "0b9e3ddfd4e5aa9a",
+      "date": 1549682144353
+    },
+    {
+      "type": "edit",
+      "id": "3c137a6971714f40",
+      "item": {
+        "type": "paragraph",
+        "id": "3c137a6971714f40",
+        "text": "Plotly provides excellent pan and zoom functionality and will emit events such that a plugin can capture and distribute the selected data. [https://plot.ly/javascript/plotlyjs-events/ plotly]"
+      },
+      "date": 1549682262040
+    },
+    {
+      "type": "edit",
+      "id": "655de8abdc055666",
+      "item": {
+        "type": "paragraph",
+        "id": "655de8abdc055666",
+        "text": "The javascript reimplementation of the venerable Plotly charting library provides a highly functional wrapper around d3 and svg. Most notable is its ability to gracefully browse tens of thousands of samples. We also admire its flicker-free incremental live updates. [http://found.ward.bay.wiki.org/assets/plugins/datalog/plot-datalog.html?slug=esp8266-datalog&chunk=day&keep=3 example]"
+      },
+      "date": 1549682362347
+    }
+  ]
+}

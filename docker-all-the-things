@@ -1,0 +1,195 @@
+{
+  "title": "Docker All the Things",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "234922b1a6136ae3",
+      "text": "As we struggle with installs we wonder if docker might help in the long run. It certainly has advantages in the short run."
+    },
+    {
+      "type": "markdown",
+      "id": "748030f1e058560c",
+      "text": "# Transporters"
+    },
+    {
+      "type": "paragraph",
+      "id": "23b06ef87754f6a3",
+      "text": "We've had some trouble keeping the image transporter running when ruby, sinatra and graphviz install dependencies compound. We're not sure how docker makes this easier but it does. [https://github.com/WardCunningham/image-transporter github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "67a46cbfc7a6b7d0",
+      "text": "We modeled our build on one simple example. [https://github.com/michelesr/puma-sinatra-example/blob/master/Dockerfile github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "325665b3fd421ba7",
+      "text": "Only our newest droplet was running the sufficiently recent Ubuntu 16.04 for the DigitalOcean Docker install instructions to work. [https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04 post]"
+    },
+    {
+      "type": "paragraph",
+      "id": "ea13f94ff80e9681",
+      "text": "We build on the platform rather than registering our image in any repository. We've yet to psych out the various repository policies."
+    },
+    {
+      "type": "paragraph",
+      "id": "044b5fd3e984e626",
+      "text": "We need something like upstart or systemd to keep our container working. Ubuntu versions vary in what they provide."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Docker All the Things",
+        "story": []
+      },
+      "date": 1518549380617
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "234922b1a6136ae3"
+      },
+      "id": "234922b1a6136ae3",
+      "type": "add",
+      "date": 1518549382979
+    },
+    {
+      "type": "edit",
+      "id": "234922b1a6136ae3",
+      "item": {
+        "type": "paragraph",
+        "id": "234922b1a6136ae3",
+        "text": "As we struggle with installs we wonder if docker might help in the long run. It certainly has advantages in the short run."
+      },
+      "date": 1518549439450
+    },
+    {
+      "type": "add",
+      "id": "748030f1e058560c",
+      "item": {
+        "type": "paragraph",
+        "id": "748030f1e058560c",
+        "text": "# Transporters"
+      },
+      "after": "234922b1a6136ae3",
+      "date": 1518549463835
+    },
+    {
+      "type": "add",
+      "id": "23b06ef87754f6a3",
+      "item": {
+        "type": "paragraph",
+        "id": "23b06ef87754f6a3",
+        "text": "We've had some trouble keeping the image transporter running when ruby, sinatra and graphviz install dependencies compound. We're not sure how docker makes this easier but it does."
+      },
+      "after": "748030f1e058560c",
+      "date": 1518549582176
+    },
+    {
+      "type": "edit",
+      "id": "748030f1e058560c",
+      "item": {
+        "type": "markdown",
+        "id": "748030f1e058560c",
+        "text": "# Transporters"
+      },
+      "date": 1518549613968
+    },
+    {
+      "type": "edit",
+      "id": "23b06ef87754f6a3",
+      "item": {
+        "type": "paragraph",
+        "id": "23b06ef87754f6a3",
+        "text": "We've had some trouble keeping the image transporter running when ruby, sinatra and graphviz install dependencies compound. We're not sure how docker makes this easier but it does. [https://github.com/WardCunningham/image-transporter github]"
+      },
+      "date": 1518549625836
+    },
+    {
+      "type": "add",
+      "id": "67a46cbfc7a6b7d0",
+      "item": {
+        "type": "paragraph",
+        "id": "67a46cbfc7a6b7d0",
+        "text": "We modeled this docker build on one simpe example. [https://github.com/michelesr/puma-sinatra-example/blob/master/Dockerfile github]"
+      },
+      "after": "23b06ef87754f6a3",
+      "date": 1518549726392
+    },
+    {
+      "type": "edit",
+      "id": "67a46cbfc7a6b7d0",
+      "item": {
+        "type": "paragraph",
+        "id": "67a46cbfc7a6b7d0",
+        "text": "We modeled our build on one simple example. [https://github.com/michelesr/puma-sinatra-example/blob/master/Dockerfile github]"
+      },
+      "date": 1518549742656
+    },
+    {
+      "type": "add",
+      "id": "325665b3fd421ba7",
+      "item": {
+        "type": "paragraph",
+        "id": "325665b3fd421ba7",
+        "text": "Only our newest droplet was running the sufficiently recent ubuntu 16.04 for the DigitalOcean Docker install instructions to work."
+      },
+      "after": "67a46cbfc7a6b7d0",
+      "date": 1518549870397
+    },
+    {
+      "type": "edit",
+      "id": "325665b3fd421ba7",
+      "item": {
+        "type": "paragraph",
+        "id": "325665b3fd421ba7",
+        "text": "Only our newest droplet was running the sufficiently recent ubuntu 16.04 for the DigitalOcean Docker install instructions to work. [https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04 post]"
+      },
+      "date": 1518549934147
+    },
+    {
+      "type": "edit",
+      "id": "325665b3fd421ba7",
+      "item": {
+        "type": "paragraph",
+        "id": "325665b3fd421ba7",
+        "text": "Only our newest droplet was running the sufficiently recent Ubuntu 16.04 for the DigitalOcean Docker install instructions to work. [https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04 post]"
+      },
+      "date": 1518549952504
+    },
+    {
+      "type": "add",
+      "id": "ea13f94ff80e9681",
+      "item": {
+        "type": "paragraph",
+        "id": "ea13f94ff80e9681",
+        "text": "We build on the platform rather than registering our image in any repository. We've yet to psych out the various repository policies."
+      },
+      "after": "325665b3fd421ba7",
+      "date": 1518550088313
+    },
+    {
+      "type": "add",
+      "id": "044b5fd3e984e626",
+      "item": {
+        "type": "paragraph",
+        "id": "044b5fd3e984e626",
+        "text": "We need something like upstart or systemd to keep our container working."
+      },
+      "after": "ea13f94ff80e9681",
+      "date": 1518550172178
+    },
+    {
+      "type": "edit",
+      "id": "044b5fd3e984e626",
+      "item": {
+        "type": "paragraph",
+        "id": "044b5fd3e984e626",
+        "text": "We need something like upstart or systemd to keep our container working. Ubuntu versions vary in what they provide."
+      },
+      "date": 1518550204577
+    }
+  ]
+}

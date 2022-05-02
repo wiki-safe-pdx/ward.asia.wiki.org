@@ -1,0 +1,297 @@
+{
+  "title": "Asset Abstractions Improve",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "414702452f8afe20",
+      "text": "Since the dawn of the web large files such as images were separated from the hypertext and eventually referred to as assets. We defied this distinction by storing images inside our page json and have suffered under the large files thus produced. Here we chart our long struggle to have our unique model for sharing work for segregated assets."
+    },
+    {
+      "type": "pagefold",
+      "id": "68cbccf1e05f4fd2",
+      "text": "history"
+    },
+    {
+      "type": "paragraph",
+      "id": "e21d3953531833cb",
+      "text": "Stephen Judkins suggests dataurls in the json."
+    },
+    {
+      "type": "paragraph",
+      "id": "49773bd1f74e8fec",
+      "text": "Image assets discussed as if it were an easy problem."
+    },
+    {
+      "type": "paragraph",
+      "id": "e22bcbf0f641c9a6",
+      "text": "Squeeze logic in the client protects some users."
+    },
+    {
+      "type": "paragraph",
+      "id": "dd3a849e87414e0f",
+      "text": "IPFS implementation sounds good but doesn't work out."
+    },
+    {
+      "type": "paragraph",
+      "id": "fb99b40de41da14c",
+      "text": "Paul Rodwell adds route to publish assets."
+    },
+    {
+      "type": "paragraph",
+      "id": "460c5053236e4567",
+      "text": "Routes added for custom home page from assets."
+    },
+    {
+      "type": "paragraph",
+      "id": "227280dac3c63e57",
+      "text": "Assets plugin offers drag and drop upload."
+    },
+    {
+      "type": "paragraph",
+      "id": "20e715c669d1f274",
+      "text": "Assets plugin shows assets in twin context."
+    },
+    {
+      "type": "paragraph",
+      "id": "41f6d8ec90b6aebe",
+      "text": "Nick Niemeier adds fork and delete. "
+    },
+    {
+      "type": "pagefold",
+      "id": "988e5e2ea22f4e67",
+      "text": "ideas"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Asset Abstractions Improve",
+        "story": []
+      },
+      "date": 1562595042295
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "414702452f8afe20"
+      },
+      "id": "414702452f8afe20",
+      "type": "add",
+      "date": 1562595046893
+    },
+    {
+      "type": "edit",
+      "id": "414702452f8afe20",
+      "item": {
+        "type": "paragraph",
+        "id": "414702452f8afe20",
+        "text": "Since the dawn of the web large files such as images were separated from the hypertext and eventually referred to as assets. We defied this distinction by storing images inside our page json and have suffered under the large files thus produced. Here we chart our long struggle to have our unique model for sharing work for segregated assets."
+      },
+      "date": 1562595328187
+    },
+    {
+      "type": "add",
+      "id": "e21d3953531833cb",
+      "item": {
+        "type": "paragraph",
+        "id": "e21d3953531833cb",
+        "text": "Stephen Judkins suggests dataurls in the json."
+      },
+      "after": "414702452f8afe20",
+      "date": 1562595383185
+    },
+    {
+      "type": "add",
+      "id": "e22bcbf0f641c9a6",
+      "item": {
+        "type": "paragraph",
+        "id": "e22bcbf0f641c9a6",
+        "text": "Squeeze logic in the client protects some users."
+      },
+      "after": "e21d3953531833cb",
+      "date": 1562595446191
+    },
+    {
+      "type": "add",
+      "id": "49773bd1f74e8fec",
+      "item": {
+        "type": "paragraph",
+        "id": "49773bd1f74e8fec",
+        "text": "Image assets discussed as if it were an easy problem."
+      },
+      "after": "e22bcbf0f641c9a6",
+      "date": 1562595492421
+    },
+    {
+      "type": "add",
+      "id": "dd3a849e87414e0f",
+      "item": {
+        "type": "paragraph",
+        "id": "dd3a849e87414e0f",
+        "text": "IPFS implementation sounds good but doesn't work out."
+      },
+      "after": "49773bd1f74e8fec",
+      "date": 1562595535494
+    },
+    {
+      "type": "move",
+      "order": [
+        "414702452f8afe20",
+        "e21d3953531833cb",
+        "49773bd1f74e8fec",
+        "e22bcbf0f641c9a6",
+        "dd3a849e87414e0f"
+      ],
+      "id": "49773bd1f74e8fec",
+      "date": 1562595586325
+    },
+    {
+      "type": "add",
+      "id": "fb99b40de41da14c",
+      "item": {
+        "type": "paragraph",
+        "id": "fb99b40de41da14c",
+        "text": "Paul Rodwell adds route to publish assets."
+      },
+      "after": "dd3a849e87414e0f",
+      "date": 1562595641658
+    },
+    {
+      "type": "add",
+      "id": "227280dac3c63e57",
+      "item": {
+        "type": "paragraph",
+        "id": "227280dac3c63e57",
+        "text": "Assets plugin offers drag and drop upload."
+      },
+      "after": "fb99b40de41da14c",
+      "date": 1562595672801
+    },
+    {
+      "type": "add",
+      "id": "20e715c669d1f274",
+      "item": {
+        "type": "paragraph",
+        "id": "20e715c669d1f274",
+        "text": "Assets plugin shows assets in twin context."
+      },
+      "after": "227280dac3c63e57",
+      "date": 1562595733361
+    },
+    {
+      "type": "add",
+      "id": "41f6d8ec90b6aebe",
+      "item": {
+        "type": "paragraph",
+        "id": "41f6d8ec90b6aebe",
+        "text": "Nick Niemeier adds fork and delete. "
+      },
+      "after": "20e715c669d1f274",
+      "date": 1562595806285
+    },
+    {
+      "type": "add",
+      "id": "460c5053236e4567",
+      "item": {
+        "type": "paragraph",
+        "id": "460c5053236e4567",
+        "text": "Routes added for custom home page."
+      },
+      "after": "fb99b40de41da14c",
+      "date": 1562595852581
+    },
+    {
+      "type": "edit",
+      "id": "460c5053236e4567",
+      "item": {
+        "type": "paragraph",
+        "id": "460c5053236e4567",
+        "text": "Routes added for custom home page from assets."
+      },
+      "date": 1562595862676
+    },
+    {
+      "type": "fork",
+      "date": 1562596140520
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "68cbccf1e05f4fd2"
+      },
+      "id": "68cbccf1e05f4fd2",
+      "type": "add",
+      "after": "94a20b64e508fdb6",
+      "date": 1562596463419
+    },
+    {
+      "type": "edit",
+      "id": "68cbccf1e05f4fd2",
+      "item": {
+        "type": "pagefold",
+        "id": "68cbccf1e05f4fd2",
+        "text": "history"
+      },
+      "date": 1562596485571
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "988e5e2ea22f4e67"
+      },
+      "id": "988e5e2ea22f4e67",
+      "type": "add",
+      "after": "94a20b64e508fdb6",
+      "date": 1562596501617
+    },
+    {
+      "type": "edit",
+      "id": "988e5e2ea22f4e67",
+      "item": {
+        "type": "pagefold",
+        "id": "988e5e2ea22f4e67",
+        "text": "ideas"
+      },
+      "date": 1562596512330
+    },
+    {
+      "type": "move",
+      "order": [
+        "988e5e2ea22f4e67",
+        "414702452f8afe20",
+        "68cbccf1e05f4fd2",
+        "e21d3953531833cb",
+        "49773bd1f74e8fec",
+        "e22bcbf0f641c9a6",
+        "dd3a849e87414e0f",
+        "fb99b40de41da14c",
+        "460c5053236e4567",
+        "227280dac3c63e57",
+        "20e715c669d1f274",
+        "41f6d8ec90b6aebe"
+      ],
+      "id": "68cbccf1e05f4fd2",
+      "date": 1562596712547
+    },
+    {
+      "type": "move",
+      "order": [
+        "414702452f8afe20",
+        "68cbccf1e05f4fd2",
+        "e21d3953531833cb",
+        "49773bd1f74e8fec",
+        "e22bcbf0f641c9a6",
+        "dd3a849e87414e0f",
+        "fb99b40de41da14c",
+        "460c5053236e4567",
+        "227280dac3c63e57",
+        "20e715c669d1f274",
+        "41f6d8ec90b6aebe",
+        "988e5e2ea22f4e67"
+      ],
+      "id": "988e5e2ea22f4e67",
+      "date": 1562596718949
+    }
+  ]
+}

@@ -1,0 +1,1004 @@
+{
+  "title": "Wiki and Open Data",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "bb173c1488002773",
+      "text": "I found inspiration in learning about open data published by City of Boulder, County of Boulder, and State of Colorado.  Could this drive creation of El Dorado in wiki?"
+    },
+    {
+      "type": "paragraph",
+      "id": "b4a28778fd2a7fb6",
+      "text": "See [http://gocode.colorado.gov/about/ Go Code CO] annual competition to build open data software"
+    },
+    {
+      "type": "paragraph",
+      "id": "cc0a78251b371adb",
+      "text": "See [https://data.colorado.gov/ data.colorado.gov] and [https://bouldercolorado.gov/open-data boulder open data]"
+    },
+    {
+      "type": "paragraph",
+      "id": "c352cff896035663",
+      "text": "See [[El Dorado UI]]"
+    },
+    {
+      "type": "markdown",
+      "id": "e9cfa9faa638b921",
+      "text": "\n"
+    },
+    {
+      "type": "map",
+      "id": "3b734bdddf8db6f5",
+      "text": "Boulder & Eldorado Canyon, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\nBOUNDARY 40.01, -105.26706"
+    },
+    {
+      "type": "markdown",
+      "id": "8fd4c242b07a095a",
+      "text": "# Some background\n"
+    },
+    {
+      "type": "markdown",
+      "id": "3c6e8403c19931d1",
+      "text": "We build systems of rapidly growing complexity.  Experience troubleshooting failures in immensely complex systems often makes me wonder how any of these things work at all. Individual components seem so fragile.  Entanglements between systems seem so pervasive.  Unknown relationships and dependencies lurk in shadow.  Predicting specific failures is impossible.  Yet it is not impressive to predict that there will be catastrophic failures, cascading failures, unintended consequences.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "f5264c4c4f372679",
+      "text": "Ward shows an example of how to explore relationships in a complex, rapidly growing system to discover risks to mitigate or identify opportunities for improvement.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "e8af04243efe1064",
+      "text": "**Investment**\n"
+    },
+    {
+      "type": "markdown",
+      "id": "1fc823f866838e13",
+      "text": "It takes time and energy to curate data streams.  And more time and energy to find common language for associating different sources of data.  These efforts appear fruitless at first.  But as data sets are groomed and associated and related, the insights to be found exploring relationships cannot be gained by other means.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "5f14f96674071c13",
+      "text": "**Exploration**\n"
+    },
+    {
+      "type": "markdown",
+      "id": "6b38fabb43850bf5",
+      "text": "It takes time and energy to explore new territory.  An organization or community must devote resources to the inquiry itself.  El Dorado enables the explorers to capture and save and even share interesting queries and interesting results.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "9f1024f3512a82e6",
+      "text": "But these are explorations into the unknown.  They cannot be planned.  They require a different sort of agility and different acceptance criteria than the typical development story.  Maybe they more closely resemble market research.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "36e2de330082e905",
+      "text": "**How to persuade?**\n"
+    },
+    {
+      "type": "markdown",
+      "id": "130ee11623984d64",
+      "text": "Time spent exploring also comes with the opportunity cost of features that could have been built with that time and those resources instead of exploring.  And Sales and Marketing teams are professional persuaders.  What Development or Operations team can compete for the priorities of the Business Leaders.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "c6e852248aa3990e",
+      "text": "Specific deals that were lost for lack of specific features?  Insatiable demands from the sales pipeline.  We promise the alternative of unknown riches of El Dorado?  Or cures for diseases we don't know we have?\n"
+    },
+    {
+      "type": "markdown",
+      "id": "e73e677b0ab38839",
+      "text": "**Private and Confidential**\n"
+    },
+    {
+      "type": "markdown",
+      "id": "32b2b5ceb77f893b",
+      "text": "New Relic's investment in El Dorado (and likely other systems) empowers them to embrace team autonomy, and enables them to study their own emergence.  But publishing the results would give up intellectual property and might also violate agreements with their customers.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "30d3fca2d546419f",
+      "text": "How can I create something similar to deeply learn how to explore emergence in distributed systems and distributed teams?  How can these lessons be shared in depth?\n"
+    },
+    {
+      "type": "markdown",
+      "id": "70fd8058b3b74e74",
+      "text": "# Open Data\n"
+    },
+    {
+      "type": "markdown",
+      "id": "02e20b80f74f93f5",
+      "text": "These words mean different things to different audiences.  My friend Alex evangelizes a specific, and different sense of open data at University of Colorado.  This is semantic web stuff... aiming to get researchers to open and link their data to empower greater collaboration.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "ee54b1a1bb2da24b",
+      "text": "These offices of the City of Boulder and the State of Colorado speak about open data in the sense of empowering businesses and citizens with data already collected and curated by various parts of government.  I don't hear anything about triples or graph queries.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "2786963c62a57424",
+      "text": "But there is an interesting opportunity in these data sets.  They're public data.  We could leverage the public data to begin building something like New Relic's El Dorado that is unencumbered by non-disclosure.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "a54ecf83718ab9c1",
+      "text": "# Collaborations\n"
+    },
+    {
+      "type": "markdown",
+      "id": "db99aa118af11253",
+      "text": "I already mentioned my friend Alex at CU.  It's a different notion of open data, but there are graphs to be explored in semantic web triple stores, and there are graphs to be explored in El Dorado.  And overlapping goals.  Potential for something interesting to emerge from collaboration.\n"
+    },
+    {
+      "type": "markdown",
+      "id": "c82cdc4f17a8061a",
+      "text": "Another friend, Brad, helps small- to medium-sized businesses identify savings in electricity and gas by monitoring and analyzing and re-shaping time series data into actionable reports.  The savings outweigh the cost of monitoring and analysis.  His could be a specific business benefiting from the open data (maybe) or (more likely) benefiting from tools and processes that facilitate mash-ups of apparently-but-not-actually unrelated data.\n\n"
+    },
+    {
+      "type": "markdown",
+      "id": "6a00f7e557c52c19",
+      "text": "blockchain or merkle tree offer ways to formalize, publish and track the data supply chain from sources.  The holochain community already working with David and wiki may be interested to help.  The Boulder blockchain enthusiasts may also be interested to help.\n\n"
+    },
+    {
+      "type": "markdown",
+      "id": "37d0a5b88d7cd20a",
+      "text": "Duke introduced me to Cristos at CSU who researches Named Data Networking.  Seems like there are some great privacy stories to tell in connecting dots between NDN and open data."
+    },
+    {
+      "type": "markdown",
+      "id": "d97718944cc3c102",
+      "text": "I have a long interest in applying computing to education.  There may be collaborations to teach data wrangling.  My former mentor, Mark, directs the ATLAS Institute at CU.  His friend directs the Craft Computing Lab for the CS dept.  Mark in particular helped some former students with SBIR grant to bootstrap Modular Robotics.  SBIR might be a useful funding mechanism.  I also worked with Jeff who is now a Lead Curriculum Developer for Galvanize."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "2018-03-31",
+        "story": []
+      },
+      "date": 1522515870564
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bb173c1488002773"
+      },
+      "id": "bb173c1488002773",
+      "type": "add",
+      "date": 1522515873042
+    },
+    {
+      "type": "edit",
+      "id": "bb173c1488002773",
+      "item": {
+        "type": "paragraph",
+        "id": "bb173c1488002773",
+        "text": "I found inspiration in learning about open data published by city of boulder, county of boulder, and state of colorado.  Here to gather my thoughts, rehearse telling the story, and identify next steps."
+      },
+      "date": 1522516064738
+    },
+    {
+      "type": "add",
+      "id": "8fd4c242b07a095a",
+      "item": {
+        "type": "factory",
+        "id": "8fd4c242b07a095a",
+        "text": "Some background."
+      },
+      "after": "bb173c1488002773",
+      "date": 1522516167230
+    },
+    {
+      "type": "edit",
+      "id": "8fd4c242b07a095a",
+      "item": {
+        "type": "markdown",
+        "id": "8fd4c242b07a095a",
+        "text": "# Some background\n"
+      },
+      "date": 1522516176912
+    },
+    {
+      "type": "add",
+      "id": "e9cfa9faa638b921",
+      "item": {
+        "type": "markdown",
+        "id": "e9cfa9faa638b921",
+        "text": "I find Ward's work on the El Dorado project for New Relic inspiring.\n"
+      },
+      "after": "8fd4c242b07a095a",
+      "date": 1522516380428
+    },
+    {
+      "type": "add",
+      "id": "8c8ed07674b7a39f",
+      "item": {
+        "type": "markdown",
+        "id": "8c8ed07674b7a39f",
+        "text": "We build systems of rapidly growing complexity.  Experience troubleshooting failures in immensely complex systems often makes me wonder how any of these things work at all. Individual components seem so fragile.  Entanglements between systems seem so pervasive.  Unknown relationships and dependencies lurk in shadow.\n"
+      },
+      "after": "e9cfa9faa638b921",
+      "date": 1522516601930
+    },
+    {
+      "type": "edit",
+      "id": "8c8ed07674b7a39f",
+      "item": {
+        "type": "markdown",
+        "id": "8c8ed07674b7a39f",
+        "text": "We build systems of rapidly growing complexity.  Experience troubleshooting failures in immensely complex systems often makes me wonder how any of these things work at all. Individual components seem so fragile.  Entanglements between systems seem so pervasive.  Unknown relationships and dependencies lurk in shadow.  Predicting specific failures is impossible.  Yet it is not impressive to predict that there will be catastrophic failures, cascading failures, unintended consequences.\n"
+      },
+      "date": 1522516866804
+    },
+    {
+      "type": "add",
+      "id": "f5264c4c4f372679",
+      "item": {
+        "type": "markdown",
+        "id": "f5264c4c4f372679",
+        "text": "Ward shows an example of how to explore relationships in a complex, rapidly growing system to discover risks to mitigate or identify opportunities for improvement.\n"
+      },
+      "after": "8c8ed07674b7a39f",
+      "date": 1522517110594
+    },
+    {
+      "type": "add",
+      "id": "e8af04243efe1064",
+      "item": {
+        "type": "markdown",
+        "id": "e8af04243efe1064",
+        "text": "# Investment\n"
+      },
+      "after": "f5264c4c4f372679",
+      "date": 1522517115484
+    },
+    {
+      "type": "add",
+      "id": "1fc823f866838e13",
+      "item": {
+        "type": "markdown",
+        "id": "1fc823f866838e13",
+        "text": "It takes time and energy to curate data streams.  And more time and energy to find common language for associating different sources of data.  These efforts appear fruitless at first.  But as data sets are groomed and associated and related, the insights to be found exploring relationships cannot be gained by other means.\n"
+      },
+      "after": "e8af04243efe1064",
+      "date": 1522517296050
+    },
+    {
+      "type": "add",
+      "id": "5f14f96674071c13",
+      "item": {
+        "type": "markdown",
+        "id": "5f14f96674071c13",
+        "text": "# Exploration\n"
+      },
+      "after": "1fc823f866838e13",
+      "date": 1522517301136
+    },
+    {
+      "type": "add",
+      "id": "6b38fabb43850bf5",
+      "item": {
+        "type": "markdown",
+        "id": "6b38fabb43850bf5",
+        "text": "It takes time and energy to explore new territory.  An organization or community must devote resources to the inquiry itself.  El Dorado enables the explorers to capture and save and even share interesting queries and interesting results.\n"
+      },
+      "after": "5f14f96674071c13",
+      "date": 1522517413770
+    },
+    {
+      "type": "add",
+      "id": "9f1024f3512a82e6",
+      "item": {
+        "type": "markdown",
+        "id": "9f1024f3512a82e6",
+        "text": "But these are explorations into the unknown.  They cannot be planned.  They require a different sort of agility and different acceptance criteria than the typical development story.  Maybe they more closely resemble market research."
+      },
+      "after": "6b38fabb43850bf5",
+      "date": 1522517586592
+    },
+    {
+      "type": "edit",
+      "id": "9f1024f3512a82e6",
+      "item": {
+        "type": "markdown",
+        "id": "9f1024f3512a82e6",
+        "text": "But these are explorations into the unknown.  They cannot be planned.  They require a different sort of agility and different acceptance criteria than the typical development story.  Maybe they more closely resemble market research.\n"
+      },
+      "date": 1522517771672
+    },
+    {
+      "type": "add",
+      "id": "36e2de330082e905",
+      "item": {
+        "type": "markdown",
+        "id": "36e2de330082e905",
+        "text": "# How to persuade?\n"
+      },
+      "after": "9f1024f3512a82e6",
+      "date": 1522517810976
+    },
+    {
+      "type": "add",
+      "id": "130ee11623984d64",
+      "item": {
+        "type": "markdown",
+        "id": "130ee11623984d64",
+        "text": "Time spent exploring also comes with the opportunity cost of features that could have been built with that time and those resources instead of exploring.  And Sales and Marketing teams are professional persuaders.  What Development or Operations team can compete for the priorities of the Business Leaders.\n"
+      },
+      "after": "36e2de330082e905",
+      "date": 1522518201974
+    },
+    {
+      "type": "add",
+      "id": "c6e852248aa3990e",
+      "item": {
+        "type": "markdown",
+        "id": "c6e852248aa3990e",
+        "text": "Specific deals that were lost for lack of specific features?  Insatiable demands from the sales pipeline.  We promise the alternative of unknown riches of El Dorado?  Or cures for diseases we don't know we have?\n"
+      },
+      "after": "130ee11623984d64",
+      "date": 1522518471284
+    },
+    {
+      "type": "add",
+      "id": "e73e677b0ab38839",
+      "item": {
+        "type": "markdown",
+        "id": "e73e677b0ab38839",
+        "text": "# Private and Confidential\n"
+      },
+      "after": "c6e852248aa3990e",
+      "date": 1522518493414
+    },
+    {
+      "type": "add",
+      "id": "32b2b5ceb77f893b",
+      "item": {
+        "type": "markdown",
+        "id": "32b2b5ceb77f893b",
+        "text": "New Relic may be a rare exception to devote time and resources exploring their own systems.  The explorations empower them to embrace other business priorities of providing their teams autonomy."
+      },
+      "after": "e73e677b0ab38839",
+      "date": 1522518632888
+    },
+    {
+      "type": "edit",
+      "id": "32b2b5ceb77f893b",
+      "item": {
+        "type": "markdown",
+        "id": "32b2b5ceb77f893b",
+        "text": "New Relic's investment in El Dorado (and likely other systems) empowers them to embrace team autonomy, and enables them to study their own emergence.  But publishing the results would give up intellectual property and might also violate agreements with their customers.\n"
+      },
+      "date": 1522680875776
+    },
+    {
+      "type": "add",
+      "id": "30d3fca2d546419f",
+      "item": {
+        "type": "markdown",
+        "id": "30d3fca2d546419f",
+        "text": "How can I create something similar to deeply learn how to explore emergence in distributed systems and distributed teams?\n"
+      },
+      "after": "32b2b5ceb77f893b",
+      "date": 1522680990518
+    },
+    {
+      "type": "edit",
+      "id": "e8af04243efe1064",
+      "item": {
+        "type": "markdown",
+        "id": "e8af04243efe1064",
+        "text": "**Investment**\n"
+      },
+      "date": 1522681105444
+    },
+    {
+      "type": "edit",
+      "id": "5f14f96674071c13",
+      "item": {
+        "type": "markdown",
+        "id": "5f14f96674071c13",
+        "text": "**Exploration**\n"
+      },
+      "date": 1522681113136
+    },
+    {
+      "type": "edit",
+      "id": "36e2de330082e905",
+      "item": {
+        "type": "markdown",
+        "id": "36e2de330082e905",
+        "text": "**How to persuade?**\n"
+      },
+      "date": 1522681119806
+    },
+    {
+      "type": "edit",
+      "id": "e73e677b0ab38839",
+      "item": {
+        "type": "markdown",
+        "id": "e73e677b0ab38839",
+        "text": "**Private and Confidential**\n"
+      },
+      "date": 1522681128022
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "70fd8058b3b74e74"
+      },
+      "id": "70fd8058b3b74e74",
+      "type": "add",
+      "after": "30d3fca2d546419f",
+      "date": 1522681134272
+    },
+    {
+      "type": "edit",
+      "id": "70fd8058b3b74e74",
+      "item": {
+        "type": "markdown",
+        "id": "70fd8058b3b74e74",
+        "text": "# Open Data\n"
+      },
+      "date": 1522681146988
+    },
+    {
+      "type": "add",
+      "id": "02e20b80f74f93f5",
+      "item": {
+        "type": "markdown",
+        "id": "02e20b80f74f93f5",
+        "text": "These words mean different things to different audiences.  My friend Alex evangelizes a specific, and different sense of open data at University of Colorado.  This is semantic web stuff... aiming to get researchers to open and link their data to empower greater collaboration.\n"
+      },
+      "after": "70fd8058b3b74e74",
+      "date": 1522681347070
+    },
+    {
+      "type": "add",
+      "id": "ee54b1a1bb2da24b",
+      "item": {
+        "type": "markdown",
+        "id": "ee54b1a1bb2da24b",
+        "text": "These offices of the City of Boulder and the State of Colorado speak about open data in the sense of empowering businesses and citizens with data already collected and curated by various parts of government.  I don't hear anything about triples."
+      },
+      "after": "02e20b80f74f93f5",
+      "date": 1522681522518
+    },
+    {
+      "type": "edit",
+      "id": "ee54b1a1bb2da24b",
+      "item": {
+        "type": "markdown",
+        "id": "ee54b1a1bb2da24b",
+        "text": "These offices of the City of Boulder and the State of Colorado speak about open data in the sense of empowering businesses and citizens with data already collected and curated by various parts of government.  I don't hear anything about triples or graph queries."
+      },
+      "date": 1522681590206
+    },
+    {
+      "type": "edit",
+      "id": "ee54b1a1bb2da24b",
+      "item": {
+        "type": "markdown",
+        "id": "ee54b1a1bb2da24b",
+        "text": "These offices of the City of Boulder and the State of Colorado speak about open data in the sense of empowering businesses and citizens with data already collected and curated by various parts of government.  I don't hear anything about triples or graph queries.\n"
+      },
+      "date": 1522681653944
+    },
+    {
+      "type": "add",
+      "id": "2786963c62a57424",
+      "item": {
+        "type": "markdown",
+        "id": "2786963c62a57424",
+        "text": "But there is an interesting opportunity in these data sets.  They're public data.  We could leverage the public data to begin building something like New Relic's El Dorado that is unencumbered by non-disclosure.\n"
+      },
+      "after": "ee54b1a1bb2da24b",
+      "date": 1522681798238
+    },
+    {
+      "type": "add",
+      "id": "a54ecf83718ab9c1",
+      "item": {
+        "type": "markdown",
+        "id": "a54ecf83718ab9c1",
+        "text": "# Collaborations\n"
+      },
+      "after": "2786963c62a57424",
+      "date": 1522681806578
+    },
+    {
+      "type": "add",
+      "id": "db99aa118af11253",
+      "item": {
+        "type": "markdown",
+        "id": "db99aa118af11253",
+        "text": "I already mentioned my friend Alex at CU.  It's a different notion of open data, but there are graphs to be explored in semantic web triple stores, and there are graphs to be explored in El Dorado.  And overlapping goals.  Potential for something interesting to emerge from collaboration.\n"
+      },
+      "after": "a54ecf83718ab9c1",
+      "date": 1522682057950
+    },
+    {
+      "type": "add",
+      "id": "c82cdc4f17a8061a",
+      "item": {
+        "type": "markdown",
+        "id": "c82cdc4f17a8061a",
+        "text": "Another friend, Brad, helps small- to medium-sized businesses identify savings in electricity and gas by monitoring and analyzing and re-shaping time series data into actionable reports.  The savings outweigh the cost of monitoring and analysis.  His could be a specific business benefiting from the open data (maybe) or (more likely) benefiting from tools and processes that facilitate mash-ups of apparently-but-not-actually unrelated data.\n"
+      },
+      "after": "db99aa118af11253",
+      "date": 1522682342014
+    },
+    {
+      "type": "edit",
+      "id": "c82cdc4f17a8061a",
+      "item": {
+        "type": "markdown",
+        "id": "c82cdc4f17a8061a",
+        "text": "Another friend, Brad, helps small- to medium-sized businesses identify savings in electricity and gas by monitoring and analyzing and re-shaping time series data into actionable reports.  The savings outweigh the cost of monitoring and analysis.  His could be a specific business benefiting from the open data (maybe) or (more likely) benefiting from tools and processes that facilitate mash-ups of apparently-but-not-actually unrelated data.\n\n"
+      },
+      "date": 1522689838416
+    },
+    {
+      "type": "add",
+      "id": "6a00f7e557c52c19",
+      "item": {
+        "type": "markdown",
+        "id": "6a00f7e557c52c19",
+        "text": "blockchain or merkle tree "
+      },
+      "after": "c82cdc4f17a8061a",
+      "date": 1522689923184
+    },
+    {
+      "type": "edit",
+      "id": "6a00f7e557c52c19",
+      "item": {
+        "type": "markdown",
+        "id": "6a00f7e557c52c19",
+        "text": "blockchain or merkle tree \n"
+      },
+      "date": 1522794981986
+    },
+    {
+      "type": "add",
+      "id": "3ef131874229409f",
+      "item": {
+        "type": "markdown",
+        "id": "3ef131874229409f",
+        "text": "[https://tabsweep.localtest.me/wiki-data.html tabsweep: wiki data]"
+      },
+      "after": "6a00f7e557c52c19",
+      "date": 1522795006684
+    },
+    {
+      "type": "edit",
+      "id": "6a00f7e557c52c19",
+      "item": {
+        "type": "markdown",
+        "id": "6a00f7e557c52c19",
+        "text": "blockchain or merkle tree offer ways to formalize, publish and track the data supply chain from sources.  The holochain community already working with David and wiki may be interested to help.\n"
+      },
+      "date": 1522817073862
+    },
+    {
+      "type": "add",
+      "id": "d97718944cc3c102",
+      "item": {
+        "type": "markdown",
+        "id": "d97718944cc3c102",
+        "text": "I have a long interest in applying computing to education.  My former mentor, Mark, directs the ATLAS program at CU.  His friend directs the Craft Computing Lab for the CS (or is it Engineering)?  Mark in particular helped some former students with SBIR grant to bootstrap Modular Robotics.  That might be a useful funding mechanism."
+      },
+      "after": "6a00f7e557c52c19",
+      "date": 1522817256554
+    },
+    {
+      "type": "edit",
+      "id": "d97718944cc3c102",
+      "item": {
+        "type": "markdown",
+        "id": "d97718944cc3c102",
+        "text": "I have a long interest in applying computing to education.  My former mentor, Mark, directs the ATLAS program at CU.  His friend directs the Craft Computing Lab for the CS dept.  Mark in particular helped some former students with SBIR grant to bootstrap Modular Robotics.  That might be a useful funding mechanism."
+      },
+      "date": 1522817327144
+    },
+    {
+      "type": "edit",
+      "id": "d97718944cc3c102",
+      "item": {
+        "type": "markdown",
+        "id": "d97718944cc3c102",
+        "text": "I have a long interest in applying computing to education.  My former mentor, Mark, directs the ATLAS Institute at CU.  His friend directs the Craft Computing Lab for the CS dept.  Mark in particular helped some former students with SBIR grant to bootstrap Modular Robotics.  That might be a useful funding mechanism."
+      },
+      "date": 1522817379754
+    },
+    {
+      "type": "edit",
+      "id": "d97718944cc3c102",
+      "item": {
+        "type": "markdown",
+        "id": "d97718944cc3c102",
+        "text": "I have a long interest in applying computing to education.  There may be collaborations to teach data wrangling.  My former mentor, Mark, directs the ATLAS Institute at CU.  His friend directs the Craft Computing Lab for the CS dept.  Mark in particular helped some former students with SBIR grant to bootstrap Modular Robotics.  SBIR might be a useful funding mechanism.  I also worked with Jeff who directs education at Galvanize"
+      },
+      "date": 1522817455790
+    },
+    {
+      "type": "edit",
+      "id": "d97718944cc3c102",
+      "item": {
+        "type": "markdown",
+        "id": "d97718944cc3c102",
+        "text": "I have a long interest in applying computing to education.  There may be collaborations to teach data wrangling.  My former mentor, Mark, directs the ATLAS Institute at CU.  His friend directs the Craft Computing Lab for the CS dept.  Mark in particular helped some former students with SBIR grant to bootstrap Modular Robotics.  SBIR might be a useful funding mechanism.  I also worked with Jeff who is now a Lead Curriculum Developer for Galvanize."
+      },
+      "date": 1522817626710
+    },
+    {
+      "type": "edit",
+      "id": "e9cfa9faa638b921",
+      "item": {
+        "type": "markdown",
+        "id": "e9cfa9faa638b921",
+        "text": "I also find Ward's work on the El Dorado project for New Relic inspiring.\n"
+      },
+      "date": 1522817689488
+    },
+    {
+      "type": "edit",
+      "id": "30d3fca2d546419f",
+      "item": {
+        "type": "markdown",
+        "id": "30d3fca2d546419f",
+        "text": "How can I create something similar to deeply learn how to explore emergence in distributed systems and distributed teams?  How can these lessons be shared in depth?\n"
+      },
+      "date": 1522817845218
+    },
+    {
+      "type": "edit",
+      "id": "6a00f7e557c52c19",
+      "item": {
+        "type": "markdown",
+        "id": "6a00f7e557c52c19",
+        "text": "blockchain or merkle tree offer ways to formalize, publish and track the data supply chain from sources.  The holochain community already working with David and wiki may be interested to help.  The Boulder blockchain enthusiasts may also be interested to help.\n"
+      },
+      "date": 1522817953874
+    },
+    {
+      "type": "edit",
+      "id": "6a00f7e557c52c19",
+      "item": {
+        "type": "markdown",
+        "id": "6a00f7e557c52c19",
+        "text": "blockchain or merkle tree offer ways to formalize, publish and track the data supply chain from sources.  The holochain community already working with David and wiki may be interested to help.  The Boulder blockchain enthusiasts may also be interested to help.\n\n"
+      },
+      "date": 1522817964040
+    },
+    {
+      "type": "add",
+      "id": "37d0a5b88d7cd20a",
+      "item": {
+        "type": "markdown",
+        "id": "37d0a5b88d7cd20a",
+        "text": "Duke introduced me to Cristos at CSU who researches Named Data Networking.  Seems like there are some great privacy stories to tell in connecting dots between NDN and open data."
+      },
+      "after": "6a00f7e557c52c19",
+      "date": 1522818177852
+    },
+    {
+      "type": "edit",
+      "id": "bb173c1488002773",
+      "item": {
+        "type": "paragraph",
+        "id": "bb173c1488002773",
+        "text": "I found inspiration in learning about open data published by City of Boulder, County of Boulder, and State of Colorado.  Could this drive creation of El Dorado in wiki?"
+      },
+      "date": 1522818588906
+    },
+    {
+      "type": "edit",
+      "id": "e9cfa9faa638b921",
+      "item": {
+        "type": "markdown",
+        "id": "e9cfa9faa638b921",
+        "text": "\n"
+      },
+      "date": 1522818595610
+    },
+    {
+      "type": "add",
+      "id": "b4a28778fd2a7fb6",
+      "item": {
+        "type": "paragraph",
+        "id": "b4a28778fd2a7fb6",
+        "text": "See [http://gocode.colorado.gov/about/ go code CO]"
+      },
+      "after": "bb173c1488002773",
+      "date": 1522818761164
+    },
+    {
+      "type": "add",
+      "id": "cc0a78251b371adb",
+      "item": {
+        "type": "paragraph",
+        "id": "cc0a78251b371adb",
+        "text": "See [https://data.colorado.gov/ data.colorado.gov]"
+      },
+      "after": "b4a28778fd2a7fb6",
+      "date": 1522818856614
+    },
+    {
+      "type": "edit",
+      "id": "b4a28778fd2a7fb6",
+      "item": {
+        "type": "paragraph",
+        "id": "b4a28778fd2a7fb6",
+        "text": "See [http://gocode.colorado.gov/about/ Go Code CO] annual competition to build open data software"
+      },
+      "date": 1522818887274
+    },
+    {
+      "type": "edit",
+      "id": "cc0a78251b371adb",
+      "item": {
+        "type": "paragraph",
+        "id": "cc0a78251b371adb",
+        "text": "See [https://data.colorado.gov/ data.colorado.gov] and [https://bouldercolorado.gov/open-data boulder open data]"
+      },
+      "date": 1522818936918
+    },
+    {
+      "type": "add",
+      "id": "c352cff896035663",
+      "item": {
+        "type": "paragraph",
+        "id": "c352cff896035663",
+        "text": "See [[El Dorado UI]]"
+      },
+      "after": "cc0a78251b371adb",
+      "date": 1522819175000
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3b734bdddf8db6f5"
+      },
+      "id": "3b734bdddf8db6f5",
+      "type": "add",
+      "after": "3ef131874229409f",
+      "date": 1522819323320
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "39.92943, -105.33166 Eldorado Canyon State Park, Colorado"
+      },
+      "date": 1522819391216
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Eldorado Canyon State Park, Colorado\n39.92943, -105.33166"
+      },
+      "date": 1522819587706
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Eldorado Canyon State Park, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado"
+      },
+      "date": 1522819638804
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Eldorado Canyon State Park, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder"
+      },
+      "date": 1522819812600
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Eldorado Canyon State Park, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\nBOUNDARY"
+      },
+      "date": 1522819828684
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Eldorado Canyon State Park, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\nBOUNDARY hint"
+      },
+      "date": 1522819836896
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Boulder & Eldorado Canyon, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\nBOUNDARY hint 39.2, -105.26706"
+      },
+      "date": 1522819936066
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Boulder & Eldorado Canyon, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\nBOUNDARY hint 41.0, -105.26706"
+      },
+      "date": 1522820065856
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Boulder & Eldorado Canyon, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\n41.0, -105.26706 BOUNDARY hint "
+      },
+      "date": 1522820078758
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Boulder & Eldorado Canyon, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\nBOUNDARY 40.05, -105.26706"
+      },
+      "date": 1522820125518
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Boulder & Eldorado Canyon, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\nBOUNDARY 40.02, -105.26706"
+      },
+      "date": 1522820132954
+    },
+    {
+      "type": "edit",
+      "id": "3b734bdddf8db6f5",
+      "item": {
+        "type": "map",
+        "id": "3b734bdddf8db6f5",
+        "text": "Boulder & Eldorado Canyon, Colorado\n39.92943, -105.33166 Eldorado Canyon State Park, Colorado\n40.00442, -105.26706 University of Colorado, Boulder\nBOUNDARY 40.01, -105.26706"
+      },
+      "date": 1522820146158
+    },
+    {
+      "type": "move",
+      "order": [
+        "bb173c1488002773",
+        "b4a28778fd2a7fb6",
+        "cc0a78251b371adb",
+        "c352cff896035663",
+        "8fd4c242b07a095a",
+        "e9cfa9faa638b921",
+        "3b734bdddf8db6f5",
+        "8c8ed07674b7a39f",
+        "f5264c4c4f372679",
+        "e8af04243efe1064",
+        "1fc823f866838e13",
+        "5f14f96674071c13",
+        "6b38fabb43850bf5",
+        "9f1024f3512a82e6",
+        "36e2de330082e905",
+        "130ee11623984d64",
+        "c6e852248aa3990e",
+        "e73e677b0ab38839",
+        "32b2b5ceb77f893b",
+        "30d3fca2d546419f",
+        "70fd8058b3b74e74",
+        "02e20b80f74f93f5",
+        "ee54b1a1bb2da24b",
+        "2786963c62a57424",
+        "a54ecf83718ab9c1",
+        "db99aa118af11253",
+        "c82cdc4f17a8061a",
+        "6a00f7e557c52c19",
+        "37d0a5b88d7cd20a",
+        "d97718944cc3c102",
+        "3ef131874229409f"
+      ],
+      "id": "3b734bdddf8db6f5",
+      "date": 1522820179094
+    },
+    {
+      "type": "edit",
+      "id": "8c8ed07674b7a39f",
+      "item": {
+        "type": "markdown",
+        "id": "8c8ed07674b7a39f",
+        "text": "[[Topo Map]] \n"
+      },
+      "date": 1522820248150
+    },
+    {
+      "type": "add",
+      "id": "3c6e8403c19931d1",
+      "item": {
+        "type": "markdown",
+        "id": "3c6e8403c19931d1",
+        "text": "We build systems of rapidly growing complexity.  Experience troubleshooting failures in immensely complex systems often makes me wonder how any of these things work at all. Individual components seem so fragile.  Entanglements between systems seem so pervasive.  Unknown relationships and dependencies lurk in shadow.  Predicting specific failures is impossible.  Yet it is not impressive to predict that there will be catastrophic failures, cascading failures, unintended consequences.\n"
+      },
+      "after": "8c8ed07674b7a39f",
+      "date": 1522820251096
+    },
+    {
+      "type": "remove",
+      "id": "8c8ed07674b7a39f",
+      "date": 1522820367724
+    },
+    {
+      "type": "move",
+      "order": [
+        "bb173c1488002773",
+        "b4a28778fd2a7fb6",
+        "cc0a78251b371adb",
+        "c352cff896035663",
+        "e9cfa9faa638b921",
+        "3b734bdddf8db6f5",
+        "8fd4c242b07a095a",
+        "3c6e8403c19931d1",
+        "f5264c4c4f372679",
+        "e8af04243efe1064",
+        "1fc823f866838e13",
+        "5f14f96674071c13",
+        "6b38fabb43850bf5",
+        "9f1024f3512a82e6",
+        "36e2de330082e905",
+        "130ee11623984d64",
+        "c6e852248aa3990e",
+        "e73e677b0ab38839",
+        "32b2b5ceb77f893b",
+        "30d3fca2d546419f",
+        "70fd8058b3b74e74",
+        "02e20b80f74f93f5",
+        "ee54b1a1bb2da24b",
+        "2786963c62a57424",
+        "a54ecf83718ab9c1",
+        "db99aa118af11253",
+        "c82cdc4f17a8061a",
+        "6a00f7e557c52c19",
+        "37d0a5b88d7cd20a",
+        "d97718944cc3c102",
+        "3ef131874229409f"
+      ],
+      "id": "8fd4c242b07a095a",
+      "date": 1522820381510
+    },
+    {
+      "type": "remove",
+      "id": "3ef131874229409f",
+      "date": 1522820419800
+    },
+    {
+      "type": "fork",
+      "site": "wiki.dbbs.co",
+      "date": 1593006319526
+    }
+  ]
+}

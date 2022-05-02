@@ -1,0 +1,120 @@
+{
+  "title": "PeaceHealth Rides",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "955d11bb770f2e2e",
+      "text": "See [[Peace Health Rides]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "PeaceHealth Rides",
+        "story": []
+      },
+      "date": 1524279437598
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "955d11bb770f2e2e"
+      },
+      "id": "955d11bb770f2e2e",
+      "type": "add",
+      "date": 1524279439514
+    },
+    {
+      "type": "edit",
+      "id": "955d11bb770f2e2e",
+      "item": {
+        "type": "paragraph",
+        "id": "955d11bb770f2e2e",
+        "text": "PeaceHealth Rides is a network of bike share stations, where users can pick up and drop off publicly available bicycles for one-way trips across the city. These bikes are smart and sharp, with GPS tracking and built-in safety features.\n"
+      },
+      "date": 1524279462813
+    },
+    {
+      "type": "edit",
+      "id": "955d11bb770f2e2e",
+      "item": {
+        "type": "paragraph",
+        "id": "955d11bb770f2e2e",
+        "text": "PeaceHealth Rides is a network of bike share stations, where users can pick up and drop off publicly available bicycles for one-way trips across the city. These bikes are smart and sharp, with GPS tracking and built-in safety features.\n[https://www.peacehealthrides.com/ site]"
+      },
+      "date": 1524279486004
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "32f2d3afebe2c1c1"
+      },
+      "id": "32f2d3afebe2c1c1",
+      "type": "add",
+      "after": "955d11bb770f2e2e",
+      "date": 1524279562029
+    },
+    {
+      "type": "edit",
+      "id": "32f2d3afebe2c1c1",
+      "item": {
+        "type": "bikeshare",
+        "id": "32f2d3afebe2c1c1",
+        "text": "PeaceHealth, Eugene's Bikeshare\nData Feed by Social Rides\nSTATION http://peacehealthrides.socialbicycles.com/opendata/station_information.json\nNEARBY"
+      },
+      "date": 1524279627774
+    },
+    {
+      "type": "edit",
+      "id": "32f2d3afebe2c1c1",
+      "item": {
+        "type": "bikeshare",
+        "id": "32f2d3afebe2c1c1",
+        "text": "PeaceHealth, Eugene's Bikeshare\nData Feed by Social Bicycles\nSTATION http://peacehealthrides.socialbicycles.com/opendata/station_information.json\nNEARBY"
+      },
+      "date": 1524279650009
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "cbae85a012907474",
+        "text": "See [[Street Map]] for station locations."
+      },
+      "after": "32f2d3afebe2c1c1",
+      "id": "cbae85a012907474",
+      "date": 1524279664213
+    },
+    {
+      "type": "edit",
+      "id": "32f2d3afebe2c1c1",
+      "item": {
+        "type": "bikeshare",
+        "id": "32f2d3afebe2c1c1",
+        "text": "PeaceHealth, Eugene's Bikeshare\nData Feed by Social Bicycles\nSTATION http://peacehealth.socialbicycles.com/opendata/station_information.json\nNEARBY"
+      },
+      "date": 1524280009257
+    },
+    {
+      "type": "remove",
+      "id": "cbae85a012907474",
+      "date": 1568925090985
+    },
+    {
+      "type": "remove",
+      "id": "32f2d3afebe2c1c1",
+      "date": 1568925100147
+    },
+    {
+      "type": "edit",
+      "id": "955d11bb770f2e2e",
+      "item": {
+        "type": "paragraph",
+        "id": "955d11bb770f2e2e",
+        "text": "See [[Peace Health Rides]]"
+      },
+      "date": 1568925117282
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "title": "Testing Map Keywords",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "4663b33a62a2eca8",
+      "text": "We add LINEUP and BOUNDARY keywords to the parser."
+    },
+    {
+      "type": "map",
+      "id": "19bffdc41023deaf",
+      "text": "51.55, 0.0 Chandos Road\nBOUNDARY\nLINEUP\nZoom Back to See LINEUP"
+    },
+    {
+      "type": "paragraph",
+      "id": "912fb44a198a4977",
+      "text": "Now we mess with the keyword order."
+    },
+    {
+      "type": "map",
+      "id": "8f9c5f579268c8bf",
+      "text": "51.55, 0.0 Chandos Road\nLINEUP\nDefault BOUNDARY Includes LINEUP"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Testing Map Keywords",
+        "story": []
+      },
+      "date": 1467694918626
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4663b33a62a2eca8"
+      },
+      "id": "4663b33a62a2eca8",
+      "type": "add",
+      "date": 1467694920500
+    },
+    {
+      "type": "edit",
+      "id": "4663b33a62a2eca8",
+      "item": {
+        "type": "paragraph",
+        "id": "4663b33a62a2eca8",
+        "text": "We add LINEUP and BOUNDARY keywords to the parser."
+      },
+      "date": 1467694949600
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "map",
+        "id": "19bffdc41023deaf",
+        "text": "51.55, 0.0 Chandos Road\nLINEUP\nZoom Back to See Lineup"
+      },
+      "after": "4663b33a62a2eca8",
+      "id": "19bffdc41023deaf",
+      "date": 1467694964496
+    },
+    {
+      "type": "edit",
+      "id": "19bffdc41023deaf",
+      "item": {
+        "type": "map",
+        "id": "19bffdc41023deaf",
+        "text": "51.55, 0.0 Chandos Road\nBOUNDARY\nLINEUP\nZoom Back to See Lineup"
+      },
+      "date": 1467695718225
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8f9c5f579268c8bf"
+      },
+      "id": "8f9c5f579268c8bf",
+      "type": "add",
+      "after": "19bffdc41023deaf",
+      "date": 1467695807935
+    },
+    {
+      "type": "edit",
+      "id": "8f9c5f579268c8bf",
+      "item": {
+        "type": "map",
+        "id": "8f9c5f579268c8bf",
+        "text": "51.55, 0.0 Chandos Road\nLINEUP\nDefault BOUNDARY Includes LINEUP"
+      },
+      "date": 1467695887915
+    },
+    {
+      "type": "edit",
+      "id": "19bffdc41023deaf",
+      "item": {
+        "type": "map",
+        "id": "19bffdc41023deaf",
+        "text": "51.55, 0.0 Chandos Road\nBOUNDARY\nLINEUP\nZoom Back to See LINEUP"
+      },
+      "date": 1467695939290
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "912fb44a198a4977"
+      },
+      "id": "912fb44a198a4977",
+      "type": "add",
+      "after": "8f9c5f579268c8bf",
+      "date": 1467695978202
+    },
+    {
+      "type": "edit",
+      "id": "912fb44a198a4977",
+      "item": {
+        "type": "paragraph",
+        "id": "912fb44a198a4977",
+        "text": "The keyword order determines what order data, bounds and lineup are examined."
+      },
+      "date": 1467696054691
+    },
+    {
+      "type": "move",
+      "order": [
+        "4663b33a62a2eca8",
+        "19bffdc41023deaf",
+        "912fb44a198a4977",
+        "8f9c5f579268c8bf"
+      ],
+      "id": "912fb44a198a4977",
+      "date": 1467696061666
+    },
+    {
+      "type": "edit",
+      "id": "912fb44a198a4977",
+      "item": {
+        "type": "paragraph",
+        "id": "912fb44a198a4977",
+        "text": "Now we mess with the keyword order."
+      },
+      "date": 1467696080469
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1467730766942
+    }
+  ]
+}

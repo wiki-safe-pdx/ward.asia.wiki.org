@@ -1,0 +1,222 @@
+{
+  "title": "Historical Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "f13a9874290292dc",
+      "text": "The original wiki consists of 36,000 pages authored over two decades and now frozen as a historical artifact. Considerable computing vocabulary emerged in this wiki as working developers shared original thinking about software patterns, design methods and programming practices."
+    },
+    {
+      "type": "paragraph",
+      "id": "247aa69df9608b53",
+      "text": "We propose a modern setting that conveys the diversity of thought present without the tedious inspection heavily linked but mostly disorganized information architecture. This would likely include excerpted, summarized, featured and favorite passages. Algorithmic methods could range from table driven, heuristic and/or natural language processing."
+    },
+    {
+      "type": "paragraph",
+      "id": "0c14459a55d04197",
+      "text": "Restoration would require some character set conversion as the flat-file database predates the ft8 standard for the web. Some pages are damaged by spam but are believed to exist unadulterated in backup copies."
+    },
+    {
+      "type": "paragraph",
+      "id": "1609d7f29d3d261d",
+      "text": "Preservation would require well documented methods for reprocessing after the very occasional request to be forgotten."
+    },
+    {
+      "type": "paragraph",
+      "id": "265da90811b80f0e",
+      "text": "Presentation would presumably be based on modern web technology of the project team's choice but with longevity in mind."
+    },
+    {
+      "type": "pagefold",
+      "id": "ee9fe41b87744ca7",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "f70c00a77af76fe3",
+      "text": "Capstone sponsors. [http://wiki.cs.pdx.edu/capstone/sponsors page]"
+    },
+    {
+      "type": "assets",
+      "id": "43249c295db6e555",
+      "text": "pages/historical-wiki"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Historical Wiki",
+        "story": []
+      },
+      "date": 1571517386027
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f13a9874290292dc"
+      },
+      "id": "f13a9874290292dc",
+      "type": "add",
+      "date": 1571517390882
+    },
+    {
+      "type": "edit",
+      "id": "f13a9874290292dc",
+      "item": {
+        "type": "paragraph",
+        "id": "f13a9874290292dc",
+        "text": "The original wiki consists of 36000"
+      },
+      "date": 1571517462135
+    },
+    {
+      "type": "edit",
+      "id": "f13a9874290292dc",
+      "item": {
+        "type": "paragraph",
+        "id": "f13a9874290292dc",
+        "text": "The original wiki consists of 36,000 pages authored over two decades and now frozen as a historical artifact representing the original thinking about software patterns, design methods and programming practices."
+      },
+      "date": 1571517744824
+    },
+    {
+      "type": "add",
+      "id": "247aa69df9608b53",
+      "item": {
+        "type": "paragraph",
+        "id": "247aa69df9608b53",
+        "text": "We offer to sponsor a university capstone project to restore, preserve and present a read-only and modern web friendly "
+      },
+      "after": "f13a9874290292dc",
+      "date": 1571518205073
+    },
+    {
+      "type": "edit",
+      "id": "f13a9874290292dc",
+      "item": {
+        "type": "paragraph",
+        "id": "f13a9874290292dc",
+        "text": "The original wiki consists of 36,000 pages authored over two decades and now frozen as a historical artifact. Considerable computing vocabulary emerged in this wiki as working developers shared original thinking about software patterns, design methods and programming practices."
+      },
+      "date": 1571518348557
+    },
+    {
+      "type": "edit",
+      "id": "247aa69df9608b53",
+      "item": {
+        "type": "paragraph",
+        "id": "247aa69df9608b53",
+        "text": "We propose a modern setting that conveys the diversity of thought present without the tedious inspection heavily linked but mostly disorganized information architecture. This would likely include excerpted, summarized, featured and favorite passages. Algorithmic methods could range from table driven, heuristic and/or natural language processing."
+      },
+      "date": 1571519582826
+    },
+    {
+      "type": "add",
+      "id": "0c14459a55d04197",
+      "item": {
+        "type": "paragraph",
+        "id": "0c14459a55d04197",
+        "text": "Restoration would require some character set conversion as the flat-file database predates the ft8 standard for the web. Some pages are damaged by spam but are belived to exist unadulterated in backup copies."
+      },
+      "after": "247aa69df9608b53",
+      "date": 1571520050078
+    },
+    {
+      "type": "add",
+      "id": "1609d7f29d3d261d",
+      "item": {
+        "type": "paragraph",
+        "id": "1609d7f29d3d261d",
+        "text": "Preservation would require well documented methods for reprocessing after the very occasional request to be forgotten."
+      },
+      "after": "0c14459a55d04197",
+      "date": 1571520246495
+    },
+    {
+      "type": "add",
+      "id": "265da90811b80f0e",
+      "item": {
+        "type": "paragraph",
+        "id": "265da90811b80f0e",
+        "text": "Presentation would presumably be based on modern web technology of the project team's choice but with longevity in mind."
+      },
+      "after": "1609d7f29d3d261d",
+      "date": 1571520382053
+    },
+    {
+      "type": "edit",
+      "id": "0c14459a55d04197",
+      "item": {
+        "type": "paragraph",
+        "id": "0c14459a55d04197",
+        "text": "Restoration would require some character set conversion as the flat-file database predates the ft8 standard for the web. Some pages are damaged by spam but are believed to exist unadulterated in backup copies."
+      },
+      "date": 1571586074512
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ee9fe41b87744ca7"
+      },
+      "id": "ee9fe41b87744ca7",
+      "type": "add",
+      "after": "265da90811b80f0e",
+      "date": 1571588983523
+    },
+    {
+      "type": "edit",
+      "id": "ee9fe41b87744ca7",
+      "item": {
+        "type": "pagefold",
+        "id": "ee9fe41b87744ca7",
+        "text": "."
+      },
+      "date": 1571588987962
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f70c00a77af76fe3"
+      },
+      "id": "f70c00a77af76fe3",
+      "type": "add",
+      "after": "ee9fe41b87744ca7",
+      "date": 1571588992073
+    },
+    {
+      "type": "edit",
+      "id": "f70c00a77af76fe3",
+      "item": {
+        "type": "paragraph",
+        "id": "f70c00a77af76fe3",
+        "text": "Capstone sponsors. [http://wiki.cs.pdx.edu/capstone/sponsors page]"
+      },
+      "date": 1571589022308
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "43249c295db6e555"
+      },
+      "id": "43249c295db6e555",
+      "type": "add",
+      "after": "f70c00a77af76fe3",
+      "date": 1571596945189
+    },
+    {
+      "type": "edit",
+      "id": "43249c295db6e555",
+      "item": {
+        "type": "assets",
+        "id": "43249c295db6e555",
+        "text": "pages/historical-wiki"
+      },
+      "date": 1571596981261
+    },
+    {
+      "type": "fork",
+      "date": 1571597113471
+    }
+  ]
+}

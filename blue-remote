@@ -1,0 +1,136 @@
+{
+  "title": "Blue Remote",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "94b8d0a6cf4ee68e",
+      "text": "A page retrieved from a site other than the origin are shown with a blue border."
+    },
+    {
+      "type": "markdown",
+      "id": "8f7ea2b6af99f439",
+      "text": "# State"
+    },
+    {
+      "type": "paragraph",
+      "id": "d6bc2959f5445ae5",
+      "text": "Blue bordered pages show when there is no page with the same title on the origin server. "
+    },
+    {
+      "type": "markdown",
+      "id": "72d732cee3761e17",
+      "text": "# Transition"
+    },
+    {
+      "type": "paragraph",
+      "id": "825a20a4e760fdc9",
+      "text": "Any fork, whether implicit from editing or explicit from the fork button will copy the remote page \"closer\" to the reader. Closer could be a [[White Origin]] or [[Yellow Local]] page."
+    },
+    {
+      "type": "graph",
+      "id": "b184221dfadb2081",
+      "text": "HERE\nHERE --> White Origin\nHERE --> Yellow Local"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ed90f39e81b9eca",
+      "text": "See [[Graphviz]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Blue Remote",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "94b8d0a6cf4ee68e",
+            "text": "Describe a place in the flow."
+          },
+          {
+            "type": "markdown",
+            "id": "8f7ea2b6af99f439",
+            "text": "# State"
+          },
+          {
+            "type": "paragraph",
+            "id": "d6bc2959f5445ae5",
+            "text": "What happens in this state."
+          },
+          {
+            "type": "markdown",
+            "id": "72d732cee3761e17",
+            "text": "# Transition"
+          },
+          {
+            "type": "paragraph",
+            "id": "825a20a4e760fdc9",
+            "text": "What takes us to another state."
+          },
+          {
+            "type": "graph",
+            "id": "b184221dfadb2081",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "8ed90f39e81b9eca",
+            "text": "See [[Graphviz]]"
+          }
+        ]
+      },
+      "date": 1495210651963
+    },
+    {
+      "type": "edit",
+      "id": "94b8d0a6cf4ee68e",
+      "item": {
+        "type": "paragraph",
+        "id": "94b8d0a6cf4ee68e",
+        "text": "A page retrieved from a site other than the origin are shown with a blue border."
+      },
+      "date": 1495210699664
+    },
+    {
+      "type": "edit",
+      "id": "d6bc2959f5445ae5",
+      "item": {
+        "type": "paragraph",
+        "id": "d6bc2959f5445ae5",
+        "text": "Blue bordered pages show when there is no page with the same title on the origin server. "
+      },
+      "date": 1495210899883
+    },
+    {
+      "type": "edit",
+      "id": "825a20a4e760fdc9",
+      "item": {
+        "type": "paragraph",
+        "id": "825a20a4e760fdc9",
+        "text": "Any fork, whether implicit from editing or explicit from the fork button will copy the remote page \"closer\" to the reader. Closer could be a [[White Origin]] or [[Yellow Local]] page."
+      },
+      "date": 1495211054773
+    },
+    {
+      "type": "edit",
+      "id": "b184221dfadb2081",
+      "item": {
+        "type": "graph",
+        "id": "b184221dfadb2081",
+        "text": "HERE\nHERE --> White Origin"
+      },
+      "date": 1495211074905
+    },
+    {
+      "type": "edit",
+      "id": "b184221dfadb2081",
+      "item": {
+        "type": "graph",
+        "id": "b184221dfadb2081",
+        "text": "HERE\nHERE --> White Origin\nHERE --> Yellow Local"
+      },
+      "date": 1495211081152
+    }
+  ]
+}

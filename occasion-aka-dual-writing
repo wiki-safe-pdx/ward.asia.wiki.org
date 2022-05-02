@@ -1,0 +1,201 @@
+{
+  "title": "Occasion, aka \"Dual Writing\"",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "771526fd0011b786",
+      "text": "The \"atomic\" aspect of ACID DB transactions which makes writing records be an actual occasion (rather than an event that isn't an actual occasion, aka \"dual writing\"), situated within processing command and events in system. "
+    },
+    {
+      "type": "reference",
+      "id": "2c6cf5c960763c42",
+      "site": "anw.fed.wiki",
+      "slug": "part-ii-chapt-ii-sect-ii",
+      "title": "Part II Chapt II Sect II",
+      "text": "This account of 'presentational immediacy' presupposes two metaphysical assumptions:"
+    },
+    {
+      "type": "markdown",
+      "text": "> But this concern with a temporal and spatial sub-region  means that the datum of the prehension in question is the actual world,  objectified with the perspective due to that sub-region. A prehension, however, acquires subjective form, and this subjective form is only rendered  fully determinate by integration with conceptual prehensions belonging to  the mental pole of the res vera. ",
+      "id": "5498429086608330"
+    },
+    {
+      "type": "code",
+      "id": "5a67e9f279ec3cfd",
+      "text": "x = x + 1 "
+    },
+    {
+      "type": "factory",
+      "id": "5e945c324f253024"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Occasion, aka \"Dual Writing\"",
+        "story": []
+      },
+      "date": 1583097302155
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "771526fd0011b786"
+      },
+      "id": "771526fd0011b786",
+      "type": "add",
+      "date": 1583097323579
+    },
+    {
+      "type": "edit",
+      "id": "771526fd0011b786",
+      "item": {
+        "type": "paragraph",
+        "id": "771526fd0011b786",
+        "text": "e \"atomic\" aspect of ACID DB transactions which makes writing records be an actual occasion (rather than an event that isn't an actual occasion, aka \"dual writing\"), situated within processing command and events in system. "
+      },
+      "date": 1583097333575
+    },
+    {
+      "type": "edit",
+      "id": "771526fd0011b786",
+      "item": {
+        "type": "paragraph",
+        "id": "771526fd0011b786",
+        "text": "The \"atomic\" aspect of ACID DB transactions which makes writing records be an actual occasion (rather than an event that isn't an actual occasion, aka \"dual writing\"), situated within processing command and events in system. "
+      },
+      "date": 1583097344475
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2c6cf5c960763c42"
+      },
+      "id": "2c6cf5c960763c42",
+      "type": "add",
+      "after": "771526fd0011b786",
+      "date": 1583097456862
+    },
+    {
+      "type": "edit",
+      "id": "2c6cf5c960763c42",
+      "item": {
+        "type": "reference",
+        "id": "2c6cf5c960763c42",
+        "site": "anw.fed.wiki",
+        "slug": "part-ii-chapt-ii-sect-ii",
+        "title": "Part II Chapt II Sect II",
+        "text": "This account of 'presentational immediacy' presupposes two metaphysical assumptions:"
+      },
+      "date": 1583097466733
+    },
+    {
+      "type": "edit",
+      "id": "3601173524895348",
+      "item": {
+        "type": "paragraph",
+        "text": " Extension is the most general scheme of real potentiality, providing the background for all other organic relations. The  potential scheme does not determine its own atomization by actual entities. It is divisible; but its real division by actual entities depends upon.",
+        "id": "3601173524895348"
+      },
+      "date": 1583097556340
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5a67e9f279ec3cfd"
+      },
+      "id": "5a67e9f279ec3cfd",
+      "type": "add",
+      "after": "3601173524895348",
+      "date": 1583097609714
+    },
+    {
+      "type": "edit",
+      "id": "5a67e9f279ec3cfd",
+      "item": {
+        "type": "factory",
+        "id": "5a67e9f279ec3cfd",
+        "text": "x = x + 1"
+      },
+      "date": 1583097630453
+    },
+    {
+      "type": "edit",
+      "id": "5a67e9f279ec3cfd",
+      "item": {
+        "type": "code",
+        "id": "5a67e9f279ec3cfd",
+        "text": "x = x + 1 "
+      },
+      "date": 1583097636646
+    },
+    {
+      "id": "5a67e9f279ec3cfd",
+      "type": "move",
+      "order": [
+        "771526fd0011b786",
+        "2c6cf5c960763c42",
+        "5a67e9f279ec3cfd"
+      ],
+      "date": 1583097671783
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1583097759008
+    },
+    {
+      "id": "5498429086608330",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "text": "The res vera, in its character of concrete satisfaction, is divisible into  prehensions which concern its first temporal half and into prehensions  which concern its second temporal half. This divisibility is what constitutes  its extensiveness. But this concern with a temporal and spatial sub-region  means that the datum of the prehension in question is the actual world,  objectified with the perspective due to that sub-region. A prehension, however, acquires subjective form, and this subjective form is only rendered  fully determinate by integration with conceptual prehensions belonging to  the mental pole of the res vera. The concrescence is dominated by a subjective aim which essentially concerns the creature as a final superject. This  subjective aim is this subject itself determining its own self-creation as one  creature. Thus the subjective aim does not share in this divisibility. If we  confine attention to prehensions concerned with the earlier half, their subjective forms have arisen from nothing. For the subjective aim which belongs to the whole is now excluded. Thus the evolution of subjective form  could not be referred to any actuality. The ontological principle has been ",
+        "id": "5498429086608330"
+      },
+      "after": "771526fd0011b786",
+      "date": 1583097778218
+    },
+    {
+      "type": "edit",
+      "id": "5498429086608330",
+      "item": {
+        "type": "paragraph",
+        "text": "But this concern with a temporal and spatial sub-region  means that the datum of the prehension in question is the actual world,  objectified with the perspective due to that sub-region. A prehension, however, acquires subjective form, and this subjective form is only rendered  fully determinate by integration with conceptual prehensions belonging to  the mental pole of the res vera. ",
+        "id": "5498429086608330"
+      },
+      "date": 1583097802983
+    },
+    {
+      "id": "2c6cf5c960763c42",
+      "type": "move",
+      "order": [
+        "771526fd0011b786",
+        "2c6cf5c960763c42",
+        "5498429086608330",
+        "5a67e9f279ec3cfd"
+      ],
+      "date": 1583097807333
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5e945c324f253024"
+      },
+      "id": "5e945c324f253024",
+      "type": "add",
+      "after": "5a67e9f279ec3cfd",
+      "date": 1583097843621
+    },
+    {
+      "type": "edit",
+      "id": "5498429086608330",
+      "item": {
+        "type": "markdown",
+        "text": "> But this concern with a temporal and spatial sub-region  means that the datum of the prehension in question is the actual world,  objectified with the perspective due to that sub-region. A prehension, however, acquires subjective form, and this subjective form is only rendered  fully determinate by integration with conceptual prehensions belonging to  the mental pole of the res vera. ",
+        "id": "5498429086608330"
+      },
+      "date": 1583098129167
+    }
+  ]
+}

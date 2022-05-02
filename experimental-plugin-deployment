@@ -1,0 +1,615 @@
+{
+  "title": "Experimental Plugin Deployment",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "361e02f78972e0dc",
+      "text": "We have Plugmatic which greatly simplifies installing and upgrading published plugins. We ask here, how can we extend this convenience to new plugin development."
+    },
+    {
+      "type": "paragraph",
+      "id": "57e5cd3d70a73a25",
+      "text": "See [[Mixed Content]] where we motivate our use of plugins."
+    },
+    {
+      "type": "paragraph",
+      "id": "927a0e7ecd6f05f8",
+      "text": "See [[Plugin Catalog]] where management thinking began."
+    },
+    {
+      "type": "markdown",
+      "id": "17c47923ca02ffce",
+      "text": "# Types"
+    },
+    {
+      "type": "paragraph",
+      "id": "f66323da5d08fd73",
+      "text": "A wiki page is filled with items that are rendered by plugins retrieved by name based on the type field of each item."
+    },
+    {
+      "type": "paragraph",
+      "id": "13be7777bb04b4a7",
+      "text": "Item types are drawn from a flat namespace of single words like 'paragraph' or 'morseteacher'. We might camel-case these names in documentation but only lowercase ascii letters, a-z, are used in types."
+    },
+    {
+      "type": "paragraph",
+      "id": "fd47c98c3e2a7539",
+      "text": "Item types extend json, a format which claims to be without revisions. We similarly ignore any notion of revision for plugins at the level of json where we aspire for longevity. We expect every plugin to be tolerant of markup it doesn't understand even if it only renders raw markup and a plea for help. We presume the Journal will provide future historians enough clues to read our writing."
+    },
+    {
+      "type": "markdown",
+      "id": "90d13a2b98799f8a",
+      "text": "# Versions"
+    },
+    {
+      "type": "paragraph",
+      "id": "f4443457d5a07ded",
+      "text": "Two threads join at the origin server. One maintains that types are flat and simple, the other recognizes the complexity of building and installing software."
+    },
+    {
+      "type": "graph",
+      "id": "bdd6f44693245502",
+      "text": "Type --> Fetch --> Origin --> Emit\nBuild --> Publish --> Install --> Origin"
+    },
+    {
+      "type": "paragraph",
+      "id": "2fcae0c9afa56e2d",
+      "text": "We've chosen to install plugins with npm. Given this we have several choices as to where in the build thread diversity is collapsed into simplicity."
+    },
+    {
+      "type": "paragraph",
+      "id": "5f04eaad5094b1c7",
+      "text": "Install step could choose a version to be installed. The command line npm offers many variations. Only selecting by version number is supported through plugmatic installs."
+    },
+    {
+      "type": "paragraph",
+      "id": "bf40ac254d0b58f4",
+      "text": "Origin serving step could choose from multiply installed versions in parallel namespaces. This is awkward because in many places the code assumes a choice has already been made."
+    },
+    {
+      "type": "paragraph",
+      "id": "62fa0edcf04a1338",
+      "text": "Publish step could create more choices to be selected from later in the thread. Plugmatic expected metadata from npm, but this could be done without when publishing to github or other git repo. The complexity is then in Plugmatic. "
+    },
+    {
+      "type": "paragraph",
+      "id": "afbd7a79dd962c02",
+      "text": "Publish step could be faked with a proxy in front of npm that substitutes experimental code without the downstream install realizing the difference."
+    },
+    {
+      "type": "paragraph",
+      "id": "3d257c1c48c9d006",
+      "text": "We've considered all of these approaches and find no clear winner. We explain the problem in this detail here hoping that yet another alternative might surface."
+    },
+    {
+      "type": "pagefold",
+      "id": "c5b47a2a7d939802",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "718374532ca839cd",
+      "text": "Much of what I've been working on in federated wiki for the past few years falls in the Build -> Publish -> Install branch in that graph, and mostly with docker.  Still working on a process to include experimental plugins in my docker compositions."
+    },
+    {
+      "type": "reference",
+      "id": "624c9899617e0718",
+      "site": "local-farm.wiki.dbbs.co",
+      "slug": "local-farm",
+      "title": "Local Farm",
+      "text": "This kind of farm, which is also a [[Laptop Server]], is configured so one person owns all of the subdomains.  It is intended to be 1) a relatively easy way to [[start your own local wiki farm]], and 2) a helpful example of how to configure various components.  We share configurations for [[Docker]] and docker-compose to offer more detailed conversation."
+    },
+    {
+      "type": "paragraph",
+      "id": "808a0506e1bb15c0",
+      "text": "Most of my early docker experiments were searching for different parts of the puzzle that grew up to be [[Local Farm]].  [https://github.com/dobbs/container-terminal github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "77d5cc3da27bc3bb",
+      "text": "• There's a git service described in the README for the container-terminal experiments.  I imagined that thing acting as a local git repo to self-host the wiki code and my (future) experimental plugins"
+    },
+    {
+      "type": "paragraph",
+      "id": "905e65d928a02525",
+      "text": "• There's a DNS service which has been replaced by localtest.me in recent experiments.  [https://github.com/dobbs/container-terminal/blob/master/yak/notes-to-self.org#where-is-the-yak-i-need-to-shave yak shaving at github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "d43c2fc2d68327cb",
+      "text": "• In the Yak Shaving example there are early attmpts about providing TLS with hashicorp's vault.  Those are replaced with a Caddy reverse proxy using self-signed certs in the Local Farm previously mentioned."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Experimental Plugin Deployment",
+        "story": []
+      },
+      "date": 1506793556154
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "361e02f78972e0dc"
+      },
+      "id": "361e02f78972e0dc",
+      "type": "add",
+      "date": 1506793558347
+    },
+    {
+      "type": "edit",
+      "id": "361e02f78972e0dc",
+      "item": {
+        "type": "paragraph",
+        "id": "361e02f78972e0dc",
+        "text": "We have Plugmatic which greatly simplifies installing and upgrading published plugins. We ask here, how can we extend this convenience to new plugin development."
+      },
+      "date": 1506793686885
+    },
+    {
+      "type": "add",
+      "id": "927a0e7ecd6f05f8",
+      "item": {
+        "type": "paragraph",
+        "id": "927a0e7ecd6f05f8",
+        "text": "See [[Plugin Catalog]] where much of this thinking began."
+      },
+      "after": "361e02f78972e0dc",
+      "date": 1506793713061
+    },
+    {
+      "type": "add",
+      "id": "57e5cd3d70a73a25",
+      "item": {
+        "type": "paragraph",
+        "id": "57e5cd3d70a73a25",
+        "text": "See [[Mixed Content]] where we motivate our use of plugins."
+      },
+      "after": "927a0e7ecd6f05f8",
+      "date": 1506793860576
+    },
+    {
+      "type": "edit",
+      "id": "927a0e7ecd6f05f8",
+      "item": {
+        "type": "paragraph",
+        "id": "927a0e7ecd6f05f8",
+        "text": "See [[Plugin Catalog]] where our management thinking began."
+      },
+      "date": 1506793887534
+    },
+    {
+      "type": "edit",
+      "id": "927a0e7ecd6f05f8",
+      "item": {
+        "type": "paragraph",
+        "id": "927a0e7ecd6f05f8",
+        "text": "See [[Plugin Catalog]] where management thinking began."
+      },
+      "date": 1506793893687
+    },
+    {
+      "type": "move",
+      "order": [
+        "361e02f78972e0dc",
+        "57e5cd3d70a73a25",
+        "927a0e7ecd6f05f8"
+      ],
+      "id": "57e5cd3d70a73a25",
+      "date": 1506793901794
+    },
+    {
+      "type": "add",
+      "id": "f66323da5d08fd73",
+      "item": {
+        "type": "paragraph",
+        "id": "f66323da5d08fd73",
+        "text": "A wiki page is filled with items that are rendered by plugins retrieved by name based on the type field of each item."
+      },
+      "after": "927a0e7ecd6f05f8",
+      "date": 1506794263476
+    },
+    {
+      "type": "add",
+      "id": "13be7777bb04b4a7",
+      "item": {
+        "type": "paragraph",
+        "id": "13be7777bb04b4a7",
+        "text": "Item types are drawn from a flat namespace of single words like 'paragraph' or 'morseteacher'."
+      },
+      "after": "f66323da5d08fd73",
+      "date": 1506794407327
+    },
+    {
+      "type": "edit",
+      "id": "13be7777bb04b4a7",
+      "item": {
+        "type": "paragraph",
+        "id": "13be7777bb04b4a7",
+        "text": "Item types are drawn from a flat namespace of single words like 'paragraph' or 'morseteacher'. In documentation we might camel-case these names but only lowercase ascii letters, a-z, are used in types."
+      },
+      "date": 1506794539460
+    },
+    {
+      "type": "edit",
+      "id": "13be7777bb04b4a7",
+      "item": {
+        "type": "paragraph",
+        "id": "13be7777bb04b4a7",
+        "text": "Item types are drawn from a flat namespace of single words like 'paragraph' or 'morseteacher'. We might camel-case these names in documentation but only lowercase ascii letters, a-z, are used in types."
+      },
+      "date": 1506794572187
+    },
+    {
+      "type": "add",
+      "id": "fd47c98c3e2a7539",
+      "item": {
+        "type": "paragraph",
+        "id": "fd47c98c3e2a7539",
+        "text": "Item types extend json, a format which claims to be without revisions. We similarly ignore any notion of revision for plugins at the level of json where we aspire for longevity. We expect every plugin to be tolerant of markup it doesn't understand even if it only renders raw markup and a plea for help. "
+      },
+      "after": "13be7777bb04b4a7",
+      "date": 1506795379773
+    },
+    {
+      "type": "edit",
+      "id": "fd47c98c3e2a7539",
+      "item": {
+        "type": "paragraph",
+        "id": "fd47c98c3e2a7539",
+        "text": "Item types extend json, a format which claims to be without revisions. We similarly ignore any notion of revision for plugins at the level of json where we aspire for longevity. We expect every plugin to be tolerant of markup it doesn't understand even if it only renders raw markup and a plea for help. We presume the Journal will provide future historians enough clues to read most of what we write."
+      },
+      "date": 1506795439794
+    },
+    {
+      "type": "edit",
+      "id": "fd47c98c3e2a7539",
+      "item": {
+        "type": "paragraph",
+        "id": "fd47c98c3e2a7539",
+        "text": "Item types extend json, a format which claims to be without revisions. We similarly ignore any notion of revision for plugins at the level of json where we aspire for longevity. We expect every plugin to be tolerant of markup it doesn't understand even if it only renders raw markup and a plea for help. We presume the Journal will provide future historians enough clues to read our writing."
+      },
+      "date": 1506795473515
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bdd6f44693245502"
+      },
+      "id": "bdd6f44693245502",
+      "type": "add",
+      "after": "fd47c98c3e2a7539",
+      "date": 1506795535049
+    },
+    {
+      "type": "edit",
+      "id": "bdd6f44693245502",
+      "item": {
+        "type": "graph",
+        "id": "bdd6f44693245502",
+        "text": "Type --> Fetch --> Origin --> Emit\nBuild --> Publish --> Install --> Origin"
+      },
+      "date": 1506795671699
+    },
+    {
+      "type": "fork",
+      "date": 1506795780804
+    },
+    {
+      "type": "add",
+      "id": "f4443457d5a07ded",
+      "item": {
+        "type": "paragraph",
+        "id": "f4443457d5a07ded",
+        "text": "Two threads join at the origin server. One maintains that types are flat and simple, the other recognizes the complexity of building and and installing software."
+      },
+      "after": "fd47c98c3e2a7539",
+      "date": 1506796116914
+    },
+    {
+      "type": "add",
+      "id": "17c47923ca02ffce",
+      "item": {
+        "type": "paragraph",
+        "id": "17c47923ca02ffce",
+        "text": "# Types"
+      },
+      "after": "927a0e7ecd6f05f8",
+      "date": 1506796380610
+    },
+    {
+      "type": "edit",
+      "id": "17c47923ca02ffce",
+      "item": {
+        "type": "markdown",
+        "id": "17c47923ca02ffce",
+        "text": "# Types"
+      },
+      "date": 1506796383169
+    },
+    {
+      "type": "add",
+      "id": "90d13a2b98799f8a",
+      "item": {
+        "type": "paragraph",
+        "id": "90d13a2b98799f8a",
+        "text": "# Versions"
+      },
+      "after": "fd47c98c3e2a7539",
+      "date": 1506796401367
+    },
+    {
+      "type": "edit",
+      "id": "90d13a2b98799f8a",
+      "item": {
+        "type": "markdown",
+        "id": "90d13a2b98799f8a",
+        "text": "# Versions"
+      },
+      "date": 1506796403966
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2fcae0c9afa56e2d"
+      },
+      "id": "2fcae0c9afa56e2d",
+      "type": "add",
+      "after": "bdd6f44693245502",
+      "date": 1506796423350
+    },
+    {
+      "type": "edit",
+      "id": "2fcae0c9afa56e2d",
+      "item": {
+        "type": "paragraph",
+        "id": "2fcae0c9afa56e2d",
+        "text": "We've chosen to install plugins with npm. Given this we have several choices as to where in the build thread diversity is collapsed into simplicity."
+      },
+      "date": 1506797306770
+    },
+    {
+      "type": "add",
+      "id": "5f04eaad5094b1c7",
+      "item": {
+        "type": "paragraph",
+        "id": "5f04eaad5094b1c7",
+        "text": "Install could choose a version to be installed. The command line npm offers many variations. Only selecting by version number is supported through plugmatic installs."
+      },
+      "after": "2fcae0c9afa56e2d",
+      "date": 1506797421198
+    },
+    {
+      "type": "add",
+      "id": "bf40ac254d0b58f4",
+      "item": {
+        "type": "paragraph",
+        "id": "bf40ac254d0b58f4",
+        "text": "Publish might "
+      },
+      "after": "5f04eaad5094b1c7",
+      "date": 1506797542978
+    },
+    {
+      "type": "edit",
+      "id": "bf40ac254d0b58f4",
+      "item": {
+        "type": "paragraph",
+        "id": "bf40ac254d0b58f4",
+        "text": "Origin server could choose from multiply installed versions in parallel namespaces. "
+      },
+      "date": 1506797729267
+    },
+    {
+      "type": "edit",
+      "id": "5f04eaad5094b1c7",
+      "item": {
+        "type": "paragraph",
+        "id": "5f04eaad5094b1c7",
+        "text": "Install step could choose a version to be installed. The command line npm offers many variations. Only selecting by version number is supported through plugmatic installs."
+      },
+      "date": 1506797758747
+    },
+    {
+      "type": "edit",
+      "id": "bf40ac254d0b58f4",
+      "item": {
+        "type": "paragraph",
+        "id": "bf40ac254d0b58f4",
+        "text": "Origin serving step could choose from multiply installed versions in parallel namespaces. This is awkward because in many places the code assumes a choice has already been made."
+      },
+      "date": 1506797913376
+    },
+    {
+      "type": "add",
+      "id": "62fa0edcf04a1338",
+      "item": {
+        "type": "paragraph",
+        "id": "62fa0edcf04a1338",
+        "text": "Publish step could create more choices to be selected from later in the thread. Plugmatic expected metadata from npm, but this could be done without when publishing to github or other git repo. The complexity is then in Plugmatic. "
+      },
+      "after": "bf40ac254d0b58f4",
+      "date": 1506798172934
+    },
+    {
+      "type": "add",
+      "id": "afbd7a79dd962c02",
+      "item": {
+        "type": "paragraph",
+        "id": "afbd7a79dd962c02",
+        "text": "Publish step could be faked with a proxy in front of npm that substitutes experimental code without the downstream install realizing the difference."
+      },
+      "after": "62fa0edcf04a1338",
+      "date": 1506798267356
+    },
+    {
+      "type": "add",
+      "id": "3d257c1c48c9d006",
+      "item": {
+        "type": "paragraph",
+        "id": "3d257c1c48c9d006",
+        "text": "We've considered all of these approaches and find no clear winner. We explain the problem in this detail here hoping that yet another alternative might surface."
+      },
+      "after": "afbd7a79dd962c02",
+      "date": 1506798463721
+    },
+    {
+      "type": "edit",
+      "id": "f4443457d5a07ded",
+      "item": {
+        "type": "paragraph",
+        "id": "f4443457d5a07ded",
+        "text": "Two threads join at the origin server. One maintains that types are flat and simple, the other recognizes the complexity of building and installing software."
+      },
+      "date": 1506817836646
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1507953778003
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c5b47a2a7d939802"
+      },
+      "id": "c5b47a2a7d939802",
+      "type": "add",
+      "after": "3d257c1c48c9d006",
+      "date": 1507956617710
+    },
+    {
+      "type": "edit",
+      "id": "c5b47a2a7d939802",
+      "item": {
+        "type": "pagefold",
+        "id": "c5b47a2a7d939802",
+        "text": "."
+      },
+      "date": 1507956623559
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "718374532ca839cd"
+      },
+      "id": "718374532ca839cd",
+      "type": "add",
+      "after": "c5b47a2a7d939802",
+      "date": 1507956626172
+    },
+    {
+      "type": "edit",
+      "id": "718374532ca839cd",
+      "item": {
+        "type": "paragraph",
+        "id": "718374532ca839cd",
+        "text": "Much of what I've been working on in federated wiki for the past few years falls in the Build -> Publish -> Install branch in that graph, and mostly with docker."
+      },
+      "date": 1507956692058
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "624c9899617e0718"
+      },
+      "id": "624c9899617e0718",
+      "type": "add",
+      "after": "718374532ca839cd",
+      "date": 1507956877987
+    },
+    {
+      "type": "edit",
+      "id": "624c9899617e0718",
+      "item": {
+        "type": "reference",
+        "id": "624c9899617e0718",
+        "site": "local-farm.wiki.dbbs.co",
+        "slug": "local-farm",
+        "title": "Local Farm",
+        "text": "This kind of farm, which is also a [[Laptop Server]], is configured so one person owns all of the subdomains.  It is intended to be 1) a relatively easy way to [[start your own local wiki farm]], and 2) a helpful example of how to configure various components.  We share configurations for [[Docker]] and docker-compose to offer more detailed conversation."
+      },
+      "date": 1507956883140
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "808a0506e1bb15c0"
+      },
+      "id": "808a0506e1bb15c0",
+      "type": "add",
+      "after": "624c9899617e0718",
+      "date": 1507957007106
+    },
+    {
+      "type": "edit",
+      "id": "808a0506e1bb15c0",
+      "item": {
+        "type": "paragraph",
+        "id": "808a0506e1bb15c0",
+        "text": "Most of my early docker experiments were searching for different parts of the puzzle that grew up to be [[Local Farm]].  [https://github.com/dobbs/container-terminal github]"
+      },
+      "date": 1507957082056
+    },
+    {
+      "type": "add",
+      "id": "77d5cc3da27bc3bb",
+      "item": {
+        "type": "paragraph",
+        "id": "77d5cc3da27bc3bb",
+        "text": "• There's a git service described in the README for the container-terminal experiments.  I imagined that thing acting as a local git repo to self-host the wiki code and my (future) experimental plugins"
+      },
+      "after": "808a0506e1bb15c0",
+      "date": 1507957272897
+    },
+    {
+      "type": "add",
+      "id": "905e65d928a02525",
+      "item": {
+        "type": "paragraph",
+        "id": "905e65d928a02525",
+        "text": "• There's a DNS service which has been replaced by localtest.me in recent experiments."
+      },
+      "after": "77d5cc3da27bc3bb",
+      "date": 1507957328798
+    },
+    {
+      "type": "edit",
+      "id": "905e65d928a02525",
+      "item": {
+        "type": "paragraph",
+        "id": "905e65d928a02525",
+        "text": "• There's a DNS service which has been replaced by localtest.me in recent experiments.  [https://github.com/dobbs/container-terminal/blob/master/yak/notes-to-self.org#where-is-the-yak-i-need-to-shave yak shaving at github]"
+      },
+      "date": 1507957417830
+    },
+    {
+      "type": "add",
+      "id": "d43c2fc2d68327cb",
+      "item": {
+        "type": "paragraph",
+        "id": "d43c2fc2d68327cb",
+        "text": "• In the Yak Shaving example there are early attmpts about providing TLS with hashicorp's vault.  Those are replaced with a Caddy reverse proxy using self-signed certs in the Local Farm previously mentioned."
+      },
+      "after": "905e65d928a02525",
+      "date": 1507957554019
+    },
+    {
+      "type": "edit",
+      "id": "718374532ca839cd",
+      "item": {
+        "type": "paragraph",
+        "id": "718374532ca839cd",
+        "text": "Much of what I've been working on in federated wiki for the past few years falls in the Build -> Publish -> Install branch in that graph, and mostly with docker.  Still working on a process to include experimental plugins in my docker compositions."
+      },
+      "date": 1507958436596
+    },
+    {
+      "type": "fork",
+      "site": "wiki.dbbs.co",
+      "date": 1507977806706
+    }
+  ]
+}

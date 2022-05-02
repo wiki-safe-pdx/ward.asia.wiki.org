@@ -1,0 +1,687 @@
+{
+  "title": "Link Swarming",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "01910fc840afd5b2",
+      "text": "We suggest a new workflow for collaborative research which consists of a gathering phase followed by reflection and then synthesis."
+    },
+    {
+      "type": "markdown",
+      "id": "69887fb6e9706c81",
+      "text": "The simplest mathematical models of animal swarms generally represent individual animals as following three rules. [https://en.wikipedia.org/wiki/Swarm_behaviour#Mathematical_models wikipedia]\n\n- Move in the same direction as their neighbours\n- Remain close to their neighbours\n- Avoid collisions with their neighbours"
+    },
+    {
+      "type": "markdown",
+      "id": "206cc82c865946c4",
+      "text": "# Gathering"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0efc066a1e1796a",
+      "text": "We need the ability to easily create a wiki page from a copied url on mobile.\nThe groups we are working with are constantly sharing links in chat groups to videos or external sites.\nBut when on mobile so far that has been impossible to move this conversation to wiki.\nHow could we design a wiki page that works on mobile and allows copy and paste creation of a wiki page?"
+    },
+    {
+      "type": "paragraph",
+      "id": "4514b774ff68b6b1",
+      "text": "Captured content could go into a read-only commons as page json, suitably acknowledged.\nWhen members of the group become more reflective they can fork these pages as the start of their compositions.\nThis would have the advantage of not polluting the federation with bookmarks. "
+    },
+    {
+      "type": "paragraph",
+      "id": "94e0d24abe9f73b5",
+      "text": "This seemed like a good application for our outpost pattern. So we've created a proof of concept.\n[https://bookmark-outpost-proof.glitch.me/ glitch]"
+    },
+    {
+      "type": "paragraph",
+      "id": "77d9cf220293982c",
+      "text": "The main motivation for this experiment is to test the direction we're heading with this combination of static wiki and outposts. But also to confirm that rewriting with modern HTML and javascript will make it easier to work on mobile devices."
+    },
+    {
+      "type": "markdown",
+      "id": "5c9e180ffaefef45",
+      "text": "# Synthesis"
+    },
+    {
+      "type": "paragraph",
+      "id": "67a428c206184d46",
+      "text": "The mobile friendly application will support collective browsing in an area of declared interest while constructing pages from which creative synthesis can emerge."
+    },
+    {
+      "type": "paragraph",
+      "id": "29e8c4ed4973d03a",
+      "text": "Each posted link will be briefly and meaningfully titled. This will name the resource."
+    },
+    {
+      "type": "paragraph",
+      "id": "52e179a7ff012f01",
+      "text": "Each posted link will include a keyword laden synopsis that relates this resource to interests of the swarm"
+    },
+    {
+      "type": "paragraph",
+      "id": "10896df2ff34d993",
+      "text": "Each posted link will create a page in a shared, read-only site that appears to be \"forked\" from the posting author."
+    },
+    {
+      "type": "paragraph",
+      "id": "c225149cdaea88ae",
+      "text": "The swarms will operate a bit like Bohm dialogs in that they have an organizing question to which participants will speak by posting relevant content."
+    },
+    {
+      "type": "paragraph",
+      "id": "3e61ab1829317de1",
+      "text": "A swarm will close after a week of inactivity but will persist as a Pod with a Roster where the contributors will be immortalized as founders."
+    },
+    {
+      "type": "markdown",
+      "id": "50c6acd471c369ec",
+      "text": "# Application"
+    },
+    {
+      "type": "paragraph",
+      "id": "959354ea95f22722",
+      "text": "We now sketch the moving parts of a link swarming application. As is our tradition we seek a decentralized approach. As such we anticipate multiple client implementations using a well established API agains an open and easily hosted server."
+    },
+    {
+      "type": "paragraph",
+      "id": "e8b79299e2c038d1",
+      "text": "Clients will vary depending on the mobile platforms supported, the degree of integration with other services on the platform, and the skills and interests of the mobile developers."
+    },
+    {
+      "type": "paragraph",
+      "id": "4cba8d98c953b757",
+      "text": "A single ES6 module will launch within deno a server configured to manage a flat-file database consisting of JSON content organized and managed as Assets folders and serve read-only wiki content to the federation."
+    },
+    {
+      "type": "code",
+      "id": "b7265b552437a57d",
+      "text": "cd .wiki/swarms.fed.wiki\ndeno run http://c2.com/modules/hive.js"
+    },
+    {
+      "type": "paragraph",
+      "id": "1df50a07fc069360",
+      "text": "The client-facing API will provide a REST interface to swarm descriptions, memberships, and recent activity. For a given user, the interface will provide a list of engaged swarms, and all posts to each swarm if asked."
+    },
+    {
+      "type": "paragraph",
+      "id": "9bb66b635e23f5ad",
+      "text": "A POST will validate that the user's site is a wiki and that the welcome page \"about us\" item contains a link to an extant and non-empty page. Beyond the ability to follow these conventions, no further login will be required. The server will not write to a user's site."
+    },
+    {
+      "type": "pagefold",
+      "id": "3fc6e71a62a2ebf0",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "4cac57dc0fda092a",
+      "text": "This page has been assembled from direct contributions by David Bovill, Eric Dobbs and Ward Cunningham. Many others contributed indirectly."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Link Swarming",
+        "story": []
+      },
+      "date": 1611942914919
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "01910fc840afd5b2"
+      },
+      "id": "01910fc840afd5b2",
+      "type": "add",
+      "date": 1611942926419
+    },
+    {
+      "type": "edit",
+      "id": "01910fc840afd5b2",
+      "item": {
+        "type": "paragraph",
+        "id": "01910fc840afd5b2",
+        "text": "We suggest a new workflow for collaborative research which consists of a gathering phase followed by reflection and then synthesis."
+      },
+      "date": 1611943029784
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "69887fb6e9706c81"
+      },
+      "id": "69887fb6e9706c81",
+      "type": "add",
+      "after": "01910fc840afd5b2",
+      "date": 1611943170762
+    },
+    {
+      "type": "edit",
+      "id": "69887fb6e9706c81",
+      "item": {
+        "type": "markdown",
+        "id": "69887fb6e9706c81",
+        "text": "The simplest mathematical models of animal swarms generally represent individual animals as following three rules. [\n\n- Move in the same direction as their neighbours\n- Remain close to their neighbours\n- Avoid collisions with their neighbours"
+      },
+      "date": 1611943197925
+    },
+    {
+      "type": "edit",
+      "id": "69887fb6e9706c81",
+      "item": {
+        "type": "markdown",
+        "id": "69887fb6e9706c81",
+        "text": "The simplest mathematical models of animal swarms generally represent individual animals as following three rules. [https://en.wikipedia.org/wiki/Swarm_behaviour#Mathematical_models wikipedia]\n\n- Move in the same direction as their neighbours\n- Remain close to their neighbours\n- Avoid collisions with their neighbours"
+      },
+      "date": 1611943227087
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fc801832cf036435"
+      },
+      "id": "fc801832cf036435",
+      "type": "add",
+      "after": "69887fb6e9706c81",
+      "date": 1611943312004
+    },
+    {
+      "type": "remove",
+      "id": "fc801832cf036435",
+      "date": 1611943416490
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4514b774ff68b6b1"
+      },
+      "id": "4514b774ff68b6b1",
+      "type": "add",
+      "after": "69887fb6e9706c81",
+      "date": 1611943515518
+    },
+    {
+      "type": "edit",
+      "id": "4514b774ff68b6b1",
+      "item": {
+        "type": "paragraph",
+        "id": "4514b774ff68b6b1",
+        "text": "Captured content could go into a read-only commons as page json, suitably acknowledged.\nWhen members of the group become more reflective they can fork these pages as the start of their compositions.\nThis would have the advantage of not polluting the federation with bookmarks. "
+      },
+      "date": 1611943528507
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f0efc066a1e1796a"
+      },
+      "id": "f0efc066a1e1796a",
+      "type": "add",
+      "after": "4514b774ff68b6b1",
+      "date": 1611943610358
+    },
+    {
+      "type": "edit",
+      "id": "f0efc066a1e1796a",
+      "item": {
+        "type": "paragraph",
+        "id": "f0efc066a1e1796a",
+        "text": "We need the ability to easily create a wiki page from a copied url on mobile.\nThe groups we are working with are constantly sharing links in chat groups to videos or external sites.\nBut when on mobile so far that has been impossible to move this conversation to wiki.\nHow could we design a wiki page that works on mobile and allows copy and paste creation of a wiki page?"
+      },
+      "date": 1611943788825
+    },
+    {
+      "id": "f0efc066a1e1796a",
+      "type": "move",
+      "order": [
+        "01910fc840afd5b2",
+        "69887fb6e9706c81",
+        "f0efc066a1e1796a",
+        "4514b774ff68b6b1"
+      ],
+      "date": 1611943791529
+    },
+    {
+      "type": "add",
+      "id": "206cc82c865946c4",
+      "item": {
+        "type": "paragraph",
+        "id": "206cc82c865946c4",
+        "text": "# Gathering"
+      },
+      "after": "01910fc840afd5b2",
+      "date": 1611943818424
+    },
+    {
+      "type": "edit",
+      "id": "206cc82c865946c4",
+      "item": {
+        "type": "markdown",
+        "id": "206cc82c865946c4",
+        "text": "# Gathering"
+      },
+      "date": 1611943821831
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "94e0d24abe9f73b5"
+      },
+      "id": "94e0d24abe9f73b5",
+      "type": "add",
+      "after": "4514b774ff68b6b1",
+      "date": 1611943877239
+    },
+    {
+      "type": "edit",
+      "id": "94e0d24abe9f73b5",
+      "item": {
+        "type": "paragraph",
+        "id": "94e0d24abe9f73b5",
+        "text": "This seemed like a good application for our outpost pattern. So we've created a proof of concept.\n[https://bookmark-outpost-proof.glitch.me/ glitch]"
+      },
+      "date": 1611944000659
+    },
+    {
+      "type": "add",
+      "id": "77d9cf220293982c",
+      "item": {
+        "type": "paragraph",
+        "id": "77d9cf220293982c",
+        "text": "The main motivation for this experiment is to test the direction we're heading with this combination of static wiki and outposts. But also to confirm that rewriting with modern HTML and javascript will make it easier to work on mobile devices."
+      },
+      "after": "94e0d24abe9f73b5",
+      "date": 1611944037997
+    },
+    {
+      "type": "add",
+      "id": "5c9e180ffaefef45",
+      "item": {
+        "type": "paragraph",
+        "id": "5c9e180ffaefef45",
+        "text": "# Synthesis"
+      },
+      "after": "77d9cf220293982c",
+      "date": 1611944089729
+    },
+    {
+      "type": "add",
+      "id": "67a428c206184d46",
+      "item": {
+        "type": "paragraph",
+        "id": "67a428c206184d46",
+        "text": "The mobile friendly application will support collective browsing in an area of declared interest while constructing pages from which creative synthesis can emerge."
+      },
+      "after": "5c9e180ffaefef45",
+      "date": 1611944645536
+    },
+    {
+      "type": "add",
+      "id": "29e8c4ed4973d03a",
+      "item": {
+        "type": "paragraph",
+        "id": "29e8c4ed4973d03a",
+        "text": "Each posted link will be briefly and meaningfully titled. This will name the resource."
+      },
+      "after": "67a428c206184d46",
+      "date": 1611944742418
+    },
+    {
+      "type": "add",
+      "id": "52e179a7ff012f01",
+      "item": {
+        "type": "paragraph",
+        "id": "52e179a7ff012f01",
+        "text": "Each posted link will include a keyword laden synopsis that relates this resource to interests of the swarm"
+      },
+      "after": "29e8c4ed4973d03a",
+      "date": 1611944818939
+    },
+    {
+      "type": "add",
+      "id": "10896df2ff34d993",
+      "item": {
+        "type": "paragraph",
+        "id": "10896df2ff34d993",
+        "text": "Each posted link will create a page in a shared, read-only site that appears to be \"forked\" from the posting author's site."
+      },
+      "after": "52e179a7ff012f01",
+      "date": 1611944942269
+    },
+    {
+      "type": "edit",
+      "id": "10896df2ff34d993",
+      "item": {
+        "type": "paragraph",
+        "id": "10896df2ff34d993",
+        "text": "Each posted link will create a page in a shared, read-only site that appears to be \"forked\" from the posting author."
+      },
+      "date": 1611944975353
+    },
+    {
+      "type": "edit",
+      "id": "5c9e180ffaefef45",
+      "item": {
+        "type": "markdown",
+        "id": "5c9e180ffaefef45",
+        "text": "# Synthesis"
+      },
+      "date": 1611944987408
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c225149cdaea88ae"
+      },
+      "id": "c225149cdaea88ae",
+      "type": "add",
+      "after": "10896df2ff34d993",
+      "date": 1611945355385
+    },
+    {
+      "type": "edit",
+      "id": "c225149cdaea88ae",
+      "item": {
+        "type": "paragraph",
+        "id": "c225149cdaea88ae",
+        "text": "The swarms will operate a bit like Bohm dialogs in that they have an organizing question to which participants will speak by posting relevant content."
+      },
+      "date": 1611945643633
+    },
+    {
+      "type": "add",
+      "id": "3e61ab1829317de1",
+      "item": {
+        "type": "paragraph",
+        "id": "3e61ab1829317de1",
+        "text": "A swarm will close after a week of inactivity but its contributors will persist as a Pod with a Roster where the contributors will be immortalized as founders."
+      },
+      "after": "c225149cdaea88ae",
+      "date": 1611945923531
+    },
+    {
+      "id": "206cc82c865946c4",
+      "type": "move",
+      "order": [
+        "01910fc840afd5b2",
+        "69887fb6e9706c81",
+        "206cc82c865946c4",
+        "f0efc066a1e1796a",
+        "4514b774ff68b6b1",
+        "94e0d24abe9f73b5",
+        "77d9cf220293982c",
+        "5c9e180ffaefef45",
+        "67a428c206184d46",
+        "29e8c4ed4973d03a",
+        "52e179a7ff012f01",
+        "10896df2ff34d993",
+        "c225149cdaea88ae",
+        "3e61ab1829317de1"
+      ],
+      "date": 1611946042101
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "50c6acd471c369ec"
+      },
+      "id": "50c6acd471c369ec",
+      "type": "add",
+      "after": "3e61ab1829317de1",
+      "date": 1611946579328
+    },
+    {
+      "type": "edit",
+      "id": "50c6acd471c369ec",
+      "item": {
+        "type": "markdown",
+        "id": "50c6acd471c369ec",
+        "text": "# Application"
+      },
+      "date": 1611946591147
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "959354ea95f22722"
+      },
+      "id": "959354ea95f22722",
+      "type": "add",
+      "after": "50c6acd471c369ec",
+      "date": 1611946592573
+    },
+    {
+      "type": "edit",
+      "id": "959354ea95f22722",
+      "item": {
+        "type": "paragraph",
+        "id": "959354ea95f22722",
+        "text": "We now sketch the moving parts of a link swarming application. As is our tradition we seek a decentralized approach. As such we anticipate multiple client implementations using a well established API agains an open and easily hosted server."
+      },
+      "date": 1611946820960
+    },
+    {
+      "type": "add",
+      "id": "e8b79299e2c038d1",
+      "item": {
+        "type": "paragraph",
+        "id": "e8b79299e2c038d1",
+        "text": "Clients will vary depending on the mobile platforms supported, the degree of integration with other services on the platform, and the skills and interests of the mobile developers."
+      },
+      "after": "959354ea95f22722",
+      "date": 1611946940296
+    },
+    {
+      "type": "add",
+      "id": "4cba8d98c953b757",
+      "item": {
+        "type": "paragraph",
+        "id": "4cba8d98c953b757",
+        "text": "A single ES6 module will launch within deno a read-only server configured to manage a flat-file database consisting of JSON content organized and managed as Assets folders."
+      },
+      "after": "e8b79299e2c038d1",
+      "date": 1611947335669
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b7265b552437a57d"
+      },
+      "id": "b7265b552437a57d",
+      "type": "add",
+      "after": "4cba8d98c953b757",
+      "date": 1611947366414
+    },
+    {
+      "type": "edit",
+      "id": "b7265b552437a57d",
+      "item": {
+        "type": "code",
+        "id": "b7265b552437a57d",
+        "text": "cd .wiki/swarms.fed.wiki\ndeno run http://c2.com/modules/hive.js"
+      },
+      "date": 1611947603508
+    },
+    {
+      "type": "edit",
+      "id": "4cba8d98c953b757",
+      "item": {
+        "type": "paragraph",
+        "id": "4cba8d98c953b757",
+        "text": "A single ES6 module will launch within deno a server configured to manage a flat-file database consisting of JSON content organized and managed as Assets folders."
+      },
+      "date": 1611947686559
+    },
+    {
+      "type": "edit",
+      "id": "4cba8d98c953b757",
+      "item": {
+        "type": "paragraph",
+        "id": "4cba8d98c953b757",
+        "text": "A single ES6 module will launch within deno a server configured to manage a flat-file database consisting of JSON content organized and managed as Assets folders and serve read-only wiki content to the federation."
+      },
+      "date": 1611947777659
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1df50a07fc069360"
+      },
+      "id": "1df50a07fc069360",
+      "type": "add",
+      "after": "b7265b552437a57d",
+      "date": 1611947863446
+    },
+    {
+      "type": "edit",
+      "id": "1df50a07fc069360",
+      "item": {
+        "type": "paragraph",
+        "id": "1df50a07fc069360",
+        "text": "The client-facing API will provide a REST interface to swarm descriptions, memberships, and recent activity. For a given user, the interface will provide a list of engaged swarms, and all posts to each swarm if asked. A POST will validate that the site is a wiki and that the welcome page \"about us\" item contains a link to an extant and non-empty page."
+      },
+      "date": 1611948534307
+    },
+    {
+      "type": "edit",
+      "id": "1df50a07fc069360",
+      "item": {
+        "type": "paragraph",
+        "id": "1df50a07fc069360",
+        "text": "The client-facing API will provide a REST interface to swarm descriptions, memberships, and recent activity. For a given user, the interface will provide a list of engaged swarms, and all posts to each swarm if asked."
+      },
+      "date": 1611948547672
+    },
+    {
+      "type": "add",
+      "id": "9bb66b635e23f5ad",
+      "item": {
+        "type": "paragraph",
+        "id": "9bb66b635e23f5ad",
+        "text": "A POST will validate that the site is a wiki and that the welcome page \"about us\" item contains a link to an extant and non-empty page."
+      },
+      "after": "1df50a07fc069360",
+      "date": 1611948549402
+    },
+    {
+      "type": "edit",
+      "id": "9bb66b635e23f5ad",
+      "item": {
+        "type": "paragraph",
+        "id": "9bb66b635e23f5ad",
+        "text": "A POST will validate that the site is a wiki and that the welcome page \"about us\" item contains a link to an extant and non-empty page. Beyond the ability to follow these conventions, no further login will be required."
+      },
+      "date": 1611948604587
+    },
+    {
+      "type": "edit",
+      "id": "9bb66b635e23f5ad",
+      "item": {
+        "type": "paragraph",
+        "id": "9bb66b635e23f5ad",
+        "text": "A POST will validate that the site is a wiki and that the welcome page \"about us\" item contains a link to an extant and non-empty page. Beyond the ability to follow these conventions, no further login will be required. The server will not write to a user's site."
+      },
+      "date": 1611948643016
+    },
+    {
+      "type": "edit",
+      "id": "b7265b552437a57d",
+      "item": {
+        "type": "code",
+        "id": "b7265b552437a57d",
+        "text": "cd .wiki/swarms.fed.wiki\ndeno run --allow-write=. http://c2.com/modules/hive.js"
+      },
+      "date": 1611948734261
+    },
+    {
+      "type": "edit",
+      "id": "b7265b552437a57d",
+      "item": {
+        "type": "code",
+        "id": "b7265b552437a57d",
+        "text": "cd .wiki/swarms.fed.wiki\ndeno run --allow-write=. http://c2.com/mod/hive.js"
+      },
+      "date": 1611948751367
+    },
+    {
+      "type": "edit",
+      "id": "b7265b552437a57d",
+      "item": {
+        "type": "code",
+        "id": "b7265b552437a57d",
+        "text": "cd .wiki/swarms.fed.wiki\ndeno run http://c2.com/modules/hive.js"
+      },
+      "date": 1611948792842
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3fc6e71a62a2ebf0"
+      },
+      "id": "3fc6e71a62a2ebf0",
+      "type": "add",
+      "after": "9bb66b635e23f5ad",
+      "date": 1611949617796
+    },
+    {
+      "type": "edit",
+      "id": "3fc6e71a62a2ebf0",
+      "item": {
+        "type": "pagefold",
+        "id": "3fc6e71a62a2ebf0",
+        "text": "."
+      },
+      "date": 1611949625923
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4cac57dc0fda092a"
+      },
+      "id": "4cac57dc0fda092a",
+      "type": "add",
+      "after": "3fc6e71a62a2ebf0",
+      "date": 1611949627959
+    },
+    {
+      "type": "edit",
+      "id": "4cac57dc0fda092a",
+      "item": {
+        "type": "paragraph",
+        "id": "4cac57dc0fda092a",
+        "text": "This page has been assembled from direct contributions from David Bovill, Eric Dobbs and Ward Cunningham. Many others contributed indirectly."
+      },
+      "date": 1611949701167
+    },
+    {
+      "type": "edit",
+      "id": "4cac57dc0fda092a",
+      "item": {
+        "type": "paragraph",
+        "id": "4cac57dc0fda092a",
+        "text": "This page has been assembled from direct contributions by David Bovill, Eric Dobbs and Ward Cunningham. Many others contributed indirectly."
+      },
+      "date": 1611949715281
+    },
+    {
+      "type": "edit",
+      "id": "9bb66b635e23f5ad",
+      "item": {
+        "type": "paragraph",
+        "id": "9bb66b635e23f5ad",
+        "text": "A POST will validate that the user's site is a wiki and that the welcome page \"about us\" item contains a link to an extant and non-empty page. Beyond the ability to follow these conventions, no further login will be required. The server will not write to a user's site."
+      },
+      "date": 1611949866298
+    },
+    {
+      "type": "edit",
+      "id": "3e61ab1829317de1",
+      "item": {
+        "type": "paragraph",
+        "id": "3e61ab1829317de1",
+        "text": "A swarm will close after a week of inactivity but will persist as a Pod with a Roster where the contributors will be immortalized as founders."
+      },
+      "date": 1611950015803
+    }
+  ]
+}

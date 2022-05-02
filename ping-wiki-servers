@@ -1,0 +1,415 @@
+{
+  "title": "Ping Wiki Servers",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3ba5a8729103b435",
+      "text": "We host several wiki farms some with active users. Each has a primary address that when it is working we assume all users are served. [http:/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 plot] "
+    },
+    {
+      "type": "datalog",
+      "id": "7ce9f7255b79037e",
+      "text": "SENSOR asia http:/plugin/datalog/curl?url=asia.wiki.org\nSENSOR bay http:/plugin/datalog/curl?url=bay.wiki.org\nSENSOR eu http:/plugin/datalog/curl?url=eu.wiki.org\nSENSOR home http:/plugin/datalog/curl?url=ping.fed.wiki.org\n\nSENSOR dig http:/plugin/datalog/curl?url=dig.seran.c2.com/welcome-visitors.json\nSENSOR deno http:/plugin/datalog/curl?url=https://sudokuku.deno.dev/favicon.ico\n\nMONTH 4320\nKEEP 14"
+    },
+    {
+      "type": "assets",
+      "id": "8511251202f20f7b",
+      "text": "plugins/datalog/ping-wiki-servers"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ee66a98a7543c30",
+      "text": "We compute uptime stats reporting by hour, day or month."
+    },
+    {
+      "type": "frame",
+      "id": "7513838bd9330f75",
+      "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=2&report=day&show=31&\nHEIGHT 720"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Ping Wiki Servers",
+        "story": []
+      },
+      "date": 1557017252942
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3ba5a8729103b435"
+      },
+      "id": "3ba5a8729103b435",
+      "type": "add",
+      "date": 1557017305027
+    },
+    {
+      "type": "edit",
+      "id": "3ba5a8729103b435",
+      "item": {
+        "type": "paragraph",
+        "id": "3ba5a8729103b435",
+        "text": "We host several wiki farms some with active users. Each has a primary address that when it is working we assume all users are served."
+      },
+      "date": 1557017416500
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7ce9f7255b79037e"
+      },
+      "id": "7ce9f7255b79037e",
+      "type": "add",
+      "after": "3ba5a8729103b435",
+      "date": 1557017452328
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR /plugins/datalog/curl?url=asia.wiki.org\n\nDAY"
+      },
+      "date": 1557017535195
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR /plugins/datalog/curl?url=asia.wiki.org\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557017664169
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR /plugin/datalog/curl?url=asia.wiki.org\nSENSOR /plugin/datalog/curl?url=bay.wiki.org\nSENSOR /plugin/datalog/curl?url=eu.wiki.org\nSENSOR /plugin/datalog/curl?url=eu.wiki.org\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557017740921
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR /plugin/datalog/curl?url=asia.wiki.org\nSENSOR /plugin/datalog/curl?url=bay.wiki.org\nSENSOR /plugin/datalog/curl?url=eu.wiki.org\nSENSOR /plugin/datalog/curl?url=ping.fed.wiki.org\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557017932016
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8511251202f20f7b"
+      },
+      "id": "8511251202f20f7b",
+      "type": "add",
+      "after": "7ce9f7255b79037e",
+      "date": 1557017962222
+    },
+    {
+      "type": "edit",
+      "id": "8511251202f20f7b",
+      "item": {
+        "type": "assets",
+        "id": "8511251202f20f7b",
+        "text": "plugins/datalog/ping-wiki-servers"
+      },
+      "date": 1557017976088
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR asia /plugin/datalog/curl?url=asia.wiki.org\nSENSOR bay /plugin/datalog/curl?url=bay.wiki.org\nSENSOR eu /plugin/datalog/curl?url=eu.wiki.org\nSENSOR home /plugin/datalog/curl?url=ping.fed.wiki.org\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557018262287
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR asia http:/plugin/datalog/curl?url=asia.wiki.org\nSENSOR bay http:/plugin/datalog/curl?url=bay.wiki.org\nSENSOR eu http:/plugin/datalog/curl?url=eu.wiki.org\nSENSOR home http:/plugin/datalog/curl?url=ping.fed.wiki.org\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1557018546703
+    },
+    {
+      "type": "edit",
+      "id": "3ba5a8729103b435",
+      "item": {
+        "type": "paragraph",
+        "id": "3ba5a8729103b435",
+        "text": "We host several wiki farms some with active users. Each has a primary address that when it is working we assume all users are served. [http:/assets/plugins/datalog/plot-curl.html?slug=esp8266-datalog&chunk=month&keep=3 plot] "
+      },
+      "date": 1557026436108
+    },
+    {
+      "type": "edit",
+      "id": "3ba5a8729103b435",
+      "item": {
+        "type": "paragraph",
+        "id": "3ba5a8729103b435",
+        "text": "We host several wiki farms some with active users. Each has a primary address that when it is working we assume all users are served. [http:/assets/plugins/datalog/plot-curl.html?slug=ping-wiki-servers&chunk=month&keep=3 plot] "
+      },
+      "date": 1557026508842
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1557028564527
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7513838bd9330f75"
+      },
+      "id": "7513838bd9330f75",
+      "type": "add",
+      "after": "8511251202f20f7b",
+      "date": 1557062375006
+    },
+    {
+      "type": "fork",
+      "date": 1557074927533
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html"
+      },
+      "date": 1557074958024
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=found.ward.bay.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour"
+      },
+      "date": 1557075001547
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=found.ward.bay.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour\nHEIGHT 640"
+      },
+      "date": 1557075026545
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2ee66a98a7543c30"
+      },
+      "id": "2ee66a98a7543c30",
+      "type": "add",
+      "after": "7513838bd9330f75",
+      "date": 1557075112402
+    },
+    {
+      "type": "edit",
+      "id": "2ee66a98a7543c30",
+      "item": {
+        "type": "paragraph",
+        "id": "2ee66a98a7543c30",
+        "text": "We compute uptime stats reporting by hour, day or month."
+      },
+      "date": 1557075133977
+    },
+    {
+      "type": "move",
+      "order": [
+        "3ba5a8729103b435",
+        "7ce9f7255b79037e",
+        "8511251202f20f7b",
+        "2ee66a98a7543c30",
+        "7513838bd9330f75"
+      ],
+      "id": "2ee66a98a7543c30",
+      "date": 1557075142558
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour\nHEIGHT 640"
+      },
+      "date": 1557075432665
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2bb67595b5ff468c"
+      },
+      "id": "2bb67595b5ff468c",
+      "type": "add",
+      "after": "7513838bd9330f75",
+      "date": 1557078234306
+    },
+    {
+      "type": "edit",
+      "id": "2bb67595b5ff468c",
+      "item": {
+        "type": "assets",
+        "id": "2bb67595b5ff468c",
+        "text": "plugins/datalog"
+      },
+      "date": 1557078245247
+    },
+    {
+      "type": "remove",
+      "id": "2bb67595b5ff468c",
+      "date": 1557078299304
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour&show=24\nHEIGHT 640"
+      },
+      "date": 1557080116065
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour&show=8\nHEIGHT 640"
+      },
+      "date": 1557080252991
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour&show=24\nHEIGHT 640"
+      },
+      "date": 1557080280391
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour&show=24\nHEIGHT 660"
+      },
+      "date": 1557110244651
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour&show=24\nHEIGHT 680"
+      },
+      "date": 1557110262270
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour&show=24\nHEIGHT 700"
+      },
+      "date": 1557110286678
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=hour&show=24\nHEIGHT 720"
+      },
+      "date": 1557112451149
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=day&show=24\nHEIGHT 720"
+      },
+      "date": 1557288578281
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR asia http:/plugin/datalog/curl?url=asia.wiki.org\nSENSOR bay http:/plugin/datalog/curl?url=bay.wiki.org\nSENSOR eu http:/plugin/datalog/curl?url=eu.wiki.org\nSENSOR home http:/plugin/datalog/curl?url=ping.fed.wiki.org\n\nSENSOR dig http:/plugin/datalog/curl?url=dig.seran.c2.com/welcome-visitors.json\nSENSOR scrape http:/plugin/datalog/curl?url=scrape.seran.c2.com/welcome-visitors.json\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1594783485978
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR asia http:/plugin/datalog/curl?url=asia.wiki.org\nSENSOR bay http:/plugin/datalog/curl?url=bay.wiki.org\nSENSOR eu http:/plugin/datalog/curl?url=eu.wiki.org\nSENSOR home http:/plugin/datalog/curl?url=ping.fed.wiki.org\n\nSENSOR dig http:/plugin/datalog/curl?url=dig.seran.c2.com/welcome-visitors.json\nSENSOR deno http:/plugin/datalog/curl?url=sudokuku.deno.dev/favicon.ico\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1617243173124
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=1&report=day&show=24&\nHEIGHT 720"
+      },
+      "date": 1617301605812
+    },
+    {
+      "type": "edit",
+      "id": "7513838bd9330f75",
+      "item": {
+        "type": "frame",
+        "id": "7513838bd9330f75",
+        "text": "http://ward.asia.wiki.org/assets/plugins/datalog/uptime.html?protocol=http&site=ward.asia.wiki.org&slug=ping-wiki-servers&chunk=month&keep=2&report=day&show=31&\nHEIGHT 720"
+      },
+      "date": 1617301719049
+    },
+    {
+      "type": "edit",
+      "id": "7ce9f7255b79037e",
+      "item": {
+        "type": "datalog",
+        "id": "7ce9f7255b79037e",
+        "text": "SENSOR asia http:/plugin/datalog/curl?url=asia.wiki.org\nSENSOR bay http:/plugin/datalog/curl?url=bay.wiki.org\nSENSOR eu http:/plugin/datalog/curl?url=eu.wiki.org\nSENSOR home http:/plugin/datalog/curl?url=ping.fed.wiki.org\n\nSENSOR dig http:/plugin/datalog/curl?url=dig.seran.c2.com/welcome-visitors.json\nSENSOR deno http:/plugin/datalog/curl?url=https://sudokuku.deno.dev/favicon.ico\n\nMONTH 4320\nKEEP 14"
+      },
+      "date": 1617318712883
+    }
+  ]
+}

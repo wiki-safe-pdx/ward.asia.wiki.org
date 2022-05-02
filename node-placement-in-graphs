@@ -1,0 +1,290 @@
+{
+  "title": "Node Placement in Graphs",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e70933dde77aa0c0",
+      "text": "Our initial Graph plugin node placement algorithm shows that for small graphs placement can usefully reflect order in markup."
+    },
+    {
+      "type": "code",
+      "id": "4d2bfaabd0f9b6f2",
+      "text": "  for name, children of graph\n    if not node = placed[name]\n      placed[name] = node = [x, y]\n      x += 100\n    for child in children\n      if not more = placed[child]\n        placed[child] = more = [x-50, node[1]+75]\n"
+    },
+    {
+      "type": "markdown",
+      "id": "cbf20a29d45a150d",
+      "text": "# Redesign"
+    },
+    {
+      "type": "paragraph",
+      "id": "cd2f92af18023c6c",
+      "text": "Here we consider a redesigned algorithm. We started coding with this approach and found it to be flawed in many ways. Bummer."
+    },
+    {
+      "type": "paragraph",
+      "id": "3c6bc0a1c5c339af",
+      "text": "Fill the first rank with nodes unreferenced by any other node. These tend to be the first encounter as above."
+    },
+    {
+      "type": "paragraph",
+      "id": "8248ce47ffec60b6",
+      "text": "Oops. All nodes may be child of another."
+    },
+    {
+      "type": "paragraph",
+      "id": "4316f9ce5bda6ece",
+      "text": "Advance breadth first through children of one rank filling the next lower rank."
+    },
+    {
+      "type": "paragraph",
+      "id": "315aeeb7586de25a",
+      "text": "Register rank height and maximum file width. Distribute each rank's nodes evenly to file width."
+    },
+    {
+      "type": "paragraph",
+      "id": "686f67902251517e",
+      "text": "Stager nodes of each rank vertically so as to minimize overlap of overflowing labels."
+    },
+    {
+      "type": "paragraph",
+      "id": "80c8002954be297f",
+      "text": "Stager back referencing nodes of each rank horizontally to minimize overlap of arcs."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Node Placement in Graphs",
+        "story": []
+      },
+      "date": 1461949556683
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e70933dde77aa0c0"
+      },
+      "id": "e70933dde77aa0c0",
+      "type": "add",
+      "date": 1461949558845
+    },
+    {
+      "type": "edit",
+      "id": "e70933dde77aa0c0",
+      "item": {
+        "type": "paragraph",
+        "id": "e70933dde77aa0c0",
+        "text": "Our initial Graph plugin node placement algorithm shows that for small graphs placement can usefully reflect order in markup."
+      },
+      "date": 1461949686339
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4d2bfaabd0f9b6f2"
+      },
+      "id": "4d2bfaabd0f9b6f2",
+      "type": "add",
+      "after": "e70933dde77aa0c0",
+      "date": 1461949688153
+    },
+    {
+      "type": "edit",
+      "id": "4d2bfaabd0f9b6f2",
+      "item": {
+        "type": "code",
+        "id": "4d2bfaabd0f9b6f2",
+        "text": "  for name, children of graph\n    if not node = placed[name]\n      placed[name] = node = [x, y]\n      x += 100\n    for child in children\n      if not more = placed[child]\n        placed[child] = more = [x-50, node[1]+75]\n"
+      },
+      "date": 1461949739443
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3c6bc0a1c5c339af"
+      },
+      "id": "3c6bc0a1c5c339af",
+      "type": "add",
+      "after": "4d2bfaabd0f9b6f2",
+      "date": 1461950109525
+    },
+    {
+      "type": "edit",
+      "id": "3c6bc0a1c5c339af",
+      "item": {
+        "type": "paragraph",
+        "id": "3c6bc0a1c5c339af",
+        "text": "Advance breadth first through children of one rank filling the next lower rank."
+      },
+      "date": 1461950316575
+    },
+    {
+      "type": "add",
+      "id": "686f67902251517e",
+      "item": {
+        "type": "paragraph",
+        "id": "686f67902251517e",
+        "text": "Stager each rank vertically so as to minimize overlap of overflowing labels."
+      },
+      "after": "3c6bc0a1c5c339af",
+      "date": 1461950379464
+    },
+    {
+      "type": "edit",
+      "id": "3c6bc0a1c5c339af",
+      "item": {
+        "type": "paragraph",
+        "id": "3c6bc0a1c5c339af",
+        "text": "Fill the first rank with nodes unreferenced by any other node."
+      },
+      "date": 1461950565554
+    },
+    {
+      "type": "add",
+      "id": "4316f9ce5bda6ece",
+      "item": {
+        "type": "paragraph",
+        "id": "4316f9ce5bda6ece",
+        "text": "Advance breadth first through children of one rank filling the next lower rank."
+      },
+      "after": "3c6bc0a1c5c339af",
+      "date": 1461950568575
+    },
+    {
+      "type": "edit",
+      "id": "3c6bc0a1c5c339af",
+      "item": {
+        "type": "paragraph",
+        "id": "3c6bc0a1c5c339af",
+        "text": "Fill the first rank with nodes unreferenced by any other node. These tend to be the first encounter as above."
+      },
+      "date": 1461950622355
+    },
+    {
+      "type": "add",
+      "id": "315aeeb7586de25a",
+      "item": {
+        "type": "paragraph",
+        "id": "315aeeb7586de25a",
+        "text": "Register rank height and maximum file width. Distribute each rank's nodes evenly to file width."
+      },
+      "after": "686f67902251517e",
+      "date": 1461950920128
+    },
+    {
+      "type": "edit",
+      "id": "686f67902251517e",
+      "item": {
+        "type": "paragraph",
+        "id": "686f67902251517e",
+        "text": "Stager nodes of each rank vertically so as to minimize overlap of overflowing labels."
+      },
+      "date": 1461951033539
+    },
+    {
+      "type": "move",
+      "order": [
+        "e70933dde77aa0c0",
+        "4d2bfaabd0f9b6f2",
+        "3c6bc0a1c5c339af",
+        "4316f9ce5bda6ece",
+        "315aeeb7586de25a",
+        "686f67902251517e"
+      ],
+      "id": "315aeeb7586de25a",
+      "date": 1461951043449
+    },
+    {
+      "type": "add",
+      "id": "80c8002954be297f",
+      "item": {
+        "type": "paragraph",
+        "id": "80c8002954be297f",
+        "text": "Stager nodes of each rank horizontally when they reference nodes of a higher rank so as t minimize overlap of arcs."
+      },
+      "after": "686f67902251517e",
+      "date": 1461951127216
+    },
+    {
+      "type": "edit",
+      "id": "80c8002954be297f",
+      "item": {
+        "type": "paragraph",
+        "id": "80c8002954be297f",
+        "text": "Stager nodes of each rank horizontally when they reference nodes of a higher rank to minimize overlap of arcs."
+      },
+      "date": 1461951140631
+    },
+    {
+      "type": "edit",
+      "id": "80c8002954be297f",
+      "item": {
+        "type": "paragraph",
+        "id": "80c8002954be297f",
+        "text": "Stager back referencing nodes of each rank horizontally to minimize overlap of arcs."
+      },
+      "date": 1461951188613
+    },
+    {
+      "type": "add",
+      "id": "8248ce47ffec60b6",
+      "item": {
+        "type": "paragraph",
+        "id": "8248ce47ffec60b6",
+        "text": "Oops. All nodes may be child of another."
+      },
+      "after": "3c6bc0a1c5c339af",
+      "date": 1461952673515
+    },
+    {
+      "type": "add",
+      "id": "cbf20a29d45a150d",
+      "item": {
+        "type": "paragraph",
+        "id": "cbf20a29d45a150d",
+        "text": "# Redesign"
+      },
+      "after": "e70933dde77aa0c0",
+      "date": 1462200850024
+    },
+    {
+      "type": "move",
+      "order": [
+        "e70933dde77aa0c0",
+        "4d2bfaabd0f9b6f2",
+        "cbf20a29d45a150d",
+        "3c6bc0a1c5c339af",
+        "8248ce47ffec60b6",
+        "4316f9ce5bda6ece",
+        "315aeeb7586de25a",
+        "686f67902251517e",
+        "80c8002954be297f"
+      ],
+      "id": "cbf20a29d45a150d",
+      "date": 1462200855083
+    },
+    {
+      "type": "add",
+      "id": "cd2f92af18023c6c",
+      "item": {
+        "type": "paragraph",
+        "id": "cd2f92af18023c6c",
+        "text": "Here we consider a redesigned algorithm. We started coding with this approach and found it to be flawed in many ways. Bummer."
+      },
+      "after": "cbf20a29d45a150d",
+      "date": 1462200929017
+    },
+    {
+      "type": "edit",
+      "id": "cbf20a29d45a150d",
+      "item": {
+        "type": "markdown",
+        "id": "cbf20a29d45a150d",
+        "text": "# Redesign"
+      },
+      "date": 1462200947003
+    }
+  ]
+}

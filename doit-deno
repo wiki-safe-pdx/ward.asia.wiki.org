@@ -1,0 +1,570 @@
+{
+  "title": "Doit Deno",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "35fbcb5895266530",
+      "text": "We've adapted the venerable read-eval-print loop (REPL) to the network environment. Work in progress is kept in browser local storage. A button press then evaluates this server-side where cross-origin restrictions don't apply."
+    },
+    {
+      "type": "paragraph",
+      "id": "f63e681a0b10e0d2",
+      "text": "This work continues work yesterday where a client-side module proved infeasible."
+    },
+    {
+      "type": "paragraph",
+      "id": "f2daaceee7368efe",
+      "text": "See [[Client-Server Doit Framework]]"
+    },
+    {
+      "type": "markdown",
+      "id": "457f9dc989f47c6e",
+      "text": "# Plan"
+    },
+    {
+      "type": "paragraph",
+      "id": "d5b325e90e14e10c",
+      "text": "Today's plan is to write a little script and then run it interactively from deno which we limit to only talk to the network, no local resources."
+    },
+    {
+      "type": "code",
+      "id": "ad3b473c4917a1fb",
+      "text": "deno --allow-net script.js"
+    },
+    {
+      "type": "paragraph",
+      "id": "684dbc72a50e026e",
+      "text": "Our goal is to make the REPL part of script.js smaller than the usual command line argument parsing that can run on forever. We'll reuse yesterday's example again today."
+    },
+    {
+      "type": "code",
+      "id": "fdeca325fe573c45",
+      "text": "import {doit} from 'http://ward.asia.wiki.org/assets/pages/doit-deno/doit.mjs'\n\ndoit (async (input) => {\n  let urls = JSON.parse(input)\n  let files = await Promise.all(urls.map(url => \n    fetch(url).then(res => res.text())))\n  return `<table><tr>\n    ${files.map(file =>`<td><pre>${file}`).join('')}\n    </table>`\n})"
+    },
+    {
+      "type": "paragraph",
+      "id": "77d44f1bc9071cf1",
+      "text": "Note: this script has only two lines of substance. They eval urls with fetch and print results as a table."
+    },
+    {
+      "type": "markdown",
+      "id": "582960dff1a3fb47",
+      "text": "# Deploy"
+    },
+    {
+      "type": "paragraph",
+      "id": "3535f6ff75e991a0",
+      "text": "We will serve the doit module and the example script from wiki assets managed on this page."
+    },
+    {
+      "type": "assets",
+      "id": "dd3793600689066f",
+      "text": "pages/doit-deno"
+    },
+    {
+      "type": "paragraph",
+      "id": "f4e9942abc9f5b47",
+      "text": "This required a few adjustments and then worked flawlessly from the localhost:7070 window left open from yesterday."
+    },
+    {
+      "type": "paragraph",
+      "id": "d4043e3bc988a452",
+      "text": "The doit module needed a few corrections when errors were reported by deno when running the script. "
+    },
+    {
+      "type": "paragraph",
+      "id": "65536dda4887d36b",
+      "text": "I would revise and upload doit.mjs. Changes would show once I added the deno --reload argument. I later skipped these steps by changing my script import to './doit.mjs'"
+    },
+    {
+      "type": "paragraph",
+      "id": "83a7d0c91d5941b3",
+      "text": "Click the links above to see the finished module and script. You are welcome to save script.js locally and run it with deno 39. I'll be upgrading to 1.0 soon and will change the imports accordingly."
+    },
+    {
+      "type": "markdown",
+      "id": "89dccabf993ab475",
+      "text": "# Epilogue"
+    },
+    {
+      "type": "paragraph",
+      "id": "b2b56ee219b84bfb",
+      "text": "Both the term \"doit\" and our sample application, a fetch replicator, come from Smalltalk. Alan Kay tells the story of Dan Ingalls creating a \"Commander\" that would echo instructions to a fleet of turtles implement by Ted Kaehler."
+    },
+    {
+      "type": "markdown",
+      "id": "b5f2a82feb401961",
+      "text": "> One of the next classes to be implemented on the Interim Dynabook (after the basics of numbers, strings, etc.) was an object-oriented version of the LOGO turtle implemented by Ted. This could make many turtle instances that were used both for drawing and as a kind of value for graphics transformations. Dan created a class of \"commander\" turtles that could control a troop of turtles. Soon the turtles were made so they could be clipped by the windows. [http://worrydream.com/EarlyHistoryOfSmalltalk/#p17 hopl]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Doit Deno",
+        "story": []
+      },
+      "date": 1590934733436
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "35fbcb5895266530"
+      },
+      "id": "35fbcb5895266530",
+      "type": "add",
+      "date": 1590934776749
+    },
+    {
+      "type": "edit",
+      "id": "35fbcb5895266530",
+      "item": {
+        "type": "paragraph",
+        "id": "35fbcb5895266530",
+        "text": "We've adapted the venerable read-eval-print loop (REPL) to the network environment where work in progress is kept in browser local storage but network based eval is delegated to the server side where cross-origin restrictions don't apply. This is a repackaging of yesterday's experiments."
+      },
+      "date": 1590935101533
+    },
+    {
+      "type": "add",
+      "id": "f2daaceee7368efe",
+      "item": {
+        "type": "paragraph",
+        "id": "f2daaceee7368efe",
+        "text": "See [[Client-Server Doit Framework]]"
+      },
+      "after": "35fbcb5895266530",
+      "date": 1590935135996
+    },
+    {
+      "type": "add",
+      "id": "457f9dc989f47c6e",
+      "item": {
+        "type": "paragraph",
+        "id": "457f9dc989f47c6e",
+        "text": "# Plan"
+      },
+      "after": "f2daaceee7368efe",
+      "date": 1590935184167
+    },
+    {
+      "type": "add",
+      "id": "d5b325e90e14e10c",
+      "item": {
+        "type": "paragraph",
+        "id": "d5b325e90e14e10c",
+        "text": "Today's plan is to write a little script and then run it interactively from deno which we limit to only talk to the network, no local resources."
+      },
+      "after": "457f9dc989f47c6e",
+      "date": 1590935366165
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ad3b473c4917a1fb"
+      },
+      "id": "ad3b473c4917a1fb",
+      "type": "add",
+      "after": "d5b325e90e14e10c",
+      "date": 1590935368112
+    },
+    {
+      "type": "edit",
+      "id": "ad3b473c4917a1fb",
+      "item": {
+        "type": "code",
+        "id": "ad3b473c4917a1fb",
+        "text": "deno --allow-net script.js"
+      },
+      "date": 1590935409111
+    },
+    {
+      "type": "edit",
+      "id": "457f9dc989f47c6e",
+      "item": {
+        "type": "markdown",
+        "id": "457f9dc989f47c6e",
+        "text": "# Plan"
+      },
+      "date": 1590935415684
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "684dbc72a50e026e"
+      },
+      "id": "684dbc72a50e026e",
+      "type": "add",
+      "after": "ad3b473c4917a1fb",
+      "date": 1590935494268
+    },
+    {
+      "type": "edit",
+      "id": "684dbc72a50e026e",
+      "item": {
+        "type": "paragraph",
+        "id": "684dbc72a50e026e",
+        "text": "Our goal is to make the REPL part of script.js smaller than the usual command line argument parsing that can run on forever. We'll reuse yesterday's example coded today's way."
+      },
+      "date": 1590935709354
+    },
+    {
+      "type": "edit",
+      "id": "684dbc72a50e026e",
+      "item": {
+        "type": "paragraph",
+        "id": "684dbc72a50e026e",
+        "text": "Our goal is to make the REPL part of script.js smaller than the usual command line argument parsing that can run on forever. We'll reuse yesterday's example coded the new way."
+      },
+      "date": 1590935719301
+    },
+    {
+      "type": "edit",
+      "id": "684dbc72a50e026e",
+      "item": {
+        "type": "paragraph",
+        "id": "684dbc72a50e026e",
+        "text": "Our goal is to make the REPL part of script.js smaller than the usual command line argument parsing that can run on forever. We'll reuse yesterday's example again today."
+      },
+      "date": 1590935747354
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fdeca325fe573c45"
+      },
+      "id": "fdeca325fe573c45",
+      "type": "add",
+      "after": "684dbc72a50e026e",
+      "date": 1590935798773
+    },
+    {
+      "type": "edit",
+      "id": "fdeca325fe573c45",
+      "item": {
+        "type": "code",
+        "id": "fdeca325fe573c45",
+        "text": "import {doit} from 'http://ward.asia.wiki.org/assets/pages/doit-deno/doit.mjs'\n\ndoit (async (text) => {\n  let urls = JSON.parse(txt)\n  let files = await Promise.all(urls.map(\n    url => fetch(url).then(\n      res => res.text())))\n  return `<table>\n    <tr>${files.map(\n      file =>`<td><pre>${file}`)\n        .join('')}\n    </table>`\n}"
+      },
+      "date": 1590936007487
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "77d44f1bc9071cf1"
+      },
+      "id": "77d44f1bc9071cf1",
+      "type": "add",
+      "after": "fdeca325fe573c45",
+      "date": 1590936219386
+    },
+    {
+      "type": "edit",
+      "id": "77d44f1bc9071cf1",
+      "item": {
+        "type": "paragraph",
+        "id": "77d44f1bc9071cf1",
+        "text": "Note: this script has two long lines of substance that are folded awkwardly. They eval urls with fetch and print results in a table."
+      },
+      "date": 1590936476396
+    },
+    {
+      "type": "edit",
+      "id": "fdeca325fe573c45",
+      "item": {
+        "type": "code",
+        "id": "fdeca325fe573c45",
+        "text": "import {doit} from 'http://ward.asia.wiki.org/assets/pages/doit-deno/doit.mjs'\n\ndoit (async (input) => {\n  let urls = JSON.parse(input)\n  let files = await Promise.all(urls.map(url => fetch(url)\n    .then(res => res.text())))\n  return `<table><tr>\n    ${files.map(file =>`<td><pre>${file}`).join('')}\n    </table>`\n}"
+      },
+      "date": 1590936688541
+    },
+    {
+      "type": "edit",
+      "id": "fdeca325fe573c45",
+      "item": {
+        "type": "code",
+        "id": "fdeca325fe573c45",
+        "text": "import {doit} from 'http://ward.asia.wiki.org/assets/pages/doit-deno/doit.mjs'\n\ndoit (async (input) => {\n  let urls = JSON.parse(input)\n  let files = await Promise.all(urls.map(url => \n    fetch(url).then(res => res.text())))\n  return `<table><tr>\n    ${files.map(file =>`<td><pre>${file}`).join('')}\n    </table>`\n}"
+      },
+      "date": 1590936839046
+    },
+    {
+      "type": "edit",
+      "id": "77d44f1bc9071cf1",
+      "item": {
+        "type": "paragraph",
+        "id": "77d44f1bc9071cf1",
+        "text": "Note: this script has two long lines of substance. They eval urls with fetch and print results in a table."
+      },
+      "date": 1590936879573
+    },
+    {
+      "type": "edit",
+      "id": "77d44f1bc9071cf1",
+      "item": {
+        "type": "paragraph",
+        "id": "77d44f1bc9071cf1",
+        "text": "Note: this script has only two lines of substance. They eval urls with fetch and print results as a table."
+      },
+      "date": 1590936910040
+    },
+    {
+      "type": "edit",
+      "id": "fdeca325fe573c45",
+      "item": {
+        "type": "code",
+        "id": "fdeca325fe573c45",
+        "text": "import {doit} from 'http://ward.asia.wiki.org/assets/pages/doit-deno/doit.mjs'\n\ndoit (async (input) => {\n  let urls = JSON.parse(input)\n  let files = await Promise.all(urls.map(url => \n    fetch(url).then(res => res.text())))\n  return `<table><tr>\n    ${files.map(file =>`<td><pre>${file}`).join('')}\n    </table>`\n})"
+      },
+      "date": 1590936959064
+    },
+    {
+      "type": "edit",
+      "id": "35fbcb5895266530",
+      "item": {
+        "type": "paragraph",
+        "id": "35fbcb5895266530",
+        "text": "We've adapted the venerable read-eval-print loop (REPL) to the network environment. Work in progress is kept in browser local storage. A button press then evaluates this server-side where cross-origin restrictions don't apply."
+      },
+      "date": 1590937126569
+    },
+    {
+      "type": "add",
+      "id": "582960dff1a3fb47",
+      "item": {
+        "type": "paragraph",
+        "id": "582960dff1a3fb47",
+        "text": "# Deploy"
+      },
+      "after": "77d44f1bc9071cf1",
+      "date": 1590938052956
+    },
+    {
+      "type": "add",
+      "id": "3535f6ff75e991a0",
+      "item": {
+        "type": "paragraph",
+        "id": "3535f6ff75e991a0",
+        "text": "We will serve the doit module and the test script from wiki assets managed from this page."
+      },
+      "after": "582960dff1a3fb47",
+      "date": 1590938117488
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dd3793600689066f"
+      },
+      "id": "dd3793600689066f",
+      "type": "add",
+      "after": "3535f6ff75e991a0",
+      "date": 1590938120297
+    },
+    {
+      "type": "edit",
+      "id": "dd3793600689066f",
+      "item": {
+        "type": "assets",
+        "id": "dd3793600689066f",
+        "text": "pages/doit-deno"
+      },
+      "date": 1590938145351
+    },
+    {
+      "type": "edit",
+      "id": "582960dff1a3fb47",
+      "item": {
+        "type": "markdown",
+        "id": "582960dff1a3fb47",
+        "text": "# Deploy"
+      },
+      "date": 1590938171240
+    },
+    {
+      "type": "edit",
+      "id": "3535f6ff75e991a0",
+      "item": {
+        "type": "paragraph",
+        "id": "3535f6ff75e991a0",
+        "text": "We will serve the doit module and the example script from wiki assets managed from this page."
+      },
+      "date": 1590938199205
+    },
+    {
+      "type": "edit",
+      "id": "3535f6ff75e991a0",
+      "item": {
+        "type": "paragraph",
+        "id": "3535f6ff75e991a0",
+        "text": "We will serve the doit module and the example script from wiki assets managed on this page."
+      },
+      "date": 1590938208184
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f4e9942abc9f5b47"
+      },
+      "id": "f4e9942abc9f5b47",
+      "type": "add",
+      "after": "dd3793600689066f",
+      "date": 1590941139431
+    },
+    {
+      "type": "edit",
+      "id": "f4e9942abc9f5b47",
+      "item": {
+        "type": "paragraph",
+        "id": "f4e9942abc9f5b47",
+        "text": "This required a few adjustments and then worked flawlessly from the localhost:7070 window left open from yesterday."
+      },
+      "date": 1590941245127
+    },
+    {
+      "type": "add",
+      "id": "d4043e3bc988a452",
+      "item": {
+        "type": "paragraph",
+        "id": "d4043e3bc988a452",
+        "text": "The doit module needed a few corrections when errors were reported by deno when running the script. "
+      },
+      "after": "f4e9942abc9f5b47",
+      "date": 1590941308485
+    },
+    {
+      "type": "add",
+      "id": "65536dda4887d36b",
+      "item": {
+        "type": "paragraph",
+        "id": "65536dda4887d36b",
+        "text": "I would revise and upload doit.mjs. Changes would show once I added the deno --reload argument. I later skipped these steps by changing my script import to './doit.mjs'"
+      },
+      "after": "d4043e3bc988a452",
+      "date": 1590941493743
+    },
+    {
+      "type": "add",
+      "id": "83a7d0c91d5941b3",
+      "item": {
+        "type": "paragraph",
+        "id": "83a7d0c91d5941b3",
+        "text": "Click the links above to see the finished module and script. You are welcome to save script.js locally and run it with deno "
+      },
+      "after": "65536dda4887d36b",
+      "date": 1590941698370
+    },
+    {
+      "type": "edit",
+      "id": "83a7d0c91d5941b3",
+      "item": {
+        "type": "paragraph",
+        "id": "83a7d0c91d5941b3",
+        "text": "Click the links above to see the finished module and script. You are welcome to save script.js locally and run it with deno 39. I'll be upgrading to 1.0 soon and will change the imports accordingly."
+      },
+      "date": 1590941760133
+    },
+    {
+      "type": "add",
+      "id": "89dccabf993ab475",
+      "item": {
+        "type": "paragraph",
+        "id": "89dccabf993ab475",
+        "text": "# Epilogue"
+      },
+      "after": "83a7d0c91d5941b3",
+      "date": 1590941922147
+    },
+    {
+      "type": "add",
+      "id": "b2b56ee219b84bfb",
+      "item": {
+        "type": "paragraph",
+        "id": "b2b56ee219b84bfb",
+        "text": "Both the term \"doit\" and our sample application, a fetch replicator, come from Smalltalk. Alan Kay tells the story of Dan Ingalls"
+      },
+      "after": "89dccabf993ab475",
+      "date": 1590942088082
+    },
+    {
+      "type": "edit",
+      "id": "b2b56ee219b84bfb",
+      "item": {
+        "type": "paragraph",
+        "id": "b2b56ee219b84bfb",
+        "text": "Both the term \"doit\" and our sample application, a fetch replicator, come from Smalltalk. Alan Kay tells the story of Dan Ingalls creating a \"Commander\" that would echo instructions to a fleet of turtles implement by Ted Kaehler."
+      },
+      "date": 1590942227770
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b5f2a82feb401961"
+      },
+      "id": "b5f2a82feb401961",
+      "type": "add",
+      "after": "b2b56ee219b84bfb",
+      "date": 1590942299855
+    },
+    {
+      "type": "edit",
+      "id": "b5f2a82feb401961",
+      "item": {
+        "type": "markdown",
+        "id": "b5f2a82feb401961",
+        "text": "> One of the next classes to be implemented on the Interim Dynabook (after the basics of numbers, strings, etc.) was an object-oriented version of the LOGO turtle implemented by Ted. This could make many turtle instances that were used both for drawing and as a kind of value for graphics transformations. Dan created a class of \"commander\" turtles that could control a troop of turtles. Soon the turtles were made so they could be clipped by the windows."
+      },
+      "date": 1590942309788
+    },
+    {
+      "type": "edit",
+      "id": "b5f2a82feb401961",
+      "item": {
+        "type": "markdown",
+        "id": "b5f2a82feb401961",
+        "text": "> One of the next classes to be implemented on the Interim Dynabook (after the basics of numbers, strings, etc.) was an object-oriented version of the LOGO turtle implemented by Ted. This could make many turtle instances that were used both for drawing and as a kind of value for graphics transformations. Dan created a class of \"commander\" turtles that could control a troop of turtles. Soon the turtles were made so they could be clipped by the windows. [http://worrydream.com/EarlyHistoryOfSmalltalk/#p17 hopl]"
+      },
+      "date": 1590942513561
+    },
+    {
+      "type": "edit",
+      "id": "89dccabf993ab475",
+      "item": {
+        "type": "markdown",
+        "id": "89dccabf993ab475",
+        "text": "# Epilogue"
+      },
+      "date": 1590942523284
+    },
+    {
+      "type": "add",
+      "id": "f63e681a0b10e0d2",
+      "item": {
+        "type": "paragraph",
+        "id": "f63e681a0b10e0d2",
+        "text": "This work is a continuation of work yesterday where a client-side module proved infeasible. Today we modularize server-side."
+      },
+      "after": "35fbcb5895266530",
+      "date": 1590942800117
+    },
+    {
+      "type": "edit",
+      "id": "f63e681a0b10e0d2",
+      "item": {
+        "type": "paragraph",
+        "id": "f63e681a0b10e0d2",
+        "text": "This work continues work yesterday where a client-side module proved infeasible. Today we modularize server-side."
+      },
+      "date": 1590942824110
+    },
+    {
+      "type": "edit",
+      "id": "f63e681a0b10e0d2",
+      "item": {
+        "type": "paragraph",
+        "id": "f63e681a0b10e0d2",
+        "text": "This work continues work yesterday where a client-side module proved infeasible."
+      },
+      "date": 1590942869958
+    }
+  ]
+}

@@ -1,0 +1,930 @@
+{
+  "title": "Rationality",
+  "story": [
+    {
+      "type": "markdown",
+      "id": "72b130e05b871c4f",
+      "text": "The question which logic and mindset is at work when we act, has been central to Western intellectual culture. We strangely defer to this as \"rationality\". But \"rational\" and \"irrational\" are  meaningless with respect to our subjective goals, and even more with respect to human interaction in complex, adaptive socio-ecological systems. \n"
+    },
+    {
+      "type": "html",
+      "id": "865119a09ec4ff78",
+      "text": "<blockquote>\nIt is not about how people produce things but how people think about the world. — Max Weber\n</blockquote>"
+    },
+    {
+      "type": "markdown",
+      "id": "073bbd4540fb50a0",
+      "text": "# Types of Rationality "
+    },
+    {
+      "type": "paragraph",
+      "id": "23ad178c936337f2",
+      "text": "In economic literature there are different ideas of rationality connected to different ideas we have about how we are as human beings. In other words: a logic of action (rationality) comes along with a certain type of human being supposed to be actually existing. Let's have a look at a few of them: \n"
+    },
+    {
+      "type": "paragraph",
+      "id": "a7a26cac5488b179",
+      "text": "￭ Neoclassic (i.e. mainstream) economists portray human beings as homo economicus. The homo economicus typically acts in a selfish way according to an utilitarian cost-benefit analysis. His (sic!) actions are focussed on more efficiency and maximizing individual benefits. A homo economicus is supposed to find itself constantly comparing, measuring and calculating - seemingly trapped in a [[calculative rationality]], which is short-term and usually unconcerned with historical or long-term relationships.  \n"
+    },
+    {
+      "type": "paragraph",
+      "id": "78f4c33c02b24c1c",
+      "text": "[[Calculative rationality]] is certainly present, also in the commons. But is it dominant? \n"
+    },
+    {
+      "type": "paragraph",
+      "id": "8c79c6801aa90362",
+      "text": "￭  The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].  It goes beyond a calculative rationality taking a broader perspective on a given situation and institutional realities.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "ab95f1bc6c75cd2d",
+      "text": "￭  In socio-ecological economy the basic assumption is, that we are homo socio-ecologicus. Its mindset reflects the long-term perspective for sustaining socio-ecological systems and co-evolutionary processes/factors that are “above and beyond” any individual organism. The rationality of an homo socio-ecologicus recognizes contingency, unpredictable disruptions and the interconnectedness of all living things in a larger pluriverse. In short, there is connection, reflexion and communication among all the elements that belong to a system. They co-determine the way we act (see: \"kommunikative Vernunft\" - Habermas).  \n"
+    },
+    {
+      "type": "paragraph",
+      "id": "8f2ab620a59ed702",
+      "text": "￭  typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n"
+    },
+    {
+      "type": "html",
+      "id": "fe5be53deb13adae",
+      "text": "<font color=red>\nHere is my note to you in bright red. Delete this note when you are done with it. These may have been bullets after here. I couldn't tell. Copy and paste the square bullet character from one paragraph to another if you wish."
+    },
+    {
+      "type": "paragraph",
+      "id": "2e0a2d27cea61a4b",
+      "text": "    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "5c59fa8dec28f2e2",
+      "text": "    typical for neoclassic economy is a cost-benefit rationality ⇒ directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus ⇒ we could call it \"calculative rationality\"\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "526f65c52e936d7a",
+      "text": "    typical for critical institutionalism is a processual rationality ⇒ where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "6e78d2c6b4ea3b0d",
+      "text": "    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "15cbdf054a7468f1",
+      "text": "    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "b456732f99376218",
+      "text": "    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "83a3935adc8b7a2a",
+      "text": "    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+    },
+    {
+      "type": "markdown",
+      "id": "18d2e7e96ac647ca",
+      "text": "\n "
+    },
+    {
+      "type": "markdown",
+      "id": "4186ffc3e296f125",
+      "text": "    "
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Rationality",
+        "story": []
+      },
+      "date": 1495217616809
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "72b130e05b871c4f",
+        "text": "The question which logic and mindset is at work when we act, has been central to Western intellectual culture. We strangly defer to this as \"rationality\". And we live in a world where the dominant idea of mainstream economists is, that our actions (on the market) are usually \"rational\" according to a calculation of costs and benefits. But \"rational\" and \"irrational\" are  meaningless with respect to out subjective goals, and more meaningless with respect to human interaction in complex and adaptive socio-ecological systems. \n"
+      },
+      "id": "72b130e05b871c4f",
+      "type": "add",
+      "date": 1495217618687
+    },
+    {
+      "type": "edit",
+      "id": "72b130e05b871c4f",
+      "item": {
+        "type": "markdown",
+        "id": "72b130e05b871c4f",
+        "text": "The question which logic and mindset is at work when we act, has been central to Western intellectual culture. We strangly defer to this as \"rationality\". And we live in a world where the dominant idea of mainstream economists is, that our actions (on the market) are usually \"rational\" according to a calculation of costs and benefits. But \"rational\" and \"irrational\" are  meaningless with respect to out subjective goals, and more meaningless with respect to human interaction in complex and adaptive socio-ecological systems. \n"
+      },
+      "date": 1495217636236
+    },
+    {
+      "type": "edit",
+      "id": "72b130e05b871c4f",
+      "item": {
+        "type": "markdown",
+        "id": "72b130e05b871c4f",
+        "text": "The question which logic and mindset is at work when we act, has been central to Western intellectual culture. We strangly defer to this as \"rationality\". And we live in a world where the dominant idea of mainstream economists is, that our actions (on the market) are usually \"rational\" according to a calculation of costs and benefits. But \"rational\" and \"irrational\" are  meaningless with respect to out subjective goals, and more meaningless with respect to human interaction in complex and adaptive socio-ecological systems. \n"
+      },
+      "date": 1495218355473
+    },
+    {
+      "type": "edit",
+      "id": "72b130e05b871c4f",
+      "item": {
+        "type": "markdown",
+        "id": "72b130e05b871c4f",
+        "text": "The question which logic and mindset is at work when we act, has been central to Western intellectual culture. We strangly defer to this as \"rationality\". And we live in a world where the dominant idea of mainstream economists is, that our actions (on the market) are usually \"rational\" according to a calculation of costs and benefits. But \"rational\" and \"irrational\" are  meaningless with respect to out subjective goals, and more meaningless with respect to human interaction in complex and adaptive socio-ecological systems. \n"
+      },
+      "date": 1495218370978
+    },
+    {
+      "type": "edit",
+      "id": "72b130e05b871c4f",
+      "item": {
+        "type": "markdown",
+        "id": "72b130e05b871c4f",
+        "text": "The question which logic and mindset is at work when we act, has been central to Western intellectual culture. We strangly defer to this as \"rationality\". And we live in a world where the dominant idea of mainstream economists is, that our actions (on the market) are usually \"rational\" according to a calculation of costs and benefits. But \"rational\" and \"irrational\" are  meaningless with respect to out subjective goals, and more meaningless with respect to human interaction in complex and adaptive socio-ecological systems. \n"
+      },
+      "date": 1495218944038
+    },
+    {
+      "type": "edit",
+      "id": "72b130e05b871c4f",
+      "item": {
+        "type": "markdown",
+        "id": "72b130e05b871c4f",
+        "text": "The question which logic and mindset is at work when we act, has been central to Western intellectual culture. We strangly defer to this as \"rationality\". And we live in a world where the dominant idea of mainstream economists is, that our actions (on the market) are usually \"rational\" according to a calculation of costs and benefits. But \"rational\" and \"irrational\" are  meaningless with respect to out subjective goals, and more meaningless with respect to human interaction in complex and adaptive socio-ecological systems. \n"
+      },
+      "date": 1495219119453
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature we find different ideas of rationality connected to different ideas we have about how we are as human beings as well as to different methodologies. For instance: \n- Dominant neoclassic economists, that is mainstream ecoonomists, portray us as homo oeconomicus, who typically act according to an utilitarian cost-benefit analysis, focussed on more efficiency and maximizing individual benefits. We are supposed to find ourselves constantly comparing, measuring and calculating and therefore call it [[calculative rationality]]. It is a short-term rationality focused on transactions and usually unconcerned with historical or long-term relationships.\n[[Calculative rationality]] is certainly present, also in the commons. But does it need to be dominant? Luckily, there are other rationality concepts. \n"
+      },
+      "id": "073bbd4540fb50a0",
+      "type": "add",
+      "after": "72b130e05b871c4f",
+      "date": 1495219121207
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature we find different ideas of rationality connected to different ideas we have about how we are as human beings as well as to different methodologies. For instance: \n- Dominant neoclassic economists, that is mainstream ecoonomists, portray us as homo oeconomicus, who typically act according to an utilitarian cost-benefit analysis, focussed on more efficiency and maximizing individual benefits. We are supposed to find ourselves constantly comparing, measuring and calculating and therefore call it [[calculative rationality]]. It is a short-term rationality focused on transactions and usually unconcerned with historical or long-term relationships.\n[[Calculative rationality]] is certainly present, also in the commons. But does it need to be dominant? Luckily, there are other rationality concepts. \n"
+      },
+      "date": 1495219125124
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature we find different ideas of rationality connected to different ideas we have about how we are as human beings as well as to different methodologies. For instance: \n- Dominant neoclassic economists, that is mainstream ecoonomists, portray us as homo oeconomicus, who typically act according to an utilitarian cost-benefit analysis, focussed on more efficiency and maximizing individual benefits. We are supposed to find ourselves constantly comparing, measuring and calculating and therefore call it [[calculative rationality]]. It is a short-term rationality focused on transactions and usually unconcerned with historical or long-term relationships.\n[[Calculative rationality]] is certainly present, also in the commons. But does it need to be dominant? Luckily, there are other rationality concepts. \n"
+      },
+      "date": 1495219363224
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature we find different ideas of rationality connected to different ideas we have about how we are as human beings as well as to different methodologies. For instance: \n- Dominant neoclassic economists, that is mainstream ecoonomists, portray us as homo oeconomicus, who typically act according to an utilitarian cost-benefit analysis, focussed on more efficiency and maximizing individual benefits. We are supposed to find ourselves constantly comparing, measuring and calculating and therefore call it [[calculative rationality]]. It is a short-term rationality focused on transactions and usually unconcerned with historical or long-term relationships.\n[[Calculative rationality]] is certainly present, also in the commons. But does it need to be dominant? Luckily, there are other rationality concepts. \n"
+      },
+      "date": 1495219385543
+    },
+    {
+      "type": "fork",
+      "date": 1495219388908
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature we find different ideas of rationality connected to different ideas we have about how we are as human beings as well as to different methodologies. For instance: \n- Dominant neoclassic economists, that is mainstream ecoonomists, portray us as homo oeconomicus, who typically act according to an utilitarian cost-benefit analysis, focussed on more efficiency and maximizing individual benefits. We are supposed to find ourselves constantly comparing, measuring and calculating and therefore call it [[calculative rationality]]. It is a short-term rationality focused on transactions and usually unconcerned with historical or long-term relationships.\n[[Calculative rationality]] is certainly present, also in the commons. But does it need to be dominant? Luckily, there are other rationality concepts. \n"
+      },
+      "date": 1495219548557
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- CONTINUE HERE \n\n- typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a practical, institutional context. We might call this type [[practical reasonableness]]\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "id": "18d2e7e96ac647ca",
+      "type": "add",
+      "after": "073bbd4540fb50a0",
+      "date": 1495219551636
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- CONTINUE HERE \n\n- typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a practical, institutional context. We might call this type [[practical reasonableness]]\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "date": 1495219556108
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- CONTINUE HERE \n\n- typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a practical, institutional context. We might call this type [[practical reasonableness]]\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "date": 1495219565346
+    },
+    {
+      "type": "fork",
+      "date": 1495219656541
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].”  It goes beyond a calculative rationality because it takes a broad perspective on a given situation and institutional realities.\n\n "
+      },
+      "date": 1495280957259
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].”  It goes beyond a calculative rationality because it takes a broad perspective on a given situation and institutional realities.\n\n "
+      },
+      "date": 1495285107472
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].”  It goes beyond a calculative rationality because it takes a broad perspective on a given situation and institutional realities.\n\n "
+      },
+      "date": 1495285186725
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].”  It goes beyond a calculative rationality because it takes a broad perspective on a given situation and institutional realities.\n\n "
+      },
+      "date": 1495285213371
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "4186ffc3e296f125",
+        "text": "- This mindset, homo ecologicus, reflects the holistic, long-term perspective of socio-ecological systems that are “above and beyond” any individual organism.  It recognizes the influence of contingent factors, unpredictable disruptions, the embedded relationality among all living things in a larger, interconnected pluriverse.   typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "id": "4186ffc3e296f125",
+      "type": "add",
+      "after": "18d2e7e96ac647ca",
+      "date": 1495285215169
+    },
+    {
+      "type": "edit",
+      "id": "4186ffc3e296f125",
+      "item": {
+        "type": "markdown",
+        "id": "4186ffc3e296f125",
+        "text": "- This mindset, homo ecologicus, reflects the holistic, long-term perspective of socio-ecological systems that are “above and beyond” any individual organism.  It recognizes the influence of contingent factors, unpredictable disruptions, the embedded relationality among all living things in a larger, interconnected pluriverse.   typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "date": 1495285229133
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].”  It goes beyond a calculative rationality because it takes a broad perspective on a given situation and institutional realities.\n\n "
+      },
+      "date": 1495287310419
+    },
+    {
+      "type": "edit",
+      "id": "72b130e05b871c4f",
+      "item": {
+        "type": "markdown",
+        "id": "72b130e05b871c4f",
+        "text": "The question which logic and mindset is at work when we act, has been central to Western intellectual culture. We strangely defer to this as \"rationality\". But \"rational\" and \"irrational\" are  meaningless with respect to our subjective goals, and even more with respect to human interaction in complex, adaptive socio-ecological systems. \n"
+      },
+      "date": 1495287481893
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature there are different ideas of rationality connected to different ideas we have about how we are as human beings. Let's have a look at a few of them: \n- Dominant neoclassic economists, that is mainstream ecoonomists, portray us as homo oeconomicus. The homo oeconomicus typically acts in a selfish way according to an utilitarian cost-benefit analysis. His (sic!) actions, are focussed on more efficiency and maximizing individual benefits. So, we are supposed to find ourselves constantly comparing, measuring and calculating - we seem to be trapped in a [[calculative rationality]]. It is a short-term rationality of economic transactions and usually unconcerned with historical or long-term relationships.  \n[[Calculative rationality]] is certainly present, also in the commons. But is dominant? \n"
+      },
+      "date": 1495287688879
+    },
+    {
+      "type": "fork",
+      "date": 1495287693137
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "- The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].  It goes beyond a calculative rationality taking a broader perspective on a given situation and institutional realities.\n\n "
+      },
+      "date": 1495287744723
+    },
+    {
+      "type": "edit",
+      "id": "4186ffc3e296f125",
+      "item": {
+        "type": "markdown",
+        "id": "4186ffc3e296f125",
+        "text": "- In socio-ecological economy there is a basic assumption that we are homo ecologicus or/and socioliguc, reflects the holistic, long-term perspective of socio-ecological systems that are “above and beyond” any individual organism.  It recognizes the influence of contingent factors, unpredictable disruptions, the embedded relationality among all living things in a larger, interconnected pluriverse.   typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "date": 1495289110998
+    },
+    {
+      "type": "edit",
+      "id": "4186ffc3e296f125",
+      "item": {
+        "type": "markdown",
+        "id": "4186ffc3e296f125",
+        "text": "- In socio-ecological economy there is a basic assumption that we are homo ecologicus or/and sociologicus (a term introduced by German Sociologist Ralf Dahrendorf in 1958). It reflects the holistic, long-term perspective of socio-ecological systems that are “above and beyond” any individual organism.  It recognizes the influence of contingent factors, unpredictable disruptions, the embedded relationality among all living things in a larger, interconnected pluriverse. In short, there es connection and communication among all the elements that belong to a system  \"communicative rationality\". Reflexion an communication co-determines the way we act.  (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "date": 1495289291872
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature there are different ideas of rationality connected to different ideas we have about how we are as human beings. In other words: a logic of action (rationality) comes along with a certain type of human being supposed to be actually existing. Let's have a look at a few of them: \n- Dominant neoclassic economists, that is mainstream ecoonomists, portray us as homo oeconomicus. The homo oeconomicus typically acts in a selfish way according to an utilitarian cost-benefit analysis. His (sic!) actions, are focussed on more efficiency and maximizing individual benefits. So, we are supposed to find ourselves constantly comparing, measuring and calculating - we seem to be trapped in a [[calculative rationality]]. It is a short-term rationality of economic transactions and usually unconcerned with historical or long-term relationships.  \n[[Calculative rationality]] is certainly present, also in the commons. But is dominant? \n"
+      },
+      "date": 1495289438635
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature there are different ideas of rationality connected to different ideas we have about how we are as human beings. In other words: a logic of action (rationality) comes along with a certain type of human being supposed to be actually existing. Let's have a look at a few of them: \n- Dominant neoclassic economists - mainstream economists - portray us as homo economicus. The homo economicus typically acts in a selfish way according to an utilitarian cost-benefit analysis. His (sic!) actions are focussed on more efficiency and maximizing individual benefits. Such a person is supposed to find itself constantly comparing, measuring and calculating - seemingly trapped in a [[calculative rationality]], which is short-term and usually unconcerned with historical or long-term relationships.  \n[[Calculative rationality]] is certainly present, also in the commons. But is it dominant? \n"
+      },
+      "date": 1495289563902
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e8c52f634ce36e37"
+      },
+      "id": "e8c52f634ce36e37",
+      "type": "add",
+      "after": "4186ffc3e296f125",
+      "date": 1495290178275
+    },
+    {
+      "type": "edit",
+      "id": "e8c52f634ce36e37",
+      "item": {
+        "type": "roster",
+        "id": "e8c52f634ce36e37",
+        "text": "\"It is not about how people produce things but how people think about the world.\" Max Weber"
+      },
+      "date": 1495290206641
+    },
+    {
+      "type": "move",
+      "order": [
+        "72b130e05b871c4f",
+        "e8c52f634ce36e37",
+        "073bbd4540fb50a0",
+        "18d2e7e96ac647ca",
+        "4186ffc3e296f125"
+      ],
+      "id": "e8c52f634ce36e37",
+      "date": 1495290213028
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality \nIn economic literature there are different ideas of rationality connected to different ideas we have about how we are as human beings. In other words: a logic of action (rationality) comes along with a certain type of human being supposed to be actually existing. Let's have a look at a few of them: \n- Neoclassic (i.e. mainstream) economists portray human beings as homo economicus. The homo economicus typically acts in a selfish way according to an utilitarian cost-benefit analysis. His (sic!) actions are focussed on more efficiency and maximizing individual benefits. A homo economicus is supposed to find itself constantly comparing, measuring and calculating - seemingly trapped in a [[calculative rationality]], which is short-term and usually unconcerned with historical or long-term relationships.  \n[[Calculative rationality]] is certainly present, also in the commons. But is it dominant? \n"
+      },
+      "date": 1495318309538
+    },
+    {
+      "type": "edit",
+      "id": "4186ffc3e296f125",
+      "item": {
+        "type": "markdown",
+        "id": "4186ffc3e296f125",
+        "text": "- In socio-ecological economy the basic assumption is, that we are homo socio-ecologicus. Its mindset reflects the long-term perspective for sustaining socio-ecological systems and co-evolutionary processes/factors that are “above and beyond” any individual organism. The rationality of an homo socio-ecologicus recognizes contingency, unpredictable disruptions and the interconnectedness of all living things in a larger pluriverse. In short, there is connection, reflexion and communication among all the elements that belong to a system. They co-determine the way we act (see: \"kommunikative Vernunft\" - Habermas).  \n    "
+      },
+      "date": 1495318623745
+    },
+    {
+      "type": "edit",
+      "id": "4186ffc3e296f125",
+      "item": {
+        "type": "markdown",
+        "id": "4186ffc3e296f125",
+        "text": "- In socio-ecological economy the basic assumption is, that we are homo socio-ecologicus. Its mindset reflects the long-term perspective for sustaining socio-ecological systems and co-evolutionary processes/factors that are “above and beyond” any individual organism. The rationality of an homo socio-ecologicus recognizes contingency, unpredictable disruptions and the interconnectedness of all living things in a larger pluriverse. In short, there is connection, reflexion and communication among all the elements that belong to a system. They co-determine the way we act (see: \"kommunikative Vernunft\" - Habermas).  \n    "
+      },
+      "date": 1495318646377
+    },
+    {
+      "type": "edit",
+      "id": "4186ffc3e296f125",
+      "item": {
+        "type": "markdown",
+        "id": "4186ffc3e296f125",
+        "text": "- In socio-ecological economy the basic assumption is, that we are homo socio-ecologicus. Its mindset reflects the long-term perspective for sustaining socio-ecological systems and co-evolutionary processes/factors that are “above and beyond” any individual organism. The rationality of an homo socio-ecologicus recognizes contingency, unpredictable disruptions and the interconnectedness of all living things in a larger pluriverse. In short, there is connection, reflexion and communication among all the elements that belong to a system. They co-determine the way we act (see: \"kommunikative Vernunft\" - Habermas).  \n    "
+      },
+      "date": 1495318848992
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "7862ad7e20a9d759",
+        "text": "- CONTINUE HERE \n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "id": "7862ad7e20a9d759",
+      "type": "add",
+      "after": "4186ffc3e296f125",
+      "date": 1495318850510
+    },
+    {
+      "type": "edit",
+      "id": "7862ad7e20a9d759",
+      "item": {
+        "type": "markdown",
+        "id": "7862ad7e20a9d759",
+        "text": "- CONTINUE HERE \n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "date": 1495318856245
+    },
+    {
+      "type": "edit",
+      "id": "7862ad7e20a9d759",
+      "item": {
+        "type": "markdown",
+        "id": "7862ad7e20a9d759",
+        "text": "- CONTINUE HERE \n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "date": 1495318865070
+    },
+    {
+      "type": "fork",
+      "date": 1495318867643
+    },
+    {
+      "type": "fork",
+      "site": "www.makecommoningwork.fed.wiki",
+      "date": 1495323623884
+    },
+    {
+      "type": "edit",
+      "id": "073bbd4540fb50a0",
+      "item": {
+        "type": "markdown",
+        "id": "073bbd4540fb50a0",
+        "text": "# Types of Rationality "
+      },
+      "date": 1495323651941
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "23ad178c936337f2"
+      },
+      "id": "23ad178c936337f2",
+      "type": "add",
+      "after": "7862ad7e20a9d759",
+      "date": 1495323656045
+    },
+    {
+      "type": "move",
+      "order": [
+        "72b130e05b871c4f",
+        "e8c52f634ce36e37",
+        "073bbd4540fb50a0",
+        "23ad178c936337f2",
+        "18d2e7e96ac647ca",
+        "4186ffc3e296f125",
+        "7862ad7e20a9d759"
+      ],
+      "id": "23ad178c936337f2",
+      "date": 1495323665025
+    },
+    {
+      "type": "edit",
+      "id": "23ad178c936337f2",
+      "item": {
+        "type": "paragraph",
+        "id": "23ad178c936337f2",
+        "text": "In economic literature there are different ideas of rationality connected to different ideas we have about how we are as human beings. In other words: a logic of action (rationality) comes along with a certain type of human being supposed to be actually existing. Let's have a look at a few of them: \n"
+      },
+      "date": 1495323678719
+    },
+    {
+      "type": "add",
+      "id": "a7a26cac5488b179",
+      "item": {
+        "type": "paragraph",
+        "id": "a7a26cac5488b179",
+        "text": "- Neoclassic (i.e. mainstream) economists portray human beings as homo economicus. The homo economicus typically acts in a selfish way according to an utilitarian cost-benefit analysis. His (sic!) actions are focussed on more efficiency and maximizing individual benefits. A homo economicus is supposed to find itself constantly comparing, measuring and calculating - seemingly trapped in a [[calculative rationality]], which is short-term and usually unconcerned with historical or long-term relationships.  \n"
+      },
+      "after": "23ad178c936337f2",
+      "date": 1495323690765
+    },
+    {
+      "type": "add",
+      "id": "78f4c33c02b24c1c",
+      "item": {
+        "type": "paragraph",
+        "id": "78f4c33c02b24c1c",
+        "text": "[[Calculative rationality]] is certainly present, also in the commons. But is it dominant? \n"
+      },
+      "after": "a7a26cac5488b179",
+      "date": 1495323695568
+    },
+    {
+      "type": "edit",
+      "id": "a7a26cac5488b179",
+      "item": {
+        "type": "paragraph",
+        "id": "a7a26cac5488b179",
+        "text": "￭ Neoclassic (i.e. mainstream) economists portray human beings as homo economicus. The homo economicus typically acts in a selfish way according to an utilitarian cost-benefit analysis. His (sic!) actions are focussed on more efficiency and maximizing individual benefits. A homo economicus is supposed to find itself constantly comparing, measuring and calculating - seemingly trapped in a [[calculative rationality]], which is short-term and usually unconcerned with historical or long-term relationships.  \n"
+      },
+      "date": 1495323718580
+    },
+    {
+      "type": "edit",
+      "id": "18d2e7e96ac647ca",
+      "item": {
+        "type": "markdown",
+        "id": "18d2e7e96ac647ca",
+        "text": "\n "
+      },
+      "date": 1495323759357
+    },
+    {
+      "type": "add",
+      "id": "8c79c6801aa90362",
+      "item": {
+        "type": "paragraph",
+        "id": "8c79c6801aa90362",
+        "text": "- The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].  It goes beyond a calculative rationality taking a broader perspective on a given situation and institutional realities.\n"
+      },
+      "after": "78f4c33c02b24c1c",
+      "date": 1495323771708
+    },
+    {
+      "type": "edit",
+      "id": "8c79c6801aa90362",
+      "item": {
+        "type": "paragraph",
+        "id": "8c79c6801aa90362",
+        "text": "￭  The mindset of critical institutionalism, which is focused on process, context and reflection, has been called [[practical reasonableness]].  It goes beyond a calculative rationality taking a broader perspective on a given situation and institutional realities.\n"
+      },
+      "date": 1495323782450
+    },
+    {
+      "type": "edit",
+      "id": "4186ffc3e296f125",
+      "item": {
+        "type": "markdown",
+        "id": "4186ffc3e296f125",
+        "text": "    "
+      },
+      "date": 1495323806774
+    },
+    {
+      "type": "add",
+      "id": "ab95f1bc6c75cd2d",
+      "item": {
+        "type": "paragraph",
+        "id": "ab95f1bc6c75cd2d",
+        "text": "- In socio-ecological economy the basic assumption is, that we are homo socio-ecologicus. Its mindset reflects the long-term perspective for sustaining socio-ecological systems and co-evolutionary processes/factors that are “above and beyond” any individual organism. The rationality of an homo socio-ecologicus recognizes contingency, unpredictable disruptions and the interconnectedness of all living things in a larger pluriverse. In short, there is connection, reflexion and communication among all the elements that belong to a system. They co-determine the way we act (see: \"kommunikative Vernunft\" - Habermas).  \n"
+      },
+      "after": "8c79c6801aa90362",
+      "date": 1495323823149
+    },
+    {
+      "type": "remove",
+      "id": "7862ad7e20a9d759",
+      "date": 1495323860077
+    },
+    {
+      "type": "add",
+      "id": "8f2ab620a59ed702",
+      "item": {
+        "type": "paragraph",
+        "id": "8f2ab620a59ed702",
+        "text": "- typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n"
+      },
+      "after": "ab95f1bc6c75cd2d",
+      "date": 1495323898004
+    },
+    {
+      "type": "add",
+      "id": "5c59fa8dec28f2e2",
+      "item": {
+        "type": "paragraph",
+        "id": "5c59fa8dec28f2e2",
+        "text": "    typical for neoclassic economy is a cost-benefit rationality -> directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus  --> we could call it \"calculative rationality\"\n"
+      },
+      "after": "8f2ab620a59ed702",
+      "date": 1495323904297
+    },
+    {
+      "type": "add",
+      "id": "526f65c52e936d7a",
+      "item": {
+        "type": "paragraph",
+        "id": "526f65c52e936d7a",
+        "text": "    typical for critical institutionalism is a processual rationality -> where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n"
+      },
+      "after": "5c59fa8dec28f2e2",
+      "date": 1495323912210
+    },
+    {
+      "type": "add",
+      "id": "6e78d2c6b4ea3b0d",
+      "item": {
+        "type": "paragraph",
+        "id": "6e78d2c6b4ea3b0d",
+        "text": "    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "after": "526f65c52e936d7a",
+      "date": 1495323916088
+    },
+    {
+      "type": "edit",
+      "id": "6e78d2c6b4ea3b0d",
+      "item": {
+        "type": "paragraph",
+        "id": "6e78d2c6b4ea3b0d",
+        "text": "    typical for  a practical approach to socio-economy is the \"communicative rationality\" (not sure this is a good translation, it's an Habermas term, \"kommunikative Vernunft\",  where reflexion of the social interaction determines the rationality of action\n"
+      },
+      "date": 1495323933323
+    },
+    {
+      "type": "add",
+      "id": "15cbdf054a7468f1",
+      "item": {
+        "type": "paragraph",
+        "id": "15cbdf054a7468f1",
+        "text": "    typical for ecological economics (homo oecologicus) is a processual, co-evolutionary and contingent (? ergebnisoffen) rationality, where the embededness, our being part of socio-ecological systems that are \"beyond and above us\" is taken into account\n"
+      },
+      "after": "6e78d2c6b4ea3b0d",
+      "date": 1495323936907
+    },
+    {
+      "type": "add",
+      "id": "b456732f99376218",
+      "item": {
+        "type": "paragraph",
+        "id": "b456732f99376218",
+        "text": "    typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n"
+      },
+      "after": "15cbdf054a7468f1",
+      "date": 1495323942863
+    },
+    {
+      "type": "add",
+      "id": "83a3935adc8b7a2a",
+      "item": {
+        "type": "paragraph",
+        "id": "83a3935adc8b7a2a",
+        "text": "    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality "
+      },
+      "after": "b456732f99376218",
+      "date": 1495323956540
+    },
+    {
+      "type": "edit",
+      "id": "ab95f1bc6c75cd2d",
+      "item": {
+        "type": "paragraph",
+        "id": "ab95f1bc6c75cd2d",
+        "text": "￭  In socio-ecological economy the basic assumption is, that we are homo socio-ecologicus. Its mindset reflects the long-term perspective for sustaining socio-ecological systems and co-evolutionary processes/factors that are “above and beyond” any individual organism. The rationality of an homo socio-ecologicus recognizes contingency, unpredictable disruptions and the interconnectedness of all living things in a larger pluriverse. In short, there is connection, reflexion and communication among all the elements that belong to a system. They co-determine the way we act (see: \"kommunikative Vernunft\" - Habermas).  \n"
+      },
+      "date": 1495323971269
+    },
+    {
+      "type": "edit",
+      "id": "8f2ab620a59ed702",
+      "item": {
+        "type": "paragraph",
+        "id": "8f2ab620a59ed702",
+        "text": "￭  typical for feminist approaches to economy is a combination of practical, communicative and emotional rationality; so that sensing/ feeling nurtures our reasons for acting\n"
+      },
+      "date": 1495323987972
+    },
+    {
+      "type": "add",
+      "id": "918ed80fef772a63",
+      "item": {
+        "type": "paragraph",
+        "id": "918ed80fef772a63",
+        "text": "    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n"
+      },
+      "after": "8f2ab620a59ed702",
+      "date": 1495323998990
+    },
+    {
+      "type": "remove",
+      "id": "918ed80fef772a63",
+      "date": 1495324010384
+    },
+    {
+      "type": "add",
+      "id": "2e0a2d27cea61a4b",
+      "item": {
+        "type": "paragraph",
+        "id": "2e0a2d27cea61a4b",
+        "text": "    and finally: I'd say what we need to put forward in a context of a commons-oikonomy (or you name it) is a combination of the latter connected to the idea of a human being as a nested-I; so an communicative, contingent and emotional rationality aware if it's context and interdependency of others and of the ecosystem: one could call it an ubuntu-rationality concepts I've dealt  with in an academic work I've done, so - I translate tech terms and then we can try to find a more accessible language for the idea: please edit this as you see fit and then I integrate it into the wiki\n\n"
+      },
+      "after": "8f2ab620a59ed702",
+      "date": 1495324032904
+    },
+    {
+      "type": "remove",
+      "id": "e8c52f634ce36e37",
+      "date": 1495324173926
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "865119a09ec4ff78"
+      },
+      "id": "865119a09ec4ff78",
+      "type": "add",
+      "after": "4186ffc3e296f125",
+      "date": 1495324177412
+    },
+    {
+      "type": "edit",
+      "id": "865119a09ec4ff78",
+      "item": {
+        "type": "html",
+        "id": "865119a09ec4ff78",
+        "text": "<blockquote>\n\"It is not about how people produce things but how people think about the world.\" Max Weber\n</blockquote>"
+      },
+      "date": 1495324201158
+    },
+    {
+      "type": "move",
+      "order": [
+        "72b130e05b871c4f",
+        "865119a09ec4ff78",
+        "073bbd4540fb50a0",
+        "23ad178c936337f2",
+        "a7a26cac5488b179",
+        "78f4c33c02b24c1c",
+        "8c79c6801aa90362",
+        "ab95f1bc6c75cd2d",
+        "8f2ab620a59ed702",
+        "2e0a2d27cea61a4b",
+        "5c59fa8dec28f2e2",
+        "526f65c52e936d7a",
+        "6e78d2c6b4ea3b0d",
+        "15cbdf054a7468f1",
+        "b456732f99376218",
+        "83a3935adc8b7a2a",
+        "18d2e7e96ac647ca",
+        "4186ffc3e296f125"
+      ],
+      "id": "865119a09ec4ff78",
+      "date": 1495324210045
+    },
+    {
+      "type": "edit",
+      "id": "865119a09ec4ff78",
+      "item": {
+        "type": "html",
+        "id": "865119a09ec4ff78",
+        "text": "<blockquote>\nIt is not about how people produce things but how people think about the world. — Max Weber\n</blockquote>"
+      },
+      "date": 1495324276146
+    },
+    {
+      "type": "edit",
+      "id": "5c59fa8dec28f2e2",
+      "item": {
+        "type": "paragraph",
+        "id": "5c59fa8dec28f2e2",
+        "text": "    typical for neoclassic economy is a cost-benefit rationality ⇒ directed towards raising efficiency and maximizing individual-benefit/gain)  and tied to the idea of homo oeconomicus ⇒ we could call it \"calculative rationality\"\n"
+      },
+      "date": 1495324370536
+    },
+    {
+      "type": "edit",
+      "id": "526f65c52e936d7a",
+      "item": {
+        "type": "paragraph",
+        "id": "526f65c52e936d7a",
+        "text": "    typical for critical institutionalism is a processual rationality ⇒ where reflexion is key, context and process are taken into account and the human being is dowed with the capacity to put its reasoning beyond the calculative rationality in a given/practical/institutional context; sometimes it's called \"practical reasonableness\"\n"
+      },
+      "date": 1495324381341
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fe5be53deb13adae"
+      },
+      "id": "fe5be53deb13adae",
+      "type": "add",
+      "after": "4186ffc3e296f125",
+      "date": 1495325985818
+    },
+    {
+      "type": "edit",
+      "id": "fe5be53deb13adae",
+      "item": {
+        "type": "html",
+        "id": "fe5be53deb13adae",
+        "text": "<font color=green>\nHere is my note to you in bright green. Delete this note when you are done with it."
+      },
+      "date": 1495326037023
+    },
+    {
+      "type": "edit",
+      "id": "fe5be53deb13adae",
+      "item": {
+        "type": "html",
+        "id": "fe5be53deb13adae",
+        "text": "<font color=red>\nHere is my note to you in bright red. Delete this note when you are done with it."
+      },
+      "date": 1495326065152
+    },
+    {
+      "type": "move",
+      "order": [
+        "72b130e05b871c4f",
+        "865119a09ec4ff78",
+        "073bbd4540fb50a0",
+        "23ad178c936337f2",
+        "a7a26cac5488b179",
+        "78f4c33c02b24c1c",
+        "8c79c6801aa90362",
+        "ab95f1bc6c75cd2d",
+        "8f2ab620a59ed702",
+        "fe5be53deb13adae",
+        "2e0a2d27cea61a4b",
+        "5c59fa8dec28f2e2",
+        "526f65c52e936d7a",
+        "6e78d2c6b4ea3b0d",
+        "15cbdf054a7468f1",
+        "b456732f99376218",
+        "83a3935adc8b7a2a",
+        "18d2e7e96ac647ca",
+        "4186ffc3e296f125"
+      ],
+      "id": "fe5be53deb13adae",
+      "date": 1495326086289
+    },
+    {
+      "type": "edit",
+      "id": "fe5be53deb13adae",
+      "item": {
+        "type": "html",
+        "id": "fe5be53deb13adae",
+        "text": "<font color=red>\nHere is my note to you in bright red. Delete this note when you are done with it. These may have been bullets after here. I couldn't tell. Copy and paste the square bullet character from one paragraph to another if you wish."
+      },
+      "date": 1495326153403
+    }
+  ]
+}

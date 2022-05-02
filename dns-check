@@ -1,0 +1,160 @@
+{
+  "title": "DNS Check",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "602c1b24b711d3d0",
+      "text": "My DNS config has gotten sufficiently complicated that I won't move things around without some double check on my work. This ruby program has worked well."
+    },
+    {
+      "type": "code",
+      "id": "b1241b83ebeca945",
+      "text": "host 'fed.wiki', '188.166.198.19'\ncheck 'ward.fed.wiki'\ncheck 'ward.tries.fed.wiki'\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "58670fa43b472019",
+      "text": "These entries are typical. This says that we host fed.wiki on a machine with public internet address 188.166.198.19. Further, we check a few subdomains accessed by wildcard at that same host."
+    },
+    {
+      "type": "assets",
+      "id": "86cac7842ec25d88",
+      "text": "pages/dns-check"
+    },
+    {
+      "type": "paragraph",
+      "id": "ac4ca088bc11f6f5",
+      "text": "See [[Wiki Relocation]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "DNS Check",
+        "story": []
+      },
+      "date": 1605210889367
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "602c1b24b711d3d0"
+      },
+      "id": "602c1b24b711d3d0",
+      "type": "add",
+      "date": 1605210903904
+    },
+    {
+      "type": "edit",
+      "id": "602c1b24b711d3d0",
+      "item": {
+        "type": "paragraph",
+        "id": "602c1b24b711d3d0",
+        "text": "My DNS config has gotten sufficiently complicated that I won't move things around without some double check on my work. This ruby program has worked well."
+      },
+      "date": 1605210988912
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "86cac7842ec25d88"
+      },
+      "id": "86cac7842ec25d88",
+      "type": "add",
+      "after": "602c1b24b711d3d0",
+      "date": 1605210993765
+    },
+    {
+      "type": "edit",
+      "id": "86cac7842ec25d88",
+      "item": {
+        "type": "assets",
+        "id": "86cac7842ec25d88",
+        "text": "pages/dns-check"
+      },
+      "date": 1605211010946
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b1241b83ebeca945"
+      },
+      "id": "b1241b83ebeca945",
+      "type": "add",
+      "after": "86cac7842ec25d88",
+      "date": 1605211176314
+    },
+    {
+      "type": "edit",
+      "id": "b1241b83ebeca945",
+      "item": {
+        "type": "code",
+        "id": "b1241b83ebeca945",
+        "text": "host 'fed.wiki', '188.166.198.19'\ncheck 'ward.fed.wiki'\ncheck 'ward.tries.fed.wiki'\n\n"
+      },
+      "date": 1605211188147
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "58670fa43b472019"
+      },
+      "id": "58670fa43b472019",
+      "type": "add",
+      "after": "b1241b83ebeca945",
+      "date": 1605211190064
+    },
+    {
+      "type": "edit",
+      "id": "58670fa43b472019",
+      "item": {
+        "type": "paragraph",
+        "id": "58670fa43b472019",
+        "text": "These entries are typical. This says that we host fed.wiki on a machine with public internet address "
+      },
+      "date": 1605211261411
+    },
+    {
+      "type": "edit",
+      "id": "58670fa43b472019",
+      "item": {
+        "type": "paragraph",
+        "id": "58670fa43b472019",
+        "text": "These entries are typical. This says that we host fed.wiki on a machine with public internet address 188.166.198.19. Further, we check a few subdomains accessed by wildcard at that same host."
+      },
+      "date": 1605211320833
+    },
+    {
+      "id": "86cac7842ec25d88",
+      "type": "move",
+      "order": [
+        "602c1b24b711d3d0",
+        "b1241b83ebeca945",
+        "58670fa43b472019",
+        "86cac7842ec25d88"
+      ],
+      "date": 1605211330970
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ac4ca088bc11f6f5"
+      },
+      "id": "ac4ca088bc11f6f5",
+      "type": "add",
+      "after": "86cac7842ec25d88",
+      "date": 1605211362197
+    },
+    {
+      "type": "edit",
+      "id": "ac4ca088bc11f6f5",
+      "item": {
+        "type": "paragraph",
+        "id": "ac4ca088bc11f6f5",
+        "text": "See [[Wiki Relocation]]"
+      },
+      "date": 1605211375138
+    }
+  ]
+}

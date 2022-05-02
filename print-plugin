@@ -1,0 +1,480 @@
+{
+  "title": "Print Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "2963d28101478e0d",
+      "text": "We test a plugin that can find and print many pages from the neighborhood. We test the idea by using a search term as markup. The print button will print all found pages in the order shown. We'll print pages that mention json."
+    },
+    {
+      "type": "print",
+      "id": "324971bcbd11f798",
+      "text": "json"
+    },
+    {
+      "type": "paragraph",
+      "id": "1838015366076a2b",
+      "text": "Better to have a markup that will construct the desired table of contents and offer to print that."
+    },
+    {
+      "type": "paragraph",
+      "id": "9fc8d4e5dac330bd",
+      "text": "We can use a roster to combine pages from many sites selecting which sites are to be included in each print."
+    },
+    {
+      "type": "roster",
+      "id": "0906b255737c1b33",
+      "text": "about.fed.wiki\nward.bay.wiki.org\nward.asia.wiki.org"
+    },
+    {
+      "type": "paragraph",
+      "id": "a59ba919b352f62a",
+      "text": "We have just enough code to show how this plugin might work. We're happy to accept suggestions as issues. Register a watch if you are interested. [https://github.com/WardCunningham/wiki-plugin-print/blob/master/client/print.coffee github]"
+    },
+    {
+      "type": "plugmatic",
+      "id": "5b3a029c9a9c26ae",
+      "text": "wiki-plugin-print"
+    },
+    {
+      "type": "paragraph",
+      "id": "8e266bcf6cbcfc57",
+      "text": "As we push this plugin further we have encountered coding issues that lead us to ask, [[Why Write Books]]?"
+    },
+    {
+      "type": "paragraph",
+      "id": "05a364a4bea591f4",
+      "text": "We've pushed on print formatting which has some issues. Maybe we just download a custom export.json file and feed that into other processes. Inventing a markup for organizing content still seems like a good idea. It could be what you put on your welcome page."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Print Plugin",
+        "story": []
+      },
+      "date": 1511385491323
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2963d28101478e0d"
+      },
+      "id": "2963d28101478e0d",
+      "type": "add",
+      "date": 1511385495081
+    },
+    {
+      "type": "edit",
+      "id": "2963d28101478e0d",
+      "item": {
+        "type": "paragraph",
+        "id": "2963d28101478e0d",
+        "text": "We test a plugin that can find and print many pages from the neighborhood."
+      },
+      "date": 1511385545350
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "324971bcbd11f798"
+      },
+      "id": "324971bcbd11f798",
+      "type": "add",
+      "after": "2963d28101478e0d",
+      "date": 1511385551878
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "Test *"
+      },
+      "date": 1511385575547
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "PAGE Test *"
+      },
+      "date": 1511385622854
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "PAGE /Test/"
+      },
+      "date": 1511385656597
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "Test"
+      },
+      "date": 1511385730322
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "test"
+      },
+      "date": 1511386552917
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "Plugin"
+      },
+      "date": 1511387778972
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "About"
+      },
+      "date": 1511387796214
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "About Plugin"
+      },
+      "date": 1511387843626
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "Plugin"
+      },
+      "date": 1511387853254
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "Testing"
+      },
+      "date": 1511387863322
+    },
+    {
+      "type": "edit",
+      "id": "2963d28101478e0d",
+      "item": {
+        "type": "paragraph",
+        "id": "2963d28101478e0d",
+        "text": "We test a plugin that can find and print many pages from the neighborhood. We test the idea by using a search term as markup. The print button will print all found pages in the order shown."
+      },
+      "date": 1511388052793
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1838015366076a2b"
+      },
+      "id": "1838015366076a2b",
+      "type": "add",
+      "after": "324971bcbd11f798",
+      "date": 1511388070182
+    },
+    {
+      "type": "edit",
+      "id": "1838015366076a2b",
+      "item": {
+        "type": "paragraph",
+        "id": "1838015366076a2b",
+        "text": "Better to have a markup that will construct the desired table of contents first, then offer to print that."
+      },
+      "date": 1511388165022
+    },
+    {
+      "type": "edit",
+      "id": "1838015366076a2b",
+      "item": {
+        "type": "paragraph",
+        "id": "1838015366076a2b",
+        "text": "Better to have a markup that will construct the desired table of contents and offer to print that."
+      },
+      "date": 1511388176949
+    },
+    {
+      "type": "add",
+      "id": "9fc8d4e5dac330bd",
+      "item": {
+        "type": "paragraph",
+        "id": "9fc8d4e5dac330bd",
+        "text": "We can use a roster to combine pages from many sites, selecting which sites are to be included in any particular print."
+      },
+      "after": "1838015366076a2b",
+      "date": 1511388360359
+    },
+    {
+      "type": "edit",
+      "id": "9fc8d4e5dac330bd",
+      "item": {
+        "type": "paragraph",
+        "id": "9fc8d4e5dac330bd",
+        "text": "We can use a roster to combine pages from many sites, selecting which sites are to be included in the print."
+      },
+      "date": 1511388381448
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0906b255737c1b33"
+      },
+      "id": "0906b255737c1b33",
+      "type": "add",
+      "after": "9fc8d4e5dac330bd",
+      "date": 1511388385882
+    },
+    {
+      "type": "edit",
+      "id": "0906b255737c1b33",
+      "item": {
+        "type": "roster",
+        "id": "0906b255737c1b33",
+        "text": "ward.bay.wiki.org"
+      },
+      "date": 1511388413023
+    },
+    {
+      "type": "edit",
+      "id": "0906b255737c1b33",
+      "item": {
+        "type": "roster",
+        "id": "0906b255737c1b33",
+        "text": "ward.bay.wiki.org\nward.asia.wiki.org"
+      },
+      "date": 1511388430703
+    },
+    {
+      "type": "edit",
+      "id": "9fc8d4e5dac330bd",
+      "item": {
+        "type": "paragraph",
+        "id": "9fc8d4e5dac330bd",
+        "text": "We can use a roster to combine pages from many sites, selecting which sites are to be included in each print."
+      },
+      "date": 1511388572354
+    },
+    {
+      "type": "edit",
+      "id": "9fc8d4e5dac330bd",
+      "item": {
+        "type": "paragraph",
+        "id": "9fc8d4e5dac330bd",
+        "text": "We can use a roster to combine pages from many sites selecting which sites are to be included in each print."
+      },
+      "date": 1511390933068
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5b3a029c9a9c26ae"
+      },
+      "id": "5b3a029c9a9c26ae",
+      "type": "add",
+      "after": "0906b255737c1b33",
+      "date": 1511395966022
+    },
+    {
+      "type": "edit",
+      "id": "5b3a029c9a9c26ae",
+      "item": {
+        "type": "plugmatic",
+        "id": "5b3a029c9a9c26ae",
+        "text": "wiki-plugin-print"
+      },
+      "date": 1511395976149
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a59ba919b352f62a"
+      },
+      "id": "a59ba919b352f62a",
+      "type": "add",
+      "after": "5b3a029c9a9c26ae",
+      "date": 1511396013022
+    },
+    {
+      "type": "edit",
+      "id": "a59ba919b352f62a",
+      "item": {
+        "type": "paragraph",
+        "id": "a59ba919b352f62a",
+        "text": "We have just enough code to show how this plugin might work. We're happy to accept suggestions as issues. Register a watch if you are interested."
+      },
+      "date": 1511396122618
+    },
+    {
+      "type": "edit",
+      "id": "a59ba919b352f62a",
+      "item": {
+        "type": "paragraph",
+        "id": "a59ba919b352f62a",
+        "text": "We have just enough code to show how this plugin might work. We're happy to accept suggestions as issues. Register a watch if you are interested. [https://github.com/WardCunningham/wiki-plugin-print/blob/master/client/print.coffee github]"
+      },
+      "date": 1511396169266
+    },
+    {
+      "type": "fork",
+      "site": "localhost:3000",
+      "date": 1511396262226
+    },
+    {
+      "type": "edit",
+      "id": "2963d28101478e0d",
+      "item": {
+        "type": "paragraph",
+        "id": "2963d28101478e0d",
+        "text": "We test a plugin that can find and print many pages from the neighborhood. We test the idea by using a search term as markup. The print button will print all found pages in the order shown. We'll print pages that mention json."
+      },
+      "date": 1511396405413
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "json"
+      },
+      "date": 1511396413068
+    },
+    {
+      "type": "edit",
+      "id": "0906b255737c1b33",
+      "item": {
+        "type": "roster",
+        "id": "0906b255737c1b33",
+        "text": "about.fed.wiki\nward.bay.wiki.org\nward.asia.wiki.org"
+      },
+      "date": 1511396461744
+    },
+    {
+      "type": "move",
+      "order": [
+        "2963d28101478e0d",
+        "324971bcbd11f798",
+        "1838015366076a2b",
+        "9fc8d4e5dac330bd",
+        "0906b255737c1b33",
+        "a59ba919b352f62a",
+        "5b3a029c9a9c26ae"
+      ],
+      "id": "a59ba919b352f62a",
+      "date": 1511396485498
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": " "
+      },
+      "date": 1511399888643
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "json "
+      },
+      "date": 1511400245180
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "about "
+      },
+      "date": 1511400338291
+    },
+    {
+      "type": "edit",
+      "id": "324971bcbd11f798",
+      "item": {
+        "type": "print",
+        "id": "324971bcbd11f798",
+        "text": "json"
+      },
+      "date": 1511400473851
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8e266bcf6cbcfc57"
+      },
+      "id": "8e266bcf6cbcfc57",
+      "type": "add",
+      "after": "5b3a029c9a9c26ae",
+      "date": 1511457617531
+    },
+    {
+      "type": "edit",
+      "id": "8e266bcf6cbcfc57",
+      "item": {
+        "type": "paragraph",
+        "id": "8e266bcf6cbcfc57",
+        "text": "As we push this plugin further we have encountered coding issues that lead us to ask, [[Why Write Books]]?"
+      },
+      "date": 1511457741282
+    },
+    {
+      "type": "add",
+      "id": "05a364a4bea591f4",
+      "item": {
+        "type": "paragraph",
+        "id": "05a364a4bea591f4",
+        "text": "We've pushed on print formatting whc"
+      },
+      "after": "8e266bcf6cbcfc57",
+      "date": 1511477408367
+    },
+    {
+      "type": "edit",
+      "id": "05a364a4bea591f4",
+      "item": {
+        "type": "paragraph",
+        "id": "05a364a4bea591f4",
+        "text": "We've pushed on print formatting which has some issues. Maybe we just download a custom export.json file and feed that into other processes. Inventing a markup for organizing content still seems like a good idea. It could be what you put on your welcome page."
+      },
+      "date": 1511477594066
+    }
+  ]
+}

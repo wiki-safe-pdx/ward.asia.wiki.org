@@ -1,0 +1,260 @@
+{
+  "title": "everytimzone.com",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "d646cb8e897ef527",
+      "text": "It is devilishly difficult to reason about Time.  Here's a site to see the time instead of trying to do date math in your head. [https://everytimezone.com site]"
+    },
+    {
+      "type": "paragraph",
+      "id": "390fb3df716c6575",
+      "text": "[[xkcd 1883 supervillain plan]] jokes, but time is hard to program."
+    },
+    {
+      "type": "pagefold",
+      "id": "f579d3dbc850934d",
+      "text": "ward replied"
+    },
+    {
+      "type": "paragraph",
+      "id": "af9a892be962cb74",
+      "text": "I was so confused on my first trip to Japan that I manufactured a circular slide rule out of supplies I found in my hotel room. The question was, what time of day to call the office that would be convenient on both ends and avoid weekends too. It is the first time I had to deal with the date line. I broke the complementary razor to get a blade suitable for shaping cardboard."
+    },
+    {
+      "type": "paragraph",
+      "id": "4116a5018664af75",
+      "text": "I called it the \"world time forecaster\". My colleagues thought me daft until they needed to schedule a call home and couldn't work it out."
+    },
+    {
+      "type": "pagefold",
+      "id": "75e7a16f672a8035",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "0a3f1b0ca1f85db0",
+      "text": "There is one hard problem in computer science, and it's time zones. [https://twitter.com/phredmoyer/status/967125751790157824 twitter]"
+    },
+    {
+      "type": "html",
+      "id": "0492c0f2c24beabd",
+      "text": "<img width=100% src=http://found.ward.bay.wiki.org/assets/clips/time-zone-update.jpg>"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "everytimzone.com",
+        "story": []
+      },
+      "date": 1504108382534
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d646cb8e897ef527"
+      },
+      "id": "d646cb8e897ef527",
+      "type": "add",
+      "date": 1504108383822
+    },
+    {
+      "type": "edit",
+      "id": "d646cb8e897ef527",
+      "item": {
+        "type": "paragraph",
+        "id": "d646cb8e897ef527",
+        "text": "It is devilishly difficult to reason about Time.  Here's a site to see the problem. [https://everytimezone.com site]"
+      },
+      "date": 1504108856413
+    },
+    {
+      "type": "add",
+      "id": "390fb3df716c6575",
+      "item": {
+        "type": "paragraph",
+        "id": "390fb3df716c6575",
+        "text": "[[xkcd 1883 supervillain plan]]"
+      },
+      "after": "d646cb8e897ef527",
+      "date": 1504108896539
+    },
+    {
+      "type": "edit",
+      "id": "390fb3df716c6575",
+      "item": {
+        "type": "paragraph",
+        "id": "390fb3df716c6575",
+        "text": "[[xkcd 1883 supervillain plan]] jokes, but time is hard to program."
+      },
+      "date": 1504108931393
+    },
+    {
+      "type": "edit",
+      "id": "d646cb8e897ef527",
+      "item": {
+        "type": "paragraph",
+        "id": "d646cb8e897ef527",
+        "text": "It is devilishly difficult to reason about Time.  Here's a site to see the time instead of trying to do date math in your head. [https://everytimezone.com site]"
+      },
+      "date": 1504108955860
+    },
+    {
+      "type": "fork",
+      "site": "wiki.dbbs.co",
+      "date": 1504147898212
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "af9a892be962cb74"
+      },
+      "id": "af9a892be962cb74",
+      "type": "add",
+      "after": "390fb3df716c6575",
+      "date": 1504147901061
+    },
+    {
+      "type": "edit",
+      "id": "af9a892be962cb74",
+      "item": {
+        "type": "paragraph",
+        "id": "af9a892be962cb74",
+        "text": "I was so confused on my first trip to Japan that I manufactured a circular slide rule out of supplies I found in my hotel room. The question was, what time of day to call the office that would be convenient on both ends and avoid weekends too. It is the first time I had to deal with the date line. I broke the complementary razor to get a blade suitable for shaping cardboard."
+      },
+      "date": 1504148085541
+    },
+    {
+      "type": "add",
+      "id": "4116a5018664af75",
+      "item": {
+        "type": "paragraph",
+        "id": "4116a5018664af75",
+        "text": "I called it the \"world time forecaster\". My colleagues thought me daft until they needed to schedule a call home and couldn't work it out."
+      },
+      "after": "af9a892be962cb74",
+      "date": 1504148158379
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1504673097913
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f579d3dbc850934d"
+      },
+      "id": "f579d3dbc850934d",
+      "type": "add",
+      "after": "4116a5018664af75",
+      "date": 1504673104012
+    },
+    {
+      "type": "edit",
+      "id": "f579d3dbc850934d",
+      "item": {
+        "type": "pagefold",
+        "id": "f579d3dbc850934d",
+        "text": "ward replies"
+      },
+      "date": 1504673111735
+    },
+    {
+      "type": "move",
+      "order": [
+        "d646cb8e897ef527",
+        "390fb3df716c6575",
+        "f579d3dbc850934d",
+        "af9a892be962cb74",
+        "4116a5018664af75"
+      ],
+      "id": "f579d3dbc850934d",
+      "date": 1504673116691
+    },
+    {
+      "type": "edit",
+      "id": "f579d3dbc850934d",
+      "item": {
+        "type": "pagefold",
+        "id": "f579d3dbc850934d",
+        "text": "ward replied"
+      },
+      "date": 1504673131666
+    },
+    {
+      "type": "fork",
+      "site": "wiki.dbbs.co",
+      "date": 1519486630377
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0492c0f2c24beabd"
+      },
+      "id": "0492c0f2c24beabd",
+      "type": "add",
+      "after": "4116a5018664af75",
+      "date": 1519486744854
+    },
+    {
+      "type": "edit",
+      "id": "0492c0f2c24beabd",
+      "item": {
+        "type": "html",
+        "id": "0492c0f2c24beabd",
+        "text": "<img width=100% src=http://found.ward.bay.wiki.org/assets/clips/time-zone-update.jpg>"
+      },
+      "date": 1519486774952
+    },
+    {
+      "type": "add",
+      "id": "0a3f1b0ca1f85db0",
+      "item": {
+        "type": "paragraph",
+        "id": "0a3f1b0ca1f85db0",
+        "text": "There is one hard problem in computer science, and it's time zones."
+      },
+      "after": "4116a5018664af75",
+      "date": 1519486904529
+    },
+    {
+      "type": "edit",
+      "id": "0a3f1b0ca1f85db0",
+      "item": {
+        "type": "paragraph",
+        "id": "0a3f1b0ca1f85db0",
+        "text": "There is one hard problem in computer science, and it's time zones. [https://twitter.com/phredmoyer/status/967125751790157824 twitter]"
+      },
+      "date": 1519486919370
+    },
+    {
+      "type": "add",
+      "id": "75e7a16f672a8035",
+      "item": {
+        "type": "factory",
+        "id": "75e7a16f672a8035",
+        "text": ". "
+      },
+      "after": "4116a5018664af75",
+      "date": 1519486943369
+    },
+    {
+      "type": "edit",
+      "id": "75e7a16f672a8035",
+      "item": {
+        "type": "pagefold",
+        "id": "75e7a16f672a8035",
+        "text": "."
+      },
+      "date": 1519486950002
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.bay.wiki.org",
+      "date": 1519786966118
+    }
+  ]
+}

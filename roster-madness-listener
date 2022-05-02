@@ -1,0 +1,146 @@
+{
+  "title": "Roster Madness Listener",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5a1404907a667a6a",
+      "text": "Here we configure an Activity Plugin to consume roster-source info from Rosters above and to our left. [https://github.com/fedwiki/wiki-plugin-activity/blob/master/client/activity.coffee github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "d51d1efb71055e61",
+      "text": "See [[Roster Madness]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "c4f3564d009e56fb",
+      "text": "We find a plugin we can copy on the [[About Activity Plugin]] page. Configure it based on [[About Activity Configuration]]."
+    },
+    {
+      "type": "activity",
+      "id": "c43a88598cb67997",
+      "text": "ROSTER all"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Roster Madness Listener",
+        "story": []
+      },
+      "date": 1565893454429
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5a1404907a667a6a"
+      },
+      "id": "5a1404907a667a6a",
+      "type": "add",
+      "date": 1565893456439
+    },
+    {
+      "type": "edit",
+      "id": "5a1404907a667a6a",
+      "item": {
+        "type": "paragraph",
+        "id": "5a1404907a667a6a",
+        "text": "Here we configure an Activity Plugin to consume roster-source info from Rosters above and to our left."
+      },
+      "date": 1565893504944
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "d51d1efb71055e61",
+        "text": "See [[Roster Madness]]"
+      },
+      "after": "5a1404907a667a6a",
+      "id": "d51d1efb71055e61",
+      "date": 1565893564670
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c4f3564d009e56fb"
+      },
+      "id": "c4f3564d009e56fb",
+      "type": "add",
+      "after": "d51d1efb71055e61",
+      "date": 1565893576402
+    },
+    {
+      "type": "edit",
+      "id": "c4f3564d009e56fb",
+      "item": {
+        "type": "paragraph",
+        "id": "c4f3564d009e56fb",
+        "text": "We find an Activity plugin we can copy on the [[About Activity Plugin]] page."
+      },
+      "date": 1565893636148
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "activity",
+        "id": "c43a88598cb67997",
+        "text": " "
+      },
+      "after": "c4f3564d009e56fb",
+      "id": "c43a88598cb67997",
+      "date": 1565893692778
+    },
+    {
+      "type": "edit",
+      "id": "c43a88598cb67997",
+      "item": {
+        "type": "activity",
+        "id": "c43a88598cb67997",
+        "text": "ROSTER all "
+      },
+      "date": 1565893732810
+    },
+    {
+      "type": "edit",
+      "id": "c4f3564d009e56fb",
+      "item": {
+        "type": "paragraph",
+        "id": "c4f3564d009e56fb",
+        "text": "We find an Activity plugin we can copy on the [[About Activity Plugin]] page. Configure it based on [[About Activity Configuration]]."
+      },
+      "date": 1565893810621
+    },
+    {
+      "type": "edit",
+      "id": "c4f3564d009e56fb",
+      "item": {
+        "type": "paragraph",
+        "id": "c4f3564d009e56fb",
+        "text": "We find a plugin we can copy on the [[About Activity Plugin]] page. Configure it based on [[About Activity Configuration]]."
+      },
+      "date": 1565893830691
+    },
+    {
+      "type": "edit",
+      "id": "5a1404907a667a6a",
+      "item": {
+        "type": "paragraph",
+        "id": "5a1404907a667a6a",
+        "text": "Here we configure an Activity Plugin to consume roster-source info from Rosters above and to our left. [https://github.com/fedwiki/wiki-plugin-activity/blob/master/client/activity.coffee github]"
+      },
+      "date": 1565894367468
+    },
+    {
+      "type": "edit",
+      "id": "c43a88598cb67997",
+      "item": {
+        "type": "activity",
+        "id": "c43a88598cb67997",
+        "text": "ROSTER all"
+      },
+      "date": 1565894393177
+    }
+  ]
+}

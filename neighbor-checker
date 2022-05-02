@@ -1,0 +1,74 @@
+{
+  "title": "Neighbor Checker",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "23e63cfaee0f5a19",
+      "text": "We get started journal checking by choosing a site we know to check."
+    },
+    {
+      "type": "frame",
+      "id": "97056738e0a67675",
+      "text": "http://ward.asia.wiki.org/assets/pages/journal-checker/neighbors.html\nHEIGHT 300"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Neighbor Checker",
+        "story": []
+      },
+      "date": 1640389048566
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "23e63cfaee0f5a19"
+      },
+      "id": "23e63cfaee0f5a19",
+      "type": "add",
+      "date": 1640389075518
+    },
+    {
+      "type": "edit",
+      "id": "23e63cfaee0f5a19",
+      "item": {
+        "type": "paragraph",
+        "id": "23e63cfaee0f5a19",
+        "text": "We get started journal checking by choosing a site we know to check."
+      },
+      "date": 1640389124247
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "97056738e0a67675"
+      },
+      "id": "97056738e0a67675",
+      "type": "add",
+      "after": "23e63cfaee0f5a19",
+      "date": 1640389131495
+    },
+    {
+      "type": "edit",
+      "id": "97056738e0a67675",
+      "item": {
+        "type": "factory",
+        "id": "97056738e0a67675",
+        "text": "http://ward.asia.wiki.org/assets/pages/journal-checker/neighbors.html"
+      },
+      "date": 1640389138331
+    },
+    {
+      "type": "edit",
+      "id": "97056738e0a67675",
+      "item": {
+        "type": "frame",
+        "id": "97056738e0a67675",
+        "text": "http://ward.asia.wiki.org/assets/pages/journal-checker/neighbors.html\nHEIGHT 300"
+      },
+      "date": 1640389153864
+    }
+  ]
+}

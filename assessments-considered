@@ -1,0 +1,262 @@
+{
+  "title": "Assessments Considered",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "42e226b05a5c4a48",
+      "text": "Member assessments can call attention to pages by marking them with \"ToConsider\". We can locate these pages adding all members to the neighborhood and searching for this exact phrase."
+    },
+    {
+      "type": "paragraph",
+      "id": "7aeba60e8e8a5406",
+      "text": "The search result is titled, Search for 'ToConsider'"
+    },
+    {
+      "type": "paragraph",
+      "id": "a2b812df5e883711",
+      "text": "Fork this ghost page so that we can examine the results. Click \"details\" to retrieve each page and show details here."
+    },
+    {
+      "type": "frame",
+      "id": "1107ffe1306196d9",
+      "text": "http://ward.asia.wiki.org/assets/pages/sofi-scripts/assessments-considered.html"
+    },
+    {
+      "type": "paragraph",
+      "id": "dfdf96fc537d5ee6",
+      "text": "See [[Sofi Scripts]], [https://github.com/WardCunningham/assets/blob/master/pages/example-sofi-assessment/assessments-considered.html github]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Assessments Considered",
+        "story": []
+      },
+      "date": 1637100090280
+    },
+    {
+      "type": "fork",
+      "date": 1637100095269
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "42e226b05a5c4a48"
+      },
+      "id": "42e226b05a5c4a48",
+      "type": "add",
+      "date": 1637100122562
+    },
+    {
+      "type": "edit",
+      "id": "42e226b05a5c4a48",
+      "item": {
+        "type": "paragraph",
+        "id": "42e226b05a5c4a48",
+        "text": "Member assessments can call attention to pages by marking them with \"ToConsider\". We can locate these pages adding all members to the neighborhood and searching for this exact phrase. Fork the Search Engine Result Page (SERP) then return here to see marked items from each member page."
+      },
+      "date": 1637100386009
+    },
+    {
+      "type": "edit",
+      "id": "42e226b05a5c4a48",
+      "item": {
+        "type": "paragraph",
+        "id": "42e226b05a5c4a48",
+        "text": "Member assessments can call attention to pages by marking them with \"ToConsider\". We can locate these pages adding all members to the neighborhood and searching for this exact phrase."
+      },
+      "date": 1637100397936
+    },
+    {
+      "type": "add",
+      "id": "7aeba60e8e8a5406",
+      "item": {
+        "type": "paragraph",
+        "id": "7aeba60e8e8a5406",
+        "text": "Fork the Search Engine Result Page (SERP) then return here to see marked items from each member page."
+      },
+      "after": "42e226b05a5c4a48",
+      "date": 1637100399240
+    },
+    {
+      "type": "edit",
+      "id": "7aeba60e8e8a5406",
+      "item": {
+        "type": "paragraph",
+        "id": "7aeba60e8e8a5406",
+        "text": "Fork the Search Engine Result Page (SERP) titled \"Search for 'ToConsider'\", Then return here to see marked items from each member page."
+      },
+      "date": 1637100463812
+    },
+    {
+      "type": "edit",
+      "id": "7aeba60e8e8a5406",
+      "item": {
+        "type": "paragraph",
+        "id": "7aeba60e8e8a5406",
+        "text": "Fork the Search Engine Result Page (SERP) titled:"
+      },
+      "date": 1637100487857
+    },
+    {
+      "type": "add",
+      "id": "cd3fc86b640861e7",
+      "item": {
+        "type": "paragraph",
+        "id": "cd3fc86b640861e7",
+        "text": "Search for 'ToConsider'"
+      },
+      "after": "7aeba60e8e8a5406",
+      "date": 1637100502840
+    },
+    {
+      "type": "add",
+      "id": "a2b812df5e883711",
+      "item": {
+        "type": "paragraph",
+        "id": "a2b812df5e883711",
+        "text": "Then return here to see marked items from each member page."
+      },
+      "after": "cd3fc86b640861e7",
+      "date": 1637100504832
+    },
+    {
+      "type": "edit",
+      "id": "7aeba60e8e8a5406",
+      "item": {
+        "type": "paragraph",
+        "id": "7aeba60e8e8a5406",
+        "text": "Fork the Search Engine Result Page (SERP) we expect to be titled:"
+      },
+      "date": 1637100534375
+    },
+    {
+      "type": "remove",
+      "id": "cd3fc86b640861e7",
+      "date": 1637100560514
+    },
+    {
+      "type": "edit",
+      "id": "7aeba60e8e8a5406",
+      "item": {
+        "type": "paragraph",
+        "id": "7aeba60e8e8a5406",
+        "text": "The search result is titled, Search for 'ToConsider'"
+      },
+      "date": 1637100597649
+    },
+    {
+      "type": "edit",
+      "id": "a2b812df5e883711",
+      "item": {
+        "type": "paragraph",
+        "id": "a2b812df5e883711",
+        "text": "Fork this ghost page so that we can examine the results here. Click \"details\" to retrieve each page and show details here."
+      },
+      "date": 1637100698418
+    },
+    {
+      "type": "edit",
+      "id": "a2b812df5e883711",
+      "item": {
+        "type": "paragraph",
+        "id": "a2b812df5e883711",
+        "text": "Fork this ghost page so that we can examine the results. Click \"details\" to retrieve each page and show details here."
+      },
+      "date": 1637100709374
+    },
+    {
+      "id": "1107ffe1306196d9",
+      "type": "add",
+      "item": {
+        "type": "frame",
+        "id": "1107ffe1306196d9",
+        "text": "http://ward.asia.wiki.org/assets/pages/sofi-scripts/slurp.html\nHEIGHT 600"
+      },
+      "after": "a2b812df5e883711",
+      "date": 1637100717824
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dfdf96fc537d5ee6"
+      },
+      "id": "dfdf96fc537d5ee6",
+      "type": "add",
+      "after": "1107ffe1306196d9",
+      "date": 1637100913094
+    },
+    {
+      "type": "edit",
+      "id": "dfdf96fc537d5ee6",
+      "item": {
+        "type": "paragraph",
+        "id": "dfdf96fc537d5ee6",
+        "text": "See [[Sofi Scripts]] for slurp.html"
+      },
+      "date": 1637100938324
+    },
+    {
+      "type": "edit",
+      "id": "1107ffe1306196d9",
+      "item": {
+        "type": "frame",
+        "id": "1107ffe1306196d9",
+        "text": "http://ward.asia.wiki.org/assets/pages/sofi-scripts/assessments-considered.html\nHEIGHT 500"
+      },
+      "date": 1637101023855
+    },
+    {
+      "type": "edit",
+      "id": "1107ffe1306196d9",
+      "item": {
+        "type": "frame",
+        "id": "1107ffe1306196d9",
+        "text": "http://ward.asia.wiki.org/assets/pages/sofi-scripts/assessments-considered.html\nHEIGHT 600"
+      },
+      "date": 1637101054913
+    },
+    {
+      "type": "edit",
+      "id": "dfdf96fc537d5ee6",
+      "item": {
+        "type": "paragraph",
+        "id": "dfdf96fc537d5ee6",
+        "text": "See [[Sofi Scripts]]"
+      },
+      "date": 1637119150327
+    },
+    {
+      "type": "edit",
+      "id": "1107ffe1306196d9",
+      "item": {
+        "type": "frame",
+        "id": "1107ffe1306196d9",
+        "text": "http://ward.asia.wiki.org/assets/pages/sofi-scripts/assessments-considered.html"
+      },
+      "date": 1637121383168
+    },
+    {
+      "type": "edit",
+      "id": "dfdf96fc537d5ee6",
+      "item": {
+        "type": "paragraph",
+        "id": "dfdf96fc537d5ee6",
+        "text": "See [[Sofi Scripts]] [[https://github.com/WardCunningham/assets/blob/master/pages/example-sofi-assessment/assessments-considered.html github]"
+      },
+      "date": 1637122209099
+    },
+    {
+      "type": "edit",
+      "id": "dfdf96fc537d5ee6",
+      "item": {
+        "type": "paragraph",
+        "id": "dfdf96fc537d5ee6",
+        "text": "See [[Sofi Scripts]], [https://github.com/WardCunningham/assets/blob/master/pages/example-sofi-assessment/assessments-considered.html github]"
+      },
+      "date": 1637122221064
+    }
+  ]
+}

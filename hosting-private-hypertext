@@ -1,0 +1,1088 @@
+{
+  "title": "Hosting Private Hypertext",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "f9a0bae0e567fd21",
+      "text": "We consider how unpublished hypertext can be privately hosted for personal use within the context of federated wiki where dynamic \"collaborative\" link resolution creates new opportunities for distribution."
+    },
+    {
+      "type": "paragraph",
+      "id": "fed77cf3a0eb5dd9",
+      "text": "See [[Collaborative Link]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "116b053d62319451",
+      "text": "A motivating example is the classic A Pattern Language by Alexander, et. al. which has been an inspiration for wiki but has yet to respond to the emergent pressure of online collaboration."
+    },
+    {
+      "type": "paragraph",
+      "id": "9202083fe46bbb8c",
+      "text": "We will describe how an individual can serve for themselves materials to be read within their own web browser as if it were generally published but only to them. This requires installing server software which can draw one into the complexity of release versions and dependencies. Seek help if this is new to you."
+    },
+    {
+      "type": "markdown",
+      "id": "a32116f1bebba8dd",
+      "text": "# Installation"
+    },
+    {
+      "type": "paragraph",
+      "id": "24e252fae2aa68dc",
+      "text": "Our most conveniently packaged version of federated wiki server software is written in node and can run on most contemporary computers including the Raspberry Pi."
+    },
+    {
+      "type": "paragraph",
+      "id": "4a42c4257614bdc3",
+      "text": "Install node and its companion npm using homebrew."
+    },
+    {
+      "type": "code",
+      "id": "18242cd769cc9047",
+      "text": "brew install node"
+    },
+    {
+      "type": "paragraph",
+      "id": "157279a27f1a106b",
+      "text": "Install wiki for \"global\" use on one computer."
+    },
+    {
+      "type": "code",
+      "id": "c1af89f42235ddf2",
+      "text": "npm install -g wiki"
+    },
+    {
+      "type": "paragraph",
+      "id": "50e84d888fe7e22e",
+      "text": "Start wiki in \"farm\" mode on an unused port 3000."
+    },
+    {
+      "type": "code",
+      "id": "48f9c0b00c8e16c8",
+      "text": "wiki -f -p 3000"
+    },
+    {
+      "type": "paragraph",
+      "id": "e858eb066541ccd9",
+      "text": "You should now be able to view your wiki server as localhost. Enter the following into your browser's location bar or click this [http://localhost:3000 link]"
+    },
+    {
+      "type": "code",
+      "id": "f5cb5b054d17e98c",
+      "text": "http://localhost:3000/"
+    },
+    {
+      "type": "markdown",
+      "id": "5ca88d239fc23598",
+      "text": "# Content"
+    },
+    {
+      "type": "paragraph",
+      "id": "052e6631df0fe652",
+      "text": "Wiki's default access control is read-only which is sufficient for our purposes here. There are many more security options should you want to write your own wiki pages."
+    },
+    {
+      "type": "paragraph",
+      "id": "6a4a62086ddb7f46",
+      "text": "We will presume you have received a private copy of the APL hypertext as a zip file and expanded it to make the directory apl.localhost. Move this to the content storage folder managed by wiki: \".wiki\" in your home directory."
+    },
+    {
+      "type": "code",
+      "id": "cf006a0df1e8e74f",
+      "text": "mv apl.localhost ~/.wiki"
+    },
+    {
+      "type": "paragraph",
+      "id": "dc2308112d58118d",
+      "text": "You can open the content storage folder in Finder using the Go ⇒ Go to Folder... menu to enter ~/.wiki"
+    },
+    {
+      "type": "markdown",
+      "id": "c38077e0e0ce221f",
+      "text": "# Federation"
+    },
+    {
+      "type": "paragraph",
+      "id": "488f36076d8fd383",
+      "text": "The Growing Regions pattern language links by name to patterns from APL. Open both works together in your browser by entering the following in your browser's location bar or click this [http://npl.wiki/view/welcome-visitors/apl.localhost:3000/welcome-visitors link]"
+    },
+    {
+      "type": "code",
+      "id": "e514ece8c56a6a0b",
+      "text": "http://npl.wiki/view/welcome-visitors/apl.localhost:3000/welcome-visitors"
+    },
+    {
+      "type": "paragraph",
+      "id": "f98d3bb5140284ce",
+      "text": "Expect to see a browser tab open with two welcome pages, one for each site. The first site mentioned in the URL is called the \"origin\". [http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%206.37.17%20AM.png enlarge]"
+    },
+    {
+      "type": "html",
+      "id": "07abd2df77565d3f",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%206.37.17%20AM.png>"
+    },
+    {
+      "type": "paragraph",
+      "id": "691a401495e0a431",
+      "text": "You will be browsing from the perspective of npl.wiki as origin which would make apl.localhost pages technically \"remote\" and thus bordered by a blue halo to indicate you are traveling away from that origin."
+    },
+    {
+      "type": "paragraph",
+      "id": "e07e2a29856cc46e",
+      "text": "This notion of origin becomes important when writing as changes go back to the origin. Both sites are read only for now and can be opened in either order."
+    },
+    {
+      "type": "markdown",
+      "id": "0122f409a428301f",
+      "text": "# Application"
+    },
+    {
+      "type": "paragraph",
+      "id": "c61b3da3147cf473",
+      "text": "We consider now how one might synthesize the independent work of multiple authors which may or may not include privately held material such as APL."
+    },
+    {
+      "type": "paragraph",
+      "id": "954f6703ea113e6f",
+      "text": "When we open a tab with NPL and APL together as we did above the two sites become neighbors. If we navigate through the former to, say, Place Networks, we will find that it links to Circulation Realms which is now in the neighborhood but not yet part of the same work. One more click opens the desired page. [http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%206.37.17%20AM.png enlarge]"
+    },
+    {
+      "type": "html",
+      "id": "d546951b635c7ec7",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%207.09.45%20AM.png>"
+    },
+    {
+      "type": "paragraph",
+      "id": "bd165a73ef45d484",
+      "text": "We can fork content from APL served from localhost into our browser's version of NPL. At this point the Circulation Realms link ceases to be remote as we've now made it part of our locally modified NPL. "
+    },
+    {
+      "type": "html",
+      "id": "f7814f39e838f384",
+      "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%207.14.10%20AM.png>"
+    },
+    {
+      "type": "paragraph",
+      "id": "99708d9370cef5c7",
+      "text": "This forking and possibly editing process can continue and, as suggested elsewhere, be used to may project specific pamphlets from Local Changes. Here, for example, changes made yesterday connecting NPL with the Dayton Experiment join Place Network and Circulation Realms."
+    },
+    {
+      "type": "paragraph",
+      "id": "a64dffe6d2cd4574",
+      "text": "See [[Print Local Changes]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Hosting Private Hypertext",
+        "story": []
+      },
+      "date": 1582120167912
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f9a0bae0e567fd21"
+      },
+      "id": "f9a0bae0e567fd21",
+      "type": "add",
+      "date": 1582120170849
+    },
+    {
+      "type": "edit",
+      "id": "f9a0bae0e567fd21",
+      "item": {
+        "type": "paragraph",
+        "id": "f9a0bae0e567fd21",
+        "text": "We consider how unpublished hypertext can be privately hosted for personal use within the context of federated wiki where dynamic \"collaborative\" link resolution creates new opportunities for distribution."
+      },
+      "date": 1582120520813
+    },
+    {
+      "type": "add",
+      "id": "116b053d62319451",
+      "item": {
+        "type": "paragraph",
+        "id": "116b053d62319451",
+        "text": "A motivating example is the classic A Pattern Language by Alexander, et. al. which has been an inspiration for wiki but has yet to respond to the emergent pressure of online collaboration."
+      },
+      "after": "f9a0bae0e567fd21",
+      "date": 1582120697241
+    },
+    {
+      "type": "add",
+      "id": "9202083fe46bbb8c",
+      "item": {
+        "type": "paragraph",
+        "id": "9202083fe46bbb8c",
+        "text": "We will describe how an individual can serve for themselves materials to be read within their own web browser as if it were generally published but only to them. This requires installing server software which can draw one into the complexity of release versions and dependencies. Seek help if this is new to you."
+      },
+      "after": "116b053d62319451",
+      "date": 1582121006547
+    },
+    {
+      "type": "add",
+      "id": "a32116f1bebba8dd",
+      "item": {
+        "type": "paragraph",
+        "id": "a32116f1bebba8dd",
+        "text": "# Installation"
+      },
+      "after": "9202083fe46bbb8c",
+      "date": 1582121027069
+    },
+    {
+      "type": "add",
+      "id": "24e252fae2aa68dc",
+      "item": {
+        "type": "paragraph",
+        "id": "24e252fae2aa68dc",
+        "text": "Our most conveniently packaged version of federated wiki server software is written in node and can run on most contemporary computers including the Raspberry Pi."
+      },
+      "after": "a32116f1bebba8dd",
+      "date": 1582121102141
+    },
+    {
+      "type": "add",
+      "id": "4a42c4257614bdc3",
+      "item": {
+        "type": "paragraph",
+        "id": "4a42c4257614bdc3",
+        "text": "Install node and its companion npm."
+      },
+      "after": "24e252fae2aa68dc",
+      "date": 1582121171352
+    },
+    {
+      "type": "edit",
+      "id": "4a42c4257614bdc3",
+      "item": {
+        "type": "paragraph",
+        "id": "4a42c4257614bdc3",
+        "text": "Install node and its companion npm using homebrew."
+      },
+      "date": 1582121208391
+    },
+    {
+      "type": "add",
+      "id": "18242cd769cc9047",
+      "item": {
+        "type": "factory",
+        "id": "18242cd769cc9047",
+        "text": "brew "
+      },
+      "after": "4a42c4257614bdc3",
+      "date": 1582121237546
+    },
+    {
+      "type": "edit",
+      "id": "18242cd769cc9047",
+      "item": {
+        "type": "code",
+        "id": "18242cd769cc9047",
+        "text": "brew install node"
+      },
+      "date": 1582121249342
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "157279a27f1a106b"
+      },
+      "id": "157279a27f1a106b",
+      "type": "add",
+      "after": "18242cd769cc9047",
+      "date": 1582121270172
+    },
+    {
+      "type": "edit",
+      "id": "157279a27f1a106b",
+      "item": {
+        "type": "paragraph",
+        "id": "157279a27f1a106b",
+        "text": "Install wiki for \"global\" use on one computer."
+      },
+      "date": 1582121421365
+    },
+    {
+      "type": "add",
+      "id": "c1af89f42235ddf2",
+      "item": {
+        "type": "factory",
+        "id": "c1af89f42235ddf2",
+        "text": "npm "
+      },
+      "after": "157279a27f1a106b",
+      "date": 1582121428864
+    },
+    {
+      "type": "edit",
+      "id": "c1af89f42235ddf2",
+      "item": {
+        "type": "code",
+        "id": "c1af89f42235ddf2",
+        "text": "npm install -g wiki"
+      },
+      "date": 1582121442431
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "50e84d888fe7e22e"
+      },
+      "id": "50e84d888fe7e22e",
+      "type": "add",
+      "after": "c1af89f42235ddf2",
+      "date": 1582121509917
+    },
+    {
+      "type": "edit",
+      "id": "50e84d888fe7e22e",
+      "item": {
+        "type": "paragraph",
+        "id": "50e84d888fe7e22e",
+        "text": "Start wiki on an unused port 3000."
+      },
+      "date": 1582121552231
+    },
+    {
+      "type": "add",
+      "id": "48f9c0b00c8e16c8",
+      "item": {
+        "type": "factory",
+        "id": "48f9c0b00c8e16c8",
+        "text": "wiki"
+      },
+      "after": "50e84d888fe7e22e",
+      "date": 1582121558138
+    },
+    {
+      "type": "edit",
+      "id": "48f9c0b00c8e16c8",
+      "item": {
+        "type": "code",
+        "id": "48f9c0b00c8e16c8",
+        "text": "wiki -f -p 3000"
+      },
+      "date": 1582121591758
+    },
+    {
+      "type": "edit",
+      "id": "50e84d888fe7e22e",
+      "item": {
+        "type": "paragraph",
+        "id": "50e84d888fe7e22e",
+        "text": "Start wiki in \"farm\" mode on an unused port 3000."
+      },
+      "date": 1582121603875
+    },
+    {
+      "type": "edit",
+      "id": "a32116f1bebba8dd",
+      "item": {
+        "type": "markdown",
+        "id": "a32116f1bebba8dd",
+        "text": "# Installation"
+      },
+      "date": 1582121636387
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e858eb066541ccd9"
+      },
+      "id": "e858eb066541ccd9",
+      "type": "add",
+      "after": "48f9c0b00c8e16c8",
+      "date": 1582121790567
+    },
+    {
+      "type": "edit",
+      "id": "e858eb066541ccd9",
+      "item": {
+        "type": "paragraph",
+        "id": "e858eb066541ccd9",
+        "text": "You should now be able to view your wiki server operating at the address localhost:3000. Enter the following into your browser's location bar or click this [http://localhost:3000 link]"
+      },
+      "date": 1582121965413
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f5cb5b054d17e98c"
+      },
+      "id": "f5cb5b054d17e98c",
+      "type": "add",
+      "after": "e858eb066541ccd9",
+      "date": 1582121973607
+    },
+    {
+      "type": "edit",
+      "id": "f5cb5b054d17e98c",
+      "item": {
+        "type": "code",
+        "id": "f5cb5b054d17e98c",
+        "text": "http://localhost:3000/"
+      },
+      "date": 1582121995546
+    },
+    {
+      "type": "edit",
+      "id": "e858eb066541ccd9",
+      "item": {
+        "type": "paragraph",
+        "id": "e858eb066541ccd9",
+        "text": "You should now be able to view your wiki server as localhost. Enter the following into your browser's location bar or click this [http://localhost:3000 link]"
+      },
+      "date": 1582122031306
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5ca88d239fc23598"
+      },
+      "id": "5ca88d239fc23598",
+      "type": "add",
+      "after": "f5cb5b054d17e98c",
+      "date": 1582122130919
+    },
+    {
+      "type": "edit",
+      "id": "5ca88d239fc23598",
+      "item": {
+        "type": "markdown",
+        "id": "5ca88d239fc23598",
+        "text": "# Content"
+      },
+      "date": 1582122172455
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "052e6631df0fe652"
+      },
+      "id": "052e6631df0fe652",
+      "type": "add",
+      "after": "5ca88d239fc23598",
+      "date": 1582122175499
+    },
+    {
+      "type": "edit",
+      "id": "052e6631df0fe652",
+      "item": {
+        "type": "paragraph",
+        "id": "052e6631df0fe652",
+        "text": "Wiki's default access control is read-only which is sufficient for our purposes here. There are many more security options should you want to write your own wiki pages."
+      },
+      "date": 1582122265932
+    },
+    {
+      "type": "add",
+      "id": "6a4a62086ddb7f46",
+      "item": {
+        "type": "paragraph",
+        "id": "6a4a62086ddb7f46",
+        "text": "We will presume you have received a private copy of the APL hypertext as a zip file and expanded it to make the directory apl.localhost. Move this to the content storage folder managed by wiki."
+      },
+      "after": "052e6631df0fe652",
+      "date": 1582122477951
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cf006a0df1e8e74f"
+      },
+      "id": "cf006a0df1e8e74f",
+      "type": "add",
+      "after": "6a4a62086ddb7f46",
+      "date": 1582122483793
+    },
+    {
+      "type": "edit",
+      "id": "cf006a0df1e8e74f",
+      "item": {
+        "type": "code",
+        "id": "cf006a0df1e8e74f",
+        "text": "mv apl.localhost ~/.wiki"
+      },
+      "date": 1582122510356
+    },
+    {
+      "type": "edit",
+      "id": "6a4a62086ddb7f46",
+      "item": {
+        "type": "paragraph",
+        "id": "6a4a62086ddb7f46",
+        "text": "We will presume you have received a private copy of the APL hypertext as a zip file and expanded it to make the directory apl.localhost. Move this to the content storage folder managed by wiki: .wiki in your home directory."
+      },
+      "date": 1582122530298
+    },
+    {
+      "type": "edit",
+      "id": "6a4a62086ddb7f46",
+      "item": {
+        "type": "paragraph",
+        "id": "6a4a62086ddb7f46",
+        "text": "We will presume you have received a private copy of the APL hypertext as a zip file and expanded it to make the directory apl.localhost. Move this to the content storage folder managed by wiki: \".wiki\" in your home directory."
+      },
+      "date": 1582122545289
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c38077e0e0ce221f"
+      },
+      "id": "c38077e0e0ce221f",
+      "type": "add",
+      "after": "cf006a0df1e8e74f",
+      "date": 1582122568705
+    },
+    {
+      "type": "edit",
+      "id": "c38077e0e0ce221f",
+      "item": {
+        "type": "markdown",
+        "id": "c38077e0e0ce221f",
+        "text": "# Federation"
+      },
+      "date": 1582122596765
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "488f36076d8fd383"
+      },
+      "id": "488f36076d8fd383",
+      "type": "add",
+      "after": "c38077e0e0ce221f",
+      "date": 1582122601687
+    },
+    {
+      "type": "edit",
+      "id": "488f36076d8fd383",
+      "item": {
+        "type": "paragraph",
+        "id": "488f36076d8fd383",
+        "text": "The Growing Regions pattern language links by name to patterns from APL. Open both works together in your browser by entering the following in your browser's location bar or click this [http://npl.wiki/view/welcome-visitors/apl.localhost/welcome-visitors link]"
+      },
+      "date": 1582122868899
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e514ece8c56a6a0b"
+      },
+      "id": "e514ece8c56a6a0b",
+      "type": "add",
+      "after": "488f36076d8fd383",
+      "date": 1582122878741
+    },
+    {
+      "type": "edit",
+      "id": "e514ece8c56a6a0b",
+      "item": {
+        "type": "code",
+        "id": "e514ece8c56a6a0b",
+        "text": "http://npl.wiki/view/welcome-visitors/apl.localhost/welcome-visitors"
+      },
+      "date": 1582122886667
+    },
+    {
+      "type": "edit",
+      "id": "488f36076d8fd383",
+      "item": {
+        "type": "paragraph",
+        "id": "488f36076d8fd383",
+        "text": "The Growing Regions pattern language links by name to patterns from APL. Open both works together in your browser by entering the following in your browser's location bar or click this [http://npl.wiki/view/welcome-visitors/apl.localhost:3000/welcome-visitors link]"
+      },
+      "date": 1582123465170
+    },
+    {
+      "type": "edit",
+      "id": "e514ece8c56a6a0b",
+      "item": {
+        "type": "code",
+        "id": "e514ece8c56a6a0b",
+        "text": "http://npl.wiki/view/welcome-visitors/apl.localhost:3000/welcome-visitors"
+      },
+      "date": 1582123476625
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f98d3bb5140284ce"
+      },
+      "id": "f98d3bb5140284ce",
+      "type": "add",
+      "after": "e514ece8c56a6a0b",
+      "date": 1582123528894
+    },
+    {
+      "type": "edit",
+      "id": "f98d3bb5140284ce",
+      "item": {
+        "type": "paragraph",
+        "id": "f98d3bb5140284ce",
+        "text": "Expect to see a browser tab open with two welcome pages, one for each site. The first site mentioned in the URL is called the \"origin\". You will be browsing from the perspective of npl.wiki which would make apl.localhost pages technically \"remote\" and thus bordered by a blue halo to indicate you are traveling away from that origin. This becomes important when writing as changes go back to the origin. Both sites are read only and can be opened in either order."
+      },
+      "date": 1582123759030
+    },
+    {
+      "type": "edit",
+      "id": "f98d3bb5140284ce",
+      "item": {
+        "type": "paragraph",
+        "id": "f98d3bb5140284ce",
+        "text": "Expect to see a browser tab open with two welcome pages, one for each site. The first site mentioned in the URL is called the \"origin\". "
+      },
+      "date": 1582123781720
+    },
+    {
+      "type": "add",
+      "id": "691a401495e0a431",
+      "item": {
+        "type": "paragraph",
+        "id": "691a401495e0a431",
+        "text": "You will be browsing from the perspective of npl.wiki which would make apl.localhost pages technically \"remote\" and thus bordered by a blue halo to indicate you are traveling away from that origin. This becomes important when writing as changes go back to the origin. Both sites are read only and can be opened in either order."
+      },
+      "after": "f98d3bb5140284ce",
+      "date": 1582123783179
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2ade515c5d918adb"
+      },
+      "id": "2ade515c5d918adb",
+      "type": "add",
+      "after": "691a401495e0a431",
+      "date": 1582123789995
+    },
+    {
+      "type": "edit",
+      "id": "2ade515c5d918adb",
+      "item": {
+        "type": "assets",
+        "id": "2ade515c5d918adb",
+        "text": "pages/hosting-private-hypertext"
+      },
+      "date": 1582123808639
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "07abd2df77565d3f"
+      },
+      "id": "07abd2df77565d3f",
+      "type": "add",
+      "after": "2ade515c5d918adb",
+      "date": 1582123828969
+    },
+    {
+      "type": "edit",
+      "id": "07abd2df77565d3f",
+      "item": {
+        "type": "html",
+        "id": "07abd2df77565d3f",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%206.37.17%20AM.png>"
+      },
+      "date": 1582123843721
+    },
+    {
+      "id": "07abd2df77565d3f",
+      "type": "move",
+      "order": [
+        "f9a0bae0e567fd21",
+        "116b053d62319451",
+        "9202083fe46bbb8c",
+        "a32116f1bebba8dd",
+        "24e252fae2aa68dc",
+        "4a42c4257614bdc3",
+        "18242cd769cc9047",
+        "157279a27f1a106b",
+        "c1af89f42235ddf2",
+        "50e84d888fe7e22e",
+        "48f9c0b00c8e16c8",
+        "e858eb066541ccd9",
+        "f5cb5b054d17e98c",
+        "5ca88d239fc23598",
+        "052e6631df0fe652",
+        "6a4a62086ddb7f46",
+        "cf006a0df1e8e74f",
+        "c38077e0e0ce221f",
+        "488f36076d8fd383",
+        "e514ece8c56a6a0b",
+        "f98d3bb5140284ce",
+        "07abd2df77565d3f",
+        "691a401495e0a431",
+        "2ade515c5d918adb"
+      ],
+      "date": 1582123901849
+    },
+    {
+      "type": "remove",
+      "id": "2ade515c5d918adb",
+      "date": 1582123914179
+    },
+    {
+      "type": "edit",
+      "id": "691a401495e0a431",
+      "item": {
+        "type": "paragraph",
+        "id": "691a401495e0a431",
+        "text": "You will be browsing from the perspective of npl.wiki as origin which would make apl.localhost pages technically \"remote\" and thus bordered by a blue halo to indicate you are traveling away from that origin. This becomes important when writing as changes go back to the origin. Both sites are read only and can be opened in either order."
+      },
+      "date": 1582124008395
+    },
+    {
+      "type": "edit",
+      "id": "691a401495e0a431",
+      "item": {
+        "type": "paragraph",
+        "id": "691a401495e0a431",
+        "text": "You will be browsing from the perspective of npl.wiki as origin which would make apl.localhost pages technically \"remote\" and thus bordered by a blue halo to indicate you are traveling away from that origin."
+      },
+      "date": 1582124014552
+    },
+    {
+      "type": "add",
+      "id": "e07e2a29856cc46e",
+      "item": {
+        "type": "paragraph",
+        "id": "e07e2a29856cc46e",
+        "text": "This notion of origin becomes important when writing as changes go back to the origin. Both sites are read only for now and can be opened in either order."
+      },
+      "after": "691a401495e0a431",
+      "date": 1582124051419
+    },
+    {
+      "type": "add",
+      "id": "dc2308112d58118d",
+      "item": {
+        "type": "paragraph",
+        "id": "dc2308112d58118d",
+        "text": "You can open the content storage folder in Finder using the Go ⇒ Go to Folder "
+      },
+      "after": "6a4a62086ddb7f46",
+      "date": 1582124354156
+    },
+    {
+      "type": "edit",
+      "id": "dc2308112d58118d",
+      "item": {
+        "type": "paragraph",
+        "id": "dc2308112d58118d",
+        "text": "You can open the content storage folder in Finder using the Go ⇒ Go to Folder... menu to enter ~/.wiki"
+      },
+      "date": 1582124384168
+    },
+    {
+      "id": "dc2308112d58118d",
+      "type": "move",
+      "order": [
+        "f9a0bae0e567fd21",
+        "116b053d62319451",
+        "9202083fe46bbb8c",
+        "a32116f1bebba8dd",
+        "24e252fae2aa68dc",
+        "4a42c4257614bdc3",
+        "18242cd769cc9047",
+        "157279a27f1a106b",
+        "c1af89f42235ddf2",
+        "50e84d888fe7e22e",
+        "48f9c0b00c8e16c8",
+        "e858eb066541ccd9",
+        "f5cb5b054d17e98c",
+        "5ca88d239fc23598",
+        "052e6631df0fe652",
+        "6a4a62086ddb7f46",
+        "cf006a0df1e8e74f",
+        "dc2308112d58118d",
+        "c38077e0e0ce221f",
+        "488f36076d8fd383",
+        "e514ece8c56a6a0b",
+        "f98d3bb5140284ce",
+        "07abd2df77565d3f",
+        "691a401495e0a431",
+        "e07e2a29856cc46e"
+      ],
+      "date": 1582124388486
+    },
+    {
+      "type": "add",
+      "id": "fed77cf3a0eb5dd9",
+      "item": {
+        "type": "paragraph",
+        "id": "fed77cf3a0eb5dd9",
+        "text": "See [[Collaborative Link]]"
+      },
+      "after": "f9a0bae0e567fd21",
+      "date": 1582124494551
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0122f409a428301f"
+      },
+      "id": "0122f409a428301f",
+      "type": "add",
+      "after": "e07e2a29856cc46e",
+      "date": 1582125522442
+    },
+    {
+      "type": "edit",
+      "id": "0122f409a428301f",
+      "item": {
+        "type": "markdown",
+        "id": "0122f409a428301f",
+        "text": "# Application"
+      },
+      "date": 1582125533847
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c61b3da3147cf473"
+      },
+      "id": "c61b3da3147cf473",
+      "type": "add",
+      "after": "0122f409a428301f",
+      "date": 1582125545047
+    },
+    {
+      "type": "edit",
+      "id": "c61b3da3147cf473",
+      "item": {
+        "type": "paragraph",
+        "id": "c61b3da3147cf473",
+        "text": "We consider now how one might synthesize the independent work of multiple authors which may or may not include privately held material such as APL."
+      },
+      "date": 1582125637048
+    },
+    {
+      "type": "add",
+      "id": "954f6703ea113e6f",
+      "item": {
+        "type": "paragraph",
+        "id": "954f6703ea113e6f",
+        "text": "When we open a tab with NPL and APL together as we did above the two sites become neighbors. If we navigate through the former to, say, Place Networks, we will find that it links "
+      },
+      "after": "c61b3da3147cf473",
+      "date": 1582125756989
+    },
+    {
+      "type": "edit",
+      "id": "954f6703ea113e6f",
+      "item": {
+        "type": "paragraph",
+        "id": "954f6703ea113e6f",
+        "text": "When we open a tab with NPL and APL together as we did above the two sites become neighbors. If we navigate through the former to, say, Place Networks, we will find that it links to Circulation Rh"
+      },
+      "date": 1582125800890
+    },
+    {
+      "type": "edit",
+      "id": "954f6703ea113e6f",
+      "item": {
+        "type": "paragraph",
+        "id": "954f6703ea113e6f",
+        "text": "When we open a tab with NPL and APL together as we did above the two sites become neighbors. If we navigate through the former to, say, Place Networks, we will find that it links to Circulation Realms which is now in the neighborhood but not yet part of the same work. One more click opens the desired page."
+      },
+      "date": 1582125886963
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d546951b635c7ec7"
+      },
+      "id": "d546951b635c7ec7",
+      "type": "add",
+      "after": "954f6703ea113e6f",
+      "date": 1582126008979
+    },
+    {
+      "type": "edit",
+      "id": "d546951b635c7ec7",
+      "item": {
+        "type": "html",
+        "id": "d546951b635c7ec7",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%207.09.45%20AM.png>"
+      },
+      "date": 1582126020382
+    },
+    {
+      "type": "edit",
+      "id": "f98d3bb5140284ce",
+      "item": {
+        "type": "paragraph",
+        "id": "f98d3bb5140284ce",
+        "text": "Expect to see a browser tab open with two welcome pages, one for each site. The first site mentioned in the URL is called the \"origin\". [http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%206.37.17%20AM.png enlarge]"
+      },
+      "date": 1582126076664
+    },
+    {
+      "type": "edit",
+      "id": "954f6703ea113e6f",
+      "item": {
+        "type": "paragraph",
+        "id": "954f6703ea113e6f",
+        "text": "When we open a tab with NPL and APL together as we did above the two sites become neighbors. If we navigate through the former to, say, Place Networks, we will find that it links to Circulation Realms which is now in the neighborhood but not yet part of the same work. One more click opens the desired page. [http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%206.37.17%20AM.png enlarge]"
+      },
+      "date": 1582126088499
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bd165a73ef45d484"
+      },
+      "id": "bd165a73ef45d484",
+      "type": "add",
+      "after": "d546951b635c7ec7",
+      "date": 1582126288209
+    },
+    {
+      "type": "edit",
+      "id": "bd165a73ef45d484",
+      "item": {
+        "type": "paragraph",
+        "id": "bd165a73ef45d484",
+        "text": "We can fork content from APL served from localhost into our browser's version of NPL. At this point the Circulation Realms link ceases to be remote as we've now made it part of our locally modified NPL. This forking and possibly editing process can continue and, as suggested elsewhere, be used to may project specific pamphlets. "
+      },
+      "date": 1582126518063
+    },
+    {
+      "type": "edit",
+      "id": "bd165a73ef45d484",
+      "item": {
+        "type": "paragraph",
+        "id": "bd165a73ef45d484",
+        "text": "We can fork content from APL served from localhost into our browser's version of NPL. At this point the Circulation Realms link ceases to be remote as we've now made it part of our locally modified NPL. This forking and possibly editing process can continue and, as suggested elsewhere, be used to may project specific pamphlets from Local Changes."
+      },
+      "date": 1582126548804
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f7814f39e838f384"
+      },
+      "id": "f7814f39e838f384",
+      "type": "add",
+      "after": "bd165a73ef45d484",
+      "date": 1582126551951
+    },
+    {
+      "type": "edit",
+      "id": "f7814f39e838f384",
+      "item": {
+        "type": "html",
+        "id": "f7814f39e838f384",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%206.37.17%20AM.png>"
+      },
+      "date": 1582126588097
+    },
+    {
+      "type": "edit",
+      "id": "f7814f39e838f384",
+      "item": {
+        "type": "html",
+        "id": "f7814f39e838f384",
+        "text": "<img width=100% src=http://ward.asia.wiki.org/assets/pages/hosting-private-hypertext/Screen%20Shot%202020-02-19%20at%207.14.10%20AM.png>"
+      },
+      "date": 1582126613088
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a64dffe6d2cd4574"
+      },
+      "id": "a64dffe6d2cd4574",
+      "type": "add",
+      "after": "f7814f39e838f384",
+      "date": 1582126650727
+    },
+    {
+      "type": "edit",
+      "id": "a64dffe6d2cd4574",
+      "item": {
+        "type": "paragraph",
+        "id": "a64dffe6d2cd4574",
+        "text": "See [[Print Local Changes]]"
+      },
+      "date": 1582126659059
+    },
+    {
+      "type": "edit",
+      "id": "bd165a73ef45d484",
+      "item": {
+        "type": "paragraph",
+        "id": "bd165a73ef45d484",
+        "text": "We can fork content from APL served from localhost into our browser's version of NPL. At this point the Circulation Realms link ceases to be remote as we've now made it part of our locally modified NPL. "
+      },
+      "date": 1582126709408
+    },
+    {
+      "type": "add",
+      "id": "99708d9370cef5c7",
+      "item": {
+        "type": "paragraph",
+        "id": "99708d9370cef5c7",
+        "text": "This forking and possibly editing process can continue and, as suggested elsewhere, be used to may project specific pamphlets from Local Changes."
+      },
+      "after": "bd165a73ef45d484",
+      "date": 1582126710679
+    },
+    {
+      "id": "99708d9370cef5c7",
+      "type": "move",
+      "order": [
+        "f9a0bae0e567fd21",
+        "fed77cf3a0eb5dd9",
+        "116b053d62319451",
+        "9202083fe46bbb8c",
+        "a32116f1bebba8dd",
+        "24e252fae2aa68dc",
+        "4a42c4257614bdc3",
+        "18242cd769cc9047",
+        "157279a27f1a106b",
+        "c1af89f42235ddf2",
+        "50e84d888fe7e22e",
+        "48f9c0b00c8e16c8",
+        "e858eb066541ccd9",
+        "f5cb5b054d17e98c",
+        "5ca88d239fc23598",
+        "052e6631df0fe652",
+        "6a4a62086ddb7f46",
+        "cf006a0df1e8e74f",
+        "dc2308112d58118d",
+        "c38077e0e0ce221f",
+        "488f36076d8fd383",
+        "e514ece8c56a6a0b",
+        "f98d3bb5140284ce",
+        "07abd2df77565d3f",
+        "691a401495e0a431",
+        "e07e2a29856cc46e",
+        "0122f409a428301f",
+        "c61b3da3147cf473",
+        "954f6703ea113e6f",
+        "d546951b635c7ec7",
+        "bd165a73ef45d484",
+        "f7814f39e838f384",
+        "99708d9370cef5c7",
+        "a64dffe6d2cd4574"
+      ],
+      "date": 1582126714281
+    },
+    {
+      "type": "edit",
+      "id": "99708d9370cef5c7",
+      "item": {
+        "type": "paragraph",
+        "id": "99708d9370cef5c7",
+        "text": "This forking and possibly editing process can continue and, as suggested elsewhere, be used to may project specific pamphlets from Local Changes. Here, for example, changes made yesterday connecting NPL with the Dayton Experiment join Place Network and Circulation Realms."
+      },
+      "date": 1582126854419
+    }
+  ]
+}

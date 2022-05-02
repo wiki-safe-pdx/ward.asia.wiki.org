@@ -1,0 +1,241 @@
+{
+  "title": "Search Labels",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1b3adb8c14234b64",
+      "text": "Recently David Ing suggested that we have too many ways to search or at least too many ways labeled \"search\". Let's attack this problem by growing our labels from a single verb, search, to short phrases. [https://matrix.to/#/!ORfrUEFeWFcHAMLFLr:matrix.org/$1553398247594835foxaY:matrix.org?via=matrix.org&via=matrix.allmende.io&via=tomesh.net riot]"
+    },
+    {
+      "type": "paragraph",
+      "id": "4296ca6778f6e907",
+      "text": "In particular I am thinking,"
+    },
+    {
+      "type": "paragraph",
+      "id": "ca54302f0c7292ad",
+      "text": "\"search neighborhood\" for the web page footer search, "
+    },
+    {
+      "type": "html",
+      "id": "a6dd3bd8e589fa4a",
+      "text": "<center><img width=80% src=https://user-images.githubusercontent.com/357596/54853874-49f00d00-4cae-11e9-9ecd-1296efec01ef.png></center>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6333d281a29b765d",
+      "text": "\"Federation Search\" for the Search plugin soon to be available on the hamburger menu, and "
+    },
+    {
+      "type": "html",
+      "id": "146ab133b432867d",
+      "text": "<center><img width=90% src=https://user-images.githubusercontent.com/357596/54853831-3775d380-4cae-11e9-8863-d4a7e9512ddf.png></center>"
+    },
+    {
+      "type": "paragraph",
+      "id": "e53f732eb44f21c5",
+      "text": "\"search for this\" for the search in the wiki page footer that will find various kinds of references to the particular page. "
+    },
+    {
+      "type": "paragraph",
+      "id": "27910ff44f7aa057",
+      "text": "Admittedly we are using terminology unique to us like neighborhood and federation but these are the things we search. See [[Names of Things]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Search Labels",
+        "story": []
+      },
+      "date": 1553398511006
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1b3adb8c14234b64"
+      },
+      "id": "1b3adb8c14234b64",
+      "type": "add",
+      "date": 1553398512970
+    },
+    {
+      "type": "edit",
+      "id": "1b3adb8c14234b64",
+      "item": {
+        "type": "paragraph",
+        "id": "1b3adb8c14234b64",
+        "text": "Recently David Ing suggested that we have too many ways to search or at least too many ways labeled \"search\". I would like to attach this problem by growing our labels from a single verb, search, to short phrases."
+      },
+      "date": 1553398546628
+    },
+    {
+      "type": "add",
+      "id": "4296ca6778f6e907",
+      "item": {
+        "type": "paragraph",
+        "id": "4296ca6778f6e907",
+        "text": "In particular I am thinking \"search neighborhood\" for the web page footer search, "
+      },
+      "after": "1b3adb8c14234b64",
+      "date": 1553398556859
+    },
+    {
+      "type": "add",
+      "id": "6333d281a29b765d",
+      "item": {
+        "type": "paragraph",
+        "id": "6333d281a29b765d",
+        "text": "\"Federation Search\" for the Search plugin soon to be available on the hamburger menu, and "
+      },
+      "after": "4296ca6778f6e907",
+      "date": 1553398563659
+    },
+    {
+      "type": "add",
+      "id": "e53f732eb44f21c5",
+      "item": {
+        "type": "paragraph",
+        "id": "e53f732eb44f21c5",
+        "text": "\"search for this\" for the search in the wiki page footer that will find various kinds of references to the particular page. "
+      },
+      "after": "6333d281a29b765d",
+      "date": 1553398571171
+    },
+    {
+      "type": "add",
+      "id": "27910ff44f7aa057",
+      "item": {
+        "type": "paragraph",
+        "id": "27910ff44f7aa057",
+        "text": "Admittedly we are using terminology unique to us like neighborhood and federation but these are the things we search."
+      },
+      "after": "e53f732eb44f21c5",
+      "date": 1553398576788
+    },
+    {
+      "type": "edit",
+      "id": "4296ca6778f6e907",
+      "item": {
+        "type": "paragraph",
+        "id": "4296ca6778f6e907",
+        "text": "In particular I am thinking,"
+      },
+      "date": 1553398607890
+    },
+    {
+      "type": "add",
+      "id": "ca54302f0c7292ad",
+      "item": {
+        "type": "paragraph",
+        "id": "ca54302f0c7292ad",
+        "text": "\"search neighborhood\" for the web page footer search, "
+      },
+      "after": "4296ca6778f6e907",
+      "date": 1553398609819
+    },
+    {
+      "type": "edit",
+      "id": "27910ff44f7aa057",
+      "item": {
+        "type": "paragraph",
+        "id": "27910ff44f7aa057",
+        "text": "Admittedly we are using terminology unique to us like neighborhood and federation but these are the things we search. See [[Names of Things]]"
+      },
+      "date": 1553398806564
+    },
+    {
+      "type": "edit",
+      "id": "1b3adb8c14234b64",
+      "item": {
+        "type": "paragraph",
+        "id": "1b3adb8c14234b64",
+        "text": "Recently David Ing suggested that we have too many ways to search or at least too many ways labeled \"search\". I would like to attach this problem by growing our labels from a single verb, search, to short phrases. [https://matrix.to/#/!ORfrUEFeWFcHAMLFLr:matrix.org/$1553398247594835foxaY:matrix.org?via=matrix.org&via=matrix.allmende.io&via=tomesh.net riot]"
+      },
+      "date": 1553398912159
+    },
+    {
+      "type": "edit",
+      "id": "1b3adb8c14234b64",
+      "item": {
+        "type": "paragraph",
+        "id": "1b3adb8c14234b64",
+        "text": "Recently David Ing suggested that we have too many ways to search or at least too many ways labeled \"search\". Let's attach this problem by growing our labels from a single verb, search, to short phrases. [https://matrix.to/#/!ORfrUEFeWFcHAMLFLr:matrix.org/$1553398247594835foxaY:matrix.org?via=matrix.org&via=matrix.allmende.io&via=tomesh.net riot]"
+      },
+      "date": 1553398942806
+    },
+    {
+      "type": "edit",
+      "id": "1b3adb8c14234b64",
+      "item": {
+        "type": "paragraph",
+        "id": "1b3adb8c14234b64",
+        "text": "Recently David Ing suggested that we have too many ways to search or at least too many ways labeled \"search\". Let's attack this problem by growing our labels from a single verb, search, to short phrases. [https://matrix.to/#/!ORfrUEFeWFcHAMLFLr:matrix.org/$1553398247594835foxaY:matrix.org?via=matrix.org&via=matrix.allmende.io&via=tomesh.net riot]"
+      },
+      "date": 1553398954319
+    },
+    {
+      "type": "add",
+      "id": "a6dd3bd8e589fa4a",
+      "item": {
+        "type": "factory",
+        "id": "a6dd3bd8e589fa4a",
+        "text": "<img"
+      },
+      "after": "ca54302f0c7292ad",
+      "date": 1553437642801
+    },
+    {
+      "type": "edit",
+      "id": "a6dd3bd8e589fa4a",
+      "item": {
+        "type": "html",
+        "id": "a6dd3bd8e589fa4a",
+        "text": "<img width=80% src=https://user-images.githubusercontent.com/357596/54853874-49f00d00-4cae-11e9-9ecd-1296efec01ef.png>"
+      },
+      "date": 1553437666414
+    },
+    {
+      "type": "add",
+      "id": "146ab133b432867d",
+      "item": {
+        "type": "factory",
+        "id": "146ab133b432867d",
+        "text": "https://user-images.githubusercontent.com/357596/54853831-3775d380-4cae-11e9-8863-d4a7e9512ddf.png"
+      },
+      "after": "6333d281a29b765d",
+      "date": 1553437733676
+    },
+    {
+      "type": "edit",
+      "id": "146ab133b432867d",
+      "item": {
+        "type": "html",
+        "id": "146ab133b432867d",
+        "text": "<img width=80% src=https://user-images.githubusercontent.com/357596/54853831-3775d380-4cae-11e9-8863-d4a7e9512ddf.png>"
+      },
+      "date": 1553437758276
+    },
+    {
+      "type": "edit",
+      "id": "146ab133b432867d",
+      "item": {
+        "type": "html",
+        "id": "146ab133b432867d",
+        "text": "<center><img width=90% src=https://user-images.githubusercontent.com/357596/54853831-3775d380-4cae-11e9-8863-d4a7e9512ddf.png></center>"
+      },
+      "date": 1553437818658
+    },
+    {
+      "type": "edit",
+      "id": "a6dd3bd8e589fa4a",
+      "item": {
+        "type": "html",
+        "id": "a6dd3bd8e589fa4a",
+        "text": "<center><img width=80% src=https://user-images.githubusercontent.com/357596/54853874-49f00d00-4cae-11e9-9ecd-1296efec01ef.png></center>"
+      },
+      "date": 1553437840968
+    }
+  ]
+}

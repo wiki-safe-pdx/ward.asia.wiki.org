@@ -1,0 +1,181 @@
+{
+  "title": "Missing Neighbors",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9821ca93e1f4da39",
+      "text": "An author writes within a neighborhood that might be larger than the reader's. We ask, how might we query a graph database like neo4j in order to detect missing links and where they might be located in the federation."
+    },
+    {
+      "type": "paragraph",
+      "id": "2e785461394aa5c5",
+      "text": "A reader is only sure to have present the neighbors provided by the sites mentioned on the page. A click will examine only these."
+    },
+    {
+      "type": "paragraph",
+      "id": "61f5aa43a6e99244",
+      "text": "Should the reader's neighborhood have the missing page then this fact will be noted by the Future plugin that first offers to create the page."
+    },
+    {
+      "type": "paragraph",
+      "id": "152ecd77c15f1b78",
+      "text": "We ask, will any click path from a page fail to find a page that is present in the federation for lack of a sufficient neighborhood."
+    },
+    {
+      "type": "markdown",
+      "id": "3bdf51be2664dd78",
+      "text": "* Resolution context of the page\n* Neighborhood created by click paths from the page\n* Neighborhood present when authoring or testing\n* Visible federation found by scraping"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Missing Neighbors",
+        "story": []
+      },
+      "date": 1456329049046,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9821ca93e1f4da39"
+      },
+      "id": "9821ca93e1f4da39",
+      "type": "add",
+      "date": 1456329052410,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "edit",
+      "id": "9821ca93e1f4da39",
+      "item": {
+        "type": "paragraph",
+        "id": "9821ca93e1f4da39",
+        "text": "An author writes within a neighborhood that might be larger than the reader's. We ask, how might we query a graph database in order to detect missing links and where they might be located in the federation."
+      },
+      "date": 1456329293192,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "add",
+      "id": "2e785461394aa5c5",
+      "item": {
+        "type": "paragraph",
+        "id": "2e785461394aa5c5",
+        "text": "A reader is only sure to have present the neighbors provided by the sites mentioned on the page. Click will examine only these."
+      },
+      "after": "9821ca93e1f4da39",
+      "date": 1456329414023,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "edit",
+      "id": "2e785461394aa5c5",
+      "item": {
+        "type": "paragraph",
+        "id": "2e785461394aa5c5",
+        "text": "A reader is only sure to have present the neighbors provided by the sites mentioned on the page. A click will examine only these."
+      },
+      "date": 1456329461571,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "add",
+      "id": "61f5aa43a6e99244",
+      "item": {
+        "type": "paragraph",
+        "id": "61f5aa43a6e99244",
+        "text": "Should the reader's neighborhood have the missing page then this fact will be noted by the Future plugin that first offers to create the page."
+      },
+      "after": "2e785461394aa5c5",
+      "date": 1456329612615,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "add",
+      "id": "152ecd77c15f1b78",
+      "item": {
+        "type": "paragraph",
+        "id": "152ecd77c15f1b78",
+        "text": "We ask, will any click path from a page fail to find a page that is present in the federation for lack of a sufficient neighborhood."
+      },
+      "after": "61f5aa43a6e99244",
+      "date": 1456329873426,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3bdf51be2664dd78"
+      },
+      "id": "3bdf51be2664dd78",
+      "type": "add",
+      "after": "152ecd77c15f1b78",
+      "date": 1456329935004,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "edit",
+      "id": "3bdf51be2664dd78",
+      "item": {
+        "type": "markdown",
+        "id": "3bdf51be2664dd78",
+        "text": "* Resolution context of the page\n* Neighborhood created by click paths from the page\n* Neighborhood present when authoring or testing\n* Visible federation found by scraping"
+      },
+      "date": 1456330125166,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1456545111252
+    },
+    {
+      "type": "edit",
+      "id": "9821ca93e1f4da39",
+      "item": {
+        "type": "paragraph",
+        "id": "9821ca93e1f4da39",
+        "text": "An author writes within a neighborhood that might be larger than the reader's. We ask, how might we query a graph database like neo4j in order to detect missing links and where they might be located in the federation."
+      },
+      "date": 1459461234781
+    }
+  ]
+}

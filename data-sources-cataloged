@@ -1,0 +1,382 @@
+{
+  "title": "Data Sources Cataloged",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "2017db96175ff8c4",
+      "text": "Client-side plugins announce the availability of data by adding a class name to the enclosing div of the form 'something-source'. Here we systematically explore the source names in use in the visible federation. [https://github.com/fedwiki/plugin-search github]"
+    },
+    {
+      "type": "markdown",
+      "id": "dae8cfd9ff627b3a",
+      "text": "force-source force\nforce-source linkmap\n\ngraph-source cytodemo\ngraph-source graph\ngraph-source markdown\ngraph-source transport\n\nmarker-source bikeshare\nmarker-source map\n\nmid-source cytodemo\n\nradar-source calendar\nradar-source fivestar\nradar-source metabolism\nradar-source method\nradar-source radar\nradar-source reduce\nradar-source rollup\n\nroster-source activity\nroster-source roster\n\nsequence-source line\nsequence-source txtzyme\n\nserver-source alert\nserver-source datalog\nserver-source detect\n\ntoc-source activity\ntoc-source cytodemo\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "29eb0919568465f4",
+      "text": "One of the [[Search Index Downloads]] is a list of all plugin names encountered as type field names in page json. 78 names when I last counted. [http://search.fed.wiki.org:3030/plugins.txt txt]"
+    },
+    {
+      "type": "paragraph",
+      "id": "8182a8e9b95f24b6",
+      "text": "We start by installing all plugins on this list from npm."
+    },
+    {
+      "type": "code",
+      "id": "a8c5c281136ba5ed",
+      "text": "rm -rf all\nmkdir all\necho {} >all/package.json\ncurl -s http://search.fed.wiki.org:3030/plugins.txt | \\\n  perl -ne 'print if /\\w/' | \\\n  while read p; do\n    echo\n    echo wiki-plugin-$p\n    (cd all; npm i wiki-plugin-$p)\n  done\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "9ee376b82163fa7a",
+      "text": "When this completes we search the client-side javascript for each plugin, reporting only those where there are matches."
+    },
+    {
+      "type": "code",
+      "id": "39fe2730c629fb85",
+      "text": "curl -s http://search.fed.wiki.org:3030/plugins.txt | \\\n  perl -ne 'print if /\\w/' | \\\n  while read p; do\n    cat all/node_modules/wiki-plugin-$p/client/$p.js | perl -ne 'print \"$1 '$p'\\n\" if /\\b(\\w+-source)/'\n  done\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "e5463e98185dbd62",
+      "text": "We sort and uniq this output and add a bit of hand formatting to get a list of all source types registered."
+    },
+    {
+      "type": "paragraph",
+      "id": "a76910bd68aed1c1",
+      "text": "We encountered nearly a dozen plugins used but not available as installs from npm. Some of these are built-in to wiki-client. Others are experiments never published."
+    },
+    {
+      "type": "paragraph",
+      "id": "6b6b7224b058629a",
+      "text": "We also notice that the Chart plugin appears only in an about page which isn't indexed by search."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Data Sources Cataloged",
+        "story": []
+      },
+      "date": 1562469646495
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2017db96175ff8c4"
+      },
+      "id": "2017db96175ff8c4",
+      "type": "add",
+      "date": 1562469648677
+    },
+    {
+      "type": "edit",
+      "id": "2017db96175ff8c4",
+      "item": {
+        "type": "paragraph",
+        "id": "2017db96175ff8c4",
+        "text": "Client-side plugins announce the availability of data by adding a class name to the enclosing div of the form 'something-source'. Here we systematically explore the source names in use in the visible federation."
+      },
+      "date": 1562469765450
+    },
+    {
+      "type": "add",
+      "id": "29eb0919568465f4",
+      "item": {
+        "type": "paragraph",
+        "id": "29eb0919568465f4",
+        "text": "One of the [[Search Downloads]] is a list of all plugin names encountered as type field names in page json. "
+      },
+      "after": "2017db96175ff8c4",
+      "date": 1562469855023
+    },
+    {
+      "type": "edit",
+      "id": "29eb0919568465f4",
+      "item": {
+        "type": "paragraph",
+        "id": "29eb0919568465f4",
+        "text": "One of the [[Search Index Downloads]] is a list of all plugin names encountered as type field names in page json. "
+      },
+      "date": 1562469876534
+    },
+    {
+      "type": "edit",
+      "id": "29eb0919568465f4",
+      "item": {
+        "type": "paragraph",
+        "id": "29eb0919568465f4",
+        "text": "One of the [[Search Index Downloads]] is a list of all plugin names encountered as type field names in page json. [http://search.fed.wiki.org:3030/plugins.txt txt]"
+      },
+      "date": 1562469918182
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8182a8e9b95f24b6"
+      },
+      "id": "8182a8e9b95f24b6",
+      "type": "add",
+      "after": "29eb0919568465f4",
+      "date": 1562469994469
+    },
+    {
+      "type": "edit",
+      "id": "8182a8e9b95f24b6",
+      "item": {
+        "type": "paragraph",
+        "id": "8182a8e9b95f24b6",
+        "text": "We start by installing all plugins from npm."
+      },
+      "date": 1562470017154
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a8c5c281136ba5ed"
+      },
+      "id": "a8c5c281136ba5ed",
+      "type": "add",
+      "after": "8182a8e9b95f24b6",
+      "date": 1562470019455
+    },
+    {
+      "type": "edit",
+      "id": "a8c5c281136ba5ed",
+      "item": {
+        "type": "code",
+        "id": "a8c5c281136ba5ed",
+        "text": "rm -rf all\nmkdir all\n(cd all; echo {} >package.json)\ncurl -s http://search.fed.wiki.org:3030/plugins.txt | \\\n  perl -ne 'print if /\\w/' | \\\n  while read p; do\n  \techo\n  \techo wiki-plugin-$p\n  \t(cd all; npm i wiki-plugin-$p)\n  done\n"
+      },
+      "date": 1562470024007
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9ee376b82163fa7a"
+      },
+      "id": "9ee376b82163fa7a",
+      "type": "add",
+      "after": "a8c5c281136ba5ed",
+      "date": 1562470057527
+    },
+    {
+      "type": "edit",
+      "id": "9ee376b82163fa7a",
+      "item": {
+        "type": "paragraph",
+        "id": "9ee376b82163fa7a",
+        "text": "When this completes we search the client-side javascript for each plugin, reporting only those where there are matches."
+      },
+      "date": 1562470107398
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "39fe2730c629fb85"
+      },
+      "id": "39fe2730c629fb85",
+      "type": "add",
+      "after": "9ee376b82163fa7a",
+      "date": 1562470110253
+    },
+    {
+      "type": "edit",
+      "id": "39fe2730c629fb85",
+      "item": {
+        "type": "code",
+        "id": "39fe2730c629fb85",
+        "text": "curl -s http://search.fed.wiki.org:3030/plugins.txt | \\\n  perl -ne 'print if /\\w/' | \\\n  while read p; do\n  \tcat all/node_modules/wiki-plugin-$p/client/$p.js | perl -ne 'print \"$1 '$p'\\n\" if /\\b(\\w+-source)/'\n  done\n"
+      },
+      "date": 1562470116818
+    },
+    {
+      "type": "edit",
+      "id": "39fe2730c629fb85",
+      "item": {
+        "type": "code",
+        "id": "39fe2730c629fb85",
+        "text": "curl -s http://search.fed.wiki.org:3030/plugins.txt | \\\n  perl -ne 'print if /\\w/' | \\\n  while read p; do\n    cat all/node_modules/wiki-plugin-$p/client/$p.js | perl -ne 'print \"$1 '$p'\\n\" if /\\b(\\w+-source)/'\n  done\n"
+      },
+      "date": 1562470132523
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e5463e98185dbd62"
+      },
+      "id": "e5463e98185dbd62",
+      "type": "add",
+      "after": "39fe2730c629fb85",
+      "date": 1562470181128
+    },
+    {
+      "type": "edit",
+      "id": "e5463e98185dbd62",
+      "item": {
+        "type": "paragraph",
+        "id": "e5463e98185dbd62",
+        "text": "We sort and uniq this output and add a bit of hand formatting to get a list of all source types registered."
+      },
+      "date": 1562470236275
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "markdown",
+        "id": "dae8cfd9ff627b3a",
+        "text": "force-source force\nforce-source linkmap\n\ngraph-source cytodemo\ngraph-source graph\ngraph-source markdown\ngraph-source transport\n\nmarker-source bikeshare\nmarker-source map\n\nmid-source cytodemo\n\nradar-source calendar\nradar-source fivestar\nradar-source metabolism\nradar-source method\nradar-source radar\nradar-source reduce\nradar-source rollup\n\nroster-source activity\nroster-source roster\n\nsequence-source line\nsequence-source txtzyme\n\nserver-source alert\nserver-source datalog\nserver-source detect\n\ntoc-source activity\ntoc-source cytodemo\n"
+      },
+      "after": "9ee376b82163fa7a",
+      "id": "dae8cfd9ff627b3a",
+      "date": 1562470270007
+    },
+    {
+      "type": "move",
+      "order": [
+        "2017db96175ff8c4",
+        "29eb0919568465f4",
+        "8182a8e9b95f24b6",
+        "a8c5c281136ba5ed",
+        "9ee376b82163fa7a",
+        "39fe2730c629fb85",
+        "dae8cfd9ff627b3a",
+        "e5463e98185dbd62"
+      ],
+      "id": "dae8cfd9ff627b3a",
+      "date": 1562470279585
+    },
+    {
+      "type": "move",
+      "order": [
+        "2017db96175ff8c4",
+        "29eb0919568465f4",
+        "8182a8e9b95f24b6",
+        "a8c5c281136ba5ed",
+        "9ee376b82163fa7a",
+        "39fe2730c629fb85",
+        "e5463e98185dbd62",
+        "dae8cfd9ff627b3a"
+      ],
+      "id": "e5463e98185dbd62",
+      "date": 1562470285217
+    },
+    {
+      "type": "edit",
+      "id": "a8c5c281136ba5ed",
+      "item": {
+        "type": "code",
+        "id": "a8c5c281136ba5ed",
+        "text": "rm -rf all\nmkdir all\necho {} >all/package.json)\ncurl -s http://search.fed.wiki.org:3030/plugins.txt | \\\n  perl -ne 'print if /\\w/' | \\\n  while read p; do\n  \techo\n  \techo wiki-plugin-$p\n  \t(cd all; npm i wiki-plugin-$p)\n  done\n"
+      },
+      "date": 1562470406098
+    },
+    {
+      "type": "edit",
+      "id": "a8c5c281136ba5ed",
+      "item": {
+        "type": "code",
+        "id": "a8c5c281136ba5ed",
+        "text": "rm -rf all\nmkdir all\necho {} >all/package.json\ncurl -s http://search.fed.wiki.org:3030/plugins.txt | \\\n  perl -ne 'print if /\\w/' | \\\n  while read p; do\n  \techo\n  \techo wiki-plugin-$p\n  \t(cd all; npm i wiki-plugin-$p)\n  done\n"
+      },
+      "date": 1562470411482
+    },
+    {
+      "type": "edit",
+      "id": "a8c5c281136ba5ed",
+      "item": {
+        "type": "code",
+        "id": "a8c5c281136ba5ed",
+        "text": "rm -rf all\nmkdir all\necho {} >all/package.json\ncurl -s http://search.fed.wiki.org:3030/plugins.txt | \\\n  perl -ne 'print if /\\w/' | \\\n  while read p; do\n    echo\n    echo wiki-plugin-$p\n    (cd all; npm i wiki-plugin-$p)\n  done\n"
+      },
+      "date": 1562470445695
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a76910bd68aed1c1"
+      },
+      "id": "a76910bd68aed1c1",
+      "type": "add",
+      "after": "dae8cfd9ff627b3a",
+      "date": 1562470698254
+    },
+    {
+      "type": "edit",
+      "id": "a76910bd68aed1c1",
+      "item": {
+        "type": "paragraph",
+        "id": "a76910bd68aed1c1",
+        "text": "We encountered nearly a dozen plugins used but not available as installs from npm. Some of these are built-in to wiki-client. Others are experiments never published."
+      },
+      "date": 1562470761724
+    },
+    {
+      "type": "add",
+      "id": "6b6b7224b058629a",
+      "item": {
+        "type": "paragraph",
+        "id": "6b6b7224b058629a",
+        "text": "We also notice that the Chart plugin appears only in an about page which isn't indexed by search."
+      },
+      "after": "a76910bd68aed1c1",
+      "date": 1562470835937
+    },
+    {
+      "type": "edit",
+      "id": "2017db96175ff8c4",
+      "item": {
+        "type": "paragraph",
+        "id": "2017db96175ff8c4",
+        "text": "Client-side plugins announce the availability of data by adding a class name to the enclosing div of the form 'something-source'. Here we systematically explore the source names in use in the visible federation. [https://github.com/fedwiki/plugin-search github]"
+      },
+      "date": 1562471856668
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org"
+    },
+    {
+      "type": "move",
+      "order": [
+        "2017db96175ff8c4",
+        "dae8cfd9ff627b3a",
+        "29eb0919568465f4",
+        "8182a8e9b95f24b6",
+        "a8c5c281136ba5ed",
+        "9ee376b82163fa7a",
+        "39fe2730c629fb85",
+        "e5463e98185dbd62",
+        "a76910bd68aed1c1",
+        "6b6b7224b058629a"
+      ],
+      "id": "dae8cfd9ff627b3a",
+      "date": 1562512225167
+    },
+    {
+      "type": "edit",
+      "id": "29eb0919568465f4",
+      "item": {
+        "type": "paragraph",
+        "id": "29eb0919568465f4",
+        "text": "One of the [[Search Index Downloads]] is a list of all plugin names encountered as type field names in page json. 78 names when I last counted. [http://search.fed.wiki.org:3030/plugins.txt txt]"
+      },
+      "date": 1562512381468
+    },
+    {
+      "type": "edit",
+      "id": "8182a8e9b95f24b6",
+      "item": {
+        "type": "paragraph",
+        "id": "8182a8e9b95f24b6",
+        "text": "We start by installing all plugins on this list from npm."
+      },
+      "date": 1562512423387
+    },
+    {
+      "type": "fork",
+      "date": 1562512559742
+    }
+  ]
+}

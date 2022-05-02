@@ -1,0 +1,481 @@
+{
+  "title": "Murmurations JSON Generator",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "2f161876649e15e8",
+      "text": "Mike Hales introduced us to the Murmurations network infrastructure which has similarities with microformats but may be much simpler than making a [[Microformat Plugin]]."
+    },
+    {
+      "type": "paragraph",
+      "id": "695600eeca2c7889",
+      "text": "I filled out the form describing this site and pressed the GO button. It delivered murmurations_node.json which appeared in a tab at the bottom of my browser."
+    },
+    {
+      "type": "code",
+      "id": "b765d1cae835600d",
+      "text": "jq . ~/Downloads/murmurations_node.json"
+    },
+    {
+      "type": "code",
+      "id": "368a24ffc0140abf",
+      "text": "{\n  \"name\": \"Federated Wiki\",\n  \"url\": \"http://ward.asia.wiki.org\",\n  \"tagline\": \"Dreams and ToDos\",\n  \"mission\": \"We explore opportunities for innovation in the context of federated wiki as a participant in a \\\\\\\"pod\\\\\\\" of developers.\",\n  \"nodeTypes\": \"network\",\n  \"location\": \"Singapore\",\n  \"logo\": \"http://ward.asia.wiki.org/favicon.png\",\n  \"feed\": \"\",\n  \"tags\": \"wiki\",\n  \"lat\": \"\",\n  \"lon\": \"\",\n  \"updated\": 1590069679\n}\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "4653127fb3964d18",
+      "text": "I create an Asset configured it as home. I won't add an index.html there so there will be no custom landing page."
+    },
+    {
+      "type": "code",
+      "id": "d67b64fcf1202a37",
+      "text": "home"
+    },
+    {
+      "type": "assets",
+      "id": "d822756b7698c4d4",
+      "text": "home"
+    },
+    {
+      "type": "paragraph",
+      "id": "23b63c49dc6c08a0",
+      "text": "I drag the download tab that appeared in my web page footer to the Assets drop zone to upload the file."
+    },
+    {
+      "type": "paragraph",
+      "id": "c20dba37152d1eed",
+      "text": "I might be done. I click the link that appears and find my published json file. [http://ward.asia.wiki.org/assets/home/murmurations_node.json json]"
+    },
+    {
+      "type": "paragraph",
+      "id": "13d42f0539241cda",
+      "text": "See [[Mike's Asset Shortcut]] where I publish his json so he can fork my publication."
+    },
+    {
+      "type": "markdown",
+      "id": "cb48f5dfa2b9c109",
+      "text": "# Digression"
+    },
+    {
+      "type": "paragraph",
+      "id": "92d26fd1d38ac379",
+      "text": "I see that is a url with the conventional asset path. I try the home page abbreviation. [http://ward.asia.wiki.org/murmurations_node.json json]"
+    },
+    {
+      "type": "code",
+      "id": "c17cca73ca2006c9",
+      "text": "Cannot GET /murmurations_node.json"
+    },
+    {
+      "type": "paragraph",
+      "id": "16458c9882c4dc9f",
+      "text": "Hmm. This is not as expected. I'll ask Mike if the longer url will work for him and then explore independently why home wasn't special."
+    },
+    {
+      "type": "paragraph",
+      "id": "8647a92334d9375a",
+      "text": "See [[About Assets Plugin]], [[About Reserved Asset Paths]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "4040ac7af87b205b",
+      "text": "Ah, figured it out. If assets/home/index.html is present then /index.html redirects there.\n[https://github.com/fedwiki/wiki-server/blob/b7f09486b668884c5995a04400ae6938bfd67832/lib/server.coffee#L710 github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "07f6d6f7f97a3e40",
+      "text": "And, if that index.html refers to other files, like style.css, then that works only because the base of local urls is now assets/home. "
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Murmurations JSON Generator",
+        "story": []
+      },
+      "date": 1590069112610
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2f161876649e15e8"
+      },
+      "id": "2f161876649e15e8",
+      "type": "add",
+      "date": 1590069125025
+    },
+    {
+      "type": "edit",
+      "id": "2f161876649e15e8",
+      "item": {
+        "type": "paragraph",
+        "id": "2f161876649e15e8",
+        "text": "Mike Hales introduced us to the Murmurations network infrastructure which has similarities with microformats but may be much simpler than making a [[Microformat Plugin]]."
+      },
+      "date": 1590069240259
+    },
+    {
+      "type": "add",
+      "id": "695600eeca2c7889",
+      "item": {
+        "type": "paragraph",
+        "id": "695600eeca2c7889",
+        "text": "I filled out the form describing this site and pressed the "
+      },
+      "after": "2f161876649e15e8",
+      "date": 1590069859520
+    },
+    {
+      "type": "edit",
+      "id": "695600eeca2c7889",
+      "item": {
+        "type": "paragraph",
+        "id": "695600eeca2c7889",
+        "text": "I filled out the form describing this site and pressed the GO button. It delivered the download "
+      },
+      "date": 1590069903461
+    },
+    {
+      "type": "edit",
+      "id": "695600eeca2c7889",
+      "item": {
+        "type": "paragraph",
+        "id": "695600eeca2c7889",
+        "text": "I filled out the form describing this site and pressed the GO button. It delivered the download, murmurations_node.json, which appeared in a tab at the bottom of my browser."
+      },
+      "date": 1590070008159
+    },
+    {
+      "type": "edit",
+      "id": "695600eeca2c7889",
+      "item": {
+        "type": "paragraph",
+        "id": "695600eeca2c7889",
+        "text": "I filled out the form describing this site and pressed the GO button. It delivered murmurations_node.json which appeared in a tab at the bottom of my browser."
+      },
+      "date": 1590070032264
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b765d1cae835600d"
+      },
+      "id": "b765d1cae835600d",
+      "type": "add",
+      "after": "695600eeca2c7889",
+      "date": 1590070084300
+    },
+    {
+      "type": "edit",
+      "id": "b765d1cae835600d",
+      "item": {
+        "type": "code",
+        "id": "b765d1cae835600d",
+        "text": "jq . ~/Downloads/murmurations_node.json"
+      },
+      "date": 1590070094438
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "368a24ffc0140abf"
+      },
+      "id": "368a24ffc0140abf",
+      "type": "add",
+      "after": "b765d1cae835600d",
+      "date": 1590070097403
+    },
+    {
+      "type": "edit",
+      "id": "368a24ffc0140abf",
+      "item": {
+        "type": "code",
+        "id": "368a24ffc0140abf",
+        "text": "{\n  \"name\": \"Federated Wiki\",\n  \"url\": \"http://ward.asia.wiki.org\",\n  \"tagline\": \"Dreams and ToDos\",\n  \"mission\": \"We explore opportunities for innovation in the context of federated wiki as a participant in a \\\\\\\"pod\\\\\\\" of developers.\",\n  \"nodeTypes\": \"network\",\n  \"location\": \"Singapore\",\n  \"logo\": \"http://ward.asia.wiki.org/favicon.png\",\n  \"feed\": \"\",\n  \"tags\": \"wiki\",\n  \"lat\": \"\",\n  \"lon\": \"\",\n  \"updated\": 1590069679\n}\n"
+      },
+      "date": 1590070116442
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4653127fb3964d18"
+      },
+      "id": "4653127fb3964d18",
+      "type": "add",
+      "after": "368a24ffc0140abf",
+      "date": 1590070205151
+    },
+    {
+      "type": "edit",
+      "id": "4653127fb3964d18",
+      "item": {
+        "type": "paragraph",
+        "id": "4653127fb3964d18",
+        "text": "I want that file on my site's home page so I create an Asset configure it as home. I won't add an index.html there so there will be no custom landing page."
+      },
+      "date": 1590070311055
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d822756b7698c4d4"
+      },
+      "id": "d822756b7698c4d4",
+      "type": "add",
+      "after": "4653127fb3964d18",
+      "date": 1590070313102
+    },
+    {
+      "type": "edit",
+      "id": "d822756b7698c4d4",
+      "item": {
+        "type": "assets",
+        "id": "d822756b7698c4d4",
+        "text": "home"
+      },
+      "date": 1590070318215
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "23b63c49dc6c08a0"
+      },
+      "id": "23b63c49dc6c08a0",
+      "type": "add",
+      "after": "d822756b7698c4d4",
+      "date": 1590070344521
+    },
+    {
+      "type": "edit",
+      "id": "23b63c49dc6c08a0",
+      "item": {
+        "type": "paragraph",
+        "id": "23b63c49dc6c08a0",
+        "text": "I drag the download tab that appeared in my web page footer to the Assets drop zone to upload the file. I think I am done."
+      },
+      "date": 1590070453686
+    },
+    {
+      "type": "edit",
+      "id": "23b63c49dc6c08a0",
+      "item": {
+        "type": "paragraph",
+        "id": "23b63c49dc6c08a0",
+        "text": "I drag the download tab that appeared in my web page footer to the Assets drop zone to upload the file."
+      },
+      "date": 1590070463058
+    },
+    {
+      "type": "edit",
+      "id": "4653127fb3964d18",
+      "item": {
+        "type": "paragraph",
+        "id": "4653127fb3964d18",
+        "text": "I want that file on my site's home page so I create an Asset configured it as home. I won't add an index.html there so there will be no custom landing page."
+      },
+      "date": 1590070477565
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d67b64fcf1202a37"
+      },
+      "id": "d67b64fcf1202a37",
+      "type": "add",
+      "after": "23b63c49dc6c08a0",
+      "date": 1590070493838
+    },
+    {
+      "type": "edit",
+      "id": "d67b64fcf1202a37",
+      "item": {
+        "type": "code",
+        "id": "d67b64fcf1202a37",
+        "text": "home"
+      },
+      "date": 1590070503528
+    },
+    {
+      "id": "d67b64fcf1202a37",
+      "type": "move",
+      "order": [
+        "2f161876649e15e8",
+        "695600eeca2c7889",
+        "b765d1cae835600d",
+        "368a24ffc0140abf",
+        "4653127fb3964d18",
+        "d67b64fcf1202a37",
+        "d822756b7698c4d4",
+        "23b63c49dc6c08a0"
+      ],
+      "date": 1590070508554
+    },
+    {
+      "type": "add",
+      "id": "c20dba37152d1eed",
+      "item": {
+        "type": "paragraph",
+        "id": "c20dba37152d1eed",
+        "text": "I might be done. I click the link that appears and find my published json file. [http://ward.asia.wiki.org/assets/home/murmurations_node.json file]"
+      },
+      "after": "23b63c49dc6c08a0",
+      "date": 1590070704172
+    },
+    {
+      "type": "edit",
+      "id": "c20dba37152d1eed",
+      "item": {
+        "type": "paragraph",
+        "id": "c20dba37152d1eed",
+        "text": "I might be done. I click the link that appears and find my published json file. [http://ward.asia.wiki.org/assets/home/murmurations_node.json json]"
+      },
+      "date": 1590070716361
+    },
+    {
+      "type": "add",
+      "id": "92d26fd1d38ac379",
+      "item": {
+        "type": "paragraph",
+        "id": "92d26fd1d38ac379",
+        "text": "I see that is a url with the conventional asset path. I try the home page abbreviation. [http://ward.asia.wiki.org/murmurations_node.json json]"
+      },
+      "after": "c20dba37152d1eed",
+      "date": 1590070857917
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c17cca73ca2006c9"
+      },
+      "id": "c17cca73ca2006c9",
+      "type": "add",
+      "after": "92d26fd1d38ac379",
+      "date": 1590070882946
+    },
+    {
+      "type": "edit",
+      "id": "c17cca73ca2006c9",
+      "item": {
+        "type": "code",
+        "id": "c17cca73ca2006c9",
+        "text": "Cannot GET /murmurations_node.json"
+      },
+      "date": 1590070888544
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "16458c9882c4dc9f"
+      },
+      "id": "16458c9882c4dc9f",
+      "type": "add",
+      "after": "c17cca73ca2006c9",
+      "date": 1590070915443
+    },
+    {
+      "type": "edit",
+      "id": "16458c9882c4dc9f",
+      "item": {
+        "type": "paragraph",
+        "id": "16458c9882c4dc9f",
+        "text": "Hmm. This is not as expected. I'll ask Mike if the longer url will work for him and then explore independently why home wasn't special."
+      },
+      "date": 1590070973449
+    },
+    {
+      "type": "add",
+      "id": "8647a92334d9375a",
+      "item": {
+        "type": "paragraph",
+        "id": "8647a92334d9375a",
+        "text": "See [[About Assets Plugin]]"
+      },
+      "after": "16458c9882c4dc9f",
+      "date": 1590072932784
+    },
+    {
+      "type": "edit",
+      "id": "8647a92334d9375a",
+      "item": {
+        "type": "paragraph",
+        "id": "8647a92334d9375a",
+        "text": "See [[About Assets Plugin]], [[About Reserved Asset Paths]]"
+      },
+      "date": 1590072965963
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4040ac7af87b205b"
+      },
+      "id": "4040ac7af87b205b",
+      "type": "add",
+      "after": "8647a92334d9375a",
+      "date": 1590073627396
+    },
+    {
+      "type": "edit",
+      "id": "4040ac7af87b205b",
+      "item": {
+        "type": "paragraph",
+        "id": "4040ac7af87b205b",
+        "text": "Ah, figured it out. If assets/home/index.html is present then /index.html redirects there.\n[https://github.com/fedwiki/wiki-server/blob/b7f09486b668884c5995a04400ae6938bfd67832/lib/server.coffee#L710 github]"
+      },
+      "date": 1590073650712
+    },
+    {
+      "type": "add",
+      "id": "07f6d6f7f97a3e40",
+      "item": {
+        "type": "paragraph",
+        "id": "07f6d6f7f97a3e40",
+        "text": "And, if that index.html refers to other files, like style.css, then that works only because the base of local urls is now assets/home. "
+      },
+      "after": "4040ac7af87b205b",
+      "date": 1590073656790
+    },
+    {
+      "type": "add",
+      "id": "cb48f5dfa2b9c109",
+      "item": {
+        "type": "paragraph",
+        "id": "cb48f5dfa2b9c109",
+        "text": "# Digression"
+      },
+      "after": "c20dba37152d1eed",
+      "date": 1590073736729
+    },
+    {
+      "type": "edit",
+      "id": "cb48f5dfa2b9c109",
+      "item": {
+        "type": "markdown",
+        "id": "cb48f5dfa2b9c109",
+        "text": "# Digression"
+      },
+      "date": 1590073739388
+    },
+    {
+      "type": "edit",
+      "id": "4653127fb3964d18",
+      "item": {
+        "type": "paragraph",
+        "id": "4653127fb3964d18",
+        "text": "I create an Asset configured it as home. I won't add an index.html there so there will be no custom landing page."
+      },
+      "date": 1590073837775
+    },
+    {
+      "type": "add",
+      "id": "13d42f0539241cda",
+      "item": {
+        "type": "paragraph",
+        "id": "13d42f0539241cda",
+        "text": "See [[Mike's Asset Shortcut]] where I publish his json so he can fork my publication."
+      },
+      "after": "c20dba37152d1eed",
+      "date": 1590075471984
+    }
+  ]
+}

@@ -1,0 +1,543 @@
+{
+  "title": "Mobile Gestures For Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e33fd8f7505452b3",
+      "text": "The mobile gestures should be defined properly following this grid (those are examples of UX specs, open to discussion of course).\n\n"
+    },
+    {
+      "type": "markdown",
+      "id": "27ab680a7f73f8d2",
+      "text": "• tap: does nothing\n• double tap: start editing\n• pan up/down : scroll (default)\n• pan left/right : scroll vertical ?\n• swipe left/right show next/prev page\n• long press, the user can drag & drop a paragraph.\n• pinch / spread : increase / decrease size"
+    },
+    {
+      "type": "markdown",
+      "id": "cc368b335afaadca",
+      "text": "# Tap Flag\n\nI've added this interaction as i believe we should take advantage of the flag icon as a central interactive element."
+    },
+    {
+      "type": "paragraph",
+      "id": "ef63bfa0b55689f9",
+      "text": "Tapping any flag should \"center\" activity on the site/page/revision represented by that flag. Centering for the larger page flag means \"appear as if I started on this site/page\". "
+    },
+    {
+      "type": "markdown",
+      "id": "ebec01d6c705404c",
+      "text": "# Negative Scroll"
+    },
+    {
+      "type": "paragraph",
+      "id": "83ee492622d0f79c",
+      "text": "Scrolling to the space above a page can expose page related operations. The exact complement of operations might depend on device capabilities. Remove-from-lineup seems a natural."
+    },
+    {
+      "type": "paragraph",
+      "id": "3db9a01383cdc7f1",
+      "text": "Some above-page buttons could reveal a modal dialogue with tools, settings and advanced navigation options. This could be in terms of a modal overlay, or a material design style scroll out icon menu."
+    },
+    {
+      "type": "markdown",
+      "id": "0d74fd001a61f98d",
+      "text": "# Pan\n\nNot sure what we mean by scroll vertical? I think this could mean scroll horizontal - that is scroll along a numerically ordered set of pages in a lineUp. This would be a carousel style view of the lineup on mobile, and a short-cut to swiping  left/right multiple times."
+    },
+    {
+      "type": "markdown",
+      "id": "8533aec5198e5515",
+      "text": "# Pinch\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "282d75e44b8f3be6",
+      "text": "Pinch should expand the view of pages by detented amounts, possibly by factors of sqrt(2) like f-stops on a camera. If 40% of a second page is exposed on a small screen, tapping it should make it completely visible at the expense of the opposite-side page."
+    },
+    {
+      "type": "paragraph",
+      "id": "b5a012dec9840f93",
+      "text": "A horizontally oriented display should start showing one stop more pages, 1.4 pages in the normal case. Spread could expand this to 1 page width for easier reading."
+    },
+    {
+      "type": "paragraph",
+      "id": "2874a656098d2f34",
+      "text": "This has the advantage that every other pinch size fits a whole number of pages, 2, 4, 8 even on a horizontal tablet."
+    },
+    {
+      "type": "paragraph",
+      "id": "21e93ba9eb028973",
+      "text": "An overview of wiki structure such as a [[Wiki Map]] is better temporarily exposed with an above-page button."
+    },
+    {
+      "type": "paragraph",
+      "id": "4c0e011a7ae91442",
+      "text": "See [[Touch Support]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Mobile Gestures For Wiki",
+        "story": []
+      },
+      "date": 1467316316156
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e33fd8f7505452b3"
+      },
+      "id": "e33fd8f7505452b3",
+      "type": "add",
+      "date": 1467316317085
+    },
+    {
+      "type": "edit",
+      "id": "e33fd8f7505452b3",
+      "item": {
+        "type": "paragraph",
+        "id": "e33fd8f7505452b3",
+        "text": "The mobile gestures should be defined properly following this grid (those are examples of UX specs, open to discussion of course).\n\n"
+      },
+      "date": 1467316348610
+    },
+    {
+      "type": "add",
+      "id": "27ab680a7f73f8d2",
+      "item": {
+        "type": "paragraph",
+        "id": "27ab680a7f73f8d2",
+        "text": "• tap: does nothing\n• double tap: start editing\n• pan up/down : scroll (default)\n• pan left/right : scroll vertical ?\n• swipe left/right show next/prev page\n• press after a long press, the user can drag & drop • paragraph. it does not prevent user from simply scrolling\n• pinch / spread : increase / decrease size (but stay on a single page)\n"
+      },
+      "after": "e33fd8f7505452b3",
+      "date": 1467316375244
+    },
+    {
+      "type": "edit",
+      "id": "27ab680a7f73f8d2",
+      "item": {
+        "type": "markdown",
+        "id": "27ab680a7f73f8d2",
+        "text": "• tap: does nothing\n• double tap: start editing\n• pan up/down : scroll (default)\n• pan left/right : scroll vertical ?\n• swipe left/right show next/prev page\n• press after a long press, the user can drag & drop • paragraph. it does not prevent user from simply scrolling\n• pinch / spread : increase / decrease size (but stay on a single page)\n"
+      },
+      "date": 1467316376924
+    },
+    {
+      "type": "edit",
+      "id": "27ab680a7f73f8d2",
+      "item": {
+        "type": "markdown",
+        "id": "27ab680a7f73f8d2",
+        "text": "• tap: does nothing\n• double tap: start editing\n• pan up/down : scroll (default)\n• pan left/right : scroll vertical ?\n• swipe left/right show next/prev page\n• press after a long press, the user can drag & drop a paragraph. it does not prevent user from simply scrolling\n• pinch / spread : increase / decrease size (but stay on a single page)\n"
+      },
+      "date": 1467316394589
+    },
+    {
+      "type": "edit",
+      "id": "27ab680a7f73f8d2",
+      "item": {
+        "type": "markdown",
+        "id": "27ab680a7f73f8d2",
+        "text": "• tap: does nothing\n• double tap: start editing\n• pan up/down : scroll (default)\n• pan left/right : scroll vertical ?\n• swipe left/right show next/prev page\n• long press, the user can drag & drop a paragraph.\n• pinch / spread : increase / decrease size"
+      },
+      "date": 1467316429190
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0d74fd001a61f98d"
+      },
+      "id": "0d74fd001a61f98d",
+      "type": "add",
+      "after": "27ab680a7f73f8d2",
+      "date": 1467316436917
+    },
+    {
+      "type": "edit",
+      "id": "0d74fd001a61f98d",
+      "item": {
+        "type": "markdown",
+        "id": "0d74fd001a61f98d",
+        "text": "# Pan left/right\n\nNot sure what we mean by scroll vertical? I think this could mean scroll horizontal - that is scroll along a numerically ordered set of pages in a lineUp. This would be a carousel style view of the lineup on mobile, and a short-cut to swiping  left/right multiple times."
+      },
+      "date": 1467316616776
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8533aec5198e5515"
+      },
+      "id": "8533aec5198e5515",
+      "type": "add",
+      "after": "0d74fd001a61f98d",
+      "date": 1467316644114
+    },
+    {
+      "type": "edit",
+      "id": "8533aec5198e5515",
+      "item": {
+        "type": "markdown",
+        "id": "8533aec5198e5515",
+        "text": "# Pinch\n\nI don't think pinch should change the size of the display. This should not be needed that often anyway, and if it is offered it should be in a settings style menu (see page-flag)."
+      },
+      "date": 1467316733310
+    },
+    {
+      "type": "edit",
+      "id": "0d74fd001a61f98d",
+      "item": {
+        "type": "markdown",
+        "id": "0d74fd001a61f98d",
+        "text": "# Pan\n\nNot sure what we mean by scroll vertical? I think this could mean scroll horizontal - that is scroll along a numerically ordered set of pages in a lineUp. This would be a carousel style view of the lineup on mobile, and a short-cut to swiping  left/right multiple times."
+      },
+      "date": 1467316737639
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "add211d11878d337"
+      },
+      "id": "add211d11878d337",
+      "type": "add",
+      "after": "8533aec5198e5515",
+      "date": 1467316755261
+    },
+    {
+      "type": "edit",
+      "id": "add211d11878d337",
+      "item": {
+        "type": "paragraph",
+        "id": "add211d11878d337",
+        "text": "Pinch should in my view reveal an overview of wiki structure - such as a [[Wiki Map]]."
+      },
+      "date": 1467316803557
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cc368b335afaadca"
+      },
+      "id": "cc368b335afaadca",
+      "type": "add",
+      "after": "add211d11878d337",
+      "date": 1467316829926
+    },
+    {
+      "type": "edit",
+      "id": "cc368b335afaadca",
+      "item": {
+        "type": "markdown",
+        "id": "cc368b335afaadca",
+        "text": "Tap Flag\n\nTapping the flag should reveal a modal dialogue with tools, settings and advanced navigation options. This could be in terms of a modal overlay, or a material design style scroll out icon menu."
+      },
+      "date": 1467316985989
+    },
+    {
+      "type": "edit",
+      "id": "cc368b335afaadca",
+      "item": {
+        "type": "markdown",
+        "id": "cc368b335afaadca",
+        "text": "# Tap Flag\n\nTapping the flag should reveal a modal dialogue with tools, settings and advanced navigation options. This could be in terms of a modal overlay, or a material design style scroll out icon menu."
+      },
+      "date": 1467316997483
+    },
+    {
+      "type": "move",
+      "order": [
+        "e33fd8f7505452b3",
+        "27ab680a7f73f8d2",
+        "cc368b335afaadca",
+        "0d74fd001a61f98d",
+        "8533aec5198e5515",
+        "add211d11878d337"
+      ],
+      "id": "cc368b335afaadca",
+      "date": 1467317410326
+    },
+    {
+      "type": "edit",
+      "id": "cc368b335afaadca",
+      "item": {
+        "type": "markdown",
+        "id": "cc368b335afaadca",
+        "text": "# Tap Flag\n\nI've added this interaction as i believe we should take advantage of the flag icon as a central interactive element."
+      },
+      "date": 1467317461244
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ef63bfa0b55689f9"
+      },
+      "id": "ef63bfa0b55689f9",
+      "type": "add",
+      "after": "add211d11878d337",
+      "date": 1467317462639
+    },
+    {
+      "type": "move",
+      "order": [
+        "e33fd8f7505452b3",
+        "27ab680a7f73f8d2",
+        "cc368b335afaadca",
+        "ef63bfa0b55689f9",
+        "0d74fd001a61f98d",
+        "8533aec5198e5515",
+        "add211d11878d337"
+      ],
+      "id": "ef63bfa0b55689f9",
+      "date": 1467317463896
+    },
+    {
+      "type": "edit",
+      "id": "ef63bfa0b55689f9",
+      "item": {
+        "type": "paragraph",
+        "id": "ef63bfa0b55689f9",
+        "text": "Tapping the flag should reveal a modal dialogue with tools, settings and advanced navigation options. This could be in terms of a modal overlay, or a material design style scroll out icon menu."
+      },
+      "date": 1467317467532
+    },
+    {
+      "type": "fork",
+      "site": "future.fedwiki.org"
+    },
+    {
+      "type": "edit",
+      "id": "ef63bfa0b55689f9",
+      "item": {
+        "type": "paragraph",
+        "id": "ef63bfa0b55689f9",
+        "text": "Tapping the flag should "
+      },
+      "date": 1467331988652
+    },
+    {
+      "type": "add",
+      "id": "3db9a01383cdc7f1",
+      "item": {
+        "type": "paragraph",
+        "id": "3db9a01383cdc7f1",
+        "text": "reveal a modal dialogue with tools, settings and advanced navigation options. This could be in terms of a modal overlay, or a material design style scroll out icon menu."
+      },
+      "after": "ef63bfa0b55689f9",
+      "date": 1467331993361
+    },
+    {
+      "type": "edit",
+      "id": "ef63bfa0b55689f9",
+      "item": {
+        "type": "paragraph",
+        "id": "ef63bfa0b55689f9",
+        "text": "Tapping any flag should \"center\" activity on the site/page/revision represented by that flag. Centering for the larger page flag means \"appear as if I started on this site/page\". "
+      },
+      "date": 1467332219137
+    },
+    {
+      "type": "add",
+      "id": "ebec01d6c705404c",
+      "item": {
+        "type": "paragraph",
+        "id": "ebec01d6c705404c",
+        "text": "# Negative Scroll"
+      },
+      "after": "ef63bfa0b55689f9",
+      "date": 1467332238830
+    },
+    {
+      "type": "edit",
+      "id": "ebec01d6c705404c",
+      "item": {
+        "type": "markdown",
+        "id": "ebec01d6c705404c",
+        "text": "# Negative Scroll"
+      },
+      "date": 1467332247467
+    },
+    {
+      "type": "add",
+      "id": "83ee492622d0f79c",
+      "item": {
+        "type": "paragraph",
+        "id": "83ee492622d0f79c",
+        "text": "Scrolling to the space above a page can expose page related operations. The exact complement of operations might depend on device capabilities. Remove-from-lineup seems a natural."
+      },
+      "after": "ebec01d6c705404c",
+      "date": 1467332526371
+    },
+    {
+      "type": "edit",
+      "id": "3db9a01383cdc7f1",
+      "item": {
+        "type": "paragraph",
+        "id": "3db9a01383cdc7f1",
+        "text": "Some above-page buttons could reveal a modal dialogue with tools, settings and advanced navigation options. This could be in terms of a modal overlay, or a material design style scroll out icon menu."
+      },
+      "date": 1467332571988
+    },
+    {
+      "type": "edit",
+      "id": "8533aec5198e5515",
+      "item": {
+        "type": "markdown",
+        "id": "8533aec5198e5515",
+        "text": "# Pinch\n"
+      },
+      "date": 1467332673595
+    },
+    {
+      "type": "add",
+      "id": "21e93ba9eb028973",
+      "item": {
+        "type": "paragraph",
+        "id": "21e93ba9eb028973",
+        "text": "I don't think pinch should change the size of the display. This should not be needed that often anyway, and if it is offered it should be in a settings style menu (see page-flag)."
+      },
+      "after": "add211d11878d337",
+      "date": 1467332679873
+    },
+    {
+      "type": "move",
+      "order": [
+        "e33fd8f7505452b3",
+        "27ab680a7f73f8d2",
+        "cc368b335afaadca",
+        "ef63bfa0b55689f9",
+        "ebec01d6c705404c",
+        "83ee492622d0f79c",
+        "3db9a01383cdc7f1",
+        "0d74fd001a61f98d",
+        "8533aec5198e5515",
+        "21e93ba9eb028973",
+        "add211d11878d337"
+      ],
+      "id": "21e93ba9eb028973",
+      "date": 1467332683067
+    },
+    {
+      "type": "remove",
+      "id": "add211d11878d337",
+      "date": 1467332689721
+    },
+    {
+      "type": "edit",
+      "id": "21e93ba9eb028973",
+      "item": {
+        "type": "paragraph",
+        "id": "21e93ba9eb028973",
+        "text": "I don't think pinch should change the size of the display. This should not be needed that often anyway, and if it is offered it should be in a settings style menu (see page-flag). Pinch should in my view reveal an overview of wiki structure - such as a [[Wiki Map]]."
+      },
+      "date": 1467332691527
+    },
+    {
+      "type": "add",
+      "id": "282d75e44b8f3be6",
+      "item": {
+        "type": "paragraph",
+        "id": "282d75e44b8f3be6",
+        "text": "Pinch should expand the view of pages by detented amounts, possibly by factors of sqrt(2) like f-stops on a camera. If 40% of a second page is exposed on a small screen, tapping it should make it completely visible at the expense of the opposite-side page."
+      },
+      "after": "21e93ba9eb028973",
+      "date": 1467333290009
+    },
+    {
+      "type": "move",
+      "order": [
+        "e33fd8f7505452b3",
+        "27ab680a7f73f8d2",
+        "cc368b335afaadca",
+        "ef63bfa0b55689f9",
+        "ebec01d6c705404c",
+        "83ee492622d0f79c",
+        "3db9a01383cdc7f1",
+        "0d74fd001a61f98d",
+        "8533aec5198e5515",
+        "282d75e44b8f3be6",
+        "21e93ba9eb028973"
+      ],
+      "id": "282d75e44b8f3be6",
+      "date": 1467333293933
+    },
+    {
+      "type": "edit",
+      "id": "21e93ba9eb028973",
+      "item": {
+        "type": "paragraph",
+        "id": "21e93ba9eb028973",
+        "text": "An overview of wiki structure such as a [[Wiki Map]] is better temporarily exposed with an above-page button."
+      },
+      "date": 1467333431005
+    },
+    {
+      "type": "add",
+      "id": "b5a012dec9840f93",
+      "item": {
+        "type": "paragraph",
+        "id": "b5a012dec9840f93",
+        "text": "A horizontally oriented display should start showing 1.4 pages. "
+      },
+      "after": "282d75e44b8f3be6",
+      "date": 1467333580088
+    },
+    {
+      "type": "edit",
+      "id": "b5a012dec9840f93",
+      "item": {
+        "type": "paragraph",
+        "id": "b5a012dec9840f93",
+        "text": "A horizontally oriented display should start showing 1.4 pages. Spread could expand this to 1 page width for easier reading."
+      },
+      "date": 1467333623375
+    },
+    {
+      "type": "edit",
+      "id": "b5a012dec9840f93",
+      "item": {
+        "type": "paragraph",
+        "id": "b5a012dec9840f93",
+        "text": "A horizontally oriented display should start showing one stop more pages, 1.4 pages in the normal case. Spread could expand this to 1 page width for easier reading."
+      },
+      "date": 1467333671645
+    },
+    {
+      "type": "add",
+      "id": "2874a656098d2f34",
+      "item": {
+        "type": "paragraph",
+        "id": "2874a656098d2f34",
+        "text": "This has the advantage that every other pinch size fits a whole number of pages, 2, 4, 8 even on a horizontal tablet."
+      },
+      "after": "b5a012dec9840f93",
+      "date": 1467333815134
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4c0e011a7ae91442"
+      },
+      "id": "4c0e011a7ae91442",
+      "type": "add",
+      "after": "21e93ba9eb028973",
+      "date": 1486574999167,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1486575084726
+    },
+    {
+      "type": "edit",
+      "id": "4c0e011a7ae91442",
+      "item": {
+        "type": "paragraph",
+        "id": "4c0e011a7ae91442",
+        "text": "See [[Touch Support]]"
+      },
+      "date": 1486575095741
+    }
+  ]
+}

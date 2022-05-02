@@ -1,0 +1,173 @@
+{
+  "title": "Flow Network Template",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "94b8d0a6cf4ee68e",
+      "text": "Describe a place in the flow."
+    },
+    {
+      "type": "markdown",
+      "id": "8f7ea2b6af99f439",
+      "text": "# State"
+    },
+    {
+      "type": "paragraph",
+      "id": "d6bc2959f5445ae5",
+      "text": "What happens in this state."
+    },
+    {
+      "type": "markdown",
+      "id": "72d732cee3761e17",
+      "text": "# Transition"
+    },
+    {
+      "type": "paragraph",
+      "id": "825a20a4e760fdc9",
+      "text": "What takes us to another state."
+    },
+    {
+      "type": "graph",
+      "id": "b184221dfadb2081",
+      "text": "HERE"
+    },
+    {
+      "type": "paragraph",
+      "id": "8ed90f39e81b9eca",
+      "text": "See [[Graphviz]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Flow Network Template",
+        "story": []
+      },
+      "date": 1495208287388
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "94b8d0a6cf4ee68e"
+      },
+      "id": "94b8d0a6cf4ee68e",
+      "type": "add",
+      "date": 1495208316350
+    },
+    {
+      "type": "edit",
+      "id": "94b8d0a6cf4ee68e",
+      "item": {
+        "type": "paragraph",
+        "id": "94b8d0a6cf4ee68e",
+        "text": "Describe a place in the flow."
+      },
+      "date": 1495208357747
+    },
+    {
+      "type": "add",
+      "id": "8f7ea2b6af99f439",
+      "item": {
+        "type": "paragraph",
+        "id": "8f7ea2b6af99f439",
+        "text": "# State"
+      },
+      "after": "94b8d0a6cf4ee68e",
+      "date": 1495208381887
+    },
+    {
+      "type": "add",
+      "id": "d6bc2959f5445ae5",
+      "item": {
+        "type": "paragraph",
+        "id": "d6bc2959f5445ae5",
+        "text": "What happens in this state."
+      },
+      "after": "8f7ea2b6af99f439",
+      "date": 1495208400779
+    },
+    {
+      "type": "add",
+      "id": "72d732cee3761e17",
+      "item": {
+        "type": "paragraph",
+        "id": "72d732cee3761e17",
+        "text": "# Transition"
+      },
+      "after": "d6bc2959f5445ae5",
+      "date": 1495208413313
+    },
+    {
+      "type": "add",
+      "id": "825a20a4e760fdc9",
+      "item": {
+        "type": "paragraph",
+        "id": "825a20a4e760fdc9",
+        "text": "What takes us to another state."
+      },
+      "after": "72d732cee3761e17",
+      "date": 1495208427762
+    },
+    {
+      "type": "edit",
+      "id": "8f7ea2b6af99f439",
+      "item": {
+        "type": "markdown",
+        "id": "8f7ea2b6af99f439",
+        "text": "# State"
+      },
+      "date": 1495208431573
+    },
+    {
+      "type": "edit",
+      "id": "72d732cee3761e17",
+      "item": {
+        "type": "markdown",
+        "id": "72d732cee3761e17",
+        "text": "# Transition"
+      },
+      "date": 1495208433495
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b184221dfadb2081"
+      },
+      "id": "b184221dfadb2081",
+      "type": "add",
+      "after": "825a20a4e760fdc9",
+      "date": 1495208435395
+    },
+    {
+      "type": "edit",
+      "id": "b184221dfadb2081",
+      "item": {
+        "type": "graph",
+        "id": "b184221dfadb2081",
+        "text": "HERE"
+      },
+      "date": 1495208450209
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8ed90f39e81b9eca"
+      },
+      "id": "8ed90f39e81b9eca",
+      "type": "add",
+      "after": "b184221dfadb2081",
+      "date": 1495210048938
+    },
+    {
+      "type": "edit",
+      "id": "8ed90f39e81b9eca",
+      "item": {
+        "type": "paragraph",
+        "id": "8ed90f39e81b9eca",
+        "text": "See [[Graphviz]]"
+      },
+      "date": 1495210060346
+    }
+  ]
+}

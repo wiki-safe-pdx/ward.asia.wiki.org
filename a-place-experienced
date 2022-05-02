@@ -1,0 +1,252 @@
+{
+  "title": "A Place Experienced",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "f6b71aa5479bc465",
+      "text": "There is an in-the-moment bit of creative expression when phototelling. Think of it as less about documenting a place and more about documenting your experience of a place."
+    },
+    {
+      "type": "paragraph",
+      "id": "97cafdaa5b332f4d",
+      "text": "See [[Phototelling Workflow]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "0e43a63e1f6a0c3e",
+      "text": "The baseball park is a place that we have experienced many ways, each of which could benefit from having three or four photos. This was all pre-pandemic so I am recalling from memory, not photographs. "
+    },
+    {
+      "type": "paragraph",
+      "id": "af1e8dde9ef34dfa",
+      "text": "Home Plate -- seated maybe 10 rows back we are still close to the action and see the pitch and the swing without turning. We watch scouts and others with clipboards in front of us. The beer and food vendors visit frequently.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "10db433ed1261c83",
+      "text": "Home Team Dugout -- Just two rows back we see the emotions of players as they return to their seats after a strike out or better a run of the bases. TV cameras and huge lenses are in plain view. Moose, the mascot, performs on the dugout roof.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "daa210fb6f5c5bf7",
+      "text": "Left Field -- Better view of fielding fly balls and the heroic jumps at the wall to stop a home run. Good view of pitchers warming up and ready to be substituted in.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "f6e7bb462f3e03a4",
+      "text": "Hit-It-Here Cafe -- High above right field where everyone looks small but you have binoculars, cold beer and a plate dinner in front of you.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "5b205b9714842af6",
+      "text": "Owner's Box -- This is how the other half live. A friend of a friend invited me on my birthday. Special in so many ways.\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "d1383f6291c76fc2",
+      "text": "My one attempt at phototelling the ballpark was on the upper deck behind the seats after we were turned away from our favorite little bar because they were having a private party. I should have gotten a shot of the gate keepers who made us feel special even as they turned us away. Also the bar keeps in the little bar were fun too and teasing another guest with a pizza to share with the gull patiently waiting."
+    },
+    {
+      "type": "paragraph",
+      "id": "f7b80ce30b8c9bd4",
+      "text": "\n"
+    },
+    {
+      "type": "reference",
+      "id": "32e98a4a4156149a",
+      "site": "seattle.fed.wiki",
+      "slug": "300-level-deck",
+      "title": "300 Level Deck",
+      "text": "▷Mariners Baseball. We arrive early and enjoy Moscow Mules from the Box Score Bar."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "A Place Experienced",
+        "story": []
+      },
+      "date": 1634142422582
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f6b71aa5479bc465"
+      },
+      "id": "f6b71aa5479bc465",
+      "type": "add",
+      "date": 1634142446695
+    },
+    {
+      "type": "edit",
+      "id": "f6b71aa5479bc465",
+      "item": {
+        "type": "paragraph",
+        "id": "f6b71aa5479bc465",
+        "text": "There is an in-the-moment bit of creative expression when phototelling. Think of it as less about documenting a place and more about documenting your experience of a place. The baseball park is a place that we have experienced many ways, each of which could benefit from having three or four photos. This was all pre-pandemic so I am recalling from memory, not photographs. "
+      },
+      "date": 1634142450241
+    },
+    {
+      "type": "add",
+      "id": "97cafdaa5b332f4d",
+      "item": {
+        "type": "paragraph",
+        "id": "97cafdaa5b332f4d",
+        "text": "See [[Phototelling Workflow]]"
+      },
+      "after": "f6b71aa5479bc465",
+      "date": 1634142472891
+    },
+    {
+      "type": "add",
+      "id": "af1e8dde9ef34dfa",
+      "item": {
+        "type": "paragraph",
+        "id": "af1e8dde9ef34dfa",
+        "text": "Home Plate -- seated maybe 10 rows back we are still close to the action and see the pitch and the swing without turning. We watch scouts and others with clipboards in front of us. The beer and food vendors visit frequently.\n"
+      },
+      "after": "97cafdaa5b332f4d",
+      "date": 1634142513696
+    },
+    {
+      "type": "add",
+      "id": "10db433ed1261c83",
+      "item": {
+        "type": "paragraph",
+        "id": "10db433ed1261c83",
+        "text": "Home Team Dugout -- Just two rows back we see the emotions of players as they return to their seats after a strike out or better a run of the bases. TV cameras and huge lenses are in plain view. Moose, the mascot, performs on the dugout roof.\n"
+      },
+      "after": "af1e8dde9ef34dfa",
+      "date": 1634142521002
+    },
+    {
+      "type": "add",
+      "id": "daa210fb6f5c5bf7",
+      "item": {
+        "type": "paragraph",
+        "id": "daa210fb6f5c5bf7",
+        "text": "Left Field -- Better view of fielding fly balls and the heroic jumps at the wall to stop a home run. Good view of pitchers warming up and ready to be substituted in.\n"
+      },
+      "after": "10db433ed1261c83",
+      "date": 1634142523919
+    },
+    {
+      "type": "add",
+      "id": "f6e7bb462f3e03a4",
+      "item": {
+        "type": "paragraph",
+        "id": "f6e7bb462f3e03a4",
+        "text": "Hit-It-Here Cafe -- High above right field where everyone looks small but you have binoculars, cold beer and a plate dinner in front of you.\n"
+      },
+      "after": "daa210fb6f5c5bf7",
+      "date": 1634142528128
+    },
+    {
+      "type": "add",
+      "id": "5b205b9714842af6",
+      "item": {
+        "type": "paragraph",
+        "id": "5b205b9714842af6",
+        "text": "Owner's Box -- This is how the other half live. A friend of a friend invited me on my birthday. Special in so many ways.\n"
+      },
+      "after": "f6e7bb462f3e03a4",
+      "date": 1634142534136
+    },
+    {
+      "type": "add",
+      "id": "d1383f6291c76fc2",
+      "item": {
+        "type": "paragraph",
+        "id": "d1383f6291c76fc2",
+        "text": "My one attempt at phototelling the ballpark was on the upper deck behind the seats after we were turned away from our favorite little bar because they were having a private party. I should have gotten a shot of the gate keepers who made us feel special even as they turned us away. Also the bar keeps in the little bar were fun too and teasing another guest with a pizza to share with the gull patiently waiting."
+      },
+      "after": "5b205b9714842af6",
+      "date": 1634142586221
+    },
+    {
+      "type": "add",
+      "id": "f7b80ce30b8c9bd4",
+      "item": {
+        "type": "paragraph",
+        "id": "f7b80ce30b8c9bd4",
+        "text": "See http://seattle.fed.wiki/300-level-deck.html\n"
+      },
+      "after": "d1383f6291c76fc2",
+      "date": 1634142589996
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "32e98a4a4156149a"
+      },
+      "id": "32e98a4a4156149a",
+      "type": "add",
+      "after": "f7b80ce30b8c9bd4",
+      "date": 1634142633678
+    },
+    {
+      "type": "edit",
+      "id": "32e98a4a4156149a",
+      "item": {
+        "type": "reference",
+        "id": "32e98a4a4156149a",
+        "site": "seattle.fed.wiki",
+        "slug": "300-level-deck",
+        "title": "300 Level Deck",
+        "text": "▷Mariners Baseball. We arrive early and enjoy Moscow Mules from the Box Score Bar."
+      },
+      "date": 1634142637009
+    },
+    {
+      "type": "edit",
+      "id": "f7b80ce30b8c9bd4",
+      "item": {
+        "type": "paragraph",
+        "id": "f7b80ce30b8c9bd4",
+        "text": "\n"
+      },
+      "date": 1634142645200
+    },
+    {
+      "type": "edit",
+      "id": "f6b71aa5479bc465",
+      "item": {
+        "type": "paragraph",
+        "id": "f6b71aa5479bc465",
+        "text": "There is an in-the-moment bit of creative expression when phototelling. Think of it as less about documenting a place and more about documenting your experience of a place."
+      },
+      "date": 1634142668466
+    },
+    {
+      "type": "add",
+      "id": "0e43a63e1f6a0c3e",
+      "item": {
+        "type": "paragraph",
+        "id": "0e43a63e1f6a0c3e",
+        "text": "The baseball park is a place that we have experienced many ways, each of which could benefit from having three or four photos. This was all pre-pandemic so I am recalling from memory, not photographs. "
+      },
+      "after": "f6b71aa5479bc465",
+      "date": 1634142670498
+    },
+    {
+      "id": "97cafdaa5b332f4d",
+      "type": "move",
+      "order": [
+        "f6b71aa5479bc465",
+        "97cafdaa5b332f4d",
+        "0e43a63e1f6a0c3e",
+        "af1e8dde9ef34dfa",
+        "10db433ed1261c83",
+        "daa210fb6f5c5bf7",
+        "f6e7bb462f3e03a4",
+        "5b205b9714842af6",
+        "d1383f6291c76fc2",
+        "f7b80ce30b8c9bd4",
+        "32e98a4a4156149a"
+      ],
+      "date": 1634142673955
+    }
+  ]
+}
